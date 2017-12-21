@@ -594,7 +594,7 @@
               ]
             },
             "url": "https://{{host}}/api",
-            "description": "Make the local HA node functional"
+            "description": "Make the peer HA node functional"
           },
           "response": []
         }
