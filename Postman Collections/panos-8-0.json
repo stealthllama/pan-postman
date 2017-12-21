@@ -433,55 +433,6 @@
       ]
     },
     {
-      "_postman_id": "3ab636d0-179a-8aa0-e8e2-24ad941f2733",
-      "name": "High Availability copy",
-      "description": "",
-      "item": [
-        {
-          "_postman_id": "e8715174-e42f-a7b8-7c52-e4b98b0e46a9",
-          "name": "Show HA State",
-          "request": {
-            "auth": {
-              "type": "noauth"
-            },
-            "method": "POST",
-            "header": [
-              {
-                "key": "Content-Type",
-                "value": "application/x-www-form-urlencoded"
-              }
-            ],
-            "body": {
-              "mode": "urlencoded",
-              "urlencoded": [
-                {
-                  "key": "key",
-                  "value": "{{key}}",
-                  "type": "text",
-                  "description": "API key"
-                },
-                {
-                  "key": "type",
-                  "value": "op",
-                  "type": "text",
-                  "description": "API method type"
-                },
-                {
-                  "key": "cmd",
-                  "value": "<show><high-availability><state></state></high-availability></show>",
-                  "description": "Show high-availability state",
-                  "type": "text"
-                }
-              ]
-            },
-            "url": "https://{{host}}/api",
-            "description": "Show high-availability state"
-          },
-          "response": []
-        }
-      ]
-    },
-    {
       "_postman_id": "6a9abedb-bf5b-8c63-e613-a219f6573eb3",
       "name": "GlobalProtect",
       "description": "",
