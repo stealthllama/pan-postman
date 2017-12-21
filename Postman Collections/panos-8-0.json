@@ -503,8 +503,8 @@
                 },
                 {
                   "key": "cmd",
-                  "value": "<request><high-availability><state><suspend></suspend></state></high-availability></request>",
-                  "description": "Suspend the local HA node",
+                  "value": "<request><high-availability><state><functional></functional></state></high-availability></request>",
+                  "description": "Make the local HA node functional\n",
                   "type": "text"
                 }
               ]
