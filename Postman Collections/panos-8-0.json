@@ -468,7 +468,7 @@
               ]
             },
             "url": "https://{{host}}/api",
-            "description": "Suspend an HA node"
+            "description": "Show high-availability state"
           },
           "response": []
         }
