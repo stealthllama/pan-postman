@@ -2106,6 +2106,18 @@
         {
           "_postman_id": "d4ba8d47-2440-ee89-2acc-a38a06607741",
           "name": "Request Commit Lock - With Comment",
+          "event": [
+            {
+              "listen": "prerequest",
+              "script": {
+                "id": "a7206693-030b-4544-ac66-7d688bfa5e79",
+                "type": "text/javascript",
+                "exec": [
+                  ""
+                ]
+              }
+            }
+          ],
           "request": {
             "auth": {
               "type": "noauth"
