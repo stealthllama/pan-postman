@@ -461,8 +461,8 @@
                 },
                 {
                   "key": "cmd",
-                  "value": "<show><high-availability><state></state></high-availability></show>",
-                  "description": "Show high-availability state",
+                  "value": "<request><high-availability><state><suspend></suspend></state></high-availability></request>",
+                  "description": "Suspend the local HA node",
                   "type": "text"
                 }
               ]
