@@ -473,48 +473,6 @@
           "response": []
         },
         {
-          "_postman_id": "594ec28f-c3d9-3c3e-633d-3f6816904b74",
-          "name": "Peer State Change - Suspend",
-          "request": {
-            "auth": {
-              "type": "noauth"
-            },
-            "method": "POST",
-            "header": [
-              {
-                "key": "Content-Type",
-                "value": "application/x-www-form-urlencoded"
-              }
-            ],
-            "body": {
-              "mode": "urlencoded",
-              "urlencoded": [
-                {
-                  "key": "key",
-                  "value": "{{key}}",
-                  "type": "text",
-                  "description": "API key"
-                },
-                {
-                  "key": "type",
-                  "value": "op",
-                  "type": "text",
-                  "description": "API method type"
-                },
-                {
-                  "key": "cmd",
-                  "value": "<request><high-availability><state><peer><suspend></suspend></peer></state></high-availability></request>",
-                  "description": "Suspend the peer HA node",
-                  "type": "text"
-                }
-              ]
-            },
-            "url": "https://{{host}}/api",
-            "description": "Suspend the peer HA node"
-          },
-          "response": []
-        },
-        {
           "_postman_id": "ce4ed42b-14e2-3c90-4626-1dfdfb85c754",
           "name": "Local State Change - Functional",
           "request": {
@@ -553,6 +511,48 @@
             },
             "url": "https://{{host}}/api",
             "description": "Make the local HA node functional"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "594ec28f-c3d9-3c3e-633d-3f6816904b74",
+          "name": "Peer State Change - Suspend",
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/x-www-form-urlencoded"
+              }
+            ],
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "key": "key",
+                  "value": "{{key}}",
+                  "type": "text",
+                  "description": "API key"
+                },
+                {
+                  "key": "type",
+                  "value": "op",
+                  "type": "text",
+                  "description": "API method type"
+                },
+                {
+                  "key": "cmd",
+                  "value": "<request><high-availability><state><peer><suspend></suspend></peer></state></high-availability></request>",
+                  "description": "Suspend the peer HA node",
+                  "type": "text"
+                }
+              ]
+            },
+            "url": "https://{{host}}/api",
+            "description": "Suspend the peer HA node"
           },
           "response": []
         },
