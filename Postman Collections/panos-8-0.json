@@ -587,8 +587,8 @@
                 },
                 {
                   "key": "cmd",
-                  "value": "<request><high-availability><state><functional></functional></state></high-availability></request>",
-                  "description": "Make the local HA node functional\n",
+                  "value": "<request><high-availability><state><peer><functional></functional></peer></state></high-availability></request>",
+                  "description": "Make the peer HA node functional",
                   "type": "text"
                 }
               ]
