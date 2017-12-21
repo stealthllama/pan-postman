@@ -432,7 +432,7 @@
         },
         {
           "_postman_id": "07b942a2-ed10-3888-b13c-fc4271382a42",
-          "name": "Show HA State copy",
+          "name": "Suspend HA Node",
           "request": {
             "auth": {
               "type": "noauth"
