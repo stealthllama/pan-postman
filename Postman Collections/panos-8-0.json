@@ -474,7 +474,7 @@
         },
         {
           "_postman_id": "594ec28f-c3d9-3c3e-633d-3f6816904b74",
-          "name": "Local State Change - Suspend copy",
+          "name": "Peer State Change - Suspend",
           "request": {
             "auth": {
               "type": "noauth"
