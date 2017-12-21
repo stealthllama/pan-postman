@@ -555,6 +555,48 @@
             "description": "Make the local HA node functional"
           },
           "response": []
+        },
+        {
+          "_postman_id": "5bb69b27-b14b-c6b1-2fdd-81dda0dd4dac",
+          "name": "Local State Change - Functional copy",
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/x-www-form-urlencoded"
+              }
+            ],
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "key": "key",
+                  "value": "{{key}}",
+                  "type": "text",
+                  "description": "API key"
+                },
+                {
+                  "key": "type",
+                  "value": "op",
+                  "type": "text",
+                  "description": "API method type"
+                },
+                {
+                  "key": "cmd",
+                  "value": "<request><high-availability><state><functional></functional></state></high-availability></request>",
+                  "description": "Make the local HA node functional\n",
+                  "type": "text"
+                }
+              ]
+            },
+            "url": "https://{{host}}/api",
+            "description": "Make the local HA node functional"
+          },
+          "response": []
         }
       ]
     },
