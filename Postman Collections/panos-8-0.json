@@ -612,12 +612,10 @@
             {
               "listen": "test",
               "script": {
-                "id": "a7934b11-3664-42a8-b6b8-980df58e27e7",
+                "id": "c4a41094-aed7-4f93-8305-829bb448880e",
                 "type": "text/javascript",
                 "exec": [
-                  "pm.test(\"Request success\", function () {",
-                  "    pm.response.to.have.body(\"<response status=\\\"success\\\">\");",
-                  "});"
+                  ""
                 ]
               }
             }
