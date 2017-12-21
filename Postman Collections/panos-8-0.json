@@ -510,7 +510,7 @@
               ]
             },
             "url": "https://{{host}}/api",
-            "description": "Suspend the local HA node"
+            "description": "Make the local HA node functional"
           },
           "response": []
         }
