@@ -558,7 +558,7 @@
         },
         {
           "_postman_id": "5bb69b27-b14b-c6b1-2fdd-81dda0dd4dac",
-          "name": "Local State Change - Functional copy",
+          "name": "Peer State Change - Functional",
           "request": {
             "auth": {
               "type": "noauth"
