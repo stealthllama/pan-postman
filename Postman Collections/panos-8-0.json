@@ -513,6 +513,48 @@
             "description": "Make the local HA node functional"
           },
           "response": []
+        },
+        {
+          "_postman_id": "594ec28f-c3d9-3c3e-633d-3f6816904b74",
+          "name": "Local State Change - Suspend copy",
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/x-www-form-urlencoded"
+              }
+            ],
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "key": "key",
+                  "value": "{{key}}",
+                  "type": "text",
+                  "description": "API key"
+                },
+                {
+                  "key": "type",
+                  "value": "op",
+                  "type": "text",
+                  "description": "API method type"
+                },
+                {
+                  "key": "cmd",
+                  "value": "<request><high-availability><state><suspend></suspend></state></high-availability></request>",
+                  "description": "Suspend the local HA node",
+                  "type": "text"
+                }
+              ]
+            },
+            "url": "https://{{host}}/api",
+            "description": "Suspend the local HA node"
+          },
+          "response": []
         }
       ]
     },
