@@ -59,7 +59,7 @@
                     },
                     {
                       "key": "cmd",
-                      "value": "<uid-message><version>1.0</version><type>update</type><payload><register><entry ip=\"1.1.1.1\"><tag><member>postman-test</member></tag></entry></register></payload></uid-message>",
+                      "value": "<uid-message><version>1.0</version><type>update</type><payload><register><entry ip=\"1.1.1.1\"><tag><member>blacklist</member></tag></entry></register></payload></uid-message>",
                       "type": "text",
                       "description": "Register IP"
                     }
