@@ -299,7 +299,7 @@
         },
         {
           "_postman_id": "5a6eec54-51a0-9716-fa38-5f894bf3c2ff",
-          "name": "Show All Jobs copy",
+          "name": "Generate API key",
           "request": {
             "auth": {
               "type": "noauth"
