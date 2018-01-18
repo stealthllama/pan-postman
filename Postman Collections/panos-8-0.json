@@ -335,7 +335,7 @@
               ]
             },
             "url": "https://{{host}}/api",
-            "description": "Show all jobs"
+            "description": "Generate API key"
           },
           "response": []
         },
