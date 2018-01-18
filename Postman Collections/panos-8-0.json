@@ -172,6 +172,54 @@
       "description": "",
       "item": [
         {
+          "_postman_id": "5a6eec54-51a0-9716-fa38-5f894bf3c2ff",
+          "name": "Generate API key",
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/x-www-form-urlencoded"
+              }
+            ],
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "key": "key",
+                  "value": "{{key}}",
+                  "type": "text",
+                  "description": "API key"
+                },
+                {
+                  "key": "type",
+                  "value": "keygen",
+                  "type": "text",
+                  "description": "API method type"
+                },
+                {
+                  "key": "user",
+                  "value": "admin",
+                  "description": "Admin user",
+                  "type": "text"
+                },
+                {
+                  "key": "password",
+                  "value": "admin",
+                  "description": "Admin password",
+                  "type": "text"
+                }
+              ]
+            },
+            "url": "https://{{host}}/api",
+            "description": "Generate API key"
+          },
+          "response": []
+        },
+        {
           "_postman_id": "c3c17f24-dc72-1449-d2b2-f0795fb956fd",
           "name": "Show System Resources",
           "request": {
@@ -294,54 +342,6 @@
             },
             "url": "https://{{host}}/api",
             "description": "Show all jobs"
-          },
-          "response": []
-        },
-        {
-          "_postman_id": "5a6eec54-51a0-9716-fa38-5f894bf3c2ff",
-          "name": "Generate API key",
-          "request": {
-            "auth": {
-              "type": "noauth"
-            },
-            "method": "POST",
-            "header": [
-              {
-                "key": "Content-Type",
-                "value": "application/x-www-form-urlencoded"
-              }
-            ],
-            "body": {
-              "mode": "urlencoded",
-              "urlencoded": [
-                {
-                  "key": "key",
-                  "value": "{{key}}",
-                  "type": "text",
-                  "description": "API key"
-                },
-                {
-                  "key": "type",
-                  "value": "keygen",
-                  "type": "text",
-                  "description": "API method type"
-                },
-                {
-                  "key": "user",
-                  "value": "admin",
-                  "description": "Admin user",
-                  "type": "text"
-                },
-                {
-                  "key": "password",
-                  "value": "admin",
-                  "description": "Admin password",
-                  "type": "text"
-                }
-              ]
-            },
-            "url": "https://{{host}}/api",
-            "description": "Generate API key"
           },
           "response": []
         },
