@@ -322,14 +322,20 @@
                 },
                 {
                   "key": "type",
-                  "value": "op",
+                  "value": "keygen",
                   "type": "text",
                   "description": "API method type"
                 },
                 {
-                  "key": "cmd",
-                  "value": "<show><jobs><all></all></jobs></show>",
-                  "description": "Show all jobs",
+                  "key": "user",
+                  "value": "admin",
+                  "description": "Admin user",
+                  "type": "text"
+                },
+                {
+                  "key": "password",
+                  "value": "admin",
+                  "description": "Admin password",
                   "type": "text"
                 }
               ]
