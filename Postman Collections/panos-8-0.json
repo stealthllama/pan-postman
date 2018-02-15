@@ -347,7 +347,7 @@
         },
         {
           "_postman_id": "2ea2adad-e737-3940-da70-06c266aad3d7",
-          "name": "Show All Jobs copy",
+          "name": "Show Job ID",
           "request": {
             "auth": {
               "type": "noauth"
