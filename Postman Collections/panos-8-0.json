@@ -376,8 +376,8 @@
                 },
                 {
                   "key": "cmd",
-                  "value": "<show><jobs><all></all></jobs></show>",
-                  "description": "Show all jobs",
+                  "value": "<show><jobs><id>192</id></jobs></show>",
+                  "description": "Show  job by ID ",
                   "type": "text"
                 }
               ]
