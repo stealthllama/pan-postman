@@ -383,7 +383,7 @@
               ]
             },
             "url": "https://{{host}}/api",
-            "description": "Show all jobs"
+            "description": "Show job by ID"
           },
           "response": []
         },
