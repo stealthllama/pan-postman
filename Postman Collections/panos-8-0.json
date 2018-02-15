@@ -428,6 +428,48 @@
             "description": "Show system info"
           },
           "response": []
+        },
+        {
+          "_postman_id": "2ea2adad-e737-3940-da70-06c266aad3d7",
+          "name": "Show All Jobs copy",
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/x-www-form-urlencoded"
+              }
+            ],
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "key": "key",
+                  "value": "{{key}}",
+                  "type": "text",
+                  "description": "API key"
+                },
+                {
+                  "key": "type",
+                  "value": "op",
+                  "type": "text",
+                  "description": "API method type"
+                },
+                {
+                  "key": "cmd",
+                  "value": "<show><jobs><all></all></jobs></show>",
+                  "description": "Show all jobs",
+                  "type": "text"
+                }
+              ]
+            },
+            "url": "https://{{host}}/api",
+            "description": "Show all jobs"
+          },
+          "response": []
         }
       ]
     },
