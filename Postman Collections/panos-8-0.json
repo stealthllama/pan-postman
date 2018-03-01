@@ -220,7 +220,7 @@
                 },
                 {
                   "key": "password",
-                  "value": "admin",
+                  "value": "paloalto",
                   "description": "Admin password",
                   "type": "text"
                 }
