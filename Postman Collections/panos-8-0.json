@@ -114,6 +114,18 @@
             }
           ],
           "_postman_isSubFolder": true
+        },
+        {
+          "_postman_id": "f1f426a0-2c46-ce1a-43d1-f2ec9db15a1a",
+          "name": "Add Shared Tag",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {},
+            "url": "",
+            "description": "Add a shared tag in Panorama"
+          },
+          "response": []
         }
       ]
     },
