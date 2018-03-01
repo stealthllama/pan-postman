@@ -119,7 +119,7 @@
           "_postman_id": "f1f426a0-2c46-ce1a-43d1-f2ec9db15a1a",
           "name": "Add Shared Tag",
           "request": {
-            "method": "GET",
+            "method": "POST",
             "header": [],
             "body": {},
             "url": "",
