@@ -149,7 +149,7 @@
                 }
               ]
             },
-            "url": "",
+            "url": "https://{{host}}/api",
             "description": "Add a shared tag in Panorama"
           },
           "response": []
