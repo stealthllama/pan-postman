@@ -155,7 +155,7 @@
                 },
                 {
                   "key": "element",
-                  "value": "<color>color1</color>",
+                  "value": "<color>color1</color><comments>Test tag</comments>",
                   "description": "Tag name",
                   "type": "text"
                 }
