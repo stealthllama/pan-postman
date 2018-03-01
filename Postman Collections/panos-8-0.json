@@ -120,8 +120,35 @@
           "name": "Add Shared Tag",
           "request": {
             "method": "POST",
-            "header": [],
-            "body": {},
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/x-www-form-urlencoded"
+              }
+            ],
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "key": "key",
+                  "value": "{{key}}",
+                  "type": "text",
+                  "description": "API key"
+                },
+                {
+                  "key": "type",
+                  "value": "config",
+                  "type": "text",
+                  "description": "API method type"
+                },
+                {
+                  "key": "xpath",
+                  "value": "/config/shared/tag/entry[@name='foo']",
+                  "type": "text",
+                  "description": ""
+                }
+              ]
+            },
             "url": "",
             "description": "Add a shared tag in Panorama"
           },
