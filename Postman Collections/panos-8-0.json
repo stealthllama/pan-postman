@@ -142,6 +142,12 @@
                   "description": "API method type"
                 },
                 {
+                  "key": "action",
+                  "value": "set",
+                  "description": "Configuration action",
+                  "type": "text"
+                },
+                {
                   "key": "xpath",
                   "value": "/config/shared/tag/",
                   "type": "text",
@@ -149,7 +155,7 @@
                 },
                 {
                   "key": "element",
-                  "value": "<entry name=\"foo\"/>",
+                  "value": "<entry name='foo'/>",
                   "description": "Tag name",
                   "type": "text"
                 }
