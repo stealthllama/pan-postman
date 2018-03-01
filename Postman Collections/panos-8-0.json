@@ -149,13 +149,13 @@
                 },
                 {
                   "key": "xpath",
-                  "value": "/config/shared/tag/",
+                  "value": "/config/shared/tag/entry[@name='foo']",
                   "type": "text",
                   "description": "Shared tags xpath"
                 },
                 {
                   "key": "element",
-                  "value": "<entry name='foo'/>",
+                  "value": "<color>color1</color>",
                   "description": "Tag name",
                   "type": "text"
                 }
