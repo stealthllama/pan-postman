@@ -143,9 +143,15 @@
                 },
                 {
                   "key": "xpath",
-                  "value": "/config/shared/tag/entry[@name='foo']",
+                  "value": "/config/shared/tag/entry[@name='foo']/",
                   "type": "text",
                   "description": ""
+                },
+                {
+                  "key": "element",
+                  "value": "<color></color><comment></comment>",
+                  "description": "",
+                  "type": "text"
                 }
               ]
             },
