@@ -567,7 +567,7 @@
               ]
             },
             "url": "https://{{host}}/api",
-            "description": "Show system info"
+            "description": "Show high-availability state"
           },
           "response": []
         },
