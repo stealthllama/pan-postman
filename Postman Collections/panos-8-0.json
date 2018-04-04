@@ -439,6 +439,48 @@
           "response": []
         },
         {
+          "_postman_id": "be21d32b-62a4-42a2-a2fe-58719f449629",
+          "name": "Show Job ID Copy",
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/x-www-form-urlencoded"
+              }
+            ],
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "key": "key",
+                  "value": "{{key}}",
+                  "type": "text",
+                  "description": "API key"
+                },
+                {
+                  "key": "type",
+                  "value": "op",
+                  "type": "text",
+                  "description": "API method type"
+                },
+                {
+                  "key": "cmd",
+                  "value": "<show><jobs><id>192</id></jobs></show>",
+                  "description": "Show  job by ID ",
+                  "type": "text"
+                }
+              ]
+            },
+            "url": "https://{{host}}/api",
+            "description": "Show job by ID"
+          },
+          "response": []
+        },
+        {
           "_postman_id": "e04853ee-46fe-4aae-9aa8-27cad9f862f1",
           "name": "Show Chassis Ready",
           "request": {
@@ -519,48 +561,6 @@
             },
             "url": "https://{{host}}/api",
             "description": "Show system info"
-          },
-          "response": []
-        },
-        {
-          "_postman_id": "be21d32b-62a4-42a2-a2fe-58719f449629",
-          "name": "Show Job ID Copy",
-          "request": {
-            "auth": {
-              "type": "noauth"
-            },
-            "method": "POST",
-            "header": [
-              {
-                "key": "Content-Type",
-                "value": "application/x-www-form-urlencoded"
-              }
-            ],
-            "body": {
-              "mode": "urlencoded",
-              "urlencoded": [
-                {
-                  "key": "key",
-                  "value": "{{key}}",
-                  "type": "text",
-                  "description": "API key"
-                },
-                {
-                  "key": "type",
-                  "value": "op",
-                  "type": "text",
-                  "description": "API method type"
-                },
-                {
-                  "key": "cmd",
-                  "value": "<show><jobs><id>192</id></jobs></show>",
-                  "description": "Show  job by ID ",
-                  "type": "text"
-                }
-              ]
-            },
-            "url": "https://{{host}}/api",
-            "description": "Show job by ID"
           },
           "response": []
         }
