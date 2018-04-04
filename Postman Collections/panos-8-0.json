@@ -1,7 +1,7 @@
 {
   "info": {
-    "name": "PAN-OS 8.0",
     "_postman_id": "241ff148-5458-dde5-cbaa-a80527e7dc55",
+    "name": "PAN-OS 8.0",
     "description": "API request collection for PAN-OS 8.0",
     "schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
   },
@@ -2450,6 +2450,12 @@
       "_postman_id": "f50e63a4-9ea7-16a4-61a8-b58e9ef38f3b",
       "name": "Configuration Management",
       "description": "",
+      "item": []
+    },
+    {
+      "_postman_id": "16b66af7-c539-49c4-811d-253b1886431d",
+      "name": "Panorama",
+      "description": "API calls specific to the Panorama management console",
       "item": []
     }
   ],
