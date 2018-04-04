@@ -2501,7 +2501,7 @@
         },
         {
           "_postman_id": "28683f83-472c-43ac-bb9b-481075fa52cd",
-          "name": "Show managed devices Copy",
+          "name": "Show device licenses",
           "request": {
             "auth": {
               "type": "noauth"
