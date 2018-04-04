@@ -2482,14 +2482,14 @@
                 },
                 {
                   "key": "cmd",
-                  "value": "<show><high-availability><state></state></high-availability></show>",
+                  "value": "<show><config><running/></config></show>",
                   "description": "Show high-availability state",
                   "type": "text"
                 }
               ]
             },
             "url": "https://{{host}}/api",
-            "description": "Show high-availability state"
+            "description": "Show running config"
           },
           "response": []
         }
