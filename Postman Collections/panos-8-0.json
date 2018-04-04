@@ -2495,7 +2495,7 @@
               ]
             },
             "url": "https://{{host}}/api",
-            "description": "Show job by ID"
+            "description": "Show all Panorama managed devices"
           },
           "response": []
         }
