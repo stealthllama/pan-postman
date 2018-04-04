@@ -2537,7 +2537,7 @@
               ]
             },
             "url": "https://{{host}}/api",
-            "description": "Show all Panorama managed devices"
+            "description": "Show licenses for all Panorama managed devices"
           },
           "response": []
         }
