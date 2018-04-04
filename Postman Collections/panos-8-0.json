@@ -2498,6 +2498,48 @@
             "description": "Show all Panorama managed devices"
           },
           "response": []
+        },
+        {
+          "_postman_id": "28683f83-472c-43ac-bb9b-481075fa52cd",
+          "name": "Show managed devices Copy",
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/x-www-form-urlencoded"
+              }
+            ],
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "key": "key",
+                  "value": "{{key}}",
+                  "type": "text",
+                  "description": "API key"
+                },
+                {
+                  "key": "type",
+                  "value": "op",
+                  "type": "text",
+                  "description": "API method type"
+                },
+                {
+                  "key": "cmd",
+                  "value": "<show><devices><all></all></devices></show>",
+                  "description": "Show  all devices",
+                  "type": "text"
+                }
+              ]
+            },
+            "url": "https://{{host}}/api",
+            "description": "Show all Panorama managed devices"
+          },
+          "response": []
         }
       ]
     }
