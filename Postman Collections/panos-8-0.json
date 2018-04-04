@@ -2530,7 +2530,7 @@
                 },
                 {
                   "key": "cmd",
-                  "value": "<show><devices><all></all></devices></show>",
+                  "value": "<request><batch><license><info></info></license></batch></request>",
                   "description": "Show  all devices",
                   "type": "text"
                 }
