@@ -531,7 +531,7 @@
       "item": [
         {
           "_postman_id": "b1e58cbf-f43d-5af4-c6ff-0c05564dd31e",
-          "name": "Show System Info copy",
+          "name": "Show HA state",
           "request": {
             "auth": {
               "type": "noauth"
