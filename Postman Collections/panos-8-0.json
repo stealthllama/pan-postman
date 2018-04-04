@@ -2459,7 +2459,7 @@
       "item": [
         {
           "_postman_id": "be21d32b-62a4-42a2-a2fe-58719f449629",
-          "name": "Show Job ID Copy",
+          "name": "Show managed devices",
           "request": {
             "auth": {
               "type": "noauth"
