@@ -572,48 +572,6 @@
           "response": []
         },
         {
-          "_postman_id": "d03648df-1b4b-462e-9ba4-4d4d7cb2972f",
-          "name": "Show HA state Copy",
-          "request": {
-            "auth": {
-              "type": "noauth"
-            },
-            "method": "POST",
-            "header": [
-              {
-                "key": "Content-Type",
-                "value": "application/x-www-form-urlencoded"
-              }
-            ],
-            "body": {
-              "mode": "urlencoded",
-              "urlencoded": [
-                {
-                  "key": "key",
-                  "value": "{{key}}",
-                  "type": "text",
-                  "description": "API key"
-                },
-                {
-                  "key": "type",
-                  "value": "op",
-                  "type": "text",
-                  "description": "API method type"
-                },
-                {
-                  "key": "cmd",
-                  "value": "<show><high-availability><state></state></high-availability></show>",
-                  "description": "Show high-availability state",
-                  "type": "text"
-                }
-              ]
-            },
-            "url": "https://{{host}}/api",
-            "description": "Show high-availability state"
-          },
-          "response": []
-        },
-        {
           "_postman_id": "07b942a2-ed10-3888-b13c-fc4271382a42",
           "name": "Local State Change - Suspend",
           "request": {
@@ -2492,7 +2450,50 @@
       "_postman_id": "f50e63a4-9ea7-16a4-61a8-b58e9ef38f3b",
       "name": "Configuration Management",
       "description": "",
-      "item": []
+      "item": [
+        {
+          "_postman_id": "d03648df-1b4b-462e-9ba4-4d4d7cb2972f",
+          "name": "Show HA state Copy",
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/x-www-form-urlencoded"
+              }
+            ],
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "key": "key",
+                  "value": "{{key}}",
+                  "type": "text",
+                  "description": "API key"
+                },
+                {
+                  "key": "type",
+                  "value": "op",
+                  "type": "text",
+                  "description": "API method type"
+                },
+                {
+                  "key": "cmd",
+                  "value": "<show><high-availability><state></state></high-availability></show>",
+                  "description": "Show high-availability state",
+                  "type": "text"
+                }
+              ]
+            },
+            "url": "https://{{host}}/api",
+            "description": "Show high-availability state"
+          },
+          "response": []
+        }
+      ]
     },
     {
       "_postman_id": "16b66af7-c539-49c4-811d-253b1886431d",
