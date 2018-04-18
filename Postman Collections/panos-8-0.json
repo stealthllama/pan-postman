@@ -313,6 +313,48 @@
           "response": []
         },
         {
+          "_postman_id": "172a41bc-4e05-4718-a247-d6cb2ba5b332",
+          "name": "Show System Resources Copy",
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/x-www-form-urlencoded"
+              }
+            ],
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "key": "key",
+                  "value": "{{key}}",
+                  "type": "text",
+                  "description": "API key"
+                },
+                {
+                  "key": "type",
+                  "value": "op",
+                  "type": "text",
+                  "description": "API method type"
+                },
+                {
+                  "key": "cmd",
+                  "value": "<show><system><resources></resources></system></show>",
+                  "description": "Show system info",
+                  "type": "text"
+                }
+              ]
+            },
+            "url": "https://{{host}}/api",
+            "description": "Show system resources"
+          },
+          "response": []
+        },
+        {
           "_postman_id": "3c0c5c62-fdae-67a1-41df-5b99e81419f6",
           "name": "Show Pending Jobs",
           "request": {
@@ -519,48 +561,6 @@
             },
             "url": "https://{{host}}/api",
             "description": "Show system info"
-          },
-          "response": []
-        },
-        {
-          "_postman_id": "172a41bc-4e05-4718-a247-d6cb2ba5b332",
-          "name": "Show System Resources Copy",
-          "request": {
-            "auth": {
-              "type": "noauth"
-            },
-            "method": "POST",
-            "header": [
-              {
-                "key": "Content-Type",
-                "value": "application/x-www-form-urlencoded"
-              }
-            ],
-            "body": {
-              "mode": "urlencoded",
-              "urlencoded": [
-                {
-                  "key": "key",
-                  "value": "{{key}}",
-                  "type": "text",
-                  "description": "API key"
-                },
-                {
-                  "key": "type",
-                  "value": "op",
-                  "type": "text",
-                  "description": "API method type"
-                },
-                {
-                  "key": "cmd",
-                  "value": "<show><system><resources></resources></system></show>",
-                  "description": "Show system info",
-                  "type": "text"
-                }
-              ]
-            },
-            "url": "https://{{host}}/api",
-            "description": "Show system resources"
           },
           "response": []
         }
