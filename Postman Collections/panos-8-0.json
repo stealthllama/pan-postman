@@ -326,13 +326,34 @@
                 "value": "application/x-www-form-urlencoded"
               }
             ],
-            "body": {
-              "mode": "file",
-              "file": {
-                "src": null
-              }
+            "body": {},
+            "url": {
+              "raw": "https://{{host}}/api?key={{key}}&type=import&category=software",
+              "protocol": "https",
+              "host": [
+                "{{host}}"
+              ],
+              "path": [
+                "api"
+              ],
+              "query": [
+                {
+                  "key": "key",
+                  "value": "{{key}}",
+                  "equals": true
+                },
+                {
+                  "key": "type",
+                  "value": "import",
+                  "equals": true
+                },
+                {
+                  "key": "category",
+                  "value": "software",
+                  "equals": true
+                }
+              ]
             },
-            "url": "https://{{host}}/api",
             "description": "Import a software image"
           },
           "response": []
