@@ -314,7 +314,7 @@
         },
         {
           "_postman_id": "172a41bc-4e05-4718-a247-d6cb2ba5b332",
-          "name": "Import File",
+          "name": "Import File - Software",
           "request": {
             "auth": {
               "type": "noauth"
