@@ -350,7 +350,7 @@
               ]
             },
             "url": "https://{{host}}/api",
-            "description": "Show system resources"
+            "description": "Import a software image"
           },
           "response": []
         },
