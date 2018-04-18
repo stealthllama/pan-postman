@@ -327,27 +327,10 @@
               }
             ],
             "body": {
-              "mode": "urlencoded",
-              "urlencoded": [
-                {
-                  "key": "key",
-                  "value": "{{key}}",
-                  "type": "text",
-                  "description": "API key"
-                },
-                {
-                  "key": "type",
-                  "value": "op",
-                  "type": "text",
-                  "description": "API method type"
-                },
-                {
-                  "key": "cmd",
-                  "value": "<show><system><resources></resources></system></show>",
-                  "description": "Show system info",
-                  "type": "text"
-                }
-              ]
+              "mode": "file",
+              "file": {
+                "src": null
+              }
             },
             "url": "https://{{host}}/api",
             "description": "Import a software image"
