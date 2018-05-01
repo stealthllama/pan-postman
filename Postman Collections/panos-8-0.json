@@ -103,30 +103,34 @@
                     "value": "application/x-www-form-urlencoded"
                   }
                 ],
-                "body": {
-                  "mode": "urlencoded",
-                  "urlencoded": [
+                "body": {},
+                "url": {
+                  "raw": "https://{{host}}/api?key={{key}}&type=user-id&cmd=<uid-message><version>1.0</version><type>update</type><payload><register><entry ip=\"1.1.1.1\"><tag><member>quarantine</member></tag></entry></register></payload></uid-message>",
+                  "protocol": "https",
+                  "host": [
+                    "{{host}}"
+                  ],
+                  "path": [
+                    "api"
+                  ],
+                  "query": [
                     {
                       "key": "key",
                       "value": "{{key}}",
-                      "type": "text",
-                      "description": "API key"
+                      "equals": true
                     },
                     {
                       "key": "type",
                       "value": "user-id",
-                      "type": "text",
-                      "description": "API method type"
+                      "equals": true
                     },
                     {
                       "key": "cmd",
                       "value": "<uid-message><version>1.0</version><type>update</type><payload><register><entry ip=\"1.1.1.1\"><tag><member>quarantine</member></tag></entry></register></payload></uid-message>",
-                      "type": "text",
-                      "description": "Register IP"
+                      "equals": true
                     }
                   ]
                 },
-                "url": "https://{{host}}/api",
                 "description": "Register an IP addresses to a Dynamic Address Group"
               },
               "response": []
