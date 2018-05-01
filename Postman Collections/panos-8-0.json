@@ -84,30 +84,49 @@
                     "value": "application/x-www-form-urlencoded"
                   }
                 ],
-                "body": {
-                  "mode": "urlencoded",
-                  "urlencoded": [
+                "body": {},
+                "url": {
+                  "raw": "https://{{host}}/api?key={{key}}&type=config&action=set&xpath=/config/devices/entry[@name='localhost.localdomain']/vsys/entry[@name='vsys1']/address-group/entry[@name='test-dag']&element=<description>This is a test DAG</description><dynamic><filter>outbound</filter></dynamic>",
+                  "protocol": "https",
+                  "host": [
+                    "{{host}}"
+                  ],
+                  "path": [
+                    "api"
+                  ],
+                  "query": [
                     {
                       "key": "key",
                       "value": "{{key}}",
-                      "type": "text",
+                      "equals": true,
                       "description": "API key"
                     },
                     {
                       "key": "type",
-                      "value": "user-id",
-                      "type": "text",
+                      "value": "config",
+                      "equals": true,
                       "description": "API method type"
                     },
                     {
-                      "key": "cmd",
-                      "value": "<uid-message><version>1.0</version><type>update</type><payload><register><entry ip=\"1.1.1.1\"><tag><member>quarantine</member></tag></entry></register></payload></uid-message>",
-                      "type": "text",
-                      "description": "Register IP"
+                      "key": "action",
+                      "value": "set",
+                      "equals": true,
+                      "description": "Config action"
+                    },
+                    {
+                      "key": "xpath",
+                      "value": "/config/devices/entry[@name='localhost.localdomain']/vsys/entry[@name='vsys1']/address-group/entry[@name='test-dag']",
+                      "equals": true,
+                      "description": "XPath"
+                    },
+                    {
+                      "key": "element",
+                      "value": "<description>This is a test DAG</description><dynamic><filter>outbound</filter></dynamic>",
+                      "equals": true,
+                      "description": "Element value"
                     }
                   ]
                 },
-                "url": "https://{{host}}/api",
                 "description": "Add a dynamic address group"
               },
               "response": []
