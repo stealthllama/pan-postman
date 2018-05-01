@@ -72,7 +72,7 @@
             },
             {
               "_postman_id": "c143c29d-dc28-477f-8cb6-ba54e7e680c2",
-              "name": "Register IP Address Copy",
+              "name": "Add Dynamic Address Group",
               "request": {
                 "auth": {
                   "type": "noauth"
