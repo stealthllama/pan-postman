@@ -181,48 +181,45 @@
           "name": "Add Shared Tag",
           "request": {
             "method": "POST",
-            "header": [
-              {
-                "key": "Content-Type",
-                "value": "application/x-www-form-urlencoded"
-              }
-            ],
-            "body": {
-              "mode": "urlencoded",
-              "urlencoded": [
+            "header": [],
+            "body": {},
+            "url": {
+              "raw": "https://{{host}}/api?key={{key}}&type=config&action=set&xpath=/config/shared/tag/entry[@name='foo']&element=<color>color1</color><comments>Test tag</comments>",
+              "protocol": "https",
+              "host": [
+                "{{host}}"
+              ],
+              "path": [
+                "api"
+              ],
+              "query": [
                 {
                   "key": "key",
                   "value": "{{key}}",
-                  "type": "text",
-                  "description": "API key"
+                  "equals": true
                 },
                 {
                   "key": "type",
                   "value": "config",
-                  "type": "text",
-                  "description": "API method type"
+                  "equals": true
                 },
                 {
                   "key": "action",
                   "value": "set",
-                  "description": "Configuration action",
-                  "type": "text"
+                  "equals": true
                 },
                 {
                   "key": "xpath",
                   "value": "/config/shared/tag/entry[@name='foo']",
-                  "type": "text",
-                  "description": "Shared tags xpath"
+                  "equals": true
                 },
                 {
                   "key": "element",
                   "value": "<color>color1</color><comments>Test tag</comments>",
-                  "description": "Tag name",
-                  "type": "text"
+                  "equals": true
                 }
               ]
             },
-            "url": "https://{{host}}/api",
             "description": "Add a shared tag in Panorama"
           },
           "response": []
