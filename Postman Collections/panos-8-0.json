@@ -108,7 +108,7 @@
                   ]
                 },
                 "url": "https://{{host}}/api",
-                "description": "Register an IP addresses to a Dynamic Address Group"
+                "description": "Add a dynamic address group"
               },
               "response": []
             },
