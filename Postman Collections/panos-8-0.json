@@ -29,48 +29,6 @@
           "description": "",
           "item": [
             {
-              "_postman_id": "40323d4a-2284-b3aa-401c-9846d3455a3f",
-              "name": "Register IP Address",
-              "request": {
-                "auth": {
-                  "type": "noauth"
-                },
-                "method": "POST",
-                "header": [
-                  {
-                    "key": "Content-Type",
-                    "value": "application/x-www-form-urlencoded"
-                  }
-                ],
-                "body": {
-                  "mode": "urlencoded",
-                  "urlencoded": [
-                    {
-                      "key": "key",
-                      "value": "{{key}}",
-                      "type": "text",
-                      "description": "API key"
-                    },
-                    {
-                      "key": "type",
-                      "value": "user-id",
-                      "type": "text",
-                      "description": "API method type"
-                    },
-                    {
-                      "key": "cmd",
-                      "value": "<uid-message><version>1.0</version><type>update</type><payload><register><entry ip=\"1.1.1.1\"><tag><member>quarantine</member></tag></entry></register></payload></uid-message>",
-                      "type": "text",
-                      "description": "Register IP"
-                    }
-                  ]
-                },
-                "url": "https://{{host}}/api",
-                "description": "Register an IP addresses to a Dynamic Address Group"
-              },
-              "response": []
-            },
-            {
               "_postman_id": "c143c29d-dc28-477f-8cb6-ba54e7e680c2",
               "name": "Add Dynamic Address Group",
               "request": {
@@ -128,6 +86,48 @@
                   ]
                 },
                 "description": "Add a dynamic address group"
+              },
+              "response": []
+            },
+            {
+              "_postman_id": "40323d4a-2284-b3aa-401c-9846d3455a3f",
+              "name": "Register IP Address",
+              "request": {
+                "auth": {
+                  "type": "noauth"
+                },
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/x-www-form-urlencoded"
+                  }
+                ],
+                "body": {
+                  "mode": "urlencoded",
+                  "urlencoded": [
+                    {
+                      "key": "key",
+                      "value": "{{key}}",
+                      "type": "text",
+                      "description": "API key"
+                    },
+                    {
+                      "key": "type",
+                      "value": "user-id",
+                      "type": "text",
+                      "description": "API method type"
+                    },
+                    {
+                      "key": "cmd",
+                      "value": "<uid-message><version>1.0</version><type>update</type><payload><register><entry ip=\"1.1.1.1\"><tag><member>quarantine</member></tag></entry></register></payload></uid-message>",
+                      "type": "text",
+                      "description": "Register IP"
+                    }
+                  ]
+                },
+                "url": "https://{{host}}/api",
+                "description": "Register an IP addresses to a Dynamic Address Group"
               },
               "response": []
             },
