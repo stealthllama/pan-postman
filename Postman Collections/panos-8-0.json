@@ -2742,116 +2742,239 @@
       ]
     },
     {
-      "_postman_id": "9019b7db-4a5e-4fd3-8b13-9ba7acc79e0f",
-      "name": "Config Locks",
-      "description": "PAN-OS API requests specific to configuration lock actions",
+      "_postman_id": "f50e63a4-9ea7-16a4-61a8-b58e9ef38f3b",
+      "name": "Configuration Management",
+      "description": "",
       "item": [
         {
-          "_postman_id": "9c7762ac-b66d-4c6f-ab40-2c92345cf95e",
-          "name": "Show Config Locks",
-          "request": {
-            "auth": {
-              "type": "noauth"
+          "_postman_id": "9019b7db-4a5e-4fd3-8b13-9ba7acc79e0f",
+          "name": "Config Locks",
+          "description": "PAN-OS API requests specific to configuration lock actions",
+          "item": [
+            {
+              "_postman_id": "9c7762ac-b66d-4c6f-ab40-2c92345cf95e",
+              "name": "Show Config Locks",
+              "request": {
+                "auth": {
+                  "type": "noauth"
+                },
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/x-www-form-urlencoded"
+                  }
+                ],
+                "body": {},
+                "url": {
+                  "raw": "https://{{host}}/api?key={{key}}&type=op&cmd=<show><config-locks></config-locks></show>",
+                  "protocol": "https",
+                  "host": [
+                    "{{host}}"
+                  ],
+                  "path": [
+                    "api"
+                  ],
+                  "query": [
+                    {
+                      "key": "key",
+                      "value": "{{key}}",
+                      "equals": true,
+                      "description": "API key"
+                    },
+                    {
+                      "key": "type",
+                      "value": "op",
+                      "equals": true,
+                      "description": "API action"
+                    },
+                    {
+                      "key": "cmd",
+                      "value": "<show><config-locks></config-locks></show>",
+                      "equals": true,
+                      "description": "API command"
+                    }
+                  ]
+                },
+                "description": "Show all configuration locks"
+              },
+              "response": []
             },
-            "method": "POST",
-            "header": [
-              {
-                "key": "Content-Type",
-                "value": "application/x-www-form-urlencoded"
-              }
-            ],
-            "body": {},
-            "url": {
-              "raw": "https://{{host}}/api?key={{key}}&type=op&cmd=<show><config-locks></config-locks></show>",
-              "protocol": "https",
-              "host": [
-                "{{host}}"
-              ],
-              "path": [
-                "api"
-              ],
-              "query": [
-                {
-                  "key": "key",
-                  "value": "{{key}}",
-                  "equals": true,
-                  "description": "API key"
+            {
+              "_postman_id": "95fda1e2-2b00-47e6-bb24-6d89a4e32c20",
+              "name": "Request Config Lock",
+              "request": {
+                "auth": {
+                  "type": "noauth"
                 },
-                {
-                  "key": "type",
-                  "value": "op",
-                  "equals": true,
-                  "description": "API action"
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/x-www-form-urlencoded"
+                  }
+                ],
+                "body": {},
+                "url": {
+                  "raw": "https://{{host}}/api?key={{key}}&type=op&cmd=<request><config-lock><add></add></config-lock></request>",
+                  "protocol": "https",
+                  "host": [
+                    "{{host}}"
+                  ],
+                  "path": [
+                    "api"
+                  ],
+                  "query": [
+                    {
+                      "key": "key",
+                      "value": "{{key}}",
+                      "equals": true,
+                      "description": "API key"
+                    },
+                    {
+                      "key": "type",
+                      "value": "op",
+                      "equals": true,
+                      "description": "API action"
+                    },
+                    {
+                      "key": "cmd",
+                      "value": "<request><config-lock><add></add></config-lock></request>",
+                      "equals": true,
+                      "description": "API command"
+                    }
+                  ]
                 },
+                "description": "Request a configuration lock"
+              },
+              "response": []
+            },
+            {
+              "_postman_id": "44ff63e7-fe50-405e-ba83-01e0d6784c2a",
+              "name": "Request Config Lock - With Comment",
+              "event": [
                 {
-                  "key": "cmd",
-                  "value": "<show><config-locks></config-locks></show>",
-                  "equals": true,
-                  "description": "API command"
+                  "listen": "prerequest",
+                  "script": {
+                    "id": "a7206693-030b-4544-ac66-7d688bfa5e79",
+                    "type": "text/javascript",
+                    "exec": [
+                      ""
+                    ]
+                  }
                 }
-              ]
-            },
-            "description": "Show all configuration locks"
-          },
-          "response": []
-        },
-        {
-          "_postman_id": "95fda1e2-2b00-47e6-bb24-6d89a4e32c20",
-          "name": "Request Config Lock",
-          "request": {
-            "auth": {
-              "type": "noauth"
-            },
-            "method": "POST",
-            "header": [
-              {
-                "key": "Content-Type",
-                "value": "application/x-www-form-urlencoded"
-              }
-            ],
-            "body": {},
-            "url": {
-              "raw": "https://{{host}}/api?key={{key}}&type=op&cmd=<request><config-lock><add></add></config-lock></request>",
-              "protocol": "https",
-              "host": [
-                "{{host}}"
               ],
-              "path": [
-                "api"
-              ],
-              "query": [
-                {
-                  "key": "key",
-                  "value": "{{key}}",
-                  "equals": true,
-                  "description": "API key"
+              "request": {
+                "auth": {
+                  "type": "noauth"
                 },
-                {
-                  "key": "type",
-                  "value": "op",
-                  "equals": true,
-                  "description": "API action"
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/x-www-form-urlencoded"
+                  }
+                ],
+                "body": {},
+                "url": {
+                  "raw": "https://{{host}}/api?key={{key}}&type=op&cmd=<request><config-lock><add><comment>Postman testing</comment></add></config-lock></request>",
+                  "protocol": "https",
+                  "host": [
+                    "{{host}}"
+                  ],
+                  "path": [
+                    "api"
+                  ],
+                  "query": [
+                    {
+                      "key": "key",
+                      "value": "{{key}}",
+                      "equals": true,
+                      "description": "API key"
+                    },
+                    {
+                      "key": "type",
+                      "value": "op",
+                      "equals": true,
+                      "description": "API action"
+                    },
+                    {
+                      "key": "cmd",
+                      "value": "<request><config-lock><add><comment>Postman testing</comment></add></config-lock></request>",
+                      "equals": true,
+                      "description": "API command"
+                    }
+                  ]
                 },
-                {
-                  "key": "cmd",
-                  "value": "<request><config-lock><add></add></config-lock></request>",
-                  "equals": true,
-                  "description": "API command"
-                }
-              ]
+                "description": "Request a configuration lock with a comment"
+              },
+              "response": []
             },
-            "description": "Request a configuration lock"
-          },
-          "response": []
-        },
-        {
-          "_postman_id": "44ff63e7-fe50-405e-ba83-01e0d6784c2a",
-          "name": "Request Config Lock - With Comment",
+            {
+              "_postman_id": "0c72ae87-bed9-48cb-8755-135b5c1b938d",
+              "name": "Remove Config Lock",
+              "request": {
+                "auth": {
+                  "type": "noauth"
+                },
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/x-www-form-urlencoded"
+                  }
+                ],
+                "body": {},
+                "url": {
+                  "raw": "https://{{host}}/api?key={{key}}&type=op&cmd=<request><config-lock><remove></remove></config-lock></request>",
+                  "protocol": "https",
+                  "host": [
+                    "{{host}}"
+                  ],
+                  "path": [
+                    "api"
+                  ],
+                  "query": [
+                    {
+                      "key": "key",
+                      "value": "{{key}}",
+                      "equals": true,
+                      "description": "API key"
+                    },
+                    {
+                      "key": "type",
+                      "value": "op",
+                      "equals": true,
+                      "description": "API action"
+                    },
+                    {
+                      "key": "cmd",
+                      "value": "<request><config-lock><remove></remove></config-lock></request>",
+                      "equals": true,
+                      "description": "API command"
+                    }
+                  ]
+                },
+                "description": "Remove a configuration lock"
+              },
+              "response": []
+            }
+          ],
           "event": [
             {
               "listen": "prerequest",
               "script": {
-                "id": "a7206693-030b-4544-ac66-7d688bfa5e79",
+                "id": "36fc35e5-ce04-4d52-900a-8a913e0d6d6c",
+                "type": "text/javascript",
+                "exec": [
+                  ""
+                ]
+              }
+            },
+            {
+              "listen": "test",
+              "script": {
+                "id": "d83f7c66-1722-49fc-8d34-201797dbfc3e",
                 "type": "text/javascript",
                 "exec": [
                   ""
@@ -2859,130 +2982,8 @@
               }
             }
           ],
-          "request": {
-            "auth": {
-              "type": "noauth"
-            },
-            "method": "POST",
-            "header": [
-              {
-                "key": "Content-Type",
-                "value": "application/x-www-form-urlencoded"
-              }
-            ],
-            "body": {},
-            "url": {
-              "raw": "https://{{host}}/api?key={{key}}&type=op&cmd=<request><config-lock><add><comment>Postman testing</comment></add></config-lock></request>",
-              "protocol": "https",
-              "host": [
-                "{{host}}"
-              ],
-              "path": [
-                "api"
-              ],
-              "query": [
-                {
-                  "key": "key",
-                  "value": "{{key}}",
-                  "equals": true,
-                  "description": "API key"
-                },
-                {
-                  "key": "type",
-                  "value": "op",
-                  "equals": true,
-                  "description": "API action"
-                },
-                {
-                  "key": "cmd",
-                  "value": "<request><config-lock><add><comment>Postman testing</comment></add></config-lock></request>",
-                  "equals": true,
-                  "description": "API command"
-                }
-              ]
-            },
-            "description": "Request a configuration lock with a comment"
-          },
-          "response": []
+          "_postman_isSubFolder": true
         },
-        {
-          "_postman_id": "0c72ae87-bed9-48cb-8755-135b5c1b938d",
-          "name": "Remove Config Lock",
-          "request": {
-            "auth": {
-              "type": "noauth"
-            },
-            "method": "POST",
-            "header": [
-              {
-                "key": "Content-Type",
-                "value": "application/x-www-form-urlencoded"
-              }
-            ],
-            "body": {},
-            "url": {
-              "raw": "https://{{host}}/api?key={{key}}&type=op&cmd=<request><config-lock><remove></remove></config-lock></request>",
-              "protocol": "https",
-              "host": [
-                "{{host}}"
-              ],
-              "path": [
-                "api"
-              ],
-              "query": [
-                {
-                  "key": "key",
-                  "value": "{{key}}",
-                  "equals": true,
-                  "description": "API key"
-                },
-                {
-                  "key": "type",
-                  "value": "op",
-                  "equals": true,
-                  "description": "API action"
-                },
-                {
-                  "key": "cmd",
-                  "value": "<request><config-lock><remove></remove></config-lock></request>",
-                  "equals": true,
-                  "description": "API command"
-                }
-              ]
-            },
-            "description": "Remove a configuration lock"
-          },
-          "response": []
-        }
-      ],
-      "event": [
-        {
-          "listen": "prerequest",
-          "script": {
-            "id": "36fc35e5-ce04-4d52-900a-8a913e0d6d6c",
-            "type": "text/javascript",
-            "exec": [
-              ""
-            ]
-          }
-        },
-        {
-          "listen": "test",
-          "script": {
-            "id": "d83f7c66-1722-49fc-8d34-201797dbfc3e",
-            "type": "text/javascript",
-            "exec": [
-              ""
-            ]
-          }
-        }
-      ]
-    },
-    {
-      "_postman_id": "f50e63a4-9ea7-16a4-61a8-b58e9ef38f3b",
-      "name": "Configuration Management",
-      "description": "",
-      "item": [
         {
           "_postman_id": "255f2b5e-8b72-4378-ae1c-181bd919ba0e",
           "name": "Show pending changes",
