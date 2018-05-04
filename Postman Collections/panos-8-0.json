@@ -462,6 +462,55 @@
             "description": "Show URL categories"
           },
           "response": []
+        },
+        {
+          "_postman_id": "8ed33880-f736-4038-846a-f31000074830",
+          "name": "Upgrade Content Latest Copy",
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/x-www-form-urlencoded"
+              }
+            ],
+            "body": {},
+            "url": {
+              "raw": "https://{{host}}/api?key={{key}}&type=op&cmd=<request><content><upgrade><download><latest/> \n</download></upgrade></content></request>",
+              "protocol": "https",
+              "host": [
+                "{{host}}"
+              ],
+              "path": [
+                "api"
+              ],
+              "query": [
+                {
+                  "key": "key",
+                  "value": "{{key}}",
+                  "equals": true,
+                  "description": "API key"
+                },
+                {
+                  "key": "type",
+                  "value": "op",
+                  "equals": true,
+                  "description": "API action"
+                },
+                {
+                  "key": "cmd",
+                  "value": "<request><content><upgrade><download><latest/> \n</download></upgrade></content></request>",
+                  "equals": true,
+                  "description": "API command"
+                }
+              ]
+            },
+            "description": "Upgrade to the latest content release"
+          },
+          "response": []
         }
       ]
     },
