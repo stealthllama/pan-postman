@@ -2744,6 +2744,64 @@
             "description": "Clear all pending commit jobs"
           },
           "response": []
+        },
+        {
+          "_postman_id": "c41f5068-e70c-416e-81f5-cf340f2cc65e",
+          "name": "Commit - All Copy",
+          "event": [
+            {
+              "listen": "prerequest",
+              "script": {
+                "id": "0897f533-6597-442b-9dc9-eed8c4b921b9",
+                "type": "text/javascript",
+                "exec": [
+                  ""
+                ]
+              }
+            }
+          ],
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/x-www-form-urlencoded"
+              }
+            ],
+            "body": {},
+            "url": {
+              "raw": "https://{{host}}/api?key={{key}}&type=commit&cmd=<commit></commit>",
+              "protocol": "https",
+              "host": [
+                "{{host}}"
+              ],
+              "path": [
+                "api"
+              ],
+              "query": [
+                {
+                  "key": "key",
+                  "value": "{{key}}",
+                  "equals": true
+                },
+                {
+                  "key": "type",
+                  "value": "commit",
+                  "equals": true
+                },
+                {
+                  "key": "cmd",
+                  "value": "<commit></commit>",
+                  "equals": true
+                }
+              ]
+            },
+            "description": "Commit the entire candidate configuration"
+          },
+          "response": []
         }
       ],
       "event": [
