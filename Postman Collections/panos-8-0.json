@@ -361,7 +361,7 @@
         },
         {
           "_postman_id": "00b30d3d-7375-495e-bb4e-e591b4438c07",
-          "name": "Content Upgrade Check Copy",
+          "name": "Content Upgrade Info",
           "request": {
             "auth": {
               "type": "noauth"
