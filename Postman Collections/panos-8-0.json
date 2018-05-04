@@ -2226,7 +2226,7 @@
         },
         {
           "_postman_id": "c41f5068-e70c-416e-81f5-cf340f2cc65e",
-          "name": "Commit - All Copy",
+          "name": "Check Full Commit",
           "event": [
             {
               "listen": "prerequest",
