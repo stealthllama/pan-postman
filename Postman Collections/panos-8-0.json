@@ -1886,8 +1886,15 @@
     {
       "_postman_id": "bc8adc0e-b0d1-b390-2dee-aeddb84ab70a",
       "name": "Commit",
-      "description": "PAN-OS API requests specific to commit actions and locks ",
+      "description": "PAN-OS API requests specific to commit actions",
       "item": [
+        {
+          "_postman_id": "86a7e04f-f15c-4201-93df-3a75443baf67",
+          "name": "Commit Locks",
+          "description": "PAN-OS API requests specific to commit lock actions",
+          "item": [],
+          "_postman_isSubFolder": true
+        },
         {
           "_postman_id": "ca380a51-1c38-5579-b5d5-282eb9e3cf3e",
           "name": "Commit - All",
