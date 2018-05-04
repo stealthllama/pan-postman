@@ -1910,30 +1910,34 @@
                 "value": "application/x-www-form-urlencoded"
               }
             ],
-            "body": {
-              "mode": "urlencoded",
-              "urlencoded": [
+            "body": {},
+            "url": {
+              "raw": "https://{{host}}/api?key={{key}}&type=commit&cmd=<commit></commit>",
+              "protocol": "https",
+              "host": [
+                "{{host}}"
+              ],
+              "path": [
+                "api"
+              ],
+              "query": [
                 {
                   "key": "key",
                   "value": "{{key}}",
-                  "type": "text",
-                  "description": "API key"
+                  "equals": true
                 },
                 {
                   "key": "type",
                   "value": "commit",
-                  "type": "text",
-                  "description": "API method type"
+                  "equals": true
                 },
                 {
                   "key": "cmd",
                   "value": "<commit></commit>",
-                  "description": "Commit all",
-                  "type": "text"
+                  "equals": true
                 }
               ]
             },
-            "url": "https://{{host}}/api",
             "description": "Commit the entire candidate configuration"
           },
           "response": []
