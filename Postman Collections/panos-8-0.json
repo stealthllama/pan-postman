@@ -2252,7 +2252,7 @@
             ],
             "body": {},
             "url": {
-              "raw": "https://{{host}}/api?key={{key}}&type=commit&cmd=<commit></commit>",
+              "raw": "https://{{host}}/api?key={{key}}&type=commit&cmd=<check><full-commit-required></full-commit-required></check>",
               "protocol": "https",
               "host": [
                 "{{host}}"
@@ -2264,17 +2264,20 @@
                 {
                   "key": "key",
                   "value": "{{key}}",
-                  "equals": true
+                  "equals": true,
+                  "description": "API key"
                 },
                 {
                   "key": "type",
                   "value": "commit",
-                  "equals": true
+                  "equals": true,
+                  "description": "API action"
                 },
                 {
                   "key": "cmd",
-                  "value": "<commit></commit>",
-                  "equals": true
+                  "value": "<check><full-commit-required></full-commit-required></check>",
+                  "equals": true,
+                  "description": "API command"
                 }
               ]
             },
