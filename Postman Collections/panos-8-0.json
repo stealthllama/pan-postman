@@ -269,7 +269,7 @@
       "item": [
         {
           "_postman_id": "d7c3b197-7fa3-4d2c-5cb5-d0b5d483c378",
-          "name": "Upgrade Content",
+          "name": "Upgrade Content Latest",
           "request": {
             "auth": {
               "type": "noauth"
