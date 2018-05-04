@@ -1949,6 +1949,18 @@
         {
           "_postman_id": "c72eea2c-a377-5ee6-672f-87a5f23b3158",
           "name": "Commit - By Administrator",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "id": "e6c08ae7-120c-4f0a-abc2-3e4503081411",
+                "type": "text/javascript",
+                "exec": [
+                  ""
+                ]
+              }
+            }
+          ],
           "request": {
             "auth": {
               "type": "noauth"
