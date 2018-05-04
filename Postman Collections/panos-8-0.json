@@ -2756,7 +2756,7 @@
                 }
               ]
             },
-            "description": "Clear all pending commit jobs"
+            "description": "Show all commit jobs"
           },
           "response": []
         }
