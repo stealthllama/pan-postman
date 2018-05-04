@@ -2802,7 +2802,7 @@
             },
             {
               "_postman_id": "95fda1e2-2b00-47e6-bb24-6d89a4e32c20",
-              "name": "Request Commit Lock",
+              "name": "Request Config Lock",
               "request": {
                 "auth": {
                   "type": "noauth"
@@ -2816,7 +2816,7 @@
                 ],
                 "body": {},
                 "url": {
-                  "raw": "https://{{host}}/api?key={{key}}&type=op&cmd=<request><commit-lock><add></add></commit-lock></request>",
+                  "raw": "https://{{host}}/api?key={{key}}&type=op&cmd=<request><config-lock><add></add></config-lock></request>",
                   "protocol": "https",
                   "host": [
                     "{{host}}"
@@ -2837,12 +2837,12 @@
                     },
                     {
                       "key": "cmd",
-                      "value": "<request><commit-lock><add></add></commit-lock></request>",
+                      "value": "<request><config-lock><add></add></config-lock></request>",
                       "equals": true
                     }
                   ]
                 },
-                "description": "Request a commit lock"
+                "description": "Request a configuration lock"
               },
               "response": []
             },
