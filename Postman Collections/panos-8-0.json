@@ -3075,20 +3075,17 @@
                 {
                   "key": "key",
                   "value": "{{key}}",
-                  "equals": true,
-                  "description": "API key"
+                  "equals": true
                 },
                 {
                   "key": "type",
                   "value": "op",
-                  "equals": true,
-                  "description": "API action"
+                  "equals": true
                 },
                 {
                   "key": "cmd",
                   "value": "<check><pending-changes></pending-changes></check>",
-                  "equals": true,
-                  "description": "API command"
+                  "equals": true
                 }
               ]
             },
