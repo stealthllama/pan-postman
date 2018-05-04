@@ -2139,6 +2139,256 @@
           "_postman_isSubFolder": true
         },
         {
+          "_postman_id": "9019b7db-4a5e-4fd3-8b13-9ba7acc79e0f",
+          "name": "Commit Locks Copy",
+          "description": "PAN-OS API requests specific to commit lock actions",
+          "item": [
+            {
+              "_postman_id": "9c7762ac-b66d-4c6f-ab40-2c92345cf95e",
+              "name": "Show Commit Locks",
+              "request": {
+                "auth": {
+                  "type": "noauth"
+                },
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/x-www-form-urlencoded"
+                  }
+                ],
+                "body": {},
+                "url": {
+                  "raw": "https://{{host}}/api?key={{key}}&type=op&cmd=<show><commit-locks></commit-locks></show>",
+                  "protocol": "https",
+                  "host": [
+                    "{{host}}"
+                  ],
+                  "path": [
+                    "api"
+                  ],
+                  "query": [
+                    {
+                      "key": "key",
+                      "value": "{{key}}",
+                      "equals": true
+                    },
+                    {
+                      "key": "type",
+                      "value": "op",
+                      "equals": true
+                    },
+                    {
+                      "key": "cmd",
+                      "value": "<show><commit-locks></commit-locks></show>",
+                      "equals": true
+                    }
+                  ]
+                },
+                "description": "Show all commit locks"
+              },
+              "response": []
+            },
+            {
+              "_postman_id": "95fda1e2-2b00-47e6-bb24-6d89a4e32c20",
+              "name": "Request Commit Lock",
+              "request": {
+                "auth": {
+                  "type": "noauth"
+                },
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/x-www-form-urlencoded"
+                  }
+                ],
+                "body": {},
+                "url": {
+                  "raw": "https://{{host}}/api?key={{key}}&type=op&cmd=<request><commit-lock><add></add></commit-lock></request>",
+                  "protocol": "https",
+                  "host": [
+                    "{{host}}"
+                  ],
+                  "path": [
+                    "api"
+                  ],
+                  "query": [
+                    {
+                      "key": "key",
+                      "value": "{{key}}",
+                      "equals": true
+                    },
+                    {
+                      "key": "type",
+                      "value": "op",
+                      "equals": true
+                    },
+                    {
+                      "key": "cmd",
+                      "value": "<request><commit-lock><add></add></commit-lock></request>",
+                      "equals": true
+                    }
+                  ]
+                },
+                "description": "Request a commit lock"
+              },
+              "response": []
+            },
+            {
+              "_postman_id": "44ff63e7-fe50-405e-ba83-01e0d6784c2a",
+              "name": "Request Commit Lock - With Comment",
+              "event": [
+                {
+                  "listen": "prerequest",
+                  "script": {
+                    "id": "a7206693-030b-4544-ac66-7d688bfa5e79",
+                    "type": "text/javascript",
+                    "exec": [
+                      ""
+                    ]
+                  }
+                }
+              ],
+              "request": {
+                "auth": {
+                  "type": "noauth"
+                },
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/x-www-form-urlencoded"
+                  }
+                ],
+                "body": {},
+                "url": {
+                  "raw": "https://{{host}}/api?key={{key}}&type=op&cmd=<request><commit-lock><add><comment>Postman testing</comment></add></commit-lock></request>",
+                  "protocol": "https",
+                  "host": [
+                    "{{host}}"
+                  ],
+                  "path": [
+                    "api"
+                  ],
+                  "query": [
+                    {
+                      "key": "key",
+                      "value": "{{key}}",
+                      "equals": true
+                    },
+                    {
+                      "key": "type",
+                      "value": "op",
+                      "equals": true
+                    },
+                    {
+                      "key": "cmd",
+                      "value": "<request><commit-lock><add><comment>Postman testing</comment></add></commit-lock></request>",
+                      "equals": true
+                    }
+                  ]
+                },
+                "description": "Request a commit lock with a comment"
+              },
+              "response": []
+            },
+            {
+              "_postman_id": "0c72ae87-bed9-48cb-8755-135b5c1b938d",
+              "name": "Remove Commit Lock",
+              "request": {
+                "auth": {
+                  "type": "noauth"
+                },
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/x-www-form-urlencoded"
+                  }
+                ],
+                "body": {},
+                "url": {
+                  "raw": "https://{{host}}/api?key={{key}}&type=op&cmd=<request><commit-lock><remove></remove></commit-lock></request>",
+                  "protocol": "https",
+                  "host": [
+                    "{{host}}"
+                  ],
+                  "path": [
+                    "api"
+                  ],
+                  "query": [
+                    {
+                      "key": "key",
+                      "value": "{{key}}",
+                      "equals": true
+                    },
+                    {
+                      "key": "type",
+                      "value": "op",
+                      "equals": true
+                    },
+                    {
+                      "key": "cmd",
+                      "value": "<request><commit-lock><remove></remove></commit-lock></request>",
+                      "equals": true
+                    }
+                  ]
+                },
+                "description": "Request my commit lock"
+              },
+              "response": []
+            },
+            {
+              "_postman_id": "46c7aac2-d5f5-4b96-93d8-82dc716fb988",
+              "name": "Remove Commit Lock - By Admin",
+              "request": {
+                "auth": {
+                  "type": "noauth"
+                },
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/x-www-form-urlencoded"
+                  }
+                ],
+                "body": {},
+                "url": {
+                  "raw": "https://{{host}}/api?key={{key}}&type=op&cmd=<request><commit-lock><remove><admin>admin</admin></remove></commit-lock></request>",
+                  "protocol": "https",
+                  "host": [
+                    "{{host}}"
+                  ],
+                  "path": [
+                    "api"
+                  ],
+                  "query": [
+                    {
+                      "key": "key",
+                      "value": "{{key}}",
+                      "equals": true
+                    },
+                    {
+                      "key": "type",
+                      "value": "op",
+                      "equals": true
+                    },
+                    {
+                      "key": "cmd",
+                      "value": "<request><commit-lock><remove><admin>admin</admin></remove></commit-lock></request>",
+                      "equals": true
+                    }
+                  ]
+                },
+                "description": "Remove another administrator's commit lock"
+              },
+              "response": []
+            }
+          ],
+          "_postman_isSubFolder": true
+        },
+        {
           "_postman_id": "ca380a51-1c38-5579-b5d5-282eb9e3cf3e",
           "name": "Commit - All",
           "event": [
