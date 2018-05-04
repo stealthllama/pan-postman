@@ -2752,6 +2752,55 @@
           "description": "PAN-OS API requests specific to configuration lock actions",
           "item": [
             {
+              "_postman_id": "d03648df-1b4b-462e-9ba4-4d4d7cb2972f",
+              "name": "Show running config",
+              "request": {
+                "auth": {
+                  "type": "noauth"
+                },
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/x-www-form-urlencoded"
+                  }
+                ],
+                "body": {},
+                "url": {
+                  "raw": "https://{{host}}/api?key={{key}}&type=op&cmd=<show><config><running/></config></show>",
+                  "protocol": "https",
+                  "host": [
+                    "{{host}}"
+                  ],
+                  "path": [
+                    "api"
+                  ],
+                  "query": [
+                    {
+                      "key": "key",
+                      "value": "{{key}}",
+                      "equals": true,
+                      "description": "API key"
+                    },
+                    {
+                      "key": "type",
+                      "value": "op",
+                      "equals": true,
+                      "description": "API action"
+                    },
+                    {
+                      "key": "cmd",
+                      "value": "<show><config><running/></config></show>",
+                      "equals": true,
+                      "description": "API command"
+                    }
+                  ]
+                },
+                "description": "Show the running configuration"
+              },
+              "response": []
+            },
+            {
               "_postman_id": "9c7762ac-b66d-4c6f-ab40-2c92345cf95e",
               "name": "Show Config Locks",
               "request": {
@@ -2956,55 +3005,6 @@
                   ]
                 },
                 "description": "Remove a configuration lock"
-              },
-              "response": []
-            },
-            {
-              "_postman_id": "d03648df-1b4b-462e-9ba4-4d4d7cb2972f",
-              "name": "Show running config",
-              "request": {
-                "auth": {
-                  "type": "noauth"
-                },
-                "method": "POST",
-                "header": [
-                  {
-                    "key": "Content-Type",
-                    "value": "application/x-www-form-urlencoded"
-                  }
-                ],
-                "body": {},
-                "url": {
-                  "raw": "https://{{host}}/api?key={{key}}&type=op&cmd=<show><config><running/></config></show>",
-                  "protocol": "https",
-                  "host": [
-                    "{{host}}"
-                  ],
-                  "path": [
-                    "api"
-                  ],
-                  "query": [
-                    {
-                      "key": "key",
-                      "value": "{{key}}",
-                      "equals": true,
-                      "description": "API key"
-                    },
-                    {
-                      "key": "type",
-                      "value": "op",
-                      "equals": true,
-                      "description": "API action"
-                    },
-                    {
-                      "key": "cmd",
-                      "value": "<show><config><running/></config></show>",
-                      "equals": true,
-                      "description": "API command"
-                    }
-                  ]
-                },
-                "description": "Show the running configuration"
               },
               "response": []
             }
