@@ -2365,17 +2365,20 @@
                 {
                   "key": "key",
                   "value": "{{key}}",
-                  "equals": true
+                  "equals": true,
+                  "description": "API key"
                 },
                 {
                   "key": "type",
                   "value": "commit",
-                  "equals": true
+                  "equals": true,
+                  "description": "API action"
                 },
                 {
                   "key": "cmd",
                   "value": "<commit><force><partial><admin><member>admin</member></admin></partial></force></commit>",
-                  "equals": true
+                  "equals": true,
+                  "description": "API command"
                 }
               ]
             },
