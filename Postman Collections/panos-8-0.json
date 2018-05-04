@@ -355,7 +355,7 @@
                 }
               ]
             },
-            "description": "Upgrade to the latest content release"
+            "description": "Retrieve current content information from update server"
           },
           "response": []
         },
