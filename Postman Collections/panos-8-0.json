@@ -2835,7 +2835,7 @@
         "type": "text/javascript",
         "exec": [
           "pm.test(\"Request successful\", function () {",
-          "    pm.expect(pm.response.text()).to.include(\"<response status=\\\"success\\\">\");",
+          "    pm.expect(pm.response.text()).to.include(\"response status=\\\"success\\\"\");",
           "});"
         ]
       }
