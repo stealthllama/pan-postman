@@ -2274,7 +2274,7 @@
                   "key": "type",
                   "value": "commit",
                   "equals": true,
-                  "description": "API action type"
+                  "description": "API action"
                 },
                 {
                   "key": "cmd",
