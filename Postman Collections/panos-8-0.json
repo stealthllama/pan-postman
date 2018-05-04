@@ -2716,7 +2716,7 @@
         },
         {
           "_postman_id": "a257ed70-78ba-4cd0-9b75-f54895efb86b",
-          "name": "Clear Commit Jobs Copy",
+          "name": "Show Commit Jobs",
           "request": {
             "auth": {
               "type": "noauth"
