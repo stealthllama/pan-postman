@@ -2225,67 +2225,6 @@
           "response": []
         },
         {
-          "_postman_id": "c41f5068-e70c-416e-81f5-cf340f2cc65e",
-          "name": "Check Full Commit",
-          "event": [
-            {
-              "listen": "prerequest",
-              "script": {
-                "id": "0897f533-6597-442b-9dc9-eed8c4b921b9",
-                "type": "text/javascript",
-                "exec": [
-                  ""
-                ]
-              }
-            }
-          ],
-          "request": {
-            "auth": {
-              "type": "noauth"
-            },
-            "method": "POST",
-            "header": [
-              {
-                "key": "Content-Type",
-                "value": "application/x-www-form-urlencoded"
-              }
-            ],
-            "body": {},
-            "url": {
-              "raw": "https://{{host}}/api?key={{key}}&type=commit&cmd=<check><full-commit-required></full-commit-required></check>",
-              "protocol": "https",
-              "host": [
-                "{{host}}"
-              ],
-              "path": [
-                "api"
-              ],
-              "query": [
-                {
-                  "key": "key",
-                  "value": "{{key}}",
-                  "equals": true,
-                  "description": "API key"
-                },
-                {
-                  "key": "type",
-                  "value": "commit",
-                  "equals": true,
-                  "description": "API action"
-                },
-                {
-                  "key": "cmd",
-                  "value": "<check><full-commit-required></full-commit-required></check>",
-                  "equals": true,
-                  "description": "API command"
-                }
-              ]
-            },
-            "description": "Check if a full commit is required"
-          },
-          "response": []
-        },
-        {
           "_postman_id": "c72eea2c-a377-5ee6-672f-87a5f23b3158",
           "name": "Commit - By Administrator",
           "event": [
@@ -2757,6 +2696,67 @@
               ]
             },
             "description": "Commit everything except the policy and objects configs"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "c41f5068-e70c-416e-81f5-cf340f2cc65e",
+          "name": "Check Full Commit",
+          "event": [
+            {
+              "listen": "prerequest",
+              "script": {
+                "id": "0897f533-6597-442b-9dc9-eed8c4b921b9",
+                "type": "text/javascript",
+                "exec": [
+                  ""
+                ]
+              }
+            }
+          ],
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/x-www-form-urlencoded"
+              }
+            ],
+            "body": {},
+            "url": {
+              "raw": "https://{{host}}/api?key={{key}}&type=commit&cmd=<check><full-commit-required></full-commit-required></check>",
+              "protocol": "https",
+              "host": [
+                "{{host}}"
+              ],
+              "path": [
+                "api"
+              ],
+              "query": [
+                {
+                  "key": "key",
+                  "value": "{{key}}",
+                  "equals": true,
+                  "description": "API key"
+                },
+                {
+                  "key": "type",
+                  "value": "commit",
+                  "equals": true,
+                  "description": "API action"
+                },
+                {
+                  "key": "cmd",
+                  "value": "<check><full-commit-required></full-commit-required></check>",
+                  "equals": true,
+                  "description": "API command"
+                }
+              ]
+            },
+            "description": "Check if a full commit is required"
           },
           "response": []
         },
