@@ -2490,30 +2490,34 @@
                 "value": "application/x-www-form-urlencoded"
               }
             ],
-            "body": {
-              "mode": "urlencoded",
-              "urlencoded": [
+            "body": {},
+            "url": {
+              "raw": "https://{{host}}/api?key={{key}}&type=op&cmd=<request><commit-lock><add><comment>Postman testing</comment></add></commit-lock></request>",
+              "protocol": "https",
+              "host": [
+                "{{host}}"
+              ],
+              "path": [
+                "api"
+              ],
+              "query": [
                 {
                   "key": "key",
                   "value": "{{key}}",
-                  "type": "text",
-                  "description": "API key"
+                  "equals": true
                 },
                 {
                   "key": "type",
                   "value": "op",
-                  "type": "text",
-                  "description": "API method type"
+                  "equals": true
                 },
                 {
                   "key": "cmd",
                   "value": "<request><commit-lock><add><comment>Postman testing</comment></add></commit-lock></request>",
-                  "description": "Request commit lock",
-                  "type": "text"
+                  "equals": true
                 }
               ]
             },
-            "url": "https://{{host}}/api",
             "description": "Request a commit lock with a comment"
           },
           "response": []
