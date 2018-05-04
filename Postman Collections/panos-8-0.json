@@ -2877,7 +2877,7 @@
                 ],
                 "body": {},
                 "url": {
-                  "raw": "https://{{host}}/api?key={{key}}&type=op&cmd=<request><commit-lock><add><comment>Postman testing</comment></add></commit-lock></request>",
+                  "raw": "https://{{host}}/api?key={{key}}&type=op&cmd=<request><config-lock><add><comment>Postman testing</comment></add></config-lock></request>",
                   "protocol": "https",
                   "host": [
                     "{{host}}"
@@ -2889,21 +2889,24 @@
                     {
                       "key": "key",
                       "value": "{{key}}",
-                      "equals": true
+                      "equals": true,
+                      "description": "API key"
                     },
                     {
                       "key": "type",
                       "value": "op",
-                      "equals": true
+                      "equals": true,
+                      "description": "API action"
                     },
                     {
                       "key": "cmd",
-                      "value": "<request><commit-lock><add><comment>Postman testing</comment></add></commit-lock></request>",
-                      "equals": true
+                      "value": "<request><config-lock><add><comment>Postman testing</comment></add></config-lock></request>",
+                      "equals": true,
+                      "description": "API command"
                     }
                   ]
                 },
-                "description": "Request a commit lock with a comment"
+                "description": "Request a configuration lock with a comment"
               },
               "response": []
             },
