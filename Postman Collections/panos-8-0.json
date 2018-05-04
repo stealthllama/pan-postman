@@ -2052,7 +2052,7 @@
         },
         {
           "_postman_id": "1184e374-95af-415e-beba-c012975757e2",
-          "name": "Commit - Force Copy",
+          "name": "Commit - Force By Administrator",
           "request": {
             "auth": {
               "type": "noauth"
