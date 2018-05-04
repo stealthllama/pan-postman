@@ -2796,7 +2796,7 @@
                     }
                   ]
                 },
-                "description": "Show all commit locks"
+                "description": "Show all configuration locks"
               },
               "response": []
             },
