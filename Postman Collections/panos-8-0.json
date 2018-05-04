@@ -3071,7 +3071,7 @@
                 }
               ]
             },
-            "description": "Show pending changes to the configuration"
+            "description": "Show if there are pending changes to the configuration"
           },
           "response": []
         },
