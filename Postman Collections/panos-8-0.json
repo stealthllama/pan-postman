@@ -2912,7 +2912,7 @@
             },
             {
               "_postman_id": "0c72ae87-bed9-48cb-8755-135b5c1b938d",
-              "name": "Remove Commit Lock",
+              "name": "Remove Config Lock",
               "request": {
                 "auth": {
                   "type": "noauth"
@@ -2926,7 +2926,7 @@
                 ],
                 "body": {},
                 "url": {
-                  "raw": "https://{{host}}/api?key={{key}}&type=op&cmd=<request><commit-lock><remove></remove></commit-lock></request>",
+                  "raw": "https://{{host}}/api?key={{key}}&type=op&cmd=<request><config-lock><remove></remove></config-lock></request>",
                   "protocol": "https",
                   "host": [
                     "{{host}}"
@@ -2938,21 +2938,73 @@
                     {
                       "key": "key",
                       "value": "{{key}}",
-                      "equals": true
+                      "equals": true,
+                      "description": "API key"
                     },
                     {
                       "key": "type",
                       "value": "op",
-                      "equals": true
+                      "equals": true,
+                      "description": "API action"
                     },
                     {
                       "key": "cmd",
-                      "value": "<request><commit-lock><remove></remove></commit-lock></request>",
-                      "equals": true
+                      "value": "<request><config-lock><remove></remove></config-lock></request>",
+                      "equals": true,
+                      "description": "API command"
                     }
                   ]
                 },
-                "description": "Request my commit lock"
+                "description": "Remove a configuration lock"
+              },
+              "response": []
+            },
+            {
+              "_postman_id": "d03648df-1b4b-462e-9ba4-4d4d7cb2972f",
+              "name": "Show running config",
+              "request": {
+                "auth": {
+                  "type": "noauth"
+                },
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/x-www-form-urlencoded"
+                  }
+                ],
+                "body": {},
+                "url": {
+                  "raw": "https://{{host}}/api?key={{key}}&type=op&cmd=<show><config><running/></config></show>",
+                  "protocol": "https",
+                  "host": [
+                    "{{host}}"
+                  ],
+                  "path": [
+                    "api"
+                  ],
+                  "query": [
+                    {
+                      "key": "key",
+                      "value": "{{key}}",
+                      "equals": true,
+                      "description": "API key"
+                    },
+                    {
+                      "key": "type",
+                      "value": "op",
+                      "equals": true,
+                      "description": "API action"
+                    },
+                    {
+                      "key": "cmd",
+                      "value": "<show><config><running/></config></show>",
+                      "equals": true,
+                      "description": "API command"
+                    }
+                  ]
+                },
+                "description": "Show the running configuration"
               },
               "response": []
             }
@@ -2980,52 +3032,6 @@
             }
           ],
           "_postman_isSubFolder": true
-        },
-        {
-          "_postman_id": "d03648df-1b4b-462e-9ba4-4d4d7cb2972f",
-          "name": "Show running config",
-          "request": {
-            "auth": {
-              "type": "noauth"
-            },
-            "method": "POST",
-            "header": [
-              {
-                "key": "Content-Type",
-                "value": "application/x-www-form-urlencoded"
-              }
-            ],
-            "body": {},
-            "url": {
-              "raw": "https://{{host}}/api?key={{key}}&type=op&cmd=<show><config><running/></config></show>",
-              "protocol": "https",
-              "host": [
-                "{{host}}"
-              ],
-              "path": [
-                "api"
-              ],
-              "query": [
-                {
-                  "key": "key",
-                  "value": "{{key}}",
-                  "equals": true
-                },
-                {
-                  "key": "type",
-                  "value": "op",
-                  "equals": true
-                },
-                {
-                  "key": "cmd",
-                  "value": "<show><config><running/></config></show>",
-                  "equals": true
-                }
-              ]
-            },
-            "description": "Show running config"
-          },
-          "response": []
         },
         {
           "_postman_id": "255f2b5e-8b72-4378-ae1c-181bd919ba0e",
@@ -3069,17 +3075,20 @@
                 {
                   "key": "key",
                   "value": "{{key}}",
-                  "equals": true
+                  "equals": true,
+                  "description": "API key"
                 },
                 {
                   "key": "type",
                   "value": "op",
-                  "equals": true
+                  "equals": true,
+                  "description": "API action"
                 },
                 {
                   "key": "cmd",
                   "value": "<check><pending-changes></pending-changes></check>",
-                  "equals": true
+                  "equals": true,
+                  "description": "API command"
                 }
               ]
             },
