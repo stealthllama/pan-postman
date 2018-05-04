@@ -2828,17 +2828,20 @@
                     {
                       "key": "key",
                       "value": "{{key}}",
-                      "equals": true
+                      "equals": true,
+                      "description": "API key"
                     },
                     {
                       "key": "type",
                       "value": "op",
-                      "equals": true
+                      "equals": true,
+                      "description": "API action"
                     },
                     {
                       "key": "cmd",
                       "value": "<request><config-lock><add></add></config-lock></request>",
-                      "equals": true
+                      "equals": true,
+                      "description": "API command"
                     }
                   ]
                 },
