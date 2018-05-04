@@ -2281,7 +2281,7 @@
                 }
               ]
             },
-            "description": "Commit the entire candidate configuration"
+            "description": "Check if a full commit is required"
           },
           "response": []
         },
