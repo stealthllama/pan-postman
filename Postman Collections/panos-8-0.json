@@ -2659,6 +2659,52 @@
             "description": "Remove another administrator's commit lock"
           },
           "response": []
+        },
+        {
+          "_postman_id": "1184e374-95af-415e-beba-c012975757e2",
+          "name": "Commit - Force Copy",
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/x-www-form-urlencoded"
+              }
+            ],
+            "body": {},
+            "url": {
+              "raw": "https://{{host}}/api?key={{key}}&type=commit&cmd=<commit><force></force></commit>",
+              "protocol": "https",
+              "host": [
+                "{{host}}"
+              ],
+              "path": [
+                "api"
+              ],
+              "query": [
+                {
+                  "key": "key",
+                  "value": "{{key}}",
+                  "equals": true
+                },
+                {
+                  "key": "type",
+                  "value": "commit",
+                  "equals": true
+                },
+                {
+                  "key": "cmd",
+                  "value": "<commit><force></force></commit>",
+                  "equals": true
+                }
+              ]
+            },
+            "description": "Commit all changes forcefully"
+          },
+          "response": []
         }
       ],
       "event": [
