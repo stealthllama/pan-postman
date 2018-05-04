@@ -3012,21 +3012,24 @@
                 {
                   "key": "key",
                   "value": "{{key}}",
-                  "equals": true
+                  "equals": true,
+                  "description": "API key"
                 },
                 {
                   "key": "type",
                   "value": "op",
-                  "equals": true
+                  "equals": true,
+                  "description": "API action"
                 },
                 {
                   "key": "cmd",
                   "value": "<show><config><running/></config></show>",
-                  "equals": true
+                  "equals": true,
+                  "description": "API command"
                 }
               ]
             },
-            "description": "Show running config"
+            "description": "Show the running configuration"
           },
           "response": []
         },
@@ -3072,17 +3075,20 @@
                 {
                   "key": "key",
                   "value": "{{key}}",
-                  "equals": true
+                  "equals": true,
+                  "description": "API key"
                 },
                 {
                   "key": "type",
                   "value": "op",
-                  "equals": true
+                  "equals": true,
+                  "description": "API action"
                 },
                 {
                   "key": "cmd",
                   "value": "<check><pending-changes></pending-changes></check>",
-                  "equals": true
+                  "equals": true,
+                  "description": "API command"
                 }
               ]
             },
