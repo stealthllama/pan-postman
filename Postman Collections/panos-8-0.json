@@ -2912,7 +2912,7 @@
             },
             {
               "_postman_id": "0c72ae87-bed9-48cb-8755-135b5c1b938d",
-              "name": "Remove Config Lock",
+              "name": "Remove Commit Lock",
               "request": {
                 "auth": {
                   "type": "noauth"
@@ -2926,7 +2926,7 @@
                 ],
                 "body": {},
                 "url": {
-                  "raw": "https://{{host}}/api?key={{key}}&type=op&cmd=<request><config-lock><remove></remove></config-lock></request>",
+                  "raw": "https://{{host}}/api?key={{key}}&type=op&cmd=<request><commit-lock><remove></remove></commit-lock></request>",
                   "protocol": "https",
                   "host": [
                     "{{host}}"
@@ -2938,24 +2938,21 @@
                     {
                       "key": "key",
                       "value": "{{key}}",
-                      "equals": true,
-                      "description": "API key"
+                      "equals": true
                     },
                     {
                       "key": "type",
                       "value": "op",
-                      "equals": true,
-                      "description": "API action"
+                      "equals": true
                     },
                     {
                       "key": "cmd",
-                      "value": "<request><config-lock><remove></remove></config-lock></request>",
-                      "equals": true,
-                      "description": "API command"
+                      "value": "<request><commit-lock><remove></remove></commit-lock></request>",
+                      "equals": true
                     }
                   ]
                 },
-                "description": "Remove a configuration lock"
+                "description": "Request my commit lock"
               },
               "response": []
             }
@@ -3012,24 +3009,21 @@
                 {
                   "key": "key",
                   "value": "{{key}}",
-                  "equals": true,
-                  "description": "API key"
+                  "equals": true
                 },
                 {
                   "key": "type",
                   "value": "op",
-                  "equals": true,
-                  "description": "API action"
+                  "equals": true
                 },
                 {
                   "key": "cmd",
                   "value": "<show><config><running/></config></show>",
-                  "equals": true,
-                  "description": "API command"
+                  "equals": true
                 }
               ]
             },
-            "description": "Show the running configuration"
+            "description": "Show running config"
           },
           "response": []
         },
