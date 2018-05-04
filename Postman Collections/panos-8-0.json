@@ -318,7 +318,7 @@
         },
         {
           "_postman_id": "8ed33880-f736-4038-846a-f31000074830",
-          "name": "Upgrade Content Latest Copy",
+          "name": "Download Latest Content",
           "request": {
             "auth": {
               "type": "noauth"
