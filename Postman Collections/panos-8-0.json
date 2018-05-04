@@ -2092,7 +2092,7 @@
                 }
               ]
             },
-            "description": "Commit all changes forcefully"
+            "description": "Commit forcefully the candidate configuration changed made by a specific administrator"
           },
           "response": []
         },
