@@ -2055,19 +2055,19 @@
                   "key": "key",
                   "value": "{{key}}",
                   "type": "text",
-                  "description": "API key"
+                  "description": ""
                 },
                 {
                   "key": "type",
                   "value": "commit",
                   "type": "text",
-                  "description": "API method type"
+                  "description": ""
                 },
                 {
                   "key": "cmd",
                   "value": "<commit><description>Postman testing</description></commit>",
-                  "description": "Commit all changes with a description",
-                  "type": "text"
+                  "type": "text",
+                  "description": ""
                 }
               ]
             },
