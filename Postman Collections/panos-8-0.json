@@ -360,52 +360,6 @@
           "response": []
         },
         {
-          "_postman_id": "b12ce679-dcc3-4b8e-954c-9479626a2218",
-          "name": "Show URL Categories",
-          "request": {
-            "auth": {
-              "type": "noauth"
-            },
-            "method": "POST",
-            "header": [
-              {
-                "key": "Content-Type",
-                "value": "application/x-www-form-urlencoded"
-              }
-            ],
-            "body": {},
-            "url": {
-              "raw": "https://{{host}}/api?key={{key}}&type=op&cmd=<request><content><upgrade><download><latest/> \n</download></upgrade></content></request>",
-              "protocol": "https",
-              "host": [
-                "{{host}}"
-              ],
-              "path": [
-                "api"
-              ],
-              "query": [
-                {
-                  "key": "key",
-                  "value": "{{key}}",
-                  "equals": true
-                },
-                {
-                  "key": "type",
-                  "value": "op",
-                  "equals": true
-                },
-                {
-                  "key": "cmd",
-                  "value": "<request><content><upgrade><download><latest/> \n</download></upgrade></content></request>",
-                  "equals": true
-                }
-              ]
-            },
-            "description": "Show URL categories"
-          },
-          "response": []
-        },
-        {
           "_postman_id": "00b30d3d-7375-495e-bb4e-e591b4438c07",
           "name": "Content Upgrade Check Copy",
           "request": {
@@ -448,6 +402,52 @@
               ]
             },
             "description": "Retrieve current content information from update server"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "b12ce679-dcc3-4b8e-954c-9479626a2218",
+          "name": "Show URL Categories",
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/x-www-form-urlencoded"
+              }
+            ],
+            "body": {},
+            "url": {
+              "raw": "https://{{host}}/api?key={{key}}&type=op&cmd=<request><content><upgrade><download><latest/> \n</download></upgrade></content></request>",
+              "protocol": "https",
+              "host": [
+                "{{host}}"
+              ],
+              "path": [
+                "api"
+              ],
+              "query": [
+                {
+                  "key": "key",
+                  "value": "{{key}}",
+                  "equals": true
+                },
+                {
+                  "key": "type",
+                  "value": "op",
+                  "equals": true
+                },
+                {
+                  "key": "cmd",
+                  "value": "<request><content><upgrade><download><latest/> \n</download></upgrade></content></request>",
+                  "equals": true
+                }
+              ]
+            },
+            "description": "Show URL categories"
           },
           "response": []
         }
