@@ -63,7 +63,7 @@
                       "key": "type",
                       "value": "config",
                       "equals": true,
-                      "description": "API method type"
+                      "description": "API action"
                     },
                     {
                       "key": "action",
@@ -75,13 +75,13 @@
                       "key": "xpath",
                       "value": "/config/devices/entry[@name='localhost.localdomain']/vsys/entry[@name='vsys1']/address-group/entry[@name='test-dag']",
                       "equals": true,
-                      "description": "XPath"
+                      "description": "Config xpath"
                     },
                     {
                       "key": "element",
                       "value": "<description>This is a test DAG</description><dynamic><filter>outbound</filter></dynamic>",
                       "equals": true,
-                      "description": "Element value"
+                      "description": "Config value"
                     }
                   ]
                 },
