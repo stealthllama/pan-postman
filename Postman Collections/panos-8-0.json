@@ -2745,8 +2745,8 @@
       "item": [
         {
           "_postman_id": "9019b7db-4a5e-4fd3-8b13-9ba7acc79e0f",
-          "name": "Commit Locks Copy",
-          "description": "PAN-OS API requests specific to commit lock actions",
+          "name": "Config Locks",
+          "description": "PAN-OS API requests specific to configuration lock actions",
           "item": [
             {
               "_postman_id": "9c7762ac-b66d-4c6f-ab40-2c92345cf95e",
@@ -2989,6 +2989,28 @@
                 "description": "Remove another administrator's commit lock"
               },
               "response": []
+            }
+          ],
+          "event": [
+            {
+              "listen": "prerequest",
+              "script": {
+                "id": "36fc35e5-ce04-4d52-900a-8a913e0d6d6c",
+                "type": "text/javascript",
+                "exec": [
+                  ""
+                ]
+              }
+            },
+            {
+              "listen": "test",
+              "script": {
+                "id": "d83f7c66-1722-49fc-8d34-201797dbfc3e",
+                "type": "text/javascript",
+                "exec": [
+                  ""
+                ]
+              }
             }
           ],
           "_postman_isSubFolder": true
