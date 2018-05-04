@@ -1894,6 +1894,52 @@
           "description": "PAN-OS API requests specific to commit lock actions",
           "item": [
             {
+              "_postman_id": "b3f9156d-b443-247c-0fc3-6ea81ce10c26",
+              "name": "Show Commit Locks",
+              "request": {
+                "auth": {
+                  "type": "noauth"
+                },
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/x-www-form-urlencoded"
+                  }
+                ],
+                "body": {},
+                "url": {
+                  "raw": "https://{{host}}/api?key={{key}}&type=op&cmd=<show><commit-locks></commit-locks></show>",
+                  "protocol": "https",
+                  "host": [
+                    "{{host}}"
+                  ],
+                  "path": [
+                    "api"
+                  ],
+                  "query": [
+                    {
+                      "key": "key",
+                      "value": "{{key}}",
+                      "equals": true
+                    },
+                    {
+                      "key": "type",
+                      "value": "op",
+                      "equals": true
+                    },
+                    {
+                      "key": "cmd",
+                      "value": "<show><commit-locks></commit-locks></show>",
+                      "equals": true
+                    }
+                  ]
+                },
+                "description": "Show all commit locks"
+              },
+              "response": []
+            },
+            {
               "_postman_id": "f5fa46b5-5cea-dbfa-b924-4ff240de6097",
               "name": "Request Commit Lock",
               "request": {
@@ -1994,52 +2040,6 @@
                   ]
                 },
                 "description": "Request a commit lock with a comment"
-              },
-              "response": []
-            },
-            {
-              "_postman_id": "b3f9156d-b443-247c-0fc3-6ea81ce10c26",
-              "name": "Show Commit Locks",
-              "request": {
-                "auth": {
-                  "type": "noauth"
-                },
-                "method": "POST",
-                "header": [
-                  {
-                    "key": "Content-Type",
-                    "value": "application/x-www-form-urlencoded"
-                  }
-                ],
-                "body": {},
-                "url": {
-                  "raw": "https://{{host}}/api?key={{key}}&type=op&cmd=<show><commit-locks></commit-locks></show>",
-                  "protocol": "https",
-                  "host": [
-                    "{{host}}"
-                  ],
-                  "path": [
-                    "api"
-                  ],
-                  "query": [
-                    {
-                      "key": "key",
-                      "value": "{{key}}",
-                      "equals": true
-                    },
-                    {
-                      "key": "type",
-                      "value": "op",
-                      "equals": true
-                    },
-                    {
-                      "key": "cmd",
-                      "value": "<show><commit-locks></commit-locks></show>",
-                      "equals": true
-                    }
-                  ]
-                },
-                "description": "Show all commit locks"
               },
               "response": []
             },
