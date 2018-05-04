@@ -2066,7 +2066,7 @@
             ],
             "body": {},
             "url": {
-              "raw": "https://{{host}}/api?key={{key}}&type=commit&cmd=<commit><force></force></commit>",
+              "raw": "https://{{host}}/api?key={{key}}&type=commit&cmd=<commit><force><partial><admin><member>admin</member></admin></partial></force></commit>",
               "protocol": "https",
               "host": [
                 "{{host}}"
@@ -2087,7 +2087,7 @@
                 },
                 {
                   "key": "cmd",
-                  "value": "<commit><force></force></commit>",
+                  "value": "<commit><force><partial><admin><member>admin</member></admin></partial></force></commit>",
                   "equals": true
                 }
               ]
