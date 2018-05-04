@@ -2713,6 +2713,52 @@
             "description": "Clear all pending commit jobs"
           },
           "response": []
+        },
+        {
+          "_postman_id": "a257ed70-78ba-4cd0-9b75-f54895efb86b",
+          "name": "Clear Commit Jobs Copy",
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/x-www-form-urlencoded"
+              }
+            ],
+            "body": {},
+            "url": {
+              "raw": "https://{{host}}/api?key={{key}}&type=op&cmd=<request><clear-commit-tasks></clear-commit-tasks></request>",
+              "protocol": "https",
+              "host": [
+                "{{host}}"
+              ],
+              "path": [
+                "api"
+              ],
+              "query": [
+                {
+                  "key": "key",
+                  "value": "{{key}}",
+                  "equals": true
+                },
+                {
+                  "key": "type",
+                  "value": "op",
+                  "equals": true
+                },
+                {
+                  "key": "cmd",
+                  "value": "<request><clear-commit-tasks></clear-commit-tasks></request>",
+                  "equals": true
+                }
+              ]
+            },
+            "description": "Clear all pending commit jobs"
+          },
+          "response": []
         }
       ],
       "event": [
