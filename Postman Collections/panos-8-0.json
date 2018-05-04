@@ -401,7 +401,7 @@
                 }
               ]
             },
-            "description": "Retrieve current content information from update server"
+            "description": "Show information about available content packages"
           },
           "response": []
         },
