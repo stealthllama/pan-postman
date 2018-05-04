@@ -2561,17 +2561,20 @@
                 {
                   "key": "key",
                   "value": "{{key}}",
-                  "equals": true
+                  "equals": true,
+                  "description": "API key"
                 },
                 {
                   "key": "type",
                   "value": "commit",
-                  "equals": true
+                  "equals": true,
+                  "description": "API action"
                 },
                 {
                   "key": "cmd",
                   "value": "<commit><partial><device-and-network></device-and-network></partial></commit>",
-                  "equals": true
+                  "equals": true,
+                  "description": "API command"
                 }
               ]
             },
