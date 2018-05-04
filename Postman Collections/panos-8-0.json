@@ -280,6 +280,48 @@
             "description": "Upgrade to the latest content release"
           },
           "response": []
+        },
+        {
+          "_postman_id": "b12ce679-dcc3-4b8e-954c-9479626a2218",
+          "name": "Show URL Categories",
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/x-www-form-urlencoded"
+              }
+            ],
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "key": "key",
+                  "value": "{{key}}",
+                  "type": "text",
+                  "description": "API key"
+                },
+                {
+                  "key": "type",
+                  "value": "op",
+                  "type": "text",
+                  "description": "API method type"
+                },
+                {
+                  "key": "cmd",
+                  "value": "<request><content><upgrade><download><latest/> \n</download></upgrade></content></request>",
+                  "description": "Upgrade to the latest content release",
+                  "type": "text"
+                }
+              ]
+            },
+            "url": "https://{{host}}/api",
+            "description": "Show URL categories"
+          },
+          "response": []
         }
       ]
     },
