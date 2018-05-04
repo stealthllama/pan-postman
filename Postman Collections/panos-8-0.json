@@ -2653,7 +2653,21 @@
         },
         {
           "_postman_id": "255f2b5e-8b72-4378-ae1c-181bd919ba0e",
-          "name": "Show running config Copy",
+          "name": "Show pending changes",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "id": "14ff4d75-ee09-432c-8f55-b9afa631df56",
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"Body matches string\", function () {",
+                  "    pm.expect(pm.response.text()).to.include(\"<response status=\\\"success\\\">\");",
+                  "});"
+                ]
+              }
+            }
+          ],
           "request": {
             "auth": {
               "type": "noauth"
@@ -2665,31 +2679,35 @@
                 "value": "application/x-www-form-urlencoded"
               }
             ],
-            "body": {
-              "mode": "urlencoded",
-              "urlencoded": [
+            "body": {},
+            "url": {
+              "raw": "https://{{host}}/api?key={{key}}&type=op&cmd=<check><pending-changes></pending-changes></check>",
+              "protocol": "https",
+              "host": [
+                "{{host}}"
+              ],
+              "path": [
+                "api"
+              ],
+              "query": [
                 {
                   "key": "key",
                   "value": "{{key}}",
-                  "type": "text",
-                  "description": "API key"
+                  "equals": true
                 },
                 {
                   "key": "type",
                   "value": "op",
-                  "type": "text",
-                  "description": "API method type"
+                  "equals": true
                 },
                 {
                   "key": "cmd",
-                  "value": "<show><config><running/></config></show>",
-                  "description": "Show high-availability state",
-                  "type": "text"
+                  "value": "<check><pending-changes></pending-changes></check>",
+                  "equals": true
                 }
               ]
             },
-            "url": "https://{{host}}/api",
-            "description": "Show running config"
+            "description": "Show pending changes to the configuration"
           },
           "response": []
         }
