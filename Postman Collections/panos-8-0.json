@@ -2742,125 +2742,6 @@
       ]
     },
     {
-      "_postman_id": "f50e63a4-9ea7-16a4-61a8-b58e9ef38f3b",
-      "name": "Configuration Management",
-      "description": "",
-      "item": [
-        {
-          "_postman_id": "255f2b5e-8b72-4378-ae1c-181bd919ba0e",
-          "name": "Show pending changes",
-          "event": [
-            {
-              "listen": "test",
-              "script": {
-                "id": "14ff4d75-ee09-432c-8f55-b9afa631df56",
-                "type": "text/javascript",
-                "exec": [
-                  "pm.test(\"Body matches string\", function () {",
-                  "    pm.expect(pm.response.text()).to.include(\"<response status=\\\"success\\\">\");",
-                  "});"
-                ]
-              }
-            }
-          ],
-          "request": {
-            "auth": {
-              "type": "noauth"
-            },
-            "method": "POST",
-            "header": [
-              {
-                "key": "Content-Type",
-                "value": "application/x-www-form-urlencoded"
-              }
-            ],
-            "body": {},
-            "url": {
-              "raw": "https://{{host}}/api?key={{key}}&type=op&cmd=<check><pending-changes></pending-changes></check>",
-              "protocol": "https",
-              "host": [
-                "{{host}}"
-              ],
-              "path": [
-                "api"
-              ],
-              "query": [
-                {
-                  "key": "key",
-                  "value": "{{key}}",
-                  "equals": true,
-                  "description": "API key"
-                },
-                {
-                  "key": "type",
-                  "value": "op",
-                  "equals": true,
-                  "description": "API action"
-                },
-                {
-                  "key": "cmd",
-                  "value": "<check><pending-changes></pending-changes></check>",
-                  "equals": true,
-                  "description": "API command"
-                }
-              ]
-            },
-            "description": "Show pending changes to the configuration"
-          },
-          "response": []
-        },
-        {
-          "_postman_id": "d03648df-1b4b-462e-9ba4-4d4d7cb2972f",
-          "name": "Show running config",
-          "request": {
-            "auth": {
-              "type": "noauth"
-            },
-            "method": "POST",
-            "header": [
-              {
-                "key": "Content-Type",
-                "value": "application/x-www-form-urlencoded"
-              }
-            ],
-            "body": {},
-            "url": {
-              "raw": "https://{{host}}/api?key={{key}}&type=op&cmd=<show><config><running/></config></show>",
-              "protocol": "https",
-              "host": [
-                "{{host}}"
-              ],
-              "path": [
-                "api"
-              ],
-              "query": [
-                {
-                  "key": "key",
-                  "value": "{{key}}",
-                  "equals": true,
-                  "description": "API key"
-                },
-                {
-                  "key": "type",
-                  "value": "op",
-                  "equals": true,
-                  "description": "API action"
-                },
-                {
-                  "key": "cmd",
-                  "value": "<show><config><running/></config></show>",
-                  "equals": true,
-                  "description": "API command"
-                }
-              ]
-            },
-            "description": "Show the running configuration"
-          },
-          "response": []
-        }
-      ]
-    },
-    {
       "_postman_id": "9019b7db-4a5e-4fd3-8b13-9ba7acc79e0f",
       "name": "Config Locks",
       "description": "PAN-OS API requests specific to configuration lock actions",
@@ -3094,6 +2975,125 @@
               ""
             ]
           }
+        }
+      ]
+    },
+    {
+      "_postman_id": "f50e63a4-9ea7-16a4-61a8-b58e9ef38f3b",
+      "name": "Configuration Management",
+      "description": "",
+      "item": [
+        {
+          "_postman_id": "255f2b5e-8b72-4378-ae1c-181bd919ba0e",
+          "name": "Show pending changes",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "id": "14ff4d75-ee09-432c-8f55-b9afa631df56",
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"Body matches string\", function () {",
+                  "    pm.expect(pm.response.text()).to.include(\"<response status=\\\"success\\\">\");",
+                  "});"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/x-www-form-urlencoded"
+              }
+            ],
+            "body": {},
+            "url": {
+              "raw": "https://{{host}}/api?key={{key}}&type=op&cmd=<check><pending-changes></pending-changes></check>",
+              "protocol": "https",
+              "host": [
+                "{{host}}"
+              ],
+              "path": [
+                "api"
+              ],
+              "query": [
+                {
+                  "key": "key",
+                  "value": "{{key}}",
+                  "equals": true,
+                  "description": "API key"
+                },
+                {
+                  "key": "type",
+                  "value": "op",
+                  "equals": true,
+                  "description": "API action"
+                },
+                {
+                  "key": "cmd",
+                  "value": "<check><pending-changes></pending-changes></check>",
+                  "equals": true,
+                  "description": "API command"
+                }
+              ]
+            },
+            "description": "Show pending changes to the configuration"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "d03648df-1b4b-462e-9ba4-4d4d7cb2972f",
+          "name": "Show running config",
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/x-www-form-urlencoded"
+              }
+            ],
+            "body": {},
+            "url": {
+              "raw": "https://{{host}}/api?key={{key}}&type=op&cmd=<show><config><running/></config></show>",
+              "protocol": "https",
+              "host": [
+                "{{host}}"
+              ],
+              "path": [
+                "api"
+              ],
+              "query": [
+                {
+                  "key": "key",
+                  "value": "{{key}}",
+                  "equals": true,
+                  "description": "API key"
+                },
+                {
+                  "key": "type",
+                  "value": "op",
+                  "equals": true,
+                  "description": "API action"
+                },
+                {
+                  "key": "cmd",
+                  "value": "<show><config><running/></config></show>",
+                  "equals": true,
+                  "description": "API command"
+                }
+              ]
+            },
+            "description": "Show the running configuration"
+          },
+          "response": []
         }
       ]
     },
