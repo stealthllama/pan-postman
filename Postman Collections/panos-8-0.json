@@ -2048,30 +2048,34 @@
                 "value": "application/x-www-form-urlencoded"
               }
             ],
-            "body": {
-              "mode": "urlencoded",
-              "urlencoded": [
+            "body": {},
+            "url": {
+              "raw": "https://{{host}}/api?key={{key}}&type=commit&cmd=<commit><description>Postman testing</description></commit>",
+              "protocol": "https",
+              "host": [
+                "{{host}}"
+              ],
+              "path": [
+                "api"
+              ],
+              "query": [
                 {
                   "key": "key",
                   "value": "{{key}}",
-                  "type": "text",
-                  "description": ""
+                  "equals": true
                 },
                 {
                   "key": "type",
                   "value": "commit",
-                  "type": "text",
-                  "description": ""
+                  "equals": true
                 },
                 {
                   "key": "cmd",
                   "value": "<commit><description>Postman testing</description></commit>",
-                  "type": "text",
-                  "description": ""
+                  "equals": true
                 }
               ]
             },
-            "url": "https://{{host}}/api",
             "description": "Commit all changes with a description"
           },
           "response": []
