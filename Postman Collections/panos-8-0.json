@@ -2851,7 +2851,7 @@
             },
             {
               "_postman_id": "44ff63e7-fe50-405e-ba83-01e0d6784c2a",
-              "name": "Request Commit Lock - With Comment",
+              "name": "Request Config Lock - With Comment",
               "event": [
                 {
                   "listen": "prerequest",
