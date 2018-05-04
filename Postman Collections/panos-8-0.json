@@ -2955,52 +2955,6 @@
                 "description": "Request my commit lock"
               },
               "response": []
-            },
-            {
-              "_postman_id": "46c7aac2-d5f5-4b96-93d8-82dc716fb988",
-              "name": "Remove Commit Lock - By Admin",
-              "request": {
-                "auth": {
-                  "type": "noauth"
-                },
-                "method": "POST",
-                "header": [
-                  {
-                    "key": "Content-Type",
-                    "value": "application/x-www-form-urlencoded"
-                  }
-                ],
-                "body": {},
-                "url": {
-                  "raw": "https://{{host}}/api?key={{key}}&type=op&cmd=<request><commit-lock><remove><admin>admin</admin></remove></commit-lock></request>",
-                  "protocol": "https",
-                  "host": [
-                    "{{host}}"
-                  ],
-                  "path": [
-                    "api"
-                  ],
-                  "query": [
-                    {
-                      "key": "key",
-                      "value": "{{key}}",
-                      "equals": true
-                    },
-                    {
-                      "key": "type",
-                      "value": "op",
-                      "equals": true
-                    },
-                    {
-                      "key": "cmd",
-                      "value": "<request><commit-lock><remove><admin>admin</admin></remove></commit-lock></request>",
-                      "equals": true
-                    }
-                  ]
-                },
-                "description": "Remove another administrator's commit lock"
-              },
-              "response": []
             }
           ],
           "event": [
