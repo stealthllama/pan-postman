@@ -117,17 +117,20 @@
                     {
                       "key": "key",
                       "value": "{{key}}",
-                      "equals": true
+                      "equals": true,
+                      "description": "API key"
                     },
                     {
                       "key": "type",
                       "value": "user-id",
-                      "equals": true
+                      "equals": true,
+                      "description": "API action"
                     },
                     {
                       "key": "cmd",
                       "value": "<uid-message><version>1.0</version><type>update</type><payload><register><entry ip=\"1.1.1.1\"><tag><member>foo</member></tag></entry></register></payload></uid-message>",
-                      "equals": true
+                      "equals": true,
+                      "description": "API command"
                     }
                   ]
                 },
