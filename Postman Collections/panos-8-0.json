@@ -669,30 +669,34 @@
                 "value": "application/x-www-form-urlencoded"
               }
             ],
-            "body": {
-              "mode": "urlencoded",
-              "urlencoded": [
+            "body": {},
+            "url": {
+              "raw": "https://{{host}}/api?key={{key}}&type=op&cmd=<show><jobs><pending></pending></jobs></show>",
+              "protocol": "https",
+              "host": [
+                "{{host}}"
+              ],
+              "path": [
+                "api"
+              ],
+              "query": [
                 {
                   "key": "key",
                   "value": "{{key}}",
-                  "type": "text",
-                  "description": "API key"
+                  "equals": true
                 },
                 {
                   "key": "type",
                   "value": "op",
-                  "type": "text",
-                  "description": "API method type"
+                  "equals": true
                 },
                 {
                   "key": "cmd",
                   "value": "<show><jobs><pending></pending></jobs></show>",
-                  "description": "Show pending jobs",
-                  "type": "text"
+                  "equals": true
                 }
               ]
             },
-            "url": "https://{{host}}/api",
             "description": "Show pending jobs"
           },
           "response": []
