@@ -533,36 +533,39 @@
                 "value": "application/x-www-form-urlencoded"
               }
             ],
-            "body": {
-              "mode": "urlencoded",
-              "urlencoded": [
+            "body": {},
+            "url": {
+              "raw": "https://{{host}}/api?key={{key}}&type=keygen&user=admin&password=paloalto",
+              "protocol": "https",
+              "host": [
+                "{{host}}"
+              ],
+              "path": [
+                "api"
+              ],
+              "query": [
                 {
                   "key": "key",
                   "value": "{{key}}",
-                  "type": "text",
-                  "description": "API key"
+                  "equals": true
                 },
                 {
                   "key": "type",
                   "value": "keygen",
-                  "type": "text",
-                  "description": "API method type"
+                  "equals": true
                 },
                 {
                   "key": "user",
                   "value": "admin",
-                  "description": "Admin user",
-                  "type": "text"
+                  "equals": true
                 },
                 {
                   "key": "password",
                   "value": "paloalto",
-                  "description": "Admin password",
-                  "type": "text"
+                  "equals": true
                 }
               ]
             },
-            "url": "https://{{host}}/api",
             "description": "Generate API key"
           },
           "response": []
