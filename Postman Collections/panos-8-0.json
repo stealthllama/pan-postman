@@ -2884,7 +2884,7 @@
             ],
             "body": {},
             "url": {
-              "raw": "https://{{host}}/api?key={{key}}&type=config&action=get&xpath=/config/predefined/threats/phone-home",
+              "raw": "https://{{host}}/api?key={{key}}&type=config&action=get&xpath=/config/devices/entry[@name='localhost.localdomain']/platform/model",
               "protocol": "https",
               "host": [
                 "{{host}}"
@@ -2913,7 +2913,62 @@
                 },
                 {
                   "key": "xpath",
-                  "value": "/config/predefined/threats/phone-home",
+                  "value": "/config/devices/entry[@name='localhost.localdomain']/platform/model",
+                  "equals": true,
+                  "description": "XPath"
+                }
+              ]
+            },
+            "description": "Show platform model"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "f774c512-5768-4031-af8a-fe3b9b461c74",
+          "name": "Show Platform Copy",
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/x-www-form-urlencoded"
+              }
+            ],
+            "body": {},
+            "url": {
+              "raw": "https://{{host}}/api?key={{key}}&type=config&action=get&xpath=/config/devices/entry[@name='localhost.localdomain']/platform/model",
+              "protocol": "https",
+              "host": [
+                "{{host}}"
+              ],
+              "path": [
+                "api"
+              ],
+              "query": [
+                {
+                  "key": "key",
+                  "value": "{{key}}",
+                  "equals": true,
+                  "description": "API key"
+                },
+                {
+                  "key": "type",
+                  "value": "config",
+                  "equals": true,
+                  "description": "API action"
+                },
+                {
+                  "key": "action",
+                  "value": "get",
+                  "equals": true,
+                  "description": "Config actions"
+                },
+                {
+                  "key": "xpath",
+                  "value": "/config/devices/entry[@name='localhost.localdomain']/platform/model",
                   "equals": true,
                   "description": "XPath"
                 }
