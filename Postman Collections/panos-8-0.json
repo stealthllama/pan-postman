@@ -784,7 +784,7 @@
         },
         {
           "_postman_id": "bc0a8886-9bb7-4258-82b8-d55de56ec4d5",
-          "name": "Show Services",
+          "name": "Show Service Groups",
           "request": {
             "auth": {
               "type": "noauth"
@@ -798,7 +798,7 @@
             ],
             "body": {},
             "url": {
-              "raw": "https://{{host}}/api?key={{key}}&type=config&action=get&xpath=/config/predefined/application-filter",
+              "raw": "https://{{host}}/api?key={{key}}&type=config&action=get&xpath=/config/predefined/service-group",
               "protocol": "https",
               "host": [
                 "{{host}}"
@@ -827,13 +827,13 @@
                 },
                 {
                   "key": "xpath",
-                  "value": "/config/predefined/application-filter",
+                  "value": "/config/predefined/service-group",
                   "equals": true,
                   "description": "XPath"
                 }
               ]
             },
-            "description": "Show services"
+            "description": "Show service groups"
           },
           "response": []
         },
