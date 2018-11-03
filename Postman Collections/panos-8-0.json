@@ -2925,7 +2925,7 @@
         },
         {
           "_postman_id": "f774c512-5768-4031-af8a-fe3b9b461c74",
-          "name": "Show Platform Copy",
+          "name": "Show Platform Limits",
           "request": {
             "auth": {
               "type": "noauth"
@@ -2974,7 +2974,7 @@
                 }
               ]
             },
-            "description": "Show platform model"
+            "description": "Show platform limits"
           },
           "response": []
         }
