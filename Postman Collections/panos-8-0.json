@@ -1439,7 +1439,7 @@
         },
         {
           "_postman_id": "94da6d82-dbad-42ac-bce1-ae660e21e8d1",
-          "name": "Show Hostname Copy",
+          "name": "Show DNS Servers",
           "request": {
             "auth": {
               "type": "noauth"
@@ -1453,7 +1453,7 @@
             ],
             "body": {},
             "url": {
-              "raw": "https://{{host}}/api?key={{key}}&type=config&action=get&xpath=/config/devices/entry[@name='localhost.localdomain']/deviceconfig/system/hostname",
+              "raw": "https://{{host}}/api?key={{key}}&type=config&action=get&xpath=/config/devices/entry[@name='localhost.localdomain']/deviceconfig/system/dns-setting/servers",
               "protocol": "https",
               "host": [
                 "{{host}}"
@@ -1482,13 +1482,68 @@
                 },
                 {
                   "key": "xpath",
-                  "value": "/config/devices/entry[@name='localhost.localdomain']/deviceconfig/system/hostname",
+                  "value": "/config/devices/entry[@name='localhost.localdomain']/deviceconfig/system/dns-setting/servers",
                   "equals": true,
                   "description": "XPath"
                 }
               ]
             },
-            "description": "Show hostname"
+            "description": "Show DNS servers"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "74b145c9-7cbe-4870-b57b-75b790fbca33",
+          "name": "Show DNS Servers Copy",
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/x-www-form-urlencoded"
+              }
+            ],
+            "body": {},
+            "url": {
+              "raw": "https://{{host}}/api?key={{key}}&type=config&action=get&xpath=/config/devices/entry[@name='localhost.localdomain']/deviceconfig/system/dns-setting/servers",
+              "protocol": "https",
+              "host": [
+                "{{host}}"
+              ],
+              "path": [
+                "api"
+              ],
+              "query": [
+                {
+                  "key": "key",
+                  "value": "{{key}}",
+                  "equals": true,
+                  "description": "API key"
+                },
+                {
+                  "key": "type",
+                  "value": "config",
+                  "equals": true,
+                  "description": "API action"
+                },
+                {
+                  "key": "action",
+                  "value": "get",
+                  "equals": true,
+                  "description": "Config actions"
+                },
+                {
+                  "key": "xpath",
+                  "value": "/config/devices/entry[@name='localhost.localdomain']/deviceconfig/system/dns-setting/servers",
+                  "equals": true,
+                  "description": "XPath"
+                }
+              ]
+            },
+            "description": "Show DNS servers"
           },
           "response": []
         }
