@@ -2939,7 +2939,7 @@
             ],
             "body": {},
             "url": {
-              "raw": "https://{{host}}/api?key={{key}}&type=config&action=get&xpath=/config/devices/entry[@name='localhost.localdomain']/platform/model",
+              "raw": "https://{{host}}/api?key={{key}}&type=config&action=get&xpath=/config/devices/entry[@name='localhost.localdomain']/platform/limits",
               "protocol": "https",
               "host": [
                 "{{host}}"
@@ -2968,7 +2968,7 @@
                 },
                 {
                   "key": "xpath",
-                  "value": "/config/devices/entry[@name='localhost.localdomain']/platform/model",
+                  "value": "/config/devices/entry[@name='localhost.localdomain']/platform/limits",
                   "equals": true,
                   "description": "XPath"
                 }
