@@ -1508,7 +1508,7 @@
             ],
             "body": {},
             "url": {
-              "raw": "https://{{host}}/api?key={{key}}&type=config&action=get&xpath=/config/devices/entry[@name='localhost.localdomain']/deviceconfig/system/dns-setting/servers",
+              "raw": "https://{{host}}/api?key={{key}}&type=config&action=get&xpath=/config/devices/entry[@name='localhost.localdomain']/deviceconfig/system/dns-setting/dns-proxy-object",
               "protocol": "https",
               "host": [
                 "{{host}}"
@@ -1537,7 +1537,62 @@
                 },
                 {
                   "key": "xpath",
-                  "value": "/config/devices/entry[@name='localhost.localdomain']/deviceconfig/system/dns-setting/servers",
+                  "value": "/config/devices/entry[@name='localhost.localdomain']/deviceconfig/system/dns-setting/dns-proxy-object",
+                  "equals": true,
+                  "description": "XPath"
+                }
+              ]
+            },
+            "description": "Show DNS proxy object"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "b16e4d81-eea7-46c9-b3a0-d6fb5c302410",
+          "name": "Show DNS Proxy Object Copy",
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/x-www-form-urlencoded"
+              }
+            ],
+            "body": {},
+            "url": {
+              "raw": "https://{{host}}/api?key={{key}}&type=config&action=get&xpath=/config/devices/entry[@name='localhost.localdomain']/deviceconfig/system/dns-setting/dns-proxy-object",
+              "protocol": "https",
+              "host": [
+                "{{host}}"
+              ],
+              "path": [
+                "api"
+              ],
+              "query": [
+                {
+                  "key": "key",
+                  "value": "{{key}}",
+                  "equals": true,
+                  "description": "API key"
+                },
+                {
+                  "key": "type",
+                  "value": "config",
+                  "equals": true,
+                  "description": "API action"
+                },
+                {
+                  "key": "action",
+                  "value": "get",
+                  "equals": true,
+                  "description": "Config actions"
+                },
+                {
+                  "key": "xpath",
+                  "value": "/config/devices/entry[@name='localhost.localdomain']/deviceconfig/system/dns-setting/dns-proxy-object",
                   "equals": true,
                   "description": "XPath"
                 }
