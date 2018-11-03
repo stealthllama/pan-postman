@@ -688,7 +688,7 @@
             ],
             "body": {},
             "url": {
-              "raw": "https://{{host}}/api?key={{key}}&type=config&action=get&xpath=/config/predefined/application",
+              "raw": "https://{{host}}/api?key={{key}}&type=config&action=get&xpath=/config/predefined/application-group",
               "protocol": "https",
               "host": [
                 "{{host}}"
@@ -717,7 +717,62 @@
                 },
                 {
                   "key": "xpath",
-                  "value": "/config/predefined/application",
+                  "value": "/config/predefined/application-group",
+                  "equals": true,
+                  "description": "XPath"
+                }
+              ]
+            },
+            "description": "Show application groups"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "772599a4-1430-43e9-8c1c-f9581e8fc500",
+          "name": "Show Applications Groups Copy",
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/x-www-form-urlencoded"
+              }
+            ],
+            "body": {},
+            "url": {
+              "raw": "https://{{host}}/api?key={{key}}&type=config&action=get&xpath=/config/predefined/application-group",
+              "protocol": "https",
+              "host": [
+                "{{host}}"
+              ],
+              "path": [
+                "api"
+              ],
+              "query": [
+                {
+                  "key": "key",
+                  "value": "{{key}}",
+                  "equals": true,
+                  "description": "API key"
+                },
+                {
+                  "key": "type",
+                  "value": "config",
+                  "equals": true,
+                  "description": "API action"
+                },
+                {
+                  "key": "action",
+                  "value": "get",
+                  "equals": true,
+                  "description": "Config actions"
+                },
+                {
+                  "key": "xpath",
+                  "value": "/config/predefined/application-group",
                   "equals": true,
                   "description": "XPath"
                 }
