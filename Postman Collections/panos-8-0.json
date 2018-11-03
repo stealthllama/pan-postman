@@ -1494,7 +1494,7 @@
         },
         {
           "_postman_id": "74b145c9-7cbe-4870-b57b-75b790fbca33",
-          "name": "Show DNS Servers Copy",
+          "name": "Show DNS Proxy Object",
           "request": {
             "auth": {
               "type": "noauth"
@@ -1543,7 +1543,7 @@
                 }
               ]
             },
-            "description": "Show DNS servers"
+            "description": "Show DNS proxy object"
           },
           "response": []
         }
