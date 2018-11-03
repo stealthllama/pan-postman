@@ -674,7 +674,7 @@
         },
         {
           "_postman_id": "e16c3473-7080-49bf-9c0b-f64396eb0162",
-          "name": "Show Applications Groups",
+          "name": "Show Application Groups",
           "request": {
             "auth": {
               "type": "noauth"
@@ -729,7 +729,7 @@
         },
         {
           "_postman_id": "772599a4-1430-43e9-8c1c-f9581e8fc500",
-          "name": "Show Applications Filters",
+          "name": "Show Application Filters",
           "request": {
             "auth": {
               "type": "noauth"
@@ -853,7 +853,7 @@
             ],
             "body": {},
             "url": {
-              "raw": "https://{{host}}/api?key={{key}}&type=config&action=get&xpath=/config/predefined/service-group",
+              "raw": "https://{{host}}/api?key={{key}}&type=config&action=get&xpath=/config/predefined/service",
               "protocol": "https",
               "host": [
                 "{{host}}"
@@ -882,7 +882,7 @@
                 },
                 {
                   "key": "xpath",
-                  "value": "/config/predefined/service-group",
+                  "value": "/config/predefined/service",
                   "equals": true,
                   "description": "XPath"
                 }
@@ -950,6 +950,61 @@
         {
           "_postman_id": "82bfb9c0-3ed6-4f1a-a2a7-0b33eee4e130",
           "name": "Show Spyware",
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/x-www-form-urlencoded"
+              }
+            ],
+            "body": {},
+            "url": {
+              "raw": "https://{{host}}/api?key={{key}}&type=config&action=get&xpath=/config/predefined/threats/phone-home",
+              "protocol": "https",
+              "host": [
+                "{{host}}"
+              ],
+              "path": [
+                "api"
+              ],
+              "query": [
+                {
+                  "key": "key",
+                  "value": "{{key}}",
+                  "equals": true,
+                  "description": "API key"
+                },
+                {
+                  "key": "type",
+                  "value": "config",
+                  "equals": true,
+                  "description": "API action"
+                },
+                {
+                  "key": "action",
+                  "value": "get",
+                  "equals": true,
+                  "description": "Config actions"
+                },
+                {
+                  "key": "xpath",
+                  "value": "/config/predefined/threats/phone-home",
+                  "equals": true,
+                  "description": "XPath"
+                }
+              ]
+            },
+            "description": "Show spyware signatures"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "0aeaeff6-8a55-4ab2-8596-b9189a56dc91",
+          "name": "Show Spyware Copy",
           "request": {
             "auth": {
               "type": "noauth"
