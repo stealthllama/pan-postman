@@ -619,7 +619,7 @@
         },
         {
           "_postman_id": "06e572b0-2246-40b1-9b9c-62b3fc98b598",
-          "name": "Show URL Categories Copy",
+          "name": "Show Applications",
           "request": {
             "auth": {
               "type": "noauth"
@@ -633,7 +633,7 @@
             ],
             "body": {},
             "url": {
-              "raw": "https://{{host}}/api?key={{key}}&type=config&action=get&xpath=/config/predefined/url-categories",
+              "raw": "https://{{host}}/api?key={{key}}&type=config&action=get&xpath=/config/predefined/application",
               "protocol": "https",
               "host": [
                 "{{host}}"
@@ -657,18 +657,73 @@
                 {
                   "key": "action",
                   "value": "get",
-                  "description": "Config actions",
-                  "type": "text"
+                  "equals": true,
+                  "description": "Config actions"
                 },
                 {
                   "key": "xpath",
-                  "value": "/config/predefined/url-categories",
+                  "value": "/config/predefined/application",
                   "equals": true,
                   "description": "XPath"
                 }
               ]
             },
-            "description": "Show URL categories"
+            "description": "Show applications"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "41af07e6-f0fb-4068-9db2-64111843e9b2",
+          "name": "Show Applications Copy",
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/x-www-form-urlencoded"
+              }
+            ],
+            "body": {},
+            "url": {
+              "raw": "https://{{host}}/api?key={{key}}&type=config&action=get&xpath=/config/predefined/application",
+              "protocol": "https",
+              "host": [
+                "{{host}}"
+              ],
+              "path": [
+                "api"
+              ],
+              "query": [
+                {
+                  "key": "key",
+                  "value": "{{key}}",
+                  "equals": true,
+                  "description": "API key"
+                },
+                {
+                  "key": "type",
+                  "value": "config",
+                  "equals": true,
+                  "description": "API action"
+                },
+                {
+                  "key": "action",
+                  "value": "get",
+                  "equals": true,
+                  "description": "Config actions"
+                },
+                {
+                  "key": "xpath",
+                  "value": "/config/predefined/application",
+                  "equals": true,
+                  "description": "XPath"
+                }
+              ]
+            },
+            "description": "Show applications"
           },
           "response": []
         }
