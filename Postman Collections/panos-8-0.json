@@ -784,7 +784,7 @@
         },
         {
           "_postman_id": "bc0a8886-9bb7-4258-82b8-d55de56ec4d5",
-          "name": "Show Applications Filters Copy",
+          "name": "Show Services",
           "request": {
             "auth": {
               "type": "noauth"
@@ -833,7 +833,7 @@
                 }
               ]
             },
-            "description": "Show application filters"
+            "description": "Show services"
           },
           "response": []
         },
