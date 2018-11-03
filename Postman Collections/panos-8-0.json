@@ -674,7 +674,7 @@
         },
         {
           "_postman_id": "e16c3473-7080-49bf-9c0b-f64396eb0162",
-          "name": "Show Applications Copy",
+          "name": "Show Applications Groups",
           "request": {
             "auth": {
               "type": "noauth"
@@ -723,7 +723,7 @@
                 }
               ]
             },
-            "description": "Show application signatures"
+            "description": "Show application groups"
           },
           "response": []
         },
