@@ -3767,7 +3767,7 @@
             ],
             "body": {},
             "url": {
-              "raw": "https://{{host}}/api?key={{key}}&type=op&cmd=<show><config><running/></config></show>",
+              "raw": "https://{{host}}/api?key={{key}}&type=op&cmd=<show><config><running></running></config></show>",
               "protocol": "https",
               "host": [
                 "{{host}}"
@@ -3790,7 +3790,7 @@
                 },
                 {
                   "key": "cmd",
-                  "value": "<show><config><running/></config></show>",
+                  "value": "<show><config><running></running></config></show>",
                   "equals": true,
                   "description": "API command"
                 }
