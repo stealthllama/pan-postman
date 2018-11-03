@@ -578,7 +578,7 @@
             ],
             "body": {},
             "url": {
-              "raw": "https://{{host}}/api?key={{key}}&type=config&cmd=<predefined><url-categories/><predefined>",
+              "raw": "https://{{host}}/api?key={{key}}&type=config&action=get&xpath=/config/predefined/url-categories",
               "protocol": "https",
               "host": [
                 "{{host}}"
@@ -600,10 +600,16 @@
                   "description": "API action"
                 },
                 {
-                  "key": "cmd",
-                  "value": "<predefined><url-categories/><predefined>",
+                  "key": "action",
+                  "value": "get",
+                  "description": "Config actions",
+                  "type": "text"
+                },
+                {
+                  "key": "xpath",
+                  "value": "/config/predefined/url-categories",
                   "equals": true,
-                  "description": "API command"
+                  "description": "XPath"
                 }
               ]
             },
