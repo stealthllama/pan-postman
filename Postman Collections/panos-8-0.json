@@ -1384,7 +1384,7 @@
         },
         {
           "_postman_id": "59bc2250-8331-4c30-833f-b58e2038d4e8",
-          "name": "Show Platform Copy",
+          "name": "Show Hostname",
           "request": {
             "auth": {
               "type": "noauth"
@@ -1398,7 +1398,7 @@
             ],
             "body": {},
             "url": {
-              "raw": "https://{{host}}/api?key={{key}}&type=config&action=get&xpath=/config/devices/entry[@name='localhost.localdomain']/platform/model",
+              "raw": "https://{{host}}/api?key={{key}}&type=config&action=get&xpath=/config/devices/entry[@name='localhost.localdomain']/deviceconfig/system/hostname",
               "protocol": "https",
               "host": [
                 "{{host}}"
@@ -1427,13 +1427,68 @@
                 },
                 {
                   "key": "xpath",
-                  "value": "/config/devices/entry[@name='localhost.localdomain']/platform/model",
+                  "value": "/config/devices/entry[@name='localhost.localdomain']/deviceconfig/system/hostname",
                   "equals": true,
                   "description": "XPath"
                 }
               ]
             },
-            "description": "Show platform model"
+            "description": "Show hostname"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "94da6d82-dbad-42ac-bce1-ae660e21e8d1",
+          "name": "Show Hostname Copy",
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/x-www-form-urlencoded"
+              }
+            ],
+            "body": {},
+            "url": {
+              "raw": "https://{{host}}/api?key={{key}}&type=config&action=get&xpath=/config/devices/entry[@name='localhost.localdomain']/deviceconfig/system/hostname",
+              "protocol": "https",
+              "host": [
+                "{{host}}"
+              ],
+              "path": [
+                "api"
+              ],
+              "query": [
+                {
+                  "key": "key",
+                  "value": "{{key}}",
+                  "equals": true,
+                  "description": "API key"
+                },
+                {
+                  "key": "type",
+                  "value": "config",
+                  "equals": true,
+                  "description": "API action"
+                },
+                {
+                  "key": "action",
+                  "value": "get",
+                  "equals": true,
+                  "description": "Config actions"
+                },
+                {
+                  "key": "xpath",
+                  "value": "/config/devices/entry[@name='localhost.localdomain']/deviceconfig/system/hostname",
+                  "equals": true,
+                  "description": "XPath"
+                }
+              ]
+            },
+            "description": "Show hostname"
           },
           "response": []
         }
