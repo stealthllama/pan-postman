@@ -1381,52 +1381,6 @@
             "description": "Show system software"
           },
           "response": []
-        },
-        {
-          "_postman_id": "1635d7e7-aad2-4f30-a2e4-ead4a02dac92",
-          "name": "Show System Software Copy",
-          "request": {
-            "auth": {
-              "type": "noauth"
-            },
-            "method": "POST",
-            "header": [
-              {
-                "key": "Content-Type",
-                "value": "application/x-www-form-urlencoded"
-              }
-            ],
-            "body": {},
-            "url": {
-              "raw": "https://{{host}}/api?key={{key}}&type=op&cmd=<show><system><info></info></system></show>",
-              "protocol": "https",
-              "host": [
-                "{{host}}"
-              ],
-              "path": [
-                "api"
-              ],
-              "query": [
-                {
-                  "key": "key",
-                  "value": "{{key}}",
-                  "equals": true
-                },
-                {
-                  "key": "type",
-                  "value": "op",
-                  "equals": true
-                },
-                {
-                  "key": "cmd",
-                  "value": "<show><system><info></info></system></show>",
-                  "equals": true
-                }
-              ]
-            },
-            "description": "Show system software"
-          },
-          "response": []
         }
       ]
     },
