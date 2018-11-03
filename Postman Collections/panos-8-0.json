@@ -1001,61 +1001,6 @@
             "description": "Show spyware signatures"
           },
           "response": []
-        },
-        {
-          "_postman_id": "0aeaeff6-8a55-4ab2-8596-b9189a56dc91",
-          "name": "Show Spyware Copy",
-          "request": {
-            "auth": {
-              "type": "noauth"
-            },
-            "method": "POST",
-            "header": [
-              {
-                "key": "Content-Type",
-                "value": "application/x-www-form-urlencoded"
-              }
-            ],
-            "body": {},
-            "url": {
-              "raw": "https://{{host}}/api?key={{key}}&type=config&action=get&xpath=/config/predefined/threats/phone-home",
-              "protocol": "https",
-              "host": [
-                "{{host}}"
-              ],
-              "path": [
-                "api"
-              ],
-              "query": [
-                {
-                  "key": "key",
-                  "value": "{{key}}",
-                  "equals": true,
-                  "description": "API key"
-                },
-                {
-                  "key": "type",
-                  "value": "config",
-                  "equals": true,
-                  "description": "API action"
-                },
-                {
-                  "key": "action",
-                  "value": "get",
-                  "equals": true,
-                  "description": "Config actions"
-                },
-                {
-                  "key": "xpath",
-                  "value": "/config/predefined/threats/phone-home",
-                  "equals": true,
-                  "description": "XPath"
-                }
-              ]
-            },
-            "description": "Show spyware signatures"
-          },
-          "response": []
         }
       ]
     },
@@ -2922,7 +2867,63 @@
       "_postman_id": "8cc513ed-77d7-882d-ce6a-cf0a31420ad1",
       "name": "Device",
       "description": "",
-      "item": []
+      "item": [
+        {
+          "_postman_id": "0aeaeff6-8a55-4ab2-8596-b9189a56dc91",
+          "name": "Show Model",
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/x-www-form-urlencoded"
+              }
+            ],
+            "body": {},
+            "url": {
+              "raw": "https://{{host}}/api?key={{key}}&type=config&action=get&xpath=/config/predefined/threats/phone-home",
+              "protocol": "https",
+              "host": [
+                "{{host}}"
+              ],
+              "path": [
+                "api"
+              ],
+              "query": [
+                {
+                  "key": "key",
+                  "value": "{{key}}",
+                  "equals": true,
+                  "description": "API key"
+                },
+                {
+                  "key": "type",
+                  "value": "config",
+                  "equals": true,
+                  "description": "API action"
+                },
+                {
+                  "key": "action",
+                  "value": "get",
+                  "equals": true,
+                  "description": "Config actions"
+                },
+                {
+                  "key": "xpath",
+                  "value": "/config/predefined/threats/phone-home",
+                  "equals": true,
+                  "description": "XPath"
+                }
+              ]
+            },
+            "description": "Show appliance model"
+          },
+          "response": []
+        }
+      ]
     },
     {
       "_postman_id": "bc8adc0e-b0d1-b390-2dee-aeddb84ab70a",
