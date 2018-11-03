@@ -7,12 +7,6 @@
   },
   "item": [
     {
-      "_postman_id": "b9f80e9f-6254-f61f-d401-312edd1d51fc",
-      "name": "Operations Commands",
-      "description": "",
-      "item": []
-    },
-    {
       "_postman_id": "307b40d9-157f-02a7-ce62-d005edb71601",
       "name": "Networking",
       "description": "",
@@ -1604,7 +1598,7 @@
         },
         {
           "_postman_id": "80f2471b-85c3-43be-a332-8f263edececa",
-          "name": "Show DNS Domain Copy",
+          "name": "Show NTP Servers",
           "request": {
             "auth": {
               "type": "noauth"
@@ -1618,7 +1612,7 @@
             ],
             "body": {},
             "url": {
-              "raw": "https://{{host}}/api?key={{key}}&type=config&action=get&xpath=/config/devices/entry[@name='localhost.localdomain']/deviceconfig/system/domain",
+              "raw": "https://{{host}}/api?key={{key}}&type=config&action=get&xpath=/config/devices/entry[@name='localhost.localdomain']/deviceconfig/system/ntp-servers",
               "protocol": "https",
               "host": [
                 "{{host}}"
@@ -1647,13 +1641,13 @@
                 },
                 {
                   "key": "xpath",
-                  "value": "/config/devices/entry[@name='localhost.localdomain']/deviceconfig/system/domain",
+                  "value": "/config/devices/entry[@name='localhost.localdomain']/deviceconfig/system/ntp-servers",
                   "equals": true,
                   "description": "XPath"
                 }
               ]
             },
-            "description": "Show DNS domain"
+            "description": "Show NTP servers"
           },
           "response": []
         }
