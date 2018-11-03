@@ -16,7 +16,106 @@
       "_postman_id": "307b40d9-157f-02a7-ce62-d005edb71601",
       "name": "Networking",
       "description": "",
-      "item": []
+      "item": [
+        {
+          "_postman_id": "e2b777cb-2c49-4e88-91a3-4a6490be01f4",
+          "name": "Show All Interfaces",
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/x-www-form-urlencoded"
+              }
+            ],
+            "body": {},
+            "url": {
+              "raw": "https://{{host}}/api?key={{key}}&type=op&cmd=<show><interface>all</interface></show>",
+              "protocol": "https",
+              "host": [
+                "{{host}}"
+              ],
+              "path": [
+                "api"
+              ],
+              "query": [
+                {
+                  "key": "key",
+                  "value": "{{key}}",
+                  "equals": true,
+                  "description": "API key"
+                },
+                {
+                  "key": "type",
+                  "value": "op",
+                  "equals": true,
+                  "description": "API action"
+                },
+                {
+                  "key": "cmd",
+                  "value": "<show><interface>all</interface></show>",
+                  "equals": true,
+                  "description": "API command"
+                }
+              ]
+            },
+            "description": "Show interface all"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "02e0a3ec-11cb-4c85-b2e5-4a2307d0c91d",
+          "name": "Show Management Interface",
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/x-www-form-urlencoded"
+              }
+            ],
+            "body": {},
+            "url": {
+              "raw": "https://{{host}}/api?key={{key}}&type=op&cmd=<show><interface>management</interface></show>",
+              "protocol": "https",
+              "host": [
+                "{{host}}"
+              ],
+              "path": [
+                "api"
+              ],
+              "query": [
+                {
+                  "key": "key",
+                  "value": "{{key}}",
+                  "equals": true,
+                  "description": "API key"
+                },
+                {
+                  "key": "type",
+                  "value": "op",
+                  "equals": true,
+                  "description": "API action"
+                },
+                {
+                  "key": "cmd",
+                  "value": "<show><interface>management</interface></show>",
+                  "equals": true,
+                  "description": "API command"
+                }
+              ]
+            },
+            "description": "Show interface management"
+          },
+          "response": []
+        }
+      ]
     },
     {
       "_postman_id": "8f8e678a-6776-fb66-0eeb-84053d6c20f9",
@@ -105,7 +204,7 @@
                 ],
                 "body": {},
                 "url": {
-                  "raw": "https://{{host}}/api?key={{key}}&type=user-id&cmd=<uid-message><version>1.0</version><type>update</type><payload><register><entry ip=\"1.1.1.1\"><tag><member>foo</member></tag></entry></register></payload></uid-message>",
+                  "raw": "https://{{host}}/api?key={{key}}&type=user-id&cmd=<uid-message><version>2.0</version><type>update</type><payload><register><entry ip=\"1.1.1.1\"><tag><member>blocked</member></tag></entry></register></payload></uid-message>",
                   "protocol": "https",
                   "host": [
                     "{{host}}"
@@ -128,7 +227,7 @@
                     },
                     {
                       "key": "cmd",
-                      "value": "<uid-message><version>1.0</version><type>update</type><payload><register><entry ip=\"1.1.1.1\"><tag><member>foo</member></tag></entry></register></payload></uid-message>",
+                      "value": "<uid-message><version>2.0</version><type>update</type><payload><register><entry ip=\"1.1.1.1\"><tag><member>blocked</member></tag></entry></register></payload></uid-message>",
                       "equals": true,
                       "description": "API command"
                     }
@@ -154,7 +253,7 @@
                 ],
                 "body": {},
                 "url": {
-                  "raw": "https://{{host}}/api?key={{key}}&type=user-id&cmd=<uid-message><version>1.0</version><type>update</type><payload><unregister><entry ip=\"1.1.1.1\"><tag><member>foo</member></tag></entry></unregister></payload></uid-message>",
+                  "raw": "https://{{host}}/api?key={{key}}&type=user-id&cmd=<uid-message><version>2.0</version><type>update</type><payload><unregister><entry ip=\"1.1.1.1\"><tag><member>blocked</member></tag></entry></unregister></payload></uid-message>",
                   "protocol": "https",
                   "host": [
                     "{{host}}"
@@ -177,7 +276,7 @@
                     },
                     {
                       "key": "cmd",
-                      "value": "<uid-message><version>1.0</version><type>update</type><payload><unregister><entry ip=\"1.1.1.1\"><tag><member>foo</member></tag></entry></unregister></payload></uid-message>",
+                      "value": "<uid-message><version>2.0</version><type>update</type><payload><unregister><entry ip=\"1.1.1.1\"><tag><member>blocked</member></tag></entry></unregister></payload></uid-message>",
                       "equals": true,
                       "description": "API command"
                     }
@@ -479,7 +578,7 @@
             ],
             "body": {},
             "url": {
-              "raw": "https://{{host}}/api?key={{key}}&type=op&cmd=<request><content><upgrade><download><latest/> \n</download></upgrade></content></request>",
+              "raw": "https://{{host}}/api?key={{key}}&type=config&cmd=<predefined><url-categories/><predefined>",
               "protocol": "https",
               "host": [
                 "{{host}}"
@@ -496,13 +595,13 @@
                 },
                 {
                   "key": "type",
-                  "value": "op",
+                  "value": "config",
                   "equals": true,
                   "description": "API action"
                 },
                 {
                   "key": "cmd",
-                  "value": "<request><content><upgrade><download><latest/> \n</download></upgrade></content></request>",
+                  "value": "<predefined><url-categories/><predefined>",
                   "equals": true,
                   "description": "API command"
                 }
@@ -845,6 +944,52 @@
             "description": "Show system info"
           },
           "response": []
+        },
+        {
+          "_postman_id": "d78853dd-2e53-4f5b-8b4c-bed028f2d957",
+          "name": "Show System Software",
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/x-www-form-urlencoded"
+              }
+            ],
+            "body": {},
+            "url": {
+              "raw": "https://{{host}}/api?key={{key}}&type=op&cmd=<show><system><info></info></system></show>",
+              "protocol": "https",
+              "host": [
+                "{{host}}"
+              ],
+              "path": [
+                "api"
+              ],
+              "query": [
+                {
+                  "key": "key",
+                  "value": "{{key}}",
+                  "equals": true
+                },
+                {
+                  "key": "type",
+                  "value": "op",
+                  "equals": true
+                },
+                {
+                  "key": "cmd",
+                  "value": "<show><system><info></info></system></show>",
+                  "equals": true
+                }
+              ]
+            },
+            "description": "Show system software"
+          },
+          "response": []
         }
       ]
     },
@@ -867,30 +1012,37 @@
                 "value": "application/x-www-form-urlencoded"
               }
             ],
-            "body": {
-              "mode": "urlencoded",
-              "urlencoded": [
+            "body": {},
+            "url": {
+              "raw": "https://{{host}}/api?key={{key}}&type=op&cmd=<show><high-availability><state></state></high-availability></show>",
+              "protocol": "https",
+              "host": [
+                "{{host}}"
+              ],
+              "path": [
+                "api"
+              ],
+              "query": [
                 {
                   "key": "key",
                   "value": "{{key}}",
-                  "type": "text",
+                  "equals": true,
                   "description": "API key"
                 },
                 {
                   "key": "type",
                   "value": "op",
-                  "type": "text",
-                  "description": "API method type"
+                  "equals": true,
+                  "description": "API method"
                 },
                 {
                   "key": "cmd",
                   "value": "<show><high-availability><state></state></high-availability></show>",
-                  "description": "Show high-availability state",
-                  "type": "text"
+                  "equals": true,
+                  "description": "API command"
                 }
               ]
             },
-            "url": "https://{{host}}/api",
             "description": "Show high-availability state"
           },
           "response": []
@@ -909,9 +1061,17 @@
                 "value": "application/x-www-form-urlencoded"
               }
             ],
-            "body": {
-              "mode": "urlencoded",
-              "urlencoded": [
+            "body": {},
+            "url": {
+              "raw": "https://{{host}}/api?key={{key}}&type=op&cmd=<request><high-availability><state><suspend></suspend></state></high-availability></request>",
+              "protocol": "https",
+              "host": [
+                "{{host}}"
+              ],
+              "path": [
+                "api"
+              ],
+              "query": [
                 {
                   "key": "key",
                   "value": "{{key}}",
@@ -922,17 +1082,16 @@
                   "key": "type",
                   "value": "op",
                   "type": "text",
-                  "description": "API method type"
+                  "description": "API method"
                 },
                 {
                   "key": "cmd",
                   "value": "<request><high-availability><state><suspend></suspend></state></high-availability></request>",
-                  "description": "Suspend the local HA node",
-                  "type": "text"
+                  "type": "text",
+                  "description": "API command"
                 }
               ]
             },
-            "url": "https://{{host}}/api",
             "description": "Suspend the local HA node"
           },
           "response": []
@@ -951,9 +1110,17 @@
                 "value": "application/x-www-form-urlencoded"
               }
             ],
-            "body": {
-              "mode": "urlencoded",
-              "urlencoded": [
+            "body": {},
+            "url": {
+              "raw": "https://{{host}}/api?key={{key}}&type=op&cmd=<request><high-availability><state><functional></functional></state></high-availability></request>",
+              "protocol": "https",
+              "host": [
+                "{{host}}"
+              ],
+              "path": [
+                "api"
+              ],
+              "query": [
                 {
                   "key": "key",
                   "value": "{{key}}",
@@ -964,17 +1131,16 @@
                   "key": "type",
                   "value": "op",
                   "type": "text",
-                  "description": "API method type"
+                  "description": "API method"
                 },
                 {
                   "key": "cmd",
                   "value": "<request><high-availability><state><functional></functional></state></high-availability></request>",
-                  "description": "Make the local HA node functional\n",
-                  "type": "text"
+                  "type": "text",
+                  "description": "API command"
                 }
               ]
             },
-            "url": "https://{{host}}/api",
             "description": "Make the local HA node functional"
           },
           "response": []
@@ -993,9 +1159,17 @@
                 "value": "application/x-www-form-urlencoded"
               }
             ],
-            "body": {
-              "mode": "urlencoded",
-              "urlencoded": [
+            "body": {},
+            "url": {
+              "raw": "https://{{host}}/api?key={{key}}&type=op&cmd=<request><high-availability><state><peer><suspend></suspend></peer></state></high-availability></request>",
+              "protocol": "https",
+              "host": [
+                "{{host}}"
+              ],
+              "path": [
+                "api"
+              ],
+              "query": [
                 {
                   "key": "key",
                   "value": "{{key}}",
@@ -1006,17 +1180,16 @@
                   "key": "type",
                   "value": "op",
                   "type": "text",
-                  "description": "API method type"
+                  "description": "API method"
                 },
                 {
                   "key": "cmd",
                   "value": "<request><high-availability><state><peer><suspend></suspend></peer></state></high-availability></request>",
-                  "description": "Suspend the peer HA node",
-                  "type": "text"
+                  "type": "text",
+                  "description": "API command"
                 }
               ]
             },
-            "url": "https://{{host}}/api",
             "description": "Suspend the peer HA node"
           },
           "response": []
@@ -1035,9 +1208,17 @@
                 "value": "application/x-www-form-urlencoded"
               }
             ],
-            "body": {
-              "mode": "urlencoded",
-              "urlencoded": [
+            "body": {},
+            "url": {
+              "raw": "https://{{host}}/api?key={{key}}&type=op&cmd=<request><high-availability><state><peer><functional></functional></peer></state></high-availability></request>",
+              "protocol": "https",
+              "host": [
+                "{{host}}"
+              ],
+              "path": [
+                "api"
+              ],
+              "query": [
                 {
                   "key": "key",
                   "value": "{{key}}",
@@ -1048,17 +1229,16 @@
                   "key": "type",
                   "value": "op",
                   "type": "text",
-                  "description": "API method type"
+                  "description": "API method"
                 },
                 {
                   "key": "cmd",
                   "value": "<request><high-availability><state><peer><functional></functional></peer></state></high-availability></request>",
-                  "description": "Make the peer HA node functional",
-                  "type": "text"
+                  "type": "text",
+                  "description": "API command"
                 }
               ]
             },
-            "url": "https://{{host}}/api",
             "description": "Make the peer HA node functional"
           },
           "response": []
@@ -1151,58 +1331,65 @@
                 "value": "application/x-www-form-urlencoded"
               }
             ],
-            "body": {
-              "mode": "urlencoded",
-              "urlencoded": [
+            "body": {},
+            "url": {
+              "raw": "https://{{host}}/api?key={{key}}&type=log&log-type=traffic",
+              "protocol": "https",
+              "host": [
+                "{{host}}"
+              ],
+              "path": [
+                "api"
+              ],
+              "query": [
                 {
                   "key": "key",
                   "value": "{{key}}",
-                  "type": "text",
+                  "equals": true,
                   "description": "API key"
                 },
                 {
                   "key": "type",
                   "value": "log",
-                  "type": "text",
-                  "description": "API method type"
+                  "equals": true,
+                  "description": "API method"
                 },
                 {
                   "key": "log-type",
                   "value": "traffic",
-                  "description": "Log type",
-                  "type": "text"
+                  "equals": true,
+                  "description": "API command"
                 },
                 {
                   "key": "query",
                   "value": "",
-                  "description": "Log records match criteria",
                   "type": "text",
+                  "description": "Log query",
                   "disabled": true
                 },
                 {
                   "key": "skip",
                   "value": "",
-                  "description": "Number of log records to skip",
                   "type": "text",
+                  "description": "Skip logs",
                   "disabled": true
                 },
                 {
                   "key": "nlogs",
                   "value": "",
-                  "description": "Number of log records to fetch, defaults to 20, maximum of 5000",
                   "type": "text",
+                  "description": "Number of  logs to skip",
                   "disabled": true
                 },
                 {
                   "key": "dir",
                   "value": "",
-                  "description": "Direction which can be forward or backward",
                   "type": "text",
+                  "description": "Log direction",
                   "disabled": true
                 }
               ]
             },
-            "url": "https://{{host}}/api",
             "description": "Query traffic logs"
           },
           "response": []
@@ -1221,9 +1408,17 @@
                 "value": "application/x-www-form-urlencoded"
               }
             ],
-            "body": {
-              "mode": "urlencoded",
-              "urlencoded": [
+            "body": {},
+            "url": {
+              "raw": "https://{{host}}/api?key={{key}}&type=log&log-type=threat",
+              "protocol": "https",
+              "host": [
+                "{{host}}"
+              ],
+              "path": [
+                "api"
+              ],
+              "query": [
                 {
                   "key": "key",
                   "value": "{{key}}",
@@ -1234,45 +1429,44 @@
                   "key": "type",
                   "value": "log",
                   "type": "text",
-                  "description": "API method type"
+                  "description": "API method"
                 },
                 {
                   "key": "log-type",
                   "value": "threat",
-                  "description": "Log type",
-                  "type": "text"
+                  "type": "text",
+                  "description": "API command"
                 },
                 {
                   "key": "query",
                   "value": "",
-                  "description": "Log records match criteria",
                   "type": "text",
+                  "description": "Log query",
                   "disabled": true
                 },
                 {
                   "key": "skip",
                   "value": "",
-                  "description": "Number of log records to skip",
                   "type": "text",
+                  "description": "Skip logs",
                   "disabled": true
                 },
                 {
                   "key": "nlogs",
                   "value": "",
-                  "description": "Number of log records to fetch, defaults to 20, maximum of 5000",
                   "type": "text",
+                  "description": "Number of logs to skip",
                   "disabled": true
                 },
                 {
                   "key": "dir",
                   "value": "",
-                  "description": "Direction which can be forward or backward",
                   "type": "text",
+                  "description": "Log direction",
                   "disabled": true
                 }
               ]
             },
-            "url": "https://{{host}}/api",
             "description": "Query threat logs"
           },
           "response": []
@@ -1291,9 +1485,17 @@
                 "value": "application/x-www-form-urlencoded"
               }
             ],
-            "body": {
-              "mode": "urlencoded",
-              "urlencoded": [
+            "body": {},
+            "url": {
+              "raw": "https://{{host}}/api?key={{key}}&type=log&log-type=url",
+              "protocol": "https",
+              "host": [
+                "{{host}}"
+              ],
+              "path": [
+                "api"
+              ],
+              "query": [
                 {
                   "key": "key",
                   "value": "{{key}}",
@@ -1304,45 +1506,44 @@
                   "key": "type",
                   "value": "log",
                   "type": "text",
-                  "description": "API method type"
+                  "description": "API method"
                 },
                 {
                   "key": "log-type",
                   "value": "url",
-                  "description": "Log type",
-                  "type": "text"
+                  "type": "text",
+                  "description": "API command"
                 },
                 {
                   "key": "query",
                   "value": "",
-                  "description": "Log records match criteria",
                   "type": "text",
+                  "description": "Log query",
                   "disabled": true
                 },
                 {
                   "key": "skip",
                   "value": "",
-                  "description": "Number of log records to skip",
                   "type": "text",
+                  "description": "Skip logs",
                   "disabled": true
                 },
                 {
                   "key": "nlogs",
                   "value": "",
-                  "description": "Number of log records to fetch, defaults to 20, maximum of 5000",
                   "type": "text",
+                  "description": "Number of logs to skip",
                   "disabled": true
                 },
                 {
                   "key": "dir",
                   "value": "",
-                  "description": "Direction which can be forward or backward",
                   "type": "text",
+                  "description": "Log direction",
                   "disabled": true
                 }
               ]
             },
-            "url": "https://{{host}}/api",
             "description": "Query URL filtering logs"
           },
           "response": []
@@ -1361,9 +1562,17 @@
                 "value": "application/x-www-form-urlencoded"
               }
             ],
-            "body": {
-              "mode": "urlencoded",
-              "urlencoded": [
+            "body": {},
+            "url": {
+              "raw": "https://{{host}}/api?key={{key}}&type=log&log-type=wildfire",
+              "protocol": "https",
+              "host": [
+                "{{host}}"
+              ],
+              "path": [
+                "api"
+              ],
+              "query": [
                 {
                   "key": "key",
                   "value": "{{key}}",
@@ -1374,45 +1583,44 @@
                   "key": "type",
                   "value": "log",
                   "type": "text",
-                  "description": "API method type"
+                  "description": "API method"
                 },
                 {
                   "key": "log-type",
                   "value": "wildfire",
-                  "description": "Log type",
-                  "type": "text"
+                  "type": "text",
+                  "description": "API command"
                 },
                 {
                   "key": "query",
                   "value": "",
-                  "description": "Log records match criteria",
                   "type": "text",
+                  "description": "Log query",
                   "disabled": true
                 },
                 {
                   "key": "skip",
                   "value": "",
-                  "description": "Number of log records to skip",
                   "type": "text",
+                  "description": "Skip logs",
                   "disabled": true
                 },
                 {
                   "key": "nlogs",
                   "value": "",
-                  "description": "Number of log records to fetch, defaults to 20, maximum of 5000",
                   "type": "text",
+                  "description": "Number of logs to skip",
                   "disabled": true
                 },
                 {
                   "key": "dir",
                   "value": "",
-                  "description": "Direction which can be forward or backward",
                   "type": "text",
+                  "description": "Log direction",
                   "disabled": true
                 }
               ]
             },
-            "url": "https://{{host}}/api",
             "description": "Query WildFire submissions logs"
           },
           "response": []
@@ -1431,9 +1639,17 @@
                 "value": "application/x-www-form-urlencoded"
               }
             ],
-            "body": {
-              "mode": "urlencoded",
-              "urlencoded": [
+            "body": {},
+            "url": {
+              "raw": "https://{{host}}/api?key={{key}}&type=log&log-type=data",
+              "protocol": "https",
+              "host": [
+                "{{host}}"
+              ],
+              "path": [
+                "api"
+              ],
+              "query": [
                 {
                   "key": "key",
                   "value": "{{key}}",
@@ -1444,45 +1660,44 @@
                   "key": "type",
                   "value": "log",
                   "type": "text",
-                  "description": "API method type"
+                  "description": "API method"
                 },
                 {
                   "key": "log-type",
                   "value": "data",
-                  "description": "Log type",
-                  "type": "text"
+                  "type": "text",
+                  "description": "API command"
                 },
                 {
                   "key": "query",
                   "value": "",
-                  "description": "Log records match criteria",
                   "type": "text",
+                  "description": "Log query",
                   "disabled": true
                 },
                 {
                   "key": "skip",
                   "value": "",
-                  "description": "Number of log records to skip",
                   "type": "text",
+                  "description": "Skip logs",
                   "disabled": true
                 },
                 {
                   "key": "nlogs",
                   "value": "",
-                  "description": "Number of log records to fetch, defaults to 20, maximum of 5000",
                   "type": "text",
+                  "description": "Number of logs to skip",
                   "disabled": true
                 },
                 {
                   "key": "dir",
                   "value": "",
-                  "description": "Direction which can be forward or backward",
                   "type": "text",
+                  "description": "Log direction",
                   "disabled": true
                 }
               ]
             },
-            "url": "https://{{host}}/api",
             "description": "Query Data Filtering logs"
           },
           "response": []
@@ -1501,9 +1716,17 @@
                 "value": "application/x-www-form-urlencoded"
               }
             ],
-            "body": {
-              "mode": "urlencoded",
-              "urlencoded": [
+            "body": {},
+            "url": {
+              "raw": "https://{{host}}/api?key={{key}}&type=log&log-type=hipmatch",
+              "protocol": "https",
+              "host": [
+                "{{host}}"
+              ],
+              "path": [
+                "api"
+              ],
+              "query": [
                 {
                   "key": "key",
                   "value": "{{key}}",
@@ -1514,45 +1737,44 @@
                   "key": "type",
                   "value": "log",
                   "type": "text",
-                  "description": "API method type"
+                  "description": "API method"
                 },
                 {
                   "key": "log-type",
                   "value": "hipmatch",
-                  "description": "Log type",
-                  "type": "text"
+                  "type": "text",
+                  "description": "API command"
                 },
                 {
                   "key": "query",
                   "value": "",
-                  "description": "Log records match criteria",
                   "type": "text",
+                  "description": "Log query",
                   "disabled": true
                 },
                 {
                   "key": "skip",
                   "value": "",
-                  "description": "Number of log records to skip",
                   "type": "text",
+                  "description": "Skip logs",
                   "disabled": true
                 },
                 {
                   "key": "nlogs",
                   "value": "",
-                  "description": "Number of log records to fetch, defaults to 20, maximum of 5000",
                   "type": "text",
+                  "description": "Number of logs to skip",
                   "disabled": true
                 },
                 {
                   "key": "dir",
                   "value": "",
-                  "description": "Direction which can be forward or backward",
                   "type": "text",
+                  "description": "Log direction",
                   "disabled": true
                 }
               ]
             },
-            "url": "https://{{host}}/api",
             "description": "Query HIP Match logs"
           },
           "response": []
@@ -1571,9 +1793,17 @@
                 "value": "application/x-www-form-urlencoded"
               }
             ],
-            "body": {
-              "mode": "urlencoded",
-              "urlencoded": [
+            "body": {},
+            "url": {
+              "raw": "https://{{host}}/api?key={{key}}&type=log&log-type=userid",
+              "protocol": "https",
+              "host": [
+                "{{host}}"
+              ],
+              "path": [
+                "api"
+              ],
+              "query": [
                 {
                   "key": "key",
                   "value": "{{key}}",
@@ -1584,45 +1814,44 @@
                   "key": "type",
                   "value": "log",
                   "type": "text",
-                  "description": "API method type"
+                  "description": "API method"
                 },
                 {
                   "key": "log-type",
                   "value": "userid",
-                  "description": "Log type",
-                  "type": "text"
+                  "type": "text",
+                  "description": "API command"
                 },
                 {
                   "key": "query",
                   "value": "",
-                  "description": "Log records match criteria",
                   "type": "text",
+                  "description": "Log query",
                   "disabled": true
                 },
                 {
                   "key": "skip",
                   "value": "",
-                  "description": "Number of log records to skip",
                   "type": "text",
+                  "description": "Skip logs",
                   "disabled": true
                 },
                 {
                   "key": "nlogs",
                   "value": "",
-                  "description": "Number of log records to fetch, defaults to 20, maximum of 5000",
                   "type": "text",
+                  "description": "Number of logs to skip",
                   "disabled": true
                 },
                 {
                   "key": "dir",
                   "value": "",
-                  "description": "Direction which can be forward or backward",
                   "type": "text",
+                  "description": "Log direction",
                   "disabled": true
                 }
               ]
             },
-            "url": "https://{{host}}/api",
             "description": "Query User-IDlogs"
           },
           "response": []
@@ -1641,9 +1870,17 @@
                 "value": "application/x-www-form-urlencoded"
               }
             ],
-            "body": {
-              "mode": "urlencoded",
-              "urlencoded": [
+            "body": {},
+            "url": {
+              "raw": "https://{{host}}/api?key={{key}}&type=log&log-type=tunnel",
+              "protocol": "https",
+              "host": [
+                "{{host}}"
+              ],
+              "path": [
+                "api"
+              ],
+              "query": [
                 {
                   "key": "key",
                   "value": "{{key}}",
@@ -1654,45 +1891,44 @@
                   "key": "type",
                   "value": "log",
                   "type": "text",
-                  "description": "API method type"
+                  "description": "API method"
                 },
                 {
                   "key": "log-type",
                   "value": "tunnel",
-                  "description": "Log type",
-                  "type": "text"
+                  "type": "text",
+                  "description": "API command"
                 },
                 {
                   "key": "query",
                   "value": "",
-                  "description": "Log records match criteria",
                   "type": "text",
+                  "description": "Log query",
                   "disabled": true
                 },
                 {
                   "key": "skip",
                   "value": "",
-                  "description": "Number of log records to skip",
                   "type": "text",
+                  "description": "Skip logs",
                   "disabled": true
                 },
                 {
                   "key": "nlogs",
                   "value": "",
-                  "description": "Number of log records to fetch, defaults to 20, maximum of 5000",
                   "type": "text",
+                  "description": "Number of logs to skip",
                   "disabled": true
                 },
                 {
                   "key": "dir",
                   "value": "",
-                  "description": "Direction which can be forward or backward",
                   "type": "text",
+                  "description": "Log direction",
                   "disabled": true
                 }
               ]
             },
-            "url": "https://{{host}}/api",
             "description": "Query Tunnel Inspection logs"
           },
           "response": []
@@ -2037,7 +2273,204 @@
       "_postman_id": "d7ef805f-147c-b06d-5180-36d2ab3e1f92",
       "name": "Software",
       "description": "",
-      "item": []
+      "item": [
+        {
+          "_postman_id": "f6eb968e-663f-4db5-9fcc-34d3f2d725c6",
+          "name": "Software Upgrade Info",
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/x-www-form-urlencoded"
+              }
+            ],
+            "body": {},
+            "url": {
+              "raw": "https://{{host}}/api?key={{key}}&type=op&cmd=<request><system><software><info></info></software></system></request>",
+              "protocol": "https",
+              "host": [
+                "{{host}}"
+              ],
+              "path": [
+                "api"
+              ],
+              "query": [
+                {
+                  "key": "key",
+                  "value": "{{key}}",
+                  "equals": true,
+                  "description": "API key"
+                },
+                {
+                  "key": "type",
+                  "value": "op",
+                  "equals": true,
+                  "description": "API action"
+                },
+                {
+                  "key": "cmd",
+                  "value": "<request><system><software><info></info></software></system></request>",
+                  "equals": true,
+                  "description": "API command"
+                }
+              ]
+            },
+            "description": "Show information about available software images"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "d3bcac9d-cf40-4cbd-8b14-c4fcfbfebaa0",
+          "name": "Upgrade Software Latest",
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/x-www-form-urlencoded"
+              }
+            ],
+            "body": {},
+            "url": {
+              "raw": "https://{{host}}/api?key={{key}}&type=op&cmd=<request><system><software><install><version>8.1.2</version></install></software></system></request>",
+              "protocol": "https",
+              "host": [
+                "{{host}}"
+              ],
+              "path": [
+                "api"
+              ],
+              "query": [
+                {
+                  "key": "key",
+                  "value": "{{key}}",
+                  "equals": true,
+                  "description": "API key"
+                },
+                {
+                  "key": "type",
+                  "value": "op",
+                  "equals": true,
+                  "description": "API action"
+                },
+                {
+                  "key": "cmd",
+                  "value": "<request><system><software><install><version>8.1.2</version></install></software></system></request>",
+                  "equals": true,
+                  "description": "API command"
+                }
+              ]
+            },
+            "description": "Upgrade to the latest software release"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "9c1952a5-52fe-4481-b8cd-48f2d997db97",
+          "name": "Software Upgrade Check",
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/x-www-form-urlencoded"
+              }
+            ],
+            "body": {},
+            "url": {
+              "raw": "https://{{host}}/api?key={{key}}&type=op&cmd=<request><system><software><check></check></software></system></request>",
+              "protocol": "https",
+              "host": [
+                "{{host}}"
+              ],
+              "path": [
+                "api"
+              ],
+              "query": [
+                {
+                  "key": "key",
+                  "value": "{{key}}",
+                  "equals": true,
+                  "description": "API key"
+                },
+                {
+                  "key": "type",
+                  "value": "op",
+                  "equals": true,
+                  "description": "API action"
+                },
+                {
+                  "key": "cmd",
+                  "value": "<request><system><software><check></check></software></system></request>",
+                  "equals": true,
+                  "description": "API command"
+                }
+              ]
+            },
+            "description": "Retrieve current software information from update server"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "d2dffe5e-5b5a-4069-9a53-1303751e0785",
+          "name": "Download Software Version",
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/x-www-form-urlencoded"
+              }
+            ],
+            "body": {},
+            "url": {
+              "raw": "https://{{host}}/api?key={{key}}&type=op&cmd=<request><system><software><download><version>8.1.4</version></download></software></system></request>",
+              "protocol": "https",
+              "host": [
+                "{{host}}"
+              ],
+              "path": [
+                "api"
+              ],
+              "query": [
+                {
+                  "key": "key",
+                  "value": "{{key}}",
+                  "equals": true,
+                  "description": "API key"
+                },
+                {
+                  "key": "type",
+                  "value": "op",
+                  "equals": true,
+                  "description": "API action"
+                },
+                {
+                  "key": "cmd",
+                  "value": "<request><system><software><download><version>8.1.4</version></download></software></system></request>",
+                  "equals": true,
+                  "description": "API command"
+                }
+              ]
+            },
+            "description": "Download a specific software version"
+          },
+          "response": []
+        }
+      ]
     },
     {
       "_postman_id": "8cc513ed-77d7-882d-ce6a-cf0a31420ad1",
