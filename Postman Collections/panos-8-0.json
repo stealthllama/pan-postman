@@ -2870,7 +2870,7 @@
       "item": [
         {
           "_postman_id": "0aeaeff6-8a55-4ab2-8596-b9189a56dc91",
-          "name": "Show Model",
+          "name": "Show Platform",
           "request": {
             "auth": {
               "type": "noauth"
@@ -2919,7 +2919,7 @@
                 }
               ]
             },
-            "description": "Show appliance model"
+            "description": "Show platform model"
           },
           "response": []
         }
