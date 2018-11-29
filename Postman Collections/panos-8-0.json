@@ -1239,6 +1239,52 @@
           "response": []
         },
         {
+          "_postman_id": "e6b00e30-24aa-4f32-8324-4348508333b2",
+          "name": "Show Job All",
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/x-www-form-urlencoded"
+              }
+            ],
+            "body": {},
+            "url": {
+              "raw": "https://{{host}}/api?key={{key}}&type=op&cmd=<show><jobs><id>192</id></jobs></show>",
+              "protocol": "https",
+              "host": [
+                "{{host}}"
+              ],
+              "path": [
+                "api"
+              ],
+              "query": [
+                {
+                  "key": "key",
+                  "value": "{{key}}",
+                  "equals": true
+                },
+                {
+                  "key": "type",
+                  "value": "op",
+                  "equals": true
+                },
+                {
+                  "key": "cmd",
+                  "value": "<show><jobs><id>192</id></jobs></show>",
+                  "equals": true
+                }
+              ]
+            },
+            "description": "Show all job"
+          },
+          "response": []
+        },
+        {
           "_postman_id": "e04853ee-46fe-4aae-9aa8-27cad9f862f1",
           "name": "Show Chassis Ready",
           "request": {
