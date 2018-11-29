@@ -1264,19 +1264,19 @@
               ],
               "query": [
                 {
+                  "equals": true,
                   "key": "key",
-                  "value": "{{key}}",
-                  "equals": true
+                  "value": "{{key}}"
                 },
                 {
+                  "equals": true,
                   "key": "type",
-                  "value": "op",
-                  "equals": true
+                  "value": "op"
                 },
                 {
+                  "equals": true,
                   "key": "cmd",
-                  "value": "<show><jobs><id>192</id></jobs></show>",
-                  "equals": true
+                  "value": "<show><jobs><id>192</id></jobs></show>"
                 }
               ]
             },
@@ -1402,19 +1402,19 @@
               ],
               "query": [
                 {
+                  "equals": true,
                   "key": "key",
-                  "value": "{{key}}",
-                  "equals": true
+                  "value": "{{key}}"
                 },
                 {
+                  "equals": true,
                   "key": "type",
-                  "value": "op",
-                  "equals": true
+                  "value": "op"
                 },
                 {
+                  "equals": true,
                   "key": "cmd",
-                  "value": "<show><system><info></info></system></show>",
-                  "equals": true
+                  "value": "<show><system><info></info></system></show>"
                 }
               ]
             },
