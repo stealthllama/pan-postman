@@ -1964,10 +1964,10 @@
               "listen": "test",
               "script": {
                 "id": "c4a41094-aed7-4f93-8305-829bb448880e",
-                "type": "text/javascript",
                 "exec": [
                   ""
-                ]
+                ],
+                "type": "text/javascript"
               }
             }
           ],
@@ -2005,7 +2005,36 @@
                 }
               ]
             },
-            "url": "https://{{host}}/api",
+            "url": {
+              "raw": "https://{{host}}/api?key={{key}}&type=op&cmd=<request><global-protect-client><software><download><version>5.0.0-b59</version></download></software></global-protect-client></request>",
+              "protocol": "https",
+              "host": [
+                "{{host}}"
+              ],
+              "path": [
+                "api"
+              ],
+              "query": [
+                {
+                  "key": "key",
+                  "value": "{{key}}",
+                  "description": "API key",
+                  "type": "text"
+                },
+                {
+                  "key": "type",
+                  "value": "op",
+                  "description": "API command type",
+                  "type": "text"
+                },
+                {
+                  "key": "cmd",
+                  "value": "<request><global-protect-client><software><download><version>5.0.0-b59</version></download></software></global-protect-client></request>",
+                  "description": "Request software by version",
+                  "type": "text"
+                }
+              ]
+            },
             "description": "Show all currently connected GlobalProtect users"
           },
           "response": []
