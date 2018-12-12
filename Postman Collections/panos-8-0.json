@@ -2095,7 +2095,7 @@
         },
         {
           "_postman_id": "0b4e0b4d-d611-47a1-8112-597b17d258b4",
-          "name": "Request GlobalProtect client download Copy",
+          "name": "Request GlobalProtect client info",
           "event": [
             {
               "listen": "test",
