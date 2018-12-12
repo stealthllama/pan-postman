@@ -2178,7 +2178,7 @@
         },
         {
           "_postman_id": "81efdfd7-3784-425f-8b69-fb894858d636",
-          "name": "Request GlobalProtect client activate",
+          "name": "Request GlobalProtect client activation",
           "event": [
             {
               "listen": "test",
@@ -2255,7 +2255,7 @@
                 }
               ]
             },
-            "description": "Request a listing of GlobalProtect client versions"
+            "description": "Request GlobalProtect client activation"
           },
           "response": []
         }
