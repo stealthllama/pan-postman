@@ -2172,7 +2172,7 @@
                 }
               ]
             },
-            "description": "Request a GlobalProtect client download by version"
+            "description": "Request a listing of GlobalProtect client versions"
           },
           "response": []
         }
