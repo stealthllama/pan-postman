@@ -2009,6 +2009,60 @@
             "description": "Show all currently connected GlobalProtect users"
           },
           "response": []
+        },
+        {
+          "_postman_id": "f88e5e1d-b905-45af-a800-726d01cf9499",
+          "name": "Show GlobalProtect Users Copy",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "id": "c4a41094-aed7-4f93-8305-829bb448880e",
+                "type": "text/javascript",
+                "exec": [
+                  ""
+                ]
+              }
+            }
+          ],
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/x-www-form-urlencoded"
+              }
+            ],
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "key": "key",
+                  "value": "{{key}}",
+                  "type": "text",
+                  "description": "API key"
+                },
+                {
+                  "key": "type",
+                  "value": "op",
+                  "type": "text",
+                  "description": "API method type"
+                },
+                {
+                  "key": "cmd",
+                  "value": "<show><global-protect-gateway><current-user/> \n</global-protect-gateway></show>",
+                  "description": "Show active GlobalProtect users",
+                  "type": "text"
+                }
+              ]
+            },
+            "url": "https://{{host}}/api",
+            "description": "Show all currently connected GlobalProtect users"
+          },
+          "response": []
         }
       ]
     },
