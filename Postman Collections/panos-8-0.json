@@ -2255,7 +2255,7 @@
                 }
               ]
             },
-            "description": "Request GlobalProtect client activation"
+            "description": "Request a listing of GlobalProtect client versions"
           },
           "response": []
         }
