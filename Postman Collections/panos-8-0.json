@@ -1,7 +1,7 @@
 {
   "info": {
     "_postman_id": "241ff148-5458-dde5-cbaa-a80527e7dc55",
-    "name": "PAN-OS 8.0",
+    "name": "PAN-OS 8.1 XML API",
     "description": "API request collection for PAN-OS 8.0",
     "schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
   },
@@ -1254,7 +1254,7 @@
             ],
             "body": {},
             "url": {
-              "raw": "https://{{host}}/api?key={{key}}&type=op&cmd=<show><jobs><id>192</id></jobs></show>",
+              "raw": "https://{{host}}/api?key={{key}}&type=op&cmd=<show><jobs><all/></jobs></show>",
               "protocol": "https",
               "host": [
                 "{{host}}"
@@ -1264,19 +1264,19 @@
               ],
               "query": [
                 {
-                  "equals": true,
                   "key": "key",
-                  "value": "{{key}}"
+                  "value": "{{key}}",
+                  "equals": true
                 },
                 {
-                  "equals": true,
                   "key": "type",
-                  "value": "op"
+                  "value": "op",
+                  "equals": true
                 },
                 {
-                  "equals": true,
                   "key": "cmd",
-                  "value": "<show><jobs><id>192</id></jobs></show>"
+                  "value": "<show><jobs><all/></jobs></show>",
+                  "equals": true
                 }
               ]
             },
