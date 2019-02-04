@@ -279,6 +279,67 @@
                 "description": "Unegister an IP addresses from a Dynamic Address Group"
               },
               "response": []
+            },
+            {
+              "_postman_id": "bff49112-5fac-4e1b-a7b1-f00a1451d313",
+              "name": "Add Dynamic Address Group Copy",
+              "request": {
+                "auth": {
+                  "type": "noauth"
+                },
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/x-www-form-urlencoded"
+                  }
+                ],
+                "body": {},
+                "url": {
+                  "raw": "https://{{host}}/api?key={{key}}&type=config&action=set&xpath=/config/devices/entry[@name='localhost.localdomain']/vsys/entry[@name='vsys1']/address-group/entry[@name='test-dag']&element=<description>This is a test DAG</description><dynamic><filter>outbound</filter></dynamic>",
+                  "protocol": "https",
+                  "host": [
+                    "{{host}}"
+                  ],
+                  "path": [
+                    "api"
+                  ],
+                  "query": [
+                    {
+                      "key": "key",
+                      "value": "{{key}}",
+                      "equals": true,
+                      "description": "API key"
+                    },
+                    {
+                      "key": "type",
+                      "value": "config",
+                      "equals": true,
+                      "description": "API action"
+                    },
+                    {
+                      "key": "action",
+                      "value": "set",
+                      "equals": true,
+                      "description": "Config action"
+                    },
+                    {
+                      "key": "xpath",
+                      "value": "/config/devices/entry[@name='localhost.localdomain']/vsys/entry[@name='vsys1']/address-group/entry[@name='test-dag']",
+                      "equals": true,
+                      "description": "Config xpath"
+                    },
+                    {
+                      "key": "element",
+                      "value": "<description>This is a test DAG</description><dynamic><filter>outbound</filter></dynamic>",
+                      "equals": true,
+                      "description": "Config value"
+                    }
+                  ]
+                },
+                "description": "Add a dynamic address group"
+              },
+              "response": []
             }
           ],
           "event": [
@@ -1019,7 +1080,7 @@
             ],
             "body": {},
             "url": {
-              "raw": "https://{{host}}/api?key={{key}}&type=keygen&user=admin&password=paloalto",
+              "raw": "https://{{host}}/api?type=keygen&user=admin&password=paloalto",
               "protocol": "https",
               "host": [
                 "{{host}}"
@@ -1028,11 +1089,6 @@
                 "api"
               ],
               "query": [
-                {
-                  "key": "key",
-                  "value": "{{key}}",
-                  "equals": true
-                },
                 {
                   "key": "type",
                   "value": "keygen",
