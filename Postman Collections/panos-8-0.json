@@ -4071,6 +4071,67 @@
           "response": []
         },
         {
+          "_postman_id": "f7cae6b3-a5cb-437b-9018-61388db160c5",
+          "name": "Commit - All Copy",
+          "event": [
+            {
+              "listen": "prerequest",
+              "script": {
+                "id": "0897f533-6597-442b-9dc9-eed8c4b921b9",
+                "type": "text/javascript",
+                "exec": [
+                  ""
+                ]
+              }
+            }
+          ],
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/x-www-form-urlencoded"
+              }
+            ],
+            "body": {},
+            "url": {
+              "raw": "https://{{host}}/api?key={{key}}&type=commit&cmd=<commit></commit>",
+              "protocol": "https",
+              "host": [
+                "{{host}}"
+              ],
+              "path": [
+                "api"
+              ],
+              "query": [
+                {
+                  "key": "key",
+                  "value": "{{key}}",
+                  "equals": true,
+                  "description": "API key"
+                },
+                {
+                  "key": "type",
+                  "value": "commit",
+                  "equals": true,
+                  "description": "API action"
+                },
+                {
+                  "key": "cmd",
+                  "value": "<commit></commit>",
+                  "equals": true,
+                  "description": "API command"
+                }
+              ]
+            },
+            "description": "Commit the entire candidate configuration"
+          },
+          "response": []
+        },
+        {
           "_postman_id": "c72eea2c-a377-5ee6-672f-87a5f23b3158",
           "name": "Commit - By Administrator",
           "event": [
