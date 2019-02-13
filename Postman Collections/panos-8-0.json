@@ -183,6 +183,67 @@
               "response": []
             },
             {
+              "_postman_id": "bff49112-5fac-4e1b-a7b1-f00a1451d313",
+              "name": "Add Static Address Group",
+              "request": {
+                "auth": {
+                  "type": "noauth"
+                },
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/x-www-form-urlencoded"
+                  }
+                ],
+                "body": {},
+                "url": {
+                  "raw": "https://{{host}}/api?key={{key}}&type=config&action=set&xpath=/config/devices/entry[@name='localhost.localdomain']/vsys/entry[@name='vsys1']/address-group/entry[@name='test-dag']&element=<description>This is a test DAG</description><dynamic><filter>outbound</filter></dynamic>",
+                  "protocol": "https",
+                  "host": [
+                    "{{host}}"
+                  ],
+                  "path": [
+                    "api"
+                  ],
+                  "query": [
+                    {
+                      "key": "key",
+                      "value": "{{key}}",
+                      "equals": true,
+                      "description": "API key"
+                    },
+                    {
+                      "key": "type",
+                      "value": "config",
+                      "equals": true,
+                      "description": "API action"
+                    },
+                    {
+                      "key": "action",
+                      "value": "set",
+                      "equals": true,
+                      "description": "Config action"
+                    },
+                    {
+                      "key": "xpath",
+                      "value": "/config/devices/entry[@name='localhost.localdomain']/vsys/entry[@name='vsys1']/address-group/entry[@name='test-dag']",
+                      "equals": true,
+                      "description": "Config xpath"
+                    },
+                    {
+                      "key": "element",
+                      "value": "<description>This is a test DAG</description><dynamic><filter>outbound</filter></dynamic>",
+                      "equals": true,
+                      "description": "Config value"
+                    }
+                  ]
+                },
+                "description": "Add a static address group"
+              },
+              "response": []
+            },
+            {
               "_postman_id": "40323d4a-2284-b3aa-401c-9846d3455a3f",
               "name": "Register IP Address",
               "request": {
@@ -277,67 +338,6 @@
                   ]
                 },
                 "description": "Unegister an IP addresses from a Dynamic Address Group"
-              },
-              "response": []
-            },
-            {
-              "_postman_id": "bff49112-5fac-4e1b-a7b1-f00a1451d313",
-              "name": "Add Dynamic Address Group Copy",
-              "request": {
-                "auth": {
-                  "type": "noauth"
-                },
-                "method": "POST",
-                "header": [
-                  {
-                    "key": "Content-Type",
-                    "value": "application/x-www-form-urlencoded"
-                  }
-                ],
-                "body": {},
-                "url": {
-                  "raw": "https://{{host}}/api?key={{key}}&type=config&action=set&xpath=/config/devices/entry[@name='localhost.localdomain']/vsys/entry[@name='vsys1']/address-group/entry[@name='test-dag']&element=<description>This is a test DAG</description><dynamic><filter>outbound</filter></dynamic>",
-                  "protocol": "https",
-                  "host": [
-                    "{{host}}"
-                  ],
-                  "path": [
-                    "api"
-                  ],
-                  "query": [
-                    {
-                      "key": "key",
-                      "value": "{{key}}",
-                      "equals": true,
-                      "description": "API key"
-                    },
-                    {
-                      "key": "type",
-                      "value": "config",
-                      "equals": true,
-                      "description": "API action"
-                    },
-                    {
-                      "key": "action",
-                      "value": "set",
-                      "equals": true,
-                      "description": "Config action"
-                    },
-                    {
-                      "key": "xpath",
-                      "value": "/config/devices/entry[@name='localhost.localdomain']/vsys/entry[@name='vsys1']/address-group/entry[@name='test-dag']",
-                      "equals": true,
-                      "description": "Config xpath"
-                    },
-                    {
-                      "key": "element",
-                      "value": "<description>This is a test DAG</description><dynamic><filter>outbound</filter></dynamic>",
-                      "equals": true,
-                      "description": "Config value"
-                    }
-                  ]
-                },
-                "description": "Add a dynamic address group"
               },
               "response": []
             }
@@ -5068,6 +5068,13 @@
       "name": "Panorama",
       "description": "API calls specific to the Panorama management console",
       "item": [
+        {
+          "_postman_id": "b52d2c22-f7eb-4164-b349-f52557a9f29f",
+          "name": "Commit",
+          "description": "",
+          "item": [],
+          "_postman_isSubFolder": true
+        },
         {
           "_postman_id": "be21d32b-62a4-42a2-a2fe-58719f449629",
           "name": "Show managed devices",
