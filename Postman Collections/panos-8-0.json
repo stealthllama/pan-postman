@@ -5075,7 +5075,7 @@
           "item": [
             {
               "_postman_id": "f7cae6b3-a5cb-437b-9018-61388db160c5",
-              "name": "Commit - All Copy",
+              "name": "Commit - DeviceGroup and Template Stack",
               "event": [
                 {
                   "listen": "prerequest",
@@ -5130,7 +5130,7 @@
                     }
                   ]
                 },
-                "description": "Commit the entire candidate configuration"
+                "description": "Commit the device group and template stack to a specific firewall"
               },
               "response": []
             }
