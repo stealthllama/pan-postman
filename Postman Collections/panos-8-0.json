@@ -5197,30 +5197,34 @@
                 "value": "application/x-www-form-urlencoded"
               }
             ],
-            "body": {
-              "mode": "urlencoded",
-              "urlencoded": [
+            "body": {},
+            "url": {
+              "raw": "https://{{host}}/api?key={{key}}&type=op&cmd=<request><batch><license><info></info></license></batch></request>",
+              "protocol": "https",
+              "host": [
+                "{{host}}"
+              ],
+              "path": [
+                "api"
+              ],
+              "query": [
                 {
                   "key": "key",
                   "value": "{{key}}",
-                  "type": "text",
-                  "description": "API key"
+                  "type": "text"
                 },
                 {
                   "key": "type",
                   "value": "op",
-                  "type": "text",
-                  "description": "API method type"
+                  "type": "text"
                 },
                 {
                   "key": "cmd",
                   "value": "<request><batch><license><info></info></license></batch></request>",
-                  "description": "Show  all devices",
                   "type": "text"
                 }
               ]
             },
-            "url": "https://{{host}}/api",
             "description": "Show licenses for all Panorama managed devices"
           },
           "response": []
