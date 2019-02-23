@@ -5151,30 +5151,34 @@
                 "value": "application/x-www-form-urlencoded"
               }
             ],
-            "body": {
-              "mode": "urlencoded",
-              "urlencoded": [
-                {
-                  "key": "key",
-                  "value": "{{key}}",
-                  "type": "text",
-                  "description": "API key"
-                },
+            "body": {},
+            "url": {
+              "raw": "https://{{host}}/api?type=op&cmd=<show><devices><all/></devices></show>&key={{key}}",
+              "protocol": "https",
+              "host": [
+                "{{host}}"
+              ],
+              "path": [
+                "api"
+              ],
+              "query": [
                 {
                   "key": "type",
                   "value": "op",
-                  "type": "text",
-                  "description": "API method type"
+                  "type": "text"
                 },
                 {
                   "key": "cmd",
-                  "value": "<show><devices><all></all></devices></show>",
-                  "description": "Show  all devices",
+                  "value": "<show><devices><all/></devices></show>",
+                  "type": "text"
+                },
+                {
+                  "key": "key",
+                  "value": "{{key}}",
                   "type": "text"
                 }
               ]
             },
-            "url": "https://{{host}}/api",
             "description": "Show all Panorama managed devices"
           },
           "response": []
