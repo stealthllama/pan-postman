@@ -5199,7 +5199,7 @@
             ],
             "body": {},
             "url": {
-              "raw": "https://{{host}}/api?type=op&cmd=<show><devices><all/></devices></show>&key={{key}}",
+              "raw": "https://{{host}}/api?type=op&cmd=<show><devices><connected/></devices></show>&key={{key}}",
               "protocol": "https",
               "host": [
                 "{{host}}"
@@ -5211,17 +5211,17 @@
                 {
                   "key": "type",
                   "value": "op",
-                  "type": "text"
+                  "equals": true
                 },
                 {
                   "key": "cmd",
-                  "value": "<show><devices><all/></devices></show>",
-                  "type": "text"
+                  "value": "<show><devices><connected/></devices></show>",
+                  "equals": true
                 },
                 {
                   "key": "key",
                   "value": "{{key}}",
-                  "type": "text"
+                  "equals": true
                 }
               ]
             },
