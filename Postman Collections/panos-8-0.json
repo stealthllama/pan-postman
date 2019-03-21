@@ -5138,6 +5138,13 @@
           "_postman_isSubFolder": true
         },
         {
+          "_postman_id": "f458d42c-264d-440f-b428-f649108dfca6",
+          "name": "Template",
+          "description": "",
+          "item": [],
+          "_postman_isSubFolder": true
+        },
+        {
           "_postman_id": "be21d32b-62a4-42a2-a2fe-58719f449629",
           "name": "Show managed devices",
           "request": {
