@@ -5397,7 +5397,7 @@
             },
             {
               "_postman_id": "a7ddbb69-8d2b-41e2-9d3a-e8e34cf9186f",
-              "name": "Remove config lock Copy",
+              "name": "Show config locks",
               "request": {
                 "auth": {
                   "type": "noauth"
@@ -5437,7 +5437,7 @@
                     }
                   ]
                 },
-                "description": "Remove a config lock"
+                "description": "Show config locks"
               },
               "response": []
             }
