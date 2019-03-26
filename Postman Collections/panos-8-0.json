@@ -5319,7 +5319,7 @@
                 ],
                 "body": {},
                 "url": {
-                  "raw": "https://{{host}}/api?key={{key}}&type=op&cmd=<request><commit-lock><add/></commit-lock></request>",
+                  "raw": "https://{{host}}/api?key={{key}}&type=op&cmd=<request target-tpl=\"Lab Template\"><commit-lock><add/></commit-lock></request>",
                   "protocol": "https",
                   "host": [
                     "{{host}}"
@@ -5340,7 +5340,7 @@
                     },
                     {
                       "key": "cmd",
-                      "value": "<request><commit-lock><add/></commit-lock></request>",
+                      "value": "<request target-tpl=\"Lab Template\"><commit-lock><add/></commit-lock></request>",
                       "equals": true
                     }
                   ]
@@ -5398,6 +5398,52 @@
             {
               "_postman_id": "1fbacd67-ed34-49ed-936d-0366c4da44e1",
               "name": "Remove commit lock",
+              "request": {
+                "auth": {
+                  "type": "noauth"
+                },
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/x-www-form-urlencoded"
+                  }
+                ],
+                "body": {},
+                "url": {
+                  "raw": "https://{{host}}/api?key={{key}}&type=op&cmd=<request><commit-lock><remove/></commit-lock></request>",
+                  "protocol": "https",
+                  "host": [
+                    "{{host}}"
+                  ],
+                  "path": [
+                    "api"
+                  ],
+                  "query": [
+                    {
+                      "key": "key",
+                      "value": "{{key}}",
+                      "equals": true
+                    },
+                    {
+                      "key": "type",
+                      "value": "op",
+                      "equals": true
+                    },
+                    {
+                      "key": "cmd",
+                      "value": "<request><commit-lock><remove/></commit-lock></request>",
+                      "equals": true
+                    }
+                  ]
+                },
+                "description": "Remove a commit lock"
+              },
+              "response": []
+            },
+            {
+              "_postman_id": "613351ad-13dd-4ebb-97b2-8829f941a83a",
+              "name": "Remove commit lock Copy",
               "request": {
                 "auth": {
                   "type": "noauth"
