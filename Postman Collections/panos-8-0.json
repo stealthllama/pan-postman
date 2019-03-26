@@ -5258,6 +5258,52 @@
               "response": []
             },
             {
+              "_postman_id": "1fbacd67-ed34-49ed-936d-0366c4da44e1",
+              "name": "Remove commit lock",
+              "request": {
+                "auth": {
+                  "type": "noauth"
+                },
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/x-www-form-urlencoded"
+                  }
+                ],
+                "body": {},
+                "url": {
+                  "raw": "https://{{host}}/api?type=op&cmd=<show><devices><all/></devices></show>&key={{key}}",
+                  "protocol": "https",
+                  "host": [
+                    "{{host}}"
+                  ],
+                  "path": [
+                    "api"
+                  ],
+                  "query": [
+                    {
+                      "key": "type",
+                      "value": "op",
+                      "type": "text"
+                    },
+                    {
+                      "key": "cmd",
+                      "value": "<show><devices><all/></devices></show>",
+                      "type": "text"
+                    },
+                    {
+                      "key": "key",
+                      "value": "{{key}}",
+                      "type": "text"
+                    }
+                  ]
+                },
+                "description": "Remove a commit lock"
+              },
+              "response": []
+            },
+            {
               "_postman_id": "5051ac85-5ef5-41ee-b1f7-4fafb14d8f36",
               "name": "Request config lock",
               "request": {
@@ -5300,52 +5346,6 @@
                   ]
                 },
                 "description": "Request a config lock"
-              },
-              "response": []
-            },
-            {
-              "_postman_id": "1fbacd67-ed34-49ed-936d-0366c4da44e1",
-              "name": "Request commit lock Copy",
-              "request": {
-                "auth": {
-                  "type": "noauth"
-                },
-                "method": "POST",
-                "header": [
-                  {
-                    "key": "Content-Type",
-                    "value": "application/x-www-form-urlencoded"
-                  }
-                ],
-                "body": {},
-                "url": {
-                  "raw": "https://{{host}}/api?type=op&cmd=<show><devices><all/></devices></show>&key={{key}}",
-                  "protocol": "https",
-                  "host": [
-                    "{{host}}"
-                  ],
-                  "path": [
-                    "api"
-                  ],
-                  "query": [
-                    {
-                      "key": "type",
-                      "value": "op",
-                      "type": "text"
-                    },
-                    {
-                      "key": "cmd",
-                      "value": "<show><devices><all/></devices></show>",
-                      "type": "text"
-                    },
-                    {
-                      "key": "key",
-                      "value": "{{key}}",
-                      "type": "text"
-                    }
-                  ]
-                },
-                "description": "Request a commit lock"
               },
               "response": []
             }
