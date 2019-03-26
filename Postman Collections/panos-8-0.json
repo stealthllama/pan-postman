@@ -5350,6 +5350,52 @@
               "response": []
             },
             {
+              "_postman_id": "a7ddbb69-8d2b-41e2-9d3a-e8e34cf9186f",
+              "name": "Show config locks",
+              "request": {
+                "auth": {
+                  "type": "noauth"
+                },
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/x-www-form-urlencoded"
+                  }
+                ],
+                "body": {},
+                "url": {
+                  "raw": "https://{{host}}/api?key={{key}}&type=op&cmd=<show><config-locks/></show>",
+                  "protocol": "https",
+                  "host": [
+                    "{{host}}"
+                  ],
+                  "path": [
+                    "api"
+                  ],
+                  "query": [
+                    {
+                      "key": "key",
+                      "value": "{{key}}",
+                      "equals": true
+                    },
+                    {
+                      "key": "type",
+                      "value": "op",
+                      "equals": true
+                    },
+                    {
+                      "key": "cmd",
+                      "value": "<show><config-locks/></show>",
+                      "equals": true
+                    }
+                  ]
+                },
+                "description": "Show config locks"
+              },
+              "response": []
+            },
+            {
               "_postman_id": "5051ac85-5ef5-41ee-b1f7-4fafb14d8f36",
               "name": "Take config lock",
               "request": {
@@ -5438,52 +5484,6 @@
                   ]
                 },
                 "description": "Remove a config lock"
-              },
-              "response": []
-            },
-            {
-              "_postman_id": "a7ddbb69-8d2b-41e2-9d3a-e8e34cf9186f",
-              "name": "Show config locks",
-              "request": {
-                "auth": {
-                  "type": "noauth"
-                },
-                "method": "POST",
-                "header": [
-                  {
-                    "key": "Content-Type",
-                    "value": "application/x-www-form-urlencoded"
-                  }
-                ],
-                "body": {},
-                "url": {
-                  "raw": "https://{{host}}/api?key={{key}}&type=op&cmd=<show><config-locks/></show>",
-                  "protocol": "https",
-                  "host": [
-                    "{{host}}"
-                  ],
-                  "path": [
-                    "api"
-                  ],
-                  "query": [
-                    {
-                      "key": "key",
-                      "value": "{{key}}",
-                      "equals": true
-                    },
-                    {
-                      "key": "type",
-                      "value": "op",
-                      "equals": true
-                    },
-                    {
-                      "key": "cmd",
-                      "value": "<show><config-locks/></show>",
-                      "equals": true
-                    }
-                  ]
-                },
-                "description": "Show config locks"
               },
               "response": []
             }
