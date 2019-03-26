@@ -5227,7 +5227,7 @@
                 ],
                 "body": {},
                 "url": {
-                  "raw": "https://{{host}}/api?type=op&cmd=<show><devices><all/></devices></show>&key={{key}}",
+                  "raw": "https://{{host}}/api?key={{key}}&type=op&cmd=<request><commit-lock><add/></commit-lock></request>",
                   "protocol": "https",
                   "host": [
                     "{{host}}"
@@ -5237,19 +5237,19 @@
                   ],
                   "query": [
                     {
+                      "key": "key",
+                      "value": "{{key}}",
+                      "equals": true
+                    },
+                    {
                       "key": "type",
                       "value": "op",
-                      "type": "text"
+                      "equals": true
                     },
                     {
                       "key": "cmd",
-                      "value": "<show><devices><all/></devices></show>",
-                      "type": "text"
-                    },
-                    {
-                      "key": "key",
-                      "value": "{{key}}",
-                      "type": "text"
+                      "value": "<request><commit-lock><add/></commit-lock></request>",
+                      "equals": true
                     }
                   ]
                 },
@@ -5319,7 +5319,7 @@
                 ],
                 "body": {},
                 "url": {
-                  "raw": "https://{{host}}/api?type=op&cmd=<show><devices><all/></devices></show>&key={{key}}",
+                  "raw": "https://{{host}}/api?key={{key}}&type=op&cmd=<request><config-lock><add/></config-lock></request>",
                   "protocol": "https",
                   "host": [
                     "{{host}}"
@@ -5329,19 +5329,19 @@
                   ],
                   "query": [
                     {
+                      "key": "key",
+                      "value": "{{key}}",
+                      "equals": true
+                    },
+                    {
                       "key": "type",
                       "value": "op",
-                      "type": "text"
+                      "equals": true
                     },
                     {
                       "key": "cmd",
-                      "value": "<show><devices><all/></devices></show>",
-                      "type": "text"
-                    },
-                    {
-                      "key": "key",
-                      "value": "{{key}}",
-                      "type": "text"
+                      "value": "<request><config-lock><add/></config-lock></request>",
+                      "equals": true
                     }
                   ]
                 },
