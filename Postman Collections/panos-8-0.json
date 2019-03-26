@@ -5443,7 +5443,7 @@
             },
             {
               "_postman_id": "bcefb10d-d722-4081-8f19-e6e7ae10239d",
-              "name": "Remove commit lock - Template Copy",
+              "name": "Remove commit lock - Device Group",
               "request": {
                 "auth": {
                   "type": "noauth"
@@ -5483,7 +5483,7 @@
                     }
                   ]
                 },
-                "description": "Remove a commit lock for a specific Template"
+                "description": "Remove a commit lock for a specific Device Group"
               },
               "response": []
             },
