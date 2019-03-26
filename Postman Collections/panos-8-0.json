@@ -5304,6 +5304,52 @@
               "response": []
             },
             {
+              "_postman_id": "8b67e323-afc4-41ef-bd4d-16cfab665583",
+              "name": "Take commit lock - Device Group Copy",
+              "request": {
+                "auth": {
+                  "type": "noauth"
+                },
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/x-www-form-urlencoded"
+                  }
+                ],
+                "body": {},
+                "url": {
+                  "raw": "https://{{host}}/api?key={{key}}&type=op&cmd=<request><commit-lock><add/></commit-lock></request>",
+                  "protocol": "https",
+                  "host": [
+                    "{{host}}"
+                  ],
+                  "path": [
+                    "api"
+                  ],
+                  "query": [
+                    {
+                      "key": "key",
+                      "value": "{{key}}",
+                      "equals": true
+                    },
+                    {
+                      "key": "type",
+                      "value": "op",
+                      "equals": true
+                    },
+                    {
+                      "key": "cmd",
+                      "value": "<request><commit-lock><add/></commit-lock></request>",
+                      "equals": true
+                    }
+                  ]
+                },
+                "description": "Take a commit lock for a specific Device Group"
+              },
+              "response": []
+            },
+            {
               "_postman_id": "1550bfec-a3f3-46ea-9602-b67e127f9b1e",
               "name": "Show commit locks",
               "request": {
