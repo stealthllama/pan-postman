@@ -5207,6 +5207,13 @@
           "_postman_isSubFolder": true
         },
         {
+          "_postman_id": "20077a3a-32b8-4e94-ae43-5c26ea59fa7d",
+          "name": "Locks",
+          "description": "",
+          "item": [],
+          "_postman_isSubFolder": true
+        },
+        {
           "_postman_id": "be21d32b-62a4-42a2-a2fe-58719f449629",
           "name": "Show managed devices",
           "request": {
@@ -5254,7 +5261,7 @@
         },
         {
           "_postman_id": "0c866efb-1a21-4c29-b89e-3db4eecf0856",
-          "name": "Show managed devices Copy",
+          "name": "Show prerule",
           "request": {
             "auth": {
               "type": "noauth"
