@@ -5144,7 +5144,7 @@
           "item": [
             {
               "_postman_id": "aa029530-7bd0-489f-b889-12dd19d2f019",
-              "name": "Add Dynamic Address Group Copy",
+              "name": "Add Template Variable",
               "request": {
                 "auth": {
                   "type": "noauth"
@@ -5199,7 +5199,7 @@
                     }
                   ]
                 },
-                "description": "Add a dynamic address group"
+                "description": "Add a Panorama template variable"
               },
               "response": []
             }
@@ -5341,6 +5341,52 @@
               ]
             },
             "description": "Show licenses for all Panorama managed devices"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "0c866efb-1a21-4c29-b89e-3db4eecf0856",
+          "name": "Show managed devices Copy",
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/x-www-form-urlencoded"
+              }
+            ],
+            "body": {},
+            "url": {
+              "raw": "https://{{host}}/api?type=op&cmd=<show><devices><all/></devices></show>&key={{key}}",
+              "protocol": "https",
+              "host": [
+                "{{host}}"
+              ],
+              "path": [
+                "api"
+              ],
+              "query": [
+                {
+                  "key": "type",
+                  "value": "op",
+                  "type": "text"
+                },
+                {
+                  "key": "cmd",
+                  "value": "<show><devices><all/></devices></show>",
+                  "type": "text"
+                },
+                {
+                  "key": "key",
+                  "value": "{{key}}",
+                  "type": "text"
+                }
+              ]
+            },
+            "description": "Show all Panorama managed devices"
           },
           "response": []
         }
