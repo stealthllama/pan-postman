@@ -5305,7 +5305,7 @@
             },
             {
               "_postman_id": "8b67e323-afc4-41ef-bd4d-16cfab665583",
-              "name": "Take commit lock - Device Group Copy",
+              "name": "Take commit lock - Template",
               "request": {
                 "auth": {
                   "type": "noauth"
@@ -5345,7 +5345,7 @@
                     }
                   ]
                 },
-                "description": "Take a commit lock for a specific Device Group"
+                "description": "Take a commit lock for a specific Template"
               },
               "response": []
             },
