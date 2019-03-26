@@ -5411,7 +5411,7 @@
                 ],
                 "body": {},
                 "url": {
-                  "raw": "https://{{host}}/api?key={{key}}&type=op&cmd=<request><config-lock><remove/></config-lock></request>",
+                  "raw": "https://{{host}}/api?key={{key}}&type=op&cmd=<show><config-locks/></show>",
                   "protocol": "https",
                   "host": [
                     "{{host}}"
@@ -5432,7 +5432,7 @@
                     },
                     {
                       "key": "cmd",
-                      "value": "<request><config-lock><remove/></config-lock></request>",
+                      "value": "<show><config-locks/></show>",
                       "equals": true
                     }
                   ]
