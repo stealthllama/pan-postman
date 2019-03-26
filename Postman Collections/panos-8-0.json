@@ -5442,8 +5442,8 @@
               "response": []
             },
             {
-              "_postman_id": "613351ad-13dd-4ebb-97b2-8829f941a83a",
-              "name": "Remove commit lock - Template",
+              "_postman_id": "bcefb10d-d722-4081-8f19-e6e7ae10239d",
+              "name": "Remove commit lock - Template Copy",
               "request": {
                 "auth": {
                   "type": "noauth"
@@ -5488,8 +5488,8 @@
               "response": []
             },
             {
-              "_postman_id": "bcefb10d-d722-4081-8f19-e6e7ae10239d",
-              "name": "Remove commit lock - Template Copy",
+              "_postman_id": "613351ad-13dd-4ebb-97b2-8829f941a83a",
+              "name": "Remove commit lock - Template",
               "request": {
                 "auth": {
                   "type": "noauth"
