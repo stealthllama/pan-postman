@@ -5442,52 +5442,6 @@
               "response": []
             },
             {
-              "_postman_id": "613351ad-13dd-4ebb-97b2-8829f941a83a",
-              "name": "Remove commit lock Copy",
-              "request": {
-                "auth": {
-                  "type": "noauth"
-                },
-                "method": "POST",
-                "header": [
-                  {
-                    "key": "Content-Type",
-                    "value": "application/x-www-form-urlencoded"
-                  }
-                ],
-                "body": {},
-                "url": {
-                  "raw": "https://{{host}}/api?key={{key}}&type=op&cmd=<request><commit-lock><remove/></commit-lock></request>",
-                  "protocol": "https",
-                  "host": [
-                    "{{host}}"
-                  ],
-                  "path": [
-                    "api"
-                  ],
-                  "query": [
-                    {
-                      "key": "key",
-                      "value": "{{key}}",
-                      "equals": true
-                    },
-                    {
-                      "key": "type",
-                      "value": "op",
-                      "equals": true
-                    },
-                    {
-                      "key": "cmd",
-                      "value": "<request><commit-lock><remove/></commit-lock></request>",
-                      "equals": true
-                    }
-                  ]
-                },
-                "description": "Remove a commit lock"
-              },
-              "response": []
-            },
-            {
               "_postman_id": "5051ac85-5ef5-41ee-b1f7-4fafb14d8f36",
               "name": "Take config lock",
               "request": {
@@ -5622,6 +5576,52 @@
                   ]
                 },
                 "description": "Remove a config lock"
+              },
+              "response": []
+            },
+            {
+              "_postman_id": "613351ad-13dd-4ebb-97b2-8829f941a83a",
+              "name": "Remove commit lock Copy",
+              "request": {
+                "auth": {
+                  "type": "noauth"
+                },
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/x-www-form-urlencoded"
+                  }
+                ],
+                "body": {},
+                "url": {
+                  "raw": "https://{{host}}/api?key={{key}}&type=op&cmd=<request><commit-lock><remove/></commit-lock></request>",
+                  "protocol": "https",
+                  "host": [
+                    "{{host}}"
+                  ],
+                  "path": [
+                    "api"
+                  ],
+                  "query": [
+                    {
+                      "key": "key",
+                      "value": "{{key}}",
+                      "equals": true
+                    },
+                    {
+                      "key": "type",
+                      "value": "op",
+                      "equals": true
+                    },
+                    {
+                      "key": "cmd",
+                      "value": "<request><commit-lock><remove/></commit-lock></request>",
+                      "equals": true
+                    }
+                  ]
+                },
+                "description": "Remove a commit lock"
               },
               "response": []
             }
