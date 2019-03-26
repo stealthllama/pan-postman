@@ -5259,7 +5259,7 @@
             },
             {
               "_postman_id": "2e57919c-3d89-4157-b270-2aaebdf00e99",
-              "name": "Take commit lock Copy",
+              "name": "Take commit lock - Device Group",
               "request": {
                 "auth": {
                   "type": "noauth"
@@ -5299,7 +5299,7 @@
                     }
                   ]
                 },
-                "description": "Take a commit lock"
+                "description": "Take a commit lock for a specific Device Group"
               },
               "response": []
             },
