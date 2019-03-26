@@ -5273,7 +5273,7 @@
                 ],
                 "body": {},
                 "url": {
-                  "raw": "https://{{host}}/api?key={{key}}&type=op&cmd=<show><config-locks/></show>",
+                  "raw": "https://{{host}}/api?key={{key}}&type=op&cmd=<show><commit-locks/></show>",
                   "protocol": "https",
                   "host": [
                     "{{host}}"
@@ -5294,7 +5294,7 @@
                     },
                     {
                       "key": "cmd",
-                      "value": "<show><config-locks/></show>",
+                      "value": "<show><commit-locks/></show>",
                       "equals": true
                     }
                   ]
