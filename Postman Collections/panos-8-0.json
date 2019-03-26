@@ -5210,7 +5210,54 @@
           "_postman_id": "20077a3a-32b8-4e94-ae43-5c26ea59fa7d",
           "name": "Locks",
           "description": "",
-          "item": [],
+          "item": [
+            {
+              "_postman_id": "6ee36de7-2bd5-4f5b-902c-8dfea0a1d368",
+              "name": "Show prerule Copy",
+              "request": {
+                "auth": {
+                  "type": "noauth"
+                },
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/x-www-form-urlencoded"
+                  }
+                ],
+                "body": {},
+                "url": {
+                  "raw": "https://{{host}}/api?type=op&cmd=<show><devices><all/></devices></show>&key={{key}}",
+                  "protocol": "https",
+                  "host": [
+                    "{{host}}"
+                  ],
+                  "path": [
+                    "api"
+                  ],
+                  "query": [
+                    {
+                      "key": "type",
+                      "value": "op",
+                      "type": "text"
+                    },
+                    {
+                      "key": "cmd",
+                      "value": "<show><devices><all/></devices></show>",
+                      "type": "text"
+                    },
+                    {
+                      "key": "key",
+                      "value": "{{key}}",
+                      "type": "text"
+                    }
+                  ]
+                },
+                "description": "Show all Panorama managed devices"
+              },
+              "response": []
+            }
+          ],
           "_postman_isSubFolder": true
         },
         {
@@ -5394,52 +5441,6 @@
               ]
             },
             "description": "Show licenses for all Panorama managed devices"
-          },
-          "response": []
-        },
-        {
-          "_postman_id": "6ee36de7-2bd5-4f5b-902c-8dfea0a1d368",
-          "name": "Show prerule Copy",
-          "request": {
-            "auth": {
-              "type": "noauth"
-            },
-            "method": "POST",
-            "header": [
-              {
-                "key": "Content-Type",
-                "value": "application/x-www-form-urlencoded"
-              }
-            ],
-            "body": {},
-            "url": {
-              "raw": "https://{{host}}/api?type=op&cmd=<show><devices><all/></devices></show>&key={{key}}",
-              "protocol": "https",
-              "host": [
-                "{{host}}"
-              ],
-              "path": [
-                "api"
-              ],
-              "query": [
-                {
-                  "key": "type",
-                  "value": "op",
-                  "type": "text"
-                },
-                {
-                  "key": "cmd",
-                  "value": "<show><devices><all/></devices></show>",
-                  "type": "text"
-                },
-                {
-                  "key": "key",
-                  "value": "{{key}}",
-                  "type": "text"
-                }
-              ]
-            },
-            "description": "Show all Panorama managed devices"
           },
           "response": []
         }
