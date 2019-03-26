@@ -5259,7 +5259,7 @@
             },
             {
               "_postman_id": "5051ac85-5ef5-41ee-b1f7-4fafb14d8f36",
-              "name": "Request commit lock Copy",
+              "name": "Request config lock",
               "request": {
                 "auth": {
                   "type": "noauth"
@@ -5299,7 +5299,7 @@
                     }
                   ]
                 },
-                "description": "Request a commit lock"
+                "description": "Request a config lock"
               },
               "response": []
             }
