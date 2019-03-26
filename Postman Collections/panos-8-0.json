@@ -5457,7 +5457,7 @@
                 ],
                 "body": {},
                 "url": {
-                  "raw": "https://{{host}}/api?key={{key}}&type=op&cmd=<request target-tpl=\"Lab Template\"><commit-lock><remove/></commit-lock></request>",
+                  "raw": "https://{{host}}/api?key={{key}}&type=op&cmd=<request target-vsys=\"Lab Firewalls\"><commit-lock><remove/></commit-lock></request>",
                   "protocol": "https",
                   "host": [
                     "{{host}}"
@@ -5478,7 +5478,7 @@
                     },
                     {
                       "key": "cmd",
-                      "value": "<request target-tpl=\"Lab Template\"><commit-lock><remove/></commit-lock></request>",
+                      "value": "<request target-vsys=\"Lab Firewalls\"><commit-lock><remove/></commit-lock></request>",
                       "equals": true
                     }
                   ]
