@@ -5305,7 +5305,7 @@
             },
             {
               "_postman_id": "5051ac85-5ef5-41ee-b1f7-4fafb14d8f36",
-              "name": "Request config lock",
+              "name": "Take config lock",
               "request": {
                 "auth": {
                   "type": "noauth"
@@ -5345,7 +5345,53 @@
                     }
                   ]
                 },
-                "description": "Request a config lock"
+                "description": "Take a config lock"
+              },
+              "response": []
+            },
+            {
+              "_postman_id": "dc80021e-d404-4e56-b4e4-d50107fb94e4",
+              "name": "Take config lock Copy",
+              "request": {
+                "auth": {
+                  "type": "noauth"
+                },
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/x-www-form-urlencoded"
+                  }
+                ],
+                "body": {},
+                "url": {
+                  "raw": "https://{{host}}/api?type=op&cmd=<show><devices><all/></devices></show>&key={{key}}",
+                  "protocol": "https",
+                  "host": [
+                    "{{host}}"
+                  ],
+                  "path": [
+                    "api"
+                  ],
+                  "query": [
+                    {
+                      "key": "type",
+                      "value": "op",
+                      "type": "text"
+                    },
+                    {
+                      "key": "cmd",
+                      "value": "<show><devices><all/></devices></show>",
+                      "type": "text"
+                    },
+                    {
+                      "key": "key",
+                      "value": "{{key}}",
+                      "type": "text"
+                    }
+                  ]
+                },
+                "description": "Take a config lock"
               },
               "response": []
             }
