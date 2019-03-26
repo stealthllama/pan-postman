@@ -5213,7 +5213,7 @@
           "item": [
             {
               "_postman_id": "6ee36de7-2bd5-4f5b-902c-8dfea0a1d368",
-              "name": "Show prerule Copy",
+              "name": "Request commit lock",
               "request": {
                 "auth": {
                   "type": "noauth"
@@ -5253,7 +5253,7 @@
                     }
                   ]
                 },
-                "description": "Show all Panorama managed devices"
+                "description": "Request a commit lock"
               },
               "response": []
             }
