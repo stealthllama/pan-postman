@@ -5273,7 +5273,7 @@
                 ],
                 "body": {},
                 "url": {
-                  "raw": "https://{{host}}/api?key={{key}}&type=op&cmd=<request><commit-lock><add/></commit-lock></request>",
+                  "raw": "https://{{host}}/api?key={{key}}&type=op&cmd=<request target-vsys=\"Lab Firewalls\"><commit-lock><add/></commit-lock></request>",
                   "protocol": "https",
                   "host": [
                     "{{host}}"
@@ -5294,7 +5294,7 @@
                     },
                     {
                       "key": "cmd",
-                      "value": "<request><commit-lock><add/></commit-lock></request>",
+                      "value": "<request target-vsys=\"Lab Firewalls\"><commit-lock><add/></commit-lock></request>",
                       "equals": true
                     }
                   ]
