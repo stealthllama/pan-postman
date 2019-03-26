@@ -5486,52 +5486,6 @@
                 "description": "Show config locks"
               },
               "response": []
-            },
-            {
-              "_postman_id": "efc3738a-c773-4738-bc96-f9d9b60bde8a",
-              "name": "Show config locks Copy Copy",
-              "request": {
-                "auth": {
-                  "type": "noauth"
-                },
-                "method": "POST",
-                "header": [
-                  {
-                    "key": "Content-Type",
-                    "value": "application/x-www-form-urlencoded"
-                  }
-                ],
-                "body": {},
-                "url": {
-                  "raw": "https://{{host}}/api?key={{key}}&type=op&cmd=<show><config-locks/></show>",
-                  "protocol": "https",
-                  "host": [
-                    "{{host}}"
-                  ],
-                  "path": [
-                    "api"
-                  ],
-                  "query": [
-                    {
-                      "key": "key",
-                      "value": "{{key}}",
-                      "equals": true
-                    },
-                    {
-                      "key": "type",
-                      "value": "op",
-                      "equals": true
-                    },
-                    {
-                      "key": "cmd",
-                      "value": "<show><config-locks/></show>",
-                      "equals": true
-                    }
-                  ]
-                },
-                "description": "Show config locks"
-              },
-              "response": []
             }
           ],
           "_postman_isSubFolder": true
