@@ -1125,7 +1125,7 @@
               "urlencoded": []
             },
             "url": {
-              "raw": "https://{{host}}/api?type=keygen&user=admin&password=paloalto",
+              "raw": "https://{{host}}/api?type=keygen&user=apiuser&password=xf(bNEbQNNi6RnRv4Wz.DcEN.Bjb3X",
               "protocol": "https",
               "host": [
                 "{{host}}"
@@ -1140,11 +1140,11 @@
                 },
                 {
                   "key": "user",
-                  "value": "admin"
+                  "value": "apiuser"
                 },
                 {
                   "key": "password",
-                  "value": "paloalto"
+                  "value": "xf(bNEbQNNi6RnRv4Wz.DcEN.Bjb3X"
                 }
               ]
             },
@@ -3472,7 +3472,138 @@
     },
     {
       "name": "Reporting",
-      "item": [],
+      "item": [
+        {
+          "name": "Get Report Job",
+          "_postman_id": "06c470f4-cfc4-4862-9bf2-29fadb63c769",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "https://{{host}}/api?key={{key}}&type=report&action=get&job-id=jobid",
+              "protocol": "https",
+              "host": [
+                "{{host}}"
+              ],
+              "path": [
+                "api"
+              ],
+              "query": [
+                {
+                  "key": "key",
+                  "value": "{{key}}"
+                },
+                {
+                  "key": "type",
+                  "value": "report"
+                },
+                {
+                  "key": "action",
+                  "value": "get"
+                },
+                {
+                  "key": "job-id",
+                  "value": "jobid"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Run Top Applications Report",
+          "_postman_id": "2a46c3d6-ff96-414e-b260-058e3ee0c3d6",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "https://{{host}}/api/?key={{key}}&type=report&async=yes&reporttype=dynamic&reportname=top-applications-summary",
+              "protocol": "https",
+              "host": [
+                "{{host}}"
+              ],
+              "path": [
+                "api",
+                ""
+              ],
+              "query": [
+                {
+                  "key": "key",
+                  "value": "{{key}}"
+                },
+                {
+                  "key": "type",
+                  "value": "report"
+                },
+                {
+                  "key": "async",
+                  "value": "yes"
+                },
+                {
+                  "key": "reporttype",
+                  "value": "dynamic"
+                },
+                {
+                  "key": "reportname",
+                  "value": "top-applications-summary"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Run Custom Report",
+          "_postman_id": "85e946a0-1d58-48db-be67-fb7c2c79db48",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "https://{{host}}/api/?key={{key}}&type=report&async=yes&reporttype=custom&reportname=reportname",
+              "protocol": "https",
+              "host": [
+                "{{host}}"
+              ],
+              "path": [
+                "api",
+                ""
+              ],
+              "query": [
+                {
+                  "key": "key",
+                  "value": "{{key}}"
+                },
+                {
+                  "key": "type",
+                  "value": "report"
+                },
+                {
+                  "key": "async",
+                  "value": "yes"
+                },
+                {
+                  "key": "reporttype",
+                  "value": "custom"
+                },
+                {
+                  "key": "reportname",
+                  "value": "reportname"
+                }
+              ]
+            }
+          },
+          "response": []
+        }
+      ],
       "_postman_id": "04070dfc-9bd1-931b-9152-0951451dcf31"
     },
     {
