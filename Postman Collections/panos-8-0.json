@@ -3604,7 +3604,7 @@
           "response": []
         },
         {
-          "name": "Run Custom Report Copy",
+          "name": "Run Dynamic Report",
           "_postman_id": "f225a88d-118f-4cf8-a159-4967d5c1b985",
           "protocolProfileBehavior": {
             "disableBodyPruning": true
