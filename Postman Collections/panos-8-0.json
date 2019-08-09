@@ -3647,6 +3647,51 @@
             }
           },
           "response": []
+        },
+        {
+          "name": "Run Dynamic Report Copy",
+          "_postman_id": "8f187005-056a-4ae0-8cce-7c6928f1f5c5",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "https://{{host}}/api/?key={{key}}&type=report&async=yes&reporttype=dynamic&reportname=reportname",
+              "protocol": "https",
+              "host": [
+                "{{host}}"
+              ],
+              "path": [
+                "api",
+                ""
+              ],
+              "query": [
+                {
+                  "key": "key",
+                  "value": "{{key}}"
+                },
+                {
+                  "key": "type",
+                  "value": "report"
+                },
+                {
+                  "key": "async",
+                  "value": "yes"
+                },
+                {
+                  "key": "reporttype",
+                  "value": "dynamic"
+                },
+                {
+                  "key": "reportname",
+                  "value": "reportname"
+                }
+              ]
+            }
+          },
+          "response": []
         }
       ],
       "_postman_id": "04070dfc-9bd1-931b-9152-0951451dcf31"
