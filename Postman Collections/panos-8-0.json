@@ -3649,7 +3649,7 @@
           "response": []
         },
         {
-          "name": "Run Dynamic Report Copy",
+          "name": "Schedule PDF report",
           "_postman_id": "8f187005-056a-4ae0-8cce-7c6928f1f5c5",
           "protocolProfileBehavior": {
             "disableBodyPruning": true
@@ -3658,7 +3658,7 @@
             "method": "POST",
             "header": [],
             "url": {
-              "raw": "https://{{host}}/api/?key={{key}}&type=report&async=yes&reporttype=dynamic&reportname=reportname",
+              "raw": "https://{{host}}/api/?key={{key}}&type=op&cmd=<schedule><export-report><report-job-id>102</report-job-id><export-format>pdf</export-format><get-all>no</get-all></export-report></schedule>",
               "protocol": "https",
               "host": [
                 "{{host}}"
@@ -3674,19 +3674,11 @@
                 },
                 {
                   "key": "type",
-                  "value": "report"
+                  "value": "op"
                 },
                 {
-                  "key": "async",
-                  "value": "yes"
-                },
-                {
-                  "key": "reporttype",
-                  "value": "dynamic"
-                },
-                {
-                  "key": "reportname",
-                  "value": "reportname"
+                  "key": "cmd",
+                  "value": "<schedule><export-report><report-job-id>102</report-job-id><export-format>pdf</export-format><get-all>no</get-all></export-report></schedule>"
                 }
               ]
             }
