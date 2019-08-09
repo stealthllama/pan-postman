@@ -3602,6 +3602,51 @@
             }
           },
           "response": []
+        },
+        {
+          "name": "Run Custom Report Copy",
+          "_postman_id": "f225a88d-118f-4cf8-a159-4967d5c1b985",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "https://{{host}}/api/?key={{key}}&type=report&async=yes&reporttype=custom&reportname=reportname",
+              "protocol": "https",
+              "host": [
+                "{{host}}"
+              ],
+              "path": [
+                "api",
+                ""
+              ],
+              "query": [
+                {
+                  "key": "key",
+                  "value": "{{key}}"
+                },
+                {
+                  "key": "type",
+                  "value": "report"
+                },
+                {
+                  "key": "async",
+                  "value": "yes"
+                },
+                {
+                  "key": "reporttype",
+                  "value": "custom"
+                },
+                {
+                  "key": "reportname",
+                  "value": "reportname"
+                }
+              ]
+            }
+          },
+          "response": []
         }
       ],
       "_postman_id": "04070dfc-9bd1-931b-9152-0951451dcf31"
