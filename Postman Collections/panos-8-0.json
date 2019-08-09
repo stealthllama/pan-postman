@@ -3613,7 +3613,7 @@
             "method": "POST",
             "header": [],
             "url": {
-              "raw": "https://{{host}}/api/?key={{key}}&type=report&async=yes&reporttype=custom&reportname=reportname",
+              "raw": "https://{{host}}/api/?key={{key}}&type=report&async=yes&reporttype=dynamic&reportname=reportname",
               "protocol": "https",
               "host": [
                 "{{host}}"
@@ -3637,7 +3637,7 @@
                 },
                 {
                   "key": "reporttype",
-                  "value": "custom"
+                  "value": "dynamic"
                 },
                 {
                   "key": "reportname",
