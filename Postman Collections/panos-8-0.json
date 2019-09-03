@@ -699,7 +699,7 @@
           "response": []
         },
         {
-          "name": "Show URL Categories Copy",
+          "name": "Test a URL",
           "_postman_id": "d249b74d-0058-4688-8602-9bb7164b41a5",
           "protocolProfileBehavior": {
             "disableBodyPruning": true
