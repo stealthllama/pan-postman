@@ -720,7 +720,7 @@
               "urlencoded": []
             },
             "url": {
-              "raw": "https://{{host}}/api?key={{key}}&type=config&action=get&xpath=/config/predefined/url-categories",
+              "raw": "https://{{host}}/api?key={{key}}&type=op&cmd=<test><url>foo.com</url></test>",
               "protocol": "https",
               "host": [
                 "{{host}}"
@@ -736,23 +736,16 @@
                 },
                 {
                   "key": "type",
-                  "value": "config",
+                  "value": "op",
                   "description": "API action"
                 },
                 {
-                  "key": "action",
-                  "value": "get",
-                  "description": "Config actions",
-                  "type": "text"
-                },
-                {
-                  "key": "xpath",
-                  "value": "/config/predefined/url-categories",
-                  "description": "XPath"
+                  "key": "cmd",
+                  "value": "<test><url>foo.com</url></test>"
                 }
               ]
             },
-            "description": "Show URL categories"
+            "description": "Show URL category matches from PAN-DB"
           },
           "response": []
         },
