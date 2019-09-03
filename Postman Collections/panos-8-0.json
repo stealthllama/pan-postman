@@ -699,6 +699,64 @@
           "response": []
         },
         {
+          "name": "Show URL Categories Copy",
+          "_postman_id": "d249b74d-0058-4688-8602-9bb7164b41a5",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/x-www-form-urlencoded"
+              }
+            ],
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": []
+            },
+            "url": {
+              "raw": "https://{{host}}/api?key={{key}}&type=config&action=get&xpath=/config/predefined/url-categories",
+              "protocol": "https",
+              "host": [
+                "{{host}}"
+              ],
+              "path": [
+                "api"
+              ],
+              "query": [
+                {
+                  "key": "key",
+                  "value": "{{key}}",
+                  "description": "API key"
+                },
+                {
+                  "key": "type",
+                  "value": "config",
+                  "description": "API action"
+                },
+                {
+                  "key": "action",
+                  "value": "get",
+                  "description": "Config actions",
+                  "type": "text"
+                },
+                {
+                  "key": "xpath",
+                  "value": "/config/predefined/url-categories",
+                  "description": "XPath"
+                }
+              ]
+            },
+            "description": "Show URL categories"
+          },
+          "response": []
+        },
+        {
           "name": "Show Applications",
           "_postman_id": "06e572b0-2246-40b1-9b9c-62b3fc98b598",
           "protocolProfileBehavior": {
@@ -1094,64 +1152,6 @@
               ]
             },
             "description": "Show spyware signatures"
-          },
-          "response": []
-        },
-        {
-          "name": "Show URL Categories Copy",
-          "_postman_id": "d249b74d-0058-4688-8602-9bb7164b41a5",
-          "protocolProfileBehavior": {
-            "disableBodyPruning": true
-          },
-          "request": {
-            "auth": {
-              "type": "noauth"
-            },
-            "method": "POST",
-            "header": [
-              {
-                "key": "Content-Type",
-                "value": "application/x-www-form-urlencoded"
-              }
-            ],
-            "body": {
-              "mode": "urlencoded",
-              "urlencoded": []
-            },
-            "url": {
-              "raw": "https://{{host}}/api?key={{key}}&type=config&action=get&xpath=/config/predefined/url-categories",
-              "protocol": "https",
-              "host": [
-                "{{host}}"
-              ],
-              "path": [
-                "api"
-              ],
-              "query": [
-                {
-                  "key": "key",
-                  "value": "{{key}}",
-                  "description": "API key"
-                },
-                {
-                  "key": "type",
-                  "value": "config",
-                  "description": "API action"
-                },
-                {
-                  "key": "action",
-                  "value": "get",
-                  "description": "Config actions",
-                  "type": "text"
-                },
-                {
-                  "key": "xpath",
-                  "value": "/config/predefined/url-categories",
-                  "description": "XPath"
-                }
-              ]
-            },
-            "description": "Show URL categories"
           },
           "response": []
         }
