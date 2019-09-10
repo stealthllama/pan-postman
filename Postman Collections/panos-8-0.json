@@ -5595,10 +5595,10 @@
                   "listen": "prerequest",
                   "script": {
                     "id": "0897f533-6597-442b-9dc9-eed8c4b921b9",
-                    "type": "text/javascript",
                     "exec": [
                       ""
-                    ]
+                    ],
+                    "type": "text/javascript"
                   }
                 }
               ],
@@ -5622,7 +5622,7 @@
                   "urlencoded": []
                 },
                 "url": {
-                  "raw": "https://{{host}}/api?key={{key}}&type=commit&cmd=<commit></commit>",
+                  "raw": "https://{{host}}/api?key={{key}}&type=commit&cmd=<commit-all><shared-policy><device-group><entry name='{{device_group}}'/></device-group></shared-policy></commit-all>",
                   "protocol": "https",
                   "host": [
                     "{{host}}"
@@ -5643,7 +5643,7 @@
                     },
                     {
                       "key": "cmd",
-                      "value": "<commit></commit>",
+                      "value": "<commit-all><shared-policy><device-group><entry name='{{device_group}}'/></device-group></shared-policy></commit-all>",
                       "description": "API command"
                     }
                   ]
