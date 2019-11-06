@@ -6240,7 +6240,7 @@
               "response": []
             },
             {
-              "name": "Add Shared Tag Copy",
+              "name": "Add Remote Site",
               "_postman_id": "e145c5a2-0f73-4e6b-882c-f0c05716c023",
               "protocolProfileBehavior": {
                 "disableBodyPruning": true
