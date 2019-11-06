@@ -425,6 +425,55 @@
             "description": "Add a shared tag in Panorama"
           },
           "response": []
+        },
+        {
+          "name": "Add Shared Tag Copy",
+          "_postman_id": "e145c5a2-0f73-4e6b-882c-f0c05716c023",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": []
+            },
+            "url": {
+              "raw": "https://{{host}}/api?key={{key}}&type=config&action=set&xpath=/config/shared/tag/entry[@name='foo']&element=<color>color1</color><comments>Test tag</comments>",
+              "protocol": "https",
+              "host": [
+                "{{host}}"
+              ],
+              "path": [
+                "api"
+              ],
+              "query": [
+                {
+                  "key": "key",
+                  "value": "{{key}}"
+                },
+                {
+                  "key": "type",
+                  "value": "config"
+                },
+                {
+                  "key": "action",
+                  "value": "set"
+                },
+                {
+                  "key": "xpath",
+                  "value": "/config/shared/tag/entry[@name='foo']"
+                },
+                {
+                  "key": "element",
+                  "value": "<color>color1</color><comments>Test tag</comments>"
+                }
+              ]
+            },
+            "description": "Add a shared tag in Panorama"
+          },
+          "response": []
         }
       ],
       "_postman_id": "8f8e678a-6776-fb66-0eeb-84053d6c20f9"
