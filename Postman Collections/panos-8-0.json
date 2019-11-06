@@ -6284,7 +6284,7 @@
                     }
                   ]
                 },
-                "description": "Add a shared tag in Panorama"
+                "description": "Add a remote VPN site"
               },
               "response": []
             }
