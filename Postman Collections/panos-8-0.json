@@ -6223,6 +6223,12 @@
           "_postman_isSubFolder": true
         },
         {
+          "name": "Cloud Services",
+          "item": [],
+          "_postman_id": "40a23d0a-3774-40a3-80ad-29e2ed04b3cb",
+          "_postman_isSubFolder": true
+        },
+        {
           "name": "Show managed devices",
           "_postman_id": "be21d32b-62a4-42a2-a2fe-58719f449629",
           "protocolProfileBehavior": {
