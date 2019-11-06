@@ -6224,7 +6224,65 @@
         },
         {
           "name": "Cloud Services",
-          "item": [],
+          "item": [
+            {
+              "name": "Add Remote Site",
+              "_postman_id": "da6d8724-b1bf-4593-9475-298d46bbbc06",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "name": "Content-Type",
+                    "value": "application/xml",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "<entry name=\"{{remote_network_name}}\">\n    <protocol>\n        <bgp>\n            <enable>no</enable>\n        </bgp>\n    </protocol>\n    <subnets>\n        <member>{{remote_network_subnet}}</member>\n    </subnets>\n    <license-type>{{remote_license}}</license-type>\n    <ipsec-tunnel>{{remote_tunnel_name}}</ipsec-tunnel>\n    <region>{{remote_region}}</region>\n    <secondary-wan-enabled>no</secondary-wan-enabled>\n</entry>"
+                },
+                "url": {
+                  "raw": "https://{{host}}/api?type=config&action=set&xpath=/config/devices/entry[@name='localhost.localdomain']/plugins/cloud_services/remote-networks/onboarding&key={{key}}",
+                  "protocol": "https",
+                  "host": [
+                    "{{host}}"
+                  ],
+                  "path": [
+                    "api"
+                  ],
+                  "query": [
+                    {
+                      "key": "type",
+                      "value": "config"
+                    },
+                    {
+                      "key": "action",
+                      "value": "set"
+                    },
+                    {
+                      "key": "xpath",
+                      "value": "/config/devices/entry[@name='localhost.localdomain']/plugins/cloud_services/remote-networks/onboarding"
+                    },
+                    {
+                      "key": "element",
+                      "value": "<color>color1</color><comments>Test tag</comments>",
+                      "disabled": true
+                    },
+                    {
+                      "key": "key",
+                      "value": "{{key}}"
+                    }
+                  ]
+                },
+                "description": "Add a remote VPN site"
+              },
+              "response": []
+            }
+          ],
           "_postman_id": "40a23d0a-3774-40a3-80ad-29e2ed04b3cb",
           "_postman_isSubFolder": true
         },
