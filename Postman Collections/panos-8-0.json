@@ -6223,12 +6223,6 @@
           "_postman_isSubFolder": true
         },
         {
-          "name": "Prisma Access",
-          "item": [],
-          "_postman_id": "42b49832-8eb7-4840-a349-f6e98803f09d",
-          "_postman_isSubFolder": true
-        },
-        {
           "name": "Show managed devices",
           "_postman_id": "be21d32b-62a4-42a2-a2fe-58719f449629",
           "protocolProfileBehavior": {
