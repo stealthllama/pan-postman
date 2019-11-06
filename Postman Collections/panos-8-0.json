@@ -6224,7 +6224,22 @@
         },
         {
           "name": "Prisma Access",
-          "item": [],
+          "item": [
+            {
+              "name": "Add Site",
+              "_postman_id": "9fc22493-2ced-42df-8822-8b861638a788",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": "",
+                "description": "Add a VPN remote site"
+              },
+              "response": []
+            }
+          ],
           "_postman_id": "42b49832-8eb7-4840-a349-f6e98803f09d",
           "_postman_isSubFolder": true
         },
