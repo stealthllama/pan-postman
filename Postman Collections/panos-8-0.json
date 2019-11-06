@@ -6247,13 +6247,20 @@
               },
               "request": {
                 "method": "POST",
-                "header": [],
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "name": "Content-Type",
+                    "value": "application/xml",
+                    "type": "text"
+                  }
+                ],
                 "body": {
-                  "mode": "urlencoded",
-                  "urlencoded": []
+                  "mode": "raw",
+                  "raw": "<entry name=\"{{ VPN_REMOTE_SITE }}\">\n    <subnets>\n        <member>{{ VPN_REMOTE_NETWORK }}</member>\n    </subnets>\n    <license-type>{{ service_size }}</license-type>\n    <ipsec-tunnel>{{ VPN_REMOTE_SITE }}</ipsec-tunnel>\n    <region>{{ REMOTE_REGION }}</region>\n    <secondary-wan-enabled>no</secondary-wan-enabled>\n</entry>"
                 },
                 "url": {
-                  "raw": "https://{{host}}/api?key={{key}}&type=config&action=set&xpath=/config/shared/tag/entry[@name='foo']&element=<color>color1</color><comments>Test tag</comments>",
+                  "raw": "https://{{host}}/api?key={{key}}&type=config&action=set&xpath=/config/devices/entry[@name='localhost.localdomain']/plugins/cloud_services/remote-networks/onboarding&element=<color>color1</color><comments>Test tag</comments>",
                   "protocol": "https",
                   "host": [
                     "{{host}}"
@@ -6276,7 +6283,7 @@
                     },
                     {
                       "key": "xpath",
-                      "value": "/config/shared/tag/entry[@name='foo']"
+                      "value": "/config/devices/entry[@name='localhost.localdomain']/plugins/cloud_services/remote-networks/onboarding"
                     },
                     {
                       "key": "element",
