@@ -5589,7 +5589,7 @@
           "name": "Commit",
           "item": [
             {
-              "name": "Commit - Partial by Admin",
+              "name": "Commit Partial - Admin",
               "event": [
                 {
                   "listen": "prerequest",
