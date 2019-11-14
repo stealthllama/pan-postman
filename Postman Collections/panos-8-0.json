@@ -5776,7 +5776,7 @@
                     }
                   ]
                 },
-                "description": "Commit only template stack changes"
+                "description": "Commit only template changes"
               },
               "response": []
             },
