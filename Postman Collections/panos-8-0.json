@@ -5712,7 +5712,7 @@
                     }
                   ]
                 },
-                "description": "Commit device and network changes"
+                "description": "Commit only device group changes"
               },
               "response": []
             },
