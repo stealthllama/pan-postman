@@ -5653,7 +5653,7 @@
               "response": []
             },
             {
-              "name": "Commit Partial - Device and Network",
+              "name": "Commit Partial - Device Group",
               "event": [
                 {
                   "listen": "prerequest",
