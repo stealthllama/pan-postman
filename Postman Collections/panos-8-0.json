@@ -5589,7 +5589,7 @@
           "name": "Commit",
           "item": [
             {
-              "name": "Commit - Device Group",
+              "name": "Commit All - Device Group",
               "event": [
                 {
                   "listen": "prerequest",
