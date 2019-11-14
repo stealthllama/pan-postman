@@ -5589,7 +5589,7 @@
           "name": "Commit",
           "item": [
             {
-              "name": "Commit All - Template Stack",
+              "name": "Commit - Partial by Admin",
               "event": [
                 {
                   "listen": "prerequest",
@@ -5602,7 +5602,7 @@
                   }
                 }
               ],
-              "_postman_id": "2fd35af9-48e1-4234-87d1-5aa408703800",
+              "_postman_id": "ececf5bf-df49-481c-a7b1-2a53ef68dec9",
               "protocolProfileBehavior": {
                 "disableBodyPruning": true
               },
@@ -5622,7 +5622,7 @@
                   "urlencoded": []
                 },
                 "url": {
-                  "raw": "https://{{host}}/api?key={{key}}&type=commit&action=all&cmd=<commit-all><template-stack><name>{{template_stack}}</name></template-stack></commit-all>",
+                  "raw": "https://{{host}}/api?key={{key}}&type=commit&action=all&cmd=<commit-all><shared-policy><device-group><entry name='{{device_group}}'/></device-group></shared-policy></commit-all>",
                   "protocol": "https",
                   "host": [
                     "{{host}}"
@@ -5644,12 +5644,11 @@
                     {
                       "key": "action",
                       "value": "all",
-                      "description": "Commit type",
-                      "type": "text"
+                      "description": "Commit type"
                     },
                     {
                       "key": "cmd",
-                      "value": "<commit-all><template-stack><name>{{template_stack}}</name></template-stack></commit-all>",
+                      "value": "<commit-all><shared-policy><device-group><entry name='{{device_group}}'/></device-group></shared-policy></commit-all>",
                       "description": "API command"
                     }
                   ]
@@ -5726,6 +5725,76 @@
                     {
                       "key": "cmd",
                       "value": "<commit-all><shared-policy><device-group><entry name='{{device_group}}'/></device-group></shared-policy></commit-all>",
+                      "description": "API command"
+                    }
+                  ]
+                },
+                "description": "Commit a device group and push to all devices"
+              },
+              "response": []
+            },
+            {
+              "name": "Commit All - Template Stack",
+              "event": [
+                {
+                  "listen": "prerequest",
+                  "script": {
+                    "id": "0897f533-6597-442b-9dc9-eed8c4b921b9",
+                    "exec": [
+                      ""
+                    ],
+                    "type": "text/javascript"
+                  }
+                }
+              ],
+              "_postman_id": "2fd35af9-48e1-4234-87d1-5aa408703800",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "auth": {
+                  "type": "noauth"
+                },
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/x-www-form-urlencoded"
+                  }
+                ],
+                "body": {
+                  "mode": "urlencoded",
+                  "urlencoded": []
+                },
+                "url": {
+                  "raw": "https://{{host}}/api?key={{key}}&type=commit&action=all&cmd=<commit-all><template-stack><name>{{template_stack}}</name></template-stack></commit-all>",
+                  "protocol": "https",
+                  "host": [
+                    "{{host}}"
+                  ],
+                  "path": [
+                    "api"
+                  ],
+                  "query": [
+                    {
+                      "key": "key",
+                      "value": "{{key}}",
+                      "description": "API key"
+                    },
+                    {
+                      "key": "type",
+                      "value": "commit",
+                      "description": "API action"
+                    },
+                    {
+                      "key": "action",
+                      "value": "all",
+                      "description": "Commit type",
+                      "type": "text"
+                    },
+                    {
+                      "key": "cmd",
+                      "value": "<commit-all><template-stack><name>{{template_stack}}</name></template-stack></commit-all>",
                       "description": "API command"
                     }
                   ]
