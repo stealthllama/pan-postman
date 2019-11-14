@@ -5653,7 +5653,7 @@
               "response": []
             },
             {
-              "name": "Commit - Device Group Copy",
+              "name": "Commit All - Template Stack",
               "event": [
                 {
                   "listen": "prerequest",
