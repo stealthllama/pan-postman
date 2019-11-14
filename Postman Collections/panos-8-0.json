@@ -5653,7 +5653,7 @@
                     }
                   ]
                 },
-                "description": "Commit a device group and push to all devices"
+                "description": "Commit all changes by a specific administrator"
               },
               "response": []
             }
