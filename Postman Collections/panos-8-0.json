@@ -6298,6 +6298,13 @@
           "_postman_isSubFolder": true
         },
         {
+          "name": "Commit All",
+          "item": [],
+          "_postman_id": "208b0cd1-f290-4a91-aa80-b5aedbb62e4c",
+          "description": "Commit and push configs to Panorama managed devices.",
+          "_postman_isSubFolder": true
+        },
+        {
           "name": "Show managed devices",
           "_postman_id": "be21d32b-62a4-42a2-a2fe-58719f449629",
           "protocolProfileBehavior": {
