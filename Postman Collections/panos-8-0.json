@@ -5686,7 +5686,7 @@
                   "urlencoded": []
                 },
                 "url": {
-                  "raw": "https://{{host}}/api?key={{key}}&type=op&cmd=<commit-all><template-stack><name>{{template_stack}}</name></template-stack></commit-all>",
+                  "raw": "https://{{host}}/api?key={{key}}&type=commit&cmd=<commit-all><template-stack><name>{{template_stack}}</name></template-stack></commit-all>",
                   "protocol": "https",
                   "host": [
                     "{{host}}"
@@ -5702,7 +5702,7 @@
                     },
                     {
                       "key": "type",
-                      "value": "op",
+                      "value": "commit",
                       "description": "API action"
                     },
                     {
