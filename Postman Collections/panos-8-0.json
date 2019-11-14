@@ -5686,7 +5686,7 @@
                   "urlencoded": []
                 },
                 "url": {
-                  "raw": "https://{{host}}/api?key={{key}}&type=commit&cmd=<commit-all><shared-policy><device-group><entry name='{{device_group}}'/></device-group></shared-policy></commit-all>",
+                  "raw": "https://{{host}}/api?key={{key}}&type=op&cmd=<commit-all><template-stack><name>{{template_stack}}</name></template-stack></commit-all>",
                   "protocol": "https",
                   "host": [
                     "{{host}}"
@@ -5702,12 +5702,12 @@
                     },
                     {
                       "key": "type",
-                      "value": "commit",
+                      "value": "op",
                       "description": "API action"
                     },
                     {
                       "key": "cmd",
-                      "value": "<commit-all><shared-policy><device-group><entry name='{{device_group}}'/></device-group></shared-policy></commit-all>",
+                      "value": "<commit-all><template-stack><name>{{template_stack}}</name></template-stack></commit-all>",
                       "description": "API command"
                     }
                   ]
