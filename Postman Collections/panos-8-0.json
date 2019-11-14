@@ -5589,7 +5589,7 @@
           "name": "Commit",
           "item": [
             {
-              "name": "Commit - DeviceGroup and Template Stack",
+              "name": "Commit - Device Group",
               "event": [
                 {
                   "listen": "prerequest",
@@ -5648,7 +5648,7 @@
                     }
                   ]
                 },
-                "description": "Commit the device group and template stack to a specific firewall"
+                "description": "Commit a device group and push to all devices"
               },
               "response": []
             }
