@@ -5717,7 +5717,7 @@
               "response": []
             },
             {
-              "name": "Commit Partial - Device and Network Copy",
+              "name": "Commit Partial - Template Stack",
               "event": [
                 {
                   "listen": "prerequest",
