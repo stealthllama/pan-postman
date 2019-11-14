@@ -5644,8 +5644,7 @@
                     {
                       "key": "action",
                       "value": "all",
-                      "description": "Commit type",
-                      "type": "text"
+                      "description": "Commit type"
                     },
                     {
                       "key": "cmd",
