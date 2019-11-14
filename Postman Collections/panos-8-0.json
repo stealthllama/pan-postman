@@ -5852,7 +5852,7 @@
                     }
                   ]
                 },
-                "description": "Commit a device group and push to all devices"
+                "description": "Push a device group to all devices"
               },
               "response": []
             },
@@ -5922,7 +5922,7 @@
                     }
                   ]
                 },
-                "description": "Commit a device group and push to all devices"
+                "description": "Push a template stack to all devices"
               },
               "response": []
             }
