@@ -5779,6 +5779,70 @@
                 "description": "Commit only template stack changes"
               },
               "response": []
+            },
+            {
+              "name": "Commit Partial - Template Stack Copy",
+              "event": [
+                {
+                  "listen": "prerequest",
+                  "script": {
+                    "id": "0897f533-6597-442b-9dc9-eed8c4b921b9",
+                    "exec": [
+                      ""
+                    ],
+                    "type": "text/javascript"
+                  }
+                }
+              ],
+              "_postman_id": "51a1d99d-8e26-4fd0-8de7-6d09242b45ad",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "auth": {
+                  "type": "noauth"
+                },
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/x-www-form-urlencoded"
+                  }
+                ],
+                "body": {
+                  "mode": "urlencoded",
+                  "urlencoded": []
+                },
+                "url": {
+                  "raw": "https://{{host}}/api?key={{key}}&type=commit&cmd=<commit><partial><template-stack>{{template_stack}}</template-stack></partial></commit>",
+                  "protocol": "https",
+                  "host": [
+                    "{{host}}"
+                  ],
+                  "path": [
+                    "api"
+                  ],
+                  "query": [
+                    {
+                      "key": "key",
+                      "value": "{{key}}",
+                      "description": "API key"
+                    },
+                    {
+                      "key": "type",
+                      "value": "commit",
+                      "description": "API action"
+                    },
+                    {
+                      "key": "cmd",
+                      "value": "<commit><partial><template-stack>{{template_stack}}</template-stack></partial></commit>",
+                      "description": "API command"
+                    }
+                  ]
+                },
+                "description": "Commit only template stack changes"
+              },
+              "response": []
             }
           ],
           "_postman_id": "b52d2c22-f7eb-4164-b349-f52557a9f29f",
