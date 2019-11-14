@@ -5921,7 +5921,7 @@
               "response": []
             },
             {
-              "name": "Commit All - Template Stack",
+              "name": "Commit All - Template",
               "event": [
                 {
                   "listen": "prerequest",
@@ -5934,7 +5934,7 @@
                   }
                 }
               ],
-              "_postman_id": "2fd35af9-48e1-4234-87d1-5aa408703800",
+              "_postman_id": "80c90fdf-928e-4ae9-ad79-538a5b46e67a",
               "protocolProfileBehavior": {
                 "disableBodyPruning": true
               },
@@ -5954,7 +5954,7 @@
                   "urlencoded": []
                 },
                 "url": {
-                  "raw": "https://{{host}}/api?key={{key}}&type=commit&action=all&cmd=<commit-all><template-stack><name>{{template_stack}}</name></template-stack></commit-all>",
+                  "raw": "https://{{host}}/api?key={{key}}&type=commit&action=all&cmd=<commit-all><template><name>{{template}}</name></template></commit-all>",
                   "protocol": "https",
                   "host": [
                     "{{host}}"
@@ -5976,22 +5976,21 @@
                     {
                       "key": "action",
                       "value": "all",
-                      "description": "Commit type",
-                      "type": "text"
+                      "description": "Commit type"
                     },
                     {
                       "key": "cmd",
-                      "value": "<commit-all><template-stack><name>{{template_stack}}</name></template-stack></commit-all>",
+                      "value": "<commit-all><template><name>{{template}}</name></template></commit-all>",
                       "description": "API command"
                     }
                   ]
                 },
-                "description": "Push a template stack to all devices"
+                "description": "Push a template to all devices"
               },
               "response": []
             },
             {
-              "name": "Commit All - Template Stack Copy",
+              "name": "Commit All - Template Stack",
               "event": [
                 {
                   "listen": "prerequest",
@@ -6004,7 +6003,7 @@
                   }
                 }
               ],
-              "_postman_id": "80c90fdf-928e-4ae9-ad79-538a5b46e67a",
+              "_postman_id": "2fd35af9-48e1-4234-87d1-5aa408703800",
               "protocolProfileBehavior": {
                 "disableBodyPruning": true
               },
