@@ -5717,7 +5717,7 @@
               "response": []
             },
             {
-              "name": "Commit Partial - Template Stack Copy",
+              "name": "Commit Partial - Template",
               "event": [
                 {
                   "listen": "prerequest",
