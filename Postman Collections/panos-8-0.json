@@ -5653,7 +5653,7 @@
               "response": []
             },
             {
-              "name": "Commit - Partial by Admin Copy",
+              "name": "Commit Partial - Device and Network",
               "event": [
                 {
                   "listen": "prerequest",
@@ -5712,7 +5712,7 @@
                     }
                   ]
                 },
-                "description": "Commit all changes by a specific administrator"
+                "description": "Commit device and network changes"
               },
               "response": []
             }
