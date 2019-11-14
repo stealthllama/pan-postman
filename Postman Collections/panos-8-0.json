@@ -5587,7 +5587,78 @@
       "item": [
         {
           "name": "Commit",
-          "item": [],
+          "item": [
+            {
+              "name": "Commit All - Template Stack",
+              "event": [
+                {
+                  "listen": "prerequest",
+                  "script": {
+                    "id": "0897f533-6597-442b-9dc9-eed8c4b921b9",
+                    "exec": [
+                      ""
+                    ],
+                    "type": "text/javascript"
+                  }
+                }
+              ],
+              "_postman_id": "2fd35af9-48e1-4234-87d1-5aa408703800",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "auth": {
+                  "type": "noauth"
+                },
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/x-www-form-urlencoded"
+                  }
+                ],
+                "body": {
+                  "mode": "urlencoded",
+                  "urlencoded": []
+                },
+                "url": {
+                  "raw": "https://{{host}}/api?key={{key}}&type=commit&action=all&cmd=<commit-all><template-stack><name>{{template_stack}}</name></template-stack></commit-all>",
+                  "protocol": "https",
+                  "host": [
+                    "{{host}}"
+                  ],
+                  "path": [
+                    "api"
+                  ],
+                  "query": [
+                    {
+                      "key": "key",
+                      "value": "{{key}}",
+                      "description": "API key"
+                    },
+                    {
+                      "key": "type",
+                      "value": "commit",
+                      "description": "API action"
+                    },
+                    {
+                      "key": "action",
+                      "value": "all",
+                      "description": "Commit type",
+                      "type": "text"
+                    },
+                    {
+                      "key": "cmd",
+                      "value": "<commit-all><template-stack><name>{{template_stack}}</name></template-stack></commit-all>",
+                      "description": "API command"
+                    }
+                  ]
+                },
+                "description": "Commit a device group and push to all devices"
+              },
+              "response": []
+            }
+          ],
           "_postman_id": "b52d2c22-f7eb-4164-b349-f52557a9f29f",
           "_postman_isSubFolder": true
         },
@@ -5655,76 +5726,6 @@
                     {
                       "key": "cmd",
                       "value": "<commit-all><shared-policy><device-group><entry name='{{device_group}}'/></device-group></shared-policy></commit-all>",
-                      "description": "API command"
-                    }
-                  ]
-                },
-                "description": "Commit a device group and push to all devices"
-              },
-              "response": []
-            },
-            {
-              "name": "Commit All - Template Stack",
-              "event": [
-                {
-                  "listen": "prerequest",
-                  "script": {
-                    "id": "0897f533-6597-442b-9dc9-eed8c4b921b9",
-                    "exec": [
-                      ""
-                    ],
-                    "type": "text/javascript"
-                  }
-                }
-              ],
-              "_postman_id": "2fd35af9-48e1-4234-87d1-5aa408703800",
-              "protocolProfileBehavior": {
-                "disableBodyPruning": true
-              },
-              "request": {
-                "auth": {
-                  "type": "noauth"
-                },
-                "method": "POST",
-                "header": [
-                  {
-                    "key": "Content-Type",
-                    "value": "application/x-www-form-urlencoded"
-                  }
-                ],
-                "body": {
-                  "mode": "urlencoded",
-                  "urlencoded": []
-                },
-                "url": {
-                  "raw": "https://{{host}}/api?key={{key}}&type=commit&action=all&cmd=<commit-all><template-stack><name>{{template_stack}}</name></template-stack></commit-all>",
-                  "protocol": "https",
-                  "host": [
-                    "{{host}}"
-                  ],
-                  "path": [
-                    "api"
-                  ],
-                  "query": [
-                    {
-                      "key": "key",
-                      "value": "{{key}}",
-                      "description": "API key"
-                    },
-                    {
-                      "key": "type",
-                      "value": "commit",
-                      "description": "API action"
-                    },
-                    {
-                      "key": "action",
-                      "value": "all",
-                      "description": "Commit type",
-                      "type": "text"
-                    },
-                    {
-                      "key": "cmd",
-                      "value": "<commit-all><template-stack><name>{{template_stack}}</name></template-stack></commit-all>",
                       "description": "API command"
                     }
                   ]
