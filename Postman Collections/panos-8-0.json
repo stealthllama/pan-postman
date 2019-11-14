@@ -6060,7 +6060,7 @@
               "response": []
             },
             {
-              "name": "Commit All - Template Stack Copy",
+              "name": "Commit and Push",
               "event": [
                 {
                   "listen": "prerequest",
