@@ -6093,7 +6093,7 @@
                   "urlencoded": []
                 },
                 "url": {
-                  "raw": "https://{{host}}/api?key={{key}}&type=commit&action=all&cmd=<commit-all><template-stack><name>{{template_stack}}</name></template-stack></commit-all>",
+                  "raw": "https://{{host}}/api?key={{key}}&type=commit&action=all&cmd=<commit-and-push>\n  <push-to>\n    <template-stack-config>\n      <merge-with-candidate-cfg>yes</merge-with-candidate-cfg>\n      <force-template-values>no</force-template-values>\n      <template-stack>\n        <entry name=\"Lab Template Stack\">\n          <device>\n            <member>007255000066625</member>\n          </device>\n        </entry>\n      </template-stack>\n    </template-stack-config>\n  </push-to>\n</commit-and-push>",
                   "protocol": "https",
                   "host": [
                     "{{host}}"
@@ -6115,17 +6115,16 @@
                     {
                       "key": "action",
                       "value": "all",
-                      "description": "Commit type",
-                      "type": "text"
+                      "description": "Commit type"
                     },
                     {
                       "key": "cmd",
-                      "value": "<commit-all><template-stack><name>{{template_stack}}</name></template-stack></commit-all>",
+                      "value": "<commit-and-push>\n  <push-to>\n    <template-stack-config>\n      <merge-with-candidate-cfg>yes</merge-with-candidate-cfg>\n      <force-template-values>no</force-template-values>\n      <template-stack>\n        <entry name=\"Lab Template Stack\">\n          <device>\n            <member>007255000066625</member>\n          </device>\n        </entry>\n      </template-stack>\n    </template-stack-config>\n  </push-to>\n</commit-and-push>",
                       "description": "API command"
                     }
                   ]
                 },
-                "description": "Push a template stack to all devices"
+                "description": "Commit and push to all devices"
               },
               "response": []
             }
