@@ -5776,7 +5776,7 @@
                     }
                   ]
                 },
-                "description": "Commit device and network changes"
+                "description": "Commit only template stack changes"
               },
               "response": []
             }
