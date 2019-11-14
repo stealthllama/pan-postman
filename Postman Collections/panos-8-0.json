@@ -5717,7 +5717,7 @@
               "response": []
             },
             {
-              "name": "Commit Partial - Template Stack",
+              "name": "Commit Partial - Template Stack Copy",
               "event": [
                 {
                   "listen": "prerequest",
@@ -5730,7 +5730,7 @@
                   }
                 }
               ],
-              "_postman_id": "3c6070f9-69c3-42d9-ab05-355035b7e763",
+              "_postman_id": "51a1d99d-8e26-4fd0-8de7-6d09242b45ad",
               "protocolProfileBehavior": {
                 "disableBodyPruning": true
               },
@@ -5781,7 +5781,7 @@
               "response": []
             },
             {
-              "name": "Commit Partial - Template Stack Copy",
+              "name": "Commit Partial - Template Stack",
               "event": [
                 {
                   "listen": "prerequest",
@@ -5794,7 +5794,7 @@
                   }
                 }
               ],
-              "_postman_id": "51a1d99d-8e26-4fd0-8de7-6d09242b45ad",
+              "_postman_id": "3c6070f9-69c3-42d9-ab05-355035b7e763",
               "protocolProfileBehavior": {
                 "disableBodyPruning": true
               },
