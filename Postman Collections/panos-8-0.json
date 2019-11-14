@@ -5686,7 +5686,7 @@
                   "urlencoded": []
                 },
                 "url": {
-                  "raw": "https://{{host}}/api?key={{key}}&type=commit&cmd=<commit><partial><admin><member>{{admin}}</member></admin></partial></commit>",
+                  "raw": "https://{{host}}/api?key={{key}}&type=commit&cmd=<commit><partial><device-group>{{device_group}}</device-group></partial></commit>",
                   "protocol": "https",
                   "host": [
                     "{{host}}"
@@ -5707,7 +5707,7 @@
                     },
                     {
                       "key": "cmd",
-                      "value": "<commit><partial><admin><member>{{admin}}</member></admin></partial></commit>",
+                      "value": "<commit><partial><device-group>{{device_group}}</device-group></partial></commit>",
                       "description": "API command"
                     }
                   ]
