@@ -6701,7 +6701,86 @@
         },
         {
           "name": "Import",
-          "item": [],
+          "item": [
+            {
+              "name": "Import Certificate",
+              "_postman_id": "91a20122-10d7-43cc-8ebd-602ba1c1ea0d",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": "",
+                "description": "Import a certificate to a Panorama template"
+              },
+              "response": []
+            },
+            {
+              "name": "Ping the console",
+              "_postman_id": "cac40f51-d0a4-4c90-ade8-575013e6c49a",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "POST",
+                "header": [],
+                "url": {
+                  "raw": "https://{{host}}/api?key={{key}}&target={{target}}&type=import&category=certificate&certificate-name=&format={{format}}",
+                  "protocol": "https",
+                  "host": [
+                    "{{host}}"
+                  ],
+                  "path": [
+                    "api"
+                  ],
+                  "query": [
+                    {
+                      "key": "key",
+                      "value": "{{key}}",
+                      "description": "The API key"
+                    },
+                    {
+                      "key": "target",
+                      "value": "{{target}}",
+                      "description": "The Panorama template",
+                      "type": "text"
+                    },
+                    {
+                      "key": "type",
+                      "value": "import",
+                      "description": "The type of import"
+                    },
+                    {
+                      "key": "category",
+                      "value": "certificate",
+                      "description": "The import category"
+                    },
+                    {
+                      "key": "certificate-name",
+                      "value": "",
+                      "description": "The certificate filename",
+                      "type": "text"
+                    },
+                    {
+                      "key": "passphrase",
+                      "value": "{{passphrase}}",
+                      "description": "The private key passphrase",
+                      "type": "text",
+                      "disabled": true
+                    },
+                    {
+                      "key": "format",
+                      "value": "{{format}}",
+                      "description": "PEM or PKCS12",
+                      "type": "text"
+                    }
+                  ]
+                }
+              },
+              "response": []
+            }
+          ],
           "_postman_id": "70fd8368-672a-4c01-8534-6409ae605ec2",
           "description": "API calls for importing files",
           "_postman_isSubFolder": true
