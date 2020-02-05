@@ -6847,7 +6847,7 @@
               "response": []
             },
             {
-              "name": "Import Certificate and Private Key Copy",
+              "name": "Import Private Key",
               "_postman_id": "9965de49-9f1b-4059-a53e-bb37d1da7582",
               "protocolProfileBehavior": {
                 "disableBodyPruning": true
