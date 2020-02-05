@@ -6709,9 +6709,50 @@
                 "disableBodyPruning": true
               },
               "request": {
-                "method": "GET",
+                "method": "POST",
                 "header": [],
-                "url": "",
+                "url": {
+                  "raw": "https://{{host}}/api?key={{key}}&target={{target}}&type=import&category=certificate&certificate-name&format={{format}}",
+                  "protocol": "https",
+                  "host": [
+                    "{{host}}"
+                  ],
+                  "path": [
+                    "api"
+                  ],
+                  "query": [
+                    {
+                      "key": "key",
+                      "value": "{{key}}"
+                    },
+                    {
+                      "key": "target",
+                      "value": "{{target}}"
+                    },
+                    {
+                      "key": "type",
+                      "value": "import"
+                    },
+                    {
+                      "key": "category",
+                      "value": "certificate"
+                    },
+                    {
+                      "key": "certificate-name",
+                      "value": null
+                    },
+                    {
+                      "key": "passphrase",
+                      "value": "{{passphrase}}",
+                      "type": "text",
+                      "disabled": true
+                    },
+                    {
+                      "key": "format",
+                      "value": "{{format}}"
+                    }
+                  ]
+                },
                 "description": "Import a certificate to a Panorama template"
               },
               "response": []
