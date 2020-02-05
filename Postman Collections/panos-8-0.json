@@ -6093,7 +6093,7 @@
                   "urlencoded": []
                 },
                 "url": {
-                  "raw": "https://{{host}}/api?key={{key}}&type=commit&action=all&cmd=<commit-all><template-stack><name>{{template_stack}}</name></template-stack></commit-all>",
+                  "raw": "https://{{host}}/api?key={{key}}&type=commit&action=all&cmd=<commit-and-push>\n  <push-to>\n    <template-stack-config>\n      <merge-with-candidate-cfg>yes</merge-with-candidate-cfg>\n      <force-template-values>no</force-template-values>\n      <template-stack>\n        <entry name=\"Lab Template Stack\">\n          <device>\n            <member>007255000066625</member>\n          </device>\n        </entry>\n      </template-stack>\n    </template-stack-config>\n  </push-to>\n</commit-and-push>",
                   "protocol": "https",
                   "host": [
                     "{{host}}"
@@ -6115,12 +6115,11 @@
                     {
                       "key": "action",
                       "value": "all",
-                      "description": "Commit type",
-                      "type": "text"
+                      "description": "Commit type"
                     },
                     {
                       "key": "cmd",
-                      "value": "<commit-all><template-stack><name>{{template_stack}}</name></template-stack></commit-all>",
+                      "value": "<commit-and-push>\n  <push-to>\n    <template-stack-config>\n      <merge-with-candidate-cfg>yes</merge-with-candidate-cfg>\n      <force-template-values>no</force-template-values>\n      <template-stack>\n        <entry name=\"Lab Template Stack\">\n          <device>\n            <member>007255000066625</member>\n          </device>\n        </entry>\n      </template-stack>\n    </template-stack-config>\n  </push-to>\n</commit-and-push>",
                       "description": "API command"
                     }
                   ]
@@ -6698,6 +6697,28 @@
             }
           ],
           "_postman_id": "20077a3a-32b8-4e94-ae43-5c26ea59fa7d",
+          "_postman_isSubFolder": true
+        },
+        {
+          "name": "Import",
+          "item": [
+            {
+              "name": "Import Certificate",
+              "_postman_id": "91a20122-10d7-43cc-8ebd-602ba1c1ea0d",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": "",
+                "description": "Import a certificate to a Panorama template"
+              },
+              "response": []
+            }
+          ],
+          "_postman_id": "70fd8368-672a-4c01-8534-6409ae605ec2",
+          "description": "API calls for importing files",
           "_postman_isSubFolder": true
         },
         {
