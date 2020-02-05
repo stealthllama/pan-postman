@@ -6701,22 +6701,7 @@
         },
         {
           "name": "Import",
-          "item": [
-            {
-              "name": "Import Certificate",
-              "_postman_id": "91a20122-10d7-43cc-8ebd-602ba1c1ea0d",
-              "protocolProfileBehavior": {
-                "disableBodyPruning": true
-              },
-              "request": {
-                "method": "GET",
-                "header": [],
-                "url": "",
-                "description": "Import a certificate to a Panorama template"
-              },
-              "response": []
-            }
-          ],
+          "item": [],
           "_postman_id": "70fd8368-672a-4c01-8534-6409ae605ec2",
           "description": "API calls for importing files",
           "_postman_isSubFolder": true
