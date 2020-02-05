@@ -6774,6 +6774,79 @@
                 "description": "Import a certificate to a Panorama template"
               },
               "response": []
+            },
+            {
+              "name": "Import Certificate Copy",
+              "_postman_id": "6403faeb-0d79-4581-9009-cdc18d924a01",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "name": "Content-Type",
+                    "value": "text/plain",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": ""
+                },
+                "url": {
+                  "raw": "https://{{host}}/api?key={{key}}&type=import&target={{target}}&category=certificate&certificate-name={{certificate-name}}&format={{format}}",
+                  "protocol": "https",
+                  "host": [
+                    "{{host}}"
+                  ],
+                  "path": [
+                    "api"
+                  ],
+                  "query": [
+                    {
+                      "key": "key",
+                      "value": "{{key}}",
+                      "description": "The API key"
+                    },
+                    {
+                      "key": "type",
+                      "value": "import",
+                      "description": "The API type"
+                    },
+                    {
+                      "key": "target",
+                      "value": "{{target}}",
+                      "description": "The Panorama template"
+                    },
+                    {
+                      "key": "category",
+                      "value": "certificate",
+                      "description": "The type of import"
+                    },
+                    {
+                      "key": "certificate-name",
+                      "value": "{{certificate-name}}",
+                      "description": "The certificate filename"
+                    },
+                    {
+                      "key": "passphrase",
+                      "value": "{{passphrase}}",
+                      "type": "text",
+                      "description": "The private key passphrase",
+                      "disabled": true
+                    },
+                    {
+                      "key": "format",
+                      "value": "{{format}}",
+                      "description": "PEM or PKCS12"
+                    }
+                  ]
+                },
+                "description": "Import a certificate to a Panorama template"
+              },
+              "response": []
             }
           ],
           "_postman_id": "70fd8368-672a-4c01-8534-6409ae605ec2",
