@@ -6796,7 +6796,7 @@
                   "raw": ""
                 },
                 "url": {
-                  "raw": "https://{{host}}/api?key={{key}}&type=import&target={{target}}&category=certificate&certificate-name={{certificate-name}}&passphrase={{passphrase}}&format={{format}}",
+                  "raw": "https://{{host}}/api?key={{key}}&type=import&target={{target}}&category=certificate&certificate-name={{certificate-name}}&format={{format}}",
                   "protocol": "https",
                   "host": [
                     "{{host}}"
@@ -6831,9 +6831,11 @@
                       "description": "The certificate filename"
                     },
                     {
+                      "description": "The private key passphrase",
                       "key": "passphrase",
+                      "type": "text",
                       "value": "{{passphrase}}",
-                      "description": "The private key passphrase"
+                      "disabled": true
                     },
                     {
                       "key": "format",
@@ -6842,7 +6844,7 @@
                     }
                   ]
                 },
-                "description": "Import a certificate and its private key (in a single file) to a Panorama template"
+                "description": "Import a certificate to a Panorama template"
               },
               "response": []
             }
