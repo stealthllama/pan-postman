@@ -6710,7 +6710,18 @@
               },
               "request": {
                 "method": "POST",
-                "header": [],
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "name": "Content-Type",
+                    "value": "text/plain",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": ""
+                },
                 "url": {
                   "raw": "https://{{host}}/api?key={{key}}&type=import&target={{target}}&category=certificate&certificate-name={{certificate-name}}&format={{format}}",
                   "protocol": "https",
@@ -6756,11 +6767,153 @@
                     {
                       "key": "format",
                       "value": "{{format}}",
-                      "description": "PEM or PKCS12"
+                      "description": "PEM or DER"
                     }
                   ]
                 },
                 "description": "Import a certificate to a Panorama template"
+              },
+              "response": []
+            },
+            {
+              "name": "Import Certificate and Private Key",
+              "_postman_id": "6403faeb-0d79-4581-9009-cdc18d924a01",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "name": "Content-Type",
+                    "type": "text",
+                    "value": "text/plain"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": ""
+                },
+                "url": {
+                  "raw": "https://{{host}}/api?key={{key}}&type=import&target={{target}}&category=certificate&certificate-name={{certificate-name}}&passphrase={{passphrase}}&format={{format}}",
+                  "protocol": "https",
+                  "host": [
+                    "{{host}}"
+                  ],
+                  "path": [
+                    "api"
+                  ],
+                  "query": [
+                    {
+                      "key": "key",
+                      "value": "{{key}}",
+                      "description": "The API key"
+                    },
+                    {
+                      "key": "type",
+                      "value": "import",
+                      "description": "The API type"
+                    },
+                    {
+                      "key": "target",
+                      "value": "{{target}}",
+                      "description": "The Panorama template"
+                    },
+                    {
+                      "key": "category",
+                      "value": "certificate",
+                      "description": "The type of import"
+                    },
+                    {
+                      "key": "certificate-name",
+                      "value": "{{certificate-name}}",
+                      "description": "The certificate filename"
+                    },
+                    {
+                      "key": "passphrase",
+                      "value": "{{passphrase}}",
+                      "description": "The private key passphrase"
+                    },
+                    {
+                      "key": "format",
+                      "value": "{{format}}",
+                      "description": "PEM or DER"
+                    }
+                  ]
+                },
+                "description": "Import a certificate and its private key (in a single file) to a Panorama template"
+              },
+              "response": []
+            },
+            {
+              "name": "Import Private Key",
+              "_postman_id": "9965de49-9f1b-4059-a53e-bb37d1da7582",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "name": "Content-Type",
+                    "type": "text",
+                    "value": "text/plain"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": ""
+                },
+                "url": {
+                  "raw": "https://{{host}}/api?key={{key}}&type=import&target={{target}}&category=certificate&certificate-name={{certificate-name}}&passphrase={{passphrase}}&format={{format}}",
+                  "protocol": "https",
+                  "host": [
+                    "{{host}}"
+                  ],
+                  "path": [
+                    "api"
+                  ],
+                  "query": [
+                    {
+                      "key": "key",
+                      "value": "{{key}}",
+                      "description": "The API key"
+                    },
+                    {
+                      "key": "type",
+                      "value": "import",
+                      "description": "The API type"
+                    },
+                    {
+                      "key": "target",
+                      "value": "{{target}}",
+                      "description": "The Panorama template"
+                    },
+                    {
+                      "key": "category",
+                      "value": "certificate",
+                      "description": "The type of import"
+                    },
+                    {
+                      "key": "certificate-name",
+                      "value": "{{certificate-name}}",
+                      "description": "The certificate filename"
+                    },
+                    {
+                      "key": "passphrase",
+                      "value": "{{passphrase}}",
+                      "description": "The private key passphrase"
+                    },
+                    {
+                      "key": "format",
+                      "value": "{{format}}",
+                      "description": "PEM or DER"
+                    }
+                  ]
+                },
+                "description": "Import the private key to an existing certificate in a Panorama template"
               },
               "response": []
             }
