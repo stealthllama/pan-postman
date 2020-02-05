@@ -6776,7 +6776,7 @@
               "response": []
             },
             {
-              "name": "Import Certificate Copy",
+              "name": "Import Certificate and Private Key",
               "_postman_id": "6403faeb-0d79-4581-9009-cdc18d924a01",
               "protocolProfileBehavior": {
                 "disableBodyPruning": true
@@ -6787,8 +6787,8 @@
                   {
                     "key": "Content-Type",
                     "name": "Content-Type",
-                    "value": "text/plain",
-                    "type": "text"
+                    "type": "text",
+                    "value": "text/plain"
                   }
                 ],
                 "body": {
@@ -6796,7 +6796,7 @@
                   "raw": ""
                 },
                 "url": {
-                  "raw": "https://{{host}}/api?key={{key}}&type=import&target={{target}}&category=certificate&certificate-name={{certificate-name}}&format={{format}}",
+                  "raw": "https://{{host}}/api?key={{key}}&type=import&target={{target}}&category=certificate&certificate-name={{certificate-name}}&passphrase={{passphrase}}&format={{format}}",
                   "protocol": "https",
                   "host": [
                     "{{host}}"
@@ -6831,11 +6831,10 @@
                       "description": "The certificate filename"
                     },
                     {
-                      "key": "passphrase",
-                      "value": "{{passphrase}}",
-                      "type": "text",
                       "description": "The private key passphrase",
-                      "disabled": true
+                      "key": "passphrase",
+                      "type": "text",
+                      "value": "{{passphrase}}"
                     },
                     {
                       "key": "format",
