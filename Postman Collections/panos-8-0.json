@@ -6767,7 +6767,7 @@
                     {
                       "key": "format",
                       "value": "{{format}}",
-                      "description": "PEM or PKCS12"
+                      "description": "PEM or DER"
                     }
                   ]
                 },
