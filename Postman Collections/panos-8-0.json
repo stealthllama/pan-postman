@@ -6712,7 +6712,7 @@
                 "method": "POST",
                 "header": [],
                 "url": {
-                  "raw": "https://{{host}}/api?key={{key}}&target={{target}}&type=import&category=certificate&certificate-name&format={{format}}",
+                  "raw": "https://{{host}}/api?key={{key}}&target={{target}}&type=import&category=certificate&certificate-name={{certificate-name}}&format={{format}}",
                   "protocol": "https",
                   "host": [
                     "{{host}}"
@@ -6739,7 +6739,7 @@
                     },
                     {
                       "key": "certificate-name",
-                      "value": null
+                      "value": "{{certificate-name}}"
                     },
                     {
                       "key": "passphrase",
