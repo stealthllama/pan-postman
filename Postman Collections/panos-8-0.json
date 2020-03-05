@@ -2214,10 +2214,13 @@
                   "description": "Show active GlobalProtect users",
                   "type": "text"
                 }
-              ]
+              ],
+              "options": {
+                "urlencoded": {}
+              }
             },
             "url": {
-              "raw": "https://{{host}}/api?key={{key}}&type=op&cmd=<request><global-protect-client><software><download><version>5.0.0-b59</version></download></software></global-protect-client></request>",
+              "raw": "https://{{host}}/api?key={{key}}&type=op&cmd=<show><global-protect-gateway><current-user/>\n</global-protect-gateway></show>",
               "protocol": "https",
               "host": [
                 "{{host}}"
@@ -2229,20 +2232,17 @@
                 {
                   "key": "key",
                   "value": "{{key}}",
-                  "description": "API key",
-                  "type": "text"
+                  "description": "API key"
                 },
                 {
                   "key": "type",
                   "value": "op",
-                  "description": "API command type",
-                  "type": "text"
+                  "description": "API command type"
                 },
                 {
                   "key": "cmd",
-                  "value": "<request><global-protect-client><software><download><version>5.0.0-b59</version></download></software></global-protect-client></request>",
-                  "description": "Request software by version",
-                  "type": "text"
+                  "value": "<show><global-protect-gateway><current-user/>\n</global-protect-gateway></show>",
+                  "description": "Request software by version"
                 }
               ]
             },
