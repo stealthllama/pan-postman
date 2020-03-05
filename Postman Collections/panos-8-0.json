@@ -2251,7 +2251,7 @@
           "response": []
         },
         {
-          "name": "Show GlobalProtect Users Copy",
+          "name": "Disconnect GlobalProtect User",
           "event": [
             {
               "listen": "test",
@@ -2332,7 +2332,7 @@
                 }
               ]
             },
-            "description": "Show all currently connected GlobalProtect users"
+            "description": "Disconnect a GlobalProtect user"
           },
           "response": []
         },
