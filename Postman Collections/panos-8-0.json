@@ -2283,22 +2283,22 @@
               "mode": "urlencoded",
               "urlencoded": [
                 {
+                  "description": "API key",
                   "key": "key",
-                  "value": "{{key}}",
                   "type": "text",
-                  "description": "API key"
+                  "value": "{{key}}"
                 },
                 {
+                  "description": "API method type",
                   "key": "type",
-                  "value": "op",
                   "type": "text",
-                  "description": "API method type"
+                  "value": "op"
                 },
                 {
-                  "key": "cmd",
-                  "value": "<show><global-protect-gateway><current-user/> \n</global-protect-gateway></show>",
                   "description": "Show active GlobalProtect users",
-                  "type": "text"
+                  "key": "cmd",
+                  "type": "text",
+                  "value": "<show><global-protect-gateway><current-user/> \n</global-protect-gateway></show>"
                 }
               ],
               "options": {
@@ -2306,7 +2306,7 @@
               }
             },
             "url": {
-              "raw": "https://{{host}}/api?key={{key}}&type=op&cmd=<show><global-protect-gateway><current-user/>\n</global-protect-gateway></show>",
+              "raw": "https://{{host}}/api?key={{key}}&type=op&cmd=<request><global-protect-gateway><client-logout>\n<gateway>Home-N</gateway><user>dward</user><reason>force-logout</reason>\n<computer>Dan\u2019s%20iPhone</computer></client-logout></global-protect-gateway>\n</request>",
               "protocol": "https",
               "host": [
                 "{{host}}"
@@ -2327,7 +2327,7 @@
                 },
                 {
                   "key": "cmd",
-                  "value": "<show><global-protect-gateway><current-user/>\n</global-protect-gateway></show>",
+                  "value": "<request><global-protect-gateway><client-logout>\n<gateway>Home-N</gateway><user>dward</user><reason>force-logout</reason>\n<computer>Dan\u2019s%20iPhone</computer></client-logout></global-protect-gateway>\n</request>",
                   "description": "Request software by version"
                 }
               ]
