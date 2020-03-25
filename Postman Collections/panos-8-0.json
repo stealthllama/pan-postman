@@ -7009,6 +7009,12 @@
           "_postman_isSubFolder": true
         },
         {
+          "name": "Access Domain",
+          "item": [],
+          "_postman_id": "0802a2fd-4bd8-46c2-8a2b-9c9295c96c2f",
+          "_postman_isSubFolder": true
+        },
+        {
           "name": "Show managed devices",
           "_postman_id": "be21d32b-62a4-42a2-a2fe-58719f449629",
           "protocolProfileBehavior": {
