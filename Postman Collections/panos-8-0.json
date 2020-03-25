@@ -7136,7 +7136,7 @@
           "name": "Administrators",
           "item": [
             {
-              "name": "Add Admin Role",
+              "name": "Add Administrator",
               "_postman_id": "9435f233-86b2-4c49-8844-6a7f5dc02cb6",
               "protocolProfileBehavior": {
                 "disableBodyPruning": true
