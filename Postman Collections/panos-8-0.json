@@ -7021,7 +7021,7 @@
                 "method": "POST",
                 "header": [],
                 "url": {
-                  "raw": "https://{{host}}/api?key={{key}}&type=config&action=set&xpath=/config/mgt-config/access-domain/entry[@name='Test Domain']&element=  <device-groups>\n    <member>Demo_DG</member>\n  </device-groups>\n  <devices>\n    <entry name=\"007255000066625\"/>\n  </devices>\n  <templates>\n    <member>Lab Template</member>\n    <member>Lab Template Stack</member>\n  </templates>\n</request>",
+                  "raw": "https://{{host}}/api?key={{key}}&type=config&action=set&xpath=/config/shared/admin-role/entry[@name='Test Role']&element=  <device-groups>\n    <member>TEST-DG</member>\n  </device-groups>\n  <devices>\n    <entry name=\"007255000066625\"/>\n  </devices>\n  <templates>\n    <member>TEST-TMPL</member>\n    <member>TEST-STACK</member>\n  </templates>\n  <log-collector-groups>\n    <member>TEST-LC-GRP</member>member>\n  </log-collector-groups>",
                   "protocol": "https",
                   "host": [
                     "{{host}}"
@@ -7044,11 +7044,11 @@
                     },
                     {
                       "key": "xpath",
-                      "value": "/config/mgt-config/access-domain/entry[@name='Test Domain']"
+                      "value": "/config/shared/admin-role/entry[@name='Test Role']"
                     },
                     {
                       "key": "element",
-                      "value": "  <device-groups>\n    <member>Demo_DG</member>\n  </device-groups>\n  <devices>\n    <entry name=\"007255000066625\"/>\n  </devices>\n  <templates>\n    <member>Lab Template</member>\n    <member>Lab Template Stack</member>\n  </templates>\n</request>"
+                      "value": "  <device-groups>\n    <member>TEST-DG</member>\n  </device-groups>\n  <devices>\n    <entry name=\"007255000066625\"/>\n  </devices>\n  <templates>\n    <member>TEST-TMPL</member>\n    <member>TEST-STACK</member>\n  </templates>\n  <log-collector-groups>\n    <member>TEST-LC-GRP</member>member>\n  </log-collector-groups>"
                     }
                   ]
                 }
