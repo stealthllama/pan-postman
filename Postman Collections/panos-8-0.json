@@ -7018,10 +7018,10 @@
                 "disableBodyPruning": true
               },
               "request": {
-                "method": "POST",
+                "method": "GET",
                 "header": [],
                 "url": {
-                  "raw": "https://{{host}}/api?type=op&cmd=<show><devices><all/></devices></show>&key={{key}}",
+                  "raw": "https://{{host}}/api?key={{key}}&type=config&action=get&xpath=/config/mgt-config/access-domain&element=",
                   "protocol": "https",
                   "host": [
                     "{{host}}"
@@ -7031,16 +7031,26 @@
                   ],
                   "query": [
                     {
-                      "key": "type",
-                      "value": "op"
-                    },
-                    {
-                      "key": "cmd",
-                      "value": "<show><devices><all/></devices></show>"
-                    },
-                    {
                       "key": "key",
                       "value": "{{key}}"
+                    },
+                    {
+                      "key": "type",
+                      "value": "config"
+                    },
+                    {
+                      "key": "action",
+                      "value": "get"
+                    },
+                    {
+                      "key": "xpath",
+                      "value": "/config/mgt-config/access-domain",
+                      "type": "text"
+                    },
+                    {
+                      "key": "element",
+                      "value": "",
+                      "type": "text"
                     }
                   ]
                 }
