@@ -7018,10 +7018,10 @@
                 "disableBodyPruning": true
               },
               "request": {
-                "method": "GET",
+                "method": "POST",
                 "header": [],
                 "url": {
-                  "raw": "https://{{host}}/api?key={{key}}&type=config&action=get&xpath=/config/mgt-config/access-domain&element=",
+                  "raw": "https://{{host}}/api?key={{key}}&type=config&action=set&xpath=/config/mgt-config/access-domain/entry[@name='Test Domain']&element=  <device-groups>\n    <member>Demo_DG</member>\n  </device-groups>\n  <devices>\n    <entry name=\"007255000066625\"/>\n  </devices>\n  <templates>\n    <member>Lab Template</member>\n    <member>Lab Template Stack</member>\n  </templates>\n</request>",
                   "protocol": "https",
                   "host": [
                     "{{host}}"
@@ -7040,17 +7040,15 @@
                     },
                     {
                       "key": "action",
-                      "value": "get"
+                      "value": "set"
                     },
                     {
                       "key": "xpath",
-                      "value": "/config/mgt-config/access-domain",
-                      "type": "text"
+                      "value": "/config/mgt-config/access-domain/entry[@name='Test Domain']"
                     },
                     {
                       "key": "element",
-                      "value": "",
-                      "type": "text"
+                      "value": "  <device-groups>\n    <member>Demo_DG</member>\n  </device-groups>\n  <devices>\n    <entry name=\"007255000066625\"/>\n  </devices>\n  <templates>\n    <member>Lab Template</member>\n    <member>Lab Template Stack</member>\n  </templates>\n</request>"
                     }
                   ]
                 }
