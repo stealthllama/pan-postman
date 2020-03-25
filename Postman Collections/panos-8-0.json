@@ -7018,9 +7018,32 @@
                 "disableBodyPruning": true
               },
               "request": {
-                "method": "GET",
+                "method": "POST",
                 "header": [],
-                "url": ""
+                "url": {
+                  "raw": "https://{{host}}/api?type=op&cmd=<show><devices><all/></devices></show>&key={{key}}",
+                  "protocol": "https",
+                  "host": [
+                    "{{host}}"
+                  ],
+                  "path": [
+                    "api"
+                  ],
+                  "query": [
+                    {
+                      "key": "type",
+                      "value": "op"
+                    },
+                    {
+                      "key": "cmd",
+                      "value": "<show><devices><all/></devices></show>"
+                    },
+                    {
+                      "key": "key",
+                      "value": "{{key}}"
+                    }
+                  ]
+                }
               },
               "response": []
             }
