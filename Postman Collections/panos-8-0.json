@@ -7010,7 +7010,21 @@
         },
         {
           "name": "Access Domain",
-          "item": [],
+          "item": [
+            {
+              "name": "Add Access Domain",
+              "_postman_id": "b15cb8ec-43ba-4fb4-ad04-6af1bc2f0daa",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": ""
+              },
+              "response": []
+            }
+          ],
           "_postman_id": "0802a2fd-4bd8-46c2-8a2b-9c9295c96c2f",
           "_postman_isSubFolder": true
         },
