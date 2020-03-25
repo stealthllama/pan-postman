@@ -7060,10 +7060,10 @@
           "_postman_isSubFolder": true
         },
         {
-          "name": "Access Domain Copy",
+          "name": "Admin Role",
           "item": [
             {
-              "name": "Add Access Domain",
+              "name": "Add Admin Role",
               "_postman_id": "67d34285-bcad-4c63-8f3f-bb9df46ce9c6",
               "protocolProfileBehavior": {
                 "disableBodyPruning": true
@@ -7108,6 +7108,28 @@
             }
           ],
           "_postman_id": "4e7db74e-a0ec-4fcb-8dc6-adc2ee4c57ed",
+          "event": [
+            {
+              "listen": "prerequest",
+              "script": {
+                "id": "85088e70-444b-4720-8b5d-73b008fe7540",
+                "type": "text/javascript",
+                "exec": [
+                  ""
+                ]
+              }
+            },
+            {
+              "listen": "test",
+              "script": {
+                "id": "48e86d9f-cfb4-45ab-90ab-63999d52bcd0",
+                "type": "text/javascript",
+                "exec": [
+                  ""
+                ]
+              }
+            }
+          ],
           "_postman_isSubFolder": true
         },
         {
