@@ -4703,10 +4703,13 @@
             ],
             "body": {
               "mode": "urlencoded",
-              "urlencoded": []
+              "urlencoded": [],
+              "options": {
+                "urlencoded": {}
+              }
             },
             "url": {
-              "raw": "https://{{host}}/api?key={{key}}&type=commit&cmd=<commit><force></force></commit>",
+              "raw": "https://{{host}}/api?key={{key}}&type=commit&cmd=<commit><force/></commit>",
               "protocol": "https",
               "host": [
                 "{{host}}"
@@ -4727,7 +4730,7 @@
                 },
                 {
                   "key": "cmd",
-                  "value": "<commit><force></force></commit>",
+                  "value": "<commit><force/></commit>",
                   "description": "API command"
                 }
               ]
