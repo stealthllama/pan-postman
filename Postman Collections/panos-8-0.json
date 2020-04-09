@@ -7076,7 +7076,7 @@
               "response": []
             },
             {
-              "name": "Import Config Copy",
+              "name": "Load Config",
               "event": [
                 {
                   "listen": "prerequest",
@@ -7138,7 +7138,7 @@
                     }
                   ]
                 },
-                "description": "Import a configuration file"
+                "description": "Load a named configuration"
               },
               "response": []
             }
