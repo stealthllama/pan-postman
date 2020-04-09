@@ -7112,7 +7112,7 @@
                   }
                 },
                 "url": {
-                  "raw": "https://{{host}}/api?key={{key}}&type=commit&cmd=<commit><partial><admin><member>{{admin}}</member></admin></partial></commit>",
+                  "raw": "https://{{host}}/api?key={{key}}&type=op&cmd=<load><config><from>new-pan-lan.xml</from></config></load>",
                   "protocol": "https",
                   "host": [
                     "{{host}}"
@@ -7128,12 +7128,12 @@
                     },
                     {
                       "key": "type",
-                      "value": "commit",
+                      "value": "op",
                       "description": "API action"
                     },
                     {
                       "key": "cmd",
-                      "value": "<commit><partial><admin><member>{{admin}}</member></admin></partial></commit>",
+                      "value": "<load><config><from>new-pan-lan.xml</from></config></load>",
                       "description": "API command"
                     }
                   ]
