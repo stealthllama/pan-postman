@@ -5664,6 +5664,78 @@
             "description": "Show the running configuration"
           },
           "response": []
+        },
+        {
+          "name": "Import Config",
+          "event": [
+            {
+              "listen": "prerequest",
+              "script": {
+                "id": "0897f533-6597-442b-9dc9-eed8c4b921b9",
+                "exec": [
+                  ""
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
+          "_postman_id": "f8c16db2-483d-446c-b076-cf67358a3788",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/x-www-form-urlencoded"
+              }
+            ],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "file",
+                  "type": "file",
+                  "src": "/Users/roberthagen/Downloads/new-pan-lan.xml"
+                }
+              ],
+              "options": {
+                "formdata": {}
+              }
+            },
+            "url": {
+              "raw": "https://{{host}}/api?key={{key}}&type=import&category=configuration",
+              "protocol": "https",
+              "host": [
+                "{{host}}"
+              ],
+              "path": [
+                "api"
+              ],
+              "query": [
+                {
+                  "key": "key",
+                  "value": "{{key}}",
+                  "description": "API key"
+                },
+                {
+                  "key": "type",
+                  "value": "import",
+                  "description": "API action"
+                },
+                {
+                  "key": "category",
+                  "value": "configuration"
+                }
+              ]
+            },
+            "description": "Import a configuration file"
+          },
+          "response": []
         }
       ],
       "_postman_id": "f50e63a4-9ea7-16a4-61a8-b58e9ef38f3b"
@@ -7000,78 +7072,6 @@
                   ]
                 },
                 "description": "Import the private key to an existing certificate in a Panorama template"
-              },
-              "response": []
-            },
-            {
-              "name": "Import Config",
-              "event": [
-                {
-                  "listen": "prerequest",
-                  "script": {
-                    "id": "0897f533-6597-442b-9dc9-eed8c4b921b9",
-                    "exec": [
-                      ""
-                    ],
-                    "type": "text/javascript"
-                  }
-                }
-              ],
-              "_postman_id": "f8c16db2-483d-446c-b076-cf67358a3788",
-              "protocolProfileBehavior": {
-                "disableBodyPruning": true
-              },
-              "request": {
-                "auth": {
-                  "type": "noauth"
-                },
-                "method": "POST",
-                "header": [
-                  {
-                    "key": "Content-Type",
-                    "value": "application/x-www-form-urlencoded"
-                  }
-                ],
-                "body": {
-                  "mode": "formdata",
-                  "formdata": [
-                    {
-                      "key": "file",
-                      "type": "file",
-                      "src": "/Users/roberthagen/Downloads/new-pan-lan.xml"
-                    }
-                  ],
-                  "options": {
-                    "formdata": {}
-                  }
-                },
-                "url": {
-                  "raw": "https://{{host}}/api?key={{key}}&type=import&category=configuration",
-                  "protocol": "https",
-                  "host": [
-                    "{{host}}"
-                  ],
-                  "path": [
-                    "api"
-                  ],
-                  "query": [
-                    {
-                      "key": "key",
-                      "value": "{{key}}",
-                      "description": "API key"
-                    },
-                    {
-                      "key": "type",
-                      "value": "import",
-                      "description": "API action"
-                    },
-                    {
-                      "key": "category",
-                      "value": "configuration"
-                    }
-                  ]
-                },
-                "description": "Import a configuration file"
               },
               "response": []
             },
