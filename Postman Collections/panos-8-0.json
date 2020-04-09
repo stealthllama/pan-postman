@@ -7004,7 +7004,7 @@
               "response": []
             },
             {
-              "name": "Commit Partial - Admin Copy",
+              "name": "Import Config",
               "event": [
                 {
                   "listen": "prerequest",
@@ -7066,7 +7066,7 @@
                     }
                   ]
                 },
-                "description": "Commit all changes by a specific administrator"
+                "description": "Import a configuration file"
               },
               "response": []
             }
