@@ -7143,7 +7143,7 @@
               "response": []
             },
             {
-              "name": "Import Config Copy",
+              "name": "Import Config",
               "event": [
                 {
                   "listen": "prerequest",
