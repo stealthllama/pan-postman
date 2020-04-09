@@ -7033,14 +7033,20 @@
                   }
                 ],
                 "body": {
-                  "mode": "urlencoded",
-                  "urlencoded": [],
+                  "mode": "formdata",
+                  "formdata": [
+                    {
+                      "key": "file",
+                      "type": "file",
+                      "src": "/Users/roberthagen/Downloads/new-pan-lan.xml"
+                    }
+                  ],
                   "options": {
-                    "urlencoded": {}
+                    "formdata": {}
                   }
                 },
                 "url": {
-                  "raw": "https://{{host}}/api?key={{key}}&type=commit&cmd=<commit><partial><admin><member>{{admin}}</member></admin></partial></commit>",
+                  "raw": "https://{{host}}/api?key={{key}}&type=import&category=configuration",
                   "protocol": "https",
                   "host": [
                     "{{host}}"
@@ -7056,13 +7062,12 @@
                     },
                     {
                       "key": "type",
-                      "value": "commit",
+                      "value": "import",
                       "description": "API action"
                     },
                     {
-                      "key": "cmd",
-                      "value": "<commit><partial><admin><member>{{admin}}</member></admin></partial></commit>",
-                      "description": "API command"
+                      "key": "category",
+                      "value": "configuration"
                     }
                   ]
                 },
