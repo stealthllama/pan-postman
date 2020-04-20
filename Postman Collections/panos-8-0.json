@@ -112,6 +112,20 @@
             "description": "Show interface management"
           },
           "response": []
+        },
+        {
+          "name": "Enable ECMP",
+          "_postman_id": "072698c4-ca38-4e92-86fa-746b350c729a",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "",
+            "description": "Enable ECMP routing"
+          },
+          "response": []
         }
       ],
       "_postman_id": "307b40d9-157f-02a7-ce62-d005edb71601"
