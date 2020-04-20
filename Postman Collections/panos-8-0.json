@@ -159,7 +159,7 @@
           "response": []
         },
         {
-          "name": "Enable ECMP Copy",
+          "name": "Set ECMP Max Links",
           "_postman_id": "82e4ceb2-9280-40d3-9219-f1c6ac1d5d12",
           "protocolProfileBehavior": {
             "disableBodyPruning": true
