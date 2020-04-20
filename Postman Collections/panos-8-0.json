@@ -168,7 +168,7 @@
             "method": "POST",
             "header": [],
             "url": {
-              "raw": "https://{{host}}/api?key={{key}}&type=config&action=set&xpath=/config/devices/entry[@name='localhost.localdomain']/network/virtual-router/entry[@name='default']/ecmp&element=<enable>yes</enable>",
+              "raw": "https://{{host}}/api?key={{key}}&type=config&action=set&xpath=/config/devices/entry[@name='localhost.localdomain']/network/virtual-router/entry[@name='default']/ecmp&element=<max-path>4</max-path>",
               "protocol": "https",
               "host": [
                 "{{host}}"
@@ -195,7 +195,7 @@
                 },
                 {
                   "key": "element",
-                  "value": "<enable>yes</enable>"
+                  "value": "<max-path>4</max-path>"
                 }
               ]
             },
