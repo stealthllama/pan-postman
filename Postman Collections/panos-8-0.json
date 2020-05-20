@@ -5713,12 +5713,12 @@
               "listen": "test",
               "script": {
                 "id": "7ef08554-e9a5-4e9e-b984-3093f3d790c8",
-                "type": "text/javascript",
                 "exec": [
                   "pm.test(\"Body matches string\", function () {",
                   "    pm.expect(pm.response.text()).to.include(\"<response status=\\\"success\\\">\");",
                   "});"
-                ]
+                ],
+                "type": "text/javascript"
               }
             }
           ],
@@ -5745,7 +5745,7 @@
               }
             },
             "url": {
-              "raw": "https://{{host}}/api?key={{key}}&type=op&cmd=<check><pending-changes></pending-changes></check>",
+              "raw": "https://{{host}}/api?key={{key}}&type=op&cmd=<show><config><audit><base-version>candidate</base-version></audit></config></show>",
               "protocol": "https",
               "host": [
                 "{{host}}"
@@ -5766,7 +5766,7 @@
                 },
                 {
                   "key": "cmd",
-                  "value": "<check><pending-changes></pending-changes></check>",
+                  "value": "<show><config><audit><base-version>candidate</base-version></audit></config></show>",
                   "description": "API command"
                 }
               ]
