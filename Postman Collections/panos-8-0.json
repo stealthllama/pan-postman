@@ -7480,7 +7480,7 @@
               "response": []
             },
             {
-              "name": "Add Admin Role Copy",
+              "name": "Get Admin Role",
               "_postman_id": "ea6adcd2-b1d6-48e6-ac0a-e334f854d58e",
               "protocolProfileBehavior": {
                 "disableBodyPruning": true
