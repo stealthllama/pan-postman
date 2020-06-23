@@ -7990,7 +7990,7 @@
                 }
               ]
             },
-            "description": "Import a certificate and its private key (in a single file) to a Panorama template"
+            "description": "Import a certificate and its private key (in a single file) to a firewall"
           },
           "response": []
         },
