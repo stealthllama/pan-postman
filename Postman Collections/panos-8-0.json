@@ -7852,16 +7852,20 @@
               }
             ],
             "body": {
-              "mode": "raw",
-              "raw": "",
-              "options": {
-                "raw": {
-                  "language": "text"
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "",
+                  "type": "file",
+                  "src": "/Users/roberthagen/Downloads/cert.pem"
                 }
+              ],
+              "options": {
+                "formdata": {}
               }
             },
             "url": {
-              "raw": "https://{{host}}/api?key={{key}}&type=import&target={{target}}&category=certificate&certificate-name={{certificate-name}}&format={{format}}",
+              "raw": "https://{{host}}/api?key={{key}}&type=import&category=certificate&certificate-name={{certificate-name}}&format={{format}}",
               "protocol": "https",
               "host": [
                 "{{host}}"
@@ -7883,7 +7887,8 @@
                 {
                   "key": "target",
                   "value": "{{target}}",
-                  "description": "The Panorama template"
+                  "description": "The Panorama template",
+                  "disabled": true
                 },
                 {
                   "key": "category",
@@ -7909,7 +7914,7 @@
                 }
               ]
             },
-            "description": "Import a certificate to a Panorama template"
+            "description": "Import a certificate to a firewall"
           },
           "response": []
         },
