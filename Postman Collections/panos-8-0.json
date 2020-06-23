@@ -7990,7 +7990,7 @@
           "response": []
         },
         {
-          "name": "Import Private Key Copy",
+          "name": "Import Private Key",
           "_postman_id": "287d69a0-9eba-4177-a893-6a27fd579048",
           "protocolProfileBehavior": {
             "disableBodyPruning": true
