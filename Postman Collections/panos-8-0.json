@@ -7847,15 +7847,15 @@
               {
                 "key": "Content-Type",
                 "name": "Content-Type",
-                "value": "text/plain",
-                "type": "text"
+                "type": "text",
+                "value": "text/plain"
               }
             ],
             "body": {
               "mode": "formdata",
               "formdata": [
                 {
-                  "key": "",
+                  "key": "file",
                   "type": "file",
                   "src": "/Users/roberthagen/Downloads/cert.pem"
                 }
@@ -7885,9 +7885,9 @@
                   "description": "The API type"
                 },
                 {
+                  "description": "The Panorama template",
                   "key": "target",
                   "value": "{{target}}",
-                  "description": "The Panorama template",
                   "disabled": true
                 },
                 {
@@ -7901,10 +7901,10 @@
                   "description": "The certificate filename"
                 },
                 {
-                  "key": "passphrase",
-                  "value": "{{passphrase}}",
-                  "type": "text",
                   "description": "The private key passphrase",
+                  "key": "passphrase",
+                  "type": "text",
+                  "value": "{{passphrase}}",
                   "disabled": true
                 },
                 {
