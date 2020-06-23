@@ -7375,6 +7375,82 @@
                 "description": "Import a configuration file"
               },
               "response": []
+            },
+            {
+              "name": "Import Private Key Copy",
+              "_postman_id": "287d69a0-9eba-4177-a893-6a27fd579048",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "name": "Content-Type",
+                    "type": "text",
+                    "value": "text/plain"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "",
+                  "options": {
+                    "raw": {
+                      "language": "text"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "https://{{host}}/api?key={{key}}&type=import&target={{target}}&category=private-key&certificate-name={{certificate-name}}&passphrase={{passphrase}}&format={{format}}",
+                  "protocol": "https",
+                  "host": [
+                    "{{host}}"
+                  ],
+                  "path": [
+                    "api"
+                  ],
+                  "query": [
+                    {
+                      "key": "key",
+                      "value": "{{key}}",
+                      "description": "The API key"
+                    },
+                    {
+                      "key": "type",
+                      "value": "import",
+                      "description": "The API type"
+                    },
+                    {
+                      "key": "target",
+                      "value": "{{target}}",
+                      "description": "The Panorama template"
+                    },
+                    {
+                      "key": "category",
+                      "value": "private-key",
+                      "description": "The type of import"
+                    },
+                    {
+                      "key": "certificate-name",
+                      "value": "{{certificate-name}}",
+                      "description": "The certificate filename"
+                    },
+                    {
+                      "key": "passphrase",
+                      "value": "{{passphrase}}",
+                      "description": "The private key passphrase"
+                    },
+                    {
+                      "key": "format",
+                      "value": "{{format}}",
+                      "description": "PEM or DER"
+                    }
+                  ]
+                },
+                "description": "Import the private key to an existing certificate in a Panorama template"
+              },
+              "response": []
             }
           ],
           "_postman_id": "70fd8368-672a-4c01-8534-6409ae605ec2",
