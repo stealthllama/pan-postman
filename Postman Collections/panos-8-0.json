@@ -7938,7 +7938,7 @@
               }
             },
             "url": {
-              "raw": "https://{{host}}/api?key={{key}}&type=import&target={{target}}&category=keypair&certificate-name={{certificate-name}}&passphrase={{passphrase}}&format={{format}}",
+              "raw": "https://{{host}}/api?key={{key}}&type=import&category=keypair&certificate-name={{certificate-name}}&passphrase={{passphrase}}&format={{format}}",
               "protocol": "https",
               "host": [
                 "{{host}}"
@@ -7956,11 +7956,6 @@
                   "key": "type",
                   "value": "import",
                   "description": "The API type"
-                },
-                {
-                  "key": "target",
-                  "value": "{{target}}",
-                  "description": "The Panorama template"
                 },
                 {
                   "key": "category",
