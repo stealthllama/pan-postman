@@ -7885,12 +7885,6 @@
                   "description": "The API type"
                 },
                 {
-                  "description": "The Panorama template",
-                  "key": "target",
-                  "value": "{{target}}",
-                  "disabled": true
-                },
-                {
                   "key": "category",
                   "value": "certificate",
                   "description": "The type of import"
