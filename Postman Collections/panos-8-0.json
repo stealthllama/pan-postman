@@ -517,7 +517,7 @@
           "response": []
         },
         {
-          "name": "Add Dynamic Address Group Copy",
+          "name": "Add Custom URL Category",
           "_postman_id": "aee5557b-92dc-4953-b5e3-3567252510cf",
           "protocolProfileBehavior": {
             "disableBodyPruning": true
