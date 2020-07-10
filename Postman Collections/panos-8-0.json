@@ -1311,6 +1311,20 @@
       "item": [
         {
           "name": "Generate API key",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "id": "d1324464-0da5-42e8-ac17-5c4edf686178",
+                "exec": [
+                  "var jsonObject = xml2Json(responseBody);",
+                  "",
+                  "pm.environment.set(\"key\", jsonObject.response.result.key);"
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
           "_postman_id": "5a6eec54-51a0-9716-fa38-5f894bf3c2ff",
           "protocolProfileBehavior": {
             "disableBodyPruning": true
@@ -1328,10 +1342,13 @@
             ],
             "body": {
               "mode": "urlencoded",
-              "urlencoded": []
+              "urlencoded": [],
+              "options": {
+                "urlencoded": {}
+              }
             },
             "url": {
-              "raw": "https://{{host}}/api?type=keygen&user=apiuser&password=xf(bNEbQNNi6RnRv4Wz.DcEN.Bjb3X",
+              "raw": "https://{{host}}/api?type=keygen&user=admin&password=kh8uyQMfNqvAo)P=vusCoDucF9j7*wF",
               "protocol": "https",
               "host": [
                 "{{host}}"
@@ -1346,11 +1363,11 @@
                 },
                 {
                   "key": "user",
-                  "value": "apiuser"
+                  "value": "admin"
                 },
                 {
                   "key": "password",
-                  "value": "xf(bNEbQNNi6RnRv4Wz.DcEN.Bjb3X"
+                  "value": "kh8uyQMfNqvAo)P=vusCoDucF9j7*wF"
                 }
               ]
             },
