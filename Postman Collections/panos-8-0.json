@@ -439,7 +439,7 @@
                     }
                   ]
                 },
-                "description": "Unegister an IP addresses from a Dynamic Address Group"
+                "description": "Unregister an IP addresses from a Dynamic Address Group"
               },
               "response": []
             },
