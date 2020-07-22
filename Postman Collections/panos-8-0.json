@@ -442,6 +442,61 @@
                 "description": "Unegister an IP addresses from a Dynamic Address Group"
               },
               "response": []
+            },
+            {
+              "name": "Unregister IP Address Copy",
+              "_postman_id": "808f8914-4806-4451-9b8a-21debfd7ad20",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "auth": {
+                  "type": "noauth"
+                },
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/x-www-form-urlencoded"
+                  }
+                ],
+                "body": {
+                  "mode": "urlencoded",
+                  "urlencoded": [],
+                  "options": {
+                    "urlencoded": {}
+                  }
+                },
+                "url": {
+                  "raw": "https://{{host}}/api?key={{key}}&type=user-id&cmd=<uid-message><version>2.0</version><type>update</type><payload><unregister><entry ip=\"1.2.3.4\"><tag>testing</tag></entry></unregister></payload></uid-message>",
+                  "protocol": "https",
+                  "host": [
+                    "{{host}}"
+                  ],
+                  "path": [
+                    "api"
+                  ],
+                  "query": [
+                    {
+                      "key": "key",
+                      "value": "{{key}}",
+                      "description": "API key"
+                    },
+                    {
+                      "key": "type",
+                      "value": "user-id",
+                      "description": "API action"
+                    },
+                    {
+                      "key": "cmd",
+                      "value": "<uid-message><version>2.0</version><type>update</type><payload><unregister><entry ip=\"1.2.3.4\"><tag>testing</tag></entry></unregister></payload></uid-message>",
+                      "description": "API command"
+                    }
+                  ]
+                },
+                "description": "Unegister an IP addresses from a Dynamic Address Group"
+              },
+              "response": []
             }
           ],
           "_postman_id": "560daa2e-9b7c-42f8-be33-9651fed82031",
