@@ -444,7 +444,7 @@
               "response": []
             },
             {
-              "name": "Unregister IP Address Copy",
+              "name": "Show Registered IPs",
               "_postman_id": "808f8914-4806-4451-9b8a-21debfd7ad20",
               "protocolProfileBehavior": {
                 "disableBodyPruning": true
