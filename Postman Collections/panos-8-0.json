@@ -639,7 +639,7 @@
               "response": []
             },
             {
-              "name": "Tag User Copy",
+              "name": "Clear Registered Users",
               "_postman_id": "4393d951-e74e-4be3-aaba-ff47e9c42e8f",
               "protocolProfileBehavior": {
                 "disableBodyPruning": true
