@@ -553,7 +553,7 @@
                   }
                 },
                 "url": {
-                  "raw": "https://{{host}}/api?key={{key}}&type=user-id&cmd=<uid-message><version>2.0</version><type>update</type><payload><register><entry ip=\"5.5.5.5\"><tag><member>TestSrvs</member></tag></entry></register></payload></uid-message>",
+                  "raw": "https://{{host}}/api?key={{key}}&type=user-id&cmd=<uid-message><version>2.0</version><type>update</type><payload><register><entry name=\"agentsmith ip=7.7.7.7\"></entry></register></payload></uid-message>",
                   "protocol": "https",
                   "host": [
                     "{{host}}"
@@ -574,7 +574,7 @@
                     },
                     {
                       "key": "cmd",
-                      "value": "<uid-message><version>2.0</version><type>update</type><payload><register><entry ip=\"5.5.5.5\"><tag><member>TestSrvs</member></tag></entry></register></payload></uid-message>",
+                      "value": "<uid-message><version>2.0</version><type>update</type><payload><register><entry name=\"agentsmith ip=7.7.7.7\"></entry></register></payload></uid-message>",
                       "description": "API command"
                     }
                   ]
