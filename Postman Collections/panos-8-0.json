@@ -584,7 +584,7 @@
               "response": []
             },
             {
-              "name": "Register User and IP Copy",
+              "name": "Register Tag",
               "_postman_id": "f5fc18ea-6926-4857-b614-a3f0bb5d2414",
               "protocolProfileBehavior": {
                 "disableBodyPruning": true
