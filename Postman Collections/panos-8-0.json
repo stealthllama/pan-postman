@@ -497,7 +497,37 @@
                 "description": "Show all registered IPs and their tags"
               },
               "response": []
+            }
+          ],
+          "_postman_id": "560daa2e-9b7c-42f8-be33-9651fed82031",
+          "description": "PAN-OS API call specific to Dynamic Address Groups",
+          "event": [
+            {
+              "listen": "prerequest",
+              "script": {
+                "id": "2d1eff5c-d947-4585-a443-c331fb731882",
+                "type": "text/javascript",
+                "exec": [
+                  ""
+                ]
+              }
             },
+            {
+              "listen": "test",
+              "script": {
+                "id": "b17118b5-1d0c-4e5e-a291-ca90d337c1dd",
+                "type": "text/javascript",
+                "exec": [
+                  ""
+                ]
+              }
+            }
+          ],
+          "_postman_isSubFolder": true
+        },
+        {
+          "name": "Dynamic User Groups",
+          "item": [
             {
               "name": "Register IP Address Copy",
               "_postman_id": "51095d98-4379-4f68-91ca-89d641387127",
@@ -554,35 +584,6 @@
               "response": []
             }
           ],
-          "_postman_id": "560daa2e-9b7c-42f8-be33-9651fed82031",
-          "description": "PAN-OS API call specific to Dynamic Address Groups",
-          "event": [
-            {
-              "listen": "prerequest",
-              "script": {
-                "id": "2d1eff5c-d947-4585-a443-c331fb731882",
-                "type": "text/javascript",
-                "exec": [
-                  ""
-                ]
-              }
-            },
-            {
-              "listen": "test",
-              "script": {
-                "id": "b17118b5-1d0c-4e5e-a291-ca90d337c1dd",
-                "type": "text/javascript",
-                "exec": [
-                  ""
-                ]
-              }
-            }
-          ],
-          "_postman_isSubFolder": true
-        },
-        {
-          "name": "Dynamic User Groups",
-          "item": [],
           "_postman_id": "c65f65de-3847-405d-9ebe-222aab5dc01a",
           "_postman_isSubFolder": true
         },
