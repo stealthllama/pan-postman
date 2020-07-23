@@ -529,7 +529,7 @@
           "name": "Dynamic User Groups",
           "item": [
             {
-              "name": "Register User:IP",
+              "name": "Register User and IP",
               "_postman_id": "51095d98-4379-4f68-91ca-89d641387127",
               "protocolProfileBehavior": {
                 "disableBodyPruning": true
@@ -579,7 +579,7 @@
                     }
                   ]
                 },
-                "description": "Register an IP addresses to a Dynamic Address Group"
+                "description": "Register a user and their associated IP address"
               },
               "response": []
             }
