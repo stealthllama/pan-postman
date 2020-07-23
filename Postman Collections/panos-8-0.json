@@ -637,6 +637,61 @@
                 "description": "Map a user to a tag"
               },
               "response": []
+            },
+            {
+              "name": "Tag User Copy",
+              "_postman_id": "4393d951-e74e-4be3-aaba-ff47e9c42e8f",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "auth": {
+                  "type": "noauth"
+                },
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/x-www-form-urlencoded"
+                  }
+                ],
+                "body": {
+                  "mode": "urlencoded",
+                  "urlencoded": [],
+                  "options": {
+                    "urlencoded": {}
+                  }
+                },
+                "url": {
+                  "raw": "https://{{host}}/api?key={{key}}&type=user-id&cmd=<uid-message><version>2.0</version><type>update</type><payload><register-user><entry user=\"agentsmith\"><tag><member>matrix</member></tag></entry></register-user></payload></uid-message>",
+                  "protocol": "https",
+                  "host": [
+                    "{{host}}"
+                  ],
+                  "path": [
+                    "api"
+                  ],
+                  "query": [
+                    {
+                      "key": "key",
+                      "value": "{{key}}",
+                      "description": "API key"
+                    },
+                    {
+                      "key": "type",
+                      "value": "user-id",
+                      "description": "API action"
+                    },
+                    {
+                      "key": "cmd",
+                      "value": "<uid-message><version>2.0</version><type>update</type><payload><register-user><entry user=\"agentsmith\"><tag><member>matrix</member></tag></entry></register-user></payload></uid-message>",
+                      "description": "API command"
+                    }
+                  ]
+                },
+                "description": "Map a user to a tag"
+              },
+              "response": []
             }
           ],
           "_postman_id": "c65f65de-3847-405d-9ebe-222aab5dc01a",
