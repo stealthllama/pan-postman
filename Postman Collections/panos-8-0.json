@@ -634,7 +634,7 @@
                     }
                   ]
                 },
-                "description": "Register a user and their associated IP address"
+                "description": "Map a user to a tag"
               },
               "response": []
             }
