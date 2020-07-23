@@ -689,7 +689,7 @@
                     }
                   ]
                 },
-                "description": "Map a user to a tag"
+                "description": "Clear all registered users"
               },
               "response": []
             }
