@@ -8280,61 +8280,6 @@
           "name": "Dynamic User Groups",
           "item": [
             {
-              "name": "Register User and IP",
-              "_postman_id": "51095d98-4379-4f68-91ca-89d641387127",
-              "protocolProfileBehavior": {
-                "disableBodyPruning": true
-              },
-              "request": {
-                "auth": {
-                  "type": "noauth"
-                },
-                "method": "POST",
-                "header": [
-                  {
-                    "key": "Content-Type",
-                    "value": "application/x-www-form-urlencoded"
-                  }
-                ],
-                "body": {
-                  "mode": "urlencoded",
-                  "urlencoded": [],
-                  "options": {
-                    "urlencoded": {}
-                  }
-                },
-                "url": {
-                  "raw": "https://{{host}}/api?key={{key}}&type=user-id&cmd=<uid-message><version>1.0</version><type>update</type><payload><register><entry name=\"agentsmith\" ip=\"7.7.7.7\"></entry></register></payload></uid-message>",
-                  "protocol": "https",
-                  "host": [
-                    "{{host}}"
-                  ],
-                  "path": [
-                    "api"
-                  ],
-                  "query": [
-                    {
-                      "key": "key",
-                      "value": "{{key}}",
-                      "description": "API key"
-                    },
-                    {
-                      "key": "type",
-                      "value": "user-id",
-                      "description": "API action"
-                    },
-                    {
-                      "key": "cmd",
-                      "value": "<uid-message><version>1.0</version><type>update</type><payload><register><entry name=\"agentsmith\" ip=\"7.7.7.7\"></entry></register></payload></uid-message>",
-                      "description": "API command"
-                    }
-                  ]
-                },
-                "description": "Register a user and their associated IP address"
-              },
-              "response": []
-            },
-            {
               "name": "Tag User",
               "_postman_id": "f5fc18ea-6926-4857-b614-a3f0bb5d2414",
               "protocolProfileBehavior": {
@@ -8450,7 +8395,63 @@
         },
         {
           "name": "User IP Mapping",
-          "item": [],
+          "item": [
+            {
+              "name": "Register User and IP",
+              "_postman_id": "51095d98-4379-4f68-91ca-89d641387127",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "auth": {
+                  "type": "noauth"
+                },
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/x-www-form-urlencoded"
+                  }
+                ],
+                "body": {
+                  "mode": "urlencoded",
+                  "urlencoded": [],
+                  "options": {
+                    "urlencoded": {}
+                  }
+                },
+                "url": {
+                  "raw": "https://{{host}}/api?key={{key}}&type=user-id&cmd=<uid-message><version>1.0</version><type>update</type><payload><register><entry name=\"agentsmith\" ip=\"7.7.7.7\"></entry></register></payload></uid-message>",
+                  "protocol": "https",
+                  "host": [
+                    "{{host}}"
+                  ],
+                  "path": [
+                    "api"
+                  ],
+                  "query": [
+                    {
+                      "key": "key",
+                      "value": "{{key}}",
+                      "description": "API key"
+                    },
+                    {
+                      "key": "type",
+                      "value": "user-id",
+                      "description": "API action"
+                    },
+                    {
+                      "key": "cmd",
+                      "value": "<uid-message><version>1.0</version><type>update</type><payload><register><entry name=\"agentsmith\" ip=\"7.7.7.7\"></entry></register></payload></uid-message>",
+                      "description": "API command"
+                    }
+                  ]
+                },
+                "description": "Register a user and their associated IP address"
+              },
+              "response": []
+            }
+          ],
           "_postman_id": "6043c367-90dd-419e-9969-cfc8874be9e8",
           "_postman_isSubFolder": true
         }
