@@ -8420,7 +8420,7 @@
                   }
                 },
                 "url": {
-                  "raw": "https://{{host}}/api?key={{key}}&type=user-id&cmd=<uid-message><type>update</type><payload><clear><registered-users><all/></registered-users></clear></payload></uid-message>",
+                  "raw": "https://{{host}}/api?key={{key}}&type=user-id&cmd=<uid-message><type>update</type><payload><show><object><registered-users><all/></registered-users></object></show></payload></uid-message>",
                   "protocol": "https",
                   "host": [
                     "{{host}}"
@@ -8441,7 +8441,7 @@
                     },
                     {
                       "key": "cmd",
-                      "value": "<uid-message><type>update</type><payload><clear><registered-users><all/></registered-users></clear></payload></uid-message>",
+                      "value": "<uid-message><type>update</type><payload><show><object><registered-users><all/></registered-users></object></show></payload></uid-message>",
                       "description": "API command"
                     }
                   ]
