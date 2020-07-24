@@ -8088,7 +8088,7 @@
               "response": []
             },
             {
-              "name": "Register IP Address",
+              "name": "Tag IP Address",
               "_postman_id": "40323d4a-2284-b3aa-401c-9846d3455a3f",
               "protocolProfileBehavior": {
                 "disableBodyPruning": true
@@ -8135,7 +8135,7 @@
                     }
                   ]
                 },
-                "description": "Register an IP addresses to a Dynamic Address Group"
+                "description": "Map an IP addresses to one or more tags"
               },
               "response": []
             },
