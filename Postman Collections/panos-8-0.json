@@ -8310,7 +8310,7 @@
                   }
                 },
                 "url": {
-                  "raw": "https://{{host}}/api?key={{key}}&type=user-id&cmd=<uid-message><type>update</type><payload><register-user><entry user=\"agentsmith\"><tag><member>matrix</member><member timeout=\"0\">people</member><member timeout=\"3600\">agents</member></tag></entry></register-user></payload></uid-message>",
+                  "raw": "https://{{host}}/api?key={{key}}&type=user-id&cmd=<uid-message><type>update</type><payload><register-user><entry user=\"agentsmith\"><tag><member>matrix</member><member timeout=\"3600\">agents</member></tag></entry></register-user></payload></uid-message>",
                   "protocol": "https",
                   "host": [
                     "{{host}}"
@@ -8331,7 +8331,7 @@
                     },
                     {
                       "key": "cmd",
-                      "value": "<uid-message><type>update</type><payload><register-user><entry user=\"agentsmith\"><tag><member>matrix</member><member timeout=\"0\">people</member><member timeout=\"3600\">agents</member></tag></entry></register-user></payload></uid-message>",
+                      "value": "<uid-message><type>update</type><payload><register-user><entry user=\"agentsmith\"><tag><member>matrix</member><member timeout=\"3600\">agents</member></tag></entry></register-user></payload></uid-message>",
                       "description": "API command"
                     }
                   ]
