@@ -8073,7 +8073,7 @@
                     }
                   ]
                 },
-                "description": "Map an IP addresses to one or more tags"
+                "description": "Create a tag to IP mapping"
               },
               "response": []
             },
