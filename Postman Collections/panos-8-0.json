@@ -8589,6 +8589,20 @@
                 "description": "Show all registered IPs and their tags"
               },
               "response": []
+            },
+            {
+              "name": "Clear User Logins",
+              "_postman_id": "c7f5de0d-938a-40eb-8f7a-abacad5d009f",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": "",
+                "description": "Clear all user logins"
+              },
+              "response": []
             }
           ],
           "_postman_id": "6043c367-90dd-419e-9969-cfc8874be9e8",
