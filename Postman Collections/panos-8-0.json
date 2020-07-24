@@ -8391,7 +8391,7 @@
                     }
                   ]
                 },
-                "description": "Remove a user with one or more tags"
+                "description": "Remove a tag to user mapping"
               },
               "response": []
             },
