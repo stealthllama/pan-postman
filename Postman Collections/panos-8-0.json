@@ -8560,7 +8560,7 @@
                   }
                 },
                 "url": {
-                  "raw": "https://{{host}}/api?key={{key}}&type=op&cmd=<show><object><user-ip-mapping><all/></user-ip-mapping></object></show>",
+                  "raw": "https://{{host}}/api?key={{key}}&type=op&cmd=<show><user><ip-user-mapping-mp><all/></ip-user-mapping-mp></user></show>",
                   "protocol": "https",
                   "host": [
                     "{{host}}"
@@ -8581,7 +8581,7 @@
                     },
                     {
                       "key": "cmd",
-                      "value": "<show><object><user-ip-mapping><all/></user-ip-mapping></object></show>",
+                      "value": "<show><user><ip-user-mapping-mp><all/></ip-user-mapping-mp></user></show>",
                       "description": "API command"
                     }
                   ]
