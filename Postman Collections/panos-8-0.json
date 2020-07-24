@@ -8304,7 +8304,7 @@
                   }
                 },
                 "url": {
-                  "raw": "https://{{host}}/api?key={{key}}&type=user-id&cmd=<uid-message><version>1.0</version><type>update</type><payload><register-user><entry user=\"agentsmith\"><tag><member>matrix</member></tag></entry></register-user></payload></uid-message>",
+                  "raw": "https://{{host}}/api?key={{key}}&type=user-id&cmd=<uid-message><type>update</type><payload><register-user><entry user=\"agentsmith\"><tag><member>matrix</member><member timeout=\"0\">people</member><member timeout=\"3600\">agents</member></tag></entry></register-user></payload></uid-message>",
                   "protocol": "https",
                   "host": [
                     "{{host}}"
@@ -8325,7 +8325,7 @@
                     },
                     {
                       "key": "cmd",
-                      "value": "<uid-message><version>1.0</version><type>update</type><payload><register-user><entry user=\"agentsmith\"><tag><member>matrix</member></tag></entry></register-user></payload></uid-message>",
+                      "value": "<uid-message><type>update</type><payload><register-user><entry user=\"agentsmith\"><tag><member>matrix</member><member timeout=\"0\">people</member><member timeout=\"3600\">agents</member></tag></entry></register-user></payload></uid-message>",
                       "description": "API command"
                     }
                   ]
@@ -8446,6 +8446,29 @@
             }
           ],
           "_postman_id": "c65f65de-3847-405d-9ebe-222aab5dc01a",
+          "description": "Dynamic User Group API calls manage tag to user mappings (registered-user objects).\n\n",
+          "event": [
+            {
+              "listen": "prerequest",
+              "script": {
+                "id": "6d7d7b5c-e721-4705-ad67-2ec486990e84",
+                "type": "text/javascript",
+                "exec": [
+                  ""
+                ]
+              }
+            },
+            {
+              "listen": "test",
+              "script": {
+                "id": "2d0fe6b8-95fe-471f-b5db-e71e6b14bfe7",
+                "type": "text/javascript",
+                "exec": [
+                  ""
+                ]
+              }
+            }
+          ],
           "_postman_isSubFolder": true
         },
         {
