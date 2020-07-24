@@ -8473,6 +8473,61 @@
                 "description": "Create a user to IP mapping"
               },
               "response": []
+            },
+            {
+              "name": "Login User Copy",
+              "_postman_id": "0bb7c535-c304-40f0-af9a-9e4c34299600",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "auth": {
+                  "type": "noauth"
+                },
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/x-www-form-urlencoded"
+                  }
+                ],
+                "body": {
+                  "mode": "urlencoded",
+                  "urlencoded": [],
+                  "options": {
+                    "urlencoded": {}
+                  }
+                },
+                "url": {
+                  "raw": "https://{{host}}/api?key={{key}}&type=user-id&cmd=<uid-message><type>update</type><payload><login><entry name=\"agentsmith\" ip=\"1.2.3.4\" timeout=\"60\"/></login></payload></uid-message>",
+                  "protocol": "https",
+                  "host": [
+                    "{{host}}"
+                  ],
+                  "path": [
+                    "api"
+                  ],
+                  "query": [
+                    {
+                      "key": "key",
+                      "value": "{{key}}",
+                      "description": "API key"
+                    },
+                    {
+                      "key": "type",
+                      "value": "user-id",
+                      "description": "API action"
+                    },
+                    {
+                      "key": "cmd",
+                      "value": "<uid-message><type>update</type><payload><login><entry name=\"agentsmith\" ip=\"1.2.3.4\" timeout=\"60\"/></login></payload></uid-message>",
+                      "description": "API command"
+                    }
+                  ]
+                },
+                "description": "Create a user to IP mapping"
+              },
+              "response": []
             }
           ],
           "_postman_id": "6043c367-90dd-419e-9969-cfc8874be9e8",
