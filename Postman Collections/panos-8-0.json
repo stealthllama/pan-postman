@@ -8256,7 +8256,7 @@
               "response": []
             },
             {
-              "name": "Clear Registered IPs",
+              "name": "Clear Registered Users Copy",
               "_postman_id": "69f5b340-c241-4f96-9048-1cb8d9c32398",
               "protocolProfileBehavior": {
                 "disableBodyPruning": true
@@ -8306,7 +8306,7 @@
                     }
                   ]
                 },
-                "description": "Clear all registered IPs"
+                "description": "Clear all registered users"
               },
               "response": []
             }
