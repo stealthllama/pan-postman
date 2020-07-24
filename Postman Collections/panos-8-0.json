@@ -8341,61 +8341,6 @@
               "response": []
             },
             {
-              "name": "Clear Registered Users",
-              "_postman_id": "4393d951-e74e-4be3-aaba-ff47e9c42e8f",
-              "protocolProfileBehavior": {
-                "disableBodyPruning": true
-              },
-              "request": {
-                "auth": {
-                  "type": "noauth"
-                },
-                "method": "POST",
-                "header": [
-                  {
-                    "key": "Content-Type",
-                    "value": "application/x-www-form-urlencoded"
-                  }
-                ],
-                "body": {
-                  "mode": "urlencoded",
-                  "urlencoded": [],
-                  "options": {
-                    "urlencoded": {}
-                  }
-                },
-                "url": {
-                  "raw": "https://{{host}}/api?key={{key}}&type=user-id&cmd=<uid-message><version>1.0</version><type>update</type><payload><clear><registered-users><all/></registered-users></clear></payload></uid-message>",
-                  "protocol": "https",
-                  "host": [
-                    "{{host}}"
-                  ],
-                  "path": [
-                    "api"
-                  ],
-                  "query": [
-                    {
-                      "key": "key",
-                      "value": "{{key}}",
-                      "description": "API key"
-                    },
-                    {
-                      "key": "type",
-                      "value": "user-id",
-                      "description": "API action"
-                    },
-                    {
-                      "key": "cmd",
-                      "value": "<uid-message><version>1.0</version><type>update</type><payload><clear><registered-users><all/></registered-users></clear></payload></uid-message>",
-                      "description": "API command"
-                    }
-                  ]
-                },
-                "description": "Clear all registered users"
-              },
-              "response": []
-            },
-            {
               "name": "Register User Copy",
               "_postman_id": "0030f278-a3a5-4477-ae72-e497d5aafe9f",
               "protocolProfileBehavior": {
@@ -8447,6 +8392,61 @@
                   ]
                 },
                 "description": "Register a user with one or more tags"
+              },
+              "response": []
+            },
+            {
+              "name": "Clear Registered Users",
+              "_postman_id": "4393d951-e74e-4be3-aaba-ff47e9c42e8f",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "auth": {
+                  "type": "noauth"
+                },
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/x-www-form-urlencoded"
+                  }
+                ],
+                "body": {
+                  "mode": "urlencoded",
+                  "urlencoded": [],
+                  "options": {
+                    "urlencoded": {}
+                  }
+                },
+                "url": {
+                  "raw": "https://{{host}}/api?key={{key}}&type=user-id&cmd=<uid-message><version>1.0</version><type>update</type><payload><clear><registered-users><all/></registered-users></clear></payload></uid-message>",
+                  "protocol": "https",
+                  "host": [
+                    "{{host}}"
+                  ],
+                  "path": [
+                    "api"
+                  ],
+                  "query": [
+                    {
+                      "key": "key",
+                      "value": "{{key}}",
+                      "description": "API key"
+                    },
+                    {
+                      "key": "type",
+                      "value": "user-id",
+                      "description": "API action"
+                    },
+                    {
+                      "key": "cmd",
+                      "value": "<uid-message><version>1.0</version><type>update</type><payload><clear><registered-users><all/></registered-users></clear></payload></uid-message>",
+                      "description": "API command"
+                    }
+                  ]
+                },
+                "description": "Clear all registered users"
               },
               "response": []
             }
