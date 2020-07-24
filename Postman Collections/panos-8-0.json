@@ -8254,6 +8254,61 @@
                 "description": "Show all registered IPs and their tags"
               },
               "response": []
+            },
+            {
+              "name": "Clear Registered IPs",
+              "_postman_id": "69f5b340-c241-4f96-9048-1cb8d9c32398",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "auth": {
+                  "type": "noauth"
+                },
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/x-www-form-urlencoded"
+                  }
+                ],
+                "body": {
+                  "mode": "urlencoded",
+                  "urlencoded": [],
+                  "options": {
+                    "urlencoded": {}
+                  }
+                },
+                "url": {
+                  "raw": "https://{{host}}/api?key={{key}}&type=user-id&cmd=<uid-message><type>update</type><payload><clear><registered-ip><all/></registered-ip></clear></payload></uid-message>",
+                  "protocol": "https",
+                  "host": [
+                    "{{host}}"
+                  ],
+                  "path": [
+                    "api"
+                  ],
+                  "query": [
+                    {
+                      "key": "key",
+                      "value": "{{key}}",
+                      "description": "API key"
+                    },
+                    {
+                      "key": "type",
+                      "value": "user-id",
+                      "description": "API action"
+                    },
+                    {
+                      "key": "cmd",
+                      "value": "<uid-message><type>update</type><payload><clear><registered-ip><all/></registered-ip></clear></payload></uid-message>",
+                      "description": "API command"
+                    }
+                  ]
+                },
+                "description": "Clear all registered IPs"
+              },
+              "response": []
             }
           ],
           "_postman_id": "560daa2e-9b7c-42f8-be33-9651fed82031",
@@ -8453,61 +8508,6 @@
             {
               "name": "Clear Registered Users",
               "_postman_id": "4393d951-e74e-4be3-aaba-ff47e9c42e8f",
-              "protocolProfileBehavior": {
-                "disableBodyPruning": true
-              },
-              "request": {
-                "auth": {
-                  "type": "noauth"
-                },
-                "method": "POST",
-                "header": [
-                  {
-                    "key": "Content-Type",
-                    "value": "application/x-www-form-urlencoded"
-                  }
-                ],
-                "body": {
-                  "mode": "urlencoded",
-                  "urlencoded": [],
-                  "options": {
-                    "urlencoded": {}
-                  }
-                },
-                "url": {
-                  "raw": "https://{{host}}/api?key={{key}}&type=user-id&cmd=<uid-message><type>update</type><payload><clear><registered-users><all/></registered-users></clear></payload></uid-message>",
-                  "protocol": "https",
-                  "host": [
-                    "{{host}}"
-                  ],
-                  "path": [
-                    "api"
-                  ],
-                  "query": [
-                    {
-                      "key": "key",
-                      "value": "{{key}}",
-                      "description": "API key"
-                    },
-                    {
-                      "key": "type",
-                      "value": "user-id",
-                      "description": "API action"
-                    },
-                    {
-                      "key": "cmd",
-                      "value": "<uid-message><type>update</type><payload><clear><registered-users><all/></registered-users></clear></payload></uid-message>",
-                      "description": "API command"
-                    }
-                  ]
-                },
-                "description": "Clear all registered users"
-              },
-              "response": []
-            },
-            {
-              "name": "Clear Registered Users Copy",
-              "_postman_id": "69f5b340-c241-4f96-9048-1cb8d9c32398",
               "protocolProfileBehavior": {
                 "disableBodyPruning": true
               },
