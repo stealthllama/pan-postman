@@ -384,6 +384,71 @@
             "description": "Add a static address group"
           },
           "response": []
+        },
+        {
+          "name": "Add Dynamic Address Group",
+          "_postman_id": "c143c29d-dc28-477f-8cb6-ba54e7e680c2",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/x-www-form-urlencoded"
+              }
+            ],
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [],
+              "options": {
+                "urlencoded": {}
+              }
+            },
+            "url": {
+              "raw": "https://{{host}}/api?key={{key}}&type=config&action=set&xpath=/config/devices/entry[@name='localhost.localdomain']/vsys/entry[@name='vsys1']/address-group/entry[@name='blocked']&element=<description>This is a test DAG</description><dynamic><filter>outbound</filter></dynamic>",
+              "protocol": "https",
+              "host": [
+                "{{host}}"
+              ],
+              "path": [
+                "api"
+              ],
+              "query": [
+                {
+                  "key": "key",
+                  "value": "{{key}}",
+                  "description": "API key"
+                },
+                {
+                  "key": "type",
+                  "value": "config",
+                  "description": "API action"
+                },
+                {
+                  "key": "action",
+                  "value": "set",
+                  "description": "Config action"
+                },
+                {
+                  "key": "xpath",
+                  "value": "/config/devices/entry[@name='localhost.localdomain']/vsys/entry[@name='vsys1']/address-group/entry[@name='blocked']",
+                  "description": "Config xpath"
+                },
+                {
+                  "key": "element",
+                  "value": "<description>This is a test DAG</description><dynamic><filter>outbound</filter></dynamic>",
+                  "description": "Config value"
+                }
+              ]
+            },
+            "description": "Add a dynamic address group"
+          },
+          "response": []
         }
       ],
       "_postman_id": "8f8e678a-6776-fb66-0eeb-84053d6c20f9"
@@ -8132,68 +8197,6 @@
                   ]
                 },
                 "description": "Remove a tag to IP mapping"
-              },
-              "response": []
-            },
-            {
-              "name": "Add Dynamic Address Group",
-              "_postman_id": "c143c29d-dc28-477f-8cb6-ba54e7e680c2",
-              "protocolProfileBehavior": {
-                "disableBodyPruning": true
-              },
-              "request": {
-                "auth": {
-                  "type": "noauth"
-                },
-                "method": "POST",
-                "header": [
-                  {
-                    "key": "Content-Type",
-                    "value": "application/x-www-form-urlencoded"
-                  }
-                ],
-                "body": {
-                  "mode": "urlencoded",
-                  "urlencoded": []
-                },
-                "url": {
-                  "raw": "https://{{host}}/api?key={{key}}&type=config&action=set&xpath=/config/devices/entry[@name='localhost.localdomain']/vsys/entry[@name='vsys1']/address-group/entry[@name='test-dag']&element=<description>This is a test DAG</description><dynamic><filter>outbound</filter></dynamic>",
-                  "protocol": "https",
-                  "host": [
-                    "{{host}}"
-                  ],
-                  "path": [
-                    "api"
-                  ],
-                  "query": [
-                    {
-                      "key": "key",
-                      "value": "{{key}}",
-                      "description": "API key"
-                    },
-                    {
-                      "key": "type",
-                      "value": "config",
-                      "description": "API action"
-                    },
-                    {
-                      "key": "action",
-                      "value": "set",
-                      "description": "Config action"
-                    },
-                    {
-                      "key": "xpath",
-                      "value": "/config/devices/entry[@name='localhost.localdomain']/vsys/entry[@name='vsys1']/address-group/entry[@name='test-dag']",
-                      "description": "Config xpath"
-                    },
-                    {
-                      "key": "element",
-                      "value": "<description>This is a test DAG</description><dynamic><filter>outbound</filter></dynamic>",
-                      "description": "Config value"
-                    }
-                  ]
-                },
-                "description": "Add a dynamic address group"
               },
               "response": []
             },
