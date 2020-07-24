@@ -8026,7 +8026,7 @@
           "name": "Dynamic Address Groups",
           "item": [
             {
-              "name": "Tag IP Address",
+              "name": "Register IP",
               "_postman_id": "40323d4a-2284-b3aa-401c-9846d3455a3f",
               "protocolProfileBehavior": {
                 "disableBodyPruning": true
@@ -8133,61 +8133,6 @@
               "response": []
             },
             {
-              "name": "Show Registered IPs",
-              "_postman_id": "808f8914-4806-4451-9b8a-21debfd7ad20",
-              "protocolProfileBehavior": {
-                "disableBodyPruning": true
-              },
-              "request": {
-                "auth": {
-                  "type": "noauth"
-                },
-                "method": "POST",
-                "header": [
-                  {
-                    "key": "Content-Type",
-                    "value": "application/x-www-form-urlencoded"
-                  }
-                ],
-                "body": {
-                  "mode": "urlencoded",
-                  "urlencoded": [],
-                  "options": {
-                    "urlencoded": {}
-                  }
-                },
-                "url": {
-                  "raw": "https://{{host}}/api?key={{key}}&type=op&cmd=<show><object><registered-ip><all/></registered-ip></object></show>",
-                  "protocol": "https",
-                  "host": [
-                    "{{host}}"
-                  ],
-                  "path": [
-                    "api"
-                  ],
-                  "query": [
-                    {
-                      "key": "key",
-                      "value": "{{key}}",
-                      "description": "API key"
-                    },
-                    {
-                      "key": "type",
-                      "value": "op",
-                      "description": "API action"
-                    },
-                    {
-                      "key": "cmd",
-                      "value": "<show><object><registered-ip><all/></registered-ip></object></show>",
-                      "description": "API command"
-                    }
-                  ]
-                },
-                "description": "Show all registered IPs and their tags"
-              },
-              "response": []
-            },
-            {
               "name": "Add Dynamic Address Group",
               "_postman_id": "c143c29d-dc28-477f-8cb6-ba54e7e680c2",
               "protocolProfileBehavior": {
@@ -8246,6 +8191,61 @@
                   ]
                 },
                 "description": "Add a dynamic address group"
+              },
+              "response": []
+            },
+            {
+              "name": "Show Registered IPs",
+              "_postman_id": "808f8914-4806-4451-9b8a-21debfd7ad20",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "auth": {
+                  "type": "noauth"
+                },
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/x-www-form-urlencoded"
+                  }
+                ],
+                "body": {
+                  "mode": "urlencoded",
+                  "urlencoded": [],
+                  "options": {
+                    "urlencoded": {}
+                  }
+                },
+                "url": {
+                  "raw": "https://{{host}}/api?key={{key}}&type=op&cmd=<show><object><registered-ip><all/></registered-ip></object></show>",
+                  "protocol": "https",
+                  "host": [
+                    "{{host}}"
+                  ],
+                  "path": [
+                    "api"
+                  ],
+                  "query": [
+                    {
+                      "key": "key",
+                      "value": "{{key}}",
+                      "description": "API key"
+                    },
+                    {
+                      "key": "type",
+                      "value": "op",
+                      "description": "API action"
+                    },
+                    {
+                      "key": "cmd",
+                      "value": "<show><object><registered-ip><all/></registered-ip></object></show>",
+                      "description": "API command"
+                    }
+                  ]
+                },
+                "description": "Show all registered IPs and their tags"
               },
               "response": []
             }
