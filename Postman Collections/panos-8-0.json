@@ -8336,7 +8336,7 @@
                     }
                   ]
                 },
-                "description": "Register a user with one or more tags"
+                "description": "Create a tag to user mapping"
               },
               "response": []
             },
