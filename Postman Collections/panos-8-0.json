@@ -8341,7 +8341,7 @@
               "response": []
             },
             {
-              "name": "Register User Copy",
+              "name": "Unregister User",
               "_postman_id": "0030f278-a3a5-4477-ae72-e497d5aafe9f",
               "protocolProfileBehavior": {
                 "disableBodyPruning": true
