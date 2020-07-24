@@ -8396,8 +8396,8 @@
               "response": []
             },
             {
-              "name": "Clear Registered Users",
-              "_postman_id": "4393d951-e74e-4be3-aaba-ff47e9c42e8f",
+              "name": "Show Registered Users",
+              "_postman_id": "a1b5c9b5-ded7-4490-b2c6-223c54efd40f",
               "protocolProfileBehavior": {
                 "disableBodyPruning": true
               },
@@ -8446,13 +8446,13 @@
                     }
                   ]
                 },
-                "description": "Clear all registered users"
+                "description": "Show all registered users"
               },
               "response": []
             },
             {
-              "name": "Clear Registered Users Copy",
-              "_postman_id": "a1b5c9b5-ded7-4490-b2c6-223c54efd40f",
+              "name": "Clear Registered Users",
+              "_postman_id": "4393d951-e74e-4be3-aaba-ff47e9c42e8f",
               "protocolProfileBehavior": {
                 "disableBodyPruning": true
               },
