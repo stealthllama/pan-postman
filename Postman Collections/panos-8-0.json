@@ -8391,7 +8391,7 @@
                     }
                   ]
                 },
-                "description": "Register a user with one or more tags"
+                "description": "Remove a user with one or more tags"
               },
               "response": []
             },
