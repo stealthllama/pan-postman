@@ -8388,14 +8388,7 @@
                 "description": "Clear all registered users"
               },
               "response": []
-            }
-          ],
-          "_postman_id": "c65f65de-3847-405d-9ebe-222aab5dc01a",
-          "_postman_isSubFolder": true
-        },
-        {
-          "name": "User IP Mapping",
-          "item": [
+            },
             {
               "name": "Register User and IP",
               "_postman_id": "51095d98-4379-4f68-91ca-89d641387127",
@@ -8452,6 +8445,12 @@
               "response": []
             }
           ],
+          "_postman_id": "c65f65de-3847-405d-9ebe-222aab5dc01a",
+          "_postman_isSubFolder": true
+        },
+        {
+          "name": "User IP Mapping",
+          "item": [],
           "_postman_id": "6043c367-90dd-419e-9969-cfc8874be9e8",
           "_postman_isSubFolder": true
         }
