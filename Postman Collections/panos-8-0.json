@@ -8470,7 +8470,7 @@
                     }
                   ]
                 },
-                "description": "Register a user and their associated IP address"
+                "description": "Create a user to IP mapping"
               },
               "response": []
             }
