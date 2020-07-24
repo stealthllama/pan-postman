@@ -8081,7 +8081,7 @@
               "response": []
             },
             {
-              "name": "Remove IP Address",
+              "name": "Unregister IP",
               "_postman_id": "afe89a4a-98ed-209e-95b9-a5f0fc85a09c",
               "protocolProfileBehavior": {
                 "disableBodyPruning": true
@@ -8105,7 +8105,7 @@
                   }
                 },
                 "url": {
-                  "raw": "https://{{host}}/api?key={{key}}&type=user-id&cmd=<uid-message><version>2.0</version><type>update</type><payload><unregister><entry ip=\"1.2.3.4\"><tag>testing</tag></entry></unregister></payload></uid-message>",
+                  "raw": "https://{{host}}/api?key={{key}}&type=user-id&cmd=<uid-message><version>2.0</version><type>update</type><payload><unregister><entry ip=\"joecool\"></entry></unregister></payload></uid-message>",
                   "protocol": "https",
                   "host": [
                     "{{host}}"
@@ -8126,12 +8126,12 @@
                     },
                     {
                       "key": "cmd",
-                      "value": "<uid-message><version>2.0</version><type>update</type><payload><unregister><entry ip=\"1.2.3.4\"><tag>testing</tag></entry></unregister></payload></uid-message>",
+                      "value": "<uid-message><version>2.0</version><type>update</type><payload><unregister><entry ip=\"joecool\"></entry></unregister></payload></uid-message>",
                       "description": "API command"
                     }
                   ]
                 },
-                "description": "Unregister an IP addresses from a Dynamic Address Group"
+                "description": "Remove a tag to IP mapping"
               },
               "response": []
             },
