@@ -8254,61 +8254,6 @@
                 "description": "Show all registered IPs and their tags"
               },
               "response": []
-            },
-            {
-              "name": "Show Registered IPs Copy",
-              "_postman_id": "da452d8f-aa74-4646-a0bf-359b89a991ea",
-              "protocolProfileBehavior": {
-                "disableBodyPruning": true
-              },
-              "request": {
-                "auth": {
-                  "type": "noauth"
-                },
-                "method": "POST",
-                "header": [
-                  {
-                    "key": "Content-Type",
-                    "value": "application/x-www-form-urlencoded"
-                  }
-                ],
-                "body": {
-                  "mode": "urlencoded",
-                  "urlencoded": [],
-                  "options": {
-                    "urlencoded": {}
-                  }
-                },
-                "url": {
-                  "raw": "https://{{host}}/api?key={{key}}&type=op&cmd=<show><object><registered-ip><all/></registered-ip></object></show>",
-                  "protocol": "https",
-                  "host": [
-                    "{{host}}"
-                  ],
-                  "path": [
-                    "api"
-                  ],
-                  "query": [
-                    {
-                      "key": "key",
-                      "value": "{{key}}",
-                      "description": "API key"
-                    },
-                    {
-                      "key": "type",
-                      "value": "op",
-                      "description": "API action"
-                    },
-                    {
-                      "key": "cmd",
-                      "value": "<show><object><registered-ip><all/></registered-ip></object></show>",
-                      "description": "API command"
-                    }
-                  ]
-                },
-                "description": "Show all registered IPs and their tags"
-              },
-              "response": []
             }
           ],
           "_postman_id": "560daa2e-9b7c-42f8-be33-9651fed82031",
@@ -8587,6 +8532,61 @@
                   ]
                 },
                 "description": "Remove a user to IP mapping"
+              },
+              "response": []
+            },
+            {
+              "name": "Show Registered IPs Copy",
+              "_postman_id": "da452d8f-aa74-4646-a0bf-359b89a991ea",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "auth": {
+                  "type": "noauth"
+                },
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/x-www-form-urlencoded"
+                  }
+                ],
+                "body": {
+                  "mode": "urlencoded",
+                  "urlencoded": [],
+                  "options": {
+                    "urlencoded": {}
+                  }
+                },
+                "url": {
+                  "raw": "https://{{host}}/api?key={{key}}&type=op&cmd=<show><object><registered-ip><all/></registered-ip></object></show>",
+                  "protocol": "https",
+                  "host": [
+                    "{{host}}"
+                  ],
+                  "path": [
+                    "api"
+                  ],
+                  "query": [
+                    {
+                      "key": "key",
+                      "value": "{{key}}",
+                      "description": "API key"
+                    },
+                    {
+                      "key": "type",
+                      "value": "op",
+                      "description": "API action"
+                    },
+                    {
+                      "key": "cmd",
+                      "value": "<show><object><registered-ip><all/></registered-ip></object></show>",
+                      "description": "API command"
+                    }
+                  ]
+                },
+                "description": "Show all registered IPs and their tags"
               },
               "response": []
             }
