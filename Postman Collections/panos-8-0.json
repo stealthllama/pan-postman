@@ -8330,7 +8330,7 @@
                     }
                   ]
                 },
-                "description": "Map a user to a tag"
+                "description": "Map a user to one or more tags"
               },
               "response": []
             },
