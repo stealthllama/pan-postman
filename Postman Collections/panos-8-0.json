@@ -8365,7 +8365,7 @@
                   }
                 },
                 "url": {
-                  "raw": "https://{{host}}/api?key={{key}}&type=user-id&cmd=<uid-message><type>update</type><payload><unregister-user><entry user=\"agentsmith\"><tag><member>matrix</member><member timeout=\"3600\">agents</member></tag></entry></unregister-user></payload></uid-message>",
+                  "raw": "https://{{host}}/api?key={{key}}&type=user-id&cmd=<uid-message><type>update</type><payload><unregister-user><entry user=\"agentsmith\"><tag><member>matrix</member><member>agents</member></tag></entry></unregister-user></payload></uid-message>",
                   "protocol": "https",
                   "host": [
                     "{{host}}"
@@ -8386,7 +8386,7 @@
                     },
                     {
                       "key": "cmd",
-                      "value": "<uid-message><type>update</type><payload><unregister-user><entry user=\"agentsmith\"><tag><member>matrix</member><member timeout=\"3600\">agents</member></tag></entry></unregister-user></payload></uid-message>",
+                      "value": "<uid-message><type>update</type><payload><unregister-user><entry user=\"agentsmith\"><tag><member>matrix</member><member>agents</member></tag></entry></unregister-user></payload></uid-message>",
                       "description": "API command"
                     }
                   ]
@@ -8420,7 +8420,7 @@
                   }
                 },
                 "url": {
-                  "raw": "https://{{host}}/api?key={{key}}&type=user-id&cmd=<uid-message><version>1.0</version><type>update</type><payload><clear><registered-users><all/></registered-users></clear></payload></uid-message>",
+                  "raw": "https://{{host}}/api?key={{key}}&type=user-id&cmd=<uid-message><type>update</type><payload><clear><registered-users><all/></registered-users></clear></payload></uid-message>",
                   "protocol": "https",
                   "host": [
                     "{{host}}"
@@ -8441,7 +8441,7 @@
                     },
                     {
                       "key": "cmd",
-                      "value": "<uid-message><version>1.0</version><type>update</type><payload><clear><registered-users><all/></registered-users></clear></payload></uid-message>",
+                      "value": "<uid-message><type>update</type><payload><clear><registered-users><all/></registered-users></clear></payload></uid-message>",
                       "description": "API command"
                     }
                   ]
