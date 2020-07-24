@@ -608,7 +608,7 @@
                   }
                 },
                 "url": {
-                  "raw": "https://{{host}}/api?key={{key}}&type=user-id&cmd=<uid-message><version>2.0</version><type>update</type><payload><register-user><entry user=\"agentsmith\"><tag><member>matrix</member></tag></entry></register-user></payload></uid-message>",
+                  "raw": "https://{{host}}/api?key={{key}}&type=user-id&cmd=<uid-message><version>1.0</version><type>update</type><payload><register-user><entry user=\"agentsmith\"><tag><member>matrix</member></tag></entry></register-user></payload></uid-message>",
                   "protocol": "https",
                   "host": [
                     "{{host}}"
@@ -629,7 +629,7 @@
                     },
                     {
                       "key": "cmd",
-                      "value": "<uid-message><version>2.0</version><type>update</type><payload><register-user><entry user=\"agentsmith\"><tag><member>matrix</member></tag></entry></register-user></payload></uid-message>",
+                      "value": "<uid-message><version>1.0</version><type>update</type><payload><register-user><entry user=\"agentsmith\"><tag><member>matrix</member></tag></entry></register-user></payload></uid-message>",
                       "description": "API command"
                     }
                   ]
@@ -8444,6 +8444,11 @@
         }
       ],
       "_postman_id": "df1520c0-c4e9-4fb8-980e-aa2e62582a9c"
+    },
+    {
+      "name": "User-ID",
+      "item": [],
+      "_postman_id": "ba99ae11-7be9-49ef-95a5-0b265ef545ad"
     }
   ],
   "event": [
