@@ -8050,7 +8050,7 @@
                   }
                 },
                 "url": {
-                  "raw": "https://{{host}}/api?key={{key}}&type=user-id&cmd=<uid-message><type>update</type><payload><register><entry ip=\"1.2.3.4\"><tag><member>testing</member><member>development</member></tag></entry></register></payload></uid-message>",
+                  "raw": "https://{{host}}/api?key={{key}}&type=user-id&cmd=<uid-message><type>update</type><payload><register><entry ip=\"1.2.3.4\" timeout=\"60\"><tag><member timeout=\"60\">testing</member><member timeout=\"60\">development</member></tag></entry></register></payload></uid-message>",
                   "protocol": "https",
                   "host": [
                     "{{host}}"
@@ -8071,7 +8071,7 @@
                     },
                     {
                       "key": "cmd",
-                      "value": "<uid-message><type>update</type><payload><register><entry ip=\"1.2.3.4\"><tag><member>testing</member><member>development</member></tag></entry></register></payload></uid-message>",
+                      "value": "<uid-message><type>update</type><payload><register><entry ip=\"1.2.3.4\" timeout=\"60\"><tag><member timeout=\"60\">testing</member><member timeout=\"60\">development</member></tag></entry></register></payload></uid-message>",
                       "description": "API command"
                     }
                   ]
