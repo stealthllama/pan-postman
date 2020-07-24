@@ -8444,7 +8444,7 @@
                   }
                 },
                 "url": {
-                  "raw": "https://{{host}}/api?key={{key}}&type=user-id&cmd=<uid-message><version>1.0</version><type>update</type><payload><register><entry name=\"agentsmith\" ip=\"7.7.7.7\"></entry></register></payload></uid-message>",
+                  "raw": "https://{{host}}/api?key={{key}}&type=user-id&cmd=<uid-message><type>update</type><payload><login><entry name=\"agentsmith\" ip=\"1.2.3.4\" timeout=\"60\"/></login></payload></uid-message>",
                   "protocol": "https",
                   "host": [
                     "{{host}}"
@@ -8465,7 +8465,7 @@
                     },
                     {
                       "key": "cmd",
-                      "value": "<uid-message><version>1.0</version><type>update</type><payload><register><entry name=\"agentsmith\" ip=\"7.7.7.7\"></entry></register></payload></uid-message>",
+                      "value": "<uid-message><type>update</type><payload><login><entry name=\"agentsmith\" ip=\"1.2.3.4\" timeout=\"60\"/></login></payload></uid-message>",
                       "description": "API command"
                     }
                   ]
