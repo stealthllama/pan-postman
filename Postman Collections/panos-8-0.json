@@ -8280,7 +8280,7 @@
           "name": "Dynamic User Groups",
           "item": [
             {
-              "name": "Tag User",
+              "name": "Register User",
               "_postman_id": "f5fc18ea-6926-4857-b614-a3f0bb5d2414",
               "protocolProfileBehavior": {
                 "disableBodyPruning": true
