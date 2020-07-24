@@ -8475,7 +8475,7 @@
               "response": []
             },
             {
-              "name": "Login User Copy",
+              "name": "Logout User",
               "_postman_id": "0bb7c535-c304-40f0-af9a-9e4c34299600",
               "protocolProfileBehavior": {
                 "disableBodyPruning": true
@@ -8525,7 +8525,7 @@
                     }
                   ]
                 },
-                "description": "Create a user to IP mapping"
+                "description": "Remove a user to IP mapping"
               },
               "response": []
             }
