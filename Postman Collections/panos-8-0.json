@@ -8597,9 +8597,32 @@
                 "disableBodyPruning": true
               },
               "request": {
-                "method": "GET",
+                "method": "POST",
                 "header": [],
-                "url": "",
+                "url": {
+                  "raw": "https://{{host}}/api?key={{key}}&type=op&cmd=<clear><user-cache-mp><all/></user-cache-mp></clear>",
+                  "protocol": "https",
+                  "host": [
+                    "{{host}}"
+                  ],
+                  "path": [
+                    "api"
+                  ],
+                  "query": [
+                    {
+                      "key": "key",
+                      "value": "{{key}}"
+                    },
+                    {
+                      "key": "type",
+                      "value": "op"
+                    },
+                    {
+                      "key": "cmd",
+                      "value": "<clear><user-cache-mp><all/></user-cache-mp></clear>"
+                    }
+                  ]
+                },
                 "description": "Clear all user logins"
               },
               "response": []
