@@ -8423,7 +8423,7 @@
           "_postman_isSubFolder": true
         },
         {
-          "name": "User IP Mapping",
+          "name": "User IP Mappings",
           "item": [
             {
               "name": "Login User",
@@ -8536,7 +8536,7 @@
               "response": []
             },
             {
-              "name": "Show Registered IPs Copy",
+              "name": "Show User Logins",
               "_postman_id": "da452d8f-aa74-4646-a0bf-359b89a991ea",
               "protocolProfileBehavior": {
                 "disableBodyPruning": true
