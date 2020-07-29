@@ -8091,7 +8091,7 @@
                     }
                   ]
                 },
-                "description": "Import the private key to an existing certificate in a firewall"
+                "description": "Import a high-availability key"
               },
               "response": []
             }
