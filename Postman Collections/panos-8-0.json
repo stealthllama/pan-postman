@@ -8050,7 +8050,7 @@
                   }
                 },
                 "url": {
-                  "raw": "https://{{host}}/api?key={{key}}&type=import&category=private-key&certificate-name={{certificate-name}}&passphrase={{passphrase}}&format={{format}}",
+                  "raw": "https://{{host}}/api?key={{key}}&type=import&category=high-availability-key",
                   "protocol": "https",
                   "host": [
                     "{{host}}"
@@ -8071,23 +8071,8 @@
                     },
                     {
                       "key": "category",
-                      "value": "private-key",
+                      "value": "high-availability-key",
                       "description": "The type of import"
-                    },
-                    {
-                      "key": "certificate-name",
-                      "value": "{{certificate-name}}",
-                      "description": "The certificate filename"
-                    },
-                    {
-                      "key": "passphrase",
-                      "value": "{{passphrase}}",
-                      "description": "The private key passphrase"
-                    },
-                    {
-                      "key": "format",
-                      "value": "{{format}}",
-                      "description": "PEM or DER"
                     }
                   ]
                 },
