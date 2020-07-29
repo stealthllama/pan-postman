@@ -8102,7 +8102,8 @@
                     {
                       "key": "file",
                       "type": "file",
-                      "value": null
+                      "value": null,
+                      "disabled": true
                     }
                   ],
                   "options": {
