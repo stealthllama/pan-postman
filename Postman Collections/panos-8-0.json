@@ -8110,7 +8110,7 @@
                   }
                 },
                 "url": {
-                  "raw": "https://{{host}}/api?key={{key}}&type=import&category=high-availability-key",
+                  "raw": "https://{{host}}/api?key={{key}}&type=export&category=high-availability-key",
                   "protocol": "https",
                   "host": [
                     "{{host}}"
@@ -8126,7 +8126,7 @@
                     },
                     {
                       "key": "type",
-                      "value": "import",
+                      "value": "export",
                       "description": "The API type"
                     },
                     {
