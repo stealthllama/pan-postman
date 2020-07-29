@@ -8081,7 +8081,7 @@
               "response": []
             },
             {
-              "name": "Import HA Key Copy",
+              "name": "Export HA Key",
               "_postman_id": "ec2f4e0e-7706-46d5-9ba0-08b8536e7ebc",
               "protocolProfileBehavior": {
                 "disableBodyPruning": true
@@ -8136,7 +8136,7 @@
                     }
                   ]
                 },
-                "description": "Import a high-availability key"
+                "description": "Export a high-availability key"
               },
               "response": []
             }
