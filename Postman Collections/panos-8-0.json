@@ -8079,6 +8079,66 @@
                 "description": "Import a high-availability key"
               },
               "response": []
+            },
+            {
+              "name": "Import HA Key Copy",
+              "_postman_id": "ec2f4e0e-7706-46d5-9ba0-08b8536e7ebc",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "name": "Content-Type",
+                    "type": "text",
+                    "value": "text/plain"
+                  }
+                ],
+                "body": {
+                  "mode": "formdata",
+                  "formdata": [
+                    {
+                      "key": "file",
+                      "type": "file",
+                      "value": null
+                    }
+                  ],
+                  "options": {
+                    "formdata": {}
+                  }
+                },
+                "url": {
+                  "raw": "https://{{host}}/api?key={{key}}&type=import&category=high-availability-key",
+                  "protocol": "https",
+                  "host": [
+                    "{{host}}"
+                  ],
+                  "path": [
+                    "api"
+                  ],
+                  "query": [
+                    {
+                      "key": "key",
+                      "value": "{{key}}",
+                      "description": "The API key"
+                    },
+                    {
+                      "key": "type",
+                      "value": "import",
+                      "description": "The API type"
+                    },
+                    {
+                      "key": "category",
+                      "value": "high-availability-key",
+                      "description": "The type of import"
+                    }
+                  ]
+                },
+                "description": "Import a high-availability key"
+              },
+              "response": []
             }
           ],
           "_postman_id": "2008deea-d3e4-44ed-b3c8-8e8bb077cfc5",
