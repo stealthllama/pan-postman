@@ -8011,9 +8011,17 @@
                 "description": "Import the private key to an existing certificate in a firewall"
               },
               "response": []
-            },
+            }
+          ],
+          "_postman_id": "270cbbe9-ad93-427c-a2fb-0deb811e1e2c",
+          "description": "Import/export SSL certificates and private keys",
+          "_postman_isSubFolder": true
+        },
+        {
+          "name": "High Availability Keys",
+          "item": [
             {
-              "name": "Import Private Key Copy",
+              "name": "Import HA Key",
               "_postman_id": "5b18add6-4fef-4e20-94ee-f3ee461179f9",
               "protocolProfileBehavior": {
                 "disableBodyPruning": true
@@ -8088,13 +8096,6 @@
               "response": []
             }
           ],
-          "_postman_id": "270cbbe9-ad93-427c-a2fb-0deb811e1e2c",
-          "description": "Import/export SSL certificates and private keys",
-          "_postman_isSubFolder": true
-        },
-        {
-          "name": "High Availability Keys",
-          "item": [],
           "_postman_id": "2008deea-d3e4-44ed-b3c8-8e8bb077cfc5",
           "description": "Import/export high availability SSH keys",
           "_postman_isSubFolder": true
