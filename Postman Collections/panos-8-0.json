@@ -7794,6 +7794,13 @@
           "_postman_isSubFolder": true
         },
         {
+          "name": "High Availability Keys",
+          "item": [],
+          "_postman_id": "2008deea-d3e4-44ed-b3c8-8e8bb077cfc5",
+          "description": "Import/export high availability SSH keys",
+          "_postman_isSubFolder": true
+        },
+        {
           "name": "Import Certificate",
           "_postman_id": "496e2554-ede3-4131-9ecc-ada88df83ab0",
           "protocolProfileBehavior": {
