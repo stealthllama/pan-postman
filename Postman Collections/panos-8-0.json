@@ -8042,7 +8042,7 @@
                     {
                       "key": "file",
                       "type": "file",
-                      "src": "/Users/roberthagen/Downloads/privkey.pem"
+                      "value": null
                     }
                   ],
                   "options": {
