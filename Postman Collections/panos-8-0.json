@@ -8011,6 +8011,81 @@
                 "description": "Import the private key to an existing certificate in a firewall"
               },
               "response": []
+            },
+            {
+              "name": "Import Private Key Copy",
+              "_postman_id": "5b18add6-4fef-4e20-94ee-f3ee461179f9",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "name": "Content-Type",
+                    "type": "text",
+                    "value": "text/plain"
+                  }
+                ],
+                "body": {
+                  "mode": "formdata",
+                  "formdata": [
+                    {
+                      "key": "file",
+                      "type": "file",
+                      "src": "/Users/roberthagen/Downloads/privkey.pem"
+                    }
+                  ],
+                  "options": {
+                    "formdata": {}
+                  }
+                },
+                "url": {
+                  "raw": "https://{{host}}/api?key={{key}}&type=import&category=private-key&certificate-name={{certificate-name}}&passphrase={{passphrase}}&format={{format}}",
+                  "protocol": "https",
+                  "host": [
+                    "{{host}}"
+                  ],
+                  "path": [
+                    "api"
+                  ],
+                  "query": [
+                    {
+                      "key": "key",
+                      "value": "{{key}}",
+                      "description": "The API key"
+                    },
+                    {
+                      "key": "type",
+                      "value": "import",
+                      "description": "The API type"
+                    },
+                    {
+                      "key": "category",
+                      "value": "private-key",
+                      "description": "The type of import"
+                    },
+                    {
+                      "key": "certificate-name",
+                      "value": "{{certificate-name}}",
+                      "description": "The certificate filename"
+                    },
+                    {
+                      "key": "passphrase",
+                      "value": "{{passphrase}}",
+                      "description": "The private key passphrase"
+                    },
+                    {
+                      "key": "format",
+                      "value": "{{format}}",
+                      "description": "PEM or DER"
+                    }
+                  ]
+                },
+                "description": "Import the private key to an existing certificate in a firewall"
+              },
+              "response": []
             }
           ],
           "_postman_id": "270cbbe9-ad93-427c-a2fb-0deb811e1e2c",
