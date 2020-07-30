@@ -4093,7 +4093,21 @@
       "item": [
         {
           "name": "Certificates",
-          "item": [],
+          "item": [
+            {
+              "name": "Generate CSR",
+              "_postman_id": "8fd95554-8c85-44c3-ae99-3ff68862fd4f",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": ""
+              },
+              "response": []
+            }
+          ],
           "_postman_id": "bd4f4c86-a073-4c31-85a9-588b521a8747",
           "_postman_isSubFolder": true
         },
