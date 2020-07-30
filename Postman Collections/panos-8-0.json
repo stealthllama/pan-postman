@@ -7990,7 +7990,7 @@
                     }
                   ]
                 },
-                "description": "Import a certificate to a firewall"
+                "description": "Export a certificate signing request"
               },
               "response": []
             },
