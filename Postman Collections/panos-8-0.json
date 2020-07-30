@@ -4101,9 +4101,32 @@
                 "disableBodyPruning": true
               },
               "request": {
-                "method": "GET",
+                "method": "POST",
                 "header": [],
-                "url": ""
+                "url": {
+                  "raw": "https://{{host}}/api?key={{key}}&type=op&cmd=<request><certificate><generate><certificate-name>Blah Cert</certificate-name><name>blah.org</name><algorithm><RSA><rsa-nbits>2048</rsa-nbits></RSA></algorithm><digest>sha256</digest><ca>no</ca><signed-by>external</signed-by></generate></certificate></request>",
+                  "protocol": "https",
+                  "host": [
+                    "{{host}}"
+                  ],
+                  "path": [
+                    "api"
+                  ],
+                  "query": [
+                    {
+                      "key": "key",
+                      "value": "{{key}}"
+                    },
+                    {
+                      "key": "type",
+                      "value": "op"
+                    },
+                    {
+                      "key": "cmd",
+                      "value": "<request><certificate><generate><certificate-name>Blah Cert</certificate-name><name>blah.org</name><algorithm><RSA><rsa-nbits>2048</rsa-nbits></RSA></algorithm><digest>sha256</digest><ca>no</ca><signed-by>external</signed-by></generate></certificate></request>"
+                    }
+                  ]
+                }
               },
               "response": []
             }
