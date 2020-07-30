@@ -7935,19 +7935,13 @@
                 ],
                 "body": {
                   "mode": "formdata",
-                  "formdata": [
-                    {
-                      "key": "file",
-                      "type": "file",
-                      "src": "/Users/roberthagen/Downloads/cert.pem"
-                    }
-                  ],
+                  "formdata": [],
                   "options": {
                     "formdata": {}
                   }
                 },
                 "url": {
-                  "raw": "https://{{host}}/api?key={{key}}&type=import&category=certificate&certificate-name={{certificate-name}}&format={{format}}",
+                  "raw": "https://{{host}}/api?key={{key}}&type=export&category=certificate&certificate-name=Foo Cert&format=pkcs10&include-key=no",
                   "protocol": "https",
                   "host": [
                     "{{host}}"
@@ -7963,7 +7957,7 @@
                     },
                     {
                       "key": "type",
-                      "value": "import",
+                      "value": "export",
                       "description": "The API type"
                     },
                     {
@@ -7973,20 +7967,18 @@
                     },
                     {
                       "key": "certificate-name",
-                      "value": "{{certificate-name}}",
+                      "value": "Foo Cert",
                       "description": "The certificate filename"
                     },
                     {
-                      "description": "The private key passphrase",
-                      "key": "passphrase",
-                      "type": "text",
-                      "value": "{{passphrase}}",
-                      "disabled": true
+                      "key": "format",
+                      "value": "pkcs10",
+                      "description": "PEM or DER"
                     },
                     {
-                      "key": "format",
-                      "value": "{{format}}",
-                      "description": "PEM or DER"
+                      "key": "include-key",
+                      "value": "no",
+                      "type": "text"
                     }
                   ]
                 },
