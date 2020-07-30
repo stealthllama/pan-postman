@@ -8935,6 +8935,11 @@
         }
       ],
       "_postman_id": "ba99ae11-7be9-49ef-95a5-0b265ef545ad"
+    },
+    {
+      "name": "Configuration",
+      "item": [],
+      "_postman_id": "b9f8d58b-6f18-4efd-b99c-c38fe7b0a65c"
     }
   ],
   "event": [
