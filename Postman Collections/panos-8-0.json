@@ -14,6 +14,30 @@
           "item": [
             {
               "name": "Get Security Rule",
+              "event": [
+                {
+                  "listen": "test",
+                  "script": {
+                    "id": "0022c888-7e34-4c93-8668-0026e46a22bb",
+                    "exec": [
+                      "pm.test(\"Your test name\", function () {",
+                      "",
+                      "    // var xml = cheerio.load(responseBody, {",
+                      "    // ignoreWhitespace: true,",
+                      "    // xmlMode: true",
+                      "    // });",
+                      "",
+                      "    // console.log(xml.xml());",
+                      "",
+                      "    var jsonData = xml2Json(responseBody);",
+                      "    console.log(jsonData.response._code);",
+                      "    pm.expect(jsonData.response.response).to.eql(19);",
+                      "});"
+                    ],
+                    "type": "text/javascript"
+                  }
+                }
+              ],
               "_postman_id": "87acc3ab-644e-4f03-bc96-2754d7749a0a",
               "protocolProfileBehavior": {
                 "disableBodyPruning": true
@@ -22,7 +46,7 @@
                 "method": "POST",
                 "header": [],
                 "url": {
-                  "raw": "https://{{host}}/api?type=config&action=get&xpath=/config/devices/entry[@name='localhost.localdomain']/vsys/entry[@name='vsys1']/rulebase/security/rules//",
+                  "raw": "https://{{host}}/api?type=config&action=get&xpath=/config/devices/entry[@name='localhost.localdomain']/vsys/entry[@name='vsys1']/rulebase/security/rules",
                   "protocol": "https",
                   "host": [
                     "{{host}}"
@@ -46,7 +70,7 @@
                     },
                     {
                       "key": "xpath",
-                      "value": "/config/devices/entry[@name='localhost.localdomain']/vsys/entry[@name='vsys1']/rulebase/security/rules//"
+                      "value": "/config/devices/entry[@name='localhost.localdomain']/vsys/entry[@name='vsys1']/rulebase/security/rules"
                     }
                   ]
                 }
@@ -9144,6 +9168,7 @@
           "",
           "pm.test(\"Check if object exists\", function () {",
           "    pm.expect(jsonObject.response.code.equals(19) );",
+          "    console.log(responseJson);",
           "});",
           "",
           "",
