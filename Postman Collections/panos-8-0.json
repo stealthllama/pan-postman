@@ -22,7 +22,7 @@
                 "method": "POST",
                 "header": [],
                 "url": {
-                  "raw": "https://{{host}}/api?key={{key}}&type=config&action=get&xpath=/config/devices/entry[@name='localhost.localdomain']/vsys/entry[@name='vsys1']/rulebase/security/rules",
+                  "raw": "https://{{host}}/api?type=config&action=get&xpath=/config/devices/entry[@name='localhost.localdomain']/vsys/entry[@name='vsys1']/rulebase/security/rules//",
                   "protocol": "https",
                   "host": [
                     "{{host}}"
@@ -33,7 +33,8 @@
                   "query": [
                     {
                       "key": "key",
-                      "value": "{{key}}"
+                      "value": "{{key}}",
+                      "disabled": true
                     },
                     {
                       "key": "type",
@@ -45,7 +46,7 @@
                     },
                     {
                       "key": "xpath",
-                      "value": "/config/devices/entry[@name='localhost.localdomain']/vsys/entry[@name='vsys1']/rulebase/security/rules"
+                      "value": "/config/devices/entry[@name='localhost.localdomain']/vsys/entry[@name='vsys1']/rulebase/security/rules//"
                     }
                   ]
                 }
