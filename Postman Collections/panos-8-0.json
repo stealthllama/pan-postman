@@ -9164,7 +9164,7 @@
         "id": "76989e2e-4912-4db7-a7f2-696947e74517",
         "type": "text/javascript",
         "exec": [
-          "var jsonObject = xml2Json(responseBody);",
+          "var jsonData = xml2Json(responseBody);",
           "",
           "pm.test(\"PAN-OS XML API: Call Successful\", function () {",
           "    console.log(jsonData);",
