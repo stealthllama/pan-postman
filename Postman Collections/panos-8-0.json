@@ -10,6 +10,12 @@
       "name": "Configuration",
       "item": [
         {
+          "name": "Policies",
+          "item": [],
+          "_postman_id": "36783d5b-c3ae-449b-9c23-94bd0396737d",
+          "_postman_isSubFolder": true
+        },
+        {
           "name": "Objects",
           "item": [
             {
@@ -456,12 +462,6 @@
             }
           ],
           "_postman_id": "307b40d9-157f-02a7-ce62-d005edb71601",
-          "_postman_isSubFolder": true
-        },
-        {
-          "name": "Policies",
-          "item": [],
-          "_postman_id": "36783d5b-c3ae-449b-9c23-94bd0396737d",
           "_postman_isSubFolder": true
         }
       ],
