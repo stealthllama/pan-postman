@@ -9143,7 +9143,7 @@
           "var jsonObject = xml2Json(responseBody);",
           "",
           "pm.test(\"Check if object exists\", function () {",
-          "    pm.expect(jsonObject.response.code.eql(20) );",
+          "    pm.expect(jsonObject.response.code.equals(19) );",
           "});",
           "",
           "",
