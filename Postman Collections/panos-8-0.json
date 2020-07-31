@@ -9166,16 +9166,11 @@
         "exec": [
           "var jsonObject = xml2Json(responseBody);",
           "",
-          "pm.test(\"Check if object exists\", function () {",
-          "    pm.expect(jsonObject.response.code.equals(19) );",
-          "    console.log(responseJson);",
+          "pm.test(\"PAN-OS XML API: Call Successful\", function () {",
+          "    console.log(jsonData);",
+          "    pm.expect(jsonData.response.$.code).to.be.oneOf([\"19\",\"20\"]);",
           "});",
-          "",
-          "",
-          "",
-          "pm.test(\"Request successful\", function () {",
-          "    pm.expect(pm.response.text()).to.include(\"response status = 'success'\");",
-          "});"
+          ""
         ]
       }
     }
