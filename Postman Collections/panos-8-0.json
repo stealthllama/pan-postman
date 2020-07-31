@@ -9107,7 +9107,7 @@
   "auth": {
     "type": "apikey",
     "apikey": {
-      "value": "{{ key }}",
+      "value": "{{key}}",
       "key": "X-PAN-KEY"
     }
   },
