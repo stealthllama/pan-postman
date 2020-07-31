@@ -20,19 +20,7 @@
                   "script": {
                     "id": "0022c888-7e34-4c93-8668-0026e46a22bb",
                     "exec": [
-                      "pm.test(\"Your test name\", function () {",
-                      "",
-                      "    // var xml = cheerio.load(responseBody, {",
-                      "    // ignoreWhitespace: true,",
-                      "    // xmlMode: true",
-                      "    // });",
-                      "",
-                      "    // console.log(xml.xml());",
-                      "",
-                      "    var jsonData = xml2Json(responseBody);",
-                      "    console.log(jsonData.response._code);",
-                      "    pm.expect(jsonData.response.response).to.eql(19);",
-                      "});"
+                      ""
                     ],
                     "type": "text/javascript"
                   }
