@@ -150,7 +150,7 @@
                   }
                 },
                 "url": {
-                  "raw": "https://{{host}}/api?key={{key}}&type=config&action=set&xpath=/config/devices/entry[@name='localhost.localdomain']/vsys/entry[@name='vsys1']/address-group/entry[@name='blocked']&element=<description>This is a test DAG</description><dynamic><filter>outbound</filter></dynamic>",
+                  "raw": "https://{{host}}/api?type=config&action=set&xpath=/config/devices/entry[@name='localhost.localdomain']/vsys/entry[@name='vsys1']/address-group/entry[@name='blocked']&element=<description>This is a test DAG</description><dynamic><filter>outbound</filter></dynamic>",
                   "protocol": "https",
                   "host": [
                     "{{host}}"
@@ -162,7 +162,8 @@
                     {
                       "key": "key",
                       "value": "{{key}}",
-                      "description": "API key"
+                      "description": "API key",
+                      "disabled": true
                     },
                     {
                       "key": "type",
