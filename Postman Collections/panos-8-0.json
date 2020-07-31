@@ -208,7 +208,7 @@
                   }
                 },
                 "url": {
-                  "raw": "https://{{host}}/api?key={{key}}&type=config&action=set&xpath=/config/shared/tag/entry[@name='foo']&element=<color>color1</color><comments>Test tag</comments>",
+                  "raw": "https://{{host}}/api?type=config&action=set&xpath=/config/shared/tag/entry[@name='foo']&element=<color>color1</color><comments>Test tag</comments>",
                   "protocol": "https",
                   "host": [
                     "{{host}}"
@@ -219,7 +219,8 @@
                   "query": [
                     {
                       "key": "key",
-                      "value": "{{key}}"
+                      "value": "{{key}}",
+                      "disabled": true
                     },
                     {
                       "key": "type",
