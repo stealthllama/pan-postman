@@ -202,7 +202,10 @@
                 "header": [],
                 "body": {
                   "mode": "urlencoded",
-                  "urlencoded": []
+                  "urlencoded": [],
+                  "options": {
+                    "urlencoded": {}
+                  }
                 },
                 "url": {
                   "raw": "https://{{host}}/api?key={{key}}&type=config&action=set&xpath=/config/shared/tag/entry[@name='foo']&element=<color>color1</color><comments>Test tag</comments>",
