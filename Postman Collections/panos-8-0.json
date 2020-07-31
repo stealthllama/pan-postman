@@ -9104,6 +9104,13 @@
       "_postman_id": "ba99ae11-7be9-49ef-95a5-0b265ef545ad"
     }
   ],
+  "auth": {
+    "type": "apikey",
+    "apikey": {
+      "value": "{{ key }}",
+      "key": "X-PAN-KEY"
+    }
+  },
   "event": [
     {
       "listen": "prerequest",
