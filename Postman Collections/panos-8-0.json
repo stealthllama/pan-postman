@@ -5954,1228 +5954,6 @@
       "_postman_id": "f50e63a4-9ea7-16a4-61a8-b58e9ef38f3b"
     },
     {
-      "name": "Import Export",
-      "item": [
-        {
-          "name": "Certificates",
-          "item": [
-            {
-              "name": "Import Certificate",
-              "_postman_id": "496e2554-ede3-4131-9ecc-ada88df83ab0",
-              "protocolProfileBehavior": {
-                "disableBodyPruning": true
-              },
-              "request": {
-                "method": "POST",
-                "header": [
-                  {
-                    "key": "Content-Type",
-                    "name": "Content-Type",
-                    "type": "text",
-                    "value": "text/plain"
-                  }
-                ],
-                "body": {
-                  "mode": "formdata",
-                  "formdata": [
-                    {
-                      "key": "file",
-                      "type": "file",
-                      "src": "/Users/roberthagen/Downloads/cert.pem"
-                    }
-                  ],
-                  "options": {
-                    "formdata": {}
-                  }
-                },
-                "url": {
-                  "raw": "https://{{host}}/api?key={{key}}&type=import&category=certificate&certificate-name={{certificate-name}}&format={{format}}",
-                  "protocol": "https",
-                  "host": [
-                    "{{host}}"
-                  ],
-                  "path": [
-                    "api"
-                  ],
-                  "query": [
-                    {
-                      "key": "key",
-                      "value": "{{key}}",
-                      "description": "The API key"
-                    },
-                    {
-                      "key": "type",
-                      "value": "import",
-                      "description": "The API type"
-                    },
-                    {
-                      "key": "category",
-                      "value": "certificate",
-                      "description": "The type of import"
-                    },
-                    {
-                      "key": "certificate-name",
-                      "value": "{{certificate-name}}",
-                      "description": "The certificate filename"
-                    },
-                    {
-                      "description": "The private key passphrase",
-                      "key": "passphrase",
-                      "type": "text",
-                      "value": "{{passphrase}}",
-                      "disabled": true
-                    },
-                    {
-                      "key": "format",
-                      "value": "{{format}}",
-                      "description": "PEM or DER"
-                    }
-                  ]
-                },
-                "description": "Import a certificate to a firewall"
-              },
-              "response": []
-            },
-            {
-              "name": "Export CSR",
-              "_postman_id": "2f665329-ab49-40b6-ae4c-6b886e2b6370",
-              "protocolProfileBehavior": {
-                "disableBodyPruning": true
-              },
-              "request": {
-                "method": "POST",
-                "header": [
-                  {
-                    "key": "Content-Type",
-                    "name": "Content-Type",
-                    "type": "text",
-                    "value": "text/plain"
-                  }
-                ],
-                "body": {
-                  "mode": "formdata",
-                  "formdata": [],
-                  "options": {
-                    "formdata": {}
-                  }
-                },
-                "url": {
-                  "raw": "https://{{host}}/api?key={{key}}&type=export&category=certificate&certificate-name=Foo Cert&format=pkcs10&include-key=no",
-                  "protocol": "https",
-                  "host": [
-                    "{{host}}"
-                  ],
-                  "path": [
-                    "api"
-                  ],
-                  "query": [
-                    {
-                      "key": "key",
-                      "value": "{{key}}",
-                      "description": "The API key"
-                    },
-                    {
-                      "key": "type",
-                      "value": "export",
-                      "description": "The API type"
-                    },
-                    {
-                      "key": "category",
-                      "value": "certificate",
-                      "description": "The type of import"
-                    },
-                    {
-                      "key": "certificate-name",
-                      "value": "Foo Cert",
-                      "description": "The certificate filename"
-                    },
-                    {
-                      "key": "format",
-                      "value": "pkcs10",
-                      "description": "PEM or DER"
-                    },
-                    {
-                      "key": "include-key",
-                      "value": "no",
-                      "type": "text"
-                    }
-                  ]
-                },
-                "description": "Export a certificate signing request"
-              },
-              "response": []
-            },
-            {
-              "name": "Import Certificate and Private Key",
-              "_postman_id": "148f8af4-4447-47d4-a753-e1b0f5cc1dd1",
-              "protocolProfileBehavior": {
-                "disableBodyPruning": true
-              },
-              "request": {
-                "method": "POST",
-                "header": [
-                  {
-                    "key": "Content-Type",
-                    "name": "Content-Type",
-                    "type": "text",
-                    "value": "text/plain"
-                  }
-                ],
-                "body": {
-                  "mode": "raw",
-                  "raw": "",
-                  "options": {
-                    "raw": {
-                      "language": "text"
-                    }
-                  }
-                },
-                "url": {
-                  "raw": "https://{{host}}/api?key={{key}}&type=import&category=keypair&certificate-name={{certificate-name}}&passphrase={{passphrase}}&format={{format}}",
-                  "protocol": "https",
-                  "host": [
-                    "{{host}}"
-                  ],
-                  "path": [
-                    "api"
-                  ],
-                  "query": [
-                    {
-                      "key": "key",
-                      "value": "{{key}}",
-                      "description": "The API key"
-                    },
-                    {
-                      "key": "type",
-                      "value": "import",
-                      "description": "The API type"
-                    },
-                    {
-                      "key": "category",
-                      "value": "keypair",
-                      "description": "The type of import"
-                    },
-                    {
-                      "key": "certificate-name",
-                      "value": "{{certificate-name}}",
-                      "description": "The certificate filename"
-                    },
-                    {
-                      "key": "passphrase",
-                      "value": "{{passphrase}}",
-                      "description": "The private key passphrase"
-                    },
-                    {
-                      "key": "format",
-                      "value": "{{format}}",
-                      "description": "PEM or DER"
-                    }
-                  ]
-                },
-                "description": "Import a certificate and its private key (in a single file) to a firewall"
-              },
-              "response": []
-            },
-            {
-              "name": "Import Private Key",
-              "_postman_id": "287d69a0-9eba-4177-a893-6a27fd579048",
-              "protocolProfileBehavior": {
-                "disableBodyPruning": true
-              },
-              "request": {
-                "method": "POST",
-                "header": [
-                  {
-                    "key": "Content-Type",
-                    "name": "Content-Type",
-                    "type": "text",
-                    "value": "text/plain"
-                  }
-                ],
-                "body": {
-                  "mode": "formdata",
-                  "formdata": [
-                    {
-                      "key": "file",
-                      "type": "file",
-                      "src": "/Users/roberthagen/Downloads/privkey.pem"
-                    }
-                  ],
-                  "options": {
-                    "formdata": {}
-                  }
-                },
-                "url": {
-                  "raw": "https://{{host}}/api?key={{key}}&type=import&category=private-key&certificate-name={{certificate-name}}&passphrase={{passphrase}}&format={{format}}",
-                  "protocol": "https",
-                  "host": [
-                    "{{host}}"
-                  ],
-                  "path": [
-                    "api"
-                  ],
-                  "query": [
-                    {
-                      "key": "key",
-                      "value": "{{key}}",
-                      "description": "The API key"
-                    },
-                    {
-                      "key": "type",
-                      "value": "import",
-                      "description": "The API type"
-                    },
-                    {
-                      "key": "category",
-                      "value": "private-key",
-                      "description": "The type of import"
-                    },
-                    {
-                      "key": "certificate-name",
-                      "value": "{{certificate-name}}",
-                      "description": "The certificate filename"
-                    },
-                    {
-                      "key": "passphrase",
-                      "value": "{{passphrase}}",
-                      "description": "The private key passphrase"
-                    },
-                    {
-                      "key": "format",
-                      "value": "{{format}}",
-                      "description": "PEM or DER"
-                    }
-                  ]
-                },
-                "description": "Import the private key to an existing certificate in a firewall"
-              },
-              "response": []
-            }
-          ],
-          "_postman_id": "270cbbe9-ad93-427c-a2fb-0deb811e1e2c",
-          "description": "Import/export SSL certificates and private keys",
-          "_postman_isSubFolder": true
-        },
-        {
-          "name": "High Availability Keys",
-          "item": [
-            {
-              "name": "Import HA Key",
-              "_postman_id": "5b18add6-4fef-4e20-94ee-f3ee461179f9",
-              "protocolProfileBehavior": {
-                "disableBodyPruning": true
-              },
-              "request": {
-                "method": "POST",
-                "header": [
-                  {
-                    "key": "Content-Type",
-                    "name": "Content-Type",
-                    "type": "text",
-                    "value": "text/plain"
-                  }
-                ],
-                "body": {
-                  "mode": "formdata",
-                  "formdata": [
-                    {
-                      "key": "file",
-                      "type": "file",
-                      "value": null
-                    }
-                  ],
-                  "options": {
-                    "formdata": {}
-                  }
-                },
-                "url": {
-                  "raw": "https://{{host}}/api?key={{key}}&type=import&category=high-availability-key",
-                  "protocol": "https",
-                  "host": [
-                    "{{host}}"
-                  ],
-                  "path": [
-                    "api"
-                  ],
-                  "query": [
-                    {
-                      "key": "key",
-                      "value": "{{key}}",
-                      "description": "The API key"
-                    },
-                    {
-                      "key": "type",
-                      "value": "import",
-                      "description": "The API type"
-                    },
-                    {
-                      "key": "category",
-                      "value": "high-availability-key",
-                      "description": "The type of import"
-                    }
-                  ]
-                },
-                "description": "Import a high-availability key"
-              },
-              "response": []
-            },
-            {
-              "name": "Export HA Key",
-              "_postman_id": "ec2f4e0e-7706-46d5-9ba0-08b8536e7ebc",
-              "protocolProfileBehavior": {
-                "disableBodyPruning": true
-              },
-              "request": {
-                "method": "POST",
-                "header": [
-                  {
-                    "key": "Content-Type",
-                    "name": "Content-Type",
-                    "type": "text",
-                    "value": "text/plain"
-                  }
-                ],
-                "body": {
-                  "mode": "formdata",
-                  "formdata": [
-                    {
-                      "key": "file",
-                      "type": "file",
-                      "value": null,
-                      "disabled": true
-                    }
-                  ],
-                  "options": {
-                    "formdata": {}
-                  }
-                },
-                "url": {
-                  "raw": "https://{{host}}/api?key={{key}}&type=export&category=high-availability-key",
-                  "protocol": "https",
-                  "host": [
-                    "{{host}}"
-                  ],
-                  "path": [
-                    "api"
-                  ],
-                  "query": [
-                    {
-                      "key": "key",
-                      "value": "{{key}}",
-                      "description": "The API key"
-                    },
-                    {
-                      "key": "type",
-                      "value": "export",
-                      "description": "The API type"
-                    },
-                    {
-                      "key": "category",
-                      "value": "high-availability-key",
-                      "description": "The type of import"
-                    }
-                  ]
-                },
-                "description": "Export a high-availability key"
-              },
-              "response": []
-            }
-          ],
-          "_postman_id": "2008deea-d3e4-44ed-b3c8-8e8bb077cfc5",
-          "description": "Import/export high availability SSH keys",
-          "_postman_isSubFolder": true
-        },
-        {
-          "name": "Import Config",
-          "event": [
-            {
-              "listen": "prerequest",
-              "script": {
-                "id": "4a46b058-0ed0-45a3-b679-07f60d422bc0",
-                "exec": [
-                  ""
-                ],
-                "type": "text/javascript"
-              }
-            }
-          ],
-          "_postman_id": "faac1e6f-883b-459f-82cd-5198b3053d9c",
-          "protocolProfileBehavior": {
-            "disableBodyPruning": true
-          },
-          "request": {
-            "auth": {
-              "type": "noauth"
-            },
-            "method": "POST",
-            "header": [
-              {
-                "key": "Content-Type",
-                "value": "application/x-www-form-urlencoded"
-              }
-            ],
-            "body": {
-              "mode": "formdata",
-              "formdata": [
-                {
-                  "key": "file",
-                  "type": "file",
-                  "src": "/Users/roberthagen/Downloads/new-pan-lan.xml"
-                }
-              ],
-              "options": {
-                "formdata": {}
-              }
-            },
-            "url": {
-              "raw": "https://{{host}}/api?key={{key}}&type=import&category=configuration",
-              "protocol": "https",
-              "host": [
-                "{{host}}"
-              ],
-              "path": [
-                "api"
-              ],
-              "query": [
-                {
-                  "key": "key",
-                  "value": "{{key}}",
-                  "description": "API key"
-                },
-                {
-                  "key": "type",
-                  "value": "import",
-                  "description": "API action"
-                },
-                {
-                  "key": "category",
-                  "value": "configuration"
-                }
-              ]
-            },
-            "description": "Import a configuration file"
-          },
-          "response": []
-        }
-      ],
-      "_postman_id": "df1520c0-c4e9-4fb8-980e-aa2e62582a9c"
-    },
-    {
-      "name": "User-ID",
-      "item": [
-        {
-          "name": "Dynamic Address Groups",
-          "item": [
-            {
-              "name": "Register IP",
-              "_postman_id": "40323d4a-2284-b3aa-401c-9846d3455a3f",
-              "protocolProfileBehavior": {
-                "disableBodyPruning": true
-              },
-              "request": {
-                "auth": {
-                  "type": "noauth"
-                },
-                "method": "POST",
-                "header": [
-                  {
-                    "key": "Content-Type",
-                    "value": "application/x-www-form-urlencoded"
-                  }
-                ],
-                "body": {
-                  "mode": "urlencoded",
-                  "urlencoded": [],
-                  "options": {
-                    "urlencoded": {}
-                  }
-                },
-                "url": {
-                  "raw": "https://{{host}}/api?key={{key}}&type=user-id&cmd=<uid-message><type>update</type><payload><register><entry ip=\"1.2.3.4\" timeout=\"60\"><tag><member timeout=\"60\">testing</member><member timeout=\"60\">development</member></tag></entry></register></payload></uid-message>",
-                  "protocol": "https",
-                  "host": [
-                    "{{host}}"
-                  ],
-                  "path": [
-                    "api"
-                  ],
-                  "query": [
-                    {
-                      "key": "key",
-                      "value": "{{key}}",
-                      "description": "API key"
-                    },
-                    {
-                      "key": "type",
-                      "value": "user-id",
-                      "description": "API action"
-                    },
-                    {
-                      "key": "cmd",
-                      "value": "<uid-message><type>update</type><payload><register><entry ip=\"1.2.3.4\" timeout=\"60\"><tag><member timeout=\"60\">testing</member><member timeout=\"60\">development</member></tag></entry></register></payload></uid-message>",
-                      "description": "API command"
-                    }
-                  ]
-                },
-                "description": "Create a tag to IP mapping"
-              },
-              "response": []
-            },
-            {
-              "name": "Unregister IP",
-              "_postman_id": "afe89a4a-98ed-209e-95b9-a5f0fc85a09c",
-              "protocolProfileBehavior": {
-                "disableBodyPruning": true
-              },
-              "request": {
-                "auth": {
-                  "type": "noauth"
-                },
-                "method": "POST",
-                "header": [
-                  {
-                    "key": "Content-Type",
-                    "value": "application/x-www-form-urlencoded"
-                  }
-                ],
-                "body": {
-                  "mode": "urlencoded",
-                  "urlencoded": [],
-                  "options": {
-                    "urlencoded": {}
-                  }
-                },
-                "url": {
-                  "raw": "https://{{host}}/api?key={{key}}&type=user-id&cmd=<uid-message><version>2.0</version><type>update</type><payload><unregister><entry ip=\"1.2.3.4\"><tag><member>development</member></tag></entry></unregister></payload></uid-message>",
-                  "protocol": "https",
-                  "host": [
-                    "{{host}}"
-                  ],
-                  "path": [
-                    "api"
-                  ],
-                  "query": [
-                    {
-                      "key": "key",
-                      "value": "{{key}}",
-                      "description": "API key"
-                    },
-                    {
-                      "key": "type",
-                      "value": "user-id",
-                      "description": "API action"
-                    },
-                    {
-                      "key": "cmd",
-                      "value": "<uid-message><version>2.0</version><type>update</type><payload><unregister><entry ip=\"1.2.3.4\"><tag><member>development</member></tag></entry></unregister></payload></uid-message>",
-                      "description": "API command"
-                    }
-                  ]
-                },
-                "description": "Remove a tag to IP mapping"
-              },
-              "response": []
-            },
-            {
-              "name": "Show Registered IPs",
-              "_postman_id": "808f8914-4806-4451-9b8a-21debfd7ad20",
-              "protocolProfileBehavior": {
-                "disableBodyPruning": true
-              },
-              "request": {
-                "auth": {
-                  "type": "noauth"
-                },
-                "method": "POST",
-                "header": [
-                  {
-                    "key": "Content-Type",
-                    "value": "application/x-www-form-urlencoded"
-                  }
-                ],
-                "body": {
-                  "mode": "urlencoded",
-                  "urlencoded": [],
-                  "options": {
-                    "urlencoded": {}
-                  }
-                },
-                "url": {
-                  "raw": "https://{{host}}/api?key={{key}}&type=op&cmd=<show><object><registered-ip><all/></registered-ip></object></show>",
-                  "protocol": "https",
-                  "host": [
-                    "{{host}}"
-                  ],
-                  "path": [
-                    "api"
-                  ],
-                  "query": [
-                    {
-                      "key": "key",
-                      "value": "{{key}}",
-                      "description": "API key"
-                    },
-                    {
-                      "key": "type",
-                      "value": "op",
-                      "description": "API action"
-                    },
-                    {
-                      "key": "cmd",
-                      "value": "<show><object><registered-ip><all/></registered-ip></object></show>",
-                      "description": "API command"
-                    }
-                  ]
-                },
-                "description": "Show all registered IPs and their tags"
-              },
-              "response": []
-            },
-            {
-              "name": "Clear Registered IPs",
-              "_postman_id": "69f5b340-c241-4f96-9048-1cb8d9c32398",
-              "protocolProfileBehavior": {
-                "disableBodyPruning": true
-              },
-              "request": {
-                "auth": {
-                  "type": "noauth"
-                },
-                "method": "POST",
-                "header": [
-                  {
-                    "key": "Content-Type",
-                    "value": "application/x-www-form-urlencoded"
-                  }
-                ],
-                "body": {
-                  "mode": "urlencoded",
-                  "urlencoded": [],
-                  "options": {
-                    "urlencoded": {}
-                  }
-                },
-                "url": {
-                  "raw": "https://{{host}}/api?key={{key}}&type=user-id&cmd=<uid-message><type>update</type><payload><clear><registered-ip><all/></registered-ip></clear></payload></uid-message>",
-                  "protocol": "https",
-                  "host": [
-                    "{{host}}"
-                  ],
-                  "path": [
-                    "api"
-                  ],
-                  "query": [
-                    {
-                      "key": "key",
-                      "value": "{{key}}",
-                      "description": "API key"
-                    },
-                    {
-                      "key": "type",
-                      "value": "user-id",
-                      "description": "API action"
-                    },
-                    {
-                      "key": "cmd",
-                      "value": "<uid-message><type>update</type><payload><clear><registered-ip><all/></registered-ip></clear></payload></uid-message>",
-                      "description": "API command"
-                    }
-                  ]
-                },
-                "description": "Clear all registered IPs"
-              },
-              "response": []
-            }
-          ],
-          "_postman_id": "560daa2e-9b7c-42f8-be33-9651fed82031",
-          "description": "PAN-OS API call specific to Dynamic Address Groups",
-          "event": [
-            {
-              "listen": "prerequest",
-              "script": {
-                "id": "2d1eff5c-d947-4585-a443-c331fb731882",
-                "type": "text/javascript",
-                "exec": [
-                  ""
-                ]
-              }
-            },
-            {
-              "listen": "test",
-              "script": {
-                "id": "b17118b5-1d0c-4e5e-a291-ca90d337c1dd",
-                "type": "text/javascript",
-                "exec": [
-                  ""
-                ]
-              }
-            }
-          ],
-          "_postman_isSubFolder": true
-        },
-        {
-          "name": "Dynamic User Groups",
-          "item": [
-            {
-              "name": "Register User",
-              "_postman_id": "f5fc18ea-6926-4857-b614-a3f0bb5d2414",
-              "protocolProfileBehavior": {
-                "disableBodyPruning": true
-              },
-              "request": {
-                "auth": {
-                  "type": "noauth"
-                },
-                "method": "POST",
-                "header": [
-                  {
-                    "key": "Content-Type",
-                    "value": "application/x-www-form-urlencoded"
-                  }
-                ],
-                "body": {
-                  "mode": "urlencoded",
-                  "urlencoded": [],
-                  "options": {
-                    "urlencoded": {}
-                  }
-                },
-                "url": {
-                  "raw": "https://{{host}}/api?key={{key}}&type=user-id&cmd=<uid-message><type>update</type><payload><register-user><entry user=\"agentsmith\"><tag><member>matrix</member><member timeout=\"3600\">agents</member></tag></entry></register-user></payload></uid-message>",
-                  "protocol": "https",
-                  "host": [
-                    "{{host}}"
-                  ],
-                  "path": [
-                    "api"
-                  ],
-                  "query": [
-                    {
-                      "key": "key",
-                      "value": "{{key}}",
-                      "description": "API key"
-                    },
-                    {
-                      "key": "type",
-                      "value": "user-id",
-                      "description": "API action"
-                    },
-                    {
-                      "key": "cmd",
-                      "value": "<uid-message><type>update</type><payload><register-user><entry user=\"agentsmith\"><tag><member>matrix</member><member timeout=\"3600\">agents</member></tag></entry></register-user></payload></uid-message>",
-                      "description": "API command"
-                    }
-                  ]
-                },
-                "description": "Create a tag to user mapping"
-              },
-              "response": []
-            },
-            {
-              "name": "Unregister User",
-              "_postman_id": "0030f278-a3a5-4477-ae72-e497d5aafe9f",
-              "protocolProfileBehavior": {
-                "disableBodyPruning": true
-              },
-              "request": {
-                "auth": {
-                  "type": "noauth"
-                },
-                "method": "POST",
-                "header": [
-                  {
-                    "key": "Content-Type",
-                    "value": "application/x-www-form-urlencoded"
-                  }
-                ],
-                "body": {
-                  "mode": "urlencoded",
-                  "urlencoded": [],
-                  "options": {
-                    "urlencoded": {}
-                  }
-                },
-                "url": {
-                  "raw": "https://{{host}}/api?key={{key}}&type=user-id&cmd=<uid-message><type>update</type><payload><unregister-user><entry user=\"agentsmith\"><tag><member>matrix</member><member>agents</member></tag></entry></unregister-user></payload></uid-message>",
-                  "protocol": "https",
-                  "host": [
-                    "{{host}}"
-                  ],
-                  "path": [
-                    "api"
-                  ],
-                  "query": [
-                    {
-                      "key": "key",
-                      "value": "{{key}}",
-                      "description": "API key"
-                    },
-                    {
-                      "key": "type",
-                      "value": "user-id",
-                      "description": "API action"
-                    },
-                    {
-                      "key": "cmd",
-                      "value": "<uid-message><type>update</type><payload><unregister-user><entry user=\"agentsmith\"><tag><member>matrix</member><member>agents</member></tag></entry></unregister-user></payload></uid-message>",
-                      "description": "API command"
-                    }
-                  ]
-                },
-                "description": "Remove a tag to user mapping"
-              },
-              "response": []
-            },
-            {
-              "name": "Show Registered Users",
-              "_postman_id": "a1b5c9b5-ded7-4490-b2c6-223c54efd40f",
-              "protocolProfileBehavior": {
-                "disableBodyPruning": true
-              },
-              "request": {
-                "auth": {
-                  "type": "noauth"
-                },
-                "method": "POST",
-                "header": [
-                  {
-                    "key": "Content-Type",
-                    "value": "application/x-www-form-urlencoded"
-                  }
-                ],
-                "body": {
-                  "mode": "urlencoded",
-                  "urlencoded": [],
-                  "options": {
-                    "urlencoded": {}
-                  }
-                },
-                "url": {
-                  "raw": "https://{{host}}/api?key={{key}}&type=op&cmd=<show><object><registered-user><all/></registered-user></object></show>",
-                  "protocol": "https",
-                  "host": [
-                    "{{host}}"
-                  ],
-                  "path": [
-                    "api"
-                  ],
-                  "query": [
-                    {
-                      "key": "key",
-                      "value": "{{key}}",
-                      "description": "API key"
-                    },
-                    {
-                      "key": "type",
-                      "value": "op",
-                      "description": "API action"
-                    },
-                    {
-                      "key": "cmd",
-                      "value": "<show><object><registered-user><all/></registered-user></object></show>",
-                      "description": "API command"
-                    }
-                  ]
-                },
-                "description": "Show all registered users"
-              },
-              "response": []
-            },
-            {
-              "name": "Clear Registered Users",
-              "_postman_id": "4393d951-e74e-4be3-aaba-ff47e9c42e8f",
-              "protocolProfileBehavior": {
-                "disableBodyPruning": true
-              },
-              "request": {
-                "auth": {
-                  "type": "noauth"
-                },
-                "method": "POST",
-                "header": [
-                  {
-                    "key": "Content-Type",
-                    "value": "application/x-www-form-urlencoded"
-                  }
-                ],
-                "body": {
-                  "mode": "urlencoded",
-                  "urlencoded": [],
-                  "options": {
-                    "urlencoded": {}
-                  }
-                },
-                "url": {
-                  "raw": "https://{{host}}/api?key={{key}}&type=user-id&cmd=<uid-message><type>update</type><payload><clear><registered-users><all/></registered-users></clear></payload></uid-message>",
-                  "protocol": "https",
-                  "host": [
-                    "{{host}}"
-                  ],
-                  "path": [
-                    "api"
-                  ],
-                  "query": [
-                    {
-                      "key": "key",
-                      "value": "{{key}}",
-                      "description": "API key"
-                    },
-                    {
-                      "key": "type",
-                      "value": "user-id",
-                      "description": "API action"
-                    },
-                    {
-                      "key": "cmd",
-                      "value": "<uid-message><type>update</type><payload><clear><registered-users><all/></registered-users></clear></payload></uid-message>",
-                      "description": "API command"
-                    }
-                  ]
-                },
-                "description": "Clear all registered users"
-              },
-              "response": []
-            }
-          ],
-          "_postman_id": "c65f65de-3847-405d-9ebe-222aab5dc01a",
-          "description": "Dynamic User Group API calls manage tag to user mappings (registered-user objects).\n\n",
-          "event": [
-            {
-              "listen": "prerequest",
-              "script": {
-                "id": "6d7d7b5c-e721-4705-ad67-2ec486990e84",
-                "type": "text/javascript",
-                "exec": [
-                  ""
-                ]
-              }
-            },
-            {
-              "listen": "test",
-              "script": {
-                "id": "2d0fe6b8-95fe-471f-b5db-e71e6b14bfe7",
-                "type": "text/javascript",
-                "exec": [
-                  ""
-                ]
-              }
-            }
-          ],
-          "_postman_isSubFolder": true
-        },
-        {
-          "name": "User IP Mappings",
-          "item": [
-            {
-              "name": "Login User",
-              "_postman_id": "51095d98-4379-4f68-91ca-89d641387127",
-              "protocolProfileBehavior": {
-                "disableBodyPruning": true
-              },
-              "request": {
-                "auth": {
-                  "type": "noauth"
-                },
-                "method": "POST",
-                "header": [
-                  {
-                    "key": "Content-Type",
-                    "value": "application/x-www-form-urlencoded"
-                  }
-                ],
-                "body": {
-                  "mode": "urlencoded",
-                  "urlencoded": [],
-                  "options": {
-                    "urlencoded": {}
-                  }
-                },
-                "url": {
-                  "raw": "https://{{host}}/api?key={{key}}&type=user-id&cmd=<uid-message><type>update</type><payload><login><entry name=\"agentsmith\" ip=\"1.2.3.4\" timeout=\"60\"/></login></payload></uid-message>",
-                  "protocol": "https",
-                  "host": [
-                    "{{host}}"
-                  ],
-                  "path": [
-                    "api"
-                  ],
-                  "query": [
-                    {
-                      "key": "key",
-                      "value": "{{key}}",
-                      "description": "API key"
-                    },
-                    {
-                      "key": "type",
-                      "value": "user-id",
-                      "description": "API action"
-                    },
-                    {
-                      "key": "cmd",
-                      "value": "<uid-message><type>update</type><payload><login><entry name=\"agentsmith\" ip=\"1.2.3.4\" timeout=\"60\"/></login></payload></uid-message>",
-                      "description": "API command"
-                    }
-                  ]
-                },
-                "description": "Create a user to IP mapping"
-              },
-              "response": []
-            },
-            {
-              "name": "Logout User",
-              "_postman_id": "0bb7c535-c304-40f0-af9a-9e4c34299600",
-              "protocolProfileBehavior": {
-                "disableBodyPruning": true
-              },
-              "request": {
-                "auth": {
-                  "type": "noauth"
-                },
-                "method": "POST",
-                "header": [
-                  {
-                    "key": "Content-Type",
-                    "value": "application/x-www-form-urlencoded"
-                  }
-                ],
-                "body": {
-                  "mode": "urlencoded",
-                  "urlencoded": [],
-                  "options": {
-                    "urlencoded": {}
-                  }
-                },
-                "url": {
-                  "raw": "https://{{host}}/api?key={{key}}&type=user-id&cmd=<uid-message><type>update</type><payload><login><entry name=\"agentsmith\" ip=\"1.2.3.4\" timeout=\"60\"/></login></payload></uid-message>",
-                  "protocol": "https",
-                  "host": [
-                    "{{host}}"
-                  ],
-                  "path": [
-                    "api"
-                  ],
-                  "query": [
-                    {
-                      "key": "key",
-                      "value": "{{key}}",
-                      "description": "API key"
-                    },
-                    {
-                      "key": "type",
-                      "value": "user-id",
-                      "description": "API action"
-                    },
-                    {
-                      "key": "cmd",
-                      "value": "<uid-message><type>update</type><payload><login><entry name=\"agentsmith\" ip=\"1.2.3.4\" timeout=\"60\"/></login></payload></uid-message>",
-                      "description": "API command"
-                    }
-                  ]
-                },
-                "description": "Remove a user to IP mapping"
-              },
-              "response": []
-            },
-            {
-              "name": "Show User Logins",
-              "_postman_id": "da452d8f-aa74-4646-a0bf-359b89a991ea",
-              "protocolProfileBehavior": {
-                "disableBodyPruning": true
-              },
-              "request": {
-                "auth": {
-                  "type": "noauth"
-                },
-                "method": "POST",
-                "header": [
-                  {
-                    "key": "Content-Type",
-                    "value": "application/x-www-form-urlencoded"
-                  }
-                ],
-                "body": {
-                  "mode": "urlencoded",
-                  "urlencoded": [],
-                  "options": {
-                    "urlencoded": {}
-                  }
-                },
-                "url": {
-                  "raw": "https://{{host}}/api?key={{key}}&type=op&cmd=<show><user><ip-user-mapping-mp><all/></ip-user-mapping-mp></user></show>",
-                  "protocol": "https",
-                  "host": [
-                    "{{host}}"
-                  ],
-                  "path": [
-                    "api"
-                  ],
-                  "query": [
-                    {
-                      "key": "key",
-                      "value": "{{key}}",
-                      "description": "API key"
-                    },
-                    {
-                      "key": "type",
-                      "value": "op",
-                      "description": "API action"
-                    },
-                    {
-                      "key": "cmd",
-                      "value": "<show><user><ip-user-mapping-mp><all/></ip-user-mapping-mp></user></show>",
-                      "description": "API command"
-                    }
-                  ]
-                },
-                "description": "Show all registered IPs and their tags"
-              },
-              "response": []
-            },
-            {
-              "name": "Clear User Logins",
-              "_postman_id": "c7f5de0d-938a-40eb-8f7a-abacad5d009f",
-              "protocolProfileBehavior": {
-                "disableBodyPruning": true
-              },
-              "request": {
-                "method": "POST",
-                "header": [],
-                "url": {
-                  "raw": "https://{{host}}/api?key={{key}}&type=op&cmd=<clear><user-cache-mp><all/></user-cache-mp></clear>",
-                  "protocol": "https",
-                  "host": [
-                    "{{host}}"
-                  ],
-                  "path": [
-                    "api"
-                  ],
-                  "query": [
-                    {
-                      "key": "key",
-                      "value": "{{key}}"
-                    },
-                    {
-                      "key": "type",
-                      "value": "op"
-                    },
-                    {
-                      "key": "cmd",
-                      "value": "<clear><user-cache-mp><all/></user-cache-mp></clear>"
-                    }
-                  ]
-                },
-                "description": "Clear all user logins"
-              },
-              "response": []
-            }
-          ],
-          "_postman_id": "6043c367-90dd-419e-9969-cfc8874be9e8",
-          "_postman_isSubFolder": true
-        }
-      ],
-      "_postman_id": "ba99ae11-7be9-49ef-95a5-0b265ef545ad"
-    },
-    {
       "name": "Panorama",
       "item": [
         {
@@ -9037,6 +7815,1228 @@
       ],
       "_postman_id": "16b66af7-c539-49c4-811d-253b1886431d",
       "description": "API calls specific to the Panorama management console"
+    },
+    {
+      "name": "Import Export",
+      "item": [
+        {
+          "name": "Certificates",
+          "item": [
+            {
+              "name": "Import Certificate",
+              "_postman_id": "496e2554-ede3-4131-9ecc-ada88df83ab0",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "name": "Content-Type",
+                    "type": "text",
+                    "value": "text/plain"
+                  }
+                ],
+                "body": {
+                  "mode": "formdata",
+                  "formdata": [
+                    {
+                      "key": "file",
+                      "type": "file",
+                      "src": "/Users/roberthagen/Downloads/cert.pem"
+                    }
+                  ],
+                  "options": {
+                    "formdata": {}
+                  }
+                },
+                "url": {
+                  "raw": "https://{{host}}/api?key={{key}}&type=import&category=certificate&certificate-name={{certificate-name}}&format={{format}}",
+                  "protocol": "https",
+                  "host": [
+                    "{{host}}"
+                  ],
+                  "path": [
+                    "api"
+                  ],
+                  "query": [
+                    {
+                      "key": "key",
+                      "value": "{{key}}",
+                      "description": "The API key"
+                    },
+                    {
+                      "key": "type",
+                      "value": "import",
+                      "description": "The API type"
+                    },
+                    {
+                      "key": "category",
+                      "value": "certificate",
+                      "description": "The type of import"
+                    },
+                    {
+                      "key": "certificate-name",
+                      "value": "{{certificate-name}}",
+                      "description": "The certificate filename"
+                    },
+                    {
+                      "description": "The private key passphrase",
+                      "key": "passphrase",
+                      "type": "text",
+                      "value": "{{passphrase}}",
+                      "disabled": true
+                    },
+                    {
+                      "key": "format",
+                      "value": "{{format}}",
+                      "description": "PEM or DER"
+                    }
+                  ]
+                },
+                "description": "Import a certificate to a firewall"
+              },
+              "response": []
+            },
+            {
+              "name": "Export CSR",
+              "_postman_id": "2f665329-ab49-40b6-ae4c-6b886e2b6370",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "name": "Content-Type",
+                    "type": "text",
+                    "value": "text/plain"
+                  }
+                ],
+                "body": {
+                  "mode": "formdata",
+                  "formdata": [],
+                  "options": {
+                    "formdata": {}
+                  }
+                },
+                "url": {
+                  "raw": "https://{{host}}/api?key={{key}}&type=export&category=certificate&certificate-name=Foo Cert&format=pkcs10&include-key=no",
+                  "protocol": "https",
+                  "host": [
+                    "{{host}}"
+                  ],
+                  "path": [
+                    "api"
+                  ],
+                  "query": [
+                    {
+                      "key": "key",
+                      "value": "{{key}}",
+                      "description": "The API key"
+                    },
+                    {
+                      "key": "type",
+                      "value": "export",
+                      "description": "The API type"
+                    },
+                    {
+                      "key": "category",
+                      "value": "certificate",
+                      "description": "The type of import"
+                    },
+                    {
+                      "key": "certificate-name",
+                      "value": "Foo Cert",
+                      "description": "The certificate filename"
+                    },
+                    {
+                      "key": "format",
+                      "value": "pkcs10",
+                      "description": "PEM or DER"
+                    },
+                    {
+                      "key": "include-key",
+                      "value": "no",
+                      "type": "text"
+                    }
+                  ]
+                },
+                "description": "Export a certificate signing request"
+              },
+              "response": []
+            },
+            {
+              "name": "Import Certificate and Private Key",
+              "_postman_id": "148f8af4-4447-47d4-a753-e1b0f5cc1dd1",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "name": "Content-Type",
+                    "type": "text",
+                    "value": "text/plain"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "",
+                  "options": {
+                    "raw": {
+                      "language": "text"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "https://{{host}}/api?key={{key}}&type=import&category=keypair&certificate-name={{certificate-name}}&passphrase={{passphrase}}&format={{format}}",
+                  "protocol": "https",
+                  "host": [
+                    "{{host}}"
+                  ],
+                  "path": [
+                    "api"
+                  ],
+                  "query": [
+                    {
+                      "key": "key",
+                      "value": "{{key}}",
+                      "description": "The API key"
+                    },
+                    {
+                      "key": "type",
+                      "value": "import",
+                      "description": "The API type"
+                    },
+                    {
+                      "key": "category",
+                      "value": "keypair",
+                      "description": "The type of import"
+                    },
+                    {
+                      "key": "certificate-name",
+                      "value": "{{certificate-name}}",
+                      "description": "The certificate filename"
+                    },
+                    {
+                      "key": "passphrase",
+                      "value": "{{passphrase}}",
+                      "description": "The private key passphrase"
+                    },
+                    {
+                      "key": "format",
+                      "value": "{{format}}",
+                      "description": "PEM or DER"
+                    }
+                  ]
+                },
+                "description": "Import a certificate and its private key (in a single file) to a firewall"
+              },
+              "response": []
+            },
+            {
+              "name": "Import Private Key",
+              "_postman_id": "287d69a0-9eba-4177-a893-6a27fd579048",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "name": "Content-Type",
+                    "type": "text",
+                    "value": "text/plain"
+                  }
+                ],
+                "body": {
+                  "mode": "formdata",
+                  "formdata": [
+                    {
+                      "key": "file",
+                      "type": "file",
+                      "src": "/Users/roberthagen/Downloads/privkey.pem"
+                    }
+                  ],
+                  "options": {
+                    "formdata": {}
+                  }
+                },
+                "url": {
+                  "raw": "https://{{host}}/api?key={{key}}&type=import&category=private-key&certificate-name={{certificate-name}}&passphrase={{passphrase}}&format={{format}}",
+                  "protocol": "https",
+                  "host": [
+                    "{{host}}"
+                  ],
+                  "path": [
+                    "api"
+                  ],
+                  "query": [
+                    {
+                      "key": "key",
+                      "value": "{{key}}",
+                      "description": "The API key"
+                    },
+                    {
+                      "key": "type",
+                      "value": "import",
+                      "description": "The API type"
+                    },
+                    {
+                      "key": "category",
+                      "value": "private-key",
+                      "description": "The type of import"
+                    },
+                    {
+                      "key": "certificate-name",
+                      "value": "{{certificate-name}}",
+                      "description": "The certificate filename"
+                    },
+                    {
+                      "key": "passphrase",
+                      "value": "{{passphrase}}",
+                      "description": "The private key passphrase"
+                    },
+                    {
+                      "key": "format",
+                      "value": "{{format}}",
+                      "description": "PEM or DER"
+                    }
+                  ]
+                },
+                "description": "Import the private key to an existing certificate in a firewall"
+              },
+              "response": []
+            }
+          ],
+          "_postman_id": "270cbbe9-ad93-427c-a2fb-0deb811e1e2c",
+          "description": "Import/export SSL certificates and private keys",
+          "_postman_isSubFolder": true
+        },
+        {
+          "name": "High Availability Keys",
+          "item": [
+            {
+              "name": "Import HA Key",
+              "_postman_id": "5b18add6-4fef-4e20-94ee-f3ee461179f9",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "name": "Content-Type",
+                    "type": "text",
+                    "value": "text/plain"
+                  }
+                ],
+                "body": {
+                  "mode": "formdata",
+                  "formdata": [
+                    {
+                      "key": "file",
+                      "type": "file",
+                      "value": null
+                    }
+                  ],
+                  "options": {
+                    "formdata": {}
+                  }
+                },
+                "url": {
+                  "raw": "https://{{host}}/api?key={{key}}&type=import&category=high-availability-key",
+                  "protocol": "https",
+                  "host": [
+                    "{{host}}"
+                  ],
+                  "path": [
+                    "api"
+                  ],
+                  "query": [
+                    {
+                      "key": "key",
+                      "value": "{{key}}",
+                      "description": "The API key"
+                    },
+                    {
+                      "key": "type",
+                      "value": "import",
+                      "description": "The API type"
+                    },
+                    {
+                      "key": "category",
+                      "value": "high-availability-key",
+                      "description": "The type of import"
+                    }
+                  ]
+                },
+                "description": "Import a high-availability key"
+              },
+              "response": []
+            },
+            {
+              "name": "Export HA Key",
+              "_postman_id": "ec2f4e0e-7706-46d5-9ba0-08b8536e7ebc",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "name": "Content-Type",
+                    "type": "text",
+                    "value": "text/plain"
+                  }
+                ],
+                "body": {
+                  "mode": "formdata",
+                  "formdata": [
+                    {
+                      "key": "file",
+                      "type": "file",
+                      "value": null,
+                      "disabled": true
+                    }
+                  ],
+                  "options": {
+                    "formdata": {}
+                  }
+                },
+                "url": {
+                  "raw": "https://{{host}}/api?key={{key}}&type=export&category=high-availability-key",
+                  "protocol": "https",
+                  "host": [
+                    "{{host}}"
+                  ],
+                  "path": [
+                    "api"
+                  ],
+                  "query": [
+                    {
+                      "key": "key",
+                      "value": "{{key}}",
+                      "description": "The API key"
+                    },
+                    {
+                      "key": "type",
+                      "value": "export",
+                      "description": "The API type"
+                    },
+                    {
+                      "key": "category",
+                      "value": "high-availability-key",
+                      "description": "The type of import"
+                    }
+                  ]
+                },
+                "description": "Export a high-availability key"
+              },
+              "response": []
+            }
+          ],
+          "_postman_id": "2008deea-d3e4-44ed-b3c8-8e8bb077cfc5",
+          "description": "Import/export high availability SSH keys",
+          "_postman_isSubFolder": true
+        },
+        {
+          "name": "Import Config",
+          "event": [
+            {
+              "listen": "prerequest",
+              "script": {
+                "id": "4a46b058-0ed0-45a3-b679-07f60d422bc0",
+                "exec": [
+                  ""
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
+          "_postman_id": "faac1e6f-883b-459f-82cd-5198b3053d9c",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/x-www-form-urlencoded"
+              }
+            ],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "file",
+                  "type": "file",
+                  "src": "/Users/roberthagen/Downloads/new-pan-lan.xml"
+                }
+              ],
+              "options": {
+                "formdata": {}
+              }
+            },
+            "url": {
+              "raw": "https://{{host}}/api?key={{key}}&type=import&category=configuration",
+              "protocol": "https",
+              "host": [
+                "{{host}}"
+              ],
+              "path": [
+                "api"
+              ],
+              "query": [
+                {
+                  "key": "key",
+                  "value": "{{key}}",
+                  "description": "API key"
+                },
+                {
+                  "key": "type",
+                  "value": "import",
+                  "description": "API action"
+                },
+                {
+                  "key": "category",
+                  "value": "configuration"
+                }
+              ]
+            },
+            "description": "Import a configuration file"
+          },
+          "response": []
+        }
+      ],
+      "_postman_id": "df1520c0-c4e9-4fb8-980e-aa2e62582a9c"
+    },
+    {
+      "name": "User-ID",
+      "item": [
+        {
+          "name": "Dynamic Address Groups",
+          "item": [
+            {
+              "name": "Register IP",
+              "_postman_id": "40323d4a-2284-b3aa-401c-9846d3455a3f",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "auth": {
+                  "type": "noauth"
+                },
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/x-www-form-urlencoded"
+                  }
+                ],
+                "body": {
+                  "mode": "urlencoded",
+                  "urlencoded": [],
+                  "options": {
+                    "urlencoded": {}
+                  }
+                },
+                "url": {
+                  "raw": "https://{{host}}/api?key={{key}}&type=user-id&cmd=<uid-message><type>update</type><payload><register><entry ip=\"1.2.3.4\" timeout=\"60\"><tag><member timeout=\"60\">testing</member><member timeout=\"60\">development</member></tag></entry></register></payload></uid-message>",
+                  "protocol": "https",
+                  "host": [
+                    "{{host}}"
+                  ],
+                  "path": [
+                    "api"
+                  ],
+                  "query": [
+                    {
+                      "key": "key",
+                      "value": "{{key}}",
+                      "description": "API key"
+                    },
+                    {
+                      "key": "type",
+                      "value": "user-id",
+                      "description": "API action"
+                    },
+                    {
+                      "key": "cmd",
+                      "value": "<uid-message><type>update</type><payload><register><entry ip=\"1.2.3.4\" timeout=\"60\"><tag><member timeout=\"60\">testing</member><member timeout=\"60\">development</member></tag></entry></register></payload></uid-message>",
+                      "description": "API command"
+                    }
+                  ]
+                },
+                "description": "Create a tag to IP mapping"
+              },
+              "response": []
+            },
+            {
+              "name": "Unregister IP",
+              "_postman_id": "afe89a4a-98ed-209e-95b9-a5f0fc85a09c",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "auth": {
+                  "type": "noauth"
+                },
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/x-www-form-urlencoded"
+                  }
+                ],
+                "body": {
+                  "mode": "urlencoded",
+                  "urlencoded": [],
+                  "options": {
+                    "urlencoded": {}
+                  }
+                },
+                "url": {
+                  "raw": "https://{{host}}/api?key={{key}}&type=user-id&cmd=<uid-message><version>2.0</version><type>update</type><payload><unregister><entry ip=\"1.2.3.4\"><tag><member>development</member></tag></entry></unregister></payload></uid-message>",
+                  "protocol": "https",
+                  "host": [
+                    "{{host}}"
+                  ],
+                  "path": [
+                    "api"
+                  ],
+                  "query": [
+                    {
+                      "key": "key",
+                      "value": "{{key}}",
+                      "description": "API key"
+                    },
+                    {
+                      "key": "type",
+                      "value": "user-id",
+                      "description": "API action"
+                    },
+                    {
+                      "key": "cmd",
+                      "value": "<uid-message><version>2.0</version><type>update</type><payload><unregister><entry ip=\"1.2.3.4\"><tag><member>development</member></tag></entry></unregister></payload></uid-message>",
+                      "description": "API command"
+                    }
+                  ]
+                },
+                "description": "Remove a tag to IP mapping"
+              },
+              "response": []
+            },
+            {
+              "name": "Show Registered IPs",
+              "_postman_id": "808f8914-4806-4451-9b8a-21debfd7ad20",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "auth": {
+                  "type": "noauth"
+                },
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/x-www-form-urlencoded"
+                  }
+                ],
+                "body": {
+                  "mode": "urlencoded",
+                  "urlencoded": [],
+                  "options": {
+                    "urlencoded": {}
+                  }
+                },
+                "url": {
+                  "raw": "https://{{host}}/api?key={{key}}&type=op&cmd=<show><object><registered-ip><all/></registered-ip></object></show>",
+                  "protocol": "https",
+                  "host": [
+                    "{{host}}"
+                  ],
+                  "path": [
+                    "api"
+                  ],
+                  "query": [
+                    {
+                      "key": "key",
+                      "value": "{{key}}",
+                      "description": "API key"
+                    },
+                    {
+                      "key": "type",
+                      "value": "op",
+                      "description": "API action"
+                    },
+                    {
+                      "key": "cmd",
+                      "value": "<show><object><registered-ip><all/></registered-ip></object></show>",
+                      "description": "API command"
+                    }
+                  ]
+                },
+                "description": "Show all registered IPs and their tags"
+              },
+              "response": []
+            },
+            {
+              "name": "Clear Registered IPs",
+              "_postman_id": "69f5b340-c241-4f96-9048-1cb8d9c32398",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "auth": {
+                  "type": "noauth"
+                },
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/x-www-form-urlencoded"
+                  }
+                ],
+                "body": {
+                  "mode": "urlencoded",
+                  "urlencoded": [],
+                  "options": {
+                    "urlencoded": {}
+                  }
+                },
+                "url": {
+                  "raw": "https://{{host}}/api?key={{key}}&type=user-id&cmd=<uid-message><type>update</type><payload><clear><registered-ip><all/></registered-ip></clear></payload></uid-message>",
+                  "protocol": "https",
+                  "host": [
+                    "{{host}}"
+                  ],
+                  "path": [
+                    "api"
+                  ],
+                  "query": [
+                    {
+                      "key": "key",
+                      "value": "{{key}}",
+                      "description": "API key"
+                    },
+                    {
+                      "key": "type",
+                      "value": "user-id",
+                      "description": "API action"
+                    },
+                    {
+                      "key": "cmd",
+                      "value": "<uid-message><type>update</type><payload><clear><registered-ip><all/></registered-ip></clear></payload></uid-message>",
+                      "description": "API command"
+                    }
+                  ]
+                },
+                "description": "Clear all registered IPs"
+              },
+              "response": []
+            }
+          ],
+          "_postman_id": "560daa2e-9b7c-42f8-be33-9651fed82031",
+          "description": "PAN-OS API call specific to Dynamic Address Groups",
+          "event": [
+            {
+              "listen": "prerequest",
+              "script": {
+                "id": "2d1eff5c-d947-4585-a443-c331fb731882",
+                "type": "text/javascript",
+                "exec": [
+                  ""
+                ]
+              }
+            },
+            {
+              "listen": "test",
+              "script": {
+                "id": "b17118b5-1d0c-4e5e-a291-ca90d337c1dd",
+                "type": "text/javascript",
+                "exec": [
+                  ""
+                ]
+              }
+            }
+          ],
+          "_postman_isSubFolder": true
+        },
+        {
+          "name": "Dynamic User Groups",
+          "item": [
+            {
+              "name": "Register User",
+              "_postman_id": "f5fc18ea-6926-4857-b614-a3f0bb5d2414",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "auth": {
+                  "type": "noauth"
+                },
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/x-www-form-urlencoded"
+                  }
+                ],
+                "body": {
+                  "mode": "urlencoded",
+                  "urlencoded": [],
+                  "options": {
+                    "urlencoded": {}
+                  }
+                },
+                "url": {
+                  "raw": "https://{{host}}/api?key={{key}}&type=user-id&cmd=<uid-message><type>update</type><payload><register-user><entry user=\"agentsmith\"><tag><member>matrix</member><member timeout=\"3600\">agents</member></tag></entry></register-user></payload></uid-message>",
+                  "protocol": "https",
+                  "host": [
+                    "{{host}}"
+                  ],
+                  "path": [
+                    "api"
+                  ],
+                  "query": [
+                    {
+                      "key": "key",
+                      "value": "{{key}}",
+                      "description": "API key"
+                    },
+                    {
+                      "key": "type",
+                      "value": "user-id",
+                      "description": "API action"
+                    },
+                    {
+                      "key": "cmd",
+                      "value": "<uid-message><type>update</type><payload><register-user><entry user=\"agentsmith\"><tag><member>matrix</member><member timeout=\"3600\">agents</member></tag></entry></register-user></payload></uid-message>",
+                      "description": "API command"
+                    }
+                  ]
+                },
+                "description": "Create a tag to user mapping"
+              },
+              "response": []
+            },
+            {
+              "name": "Unregister User",
+              "_postman_id": "0030f278-a3a5-4477-ae72-e497d5aafe9f",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "auth": {
+                  "type": "noauth"
+                },
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/x-www-form-urlencoded"
+                  }
+                ],
+                "body": {
+                  "mode": "urlencoded",
+                  "urlencoded": [],
+                  "options": {
+                    "urlencoded": {}
+                  }
+                },
+                "url": {
+                  "raw": "https://{{host}}/api?key={{key}}&type=user-id&cmd=<uid-message><type>update</type><payload><unregister-user><entry user=\"agentsmith\"><tag><member>matrix</member><member>agents</member></tag></entry></unregister-user></payload></uid-message>",
+                  "protocol": "https",
+                  "host": [
+                    "{{host}}"
+                  ],
+                  "path": [
+                    "api"
+                  ],
+                  "query": [
+                    {
+                      "key": "key",
+                      "value": "{{key}}",
+                      "description": "API key"
+                    },
+                    {
+                      "key": "type",
+                      "value": "user-id",
+                      "description": "API action"
+                    },
+                    {
+                      "key": "cmd",
+                      "value": "<uid-message><type>update</type><payload><unregister-user><entry user=\"agentsmith\"><tag><member>matrix</member><member>agents</member></tag></entry></unregister-user></payload></uid-message>",
+                      "description": "API command"
+                    }
+                  ]
+                },
+                "description": "Remove a tag to user mapping"
+              },
+              "response": []
+            },
+            {
+              "name": "Show Registered Users",
+              "_postman_id": "a1b5c9b5-ded7-4490-b2c6-223c54efd40f",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "auth": {
+                  "type": "noauth"
+                },
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/x-www-form-urlencoded"
+                  }
+                ],
+                "body": {
+                  "mode": "urlencoded",
+                  "urlencoded": [],
+                  "options": {
+                    "urlencoded": {}
+                  }
+                },
+                "url": {
+                  "raw": "https://{{host}}/api?key={{key}}&type=op&cmd=<show><object><registered-user><all/></registered-user></object></show>",
+                  "protocol": "https",
+                  "host": [
+                    "{{host}}"
+                  ],
+                  "path": [
+                    "api"
+                  ],
+                  "query": [
+                    {
+                      "key": "key",
+                      "value": "{{key}}",
+                      "description": "API key"
+                    },
+                    {
+                      "key": "type",
+                      "value": "op",
+                      "description": "API action"
+                    },
+                    {
+                      "key": "cmd",
+                      "value": "<show><object><registered-user><all/></registered-user></object></show>",
+                      "description": "API command"
+                    }
+                  ]
+                },
+                "description": "Show all registered users"
+              },
+              "response": []
+            },
+            {
+              "name": "Clear Registered Users",
+              "_postman_id": "4393d951-e74e-4be3-aaba-ff47e9c42e8f",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "auth": {
+                  "type": "noauth"
+                },
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/x-www-form-urlencoded"
+                  }
+                ],
+                "body": {
+                  "mode": "urlencoded",
+                  "urlencoded": [],
+                  "options": {
+                    "urlencoded": {}
+                  }
+                },
+                "url": {
+                  "raw": "https://{{host}}/api?key={{key}}&type=user-id&cmd=<uid-message><type>update</type><payload><clear><registered-users><all/></registered-users></clear></payload></uid-message>",
+                  "protocol": "https",
+                  "host": [
+                    "{{host}}"
+                  ],
+                  "path": [
+                    "api"
+                  ],
+                  "query": [
+                    {
+                      "key": "key",
+                      "value": "{{key}}",
+                      "description": "API key"
+                    },
+                    {
+                      "key": "type",
+                      "value": "user-id",
+                      "description": "API action"
+                    },
+                    {
+                      "key": "cmd",
+                      "value": "<uid-message><type>update</type><payload><clear><registered-users><all/></registered-users></clear></payload></uid-message>",
+                      "description": "API command"
+                    }
+                  ]
+                },
+                "description": "Clear all registered users"
+              },
+              "response": []
+            }
+          ],
+          "_postman_id": "c65f65de-3847-405d-9ebe-222aab5dc01a",
+          "description": "Dynamic User Group API calls manage tag to user mappings (registered-user objects).\n\n",
+          "event": [
+            {
+              "listen": "prerequest",
+              "script": {
+                "id": "6d7d7b5c-e721-4705-ad67-2ec486990e84",
+                "type": "text/javascript",
+                "exec": [
+                  ""
+                ]
+              }
+            },
+            {
+              "listen": "test",
+              "script": {
+                "id": "2d0fe6b8-95fe-471f-b5db-e71e6b14bfe7",
+                "type": "text/javascript",
+                "exec": [
+                  ""
+                ]
+              }
+            }
+          ],
+          "_postman_isSubFolder": true
+        },
+        {
+          "name": "User IP Mappings",
+          "item": [
+            {
+              "name": "Login User",
+              "_postman_id": "51095d98-4379-4f68-91ca-89d641387127",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "auth": {
+                  "type": "noauth"
+                },
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/x-www-form-urlencoded"
+                  }
+                ],
+                "body": {
+                  "mode": "urlencoded",
+                  "urlencoded": [],
+                  "options": {
+                    "urlencoded": {}
+                  }
+                },
+                "url": {
+                  "raw": "https://{{host}}/api?key={{key}}&type=user-id&cmd=<uid-message><type>update</type><payload><login><entry name=\"agentsmith\" ip=\"1.2.3.4\" timeout=\"60\"/></login></payload></uid-message>",
+                  "protocol": "https",
+                  "host": [
+                    "{{host}}"
+                  ],
+                  "path": [
+                    "api"
+                  ],
+                  "query": [
+                    {
+                      "key": "key",
+                      "value": "{{key}}",
+                      "description": "API key"
+                    },
+                    {
+                      "key": "type",
+                      "value": "user-id",
+                      "description": "API action"
+                    },
+                    {
+                      "key": "cmd",
+                      "value": "<uid-message><type>update</type><payload><login><entry name=\"agentsmith\" ip=\"1.2.3.4\" timeout=\"60\"/></login></payload></uid-message>",
+                      "description": "API command"
+                    }
+                  ]
+                },
+                "description": "Create a user to IP mapping"
+              },
+              "response": []
+            },
+            {
+              "name": "Logout User",
+              "_postman_id": "0bb7c535-c304-40f0-af9a-9e4c34299600",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "auth": {
+                  "type": "noauth"
+                },
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/x-www-form-urlencoded"
+                  }
+                ],
+                "body": {
+                  "mode": "urlencoded",
+                  "urlencoded": [],
+                  "options": {
+                    "urlencoded": {}
+                  }
+                },
+                "url": {
+                  "raw": "https://{{host}}/api?key={{key}}&type=user-id&cmd=<uid-message><type>update</type><payload><login><entry name=\"agentsmith\" ip=\"1.2.3.4\" timeout=\"60\"/></login></payload></uid-message>",
+                  "protocol": "https",
+                  "host": [
+                    "{{host}}"
+                  ],
+                  "path": [
+                    "api"
+                  ],
+                  "query": [
+                    {
+                      "key": "key",
+                      "value": "{{key}}",
+                      "description": "API key"
+                    },
+                    {
+                      "key": "type",
+                      "value": "user-id",
+                      "description": "API action"
+                    },
+                    {
+                      "key": "cmd",
+                      "value": "<uid-message><type>update</type><payload><login><entry name=\"agentsmith\" ip=\"1.2.3.4\" timeout=\"60\"/></login></payload></uid-message>",
+                      "description": "API command"
+                    }
+                  ]
+                },
+                "description": "Remove a user to IP mapping"
+              },
+              "response": []
+            },
+            {
+              "name": "Show User Logins",
+              "_postman_id": "da452d8f-aa74-4646-a0bf-359b89a991ea",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "auth": {
+                  "type": "noauth"
+                },
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/x-www-form-urlencoded"
+                  }
+                ],
+                "body": {
+                  "mode": "urlencoded",
+                  "urlencoded": [],
+                  "options": {
+                    "urlencoded": {}
+                  }
+                },
+                "url": {
+                  "raw": "https://{{host}}/api?key={{key}}&type=op&cmd=<show><user><ip-user-mapping-mp><all/></ip-user-mapping-mp></user></show>",
+                  "protocol": "https",
+                  "host": [
+                    "{{host}}"
+                  ],
+                  "path": [
+                    "api"
+                  ],
+                  "query": [
+                    {
+                      "key": "key",
+                      "value": "{{key}}",
+                      "description": "API key"
+                    },
+                    {
+                      "key": "type",
+                      "value": "op",
+                      "description": "API action"
+                    },
+                    {
+                      "key": "cmd",
+                      "value": "<show><user><ip-user-mapping-mp><all/></ip-user-mapping-mp></user></show>",
+                      "description": "API command"
+                    }
+                  ]
+                },
+                "description": "Show all registered IPs and their tags"
+              },
+              "response": []
+            },
+            {
+              "name": "Clear User Logins",
+              "_postman_id": "c7f5de0d-938a-40eb-8f7a-abacad5d009f",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "POST",
+                "header": [],
+                "url": {
+                  "raw": "https://{{host}}/api?key={{key}}&type=op&cmd=<clear><user-cache-mp><all/></user-cache-mp></clear>",
+                  "protocol": "https",
+                  "host": [
+                    "{{host}}"
+                  ],
+                  "path": [
+                    "api"
+                  ],
+                  "query": [
+                    {
+                      "key": "key",
+                      "value": "{{key}}"
+                    },
+                    {
+                      "key": "type",
+                      "value": "op"
+                    },
+                    {
+                      "key": "cmd",
+                      "value": "<clear><user-cache-mp><all/></user-cache-mp></clear>"
+                    }
+                  ]
+                },
+                "description": "Clear all user logins"
+              },
+              "response": []
+            }
+          ],
+          "_postman_id": "6043c367-90dd-419e-9969-cfc8874be9e8",
+          "_postman_isSubFolder": true
+        }
+      ],
+      "_postman_id": "ba99ae11-7be9-49ef-95a5-0b265ef545ad"
     },
     {
       "name": "Generate API key",
