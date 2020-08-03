@@ -9172,7 +9172,7 @@
           }
         },
         "url": {
-          "raw": "https://{{host}}/api?type=keygen&user=admin&password=kh8uyQMfNqvAo)P=vusCoDucF9j7*wF",
+          "raw": "https://{{host}}/api?type=keygen&user=admin&password=PaloAlto123!",
           "protocol": "https",
           "host": [
             "{{host}}"
@@ -9191,7 +9191,7 @@
             },
             {
               "key": "password",
-              "value": "kh8uyQMfNqvAo)P=vusCoDucF9j7*wF"
+              "value": "PaloAlto123!"
             }
           ]
         },
