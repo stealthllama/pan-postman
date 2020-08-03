@@ -5907,73 +5907,6 @@
           "response": []
         },
         {
-          "name": "Load Config",
-          "event": [
-            {
-              "listen": "prerequest",
-              "script": {
-                "id": "0897f533-6597-442b-9dc9-eed8c4b921b9",
-                "exec": [
-                  ""
-                ],
-                "type": "text/javascript"
-              }
-            }
-          ],
-          "_postman_id": "7f7cc8fc-472b-4eba-8b01-88ae4150f9e1",
-          "protocolProfileBehavior": {
-            "disableBodyPruning": true
-          },
-          "request": {
-            "auth": {
-              "type": "noauth"
-            },
-            "method": "POST",
-            "header": [
-              {
-                "key": "Content-Type",
-                "value": "application/x-www-form-urlencoded"
-              }
-            ],
-            "body": {
-              "mode": "urlencoded",
-              "urlencoded": [],
-              "options": {
-                "urlencoded": {}
-              }
-            },
-            "url": {
-              "raw": "https://{{host}}/api?key={{key}}&type=op&cmd=<load><config><from>new-pan-lan.xml</from></config></load>",
-              "protocol": "https",
-              "host": [
-                "{{host}}"
-              ],
-              "path": [
-                "api"
-              ],
-              "query": [
-                {
-                  "key": "key",
-                  "value": "{{key}}",
-                  "description": "API key"
-                },
-                {
-                  "key": "type",
-                  "value": "op",
-                  "description": "API action"
-                },
-                {
-                  "key": "cmd",
-                  "value": "<load><config><from>new-pan-lan.xml</from></config></load>",
-                  "description": "API command"
-                }
-              ]
-            },
-            "description": "Load a named configuration"
-          },
-          "response": []
-        },
-        {
           "name": "Import Config Copy",
           "event": [
             {
@@ -6042,6 +5975,73 @@
               ]
             },
             "description": "Import a configuration file"
+          },
+          "response": []
+        },
+        {
+          "name": "Load Config",
+          "event": [
+            {
+              "listen": "prerequest",
+              "script": {
+                "id": "0897f533-6597-442b-9dc9-eed8c4b921b9",
+                "exec": [
+                  ""
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
+          "_postman_id": "7f7cc8fc-472b-4eba-8b01-88ae4150f9e1",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/x-www-form-urlencoded"
+              }
+            ],
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [],
+              "options": {
+                "urlencoded": {}
+              }
+            },
+            "url": {
+              "raw": "https://{{host}}/api?key={{key}}&type=op&cmd=<load><config><from>new-pan-lan.xml</from></config></load>",
+              "protocol": "https",
+              "host": [
+                "{{host}}"
+              ],
+              "path": [
+                "api"
+              ],
+              "query": [
+                {
+                  "key": "key",
+                  "value": "{{key}}",
+                  "description": "API key"
+                },
+                {
+                  "key": "type",
+                  "value": "op",
+                  "description": "API action"
+                },
+                {
+                  "key": "cmd",
+                  "value": "<load><config><from>new-pan-lan.xml</from></config></load>",
+                  "description": "API command"
+                }
+              ]
+            },
+            "description": "Load a named configuration"
           },
           "response": []
         }
