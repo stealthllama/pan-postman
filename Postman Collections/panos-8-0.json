@@ -5972,6 +5972,78 @@
             "description": "Load a named configuration"
           },
           "response": []
+        },
+        {
+          "name": "Import Config Copy",
+          "event": [
+            {
+              "listen": "prerequest",
+              "script": {
+                "id": "ae3b71ab-ff27-4263-9bd4-05ad0daf43bd",
+                "exec": [
+                  ""
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
+          "_postman_id": "bf9d0482-ef61-4715-a434-38818f7b110f",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/x-www-form-urlencoded"
+              }
+            ],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "file",
+                  "type": "file",
+                  "src": "/Users/roberthagen/Downloads/new-pan-lan.xml"
+                }
+              ],
+              "options": {
+                "formdata": {}
+              }
+            },
+            "url": {
+              "raw": "https://{{host}}/api?key={{key}}&type=import&category=configuration",
+              "protocol": "https",
+              "host": [
+                "{{host}}"
+              ],
+              "path": [
+                "api"
+              ],
+              "query": [
+                {
+                  "key": "key",
+                  "value": "{{key}}",
+                  "description": "API key"
+                },
+                {
+                  "key": "type",
+                  "value": "import",
+                  "description": "API action"
+                },
+                {
+                  "key": "category",
+                  "value": "configuration"
+                }
+              ]
+            },
+            "description": "Import a configuration file"
+          },
+          "response": []
         }
       ],
       "_postman_id": "f50e63a4-9ea7-16a4-61a8-b58e9ef38f3b"
