@@ -5907,7 +5907,7 @@
           "response": []
         },
         {
-          "name": "Import Config Copy",
+          "name": "Export Config",
           "event": [
             {
               "listen": "prerequest",
@@ -5974,7 +5974,7 @@
                 }
               ]
             },
-            "description": "Import a configuration file"
+            "description": "Export the running configuration"
           },
           "response": []
         },
