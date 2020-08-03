@@ -9143,6 +9143,7 @@
             "exec": [
               "var jsonObject = xml2Json(responseBody);",
               "",
+              "console.log(jsonObject);",
               "pm.environment.set(\"key\", jsonObject.response.result.key);"
             ],
             "type": "text/javascript"
