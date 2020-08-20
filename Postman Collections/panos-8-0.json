@@ -139,7 +139,7 @@
               "response": []
             },
             {
-              "name": "Add Static Address Group Copy",
+              "name": "Get Address Group Member",
               "_postman_id": "6be6330f-2f75-4cf4-9798-3fd2b04b21b5",
               "protocolProfileBehavior": {
                 "disableBodyPruning": true
