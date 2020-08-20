@@ -139,6 +139,72 @@
               "response": []
             },
             {
+              "name": "Add Static Address Group Copy",
+              "_postman_id": "6be6330f-2f75-4cf4-9798-3fd2b04b21b5",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "auth": {
+                  "type": "noauth"
+                },
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/x-www-form-urlencoded"
+                  }
+                ],
+                "body": {
+                  "mode": "urlencoded",
+                  "urlencoded": [],
+                  "options": {
+                    "urlencoded": {}
+                  }
+                },
+                "url": {
+                  "raw": "https://{{host}}/api?type=config&action=set&xpath=/config/devices/entry[@name='localhost.localdomain']/vsys/entry[@name='vsys1']/address-group/entry[@name='test-dag']&element=<description>This is a test DAG</description><dynamic><filter>outbound</filter></dynamic>",
+                  "protocol": "https",
+                  "host": [
+                    "{{host}}"
+                  ],
+                  "path": [
+                    "api"
+                  ],
+                  "query": [
+                    {
+                      "key": "key",
+                      "value": "{{key}}",
+                      "description": "API key",
+                      "disabled": true
+                    },
+                    {
+                      "key": "type",
+                      "value": "config",
+                      "description": "API action"
+                    },
+                    {
+                      "key": "action",
+                      "value": "set",
+                      "description": "Config action"
+                    },
+                    {
+                      "key": "xpath",
+                      "value": "/config/devices/entry[@name='localhost.localdomain']/vsys/entry[@name='vsys1']/address-group/entry[@name='test-dag']",
+                      "description": "Config xpath"
+                    },
+                    {
+                      "key": "element",
+                      "value": "<description>This is a test DAG</description><dynamic><filter>outbound</filter></dynamic>",
+                      "description": "Config value"
+                    }
+                  ]
+                },
+                "description": "Add a static address group"
+              },
+              "response": []
+            },
+            {
               "name": "Add Dynamic Address Group",
               "_postman_id": "c143c29d-dc28-477f-8cb6-ba54e7e680c2",
               "protocolProfileBehavior": {
@@ -6475,135 +6541,6 @@
           ],
           "_postman_id": "270cbbe9-ad93-427c-a2fb-0deb811e1e2c",
           "description": "Import/export SSL certificates and private keys",
-          "_postman_isSubFolder": true
-        },
-        {
-          "name": "High Availability Keys",
-          "item": [
-            {
-              "name": "Import HA Key",
-              "_postman_id": "5b18add6-4fef-4e20-94ee-f3ee461179f9",
-              "protocolProfileBehavior": {
-                "disableBodyPruning": true
-              },
-              "request": {
-                "method": "POST",
-                "header": [
-                  {
-                    "key": "Content-Type",
-                    "name": "Content-Type",
-                    "type": "text",
-                    "value": "text/plain"
-                  }
-                ],
-                "body": {
-                  "mode": "formdata",
-                  "formdata": [
-                    {
-                      "key": "file",
-                      "type": "file",
-                      "value": null
-                    }
-                  ],
-                  "options": {
-                    "formdata": {}
-                  }
-                },
-                "url": {
-                  "raw": "https://{{host}}/api?key={{key}}&type=import&category=high-availability-key",
-                  "protocol": "https",
-                  "host": [
-                    "{{host}}"
-                  ],
-                  "path": [
-                    "api"
-                  ],
-                  "query": [
-                    {
-                      "key": "key",
-                      "value": "{{key}}",
-                      "description": "The API key"
-                    },
-                    {
-                      "key": "type",
-                      "value": "import",
-                      "description": "The API type"
-                    },
-                    {
-                      "key": "category",
-                      "value": "high-availability-key",
-                      "description": "The type of import"
-                    }
-                  ]
-                },
-                "description": "Import a high-availability key"
-              },
-              "response": []
-            },
-            {
-              "name": "Export HA Key",
-              "_postman_id": "ec2f4e0e-7706-46d5-9ba0-08b8536e7ebc",
-              "protocolProfileBehavior": {
-                "disableBodyPruning": true
-              },
-              "request": {
-                "method": "POST",
-                "header": [
-                  {
-                    "key": "Content-Type",
-                    "name": "Content-Type",
-                    "type": "text",
-                    "value": "text/plain"
-                  }
-                ],
-                "body": {
-                  "mode": "formdata",
-                  "formdata": [
-                    {
-                      "key": "file",
-                      "type": "file",
-                      "value": null,
-                      "disabled": true
-                    }
-                  ],
-                  "options": {
-                    "formdata": {}
-                  }
-                },
-                "url": {
-                  "raw": "https://{{host}}/api?key={{key}}&type=export&category=high-availability-key",
-                  "protocol": "https",
-                  "host": [
-                    "{{host}}"
-                  ],
-                  "path": [
-                    "api"
-                  ],
-                  "query": [
-                    {
-                      "key": "key",
-                      "value": "{{key}}",
-                      "description": "The API key"
-                    },
-                    {
-                      "key": "type",
-                      "value": "export",
-                      "description": "The API type"
-                    },
-                    {
-                      "key": "category",
-                      "value": "high-availability-key",
-                      "description": "The type of import"
-                    }
-                  ]
-                },
-                "description": "Export a high-availability key"
-              },
-              "response": []
-            }
-          ],
-          "_postman_id": "2008deea-d3e4-44ed-b3c8-8e8bb077cfc5",
-          "description": "Import/export high availability SSH keys",
           "_postman_isSubFolder": true
         },
         {
