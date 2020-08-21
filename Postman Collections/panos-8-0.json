@@ -163,7 +163,7 @@
                   }
                 },
                 "url": {
-                  "raw": "https://{{host}}/api?type=config&action=set&xpath=/config/devices/entry[@name='localhost.localdomain']/device-group/entry[@name='Demo_DG']/address-group/entry[@name='demo']/static/member[text()='db-srv']",
+                  "raw": "https://{{host}}/api?type=config&action=get&key={{key}}&xpath=/config/devices/entry[@name='localhost.localdomain']/device-group/entry[@name='Demo_DG']/address-group/entry[@name='demo']/static/member[text()='db-srv']",
                   "protocol": "https",
                   "host": [
                     "{{host}}"
@@ -178,13 +178,12 @@
                     },
                     {
                       "key": "action",
-                      "value": "set"
+                      "value": "get"
                     },
                     {
                       "description": "API key",
                       "key": "key",
-                      "value": "{{key}}",
-                      "disabled": true
+                      "value": "{{key}}"
                     },
                     {
                       "key": "xpath",
