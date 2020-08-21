@@ -145,9 +145,6 @@
                 "disableBodyPruning": true
               },
               "request": {
-                "auth": {
-                  "type": "noauth"
-                },
                 "method": "POST",
                 "header": [
                   {
@@ -163,7 +160,7 @@
                   }
                 },
                 "url": {
-                  "raw": "https://{{host}}/api?type=config&action=get&key={{key}}&xpath=/config/devices/entry[@name='localhost.localdomain']/device-group/entry[@name='Demo_DG']/address-group/entry[@name='demo']/static/member[text()='db-srv']",
+                  "raw": "https://{{host}}/api?type=config&action=get&key={{key}}&xpath=/config/devices/entry[@name='localhost.localdomain']/device-group/entry[@name='Demo_DG']/address-group/entry[@name='Demo_AddrGrp']/static/member[text()='db-srv']",
                   "protocol": "https",
                   "host": [
                     "{{host}}"
@@ -181,13 +178,13 @@
                       "value": "get"
                     },
                     {
-                      "description": "API key",
                       "key": "key",
-                      "value": "{{key}}"
+                      "value": "{{key}}",
+                      "description": "API key"
                     },
                     {
                       "key": "xpath",
-                      "value": "/config/devices/entry[@name='localhost.localdomain']/device-group/entry[@name='Demo_DG']/address-group/entry[@name='demo']/static/member[text()='db-srv']"
+                      "value": "/config/devices/entry[@name='localhost.localdomain']/device-group/entry[@name='Demo_DG']/address-group/entry[@name='Demo_AddrGrp']/static/member[text()='db-srv']"
                     }
                   ]
                 },
