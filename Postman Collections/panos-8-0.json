@@ -2018,9 +2018,6 @@
             "disableBodyPruning": true
           },
           "request": {
-            "auth": {
-              "type": "noauth"
-            },
             "method": "POST",
             "header": [
               {
@@ -2030,10 +2027,13 @@
             ],
             "body": {
               "mode": "urlencoded",
-              "urlencoded": []
+              "urlencoded": [],
+              "options": {
+                "urlencoded": {}
+              }
             },
             "url": {
-              "raw": "https://{{host}}/api?key={{key}}&type=op&cmd=<show><system><info></info></system></show>",
+              "raw": "https://{{host}}/api?type=op&cmd=<show><system><info></info></system></show>",
               "protocol": "https",
               "host": [
                 "{{host}}"
@@ -2044,7 +2044,8 @@
               "query": [
                 {
                   "key": "key",
-                  "value": "{{key}}"
+                  "value": "{{key}}",
+                  "disabled": true
                 },
                 {
                   "key": "type",
