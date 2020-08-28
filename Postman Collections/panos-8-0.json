@@ -44,11 +44,6 @@
                   ],
                   "query": [
                     {
-                      "key": "key",
-                      "value": "{{key}}",
-                      "disabled": true
-                    },
-                    {
                       "key": "type",
                       "value": "config"
                     },
@@ -6106,9 +6101,6 @@
             "disableBodyPruning": true
           },
           "request": {
-            "auth": {
-              "type": "noauth"
-            },
             "method": "POST",
             "header": [
               {
@@ -6122,7 +6114,8 @@
                 {
                   "key": "file",
                   "type": "file",
-                  "src": "/Users/roberthagen/Downloads/new-pan-lan.xml"
+                  "value": null,
+                  "disabled": true
                 }
               ],
               "options": {
@@ -6130,7 +6123,7 @@
               }
             },
             "url": {
-              "raw": "https://{{host}}/api?key={{key}}&type=import&category=configuration",
+              "raw": "https://{{host}}/api?type=export&category=configuration",
               "protocol": "https",
               "host": [
                 "{{host}}"
@@ -6142,11 +6135,12 @@
                 {
                   "key": "key",
                   "value": "{{key}}",
-                  "description": "API key"
+                  "description": "API key",
+                  "disabled": true
                 },
                 {
                   "key": "type",
-                  "value": "import",
+                  "value": "export",
                   "description": "API action"
                 },
                 {
