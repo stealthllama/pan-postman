@@ -4836,10 +4836,10 @@
               "listen": "prerequest",
               "script": {
                 "id": "0897f533-6597-442b-9dc9-eed8c4b921b9",
-                "type": "text/javascript",
                 "exec": [
                   ""
-                ]
+                ],
+                "type": "text/javascript"
               }
             }
           ],
@@ -4848,9 +4848,6 @@
             "disableBodyPruning": true
           },
           "request": {
-            "auth": {
-              "type": "noauth"
-            },
             "method": "POST",
             "header": [
               {
@@ -4860,10 +4857,13 @@
             ],
             "body": {
               "mode": "urlencoded",
-              "urlencoded": []
+              "urlencoded": [],
+              "options": {
+                "urlencoded": {}
+              }
             },
             "url": {
-              "raw": "https://{{host}}/api?key={{key}}&type=commit&cmd=<commit></commit>",
+              "raw": "https://{{host}}/api?type=commit&cmd=<commit></commit>",
               "protocol": "https",
               "host": [
                 "{{host}}"
@@ -4875,7 +4875,8 @@
                 {
                   "key": "key",
                   "value": "{{key}}",
-                  "description": "API key"
+                  "description": "API key",
+                  "disabled": true
                 },
                 {
                   "key": "type",
