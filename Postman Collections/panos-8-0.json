@@ -61,7 +61,7 @@
               "response": []
             },
             {
-              "name": "Get Security Rule Copy",
+              "name": "Create Security Rule",
               "event": [
                 {
                   "listen": "test",
