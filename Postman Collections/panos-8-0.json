@@ -82,7 +82,7 @@
                 "method": "POST",
                 "header": [],
                 "url": {
-                  "raw": "https://{{host}}/api?type=config&action=set&xpath=/config/devices/entry[@name='localhost.localdomain']/vsys/entry[@name='vsys1']/rulebase/security/rules/entry[@name=\"Allow SMTP\"]&element=<from>\n    <member>trust</member>\n</from>\n<to>\n    <member>untrust</member>\n</to>\n<source>\n    <member>any</member>\n</source>\n<destination>\n    <member>any</member>\n</destination>\n<source-user>\n    <member>any</member>\n</source-user>\n<category>\n    <member>any</member>\n</category>\n<application>\n    <member>smtp</member>\n</application>\n<service>\n    <member>application-default</member>\n</service>\n<source-hip>\n    <member>any</member>\n</source-hip>\n<destination-hip>\n    <member>any</member>\n</destination-hip>\n<action>allow</action>\n<profile-setting>\n    <group>\n        <member>default</member>\n    </group>\n</profile-setting>\n<log-end>yes</log-end>\n<disabled>yes</disabled>",
+                  "raw": "https://{{host}}/api?type=config&action=set&xpath=/config/devices/entry[@name='localhost.localdomain']/vsys/entry[@name='vsys1']/rulebase/security/rules/entry[@name=\"Allow SMTP\"]&element=<from><member>trust</member></from><to><member>untrust</member></to><source><member>any</member></source><destination><member>any</member></destination><source-user><member>any</member></source-user><category><member>any</member></category><application><member>smtp</member></application><service><member>application-default</member></service><source-hip><member>any</member></source-hip><destination-hip><member>any</member></destination-hip><action>allow</action><profile-setting><group><member>default</member></group></profile-setting><log-end>yes</log-end><disabled>yes</disabled>",
                   "protocol": "https",
                   "host": [
                     "{{host}}"
@@ -105,7 +105,7 @@
                     },
                     {
                       "key": "element",
-                      "value": "<from>\n    <member>trust</member>\n</from>\n<to>\n    <member>untrust</member>\n</to>\n<source>\n    <member>any</member>\n</source>\n<destination>\n    <member>any</member>\n</destination>\n<source-user>\n    <member>any</member>\n</source-user>\n<category>\n    <member>any</member>\n</category>\n<application>\n    <member>smtp</member>\n</application>\n<service>\n    <member>application-default</member>\n</service>\n<source-hip>\n    <member>any</member>\n</source-hip>\n<destination-hip>\n    <member>any</member>\n</destination-hip>\n<action>allow</action>\n<profile-setting>\n    <group>\n        <member>default</member>\n    </group>\n</profile-setting>\n<log-end>yes</log-end>\n<disabled>yes</disabled>"
+                      "value": "<from><member>trust</member></from><to><member>untrust</member></to><source><member>any</member></source><destination><member>any</member></destination><source-user><member>any</member></source-user><category><member>any</member></category><application><member>smtp</member></application><service><member>application-default</member></service><source-hip><member>any</member></source-hip><destination-hip><member>any</member></destination-hip><action>allow</action><profile-setting><group><member>default</member></group></profile-setting><log-end>yes</log-end><disabled>yes</disabled>"
                     }
                   ]
                 }
