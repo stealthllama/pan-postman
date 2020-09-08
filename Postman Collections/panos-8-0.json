@@ -82,7 +82,7 @@
                 "method": "POST",
                 "header": [],
                 "url": {
-                  "raw": "https://{{host}}/api?type=config&action=set&xpath=/config/devices/entry[@name='localhost.localdomain']/vsys/entry[@name='vsys1']/rulebase/security/rules/entry[@name=\"Allow SMTP\"]&element=<from><member>trust</member></from><to><member>untrust</member></to><source><member>any</member></source><destination><member>any</member></destination><source-user><member>any</member></source-user><category><member>any</member></category><application><member>smtp</member></application><service><member>application-default</member></service><source-hip><member>any</member></source-hip><destination-hip><member>any</member></destination-hip><action>allow</action><profile-setting><group><member>default</member></group></profile-setting><log-end>yes</log-end><disabled>yes</disabled>",
+                  "raw": "https://{{host}}/api?type=config&action=set&xpath=/config/devices/entry[@name='localhost.localdomain']/vsys/entry[@name='vsys1']/rulebase/security/rules/entry[@name='Allow SMTP']&element=<from><member>trust</member></from><to><member>untrust</member></to><source><member>any</member></source><destination><member>any</member></destination><source-user><member>any</member></source-user><category><member>any</member></category><application><member>smtp</member></application><service><member>application-default</member></service><source-hip><member>any</member></source-hip><destination-hip><member>any</member></destination-hip><action>allow</action><profile-setting><group><member>default</member></group></profile-setting><log-end>yes</log-end><disabled>yes</disabled>",
                   "protocol": "https",
                   "host": [
                     "{{host}}"
@@ -101,7 +101,7 @@
                     },
                     {
                       "key": "xpath",
-                      "value": "/config/devices/entry[@name='localhost.localdomain']/vsys/entry[@name='vsys1']/rulebase/security/rules/entry[@name=\"Allow SMTP\"]"
+                      "value": "/config/devices/entry[@name='localhost.localdomain']/vsys/entry[@name='vsys1']/rulebase/security/rules/entry[@name='Allow SMTP']"
                     },
                     {
                       "key": "element",
