@@ -59,6 +59,54 @@
                 }
               },
               "response": []
+            },
+            {
+              "name": "Get Security Rule Copy",
+              "event": [
+                {
+                  "listen": "test",
+                  "script": {
+                    "id": "d447ac3e-77be-478d-8566-924085a7da83",
+                    "exec": [
+                      ""
+                    ],
+                    "type": "text/javascript"
+                  }
+                }
+              ],
+              "_postman_id": "06e66f9a-5292-45f4-87c8-b54c5a62f7ae",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "POST",
+                "header": [],
+                "url": {
+                  "raw": "https://{{host}}/api?type=config&action=get&xpath=/config/devices/entry[@name='localhost.localdomain']/vsys/entry[@name='vsys1']/rulebase/security/rules/entry[@name=\"Allow out\"]",
+                  "protocol": "https",
+                  "host": [
+                    "{{host}}"
+                  ],
+                  "path": [
+                    "api"
+                  ],
+                  "query": [
+                    {
+                      "key": "type",
+                      "value": "config"
+                    },
+                    {
+                      "key": "action",
+                      "value": "get"
+                    },
+                    {
+                      "key": "xpath",
+                      "value": "/config/devices/entry[@name='localhost.localdomain']/vsys/entry[@name='vsys1']/rulebase/security/rules/entry[@name=\"Allow out\"]"
+                    }
+                  ]
+                }
+              },
+              "response": []
             }
           ],
           "_postman_id": "36783d5b-c3ae-449b-9c23-94bd0396737d",
