@@ -111,6 +111,19 @@
                 }
               },
               "response": []
+            },
+            {
+              "name": "Show Used Apps",
+              "_postman_id": "67d18337-7fda-4279-893f-52ebc7cf4039",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": ""
+              },
+              "response": []
             }
           ],
           "_postman_id": "36783d5b-c3ae-449b-9c23-94bd0396737d",
