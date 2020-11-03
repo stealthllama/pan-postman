@@ -9266,7 +9266,21 @@
     },
     {
       "name": "Version Information",
-      "item": [],
+      "item": [
+        {
+          "name": "Get Version Info",
+          "_postman_id": "d9781725-4177-48f7-97ca-addc620c6fda",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": ""
+          },
+          "response": []
+        }
+      ],
       "_postman_id": "10ed3519-8247-42de-9be1-1088fb236192"
     },
     {
