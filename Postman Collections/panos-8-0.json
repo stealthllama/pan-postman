@@ -9265,6 +9265,11 @@
       "description": "API calls specific to the Panorama management console"
     },
     {
+      "name": "Version Information",
+      "item": [],
+      "_postman_id": "10ed3519-8247-42de-9be1-1088fb236192"
+    },
+    {
       "name": "Generate API key",
       "event": [
         {
