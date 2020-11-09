@@ -934,6 +934,19 @@
                 "description": "Show platform interfaces"
               },
               "response": []
+            },
+            {
+              "name": "Show Job Info",
+              "_postman_id": "7bcca8ad-9239-41bb-9539-9edbd0af4a7b",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": ""
+              },
+              "response": []
             }
           ],
           "_postman_id": "8cc513ed-77d7-882d-ce6a-cf0a31420ad1",
@@ -9274,9 +9287,28 @@
             "disableBodyPruning": true
           },
           "request": {
-            "method": "GET",
+            "method": "POST",
             "header": [],
-            "url": ""
+            "url": {
+              "raw": "https://{{host}}/api?key={{key}}&type=version",
+              "protocol": "https",
+              "host": [
+                "{{host}}"
+              ],
+              "path": [
+                "api"
+              ],
+              "query": [
+                {
+                  "key": "key",
+                  "value": "{{key}}"
+                },
+                {
+                  "key": "type",
+                  "value": "version"
+                }
+              ]
+            }
           },
           "response": []
         }
