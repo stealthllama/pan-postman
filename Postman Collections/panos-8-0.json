@@ -535,12 +535,22 @@
                     },
                     {
                       "key": "type",
-                      "value": "op",
+                      "value": "config",
                       "type": "text"
                     },
                     {
-                      "key": "cmd",
-                      "value": "<show><system><info></info></system></show>",
+                      "key": "action",
+                      "value": "set",
+                      "type": "text"
+                    },
+                    {
+                      "key": "xpath",
+                      "value": "/config/devices/entry[@name='localhost.localdomain']/vsys/entry[@name='vsys1']/address",
+                      "type": "text"
+                    },
+                    {
+                      "key": "element",
+                      "value": "<entry name=\"Test-Two\"><ip-netmask>3.3.3.3</ip-netmask><description>Foo</description></entry><entry name=\"Test-Three\"><ip-netmask>4.4.4.4</ip-netmask><description>Bar</description></entry>",
                       "type": "text"
                     }
                   ],
