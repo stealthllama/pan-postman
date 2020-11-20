@@ -455,6 +455,73 @@
                 "description": "Add a dynamic address group"
               },
               "response": []
+            },
+            {
+              "name": "Get Address Group Member Copy",
+              "_postman_id": "416b3e8e-ec49-44ef-8419-531c18926a6e",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/x-www-form-urlencoded"
+                  }
+                ],
+                "body": {
+                  "mode": "urlencoded",
+                  "urlencoded": [],
+                  "options": {
+                    "urlencoded": {}
+                  }
+                },
+                "url": {
+                  "raw": "https://{{host}}/api?type=config&action=get&key={{key}}&xpath=/config/devices/entry[@name='localhost.localdomain']/device-group/entry[@name='Demo_DG']/address-group/entry[@name='Demo_AddrGrp']/static/member[text()='db-srv' or text()='web-srv']",
+                  "protocol": "https",
+                  "host": [
+                    "{{host}}"
+                  ],
+                  "path": [
+                    "api"
+                  ],
+                  "query": [
+                    {
+                      "key": "type",
+                      "value": "config"
+                    },
+                    {
+                      "key": "action",
+                      "value": "get"
+                    },
+                    {
+                      "key": "key",
+                      "value": "{{key}}",
+                      "description": "API key"
+                    },
+                    {
+                      "key": "xpath",
+                      "value": "/config/devices/entry[@name='localhost.localdomain']/device-group/entry[@name='Demo_DG']/address-group/entry[@name='Demo_AddrGrp']/static/member[text()='db-srv' or text()='web-srv']"
+                    }
+                  ]
+                },
+                "description": "Add a static address group"
+              },
+              "response": []
+            },
+            {
+              "name": "Multi Update",
+              "_postman_id": "78465d63-b734-4031-8297-90df320a15b4",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": ""
+              },
+              "response": []
             }
           ],
           "_postman_id": "8f8e678a-6776-fb66-0eeb-84053d6c20f9",
