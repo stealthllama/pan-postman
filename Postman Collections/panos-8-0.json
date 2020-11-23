@@ -1043,7 +1043,7 @@
                         }
                       ]
                     },
-                    "description": "Include the node you wish to modify in the xpath, and reference the specific entry by name.  Then, include the new members in the element parameter."
+                    "description": "Adds a new address object, `Data-Center-192.168.2.0-24` to the address group `Data-Center`.\n\nInclude the node you wish to modify in the xpath, and reference the specific entry by name.  Then, include the new members in the element parameter."
                   },
                   "response": [
                     {
@@ -2497,13 +2497,13 @@
   ],
   "variable": [
     {
-      "id": "94cc6224-6aec-4101-9175-fe54da1121ca",
+      "id": "65819dda-3d00-4ffd-b57c-9b1bc4553eff",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "369686c3-44bb-45cc-be0b-9b68ebd05de3",
+      "id": "127a73e3-5e4e-419d-a626-7dce9a176d51",
       "key": "{{key}}",
       "value": "",
       "type": "string"
