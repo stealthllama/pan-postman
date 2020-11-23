@@ -1766,7 +1766,7 @@
               "name": "Delete Configuration",
               "item": [
                 {
-                  "name": "Delete a rule in the security policy",
+                  "name": "Delete a security rule",
                   "_postman_id": "0faacfba-2285-41fb-97ff-28ecf44114cd",
                   "protocolProfileBehavior": {
                     "disableBodyPruning": true
@@ -1979,13 +1979,13 @@
   ],
   "variable": [
     {
-      "id": "659a23ad-1734-4f9a-932f-58961fe39a15",
+      "id": "10ff6be1-5698-4597-9dd3-f960ea7b2c2f",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "fea8ee5a-be60-4818-9f3b-115e79d31bcc",
+      "id": "20d3abef-f6e0-4398-9299-8623f1bd3f80",
       "key": "{{key}}",
       "value": "",
       "type": "string"
