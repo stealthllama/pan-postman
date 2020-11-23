@@ -9385,40 +9385,7 @@
     },
     {
       "name": "Version Information",
-      "item": [
-        {
-          "name": "Get Version Info",
-          "_postman_id": "d9781725-4177-48f7-97ca-addc620c6fda",
-          "protocolProfileBehavior": {
-            "disableBodyPruning": true
-          },
-          "request": {
-            "method": "POST",
-            "header": [],
-            "url": {
-              "raw": "https://{{host}}/api?key={{key}}&type=version",
-              "protocol": "https",
-              "host": [
-                "{{host}}"
-              ],
-              "path": [
-                "api"
-              ],
-              "query": [
-                {
-                  "key": "key",
-                  "value": "{{key}}"
-                },
-                {
-                  "key": "type",
-                  "value": "version"
-                }
-              ]
-            }
-          },
-          "response": []
-        }
-      ],
+      "item": [],
       "_postman_id": "10ed3519-8247-42de-9be1-1088fb236192"
     },
     {
@@ -9577,7 +9544,40 @@
         },
         {
           "name": "Get Version Info",
-          "item": [],
+          "item": [
+            {
+              "name": "Get Version Info",
+              "_postman_id": "d9781725-4177-48f7-97ca-addc620c6fda",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "POST",
+                "header": [],
+                "url": {
+                  "raw": "https://{{host}}/api?key={{key}}&type=version",
+                  "protocol": "https",
+                  "host": [
+                    "{{host}}"
+                  ],
+                  "path": [
+                    "api"
+                  ],
+                  "query": [
+                    {
+                      "key": "key",
+                      "value": "{{key}}"
+                    },
+                    {
+                      "key": "type",
+                      "value": "version"
+                    }
+                  ]
+                }
+              },
+              "response": []
+            }
+          ],
           "_postman_id": "2b35b2a1-42c2-4d84-833d-e9fc5e0efa98",
           "_postman_isSubFolder": true
         }
@@ -9616,13 +9616,13 @@
   ],
   "variable": [
     {
-      "id": "baca75cd-dacb-4208-8135-9fe54c1d7b2d",
+      "id": "a1d2e2a0-d2c7-40b3-879e-2887b0250d91",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "2a5350e5-638a-44d3-b0c3-221115872852",
+      "id": "9aade8b5-d451-485e-921e-951f297afd43",
       "key": "{{key}}",
       "value": "",
       "type": "string"
