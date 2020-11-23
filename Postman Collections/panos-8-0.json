@@ -149,424 +149,6 @@
           "_postman_isSubFolder": true
         },
         {
-          "name": "Objects",
-          "item": [
-            {
-              "name": "Add Static Address Group",
-              "_postman_id": "bff49112-5fac-4e1b-a7b1-f00a1451d313",
-              "protocolProfileBehavior": {
-                "disableBodyPruning": true
-              },
-              "request": {
-                "auth": {
-                  "type": "noauth"
-                },
-                "method": "POST",
-                "header": [
-                  {
-                    "key": "Content-Type",
-                    "value": "application/x-www-form-urlencoded"
-                  }
-                ],
-                "body": {
-                  "mode": "urlencoded",
-                  "urlencoded": [],
-                  "options": {
-                    "urlencoded": {}
-                  }
-                },
-                "url": {
-                  "raw": "https://{{host}}/api?type=config&action=set&xpath=/config/devices/entry[@name='localhost.localdomain']/vsys/entry[@name='vsys1']/address-group/entry[@name='test-dag']&element=<description>This is a test DAG</description><dynamic><filter>outbound</filter></dynamic>",
-                  "protocol": "https",
-                  "host": [
-                    "{{host}}"
-                  ],
-                  "path": [
-                    "api"
-                  ],
-                  "query": [
-                    {
-                      "key": "key",
-                      "value": "{{key}}",
-                      "description": "API key",
-                      "disabled": true
-                    },
-                    {
-                      "key": "type",
-                      "value": "config",
-                      "description": "API action"
-                    },
-                    {
-                      "key": "action",
-                      "value": "set",
-                      "description": "Config action"
-                    },
-                    {
-                      "key": "xpath",
-                      "value": "/config/devices/entry[@name='localhost.localdomain']/vsys/entry[@name='vsys1']/address-group/entry[@name='test-dag']",
-                      "description": "Config xpath"
-                    },
-                    {
-                      "key": "element",
-                      "value": "<description>This is a test DAG</description><dynamic><filter>outbound</filter></dynamic>",
-                      "description": "Config value"
-                    }
-                  ]
-                },
-                "description": "Add a static address group"
-              },
-              "response": []
-            },
-            {
-              "name": "Get Address Group Member",
-              "_postman_id": "6be6330f-2f75-4cf4-9798-3fd2b04b21b5",
-              "protocolProfileBehavior": {
-                "disableBodyPruning": true
-              },
-              "request": {
-                "method": "POST",
-                "header": [
-                  {
-                    "key": "Content-Type",
-                    "value": "application/x-www-form-urlencoded"
-                  }
-                ],
-                "body": {
-                  "mode": "urlencoded",
-                  "urlencoded": [],
-                  "options": {
-                    "urlencoded": {}
-                  }
-                },
-                "url": {
-                  "raw": "https://{{host}}/api?type=config&action=get&key={{key}}&xpath=/config/devices/entry[@name='localhost.localdomain']/device-group/entry[@name='Demo_DG']/address-group/entry[@name='Demo_AddrGrp']/static/member[text()='db-srv' or text()='web-srv']",
-                  "protocol": "https",
-                  "host": [
-                    "{{host}}"
-                  ],
-                  "path": [
-                    "api"
-                  ],
-                  "query": [
-                    {
-                      "key": "type",
-                      "value": "config"
-                    },
-                    {
-                      "key": "action",
-                      "value": "get"
-                    },
-                    {
-                      "key": "key",
-                      "value": "{{key}}",
-                      "description": "API key"
-                    },
-                    {
-                      "key": "xpath",
-                      "value": "/config/devices/entry[@name='localhost.localdomain']/device-group/entry[@name='Demo_DG']/address-group/entry[@name='Demo_AddrGrp']/static/member[text()='db-srv' or text()='web-srv']"
-                    }
-                  ]
-                },
-                "description": "Add a static address group"
-              },
-              "response": []
-            },
-            {
-              "name": "Add Dynamic Address Group",
-              "_postman_id": "c143c29d-dc28-477f-8cb6-ba54e7e680c2",
-              "protocolProfileBehavior": {
-                "disableBodyPruning": true
-              },
-              "request": {
-                "auth": {
-                  "type": "noauth"
-                },
-                "method": "POST",
-                "header": [
-                  {
-                    "key": "Content-Type",
-                    "value": "application/x-www-form-urlencoded"
-                  }
-                ],
-                "body": {
-                  "mode": "urlencoded",
-                  "urlencoded": [],
-                  "options": {
-                    "urlencoded": {}
-                  }
-                },
-                "url": {
-                  "raw": "https://{{host}}/api?type=config&action=set&xpath=/config/devices/entry[@name='localhost.localdomain']/vsys/entry[@name='vsys1']/address-group/entry[@name='blocked']&element=<description>This is a test DAG</description><dynamic><filter>outbound</filter></dynamic>",
-                  "protocol": "https",
-                  "host": [
-                    "{{host}}"
-                  ],
-                  "path": [
-                    "api"
-                  ],
-                  "query": [
-                    {
-                      "key": "key",
-                      "value": "{{key}}",
-                      "description": "API key",
-                      "disabled": true
-                    },
-                    {
-                      "key": "type",
-                      "value": "config",
-                      "description": "API action"
-                    },
-                    {
-                      "key": "action",
-                      "value": "set",
-                      "description": "Config action"
-                    },
-                    {
-                      "key": "xpath",
-                      "value": "/config/devices/entry[@name='localhost.localdomain']/vsys/entry[@name='vsys1']/address-group/entry[@name='blocked']",
-                      "description": "Config xpath"
-                    },
-                    {
-                      "key": "element",
-                      "value": "<description>This is a test DAG</description><dynamic><filter>outbound</filter></dynamic>",
-                      "description": "Config value"
-                    }
-                  ]
-                },
-                "description": "Add a dynamic address group"
-              },
-              "response": []
-            },
-            {
-              "name": "Add Shared Tag",
-              "_postman_id": "f1f426a0-2c46-ce1a-43d1-f2ec9db15a1a",
-              "protocolProfileBehavior": {
-                "disableBodyPruning": true
-              },
-              "request": {
-                "method": "POST",
-                "header": [],
-                "body": {
-                  "mode": "urlencoded",
-                  "urlencoded": [],
-                  "options": {
-                    "urlencoded": {}
-                  }
-                },
-                "url": {
-                  "raw": "https://{{host}}/api?type=config&action=set&xpath=/config/shared/tag/entry[@name='foo']&element=<color>color1</color><comments>Test tag</comments>",
-                  "protocol": "https",
-                  "host": [
-                    "{{host}}"
-                  ],
-                  "path": [
-                    "api"
-                  ],
-                  "query": [
-                    {
-                      "key": "key",
-                      "value": "{{key}}",
-                      "disabled": true
-                    },
-                    {
-                      "key": "type",
-                      "value": "config"
-                    },
-                    {
-                      "key": "action",
-                      "value": "set"
-                    },
-                    {
-                      "key": "xpath",
-                      "value": "/config/shared/tag/entry[@name='foo']"
-                    },
-                    {
-                      "key": "element",
-                      "value": "<color>color1</color><comments>Test tag</comments>"
-                    }
-                  ]
-                },
-                "description": "Add a shared tag in Panorama"
-              },
-              "response": []
-            },
-            {
-              "name": "Add Custom URL Category",
-              "_postman_id": "aee5557b-92dc-4953-b5e3-3567252510cf",
-              "protocolProfileBehavior": {
-                "disableBodyPruning": true
-              },
-              "request": {
-                "auth": {
-                  "type": "noauth"
-                },
-                "method": "POST",
-                "header": [
-                  {
-                    "key": "Content-Type",
-                    "value": "application/x-www-form-urlencoded"
-                  }
-                ],
-                "body": {
-                  "mode": "urlencoded",
-                  "urlencoded": [],
-                  "options": {
-                    "urlencoded": {}
-                  }
-                },
-                "url": {
-                  "raw": "https://{{host}}/api?type=config&action=set&xpath=/config/devices/entry[@name='localhost.localdomain']/vsys/entry[@name='vsys1']/profiles/custom-url-category/entry[@name='My Cat']&element=<member>blah.org</member><member>foo.com</member><member>bar.com</member> <type>URL List</type>",
-                  "protocol": "https",
-                  "host": [
-                    "{{host}}"
-                  ],
-                  "path": [
-                    "api"
-                  ],
-                  "query": [
-                    {
-                      "key": "key",
-                      "value": "{{key}}",
-                      "description": "API key",
-                      "disabled": true
-                    },
-                    {
-                      "key": "type",
-                      "value": "config",
-                      "description": "API action"
-                    },
-                    {
-                      "key": "action",
-                      "value": "set",
-                      "description": "Config action"
-                    },
-                    {
-                      "key": "xpath",
-                      "value": "/config/devices/entry[@name='localhost.localdomain']/vsys/entry[@name='vsys1']/profiles/custom-url-category/entry[@name='My Cat']",
-                      "description": "Config xpath"
-                    },
-                    {
-                      "key": "element",
-                      "value": "<member>blah.org</member><member>foo.com</member><member>bar.com</member> <type>URL List</type>",
-                      "description": "Config value"
-                    }
-                  ]
-                },
-                "description": "Add a dynamic address group"
-              },
-              "response": []
-            },
-            {
-              "name": "Get Address Group Member Copy",
-              "_postman_id": "416b3e8e-ec49-44ef-8419-531c18926a6e",
-              "protocolProfileBehavior": {
-                "disableBodyPruning": true
-              },
-              "request": {
-                "method": "POST",
-                "header": [
-                  {
-                    "key": "Content-Type",
-                    "value": "application/x-www-form-urlencoded"
-                  }
-                ],
-                "body": {
-                  "mode": "urlencoded",
-                  "urlencoded": [],
-                  "options": {
-                    "urlencoded": {}
-                  }
-                },
-                "url": {
-                  "raw": "https://{{host}}/api?type=config&action=get&key={{key}}&xpath=/config/devices/entry[@name='localhost.localdomain']/device-group/entry[@name='Demo_DG']/address-group/entry[@name='Demo_AddrGrp']/static/member[text()='db-srv' or text()='web-srv']",
-                  "protocol": "https",
-                  "host": [
-                    "{{host}}"
-                  ],
-                  "path": [
-                    "api"
-                  ],
-                  "query": [
-                    {
-                      "key": "type",
-                      "value": "config"
-                    },
-                    {
-                      "key": "action",
-                      "value": "get"
-                    },
-                    {
-                      "key": "key",
-                      "value": "{{key}}",
-                      "description": "API key"
-                    },
-                    {
-                      "key": "xpath",
-                      "value": "/config/devices/entry[@name='localhost.localdomain']/device-group/entry[@name='Demo_DG']/address-group/entry[@name='Demo_AddrGrp']/static/member[text()='db-srv' or text()='web-srv']"
-                    }
-                  ]
-                },
-                "description": "Add a static address group"
-              },
-              "response": []
-            },
-            {
-              "name": "Multi Update",
-              "_postman_id": "78465d63-b734-4031-8297-90df320a15b4",
-              "protocolProfileBehavior": {
-                "disableBodyPruning": true
-              },
-              "request": {
-                "method": "POST",
-                "header": [
-                  {
-                    "key": "Content-Type",
-                    "value": "application/x-www-form-urlencoded",
-                    "type": "text"
-                  }
-                ],
-                "body": {
-                  "mode": "urlencoded",
-                  "urlencoded": [
-                    {
-                      "key": "key",
-                      "value": "{{key}}",
-                      "type": "text"
-                    },
-                    {
-                      "key": "type",
-                      "value": "config",
-                      "type": "text"
-                    },
-                    {
-                      "key": "action",
-                      "value": "set",
-                      "type": "text"
-                    },
-                    {
-                      "key": "xpath",
-                      "value": "/config/devices/entry[@name='localhost.localdomain']/vsys/entry[@name='vsys1']/address",
-                      "type": "text"
-                    },
-                    {
-                      "key": "element",
-                      "value": "<entry name=\"Test-Two\"><ip-netmask>2.2.2.2</ip-netmask><description/></entry><entry name=\"Test-Three\"><ip-netmask>3.3.3.3</ip-netmask><description>Bar</description></entry>",
-                      "type": "text"
-                    }
-                  ],
-                  "options": {
-                    "urlencoded": {}
-                  }
-                },
-                "url": "https://{{host}}/api/"
-              },
-              "response": []
-            }
-          ],
-          "_postman_id": "8f8e678a-6776-fb66-0eeb-84053d6c20f9",
-          "_postman_isSubFolder": true
-        },
-        {
           "name": "Device",
           "item": [
             {
@@ -10732,6 +10314,424 @@
           ],
           "_postman_id": "307b40d9-157f-02a7-ce62-d005edb71601",
           "_postman_isSubFolder": true
+        },
+        {
+          "name": "Objects",
+          "item": [
+            {
+              "name": "Add Static Address Group",
+              "_postman_id": "bff49112-5fac-4e1b-a7b1-f00a1451d313",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "auth": {
+                  "type": "noauth"
+                },
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/x-www-form-urlencoded"
+                  }
+                ],
+                "body": {
+                  "mode": "urlencoded",
+                  "urlencoded": [],
+                  "options": {
+                    "urlencoded": {}
+                  }
+                },
+                "url": {
+                  "raw": "https://{{host}}/api?type=config&action=set&xpath=/config/devices/entry[@name='localhost.localdomain']/vsys/entry[@name='vsys1']/address-group/entry[@name='test-dag']&element=<description>This is a test DAG</description><dynamic><filter>outbound</filter></dynamic>",
+                  "protocol": "https",
+                  "host": [
+                    "{{host}}"
+                  ],
+                  "path": [
+                    "api"
+                  ],
+                  "query": [
+                    {
+                      "key": "key",
+                      "value": "{{key}}",
+                      "description": "API key",
+                      "disabled": true
+                    },
+                    {
+                      "key": "type",
+                      "value": "config",
+                      "description": "API action"
+                    },
+                    {
+                      "key": "action",
+                      "value": "set",
+                      "description": "Config action"
+                    },
+                    {
+                      "key": "xpath",
+                      "value": "/config/devices/entry[@name='localhost.localdomain']/vsys/entry[@name='vsys1']/address-group/entry[@name='test-dag']",
+                      "description": "Config xpath"
+                    },
+                    {
+                      "key": "element",
+                      "value": "<description>This is a test DAG</description><dynamic><filter>outbound</filter></dynamic>",
+                      "description": "Config value"
+                    }
+                  ]
+                },
+                "description": "Add a static address group"
+              },
+              "response": []
+            },
+            {
+              "name": "Get Address Group Member",
+              "_postman_id": "6be6330f-2f75-4cf4-9798-3fd2b04b21b5",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/x-www-form-urlencoded"
+                  }
+                ],
+                "body": {
+                  "mode": "urlencoded",
+                  "urlencoded": [],
+                  "options": {
+                    "urlencoded": {}
+                  }
+                },
+                "url": {
+                  "raw": "https://{{host}}/api?type=config&action=get&key={{key}}&xpath=/config/devices/entry[@name='localhost.localdomain']/device-group/entry[@name='Demo_DG']/address-group/entry[@name='Demo_AddrGrp']/static/member[text()='db-srv' or text()='web-srv']",
+                  "protocol": "https",
+                  "host": [
+                    "{{host}}"
+                  ],
+                  "path": [
+                    "api"
+                  ],
+                  "query": [
+                    {
+                      "key": "type",
+                      "value": "config"
+                    },
+                    {
+                      "key": "action",
+                      "value": "get"
+                    },
+                    {
+                      "key": "key",
+                      "value": "{{key}}",
+                      "description": "API key"
+                    },
+                    {
+                      "key": "xpath",
+                      "value": "/config/devices/entry[@name='localhost.localdomain']/device-group/entry[@name='Demo_DG']/address-group/entry[@name='Demo_AddrGrp']/static/member[text()='db-srv' or text()='web-srv']"
+                    }
+                  ]
+                },
+                "description": "Add a static address group"
+              },
+              "response": []
+            },
+            {
+              "name": "Add Dynamic Address Group",
+              "_postman_id": "c143c29d-dc28-477f-8cb6-ba54e7e680c2",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "auth": {
+                  "type": "noauth"
+                },
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/x-www-form-urlencoded"
+                  }
+                ],
+                "body": {
+                  "mode": "urlencoded",
+                  "urlencoded": [],
+                  "options": {
+                    "urlencoded": {}
+                  }
+                },
+                "url": {
+                  "raw": "https://{{host}}/api?type=config&action=set&xpath=/config/devices/entry[@name='localhost.localdomain']/vsys/entry[@name='vsys1']/address-group/entry[@name='blocked']&element=<description>This is a test DAG</description><dynamic><filter>outbound</filter></dynamic>",
+                  "protocol": "https",
+                  "host": [
+                    "{{host}}"
+                  ],
+                  "path": [
+                    "api"
+                  ],
+                  "query": [
+                    {
+                      "key": "key",
+                      "value": "{{key}}",
+                      "description": "API key",
+                      "disabled": true
+                    },
+                    {
+                      "key": "type",
+                      "value": "config",
+                      "description": "API action"
+                    },
+                    {
+                      "key": "action",
+                      "value": "set",
+                      "description": "Config action"
+                    },
+                    {
+                      "key": "xpath",
+                      "value": "/config/devices/entry[@name='localhost.localdomain']/vsys/entry[@name='vsys1']/address-group/entry[@name='blocked']",
+                      "description": "Config xpath"
+                    },
+                    {
+                      "key": "element",
+                      "value": "<description>This is a test DAG</description><dynamic><filter>outbound</filter></dynamic>",
+                      "description": "Config value"
+                    }
+                  ]
+                },
+                "description": "Add a dynamic address group"
+              },
+              "response": []
+            },
+            {
+              "name": "Add Shared Tag",
+              "_postman_id": "f1f426a0-2c46-ce1a-43d1-f2ec9db15a1a",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "urlencoded",
+                  "urlencoded": [],
+                  "options": {
+                    "urlencoded": {}
+                  }
+                },
+                "url": {
+                  "raw": "https://{{host}}/api?type=config&action=set&xpath=/config/shared/tag/entry[@name='foo']&element=<color>color1</color><comments>Test tag</comments>",
+                  "protocol": "https",
+                  "host": [
+                    "{{host}}"
+                  ],
+                  "path": [
+                    "api"
+                  ],
+                  "query": [
+                    {
+                      "key": "key",
+                      "value": "{{key}}",
+                      "disabled": true
+                    },
+                    {
+                      "key": "type",
+                      "value": "config"
+                    },
+                    {
+                      "key": "action",
+                      "value": "set"
+                    },
+                    {
+                      "key": "xpath",
+                      "value": "/config/shared/tag/entry[@name='foo']"
+                    },
+                    {
+                      "key": "element",
+                      "value": "<color>color1</color><comments>Test tag</comments>"
+                    }
+                  ]
+                },
+                "description": "Add a shared tag in Panorama"
+              },
+              "response": []
+            },
+            {
+              "name": "Add Custom URL Category",
+              "_postman_id": "aee5557b-92dc-4953-b5e3-3567252510cf",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "auth": {
+                  "type": "noauth"
+                },
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/x-www-form-urlencoded"
+                  }
+                ],
+                "body": {
+                  "mode": "urlencoded",
+                  "urlencoded": [],
+                  "options": {
+                    "urlencoded": {}
+                  }
+                },
+                "url": {
+                  "raw": "https://{{host}}/api?type=config&action=set&xpath=/config/devices/entry[@name='localhost.localdomain']/vsys/entry[@name='vsys1']/profiles/custom-url-category/entry[@name='My Cat']&element=<member>blah.org</member><member>foo.com</member><member>bar.com</member> <type>URL List</type>",
+                  "protocol": "https",
+                  "host": [
+                    "{{host}}"
+                  ],
+                  "path": [
+                    "api"
+                  ],
+                  "query": [
+                    {
+                      "key": "key",
+                      "value": "{{key}}",
+                      "description": "API key",
+                      "disabled": true
+                    },
+                    {
+                      "key": "type",
+                      "value": "config",
+                      "description": "API action"
+                    },
+                    {
+                      "key": "action",
+                      "value": "set",
+                      "description": "Config action"
+                    },
+                    {
+                      "key": "xpath",
+                      "value": "/config/devices/entry[@name='localhost.localdomain']/vsys/entry[@name='vsys1']/profiles/custom-url-category/entry[@name='My Cat']",
+                      "description": "Config xpath"
+                    },
+                    {
+                      "key": "element",
+                      "value": "<member>blah.org</member><member>foo.com</member><member>bar.com</member> <type>URL List</type>",
+                      "description": "Config value"
+                    }
+                  ]
+                },
+                "description": "Add a dynamic address group"
+              },
+              "response": []
+            },
+            {
+              "name": "Get Address Group Member Copy",
+              "_postman_id": "416b3e8e-ec49-44ef-8419-531c18926a6e",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/x-www-form-urlencoded"
+                  }
+                ],
+                "body": {
+                  "mode": "urlencoded",
+                  "urlencoded": [],
+                  "options": {
+                    "urlencoded": {}
+                  }
+                },
+                "url": {
+                  "raw": "https://{{host}}/api?type=config&action=get&key={{key}}&xpath=/config/devices/entry[@name='localhost.localdomain']/device-group/entry[@name='Demo_DG']/address-group/entry[@name='Demo_AddrGrp']/static/member[text()='db-srv' or text()='web-srv']",
+                  "protocol": "https",
+                  "host": [
+                    "{{host}}"
+                  ],
+                  "path": [
+                    "api"
+                  ],
+                  "query": [
+                    {
+                      "key": "type",
+                      "value": "config"
+                    },
+                    {
+                      "key": "action",
+                      "value": "get"
+                    },
+                    {
+                      "key": "key",
+                      "value": "{{key}}",
+                      "description": "API key"
+                    },
+                    {
+                      "key": "xpath",
+                      "value": "/config/devices/entry[@name='localhost.localdomain']/device-group/entry[@name='Demo_DG']/address-group/entry[@name='Demo_AddrGrp']/static/member[text()='db-srv' or text()='web-srv']"
+                    }
+                  ]
+                },
+                "description": "Add a static address group"
+              },
+              "response": []
+            },
+            {
+              "name": "Multi Update",
+              "_postman_id": "78465d63-b734-4031-8297-90df320a15b4",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/x-www-form-urlencoded",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "urlencoded",
+                  "urlencoded": [
+                    {
+                      "key": "key",
+                      "value": "{{key}}",
+                      "type": "text"
+                    },
+                    {
+                      "key": "type",
+                      "value": "config",
+                      "type": "text"
+                    },
+                    {
+                      "key": "action",
+                      "value": "set",
+                      "type": "text"
+                    },
+                    {
+                      "key": "xpath",
+                      "value": "/config/devices/entry[@name='localhost.localdomain']/vsys/entry[@name='vsys1']/address",
+                      "type": "text"
+                    },
+                    {
+                      "key": "element",
+                      "value": "<entry name=\"Test-Two\"><ip-netmask>2.2.2.2</ip-netmask><description/></entry><entry name=\"Test-Three\"><ip-netmask>3.3.3.3</ip-netmask><description>Bar</description></entry>",
+                      "type": "text"
+                    }
+                  ],
+                  "options": {
+                    "urlencoded": {}
+                  }
+                },
+                "url": "https://{{host}}/api/"
+              },
+              "response": []
+            }
+          ],
+          "_postman_id": "8f8e678a-6776-fb66-0eeb-84053d6c20f9",
+          "_postman_isSubFolder": true
         }
       ],
       "_postman_id": "10385c2b-4b1d-49ab-b4d8-a052739d4f4b"
@@ -10768,13 +10768,13 @@
   ],
   "variable": [
     {
-      "id": "577a4827-dc56-47b1-8335-db5d2dc949fb",
+      "id": "acb93d2d-e77c-4f87-a8a9-96d19296438a",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "b56c4eee-1733-4ce0-91e5-88b5281ae251",
+      "id": "c5ca6bf7-3fa2-4ac0-96b9-bae2713532c2",
       "key": "{{key}}",
       "value": "",
       "type": "string"
