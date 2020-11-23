@@ -567,7 +567,7 @@
                         }
                       ]
                     },
-                    "description": "Use `action=show` along with the `xpath` parameter to target a specific portion of the configuration."
+                    "description": "Gets all the address objects in the candidate config for a specific virtual system.\n\nUse `action=show` along with the `xpath` parameter to target a specific portion of the configuration."
                   },
                   "response": []
                 },
@@ -2500,13 +2500,13 @@
   ],
   "variable": [
     {
-      "id": "75185087-1b2b-4ca1-85da-58744c4d42a1",
+      "id": "5a85a7d5-7ef4-40af-aed9-4dd9048690c6",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "33db1df6-cde6-43e5-a42a-ebe646a3c2e9",
+      "id": "f9216b1f-77b9-487a-b675-a61f7c135991",
       "key": "{{key}}",
       "value": "",
       "type": "string"
