@@ -9661,7 +9661,7 @@
                 }
               ],
               "_postman_id": "29dad679-3de2-4bfd-9270-8fc27f899523",
-              "description": "The **running configuration** is the configuration currently on the firewall.",
+              "description": "The **running configuration** is the configuration currently active on the firewall.",
               "event": [
                 {
                   "listen": "prerequest",
@@ -9918,13 +9918,13 @@
   ],
   "variable": [
     {
-      "id": "fb4e40ac-6806-4b13-b783-c3de09f831b2",
+      "id": "e17b53ff-1e0b-4daf-89a0-cf7ce1de1482",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "ab29599c-aa02-4d6e-838c-6b66e1ebd93f",
+      "id": "e4a4a033-b85f-478f-8e89-9766e87079e4",
       "key": "{{key}}",
       "value": "",
       "type": "string"
