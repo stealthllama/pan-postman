@@ -540,7 +540,7 @@
                     },
                     {
                       "key": "action",
-                      "value": "set",
+                      "value": "edit",
                       "type": "text"
                     },
                     {
@@ -550,7 +550,7 @@
                     },
                     {
                       "key": "element",
-                      "value": "<entry name=\"Test-Two\"><ip-netmask>3.3.3.3</ip-netmask><description>Foo</description></entry><entry name=\"Test-Three\"><ip-netmask>4.4.4.4</ip-netmask><description>Bar</description></entry>",
+                      "value": "<entry name=\"Test-Two\"><ip-netmask>2.2.2.2</ip-netmask></entry><entry name=\"Test-Three\"><ip-netmask>3.3.3.3</ip-netmask><description>Bar</description></entry>",
                       "type": "text"
                     }
                   ],
