@@ -9756,7 +9756,7 @@
                 }
               ],
               "_postman_id": "29dad679-3de2-4bfd-9270-8fc27f899523",
-              "description": "The **running configuration** is the configuration currently active on the firewall.",
+              "description": "The `show` action retrieves the running configuration.\n\nThe **running configuration** is the configuration currently active on the firewall.",
               "event": [
                 {
                   "listen": "prerequest",
@@ -9785,6 +9785,29 @@
               "name": "Get Candidate Configuration",
               "item": [],
               "_postman_id": "e1a19059-70a0-46bf-9978-7ee00b5557cc",
+              "description": "The `get` action retrieves the candidate configuration.\n\nThe **candidate configuration** consists of proposed changes to the configuration currently running on the firewall.  The `commit` action makes the changes in the candidate configuration active by copying them to the running configuration.",
+              "event": [
+                {
+                  "listen": "prerequest",
+                  "script": {
+                    "id": "fc828fff-cfa5-4608-9fad-d5c2b1dd1d18",
+                    "type": "text/javascript",
+                    "exec": [
+                      ""
+                    ]
+                  }
+                },
+                {
+                  "listen": "test",
+                  "script": {
+                    "id": "d770d6c9-bad0-4fbf-8502-59da11d9e15d",
+                    "type": "text/javascript",
+                    "exec": [
+                      ""
+                    ]
+                  }
+                }
+              ],
               "_postman_isSubFolder": true
             }
           ],
@@ -10019,13 +10042,13 @@
   ],
   "variable": [
     {
-      "id": "18fa66c7-fd50-46aa-9f91-939dbdb1660a",
+      "id": "67114703-73ff-415c-8b89-02fb7efc326f",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "337dd8df-169d-44c9-bb2d-a25dee018b6e",
+      "id": "a4c9eb71-a7cd-4450-9d5a-3bbd1bda46e5",
       "key": "{{key}}",
       "value": "",
       "type": "string"
