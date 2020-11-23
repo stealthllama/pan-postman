@@ -1142,6 +1142,19 @@
                       "body": "<response status=\"success\" code=\"20\">\n    <msg>command succeeded</msg>\n</response>"
                     }
                   ]
+                },
+                {
+                  "name": "Create a new IP address on a specific interface",
+                  "_postman_id": "71fcc728-7920-4414-87f6-f9a8f4ea1e82",
+                  "protocolProfileBehavior": {
+                    "disableBodyPruning": true
+                  },
+                  "request": {
+                    "method": "GET",
+                    "header": [],
+                    "url": ""
+                  },
+                  "response": []
                 }
               ],
               "_postman_id": "08f576ba-3dc9-4682-bfff-b8c790bf6f2a",
@@ -1380,13 +1393,13 @@
   ],
   "variable": [
     {
-      "id": "8ea6fdd5-312c-4cd1-b568-66a81254630a",
+      "id": "7fae19f2-4840-49e4-afa2-2a864c9d0524",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "9b4d5a3c-3438-4e96-a9a0-8e87fe0ae99e",
+      "id": "f7430154-c872-4786-8be8-afe1fa557320",
       "key": "{{key}}",
       "value": "",
       "type": "string"
