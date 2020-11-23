@@ -1462,12 +1462,6 @@
           "_postman_isSubFolder": true
         },
         {
-          "name": "Import Files",
-          "item": [],
-          "_postman_id": "8004917e-b4e3-4ed6-ab0a-967423c8446b",
-          "_postman_isSubFolder": true
-        },
-        {
           "name": "Get Version Info",
           "item": [
             {
@@ -1659,13 +1653,13 @@
   ],
   "variable": [
     {
-      "id": "9296b951-6308-46b2-bbe0-15d80713493e",
+      "id": "96cd71bf-a13e-4eb7-a90f-54e5d091057c",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "470c168d-670e-4af1-a5d5-082e3416269e",
+      "id": "522ef091-cbc2-4e2d-b82c-630d64f7d763",
       "key": "{{key}}",
       "value": "",
       "type": "string"
