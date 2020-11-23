@@ -9544,12 +9544,6 @@
           "item": [],
           "_postman_id": "719e63d6-8695-4a35-b581-71455042b713",
           "_postman_isSubFolder": true
-        },
-        {
-          "name": "Operational Commands",
-          "item": [],
-          "_postman_id": "682774b0-44ce-4960-a373-5550eb450aa0",
-          "_postman_isSubFolder": true
         }
       ],
       "_postman_id": "3178f469-44ee-4373-82b4-9d5bdd5d59b8"
@@ -9586,13 +9580,13 @@
   ],
   "variable": [
     {
-      "id": "38dde43d-0668-481c-8f2d-048758f5f89c",
+      "id": "fa34bfa9-56bd-4c82-aa51-c262c356857b",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "8a234878-e081-429b-9323-ad0305145c1a",
+      "id": "dded5eec-9cdb-4f9c-ba42-2b6f44b5b619",
       "key": "{{key}}",
       "value": "",
       "type": "string"
