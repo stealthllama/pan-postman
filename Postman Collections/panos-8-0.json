@@ -9920,7 +9920,7 @@
                 }
               ],
               "_postman_id": "e1a19059-70a0-46bf-9978-7ee00b5557cc",
-              "description": "The `get` action retrieves the candidate configuration.\n\nThe **candidate configuration** consists of proposed changes to the configuration currently running on the firewall.  The `commit` action makes the changes in the candidate configuration active by copying them to the running configuration.\n\nChanges that have not been committed will",
+              "description": "The `get` action retrieves the candidate configuration.\n\nThe **candidate configuration** consists of proposed changes to the configuration currently running on the firewall.  The `commit` action makes the changes in the candidate configuration active by copying them to the running configuration.\n\nChanges that have not been committed will contain extra attributes related to what has changed:\n\n- **admin**: Admin account that made the change\n- **time**: Time the change was made\n- **oldname**: In the case of a renamed element, the name it was previously",
               "event": [
                 {
                   "listen": "prerequest",
@@ -10177,13 +10177,13 @@
   ],
   "variable": [
     {
-      "id": "13a8cbda-2884-4c77-9b4b-12b061cf4594",
+      "id": "2617dcf4-4e45-43ea-bb4f-dd8eac0787b8",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "29d1ae76-7769-4e95-885b-61160f4de90c",
+      "id": "1aa1f5a6-ae6e-4679-835a-899cac6c2e12",
       "key": "{{key}}",
       "value": "",
       "type": "string"
