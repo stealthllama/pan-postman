@@ -9529,6 +9529,11 @@
         }
       ],
       "_postman_id": "8d657926-6a63-40c0-a285-7cb3a670e5c9"
+    },
+    {
+      "name": "Request Types",
+      "item": [],
+      "_postman_id": "3178f469-44ee-4373-82b4-9d5bdd5d59b8"
     }
   ],
   "auth": {
@@ -9562,13 +9567,13 @@
   ],
   "variable": [
     {
-      "id": "6d0064e7-66a2-4cad-8143-8e618e075c44",
+      "id": "9198cc56-d43f-42b2-8747-2b6de9cda79d",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "f915e5dd-ee55-4179-ba8b-74b727879405",
+      "id": "9b3bb889-662b-4078-91cc-0aa71f58c2a9",
       "key": "{{key}}",
       "value": "",
       "type": "string"
