@@ -9544,6 +9544,24 @@
           "item": [],
           "_postman_id": "719e63d6-8695-4a35-b581-71455042b713",
           "_postman_isSubFolder": true
+        },
+        {
+          "name": "Operational Commands",
+          "item": [],
+          "_postman_id": "682774b0-44ce-4960-a373-5550eb450aa0",
+          "_postman_isSubFolder": true
+        },
+        {
+          "name": "Get Reports",
+          "item": [],
+          "_postman_id": "0ddb6ffc-c178-485b-b2ac-93317191d3d1",
+          "_postman_isSubFolder": true
+        },
+        {
+          "name": "Export Files",
+          "item": [],
+          "_postman_id": "36476743-b43d-4ac5-b99a-090e7664693f",
+          "_postman_isSubFolder": true
         }
       ],
       "_postman_id": "3178f469-44ee-4373-82b4-9d5bdd5d59b8"
@@ -9580,13 +9598,13 @@
   ],
   "variable": [
     {
-      "id": "fa34bfa9-56bd-4c82-aa51-c262c356857b",
+      "id": "f57fb470-c52a-402f-9204-026f226ec53f",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "dded5eec-9cdb-4f9c-ba42-2b6f44b5b619",
+      "id": "ffbe8745-9dcc-4be3-b9be-b0e9af019edf",
       "key": "{{key}}",
       "value": "",
       "type": "string"
