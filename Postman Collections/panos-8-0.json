@@ -2141,13 +2141,13 @@
   ],
   "variable": [
     {
-      "id": "67808c4d-255f-4ab7-aab6-72db14f9e539",
+      "id": "e76d7308-5b41-4271-8289-eafec684e082",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "91ce18b3-184b-43e4-8051-a7385e57183a",
+      "id": "8e154e15-9b5a-471b-a362-6869b47e65f6",
       "key": "{{key}}",
       "value": "",
       "type": "string"
