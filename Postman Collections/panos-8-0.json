@@ -9495,7 +9495,21 @@
           "item": [
             {
               "name": "Get Active Configuration",
-              "item": [],
+              "item": [
+                {
+                  "name": "Get Full Configuration",
+                  "_postman_id": "8cbb53c9-7ece-4935-9517-e234c972c1ed",
+                  "protocolProfileBehavior": {
+                    "disableBodyPruning": true
+                  },
+                  "request": {
+                    "method": "GET",
+                    "header": [],
+                    "url": ""
+                  },
+                  "response": []
+                }
+              ],
               "_postman_id": "29dad679-3de2-4bfd-9270-8fc27f899523",
               "_postman_isSubFolder": true
             }
@@ -9709,13 +9723,13 @@
   ],
   "variable": [
     {
-      "id": "9bf48958-7687-4d8e-a2f5-b4ddb50ae5f1",
+      "id": "bad6fc13-0e56-48a9-9741-e3309664250d",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "34dd9371-a058-41db-a17c-ef109edc6d13",
+      "id": "11af5306-d076-41df-bfc4-5e05b10d9312",
       "key": "{{key}}",
       "value": "",
       "type": "string"
