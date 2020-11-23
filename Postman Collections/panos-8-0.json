@@ -569,11 +569,6 @@
       ]
     },
     {
-      "name": "VPN",
-      "item": [],
-      "_postman_id": "b0d9c902-fc96-788b-5237-cc3ecf35e054"
-    },
-    {
       "name": "Logging",
       "item": [
         {
@@ -8236,13 +8231,13 @@
   ],
   "variable": [
     {
-      "id": "4449d943-1d21-4a7d-849f-8d4e2f54462e",
+      "id": "1820b288-6af3-483a-9983-629d99dc2d18",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "be3df691-52e4-4fe0-83f9-56e5a0f73e98",
+      "id": "3c28adb9-34eb-4ee2-9fd2-28045141e598",
       "key": "{{key}}",
       "value": "",
       "type": "string"
