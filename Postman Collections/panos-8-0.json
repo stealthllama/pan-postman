@@ -9621,7 +9621,6 @@
                 }
               ],
               "_postman_id": "29dad679-3de2-4bfd-9270-8fc27f899523",
-              "description": "Use this request to show:\n\n- PAN-OS version\n- Serial number\n- Model number\n- Multi-vsys capability",
               "_postman_isSubFolder": true
             }
           ],
@@ -9856,13 +9855,13 @@
   ],
   "variable": [
     {
-      "id": "3d67d1e3-6700-4d98-b65b-c1a6f3625805",
+      "id": "8a82de1d-e2fb-4fc3-a316-d76a4fa33c1a",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "70b95093-ad8a-47be-a037-a9369b8ce644",
+      "id": "9657d1f3-20b0-46dd-8e56-259261731470",
       "key": "{{key}}",
       "value": "",
       "type": "string"
