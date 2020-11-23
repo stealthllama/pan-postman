@@ -739,7 +739,8 @@
                           "description": "XPath to desired portion of configuration"
                         }
                       ]
-                    }
+                    },
+                    "description": "Gets the details for a specific application in the firewall config."
                   },
                   "response": [
                     {
@@ -2501,13 +2502,13 @@
   ],
   "variable": [
     {
-      "id": "b3c8efe7-e3e8-4e46-877a-af5ca0418138",
+      "id": "74e162f0-75c5-4151-93e1-b91d277574e7",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "7c6e5ddf-0ec4-49f4-987a-107ebd19ee5d",
+      "id": "4b18a8f5-9831-458e-9080-864cc8e21e89",
       "key": "{{key}}",
       "value": "",
       "type": "string"
