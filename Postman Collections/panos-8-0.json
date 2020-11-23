@@ -1452,9 +1452,45 @@
             },
             {
               "name": "Edit Configuration",
-              "item": [],
+              "item": [
+                {
+                  "name": "Replace applications in security rule",
+                  "_postman_id": "4b620169-e4f0-4ada-8557-c3497b3d18d0",
+                  "protocolProfileBehavior": {
+                    "disableBodyPruning": true
+                  },
+                  "request": {
+                    "method": "GET",
+                    "header": [],
+                    "url": ""
+                  },
+                  "response": []
+                }
+              ],
               "_postman_id": "682ec138-dc50-4e02-a6bf-34350ca45dae",
-              "description": "Use `action=edit` to replace an existing object hierarchy at a specified location in the configuration with a new value.\n\nUse the `xpath` parameter to specify the location of the object, including the node to be replaced.  Use the `element` parameter to specify a new value for the object using its XML object hierarchy.",
+              "description": "Use `action=edit` to replace an existing object hierarchy at a specified location in the configuration with a new value.\n\nUse the `xpath` parameter to specify the location of the object, including the node to be replaced.  Use the `element` parameter to specify a new value for the object using its XML object hierarchy.\n\nThese requests are commonly performed after retrieving the existing object using `action=show`.",
+              "event": [
+                {
+                  "listen": "prerequest",
+                  "script": {
+                    "id": "d42c1a9b-4a81-4200-bcbf-8a9c09d7c98a",
+                    "type": "text/javascript",
+                    "exec": [
+                      ""
+                    ]
+                  }
+                },
+                {
+                  "listen": "test",
+                  "script": {
+                    "id": "e0f7c538-f7eb-468a-95f1-05f42183073e",
+                    "type": "text/javascript",
+                    "exec": [
+                      ""
+                    ]
+                  }
+                }
+              ],
               "_postman_isSubFolder": true
             }
           ],
@@ -1653,13 +1689,13 @@
   ],
   "variable": [
     {
-      "id": "19d335fc-99e3-4bc7-9986-b7b7a665cf00",
+      "id": "8b86ec94-b598-471c-b7a3-75be5d90301e",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "f4da78f8-9cbb-41b5-814c-7dd0f8a4f0fe",
+      "id": "eb3a5888-b207-4281-af27-bc0df241d20b",
       "key": "{{key}}",
       "value": "",
       "type": "string"
