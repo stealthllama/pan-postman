@@ -605,7 +605,8 @@
                           "description": "XPath to desired portion of configuration"
                         }
                       ]
-                    }
+                    },
+                    "description": "Gets the full list of all applications defined on the firewall."
                   },
                   "response": [
                     {
@@ -2500,13 +2501,13 @@
   ],
   "variable": [
     {
-      "id": "5a85a7d5-7ef4-40af-aed9-4dd9048690c6",
+      "id": "b3c8efe7-e3e8-4e46-877a-af5ca0418138",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "f9216b1f-77b9-487a-b675-a61f7c135991",
+      "id": "7c6e5ddf-0ec4-49f4-987a-107ebd19ee5d",
       "key": "{{key}}",
       "value": "",
       "type": "string"
