@@ -9384,11 +9384,6 @@
       "description": "API calls specific to the Panorama management console"
     },
     {
-      "name": "Version Information",
-      "item": [],
-      "_postman_id": "10ed3519-8247-42de-9be1-1088fb236192"
-    },
-    {
       "name": "Authentication",
       "item": [
         {
@@ -9616,13 +9611,13 @@
   ],
   "variable": [
     {
-      "id": "8438b6b9-f378-4e34-9fe4-1f62b9d84d66",
+      "id": "463ab39c-58ee-4902-aa55-f0ae4350b3d9",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "08ca6240-ec99-45ff-ad37-86526e9d4dca",
+      "id": "f595fa47-9eb1-472c-8cca-126c390525d5",
       "key": "{{key}}",
       "value": "",
       "type": "string"
