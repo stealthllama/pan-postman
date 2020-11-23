@@ -2,7 +2,7 @@
   "info": {
     "_postman_id": "241ff148-5458-dde5-cbaa-a80527e7dc55",
     "name": "PAN-OS XML API",
-    "description": "This is a companion Postman collection for the official [PAN-OS XML API documentation](https://docs.paloaltonetworks.com/pan-os/10-0/pan-os-panorama-api.html).\n\n# Using this collection\n\nTo use the examples in this guide, you must define the following collection variables:\n\n- **host**: IP address or hostname of the PAN-OS device you wish to interact with.\n- **key**: Generated API key used for authentication.  This will be used in the `X-PAN-KEY` HTTP header.\n\n# Request Structure\n\nView the [official documentation](https://docs.paloaltonetworks.com/pan-os/10-0/pan-os-panorama-api/about-the-pan-os-xml-api/structure-of-a-pan-os-xml-api-request.html).\n\nA PAN-OS XML API request typically consists of the following parameters:\n\n```\nhttps://<firewall>/api/?type=<type>&action=<action>&xpath=<xpath>&key=<apikey>\n```\n\n- API key (`key=`): The API key allows you to authenticate yourself to the API when making requests.\n- Request type (`type=`): The type of request you want.\n- Action (`action=`): When the request type is `config` or `op`, you must also specify an associated action.\n- XML and XPath elements (`xpath=` or `cmd=`): When using configuration or operation mode commands on the firewall, you include only the XML or the XPath that specifies the XML node.\n\nRequests to the PAN-OS XML API can be performed using the `GET` and `POST` HTTP methods.\n\n## GET Requests\n\nUse a GET request when the query size is less than 2K and you want to pass strings in the request URL.  Append the query string to the request URL as a URL-encoded parameter string:\n\n```\nGET /api/?type=keygen&user=<username>&password=<password>\n```\n\n## POST Requests\n\nUse a POST request when you are sending large amounts of form data (max request size of 5MB) or when you are passing non-ASCII characters.  Some API requests, such as importing files, require `POST`.  When using this method, pass the parameters in the request body, including the login credentials:\n\n```\nPOST /api/ HTTP/1.1 \nContent-Type: application/x-www-form-urlencoded \npassword=<password>&user=<username>&type=keygen\n```\n\n# Authentication\n\nView the [official documentation](https://docs.paloaltonetworks.com/pan-os/10-0/pan-os-panorama-api/about-the-pan-os-xml-api/structure-of-a-pan-os-xml-api-request/api-authentication-and-security.html).\n\nTo authenticate to the PAN-OS device, provide the API key along with your request in any of the following ways:\n\n- The `X-PAN-KEY: <key>` HTTP header.\n- The `key=` request URL parameter (must be URL-encoded).\n- Use [Basic Authentication](https://en.wikipedia.org/wiki/Basic_access_authentication#Client_side) to pass the admin credentials as `username:password` with Base64 encoding in an Authorization header field.\n\n**Note:** You cannot use basic authentication with an API key.\n\nSee the [Generate API key](https://documenter.getpostman.com/view/2937330/7LgDQwG#5a6eec54-51a0-9716-fa38-5f894bf3c2ff) request for how to generate an API key.",
+    "description": "This is a companion Postman collection for the official [PAN-OS XML API documentation](https://docs.paloaltonetworks.com/pan-os/10-0/pan-os-panorama-api.html).\n\n# Using this collection\n\nTo use the examples in this guide, you must define the following collection variables:\n\n- **host**: IP address or hostname of the PAN-OS device you wish to interact with.\n- **key**: Generated API key used for authentication.  This will be used in the `X-PAN-KEY` HTTP header.\n\n# Request Structure\n\nView the [official documentation](https://docs.paloaltonetworks.com/pan-os/10-0/pan-os-panorama-api/about-the-pan-os-xml-api/structure-of-a-pan-os-xml-api-request.html).\n\nA PAN-OS XML API request typically consists of the following parameters:\n\n```\nhttps://<firewall>/api/?type=<type>&action=<action>&xpath=<xpath>&key=<apikey>\n```\n\n- API key (`key=`): The API key allows you to authenticate yourself to the API when making requests.\n- Request type (`type=`): The type of request you want.\n- Action (`action=`): When the request type is `config` or `op`, you must also specify an associated action.\n- XML and XPath elements (`xpath=` or `cmd=`): When using configuration or operation mode commands on the firewall, you include only the XML or the XPath that specifies the XML node.\n\nRequests to the PAN-OS XML API can be performed using the `GET` and `POST` HTTP methods.\n\n\n## GET Requests\n\nUse a GET request when the query size is less than 2K and you want to pass strings in the request URL.  Append the query string to the request URL as a URL-encoded parameter string:\n\n```\nGET /api/?type=keygen&user=<username>&password=<password>\n```\n\n\n## POST Requests\n\nUse a POST request when you are sending large amounts of form data (max request size of 5MB) or when you are passing non-ASCII characters.  Some API requests, such as importing files, require `POST`.  When using this method, pass the parameters in the request body, including the login credentials:\n\n```\nPOST /api/ HTTP/1.1 \nContent-Type: application/x-www-form-urlencoded \npassword=<password>&user=<username>&type=keygen\n```\n\n# Authentication\n\nView the [official documentation](https://docs.paloaltonetworks.com/pan-os/10-0/pan-os-panorama-api/about-the-pan-os-xml-api/structure-of-a-pan-os-xml-api-request/api-authentication-and-security.html).\n\nTo authenticate to the PAN-OS device, provide the API key along with your request in any of the following ways:\n\n- The `X-PAN-KEY: <key>` HTTP header.\n- The `key=` request URL parameter (must be URL-encoded).\n- Use [Basic Authentication](https://en.wikipedia.org/wiki/Basic_access_authentication#Client_side) to pass the admin credentials as `username:password` with Base64 encoding in an Authorization header field.\n\n**Note:** You cannot use basic authentication with an API key.\n\nSee the [Generate API key](https://documenter.getpostman.com/view/2937330/7LgDQwG#5a6eec54-51a0-9716-fa38-5f894bf3c2ff) request for how to generate an API key.",
     "schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
   },
   "item": [
@@ -9397,12 +9397,7 @@
               "type": "noauth"
             },
             "method": "GET",
-            "header": [
-              {
-                "key": "Content-Type",
-                "value": "application/x-www-form-urlencoded"
-              }
-            ],
+            "header": [],
             "body": {
               "mode": "urlencoded",
               "urlencoded": [],
@@ -9569,9 +9564,104 @@
                       "value": "version"
                     }
                   ]
-                }
+                },
+                "description": "Use this request to show:\n\n- PAN-OS version\n- Serial number\n- Model number"
               },
-              "response": []
+              "response": [
+                {
+                  "id": "7aaea53e-06d2-4802-af12-9a001806f4d0",
+                  "name": "Get Version Info",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [],
+                    "url": {
+                      "raw": "https://{{host}}/api?type=version",
+                      "protocol": "https",
+                      "host": [
+                        "{{host}}"
+                      ],
+                      "path": [
+                        "api"
+                      ],
+                      "query": [
+                        {
+                          "key": "key",
+                          "value": "{{key}}",
+                          "disabled": true
+                        },
+                        {
+                          "key": "type",
+                          "value": "version"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "xml",
+                  "header": [
+                    {
+                      "key": "Date",
+                      "value": "Mon, 23 Nov 2020 17:35:30 GMT"
+                    },
+                    {
+                      "key": "Content-Type",
+                      "value": "application/xml; charset=UTF-8"
+                    },
+                    {
+                      "key": "Content-Length",
+                      "value": "168"
+                    },
+                    {
+                      "key": "Connection",
+                      "value": "keep-alive"
+                    },
+                    {
+                      "key": "X-FRAME-OPTIONS",
+                      "value": "SAMEORIGIN"
+                    },
+                    {
+                      "key": "X-XSS-Protection",
+                      "value": "1; mode=block"
+                    },
+                    {
+                      "key": "X-Content-Type-Options",
+                      "value": "nosniff"
+                    },
+                    {
+                      "key": "Content-Security-Policy",
+                      "value": "default-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:;"
+                    },
+                    {
+                      "key": "Strict-Transport-Security",
+                      "value": "max-age=31536000"
+                    },
+                    {
+                      "key": "Cache-Control",
+                      "value": "no-store, no-cache, must-revalidate, post-check=0, pre-check=0"
+                    },
+                    {
+                      "key": "Expires",
+                      "value": "Thu, 19 Nov 1981 08:52:00 GMT"
+                    },
+                    {
+                      "key": "Pragma",
+                      "value": "no-cache"
+                    },
+                    {
+                      "key": "Set-Cookie",
+                      "value": "PHPSESSID=1a12ce45a5935c8cc2354f99220e56f2; path=/; secure; HttpOnly"
+                    },
+                    {
+                      "key": "Allow",
+                      "value": "GET, HEAD, POST, PUT, DELETE, OPTIONS"
+                    }
+                  ],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "<response status = \"success\">\n    <result>\n        <sw-version>10.0.2</sw-version>\n        <multi-vsys>off</multi-vsys>\n        <model>PA-VM</model>\n        <serial>007000001222</serial>\n    </result>\n</response>"
+                }
+              ]
             }
           ],
           "_postman_id": "2b35b2a1-42c2-4d84-833d-e9fc5e0efa98",
@@ -9612,13 +9702,13 @@
   ],
   "variable": [
     {
-      "id": "f8190f1c-00c1-41c0-b92a-4d317d9a116b",
+      "id": "f1486b73-c17c-4103-96da-9666854f11cf",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "0d048c39-3982-4bd8-9f86-079a8ae7f670",
+      "id": "a2011f24-4d6b-4b77-8f3c-279c1260acc1",
       "key": "{{key}}",
       "value": "",
       "type": "string"
