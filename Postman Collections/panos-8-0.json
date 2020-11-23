@@ -1905,7 +1905,31 @@
                   "request": {
                     "method": "GET",
                     "header": [],
-                    "url": ""
+                    "url": {
+                      "raw": "https://{{host}}/api?type=config&action=delete&xpath=/config/devices/entry[@name='localhost.localdomain']/vsys/entry[@name='vsys1']/address-group/entry[@name='Data-Center']/static/member[text()='Data-Center-192.168.2.0-24']",
+                      "protocol": "https",
+                      "host": [
+                        "{{host}}"
+                      ],
+                      "path": [
+                        "api"
+                      ],
+                      "query": [
+                        {
+                          "key": "type",
+                          "value": "config"
+                        },
+                        {
+                          "key": "action",
+                          "value": "delete"
+                        },
+                        {
+                          "key": "xpath",
+                          "value": "/config/devices/entry[@name='localhost.localdomain']/vsys/entry[@name='vsys1']/address-group/entry[@name='Data-Center']/static/member[text()='Data-Center-192.168.2.0-24']"
+                        }
+                      ]
+                    },
+                    "description": "To delete a single member object in a group, search for the object's name in the `member` entries using `member[text()='object-to-delete']`."
                   },
                   "response": []
                 }
@@ -2110,13 +2134,13 @@
   ],
   "variable": [
     {
-      "id": "986faf72-0d60-48a6-90ad-4e3df3ae3751",
+      "id": "d8de3342-79fb-40bb-8c33-306a2aaaf6cb",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "c114ee49-c4d7-4762-b993-892c155ce701",
+      "id": "aaff6647-2aae-4516-9b75-7d6fab7ff385",
       "key": "{{key}}",
       "value": "",
       "type": "string"
