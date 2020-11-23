@@ -9785,130 +9785,6 @@
               "name": "Get Candidate Configuration",
               "item": [
                 {
-                  "name": "Get full configuration",
-                  "_postman_id": "79626b04-18ff-44ab-a5f6-e606c6eeb63e",
-                  "protocolProfileBehavior": {
-                    "disableBodyPruning": true
-                  },
-                  "request": {
-                    "method": "GET",
-                    "header": [],
-                    "url": {
-                      "raw": "https://{{host}}/api/?type=config&action=show",
-                      "protocol": "https",
-                      "host": [
-                        "{{host}}"
-                      ],
-                      "path": [
-                        "api",
-                        ""
-                      ],
-                      "query": [
-                        {
-                          "key": "type",
-                          "value": "config"
-                        },
-                        {
-                          "key": "action",
-                          "value": "show"
-                        }
-                      ]
-                    },
-                    "description": "Use `action=show` with no additional parameters to retrieve the entire active configuration."
-                  },
-                  "response": [
-                    {
-                      "id": "19767166-6195-4749-a411-a097638fa0d8",
-                      "name": "Get Full Configuration",
-                      "originalRequest": {
-                        "method": "GET",
-                        "header": [],
-                        "url": {
-                          "raw": "https://{{host}}/api/?type=config&action=show",
-                          "protocol": "https",
-                          "host": [
-                            "{{host}}"
-                          ],
-                          "path": [
-                            "api",
-                            ""
-                          ],
-                          "query": [
-                            {
-                              "key": "type",
-                              "value": "config"
-                            },
-                            {
-                              "key": "action",
-                              "value": "show"
-                            }
-                          ]
-                        }
-                      },
-                      "status": "OK",
-                      "code": 200,
-                      "_postman_previewlanguage": "xml",
-                      "header": [
-                        {
-                          "key": "Date",
-                          "value": "Mon, 23 Nov 2020 17:43:40 GMT"
-                        },
-                        {
-                          "key": "Content-Type",
-                          "value": "application/xml; charset=UTF-8"
-                        },
-                        {
-                          "key": "Transfer-Encoding",
-                          "value": "chunked"
-                        },
-                        {
-                          "key": "Connection",
-                          "value": "keep-alive"
-                        },
-                        {
-                          "key": "X-FRAME-OPTIONS",
-                          "value": "SAMEORIGIN"
-                        },
-                        {
-                          "key": "X-XSS-Protection",
-                          "value": "1; mode=block"
-                        },
-                        {
-                          "key": "X-Content-Type-Options",
-                          "value": "nosniff"
-                        },
-                        {
-                          "key": "Content-Security-Policy",
-                          "value": "default-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:;"
-                        },
-                        {
-                          "key": "Strict-Transport-Security",
-                          "value": "max-age=31536000"
-                        },
-                        {
-                          "key": "Cache-Control",
-                          "value": "no-store, no-cache, must-revalidate, post-check=0, pre-check=0"
-                        },
-                        {
-                          "key": "Expires",
-                          "value": "Thu, 19 Nov 1981 08:52:00 GMT"
-                        },
-                        {
-                          "key": "Pragma",
-                          "value": "no-cache"
-                        },
-                        {
-                          "key": "Allow",
-                          "value": "GET, HEAD, POST, PUT, DELETE, OPTIONS"
-                        }
-                      ],
-                      "cookie": [],
-                      "responseTime": null,
-                      "body": "<response status=\"success\">\n    <result>\n        <config version=\"10.0.0\" urldb=\"paloaltonetworks\">\n            ... example output truncated ...\n        </config>\n    </result>\n</response>"
-                    }
-                  ]
-                },
-                {
                   "name": "Get specific config portion Copy",
                   "_postman_id": "b2179207-9fd2-4dd7-96a6-41613f0e8451",
                   "protocolProfileBehavior": {
@@ -9918,7 +9794,7 @@
                     "method": "GET",
                     "header": [],
                     "url": {
-                      "raw": "https://{{host}}/api/?type=config&action=show&xpath=/config/devices/entry/vsys/entry/rulebase/security",
+                      "raw": "https://{{host}}/api/?type=config&action=get&xpath=/config/devices/entry/vsys/entry/rulebase/security",
                       "protocol": "https",
                       "host": [
                         "{{host}}"
@@ -9934,7 +9810,7 @@
                         },
                         {
                           "key": "action",
-                          "value": "show"
+                          "value": "get"
                         },
                         {
                           "key": "xpath",
@@ -10301,13 +10177,13 @@
   ],
   "variable": [
     {
-      "id": "b636ab49-c348-4ae2-a653-67127f2b8562",
+      "id": "c7688be1-de9c-450d-b675-6f9b97c582b1",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "bc74a101-5e45-4669-bddc-2aea37e75e67",
+      "id": "ddfab011-0979-4bf6-a1a1-a8fec756e692",
       "key": "{{key}}",
       "value": "",
       "type": "string"
