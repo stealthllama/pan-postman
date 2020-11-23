@@ -142,7 +142,7 @@
                         }
                       ]
                     },
-                    "description": "Use `action=show` with no additional parameters to retrieve the entire active configuration."
+                    "description": "Gets the full running configuration.\n\nUse `action=show` with no additional parameters to retrieve the entire active configuration."
                   },
                   "response": [
                     {
@@ -2499,13 +2499,13 @@
   ],
   "variable": [
     {
-      "id": "12733071-2421-457a-afd2-86259c408ad4",
+      "id": "21133dc0-c664-4618-a61a-cc4b64455c79",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "8faa6ad7-014b-47ad-8d49-e98ec5e26a09",
+      "id": "bf5edddf-224b-41c9-8974-71cc406e95ed",
       "key": "{{key}}",
       "value": "",
       "type": "string"
