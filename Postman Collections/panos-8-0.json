@@ -9966,7 +9966,7 @@
                     "method": "GET",
                     "header": [],
                     "url": {
-                      "raw": "https://{{host}}/api/?type=config&action=get&xpath=/config/predefined/application",
+                      "raw": "https://{{host}}/api/?type=config&action=get&xpath=/config/predefined/application/entry[@name='hotmail']",
                       "protocol": "https",
                       "host": [
                         "{{host}}"
@@ -9986,7 +9986,7 @@
                         },
                         {
                           "key": "xpath",
-                          "value": "/config/predefined/application",
+                          "value": "/config/predefined/application/entry[@name='hotmail']",
                           "description": "XPath to desired portion of configuration"
                         }
                       ]
@@ -10348,13 +10348,13 @@
   ],
   "variable": [
     {
-      "id": "64cfe7ef-41cb-4e59-a65b-318ad827ed49",
+      "id": "7b49552a-4275-43c2-b115-ea9fd0a87d21",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "afa66f95-2240-4aa0-ad24-6b58443cffbc",
+      "id": "611fd000-a31a-49ae-b3ea-f6267727649d",
       "key": "{{key}}",
       "value": "",
       "type": "string"
