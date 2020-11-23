@@ -9753,7 +9753,37 @@
                       "body": "<response status=\"success\">\n    <result>\n        <security>\n            <rules>\n                <entry name=\"IT DNS Services\" uuid=\"3e888b2c-7325-4778-ba20-4b0c90f92980\">\n                    <to>\n                        <member>trust</member>\n                    </to>\n                    <from>\n                        <member>untrust</member>\n                    </from>\n                    <source>\n                        <member>any</member>\n                    </source>\n                    <destination>\n                        <member>Data-Center</member>\n                    </destination>\n                    <source-user>\n                        <member>any</member>\n                    </source-user>\n                    <category>\n                        <member>any</member>\n                    </category>\n                    <application>\n                        <member>dns</member>\n                    </application>\n                    <service>\n                        <member>application-default</member>\n                    </service>\n                    <source-hip>\n                        <member>any</member>\n                    </source-hip>\n                    <destination-hip>\n                        <member>any</member>\n                    </destination-hip>\n                    <action>allow</action>\n                    <log-setting>default</log-setting>\n                    <profile-setting>\n                        <group>\n                            <member>Best-Practice</member>\n                        </group>\n                    </profile-setting>\n                    <description>Inbound DNS requests to data center</description>\n                </entry>\n            </rules>\n        </security>\n    </result>\n</response>"
                     }
                   ]
+                }
+              ],
+              "_postman_id": "29dad679-3de2-4bfd-9270-8fc27f899523",
+              "description": "The `show` action retrieves the running configuration.\n\nThe **running configuration** is the configuration currently active on the firewall.",
+              "event": [
+                {
+                  "listen": "prerequest",
+                  "script": {
+                    "id": "4f9eff2b-088a-47e6-8837-2603bd3e0a6b",
+                    "type": "text/javascript",
+                    "exec": [
+                      ""
+                    ]
+                  }
                 },
+                {
+                  "listen": "test",
+                  "script": {
+                    "id": "c09d21f0-d740-40df-89bf-a9b2a07bd8cf",
+                    "type": "text/javascript",
+                    "exec": [
+                      ""
+                    ]
+                  }
+                }
+              ],
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "Get Candidate Configuration",
+              "item": [
                 {
                   "name": "Get full configuration Copy",
                   "_postman_id": "79626b04-18ff-44ab-a5f6-e606c6eeb63e",
@@ -9879,35 +9909,6 @@
                   ]
                 }
               ],
-              "_postman_id": "29dad679-3de2-4bfd-9270-8fc27f899523",
-              "description": "The `show` action retrieves the running configuration.\n\nThe **running configuration** is the configuration currently active on the firewall.",
-              "event": [
-                {
-                  "listen": "prerequest",
-                  "script": {
-                    "id": "4f9eff2b-088a-47e6-8837-2603bd3e0a6b",
-                    "type": "text/javascript",
-                    "exec": [
-                      ""
-                    ]
-                  }
-                },
-                {
-                  "listen": "test",
-                  "script": {
-                    "id": "c09d21f0-d740-40df-89bf-a9b2a07bd8cf",
-                    "type": "text/javascript",
-                    "exec": [
-                      ""
-                    ]
-                  }
-                }
-              ],
-              "_postman_isSubFolder": true
-            },
-            {
-              "name": "Get Candidate Configuration",
-              "item": [],
               "_postman_id": "e1a19059-70a0-46bf-9978-7ee00b5557cc",
               "description": "The `get` action retrieves the candidate configuration.\n\nThe **candidate configuration** consists of proposed changes to the configuration currently running on the firewall.  The `commit` action makes the changes in the candidate configuration active by copying them to the running configuration.",
               "event": [
@@ -10166,13 +10167,13 @@
   ],
   "variable": [
     {
-      "id": "c3f39905-c0bd-41e6-98a2-650e305a6a70",
+      "id": "92f94f25-c587-43e5-9fd0-a8b9b1954709",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "0355cb10-4e41-4827-8f29-1fd6e096fafd",
+      "id": "cc25d6f5-0fdb-46dd-bf01-ffa5ca9ffb16",
       "key": "{{key}}",
       "value": "",
       "type": "string"
