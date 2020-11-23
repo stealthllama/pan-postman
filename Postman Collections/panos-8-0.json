@@ -1492,7 +1492,8 @@
                           "type": "text"
                         }
                       ]
-                    }
+                    },
+                    "description": "A portion of an object can be replaced by specifying the object's name within the `xpath`."
                   },
                   "response": [
                     {
@@ -1634,7 +1635,105 @@
                     },
                     "description": "Replace all members in a node by specifying the object's name in both the xpath and element parameters."
                   },
-                  "response": []
+                  "response": [
+                    {
+                      "id": "551f6adf-479a-4a2e-8b7c-1ccb6a1e5fa2",
+                      "name": "Replace address objects in address group",
+                      "originalRequest": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                          "raw": "https://{{host}}/api/?type=config&action=edit&xpath=/config/devices/entry[@name='localhost.localdomain']/vsys/entry[@name='vsys1']/address-group/entry[@name='Data-Center']&element=<entry name=\"Data-Center\"><static><member>Data-Center-192.168.1.0-24</member><member>Data-Center-192.168.2.0-24</member></static></entry>",
+                          "protocol": "https",
+                          "host": [
+                            "{{host}}"
+                          ],
+                          "path": [
+                            "api",
+                            ""
+                          ],
+                          "query": [
+                            {
+                              "key": "type",
+                              "value": "config"
+                            },
+                            {
+                              "key": "action",
+                              "value": "edit"
+                            },
+                            {
+                              "key": "xpath",
+                              "value": "/config/devices/entry[@name='localhost.localdomain']/vsys/entry[@name='vsys1']/address-group/entry[@name='Data-Center']"
+                            },
+                            {
+                              "key": "element",
+                              "value": "<entry name=\"Data-Center\"><static><member>Data-Center-192.168.1.0-24</member><member>Data-Center-192.168.2.0-24</member></static></entry>"
+                            }
+                          ]
+                        }
+                      },
+                      "status": "OK",
+                      "code": 200,
+                      "_postman_previewlanguage": "xml",
+                      "header": [
+                        {
+                          "key": "Date",
+                          "value": "Mon, 23 Nov 2020 20:33:31 GMT"
+                        },
+                        {
+                          "key": "Content-Type",
+                          "value": "application/xml; charset=UTF-8"
+                        },
+                        {
+                          "key": "Content-Length",
+                          "value": "76"
+                        },
+                        {
+                          "key": "Connection",
+                          "value": "keep-alive"
+                        },
+                        {
+                          "key": "X-FRAME-OPTIONS",
+                          "value": "SAMEORIGIN"
+                        },
+                        {
+                          "key": "X-XSS-Protection",
+                          "value": "1; mode=block"
+                        },
+                        {
+                          "key": "X-Content-Type-Options",
+                          "value": "nosniff"
+                        },
+                        {
+                          "key": "Content-Security-Policy",
+                          "value": "default-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:;"
+                        },
+                        {
+                          "key": "Strict-Transport-Security",
+                          "value": "max-age=31536000"
+                        },
+                        {
+                          "key": "Cache-Control",
+                          "value": "no-store, no-cache, must-revalidate, post-check=0, pre-check=0"
+                        },
+                        {
+                          "key": "Expires",
+                          "value": "Thu, 19 Nov 1981 08:52:00 GMT"
+                        },
+                        {
+                          "key": "Pragma",
+                          "value": "no-cache"
+                        },
+                        {
+                          "key": "Allow",
+                          "value": "GET, HEAD, POST, PUT, DELETE, OPTIONS"
+                        }
+                      ],
+                      "cookie": [],
+                      "responseTime": null,
+                      "body": "<response status=\"success\" code=\"20\">\n    <msg>command succeeded</msg>\n</response>"
+                    }
+                  ]
                 }
               ],
               "_postman_id": "682ec138-dc50-4e02-a6bf-34350ca45dae",
@@ -1859,13 +1958,13 @@
   ],
   "variable": [
     {
-      "id": "7d66aef5-162d-42e8-bc9b-f0365ed60d85",
+      "id": "faf60170-5be1-4f63-8b13-22fc10f4e687",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "f4534870-eb24-4577-9754-687da04d8cd5",
+      "id": "88eef224-8390-4eba-8e74-65dccd554aa6",
       "key": "{{key}}",
       "value": "",
       "type": "string"
