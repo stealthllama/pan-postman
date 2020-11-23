@@ -9723,13 +9723,13 @@
   ],
   "variable": [
     {
-      "id": "bad6fc13-0e56-48a9-9741-e3309664250d",
+      "id": "6b0efece-28ef-41a5-b870-e1fe2f2ee065",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "11af5306-d076-41df-bfc4-5e05b10d9312",
+      "id": "d4bd549d-b93b-4483-a6e8-8e81a3fb16ee",
       "key": "{{key}}",
       "value": "",
       "type": "string"
