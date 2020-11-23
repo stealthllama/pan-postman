@@ -1182,7 +1182,8 @@
                           "value": "<entry name='5.5.5.5/24'/>"
                         }
                       ]
-                    }
+                    },
+                    "description": "Adds the IP address `5.5.5.5/24` to the `ethernet1/1` interface."
                   },
                   "response": [
                     {
@@ -2497,13 +2498,13 @@
   ],
   "variable": [
     {
-      "id": "65819dda-3d00-4ffd-b57c-9b1bc4553eff",
+      "id": "4c97723d-0f68-4175-a2bd-72820bb95fe2",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "127a73e3-5e4e-419d-a626-7dce9a176d51",
+      "id": "c4d52234-0188-46a2-9664-7ea07a847629",
       "key": "{{key}}",
       "value": "",
       "type": "string"
