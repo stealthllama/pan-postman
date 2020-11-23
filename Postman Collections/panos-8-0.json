@@ -10301,13 +10301,13 @@
   ],
   "variable": [
     {
-      "id": "ff2a4dc3-9328-4c08-99da-07b4ff753bf0",
+      "id": "074c2506-2a96-4eb0-aba7-81b3c42036da",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "23c6f058-2bb2-4962-9ff2-2eb6bc303e01",
+      "id": "f6b20b97-13d8-4ac1-b705-11b29e9cd30f",
       "key": "{{key}}",
       "value": "",
       "type": "string"
