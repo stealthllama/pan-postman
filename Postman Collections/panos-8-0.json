@@ -1425,7 +1425,29 @@
                 }
               ],
               "_postman_id": "08f576ba-3dc9-4682-bfff-b8c790bf6f2a",
-              "description": "Use `action=set` to add or create a new object at a specified location in the PAN-OS configuration.  Use the `xpath` parameter to specify the location of the object in the configuration.",
+              "description": "Use `action=set` to add or create a new object at a specified location in the PAN-OS configuration.  \n\nUse the `xpath` parameter to specify the location of the object in the configuration.\nUse the `element` parameter to specify a value for the object you are adding using XML.",
+              "event": [
+                {
+                  "listen": "prerequest",
+                  "script": {
+                    "id": "0f7b46b7-3d74-47a2-a41e-0e31ced86e07",
+                    "type": "text/javascript",
+                    "exec": [
+                      ""
+                    ]
+                  }
+                },
+                {
+                  "listen": "test",
+                  "script": {
+                    "id": "6066cb2c-176c-4a4d-9d99-aa4de0df00d3",
+                    "type": "text/javascript",
+                    "exec": [
+                      ""
+                    ]
+                  }
+                }
+              ],
               "_postman_isSubFolder": true
             },
             {
@@ -1667,13 +1689,13 @@
   ],
   "variable": [
     {
-      "id": "d73b2408-02a9-4b4f-9cf9-c1f3bb3ceda8",
+      "id": "b5090638-482e-42a0-ac5e-0691d47f0b4e",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "600491b6-42a7-4286-866f-59cd71a9e320",
+      "id": "acb06fbe-6f54-4b7a-9b00-587dd06e1a7f",
       "key": "{{key}}",
       "value": "",
       "type": "string"
