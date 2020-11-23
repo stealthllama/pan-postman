@@ -2243,7 +2243,21 @@
             },
             {
               "name": "Move Configuration",
-              "item": [],
+              "item": [
+                {
+                  "name": "Move a security rule",
+                  "_postman_id": "9fcd34f6-8b3e-4cf9-80a8-c62fa15a9cc1",
+                  "protocolProfileBehavior": {
+                    "disableBodyPruning": true
+                  },
+                  "request": {
+                    "method": "GET",
+                    "header": [],
+                    "url": ""
+                  },
+                  "response": []
+                }
+              ],
               "_postman_id": "83d59932-aa2b-4522-918a-92148b7a8a73",
               "description": "Use `action=move` to move the location of an existing configuration object.\n\nUse the `xpath` parameter to specify the location of the object to be moved.\nUse the `where` parameter to specify the type of move (can be *before*, *after*, *top*, or *bottom*).\nUse the `dst` parameter to specify an object when `where` is *before* or *after*.",
               "_postman_isSubFolder": true
@@ -2444,13 +2458,13 @@
   ],
   "variable": [
     {
-      "id": "3df6b56c-da88-4d20-9807-01ebae8d1c98",
+      "id": "b0cf9caf-9d51-463e-915c-363ad0ffd7e6",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "9f279e6f-e14a-457e-bd88-806ff3e80807",
+      "id": "9285c5b1-65b9-4b38-94cb-ad753269746a",
       "key": "{{key}}",
       "value": "",
       "type": "string"
