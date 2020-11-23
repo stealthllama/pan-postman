@@ -1041,7 +1041,8 @@
                           "value": "<static><member>Data-Center-192.168.2.0-24</member></static>"
                         }
                       ]
-                    }
+                    },
+                    "description": "Include the address group (or list) node in the xpath, and reference it by name.  Then, include the new members in the element parameter."
                   },
                   "response": [
                     {
@@ -1659,13 +1660,13 @@
   ],
   "variable": [
     {
-      "id": "a77fd82f-ec60-43da-8a23-609f38d101b5",
+      "id": "3aab4139-9275-496a-a933-925500034dac",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "e063bc44-945b-47ac-a7c3-758aede34588",
+      "id": "4b222fd3-6ad0-44de-a84f-db8ce1a2ce55",
       "key": "{{key}}",
       "value": "",
       "type": "string"
