@@ -10253,7 +10253,7 @@
                     "method": "GET",
                     "header": [],
                     "url": {
-                      "raw": "https://{{host}}/api/?type=config&action=set&xpath=/config/devices/entry/vsys/entry[@name='vsys1']/rulebase/security/rules/entry[@name='New Rule']&element-value=<profile-setting><group><member>Best-Practice</member></group></profile-setting><to><member>untrust</member></to><from><member>trust</member></from><source><member>any</member></source><destination><member>any</member></destination><source-user><member>any</member></source-user><category><member>any</member></category><application><member>any</member></application><service><member>application-default</member></service><source-hip><member>any</member></source-hip><destination-hip><member>any</member></destination-hip><action>allow</action><log-setting>default</log-setting><description>Standard outbound access</description>",
+                      "raw": "https://{{host}}/api/?type=config&action=set&xpath=/config/devices/entry[@name='localhost.localdomain']/vsys/entry[@name='vsys1']/rulebase/security/rules/entry[@name='New Rule']&element-value=<profile-setting><group><member>Best-Practice</member></group></profile-setting><to><member>untrust</member></to><from><member>trust</member></from><source><member>any</member></source><destination><member>any</member></destination><source-user><member>any</member></source-user><category><member>any</member></category><application><member>any</member></application><service><member>application-default</member></service><source-hip><member>any</member></source-hip><destination-hip><member>any</member></destination-hip><action>allow</action><log-setting>default</log-setting><description>Standard outbound access</description>",
                       "protocol": "https",
                       "host": [
                         "{{host}}"
@@ -10275,7 +10275,7 @@
                         },
                         {
                           "key": "xpath",
-                          "value": "/config/devices/entry/vsys/entry[@name='vsys1']/rulebase/security/rules/entry[@name='New Rule']",
+                          "value": "/config/devices/entry[@name='localhost.localdomain']/vsys/entry[@name='vsys1']/rulebase/security/rules/entry[@name='New Rule']",
                           "type": "text"
                         },
                         {
@@ -10525,13 +10525,13 @@
   ],
   "variable": [
     {
-      "id": "2ce5d9c7-c9af-4cda-8415-d4eb6e9ca988",
+      "id": "fb8a7010-ae5e-4022-b03a-fd6a0a770636",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "77e9dd07-85ec-412a-a041-d0d04775c0ae",
+      "id": "f84f9b52-6394-4270-bcc3-42b6d86e84bc",
       "key": "{{key}}",
       "value": "",
       "type": "string"
