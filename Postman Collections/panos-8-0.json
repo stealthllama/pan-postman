@@ -9616,13 +9616,13 @@
   ],
   "variable": [
     {
-      "id": "002e7b34-2875-4e71-984c-dbce151b080d",
+      "id": "baca75cd-dacb-4208-8135-9fe54c1d7b2d",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "03437c6d-b7b7-48e1-be0e-26747f0298e1",
+      "id": "2a5350e5-638a-44d3-b0c3-221115872852",
       "key": "{{key}}",
       "value": "",
       "type": "string"
