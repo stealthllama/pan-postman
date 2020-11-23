@@ -1798,7 +1798,8 @@
                           "value": "/config/devices/entry[@name='localhost.localdomain']/vsys/entry[@name='vsys1']/rulebase/security/rules/entry[@name='IT DNS Services']"
                         }
                       ]
-                    }
+                    },
+                    "description": "Deletes the security rule `IT DNS Services`."
                   },
                   "response": [
                     {
@@ -2495,13 +2496,13 @@
   ],
   "variable": [
     {
-      "id": "85747c35-f12f-4f37-9cec-db444cf23dac",
+      "id": "8e612f40-c562-41ec-81ac-1ea61c7caeb0",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "d88c3fb8-cd1b-4816-bfc2-fbae3b41b432",
+      "id": "a49c9f57-9a66-49f7-bef0-8be57fc01538",
       "key": "{{key}}",
       "value": "",
       "type": "string"
