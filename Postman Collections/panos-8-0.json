@@ -10111,7 +10111,21 @@
             },
             {
               "name": "Set Configuration",
-              "item": [],
+              "item": [
+                {
+                  "name": "Create new rule in security policy",
+                  "_postman_id": "9331a3b5-d23e-4c06-a821-f9e08e3505f4",
+                  "protocolProfileBehavior": {
+                    "disableBodyPruning": true
+                  },
+                  "request": {
+                    "method": "GET",
+                    "header": [],
+                    "url": ""
+                  },
+                  "response": []
+                }
+              ],
               "_postman_id": "08f576ba-3dc9-4682-bfff-b8c790bf6f2a",
               "description": "Use `action=set` to add or create a new object at a specified location in the PAN-OS configuration.  Use the `xpath` parameter to specify the location of the object in the configuration.",
               "_postman_isSubFolder": true
@@ -10348,13 +10362,13 @@
   ],
   "variable": [
     {
-      "id": "0d9f9106-c589-435f-85fc-186ca609f453",
+      "id": "4f1a65b7-8b03-4883-96a7-e3763b9a688b",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "35b65185-a22e-4733-bf41-3de12baa1557",
+      "id": "ff1c3d28-4fbc-42f2-8358-970b2eb4c991",
       "key": "{{key}}",
       "value": "",
       "type": "string"
