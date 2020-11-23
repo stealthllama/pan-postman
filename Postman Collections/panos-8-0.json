@@ -1005,7 +1005,7 @@
                   ]
                 },
                 {
-                  "name": "Add an additional member to an address group or list",
+                  "name": "Add an additional member to an address group",
                   "_postman_id": "c9b3b919-9c4f-4bb2-adb2-2b45a4939fe5",
                   "protocolProfileBehavior": {
                     "disableBodyPruning": true
@@ -1897,7 +1897,7 @@
                   ]
                 },
                 {
-                  "name": "Delete an address object",
+                  "name": "Delete a member from an address group",
                   "_postman_id": "a19946b0-b1d5-40cf-a9c6-f4cab058f2ef",
                   "protocolProfileBehavior": {
                     "disableBodyPruning": true
@@ -2110,13 +2110,13 @@
   ],
   "variable": [
     {
-      "id": "65a2d9c9-7142-4c3d-8299-89d1acec30d9",
+      "id": "986faf72-0d60-48a6-90ad-4e3df3ae3751",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "c0eeae29-aee6-4fce-83ec-800d2127a89f",
+      "id": "c114ee49-c4d7-4762-b993-892c155ce701",
       "key": "{{key}}",
       "value": "",
       "type": "string"
