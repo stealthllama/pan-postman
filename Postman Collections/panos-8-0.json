@@ -1152,7 +1152,35 @@
                   "request": {
                     "method": "GET",
                     "header": [],
-                    "url": ""
+                    "url": {
+                      "raw": "https://{{host}}/api/?type=config&action=set&xpath=/config/devices/entry[@name='localhost.localdomain']/network/interface/ethernet/entry[@name='ethernet1/1']/layer3/ip&element=<entry name='5.5.5.5/24'/>",
+                      "protocol": "https",
+                      "host": [
+                        "{{host}}"
+                      ],
+                      "path": [
+                        "api",
+                        ""
+                      ],
+                      "query": [
+                        {
+                          "key": "type",
+                          "value": "config"
+                        },
+                        {
+                          "key": "action",
+                          "value": "set"
+                        },
+                        {
+                          "key": "xpath",
+                          "value": "/config/devices/entry[@name='localhost.localdomain']/network/interface/ethernet/entry[@name='ethernet1/1']/layer3/ip"
+                        },
+                        {
+                          "key": "element",
+                          "value": "<entry name='5.5.5.5/24'/>"
+                        }
+                      ]
+                    }
                   },
                   "response": []
                 }
@@ -1393,13 +1421,13 @@
   ],
   "variable": [
     {
-      "id": "7fae19f2-4840-49e4-afa2-2a864c9d0524",
+      "id": "9589ea6a-8830-46dd-a455-b4f2da5d6a2b",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "f7430154-c872-4786-8be8-afe1fa557320",
+      "id": "5586df15-3624-4ba2-9d11-7838234e8173",
       "key": "{{key}}",
       "value": "",
       "type": "string"
