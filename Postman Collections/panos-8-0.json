@@ -1929,13 +1929,20 @@
                         }
                       ]
                     },
-                    "description": "To delete a single member object in a group, search for the object's name in the `member` entries using `member[text()='object-to-delete']`."
+                    "description": "To delete a single member object in a group, use a text match for the object's name in the `member` entries like this: `member[text()='Object-To-Delete']`."
                   },
                   "response": []
                 }
               ],
               "_postman_id": "5fe6ff03-ba59-4d3d-abca-6dc3508e5faf",
               "description": "Use `action=delete` to delete an object at a specified location in the configuration.\n\nUse the `xpath` parameter to specify the location of the object to be deleted.",
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "Rename Configuration",
+              "item": [],
+              "_postman_id": "68ca3234-062c-4fe3-b54a-b1cec4573c4c",
+              "description": "Use `action=rename` to rename an object at a specified location in the configuration.\n\nUse the `xpath` parameter to specify the location of the object to be renamed.\nUse the `newname` parameter to provide a new name for the object.",
               "_postman_isSubFolder": true
             }
           ],
@@ -2134,13 +2141,13 @@
   ],
   "variable": [
     {
-      "id": "d8de3342-79fb-40bb-8c33-306a2aaaf6cb",
+      "id": "67808c4d-255f-4ab7-aab6-72db14f9e539",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "aaff6647-2aae-4516-9b75-7d6fab7ff385",
+      "id": "91ce18b3-184b-43e4-8051-a7385e57183a",
       "key": "{{key}}",
       "value": "",
       "type": "string"
