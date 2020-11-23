@@ -10081,6 +10081,19 @@
                       "body": "<response status=\"success\" code=\"19\">\n    <result total-count=\"1\" count=\"1\">\n        <entry id=\"74\" name=\"hotmail\" ori_country=\"USA\" ori_language=\"English\">\n            <category>collaboration</category>\n            <subcategory>email</subcategory>\n            <technology>browser-based</technology>\n            <virus-ident>yes</virus-ident>\n            <file-type-ident>yes</file-type-ident>\n            <evasive-behavior>no</evasive-behavior>\n            <consume-big-bandwidth>no</consume-big-bandwidth>\n            <used-by-malware>yes</used-by-malware>\n            <able-to-transfer-file>yes</able-to-transfer-file>\n            <has-known-vulnerability>yes</has-known-vulnerability>\n            <tunnel-other-application>no</tunnel-other-application>\n            <prone-to-misuse>no</prone-to-misuse>\n            <pervasive-use>yes</pervasive-use>\n            <data-ident>yes</data-ident>\n            <file-forward>yes</file-forward>\n            <trusted-credential>yes</trusted-credential>\n            <tag minver=\"9.1.0\">\n                <member>[Web App]</member>\n            </tag>\n            <references>\n                <entry name=\"Wikipedia\">\n                    <link>http://en.wikipedia.org/wiki/Hotmail</link>\n                </entry>\n            </references>\n            <default>\n                <port>\n                    <member>tcp/443,995</member>\n                    <member>tcp/80</member>\n                </port>\n            </default>\n            <use-applications>\n                <member minver=\"5.0.0\">office365-consumer-access</member>\n                <member>silverlight</member>\n                <member>ssl</member>\n                <member>web-browsing</member>\n            </use-applications>\n            <tunnel-applications minver=\"3.1.0\">\n                <member minver=\"3.1.0\">sharepoint-online</member>\n            </tunnel-applications>\n            <risk>4</risk>\n        </entry>\n    </result>\n</response>"
                     }
                   ]
+                },
+                {
+                  "name": "Firewall candidate configuration",
+                  "_postman_id": "4f4a1346-c79a-4d7b-b37d-01f81ac7e20f",
+                  "protocolProfileBehavior": {
+                    "disableBodyPruning": true
+                  },
+                  "request": {
+                    "method": "GET",
+                    "header": [],
+                    "url": ""
+                  },
+                  "response": []
                 }
               ],
               "_postman_id": "e1a19059-70a0-46bf-9978-7ee00b5557cc",
@@ -10362,13 +10375,13 @@
   ],
   "variable": [
     {
-      "id": "cb9484f2-984e-4a4a-a7c2-5832c6ad0381",
+      "id": "bda6a35c-3f96-483c-9662-12e9d13454d5",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "33af9ea3-cd45-4b33-89c2-074f119ffe2f",
+      "id": "c5532585-31ad-43bc-8ed9-d7ca17d0511d",
       "key": "{{key}}",
       "value": "",
       "type": "string"
