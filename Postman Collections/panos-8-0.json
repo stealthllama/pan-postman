@@ -9398,13 +9398,6 @@
             },
             "method": "GET",
             "header": [],
-            "body": {
-              "mode": "urlencoded",
-              "urlencoded": [],
-              "options": {
-                "urlencoded": {}
-              }
-            },
             "url": {
               "raw": "https://{{host}}/api?type=keygen&user=&password=",
               "protocol": "https",
@@ -9427,7 +9420,7 @@
                 {
                   "key": "password",
                   "value": "",
-                  "description": "Password sued to generate API key."
+                  "description": "Password used to generate API key."
                 }
               ]
             },
@@ -10355,13 +10348,13 @@
   ],
   "variable": [
     {
-      "id": "b3b53568-1ee2-4ca6-ba78-342d50b073ae",
+      "id": "0d9f9106-c589-435f-85fc-186ca609f453",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "d8bfc469-8bf8-4d7a-bd31-10f12e13ad76",
+      "id": "35b65185-a22e-4733-bf41-3de12baa1557",
       "key": "{{key}}",
       "value": "",
       "type": "string"
