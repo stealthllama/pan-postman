@@ -9824,7 +9824,7 @@
                   "response": []
                 },
                 {
-                  "name": "Address objects in a virtual system Copy",
+                  "name": "Full list of all applications",
                   "_postman_id": "88205a38-257e-4b46-b4ca-1a144dd6e9c5",
                   "protocolProfileBehavior": {
                     "disableBodyPruning": true
@@ -9833,7 +9833,7 @@
                     "method": "GET",
                     "header": [],
                     "url": {
-                      "raw": "https://{{host}}/api/?type=config&action=get&xpath=/config/devices/entry/vsys/entry[@name='vsys1']/address",
+                      "raw": "https://{{host}}/api/?type=config&action=get&xpath=/config/predefined/application",
                       "protocol": "https",
                       "host": [
                         "{{host}}"
@@ -9853,14 +9853,241 @@
                         },
                         {
                           "key": "xpath",
-                          "value": "/config/devices/entry/vsys/entry[@name='vsys1']/address",
+                          "value": "/config/predefined/application",
                           "description": "XPath to desired portion of configuration"
                         }
                       ]
-                    },
-                    "description": "Use `action=show` along with the `xpath` parameter to target a specific portion of the configuration."
+                    }
                   },
-                  "response": []
+                  "response": [
+                    {
+                      "id": "adad8c6c-c390-472a-848c-a9a25832bea1",
+                      "name": "Full list of all applications",
+                      "originalRequest": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                          "raw": "https://{{host}}/api/?type=config&action=get&xpath=/config/predefined/application",
+                          "protocol": "https",
+                          "host": [
+                            "{{host}}"
+                          ],
+                          "path": [
+                            "api",
+                            ""
+                          ],
+                          "query": [
+                            {
+                              "key": "type",
+                              "value": "config"
+                            },
+                            {
+                              "key": "action",
+                              "value": "get"
+                            },
+                            {
+                              "key": "xpath",
+                              "value": "/config/predefined/application",
+                              "description": "XPath to desired portion of configuration"
+                            }
+                          ]
+                        }
+                      },
+                      "status": "OK",
+                      "code": 200,
+                      "_postman_previewlanguage": "xml",
+                      "header": [
+                        {
+                          "key": "Date",
+                          "value": "Mon, 23 Nov 2020 19:02:26 GMT"
+                        },
+                        {
+                          "key": "Content-Type",
+                          "value": "application/xml; charset=UTF-8"
+                        },
+                        {
+                          "key": "Transfer-Encoding",
+                          "value": "chunked"
+                        },
+                        {
+                          "key": "Connection",
+                          "value": "keep-alive"
+                        },
+                        {
+                          "key": "X-FRAME-OPTIONS",
+                          "value": "SAMEORIGIN"
+                        },
+                        {
+                          "key": "X-XSS-Protection",
+                          "value": "1; mode=block"
+                        },
+                        {
+                          "key": "X-Content-Type-Options",
+                          "value": "nosniff"
+                        },
+                        {
+                          "key": "Content-Security-Policy",
+                          "value": "default-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:;"
+                        },
+                        {
+                          "key": "Strict-Transport-Security",
+                          "value": "max-age=31536000"
+                        },
+                        {
+                          "key": "Cache-Control",
+                          "value": "no-store, no-cache, must-revalidate, post-check=0, pre-check=0"
+                        },
+                        {
+                          "key": "Expires",
+                          "value": "Thu, 19 Nov 1981 08:52:00 GMT"
+                        },
+                        {
+                          "key": "Pragma",
+                          "value": "no-cache"
+                        },
+                        {
+                          "key": "Allow",
+                          "value": "GET, HEAD, POST, PUT, DELETE, OPTIONS"
+                        }
+                      ],
+                      "cookie": [],
+                      "responseTime": null,
+                      "body": "<response status=\"success\" code=\"19\">\n    <result total-count=\"1\" count=\"1\">\n        <application>\n            <entry id=\"120\" name=\"100bao\" ori_country=\"USA\" ori_language=\"English\">\n                <category>general-internet</category>\n                <subcategory>file-sharing</subcategory>\n                <technology>peer-to-peer</technology>\n                <evasive-behavior>yes</evasive-behavior>\n                <consume-big-bandwidth>yes</consume-big-bandwidth>\n                <used-by-malware>yes</used-by-malware>\n                <able-to-transfer-file>yes</able-to-transfer-file>\n                <has-known-vulnerability>yes</has-known-vulnerability>\n                <tunnel-other-application>no</tunnel-other-application>\n                <prone-to-misuse>yes</prone-to-misuse>\n                <pervasive-use>yes</pervasive-use>\n                <risk>5</risk>\n                <references>\n                    <entry name=\"www.100bao.com\">\n                        <link>http://www.100bao.com/</link>\n                    </entry>\n                </references>\n                <default>\n                    <port>\n                        <member>tcp/3468,6346,11300</member>\n                    </port>\n                </default>\n            </entry>\n            ... example output truncated ...\n        </application>\n    </result>\n</response>"
+                    }
+                  ]
+                },
+                {
+                  "name": "Full list of all applications Copy",
+                  "_postman_id": "2bc98fea-12cb-4fda-9e8d-7a406cea5601",
+                  "protocolProfileBehavior": {
+                    "disableBodyPruning": true
+                  },
+                  "request": {
+                    "method": "GET",
+                    "header": [],
+                    "url": {
+                      "raw": "https://{{host}}/api/?type=config&action=get&xpath=/config/predefined/application",
+                      "protocol": "https",
+                      "host": [
+                        "{{host}}"
+                      ],
+                      "path": [
+                        "api",
+                        ""
+                      ],
+                      "query": [
+                        {
+                          "key": "type",
+                          "value": "config"
+                        },
+                        {
+                          "key": "action",
+                          "value": "get"
+                        },
+                        {
+                          "key": "xpath",
+                          "value": "/config/predefined/application",
+                          "description": "XPath to desired portion of configuration"
+                        }
+                      ]
+                    }
+                  },
+                  "response": [
+                    {
+                      "id": "593fa877-4f9c-4f14-ad80-df7cde882838",
+                      "name": "Full list of all applications",
+                      "originalRequest": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                          "raw": "https://{{host}}/api/?type=config&action=get&xpath=/config/predefined/application",
+                          "protocol": "https",
+                          "host": [
+                            "{{host}}"
+                          ],
+                          "path": [
+                            "api",
+                            ""
+                          ],
+                          "query": [
+                            {
+                              "key": "type",
+                              "value": "config"
+                            },
+                            {
+                              "key": "action",
+                              "value": "get"
+                            },
+                            {
+                              "key": "xpath",
+                              "value": "/config/predefined/application",
+                              "description": "XPath to desired portion of configuration"
+                            }
+                          ]
+                        }
+                      },
+                      "status": "OK",
+                      "code": 200,
+                      "_postman_previewlanguage": "xml",
+                      "header": [
+                        {
+                          "key": "Date",
+                          "value": "Mon, 23 Nov 2020 19:02:26 GMT"
+                        },
+                        {
+                          "key": "Content-Type",
+                          "value": "application/xml; charset=UTF-8"
+                        },
+                        {
+                          "key": "Transfer-Encoding",
+                          "value": "chunked"
+                        },
+                        {
+                          "key": "Connection",
+                          "value": "keep-alive"
+                        },
+                        {
+                          "key": "X-FRAME-OPTIONS",
+                          "value": "SAMEORIGIN"
+                        },
+                        {
+                          "key": "X-XSS-Protection",
+                          "value": "1; mode=block"
+                        },
+                        {
+                          "key": "X-Content-Type-Options",
+                          "value": "nosniff"
+                        },
+                        {
+                          "key": "Content-Security-Policy",
+                          "value": "default-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:;"
+                        },
+                        {
+                          "key": "Strict-Transport-Security",
+                          "value": "max-age=31536000"
+                        },
+                        {
+                          "key": "Cache-Control",
+                          "value": "no-store, no-cache, must-revalidate, post-check=0, pre-check=0"
+                        },
+                        {
+                          "key": "Expires",
+                          "value": "Thu, 19 Nov 1981 08:52:00 GMT"
+                        },
+                        {
+                          "key": "Pragma",
+                          "value": "no-cache"
+                        },
+                        {
+                          "key": "Allow",
+                          "value": "GET, HEAD, POST, PUT, DELETE, OPTIONS"
+                        }
+                      ],
+                      "cookie": [],
+                      "responseTime": null,
+                      "body": "<response status=\"success\" code=\"19\">\n    <result total-count=\"1\" count=\"1\">\n        <application>\n            <entry id=\"120\" name=\"100bao\" ori_country=\"USA\" ori_language=\"English\">\n                <category>general-internet</category>\n                <subcategory>file-sharing</subcategory>\n                <technology>peer-to-peer</technology>\n                <evasive-behavior>yes</evasive-behavior>\n                <consume-big-bandwidth>yes</consume-big-bandwidth>\n                <used-by-malware>yes</used-by-malware>\n                <able-to-transfer-file>yes</able-to-transfer-file>\n                <has-known-vulnerability>yes</has-known-vulnerability>\n                <tunnel-other-application>no</tunnel-other-application>\n                <prone-to-misuse>yes</prone-to-misuse>\n                <pervasive-use>yes</pervasive-use>\n                <risk>5</risk>\n                <references>\n                    <entry name=\"www.100bao.com\">\n                        <link>http://www.100bao.com/</link>\n                    </entry>\n                </references>\n                <default>\n                    <port>\n                        <member>tcp/3468,6346,11300</member>\n                    </port>\n                </default>\n            </entry>\n            ... example output truncated ...\n        </application>\n    </result>\n</response>"
+                    }
+                  ]
                 }
               ],
               "_postman_id": "e1a19059-70a0-46bf-9978-7ee00b5557cc",
@@ -10121,13 +10348,13 @@
   ],
   "variable": [
     {
-      "id": "41a37fd0-e7be-45e1-8caf-3a05818a560b",
+      "id": "df90f94f-9dd7-4e91-8e2f-0faa0a95953e",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "f3821684-e46f-4e37-b88d-3d7f4ac88197",
+      "id": "42a8ad88-f7ea-4495-b2af-bbcbe7ade571",
       "key": "{{key}}",
       "value": "",
       "type": "string"
