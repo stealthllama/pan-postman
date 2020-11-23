@@ -1979,7 +1979,8 @@
                           "type": "text"
                         }
                       ]
-                    }
+                    },
+                    "description": "Renames the address object `Old-Address` to `New-Address`."
                   },
                   "response": [
                     {
@@ -2494,13 +2495,13 @@
   ],
   "variable": [
     {
-      "id": "e342a7d2-353b-4f7e-bb28-fb8821ec5632",
+      "id": "85747c35-f12f-4f37-9cec-db444cf23dac",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "a6029a4b-33eb-4e77-bef4-17762ff4bfa7",
+      "id": "d88c3fb8-cd1b-4816-bfc2-fbae3b41b432",
       "key": "{{key}}",
       "value": "",
       "type": "string"
