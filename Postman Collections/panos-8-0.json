@@ -2,7 +2,7 @@
   "info": {
     "_postman_id": "241ff148-5458-dde5-cbaa-a80527e7dc55",
     "name": "PAN-OS XML API",
-    "description": "This is a companion Postman collection for the official [PAN-OS XML API documentation](https://docs.paloaltonetworks.com/pan-os/10-0/pan-os-panorama-api.html).\n\n# Collection variables\n\nTo use the examples in this guide, you must define the following collection variables:\n\n- **host**: IP address or hostname of the PAN-OS device you wish to interact with.\n- **key**: Generated API key used for authentication.\n\n# Structure of a XML API Request\n\nView the [official documentation](https://docs.paloaltonetworks.com/pan-os/10-0/pan-os-panorama-api/about-the-pan-os-xml-api/structure-of-a-pan-os-xml-api-request.html).\n\nRequests typically use the following parameters:\n\n- API key (`key=`)\n- Request type (`type=`)\n- Action (`action=`)\n- XML and XPath elements (`xpath=` or `cmd=`)\n\n",
+    "description": "This is a companion Postman collection for the official [PAN-OS XML API documentation](https://docs.paloaltonetworks.com/pan-os/10-0/pan-os-panorama-api.html).\n\n# Using this collection\n\nTo use the examples in this guide, you must define the following collection variables:\n\n- **host**: IP address or hostname of the PAN-OS device you wish to interact with.\n- **key**: Generated API key used for authentication.\n\n# Structure of a XML API Request\n\nView the [official documentation](https://docs.paloaltonetworks.com/pan-os/10-0/pan-os-panorama-api/about-the-pan-os-xml-api/structure-of-a-pan-os-xml-api-request.html).\n\nA PAN-OS XML API request typically comprisdes a number of parameters, as shown in the example below:\n\n```\nhttps://<firewall>/api/?type=<type>&action=<action>&xpath=<xpath>&key=<apikey>\n```\n\n- API key (`key=`): The API key allows you to authenticate yourself to the API when making requests.\n- Request type (`type=`): The type of request you want.\n- Action (`action=`): When the request type is `config` or `op`, you must also specify an associated action.\n- XML and XPath elements (`xpath=` or `cmd=`): When using configuration or operation mode commands on the firewall, you include only the XML or the XPath that specifies the XML node.\n\nRequests to the PAN-OS XML API can be performed using the `GET` and `POST` HTTP methods.\n\n## GET Requests\n\nUse a GET request when the query size is less than 2K and you want to pass strings in the request URL.  Append the query string to the request URL as a URL-encoded parameter string:\n\n```\nGET /api/?type=keygen&user=<username>&password=<password>\n```\n\n## POST Requests\n\nUse a POST request when you are sending large amounts of form data (max request size of 5MB) or when you are passing non-ASCII characters.  Some API requests, such as importing files, require `POST`.  When using this method, pass the parameters in the request body, including the login credentials:\n\n```\nPOST /api/ HTTP/1.1 \nContent-Type: application/x-www-form-urlencoded \npassword=<password>&user=<username>&type=keygen\n```\n\n",
     "schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
   },
   "item": [
@@ -9562,13 +9562,13 @@
   ],
   "variable": [
     {
-      "id": "b1d5ef5c-591d-4b2c-a02d-967bd57440d3",
+      "id": "65539f03-6c9d-4af6-8e66-27abd33b6196",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "58e7ca2d-5d38-4866-9d20-ef221162a5ba",
+      "id": "4096b625-6d69-4ea7-861b-6989d5a86d89",
       "key": "{{key}}",
       "value": "",
       "type": "string"
