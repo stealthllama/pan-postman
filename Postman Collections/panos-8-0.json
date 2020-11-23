@@ -9505,7 +9505,27 @@
                   "request": {
                     "method": "GET",
                     "header": [],
-                    "url": ""
+                    "url": {
+                      "raw": "https://{{host}}/api/?type=config&action=show",
+                      "protocol": "https",
+                      "host": [
+                        "{{host}}"
+                      ],
+                      "path": [
+                        "api",
+                        ""
+                      ],
+                      "query": [
+                        {
+                          "key": "type",
+                          "value": "config"
+                        },
+                        {
+                          "key": "action",
+                          "value": "show"
+                        }
+                      ]
+                    }
                   },
                   "response": []
                 }
@@ -9723,13 +9743,13 @@
   ],
   "variable": [
     {
-      "id": "6b0efece-28ef-41a5-b870-e1fe2f2ee065",
+      "id": "d87fde81-89b4-4263-b07e-33a373902694",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "d4bd549d-b93b-4483-a6e8-8e81a3fb16ee",
+      "id": "ce0c19c9-de7f-4680-a9c3-cf62eecee036",
       "key": "{{key}}",
       "value": "",
       "type": "string"
