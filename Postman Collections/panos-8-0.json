@@ -1940,7 +1940,21 @@
             },
             {
               "name": "Rename Configuration",
-              "item": [],
+              "item": [
+                {
+                  "name": "Rename an address object",
+                  "_postman_id": "ca21af18-3533-4b27-8b7e-6f46b178c1bf",
+                  "protocolProfileBehavior": {
+                    "disableBodyPruning": true
+                  },
+                  "request": {
+                    "method": "GET",
+                    "header": [],
+                    "url": ""
+                  },
+                  "response": []
+                }
+              ],
               "_postman_id": "68ca3234-062c-4fe3-b54a-b1cec4573c4c",
               "description": "Use `action=rename` to rename an object at a specified location in the configuration.\n\nUse the `xpath` parameter to specify the location of the object to be renamed.\nUse the `newname` parameter to provide a new name for the object.",
               "_postman_isSubFolder": true
@@ -2141,13 +2155,13 @@
   ],
   "variable": [
     {
-      "id": "e76d7308-5b41-4271-8289-eafec684e082",
+      "id": "e61bba52-0e1b-4260-9f5e-1c77a519da16",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "8e154e15-9b5a-471b-a362-6869b47e65f6",
+      "id": "6e35bdab-4207-4cda-90d9-2a7428b1dd14",
       "key": "{{key}}",
       "value": "",
       "type": "string"
