@@ -2253,7 +2253,41 @@
                   "request": {
                     "method": "GET",
                     "header": [],
-                    "url": ""
+                    "url": {
+                      "raw": "https://{{host}}/api/?type=config&action=move&xpath=/config/devices/entry[@name='localhost.localdomain']/vsys/entry[@name='vsys1']/rulebase/security/rules/entry[@name='Outbound Access']&where=after&dst=IT DNS Services",
+                      "protocol": "https",
+                      "host": [
+                        "{{host}}"
+                      ],
+                      "path": [
+                        "api",
+                        ""
+                      ],
+                      "query": [
+                        {
+                          "key": "type",
+                          "value": "config"
+                        },
+                        {
+                          "key": "action",
+                          "value": "move"
+                        },
+                        {
+                          "key": "xpath",
+                          "value": "/config/devices/entry[@name='localhost.localdomain']/vsys/entry[@name='vsys1']/rulebase/security/rules/entry[@name='Outbound Access']"
+                        },
+                        {
+                          "key": "where",
+                          "value": "after",
+                          "type": "text"
+                        },
+                        {
+                          "key": "dst",
+                          "value": "IT DNS Services",
+                          "type": "text"
+                        }
+                      ]
+                    }
                   },
                   "response": []
                 }
@@ -2458,13 +2492,13 @@
   ],
   "variable": [
     {
-      "id": "0395b407-9f64-4d94-a4c1-ffca22428ead",
+      "id": "4bb5139b-0fbc-42e1-a8aa-2f905f269954",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "37a62266-3f4e-48f4-be42-bdab9f4b5a80",
+      "id": "13ada418-f092-49ff-8030-23144c220bde",
       "key": "{{key}}",
       "value": "",
       "type": "string"
