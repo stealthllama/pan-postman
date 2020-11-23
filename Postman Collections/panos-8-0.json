@@ -9547,10 +9547,10 @@
                 "disableBodyPruning": true
               },
               "request": {
-                "method": "POST",
+                "method": "GET",
                 "header": [],
                 "url": {
-                  "raw": "https://{{host}}/api?key={{key}}&type=version",
+                  "raw": "https://{{host}}/api?type=version",
                   "protocol": "https",
                   "host": [
                     "{{host}}"
@@ -9561,7 +9561,8 @@
                   "query": [
                     {
                       "key": "key",
-                      "value": "{{key}}"
+                      "value": "{{key}}",
+                      "disabled": true
                     },
                     {
                       "key": "type",
@@ -9611,13 +9612,13 @@
   ],
   "variable": [
     {
-      "id": "463ab39c-58ee-4902-aa55-f0ae4350b3d9",
+      "id": "f8190f1c-00c1-41c0-b92a-4d317d9a116b",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "f595fa47-9eb1-472c-8cca-126c390525d5",
+      "id": "0d048c39-3982-4bd8-9f86-079a8ae7f670",
       "key": "{{key}}",
       "value": "",
       "type": "string"
