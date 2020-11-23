@@ -866,7 +866,7 @@
               "name": "Set Configuration",
               "item": [
                 {
-                  "name": "Create new rule in security policy",
+                  "name": "Create a security rule",
                   "_postman_id": "9331a3b5-d23e-4c06-a821-f9e08e3505f4",
                   "protocolProfileBehavior": {
                     "disableBodyPruning": true
@@ -1979,13 +1979,13 @@
   ],
   "variable": [
     {
-      "id": "10ff6be1-5698-4597-9dd3-f960ea7b2c2f",
+      "id": "575744d0-4032-4713-a962-5b0ac934c4d9",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "20d3abef-f6e0-4398-9299-8623f1bd3f80",
+      "id": "f2ec9651-4cfd-467e-95a1-87861446c977",
       "key": "{{key}}",
       "value": "",
       "type": "string"
