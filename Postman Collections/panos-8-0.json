@@ -1042,7 +1042,7 @@
                         }
                       ]
                     },
-                    "description": "Include the address group (or list) node in the xpath, and reference it by name.  Then, include the new members in the element parameter."
+                    "description": "Include the node you wish to modify in the xpath, and reference the specific entry by name.  Then, include the new members in the element parameter."
                   },
                   "response": [
                     {
@@ -1660,13 +1660,13 @@
   ],
   "variable": [
     {
-      "id": "3aab4139-9275-496a-a933-925500034dac",
+      "id": "22197f1c-89b0-4c2e-b83f-366c70ff6045",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "4b222fd3-6ad0-44de-a84f-db8ce1a2ce55",
+      "id": "ad19f832-5629-4731-a751-b188f086656c",
       "key": "{{key}}",
       "value": "",
       "type": "string"
