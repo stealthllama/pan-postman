@@ -9574,13 +9574,13 @@
   ],
   "variable": [
     {
-      "id": "0ddd28b5-1967-4748-9ed6-aee6f832d2ad",
+      "id": "f03861b0-ad31-430d-9f3a-a58774b6bdf7",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "1caaa6ba-1ff3-4ac9-a004-dabbfb0bc5b0",
+      "id": "cf341db8-88cd-4a2c-8624-9edf45fe6f43",
       "key": "{{key}}",
       "value": "",
       "type": "string"
