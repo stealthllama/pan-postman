@@ -1291,7 +1291,35 @@
                   "request": {
                     "method": "GET",
                     "header": [],
-                    "url": "",
+                    "url": {
+                      "raw": "https://{{host}}/api/?type=config&action=set&xpath=/config/devices/entry[@name='localhost.localdomain']/vsys/entry[@name='vsys1']/rulebase/security/rules/entry[@name='IT DNS Services']&element=<disabled>yes</disabled>",
+                      "protocol": "https",
+                      "host": [
+                        "{{host}}"
+                      ],
+                      "path": [
+                        "api",
+                        ""
+                      ],
+                      "query": [
+                        {
+                          "key": "type",
+                          "value": "config"
+                        },
+                        {
+                          "key": "action",
+                          "value": "set"
+                        },
+                        {
+                          "key": "xpath",
+                          "value": "/config/devices/entry[@name='localhost.localdomain']/vsys/entry[@name='vsys1']/rulebase/security/rules/entry[@name='IT DNS Services']"
+                        },
+                        {
+                          "key": "element",
+                          "value": "<disabled>yes</disabled>"
+                        }
+                      ]
+                    },
                     "description": "Conversely, use `<disabled>no</disabled>` to enable a rule."
                   },
                   "response": []
@@ -1533,13 +1561,13 @@
   ],
   "variable": [
     {
-      "id": "aefa54b1-8623-4a8e-bec7-8f85ead747dc",
+      "id": "05215a0b-b67e-440f-ac48-619165c68f5f",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "7125f7c7-5d63-4a92-b6b4-b5f3521ea5d6",
+      "id": "6558ddf4-221a-4902-a852-76369132a23e",
       "key": "{{key}}",
       "value": "",
       "type": "string"
