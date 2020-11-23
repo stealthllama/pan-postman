@@ -2080,6 +2080,146 @@
                       "body": "<response status=\"success\" code=\"20\">\n    <msg>command succeeded</msg>\n</response>"
                     }
                   ]
+                },
+                {
+                  "name": "Rename an address object Copy",
+                  "_postman_id": "3b86fc7f-f54e-4640-81a8-6cbb978cf988",
+                  "protocolProfileBehavior": {
+                    "disableBodyPruning": true
+                  },
+                  "request": {
+                    "method": "GET",
+                    "header": [],
+                    "url": {
+                      "raw": "https://{{host}}/api/?type=config&action=rename&xpath=/config/devices/entry[@name='localhost.localdomain']/vsys/entry[@name='vsys1']/address/entry[@name='Old-Address']&newname=New-Address",
+                      "protocol": "https",
+                      "host": [
+                        "{{host}}"
+                      ],
+                      "path": [
+                        "api",
+                        ""
+                      ],
+                      "query": [
+                        {
+                          "key": "type",
+                          "value": "config"
+                        },
+                        {
+                          "key": "action",
+                          "value": "rename"
+                        },
+                        {
+                          "key": "xpath",
+                          "value": "/config/devices/entry[@name='localhost.localdomain']/vsys/entry[@name='vsys1']/address/entry[@name='Old-Address']"
+                        },
+                        {
+                          "key": "newname",
+                          "value": "New-Address",
+                          "type": "text"
+                        }
+                      ]
+                    }
+                  },
+                  "response": [
+                    {
+                      "id": "54f59312-694c-42b4-975c-01dd192dff67",
+                      "name": "Rename an address object",
+                      "originalRequest": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                          "raw": "https://{{host}}/api/?type=config&action=rename&xpath=/config/devices/entry[@name='localhost.localdomain']/vsys/entry[@name='vsys1']/address/entry[@name='Old-Address']&newname=New-Address",
+                          "protocol": "https",
+                          "host": [
+                            "{{host}}"
+                          ],
+                          "path": [
+                            "api",
+                            ""
+                          ],
+                          "query": [
+                            {
+                              "key": "type",
+                              "value": "config"
+                            },
+                            {
+                              "key": "action",
+                              "value": "rename"
+                            },
+                            {
+                              "key": "xpath",
+                              "value": "/config/devices/entry[@name='localhost.localdomain']/vsys/entry[@name='vsys1']/address/entry[@name='Old-Address']"
+                            },
+                            {
+                              "key": "newname",
+                              "value": "New-Address"
+                            }
+                          ]
+                        }
+                      },
+                      "status": "OK",
+                      "code": 200,
+                      "_postman_previewlanguage": "xml",
+                      "header": [
+                        {
+                          "key": "Date",
+                          "value": "Mon, 23 Nov 2020 20:51:38 GMT"
+                        },
+                        {
+                          "key": "Content-Type",
+                          "value": "application/xml; charset=UTF-8"
+                        },
+                        {
+                          "key": "Content-Length",
+                          "value": "76"
+                        },
+                        {
+                          "key": "Connection",
+                          "value": "keep-alive"
+                        },
+                        {
+                          "key": "X-FRAME-OPTIONS",
+                          "value": "SAMEORIGIN"
+                        },
+                        {
+                          "key": "X-XSS-Protection",
+                          "value": "1; mode=block"
+                        },
+                        {
+                          "key": "X-Content-Type-Options",
+                          "value": "nosniff"
+                        },
+                        {
+                          "key": "Content-Security-Policy",
+                          "value": "default-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:;"
+                        },
+                        {
+                          "key": "Strict-Transport-Security",
+                          "value": "max-age=31536000"
+                        },
+                        {
+                          "key": "Cache-Control",
+                          "value": "no-store, no-cache, must-revalidate, post-check=0, pre-check=0"
+                        },
+                        {
+                          "key": "Expires",
+                          "value": "Thu, 19 Nov 1981 08:52:00 GMT"
+                        },
+                        {
+                          "key": "Pragma",
+                          "value": "no-cache"
+                        },
+                        {
+                          "key": "Allow",
+                          "value": "GET, HEAD, POST, PUT, DELETE, OPTIONS"
+                        }
+                      ],
+                      "cookie": [],
+                      "responseTime": null,
+                      "body": "<response status=\"success\" code=\"20\">\n    <msg>command succeeded</msg>\n</response>"
+                    }
+                  ]
                 }
               ],
               "_postman_id": "68ca3234-062c-4fe3-b54a-b1cec4573c4c",
@@ -2289,13 +2429,13 @@
   ],
   "variable": [
     {
-      "id": "5978bbd3-7178-4d85-a7d2-a5eef9f1611a",
+      "id": "5107e3f0-92c1-4ed2-9f73-7c6272ab4cae",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "d4ab5678-a4d2-4ee9-bc64-680ddb712001",
+      "id": "f27bbeeb-8cd1-4c05-8764-a1824cbba85f",
       "key": "{{key}}",
       "value": "",
       "type": "string"
