@@ -1764,7 +1764,21 @@
             },
             {
               "name": "Delete Configuration",
-              "item": [],
+              "item": [
+                {
+                  "name": "Delete a rule in the security policy",
+                  "_postman_id": "0faacfba-2285-41fb-97ff-28ecf44114cd",
+                  "protocolProfileBehavior": {
+                    "disableBodyPruning": true
+                  },
+                  "request": {
+                    "method": "GET",
+                    "header": [],
+                    "url": ""
+                  },
+                  "response": []
+                }
+              ],
               "_postman_id": "5fe6ff03-ba59-4d3d-abca-6dc3508e5faf",
               "description": "Use `action=delete` to delete an object at a specified location in the configuration.\n\nUse the `xpath` parameter to specify the location of the object to be deleted.",
               "_postman_isSubFolder": true
@@ -1965,13 +1979,13 @@
   ],
   "variable": [
     {
-      "id": "cea04d9d-b339-4891-808f-6dd0ca2907b7",
+      "id": "659a23ad-1734-4f9a-932f-58961fe39a15",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "1b4bf533-8f52-4385-ac36-9754cce71876",
+      "id": "fea8ee5a-be60-4818-9f3b-115e79d31bcc",
       "key": "{{key}}",
       "value": "",
       "type": "string"
