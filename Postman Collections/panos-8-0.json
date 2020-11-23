@@ -1322,7 +1322,105 @@
                     },
                     "description": "Conversely, use `<disabled>no</disabled>` to enable a rule."
                   },
-                  "response": []
+                  "response": [
+                    {
+                      "id": "13d73537-84a1-48a0-a031-ed97386c13ae",
+                      "name": "Disable a security rule",
+                      "originalRequest": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                          "raw": "https://{{host}}/api/?type=config&action=set&xpath=/config/devices/entry[@name='localhost.localdomain']/vsys/entry[@name='vsys1']/rulebase/security/rules/entry[@name='IT DNS Services']&element=<disabled>yes</disabled>",
+                          "protocol": "https",
+                          "host": [
+                            "{{host}}"
+                          ],
+                          "path": [
+                            "api",
+                            ""
+                          ],
+                          "query": [
+                            {
+                              "key": "type",
+                              "value": "config"
+                            },
+                            {
+                              "key": "action",
+                              "value": "set"
+                            },
+                            {
+                              "key": "xpath",
+                              "value": "/config/devices/entry[@name='localhost.localdomain']/vsys/entry[@name='vsys1']/rulebase/security/rules/entry[@name='IT DNS Services']"
+                            },
+                            {
+                              "key": "element",
+                              "value": "<disabled>yes</disabled>"
+                            }
+                          ]
+                        }
+                      },
+                      "status": "OK",
+                      "code": 200,
+                      "_postman_previewlanguage": "xml",
+                      "header": [
+                        {
+                          "key": "Date",
+                          "value": "Mon, 23 Nov 2020 20:12:26 GMT"
+                        },
+                        {
+                          "key": "Content-Type",
+                          "value": "application/xml; charset=UTF-8"
+                        },
+                        {
+                          "key": "Content-Length",
+                          "value": "76"
+                        },
+                        {
+                          "key": "Connection",
+                          "value": "keep-alive"
+                        },
+                        {
+                          "key": "X-FRAME-OPTIONS",
+                          "value": "SAMEORIGIN"
+                        },
+                        {
+                          "key": "X-XSS-Protection",
+                          "value": "1; mode=block"
+                        },
+                        {
+                          "key": "X-Content-Type-Options",
+                          "value": "nosniff"
+                        },
+                        {
+                          "key": "Content-Security-Policy",
+                          "value": "default-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:;"
+                        },
+                        {
+                          "key": "Strict-Transport-Security",
+                          "value": "max-age=31536000"
+                        },
+                        {
+                          "key": "Cache-Control",
+                          "value": "no-store, no-cache, must-revalidate, post-check=0, pre-check=0"
+                        },
+                        {
+                          "key": "Expires",
+                          "value": "Thu, 19 Nov 1981 08:52:00 GMT"
+                        },
+                        {
+                          "key": "Pragma",
+                          "value": "no-cache"
+                        },
+                        {
+                          "key": "Allow",
+                          "value": "GET, HEAD, POST, PUT, DELETE, OPTIONS"
+                        }
+                      ],
+                      "cookie": [],
+                      "responseTime": null,
+                      "body": "<response status=\"success\" code=\"20\">\n    <msg>command succeeded</msg>\n</response>"
+                    }
+                  ]
                 }
               ],
               "_postman_id": "08f576ba-3dc9-4682-bfff-b8c790bf6f2a",
@@ -1561,13 +1659,13 @@
   ],
   "variable": [
     {
-      "id": "05215a0b-b67e-440f-ac48-619165c68f5f",
+      "id": "a77fd82f-ec60-43da-8a23-609f38d101b5",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "6558ddf4-221a-4902-a852-76369132a23e",
+      "id": "e063bc44-945b-47ac-a7c3-758aede34588",
       "key": "{{key}}",
       "value": "",
       "type": "string"
