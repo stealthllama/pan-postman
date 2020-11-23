@@ -2099,7 +2099,7 @@
                     "method": "GET",
                     "header": [],
                     "url": {
-                      "raw": "https://{{host}}/api/?type=config&action=rename&xpath=/config/devices/entry[@name='localhost.localdomain']/vsys/entry[@name='vsys1']/address/entry[@name='Old-Address']&newname=New-Address",
+                      "raw": "https://{{host}}/api/?type=config&action=clone&xpath=/config/devices/entry[@name='localhost.localdomain']/vsys/entry[@name='vsys1']/address&from=/config/devices/entry[@name='localhost.localdomain']/vsys/entry[@name='vsys1']/address/entry[@name='Old-Address']&newname=New-Address",
                       "protocol": "https",
                       "host": [
                         "{{host}}"
@@ -2115,29 +2115,32 @@
                         },
                         {
                           "key": "action",
-                          "value": "rename"
+                          "value": "clone"
                         },
                         {
                           "key": "xpath",
+                          "value": "/config/devices/entry[@name='localhost.localdomain']/vsys/entry[@name='vsys1']/address"
+                        },
+                        {
+                          "key": "from",
                           "value": "/config/devices/entry[@name='localhost.localdomain']/vsys/entry[@name='vsys1']/address/entry[@name='Old-Address']"
                         },
                         {
                           "key": "newname",
-                          "value": "New-Address",
-                          "type": "text"
+                          "value": "New-Address"
                         }
                       ]
                     }
                   },
                   "response": [
                     {
-                      "id": "54f59312-694c-42b4-975c-01dd192dff67",
-                      "name": "Rename an address object",
+                      "id": "ad589148-34bb-4632-8d65-fe68119c3d30",
+                      "name": "Clone an address object",
                       "originalRequest": {
                         "method": "GET",
                         "header": [],
                         "url": {
-                          "raw": "https://{{host}}/api/?type=config&action=rename&xpath=/config/devices/entry[@name='localhost.localdomain']/vsys/entry[@name='vsys1']/address/entry[@name='Old-Address']&newname=New-Address",
+                          "raw": "https://{{host}}/api/?type=config&action=clone&xpath=/config/devices/entry[@name='localhost.localdomain']/vsys/entry[@name='vsys1']/address&from=/config/devices/entry[@name='localhost.localdomain']/vsys/entry[@name='vsys1']/address/entry[@name='Old-Address']&newname=New-Address",
                           "protocol": "https",
                           "host": [
                             "{{host}}"
@@ -2153,10 +2156,14 @@
                             },
                             {
                               "key": "action",
-                              "value": "rename"
+                              "value": "clone"
                             },
                             {
                               "key": "xpath",
+                              "value": "/config/devices/entry[@name='localhost.localdomain']/vsys/entry[@name='vsys1']/address"
+                            },
+                            {
+                              "key": "from",
                               "value": "/config/devices/entry[@name='localhost.localdomain']/vsys/entry[@name='vsys1']/address/entry[@name='Old-Address']"
                             },
                             {
@@ -2172,7 +2179,7 @@
                       "header": [
                         {
                           "key": "Date",
-                          "value": "Mon, 23 Nov 2020 20:51:38 GMT"
+                          "value": "Mon, 23 Nov 2020 20:57:25 GMT"
                         },
                         {
                           "key": "Content-Type",
@@ -2180,7 +2187,7 @@
                         },
                         {
                           "key": "Content-Length",
-                          "value": "76"
+                          "value": "57"
                         },
                         {
                           "key": "Connection",
@@ -2225,13 +2232,20 @@
                       ],
                       "cookie": [],
                       "responseTime": null,
-                      "body": "<response status=\"success\" code=\"20\">\n    <msg>command succeeded</msg>\n</response>"
+                      "body": "<response status=\"success\" name=\"New-Address\"></response>"
                     }
                   ]
                 }
               ],
               "_postman_id": "2b0dbcc4-4eaa-4b9d-9cc8-2d46cc7c75e9",
               "description": "Use `action=clone` to clone an existing configuration object.\n\nUse the `xpath` parameter to specify the location of the object to be cloned.\nUse the `from` parameter to specify the source object.\nUse the `newname` parameter to provide a name for the cloned object.",
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "Move Configuration",
+              "item": [],
+              "_postman_id": "83d59932-aa2b-4522-918a-92148b7a8a73",
+              "description": "Use `action=move` to move the location of an existing configuration object.\n\nUse the `xpath` parameter to specify the location of the object to be moved.\nUse the `where` parameter to specify the type of move (can be *before*, *after*, *top*, or *bottom*).\nUse the `dst` parameter to specify an object when `where` is *before* or *after*.",
               "_postman_isSubFolder": true
             }
           ],
@@ -2430,13 +2444,13 @@
   ],
   "variable": [
     {
-      "id": "638dc91d-0b2a-4602-86c4-140b2467c330",
+      "id": "3df6b56c-da88-4d20-9807-01ebae8d1c98",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "a25e566e-5bae-4d33-b963-4bfb92c0bda5",
+      "id": "9f279e6f-e14a-457e-bd88-806ff3e80807",
       "key": "{{key}}",
       "value": "",
       "type": "string"
