@@ -9423,75 +9423,76 @@
     },
     {
       "name": "Authentication",
-      "item": [],
-      "_postman_id": "8d657926-6a63-40c0-a285-7cb3a670e5c9"
-    },
-    {
-      "name": "Generate API key",
-      "event": [
+      "item": [
         {
-          "listen": "test",
-          "script": {
-            "id": "d1324464-0da5-42e8-ac17-5c4edf686178",
-            "exec": [
-              "var jsonObject = xml2Json(responseBody);",
-              "",
-              "console.log(jsonObject.response.result.key);",
-              "pm.environment.set(\"key\", jsonObject.response.result.key);"
+          "name": "Generate API key",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "id": "d1324464-0da5-42e8-ac17-5c4edf686178",
+                "exec": [
+                  "var jsonObject = xml2Json(responseBody);",
+                  "",
+                  "console.log(jsonObject.response.result.key);",
+                  "pm.environment.set(\"key\", jsonObject.response.result.key);"
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
+          "_postman_id": "5a6eec54-51a0-9716-fa38-5f894bf3c2ff",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/x-www-form-urlencoded"
+              }
             ],
-            "type": "text/javascript"
-          }
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [],
+              "options": {
+                "urlencoded": {}
+              }
+            },
+            "url": {
+              "raw": "https://{{host}}/api?type=keygen&user=admin&password=PaloAlto123!",
+              "protocol": "https",
+              "host": [
+                "{{host}}"
+              ],
+              "path": [
+                "api"
+              ],
+              "query": [
+                {
+                  "key": "type",
+                  "value": "keygen"
+                },
+                {
+                  "key": "user",
+                  "value": "admin"
+                },
+                {
+                  "key": "password",
+                  "value": "PaloAlto123!"
+                }
+              ]
+            },
+            "description": "Generate API key"
+          },
+          "response": []
         }
       ],
-      "_postman_id": "5a6eec54-51a0-9716-fa38-5f894bf3c2ff",
-      "protocolProfileBehavior": {
-        "disableBodyPruning": true
-      },
-      "request": {
-        "auth": {
-          "type": "noauth"
-        },
-        "method": "POST",
-        "header": [
-          {
-            "key": "Content-Type",
-            "value": "application/x-www-form-urlencoded"
-          }
-        ],
-        "body": {
-          "mode": "urlencoded",
-          "urlencoded": [],
-          "options": {
-            "urlencoded": {}
-          }
-        },
-        "url": {
-          "raw": "https://{{host}}/api?type=keygen&user=admin&password=PaloAlto123!",
-          "protocol": "https",
-          "host": [
-            "{{host}}"
-          ],
-          "path": [
-            "api"
-          ],
-          "query": [
-            {
-              "key": "type",
-              "value": "keygen"
-            },
-            {
-              "key": "user",
-              "value": "admin"
-            },
-            {
-              "key": "password",
-              "value": "PaloAlto123!"
-            }
-          ]
-        },
-        "description": "Generate API key"
-      },
-      "response": []
+      "_postman_id": "8d657926-6a63-40c0-a285-7cb3a670e5c9"
     }
   ],
   "auth": {
