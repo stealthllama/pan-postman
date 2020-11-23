@@ -1800,6 +1800,113 @@
                       ]
                     }
                   },
+                  "response": [
+                    {
+                      "id": "279ed9ac-b0f3-4a3c-b639-897252682fbc",
+                      "name": "Delete a security rule",
+                      "originalRequest": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                          "raw": "https://{{host}}/api/?type=config&action=delete&xpath=/config/devices/entry[@name='localhost.localdomain']/vsys/entry[@name='vsys1']/rulebase/security/rules/entry[@name='IT DNS Services']",
+                          "protocol": "https",
+                          "host": [
+                            "{{host}}"
+                          ],
+                          "path": [
+                            "api",
+                            ""
+                          ],
+                          "query": [
+                            {
+                              "key": "type",
+                              "value": "config"
+                            },
+                            {
+                              "key": "action",
+                              "value": "delete"
+                            },
+                            {
+                              "key": "xpath",
+                              "value": "/config/devices/entry[@name='localhost.localdomain']/vsys/entry[@name='vsys1']/rulebase/security/rules/entry[@name='IT DNS Services']"
+                            }
+                          ]
+                        }
+                      },
+                      "status": "OK",
+                      "code": 200,
+                      "_postman_previewlanguage": "xml",
+                      "header": [
+                        {
+                          "key": "Date",
+                          "value": "Mon, 23 Nov 2020 20:40:28 GMT"
+                        },
+                        {
+                          "key": "Content-Type",
+                          "value": "application/xml; charset=UTF-8"
+                        },
+                        {
+                          "key": "Content-Length",
+                          "value": "76"
+                        },
+                        {
+                          "key": "Connection",
+                          "value": "keep-alive"
+                        },
+                        {
+                          "key": "X-FRAME-OPTIONS",
+                          "value": "SAMEORIGIN"
+                        },
+                        {
+                          "key": "X-XSS-Protection",
+                          "value": "1; mode=block"
+                        },
+                        {
+                          "key": "X-Content-Type-Options",
+                          "value": "nosniff"
+                        },
+                        {
+                          "key": "Content-Security-Policy",
+                          "value": "default-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:;"
+                        },
+                        {
+                          "key": "Strict-Transport-Security",
+                          "value": "max-age=31536000"
+                        },
+                        {
+                          "key": "Cache-Control",
+                          "value": "no-store, no-cache, must-revalidate, post-check=0, pre-check=0"
+                        },
+                        {
+                          "key": "Expires",
+                          "value": "Thu, 19 Nov 1981 08:52:00 GMT"
+                        },
+                        {
+                          "key": "Pragma",
+                          "value": "no-cache"
+                        },
+                        {
+                          "key": "Allow",
+                          "value": "GET, HEAD, POST, PUT, DELETE, OPTIONS"
+                        }
+                      ],
+                      "cookie": [],
+                      "responseTime": null,
+                      "body": "<response status=\"success\" code=\"20\">\n    <msg>command succeeded</msg>\n</response>"
+                    }
+                  ]
+                },
+                {
+                  "name": "Delete an address object",
+                  "_postman_id": "a19946b0-b1d5-40cf-a9c6-f4cab058f2ef",
+                  "protocolProfileBehavior": {
+                    "disableBodyPruning": true
+                  },
+                  "request": {
+                    "method": "GET",
+                    "header": [],
+                    "url": ""
+                  },
                   "response": []
                 }
               ],
@@ -2003,13 +2110,13 @@
   ],
   "variable": [
     {
-      "id": "dc9bd5ab-8d0b-4c7e-8b37-197fa79161c9",
+      "id": "69769f8b-6acd-4fc2-b2d1-bb5f252c31d7",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "65fa411d-de4a-4efe-a30e-d60d03e76172",
+      "id": "0fea95a0-e7c8-44b4-9daa-ce06eaf61edf",
       "key": "{{key}}",
       "value": "",
       "type": "string"
