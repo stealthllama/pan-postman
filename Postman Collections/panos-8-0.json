@@ -9952,7 +9952,7 @@
                       ],
                       "cookie": [],
                       "responseTime": null,
-                      "body": "<response status=\"success\" code=\"19\">\n    <result total-count=\"1\" count=\"1\">\n        <application>\n            <entry id=\"120\" name=\"100bao\" ori_country=\"USA\" ori_language=\"English\">\n                <category>general-internet</category>\n                <subcategory>file-sharing</subcategory>\n                <technology>peer-to-peer</technology>\n                <evasive-behavior>yes</evasive-behavior>\n                <consume-big-bandwidth>yes</consume-big-bandwidth>\n                <used-by-malware>yes</used-by-malware>\n                <able-to-transfer-file>yes</able-to-transfer-file>\n                <has-known-vulnerability>yes</has-known-vulnerability>\n                <tunnel-other-application>no</tunnel-other-application>\n                <prone-to-misuse>yes</prone-to-misuse>\n                <pervasive-use>yes</pervasive-use>\n                <risk>5</risk>\n                <references>\n                    <entry name=\"www.100bao.com\">\n                        <link>http://www.100bao.com/</link>\n                    </entry>\n                </references>\n                <default>\n                    <port>\n                        <member>tcp/3468,6346,11300</member>\n                    </port>\n                </default>\n            </entry>\n            ... example output truncated ...\n        </application>\n    </result>\n</response>"
+                      "body": "<response status=\"success\" code=\"19\">\n    <result total-count=\"1\" count=\"1\">\n        <application>\n            <entry id=\"120\" name=\"100bao\" ori_country=\"USA\" ori_language=\"English\">\n                <category>general-internet</category>\n                <subcategory>file-sharing</subcategory>\n                <technology>peer-to-peer</technology>\n                <evasive-behavior>yes</evasive-behavior>\n                <consume-big-bandwidth>yes</consume-big-bandwidth>\n                <used-by-malware>yes</used-by-malware>\n                <able-to-transfer-file>yes</able-to-transfer-file>\n                <has-known-vulnerability>yes</has-known-vulnerability>\n                <tunnel-other-application>no</tunnel-other-application>\n                <prone-to-misuse>yes</prone-to-misuse>\n                <pervasive-use>yes</pervasive-use>\n                <risk>5</risk>\n                <references>\n                    <entry name=\"www.100bao.com\">\n                        <link>http://www.100bao.com/</link>\n                    </entry>\n                </references>\n                <default>\n                    <port>\n                        <member>tcp/3468,6346,11300</member>\n                    </port>\n                </default>\n            </entry>\n            <entry id=\"1797\" minver=\"3.1.0\" name=\"104apci-supervisory\" ori_country=\"USA\" ori_language=\"English\">\n                <category>business-systems</category>\n                <subcategory>ics-protocols</subcategory>\n                <technology>client-server</technology>\n                <evasive-behavior>no</evasive-behavior>\n                <consume-big-bandwidth>no</consume-big-bandwidth>\n                <used-by-malware>no</used-by-malware>\n                <able-to-transfer-file>no</able-to-transfer-file>\n                <has-known-vulnerability>yes</has-known-vulnerability>\n                <tunnel-other-application>yes</tunnel-other-application>\n                <prone-to-misuse>no</prone-to-misuse>\n                <pervasive-use>yes</pervasive-use>\n                <references>\n                    <entry name=\"Wikipedia\">\n                        <link>http://en.wikipedia.org/wiki/IEC_60870-5</link>\n                    </entry>\n                </references>\n                <default>\n                    <port>\n                        <member>tcp/2404</member>\n                    </port>\n                </default>\n                <use-applications minver=\"3.1.0\">\n                    <member minver=\"3.1.0\">iec-60870-5-104-base</member>\n                </use-applications>\n                <tunnel-applications minver=\"3.1.0\">\n                    <member minver=\"3.1.0\">ctd-dummy</member>\n                </tunnel-applications>\n                <risk>2</risk>\n                <application-container>iec-60870-5-104</application-container>\n            </entry>\n \n            ... example output truncated ...\n        </application>\n    </result>\n</response>"
                     }
                   ]
                 },
@@ -9994,13 +9994,13 @@
                   },
                   "response": [
                     {
-                      "id": "593fa877-4f9c-4f14-ad80-df7cde882838",
-                      "name": "Full list of all applications",
+                      "id": "9ed4c88a-b541-46c2-9df4-3a32d802fb06",
+                      "name": "Specific application details",
                       "originalRequest": {
                         "method": "GET",
                         "header": [],
                         "url": {
-                          "raw": "https://{{host}}/api/?type=config&action=get&xpath=/config/predefined/application",
+                          "raw": "https://{{host}}/api/?type=config&action=get&xpath=/config/predefined/application/entry[@name='hotmail']",
                           "protocol": "https",
                           "host": [
                             "{{host}}"
@@ -10020,7 +10020,7 @@
                             },
                             {
                               "key": "xpath",
-                              "value": "/config/predefined/application",
+                              "value": "/config/predefined/application/entry[@name='hotmail']",
                               "description": "XPath to desired portion of configuration"
                             }
                           ]
@@ -10032,15 +10032,15 @@
                       "header": [
                         {
                           "key": "Date",
-                          "value": "Mon, 23 Nov 2020 19:02:26 GMT"
+                          "value": "Mon, 23 Nov 2020 19:04:30 GMT"
                         },
                         {
                           "key": "Content-Type",
                           "value": "application/xml; charset=UTF-8"
                         },
                         {
-                          "key": "Transfer-Encoding",
-                          "value": "chunked"
+                          "key": "Content-Length",
+                          "value": "1574"
                         },
                         {
                           "key": "Connection",
@@ -10085,7 +10085,7 @@
                       ],
                       "cookie": [],
                       "responseTime": null,
-                      "body": "<response status=\"success\" code=\"19\">\n    <result total-count=\"1\" count=\"1\">\n        <application>\n            <entry id=\"120\" name=\"100bao\" ori_country=\"USA\" ori_language=\"English\">\n                <category>general-internet</category>\n                <subcategory>file-sharing</subcategory>\n                <technology>peer-to-peer</technology>\n                <evasive-behavior>yes</evasive-behavior>\n                <consume-big-bandwidth>yes</consume-big-bandwidth>\n                <used-by-malware>yes</used-by-malware>\n                <able-to-transfer-file>yes</able-to-transfer-file>\n                <has-known-vulnerability>yes</has-known-vulnerability>\n                <tunnel-other-application>no</tunnel-other-application>\n                <prone-to-misuse>yes</prone-to-misuse>\n                <pervasive-use>yes</pervasive-use>\n                <risk>5</risk>\n                <references>\n                    <entry name=\"www.100bao.com\">\n                        <link>http://www.100bao.com/</link>\n                    </entry>\n                </references>\n                <default>\n                    <port>\n                        <member>tcp/3468,6346,11300</member>\n                    </port>\n                </default>\n            </entry>\n            ... example output truncated ...\n        </application>\n    </result>\n</response>"
+                      "body": "<response status=\"success\" code=\"19\">\n    <result total-count=\"1\" count=\"1\">\n        <entry id=\"74\" name=\"hotmail\" ori_country=\"USA\" ori_language=\"English\">\n            <category>collaboration</category>\n            <subcategory>email</subcategory>\n            <technology>browser-based</technology>\n            <virus-ident>yes</virus-ident>\n            <file-type-ident>yes</file-type-ident>\n            <evasive-behavior>no</evasive-behavior>\n            <consume-big-bandwidth>no</consume-big-bandwidth>\n            <used-by-malware>yes</used-by-malware>\n            <able-to-transfer-file>yes</able-to-transfer-file>\n            <has-known-vulnerability>yes</has-known-vulnerability>\n            <tunnel-other-application>no</tunnel-other-application>\n            <prone-to-misuse>no</prone-to-misuse>\n            <pervasive-use>yes</pervasive-use>\n            <data-ident>yes</data-ident>\n            <file-forward>yes</file-forward>\n            <trusted-credential>yes</trusted-credential>\n            <tag minver=\"9.1.0\">\n                <member>[Web App]</member>\n            </tag>\n            <references>\n                <entry name=\"Wikipedia\">\n                    <link>http://en.wikipedia.org/wiki/Hotmail</link>\n                </entry>\n            </references>\n            <default>\n                <port>\n                    <member>tcp/443,995</member>\n                    <member>tcp/80</member>\n                </port>\n            </default>\n            <use-applications>\n                <member minver=\"5.0.0\">office365-consumer-access</member>\n                <member>silverlight</member>\n                <member>ssl</member>\n                <member>web-browsing</member>\n            </use-applications>\n            <tunnel-applications minver=\"3.1.0\">\n                <member minver=\"3.1.0\">sharepoint-online</member>\n            </tunnel-applications>\n            <risk>4</risk>\n        </entry>\n    </result>\n</response>"
                     }
                   ]
                 }
@@ -10114,6 +10114,13 @@
                   }
                 }
               ],
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "Set Configuration",
+              "item": [],
+              "_postman_id": "08f576ba-3dc9-4682-bfff-b8c790bf6f2a",
+              "description": "Use `action=set` to add or create a new object at a specified location in the PAN-OS configuration.  Use the `xpath` parameter to specify the location of the object in the configuration.",
               "_postman_isSubFolder": true
             }
           ],
@@ -10348,13 +10355,13 @@
   ],
   "variable": [
     {
-      "id": "7b49552a-4275-43c2-b115-ea9fd0a87d21",
+      "id": "b3b53568-1ee2-4ca6-ba78-342d50b073ae",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "611fd000-a31a-49ae-b3ea-f6267727649d",
+      "id": "d8bfc469-8bf8-4d7a-bd31-10f12e13ad76",
       "key": "{{key}}",
       "value": "",
       "type": "string"
