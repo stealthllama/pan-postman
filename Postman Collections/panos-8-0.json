@@ -9821,102 +9821,46 @@
                     },
                     "description": "Use `action=show` along with the `xpath` parameter to target a specific portion of the configuration."
                   },
-                  "response": [
-                    {
-                      "id": "6ed888a4-fc09-40cf-a58f-3ae69884a68f",
-                      "name": "Get specific config portion",
-                      "originalRequest": {
-                        "method": "GET",
-                        "header": [],
-                        "url": {
-                          "raw": "https://{{host}}/api/?type=config&action=get&xpath=/config/devices/entry/vsys/entry[@name='vsys1']/address",
-                          "protocol": "https",
-                          "host": [
-                            "{{host}}"
-                          ],
-                          "path": [
-                            "api",
-                            ""
-                          ],
-                          "query": [
-                            {
-                              "key": "type",
-                              "value": "config"
-                            },
-                            {
-                              "key": "action",
-                              "value": "get"
-                            },
-                            {
-                              "key": "xpath",
-                              "value": "/config/devices/entry/vsys/entry[@name='vsys1']/address",
-                              "description": "XPath to desired portion of configuration"
-                            }
-                          ]
-                        }
-                      },
-                      "status": "OK",
-                      "code": 200,
-                      "_postman_previewlanguage": "xml",
-                      "header": [
-                        {
-                          "key": "Date",
-                          "value": "Mon, 23 Nov 2020 18:52:34 GMT"
-                        },
-                        {
-                          "key": "Content-Type",
-                          "value": "application/xml; charset=UTF-8"
-                        },
-                        {
-                          "key": "Content-Length",
-                          "value": "403"
-                        },
-                        {
-                          "key": "Connection",
-                          "value": "keep-alive"
-                        },
-                        {
-                          "key": "X-FRAME-OPTIONS",
-                          "value": "SAMEORIGIN"
-                        },
-                        {
-                          "key": "X-XSS-Protection",
-                          "value": "1; mode=block"
-                        },
-                        {
-                          "key": "X-Content-Type-Options",
-                          "value": "nosniff"
-                        },
-                        {
-                          "key": "Content-Security-Policy",
-                          "value": "default-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:;"
-                        },
-                        {
-                          "key": "Strict-Transport-Security",
-                          "value": "max-age=31536000"
-                        },
-                        {
-                          "key": "Cache-Control",
-                          "value": "no-store, no-cache, must-revalidate, post-check=0, pre-check=0"
-                        },
-                        {
-                          "key": "Expires",
-                          "value": "Thu, 19 Nov 1981 08:52:00 GMT"
-                        },
-                        {
-                          "key": "Pragma",
-                          "value": "no-cache"
-                        },
-                        {
-                          "key": "Allow",
-                          "value": "GET, HEAD, POST, PUT, DELETE, OPTIONS"
-                        }
+                  "response": []
+                },
+                {
+                  "name": "Address objects in a virtual system Copy",
+                  "_postman_id": "88205a38-257e-4b46-b4ca-1a144dd6e9c5",
+                  "protocolProfileBehavior": {
+                    "disableBodyPruning": true
+                  },
+                  "request": {
+                    "method": "GET",
+                    "header": [],
+                    "url": {
+                      "raw": "https://{{host}}/api/?type=config&action=get&xpath=/config/devices/entry/vsys/entry[@name='vsys1']/address",
+                      "protocol": "https",
+                      "host": [
+                        "{{host}}"
                       ],
-                      "cookie": [],
-                      "responseTime": null,
-                      "body": "<response status=\"success\" code=\"19\">\n    <result total-count=\"1\" count=\"1\">\n        <address admin=\"admin\" dirtyId=\"5\" time=\"2020/11/23 10:51:44\">\n            <entry name=\"Data-Center-192.168.1.0-24\" admin=\"admin\" dirtyId=\"5\" time=\"2020/11/23 10:51:44\" oldname=\"Data-Center\">\n                <ip-netmask admin=\"admin\" dirtyId=\"5\" time=\"2020/11/23 10:51:44\">192.168.1.0/24</ip-netmask>\n            </entry>\n        </address>\n    </result>\n</response>"
-                    }
-                  ]
+                      "path": [
+                        "api",
+                        ""
+                      ],
+                      "query": [
+                        {
+                          "key": "type",
+                          "value": "config"
+                        },
+                        {
+                          "key": "action",
+                          "value": "get"
+                        },
+                        {
+                          "key": "xpath",
+                          "value": "/config/devices/entry/vsys/entry[@name='vsys1']/address",
+                          "description": "XPath to desired portion of configuration"
+                        }
+                      ]
+                    },
+                    "description": "Use `action=show` along with the `xpath` parameter to target a specific portion of the configuration."
+                  },
+                  "response": []
                 }
               ],
               "_postman_id": "e1a19059-70a0-46bf-9978-7ee00b5557cc",
@@ -10177,13 +10121,13 @@
   ],
   "variable": [
     {
-      "id": "251ab58b-8af3-40a6-a2aa-132177d0b59f",
+      "id": "41a37fd0-e7be-45e1-8caf-3a05818a560b",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "f262ccf0-9995-4dd9-a8d4-7195c2994848",
+      "id": "f3821684-e46f-4e37-b88d-3d7f4ac88197",
       "key": "{{key}}",
       "value": "",
       "type": "string"
