@@ -1323,7 +1323,7 @@
                         }
                       ]
                     },
-                    "description": "Conversely, use `<disabled>no</disabled>` to enable a rule."
+                    "description": "Disables the rule `IT DNS Services`.\n\nConversely, use `<disabled>no</disabled>` to enable a rule that has been disabled."
                   },
                   "response": [
                     {
@@ -2498,13 +2498,13 @@
   ],
   "variable": [
     {
-      "id": "4c97723d-0f68-4175-a2bd-72820bb95fe2",
+      "id": "3970968a-7d03-438a-b112-a4d7728da5c2",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "c4d52234-0188-46a2-9664-7ea07a847629",
+      "id": "e0029d15-ac9a-4d9d-a623-3ef9195b5e3a",
       "key": "{{key}}",
       "value": "",
       "type": "string"
