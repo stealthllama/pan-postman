@@ -902,7 +902,8 @@
                           "value": "<profile-setting><group><member>Best-Practice</member></group></profile-setting><to><member>untrust</member></to><from><member>trust</member></from><source><member>any</member></source><destination><member>any</member></destination><source-user><member>any</member></source-user><category><member>any</member></category><application><member>any</member></application><service><member>application-default</member></service><source-hip><member>any</member></source-hip><destination-hip><member>any</member></destination-hip><action>allow</action><log-setting>default</log-setting><description>Standard outbound access</description>"
                         }
                       ]
-                    }
+                    },
+                    "description": "Creates a new security rule named `IT DNS Services`."
                   },
                   "response": [
                     {
@@ -2496,13 +2497,13 @@
   ],
   "variable": [
     {
-      "id": "7bf40aef-2d06-405e-8b92-877d9d64e576",
+      "id": "94cc6224-6aec-4101-9175-fe54da1121ca",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "58260e99-12f6-4583-918a-40e59c9dfba3",
+      "id": "369686c3-44bb-45cc-be0b-9b68ebd05de3",
       "key": "{{key}}",
       "value": "",
       "type": "string"
