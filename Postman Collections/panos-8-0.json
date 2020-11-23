@@ -1761,6 +1761,13 @@
                 }
               ],
               "_postman_isSubFolder": true
+            },
+            {
+              "name": "Delete Configuration",
+              "item": [],
+              "_postman_id": "5fe6ff03-ba59-4d3d-abca-6dc3508e5faf",
+              "description": "Use `action=delete` to delete an object at a specified location in the configuration.\n\nUse the `xpath` parameter to specify the location of the object to be deleted.",
+              "_postman_isSubFolder": true
             }
           ],
           "_postman_id": "a69adbc2-0b8b-47f1-ab6f-118ce8aa1a63",
@@ -1958,13 +1965,13 @@
   ],
   "variable": [
     {
-      "id": "67703ef8-957c-4973-83d4-db3e522f7f35",
+      "id": "cea04d9d-b339-4891-808f-6dd0ca2907b7",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "aa133209-f244-4b78-bbec-9431e5f8ac9f",
+      "id": "1b4bf533-8f52-4385-ac36-9754cce71876",
       "key": "{{key}}",
       "value": "",
       "type": "string"
