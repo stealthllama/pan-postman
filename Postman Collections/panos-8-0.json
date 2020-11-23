@@ -1427,6 +1427,13 @@
               "_postman_id": "08f576ba-3dc9-4682-bfff-b8c790bf6f2a",
               "description": "Use `action=set` to add or create a new object at a specified location in the PAN-OS configuration.  Use the `xpath` parameter to specify the location of the object in the configuration.",
               "_postman_isSubFolder": true
+            },
+            {
+              "name": "Edit Configuration",
+              "item": [],
+              "_postman_id": "682ec138-dc50-4e02-a6bf-34350ca45dae",
+              "description": "Use `action=edit` to replace an existing object hierarchy at a specified location in the configuration with a new value.\n\nUse the `xpath` parameter to specify the location of the object, including the node to be replaced.  Use the `element` parameter to specify a new value for the object using its XML object hierarchy.",
+              "_postman_isSubFolder": true
             }
           ],
           "_postman_id": "a69adbc2-0b8b-47f1-ab6f-118ce8aa1a63",
@@ -1660,13 +1667,13 @@
   ],
   "variable": [
     {
-      "id": "22197f1c-89b0-4c2e-b83f-366c70ff6045",
+      "id": "81148fdd-3e96-4a5a-8401-50c05a423b82",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "ad19f832-5629-4731-a751-b188f086656c",
+      "id": "5beaa8f7-992e-479b-885b-4699ff47f15c",
       "key": "{{key}}",
       "value": "",
       "type": "string"
