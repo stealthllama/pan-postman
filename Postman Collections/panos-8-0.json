@@ -1930,7 +1930,7 @@
                         }
                       ]
                     },
-                    "description": "To delete a single member object in a group, use a text match for the object's name in the `member` entries like this: `member[text()='Object-To-Delete']`."
+                    "description": "Deletes the `Data-Center-192.168.2.0-24` object from the `Data-Center` address group.\n\nTo delete a single member object in a group, use a text match for the object's name in the `member` entries like this: `member[text()='Object-To-Delete']`."
                   },
                   "response": []
                 }
@@ -2496,13 +2496,13 @@
   ],
   "variable": [
     {
-      "id": "8e612f40-c562-41ec-81ac-1ea61c7caeb0",
+      "id": "e3570e56-e792-4114-b984-72bf9ff93523",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "a49c9f57-9a66-49f7-bef0-8be57fc01538",
+      "id": "97f79dd8-ca5c-4706-a32c-cbcb7580505a",
       "key": "{{key}}",
       "value": "",
       "type": "string"
