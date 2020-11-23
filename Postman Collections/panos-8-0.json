@@ -9650,7 +9650,8 @@
                         },
                         {
                           "key": "xpath",
-                          "value": "/config/devices/entry/vsys/entry/rulebase/security"
+                          "value": "/config/devices/entry/vsys/entry/rulebase/security",
+                          "description": "XPath to desired portion of configuration"
                         }
                       ]
                     },
@@ -9894,13 +9895,13 @@
   ],
   "variable": [
     {
-      "id": "9e2b4a2f-7858-47cd-af6c-64be6b403bb8",
+      "id": "eb15eb31-6215-4ea6-b2fc-90e5b2ac18a0",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "9c65f079-be79-401c-bf15-7e4798e4485c",
+      "id": "abb23885-e557-4508-b4a4-ce3467c6ad3c",
       "key": "{{key}}",
       "value": "",
       "type": "string"
