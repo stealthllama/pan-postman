@@ -9532,7 +9532,14 @@
     },
     {
       "name": "Request Types",
-      "item": [],
+      "item": [
+        {
+          "name": "Configuration",
+          "item": [],
+          "_postman_id": "a69adbc2-0b8b-47f1-ab6f-118ce8aa1a63",
+          "_postman_isSubFolder": true
+        }
+      ],
       "_postman_id": "3178f469-44ee-4373-82b4-9d5bdd5d59b8"
     }
   ],
@@ -9567,13 +9574,13 @@
   ],
   "variable": [
     {
-      "id": "9198cc56-d43f-42b2-8747-2b6de9cda79d",
+      "id": "0ddd28b5-1967-4748-9ed6-aee6f832d2ad",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "9b3bb889-662b-4078-91cc-0aa71f58c2a9",
+      "id": "1caaa6ba-1ff3-4ac9-a004-dabbfb0bc5b0",
       "key": "{{key}}",
       "value": "",
       "type": "string"
