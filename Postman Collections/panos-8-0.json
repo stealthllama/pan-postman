@@ -9657,7 +9657,102 @@
                     },
                     "description": "Use `action=show` along with the `xpath` parameter to target a specific portion of the configuration."
                   },
-                  "response": []
+                  "response": [
+                    {
+                      "id": "8134bab6-4a58-4414-bdd5-02e7237a81df",
+                      "name": "Get specific config portion",
+                      "originalRequest": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                          "raw": "https://{{host}}/api/?type=config&action=show&xpath=/config/devices/entry/vsys/entry/rulebase/security",
+                          "protocol": "https",
+                          "host": [
+                            "{{host}}"
+                          ],
+                          "path": [
+                            "api",
+                            ""
+                          ],
+                          "query": [
+                            {
+                              "key": "type",
+                              "value": "config"
+                            },
+                            {
+                              "key": "action",
+                              "value": "show"
+                            },
+                            {
+                              "key": "xpath",
+                              "value": "/config/devices/entry/vsys/entry/rulebase/security",
+                              "description": "XPath to desired portion of configuration"
+                            }
+                          ]
+                        }
+                      },
+                      "status": "OK",
+                      "code": 200,
+                      "_postman_previewlanguage": "xml",
+                      "header": [
+                        {
+                          "key": "Date",
+                          "value": "Mon, 23 Nov 2020 18:42:59 GMT"
+                        },
+                        {
+                          "key": "Content-Type",
+                          "value": "application/xml; charset=UTF-8"
+                        },
+                        {
+                          "key": "Content-Length",
+                          "value": "1132"
+                        },
+                        {
+                          "key": "Connection",
+                          "value": "keep-alive"
+                        },
+                        {
+                          "key": "X-FRAME-OPTIONS",
+                          "value": "SAMEORIGIN"
+                        },
+                        {
+                          "key": "X-XSS-Protection",
+                          "value": "1; mode=block"
+                        },
+                        {
+                          "key": "X-Content-Type-Options",
+                          "value": "nosniff"
+                        },
+                        {
+                          "key": "Content-Security-Policy",
+                          "value": "default-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:;"
+                        },
+                        {
+                          "key": "Strict-Transport-Security",
+                          "value": "max-age=31536000"
+                        },
+                        {
+                          "key": "Cache-Control",
+                          "value": "no-store, no-cache, must-revalidate, post-check=0, pre-check=0"
+                        },
+                        {
+                          "key": "Expires",
+                          "value": "Thu, 19 Nov 1981 08:52:00 GMT"
+                        },
+                        {
+                          "key": "Pragma",
+                          "value": "no-cache"
+                        },
+                        {
+                          "key": "Allow",
+                          "value": "GET, HEAD, POST, PUT, DELETE, OPTIONS"
+                        }
+                      ],
+                      "cookie": [],
+                      "responseTime": null,
+                      "body": "<response status=\"success\">\n    <result>\n        <security>\n            <rules>\n                <entry name=\"IT DNS Services\" uuid=\"3e888b2c-7325-4778-ba20-4b0c90f92980\">\n                    <to>\n                        <member>trust</member>\n                    </to>\n                    <from>\n                        <member>untrust</member>\n                    </from>\n                    <source>\n                        <member>any</member>\n                    </source>\n                    <destination>\n                        <member>Data-Center</member>\n                    </destination>\n                    <source-user>\n                        <member>any</member>\n                    </source-user>\n                    <category>\n                        <member>any</member>\n                    </category>\n                    <application>\n                        <member>dns</member>\n                    </application>\n                    <service>\n                        <member>application-default</member>\n                    </service>\n                    <source-hip>\n                        <member>any</member>\n                    </source-hip>\n                    <destination-hip>\n                        <member>any</member>\n                    </destination-hip>\n                    <action>allow</action>\n                    <log-setting>default</log-setting>\n                    <profile-setting>\n                        <group>\n                            <member>Best-Practice</member>\n                        </group>\n                    </profile-setting>\n                    <description>Inbound DNS requests to data center</description>\n                </entry>\n            </rules>\n        </security>\n    </result>\n</response>"
+                    }
+                  ]
                 }
               ],
               "_postman_id": "29dad679-3de2-4bfd-9270-8fc27f899523",
@@ -9684,6 +9779,12 @@
                   }
                 }
               ],
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "Get Candidate Configuration",
+              "item": [],
+              "_postman_id": "e1a19059-70a0-46bf-9978-7ee00b5557cc",
               "_postman_isSubFolder": true
             }
           ],
@@ -9918,13 +10019,13 @@
   ],
   "variable": [
     {
-      "id": "e17b53ff-1e0b-4daf-89a0-cf7ce1de1482",
+      "id": "18fa66c7-fd50-46aa-9f91-939dbdb1660a",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "e4a4a033-b85f-478f-8e89-9766e87079e4",
+      "id": "337dd8df-169d-44c9-bb2d-a25dee018b6e",
       "key": "{{key}}",
       "value": "",
       "type": "string"
