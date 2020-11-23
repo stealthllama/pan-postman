@@ -9538,6 +9538,12 @@
           "item": [],
           "_postman_id": "a69adbc2-0b8b-47f1-ab6f-118ce8aa1a63",
           "_postman_isSubFolder": true
+        },
+        {
+          "name": "Commit Configuration",
+          "item": [],
+          "_postman_id": "719e63d6-8695-4a35-b581-71455042b713",
+          "_postman_isSubFolder": true
         }
       ],
       "_postman_id": "3178f469-44ee-4373-82b4-9d5bdd5d59b8"
@@ -9574,13 +9580,13 @@
   ],
   "variable": [
     {
-      "id": "f03861b0-ad31-430d-9f3a-a58774b6bdf7",
+      "id": "c2dc94eb-a36c-451b-a21a-0121a46ca9ff",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "cf341db8-88cd-4a2c-8624-9edf45fe6f43",
+      "id": "1ffb8db5-6c73-47f7-bb6d-b14d256b52b8",
       "key": "{{key}}",
       "value": "",
       "type": "string"
