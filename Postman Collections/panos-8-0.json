@@ -9629,7 +9629,8 @@
                   "request": {
                     "method": "GET",
                     "header": [],
-                    "url": ""
+                    "url": "",
+                    "description": "Use `action=show` along with the `xpath` parameter to target a specific portion of the configuration."
                   },
                   "response": []
                 }
@@ -9869,13 +9870,13 @@
   ],
   "variable": [
     {
-      "id": "a2489c80-f651-4932-9e1a-772034b8154d",
+      "id": "fd5ad864-14c2-4f41-81a3-b93ca324115c",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "3a6b16f6-e1fe-4055-942d-c8afb1e22686",
+      "id": "c70ae4cd-9b07-41f2-8173-4cd4f0699cde",
       "key": "{{key}}",
       "value": "",
       "type": "string"
