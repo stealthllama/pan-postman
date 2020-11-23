@@ -10385,6 +10385,19 @@
                       "body": "<response status=\"success\" code=\"20\">\n    <msg>command succeeded</msg>\n</response>"
                     }
                   ]
+                },
+                {
+                  "name": "Add an additional member to an address group or list",
+                  "_postman_id": "c9b3b919-9c4f-4bb2-adb2-2b45a4939fe5",
+                  "protocolProfileBehavior": {
+                    "disableBodyPruning": true
+                  },
+                  "request": {
+                    "method": "GET",
+                    "header": [],
+                    "url": ""
+                  },
+                  "response": []
                 }
               ],
               "_postman_id": "08f576ba-3dc9-4682-bfff-b8c790bf6f2a",
@@ -10623,13 +10636,13 @@
   ],
   "variable": [
     {
-      "id": "3143a8a3-f632-476c-9da6-df7b78e0a7b3",
+      "id": "ab3bd0b2-e21a-412c-b7e4-86eef4c28489",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "9bae93ee-3cd0-4126-9f89-c106bc9e44b0",
+      "id": "a5882acf-99b1-4d25-bd69-24499f1b539a",
       "key": "{{key}}",
       "value": "",
       "type": "string"
