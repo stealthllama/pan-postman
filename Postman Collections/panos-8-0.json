@@ -10395,7 +10395,36 @@
                   "request": {
                     "method": "GET",
                     "header": [],
-                    "url": ""
+                    "url": {
+                      "raw": "https://{{host}}/api/?type=config&action=set&xpath=/config/devices/entry[@name='localhost.localdomain']/vsys/entry[@name='vsys1'/address-group/entry[@name='Data-Center']&element=<static><member>Data-Center-192.168.2.0-24</member></static>",
+                      "protocol": "https",
+                      "host": [
+                        "{{host}}"
+                      ],
+                      "path": [
+                        "api",
+                        ""
+                      ],
+                      "query": [
+                        {
+                          "key": "type",
+                          "value": "config"
+                        },
+                        {
+                          "key": "action",
+                          "value": "set"
+                        },
+                        {
+                          "key": "xpath",
+                          "value": "/config/devices/entry[@name='localhost.localdomain']/vsys/entry[@name='vsys1'/address-group/entry[@name='Data-Center']"
+                        },
+                        {
+                          "key": "element",
+                          "value": "<static><member>Data-Center-192.168.2.0-24</member></static>",
+                          "type": "text"
+                        }
+                      ]
+                    }
                   },
                   "response": []
                 }
@@ -10636,13 +10665,13 @@
   ],
   "variable": [
     {
-      "id": "ab3bd0b2-e21a-412c-b7e4-86eef4c28489",
+      "id": "3fc47b4b-390d-4b90-9afc-49e19bea14bf",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "a5882acf-99b1-4d25-bd69-24499f1b539a",
+      "id": "9f4badb8-066f-43d9-9a99-c52ed9f8ac7f",
       "key": "{{key}}",
       "value": "",
       "type": "string"
