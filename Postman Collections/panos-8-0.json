@@ -10177,13 +10177,13 @@
   ],
   "variable": [
     {
-      "id": "e63378ca-85f3-42cb-955a-3191af83dfc8",
+      "id": "8d7a4d24-accf-4dfc-bdfc-61f2f90b11b3",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "d00f2b95-1a38-4575-b2f6-29f88ec57e69",
+      "id": "18c29214-bec5-4f0f-a16e-3a9c36ba028f",
       "key": "{{key}}",
       "value": "",
       "type": "string"
