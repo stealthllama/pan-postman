@@ -9574,6 +9574,12 @@
           "item": [],
           "_postman_id": "19e6e923-b08d-4980-81d1-05aaeccc99c9",
           "_postman_isSubFolder": true
+        },
+        {
+          "name": "Get Version Info",
+          "item": [],
+          "_postman_id": "2b35b2a1-42c2-4d84-833d-e9fc5e0efa98",
+          "_postman_isSubFolder": true
         }
       ],
       "_postman_id": "3178f469-44ee-4373-82b4-9d5bdd5d59b8"
@@ -9610,13 +9616,13 @@
   ],
   "variable": [
     {
-      "id": "e3291356-7c20-4fd6-a2ad-ea2bdf5861bc",
+      "id": "002e7b34-2875-4e71-984c-dbce151b080d",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "7255caf3-1dbe-49f6-ab1e-01a04308c198",
+      "id": "03437c6d-b7b7-48e1-be0e-26747f0298e1",
       "key": "{{key}}",
       "value": "",
       "type": "string"
