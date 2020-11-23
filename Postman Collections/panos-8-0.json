@@ -2,7 +2,7 @@
   "info": {
     "_postman_id": "241ff148-5458-dde5-cbaa-a80527e7dc55",
     "name": "PAN-OS XML API",
-    "description": "XML API request collection for PAN-OS\n\nhttps://docs.paloaltonetworks.com/pan-os/10-0/pan-os-panorama-api.html",
+    "description": "XML API request collection for PAN-OS\n\nhttps://docs.paloaltonetworks.com/pan-os/10-0/pan-os-panorama-api.html\n\n# Authentication\n\nTo use the API, you must generate the API key required for authenticating API calls.\n\nThen, when you use this API key in your request, you can either provide the URL encoded API key in the request URL, or use the custom **X-PAN-KEY: <key>** parameter to add the key as a name-value pair in the HTTP header.",
     "schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
   },
   "item": [
