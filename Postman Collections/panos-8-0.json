@@ -9778,6 +9778,43 @@
               "name": "Get Candidate Configuration",
               "item": [
                 {
+                  "name": "Firewall candidate configuration",
+                  "_postman_id": "4f4a1346-c79a-4d7b-b37d-01f81ac7e20f",
+                  "protocolProfileBehavior": {
+                    "disableBodyPruning": true
+                  },
+                  "request": {
+                    "method": "GET",
+                    "header": [],
+                    "url": {
+                      "raw": "https://{{host}}/api/?type=config&action=get&xpath=/config/devices/entry/vsys/entry[@name='vsys1']",
+                      "protocol": "https",
+                      "host": [
+                        "{{host}}"
+                      ],
+                      "path": [
+                        "api",
+                        ""
+                      ],
+                      "query": [
+                        {
+                          "key": "type",
+                          "value": "config"
+                        },
+                        {
+                          "key": "action",
+                          "value": "get"
+                        },
+                        {
+                          "key": "xpath",
+                          "value": "/config/devices/entry/vsys/entry[@name='vsys1']"
+                        }
+                      ]
+                    }
+                  },
+                  "response": []
+                },
+                {
                   "name": "Address objects in a virtual system",
                   "_postman_id": "b2179207-9fd2-4dd7-96a6-41613f0e8451",
                   "protocolProfileBehavior": {
@@ -10081,19 +10118,6 @@
                       "body": "<response status=\"success\" code=\"19\">\n    <result total-count=\"1\" count=\"1\">\n        <entry id=\"74\" name=\"hotmail\" ori_country=\"USA\" ori_language=\"English\">\n            <category>collaboration</category>\n            <subcategory>email</subcategory>\n            <technology>browser-based</technology>\n            <virus-ident>yes</virus-ident>\n            <file-type-ident>yes</file-type-ident>\n            <evasive-behavior>no</evasive-behavior>\n            <consume-big-bandwidth>no</consume-big-bandwidth>\n            <used-by-malware>yes</used-by-malware>\n            <able-to-transfer-file>yes</able-to-transfer-file>\n            <has-known-vulnerability>yes</has-known-vulnerability>\n            <tunnel-other-application>no</tunnel-other-application>\n            <prone-to-misuse>no</prone-to-misuse>\n            <pervasive-use>yes</pervasive-use>\n            <data-ident>yes</data-ident>\n            <file-forward>yes</file-forward>\n            <trusted-credential>yes</trusted-credential>\n            <tag minver=\"9.1.0\">\n                <member>[Web App]</member>\n            </tag>\n            <references>\n                <entry name=\"Wikipedia\">\n                    <link>http://en.wikipedia.org/wiki/Hotmail</link>\n                </entry>\n            </references>\n            <default>\n                <port>\n                    <member>tcp/443,995</member>\n                    <member>tcp/80</member>\n                </port>\n            </default>\n            <use-applications>\n                <member minver=\"5.0.0\">office365-consumer-access</member>\n                <member>silverlight</member>\n                <member>ssl</member>\n                <member>web-browsing</member>\n            </use-applications>\n            <tunnel-applications minver=\"3.1.0\">\n                <member minver=\"3.1.0\">sharepoint-online</member>\n            </tunnel-applications>\n            <risk>4</risk>\n        </entry>\n    </result>\n</response>"
                     }
                   ]
-                },
-                {
-                  "name": "Firewall candidate configuration",
-                  "_postman_id": "4f4a1346-c79a-4d7b-b37d-01f81ac7e20f",
-                  "protocolProfileBehavior": {
-                    "disableBodyPruning": true
-                  },
-                  "request": {
-                    "method": "GET",
-                    "header": [],
-                    "url": ""
-                  },
-                  "response": []
                 }
               ],
               "_postman_id": "e1a19059-70a0-46bf-9978-7ee00b5557cc",
@@ -10375,13 +10399,13 @@
   ],
   "variable": [
     {
-      "id": "954e1655-50d6-4c51-a400-fdfaa88d9d37",
+      "id": "34851f65-1152-4737-b1d9-66fd6c0f2208",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "b8f2b1da-9e78-46b0-bb0b-527d74d4d7a2",
+      "id": "5635e973-4d2d-4a64-a4a6-f56e960ff120",
       "key": "{{key}}",
       "value": "",
       "type": "string"
