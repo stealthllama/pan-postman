@@ -9497,7 +9497,7 @@
               "name": "Get Active Configuration",
               "item": [
                 {
-                  "name": "Get Full Configuration",
+                  "name": "Get full configuration",
                   "_postman_id": "8cbb53c9-7ece-4935-9517-e234c972c1ed",
                   "protocolProfileBehavior": {
                     "disableBodyPruning": true
@@ -9525,7 +9525,8 @@
                           "value": "show"
                         }
                       ]
-                    }
+                    },
+                    "description": "Use `action=show` with no additional parameters to retrieve the entire active configuration."
                   },
                   "response": [
                     {
@@ -9615,9 +9616,22 @@
                       ],
                       "cookie": [],
                       "responseTime": null,
-                      "body": "<response status=\"success\">\n    <result>\n        <config version=\"10.0.0\" urldb=\"paloaltonetworks\">\n            ...\n        </config>\n    </result>\n</response>"
+                      "body": "<response status=\"success\">\n    <result>\n        <config version=\"10.0.0\" urldb=\"paloaltonetworks\">\n            ... example output truncated ...\n        </config>\n    </result>\n</response>"
                     }
                   ]
+                },
+                {
+                  "name": "Get specific config portion",
+                  "_postman_id": "a0974735-f305-4c91-99ee-f12b2aef35b5",
+                  "protocolProfileBehavior": {
+                    "disableBodyPruning": true
+                  },
+                  "request": {
+                    "method": "GET",
+                    "header": [],
+                    "url": ""
+                  },
+                  "response": []
                 }
               ],
               "_postman_id": "29dad679-3de2-4bfd-9270-8fc27f899523",
@@ -9795,7 +9809,7 @@
             }
           ],
           "_postman_id": "2b35b2a1-42c2-4d84-833d-e9fc5e0efa98",
-          "description": "Use this request to show:\n\n- PAN-OS version\n- Serial number\n- Model number",
+          "description": "Use this request to show:\n\n- PAN-OS version\n- Serial number\n- Model number\n- Multi-vsys capability",
           "event": [
             {
               "listen": "prerequest",
@@ -9855,13 +9869,13 @@
   ],
   "variable": [
     {
-      "id": "8a82de1d-e2fb-4fc3-a316-d76a4fa33c1a",
+      "id": "a2489c80-f651-4932-9e1a-772034b8154d",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "9657d1f3-20b0-46dd-8e56-259261731470",
+      "id": "3a6b16f6-e1fe-4055-942d-c8afb1e22686",
       "key": "{{key}}",
       "value": "",
       "type": "string"
