@@ -1633,7 +1633,7 @@
                         }
                       ]
                     },
-                    "description": "Replace all members in a node by specifying the object's name in both the xpath and element parameters."
+                    "description": "The entire contents of an object can be replaced as well, but the name must be specified in both the `xpath` and the `element`."
                   },
                   "response": [
                     {
@@ -1958,13 +1958,13 @@
   ],
   "variable": [
     {
-      "id": "faf60170-5be1-4f63-8b13-22fc10f4e687",
+      "id": "67703ef8-957c-4973-83d4-db3e522f7f35",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "88eef224-8390-4eba-8e74-65dccd554aa6",
+      "id": "aa133209-f244-4b78-bbec-9431e5f8ac9f",
       "key": "{{key}}",
       "value": "",
       "type": "string"
