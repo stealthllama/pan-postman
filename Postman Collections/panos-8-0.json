@@ -9794,7 +9794,7 @@
                     "method": "GET",
                     "header": [],
                     "url": {
-                      "raw": "https://{{host}}/api/?type=config&action=get&xpath=/config/devices/entry/vsys/entry/rulebase/security",
+                      "raw": "https://{{host}}/api/?type=config&action=get&xpath=/config/devices/entry/vsys/entry[@name='vsys1']/address",
                       "protocol": "https",
                       "host": [
                         "{{host}}"
@@ -9814,7 +9814,7 @@
                         },
                         {
                           "key": "xpath",
-                          "value": "/config/devices/entry/vsys/entry/rulebase/security",
+                          "value": "/config/devices/entry/vsys/entry[@name='vsys1']/address",
                           "description": "XPath to desired portion of configuration"
                         }
                       ]
@@ -10177,13 +10177,13 @@
   ],
   "variable": [
     {
-      "id": "8d7a4d24-accf-4dfc-bdfc-61f2f90b11b3",
+      "id": "cb9a40ab-3504-4850-981b-e3a88839dc9b",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "18c29214-bec5-4f0f-a16e-3a9c36ba028f",
+      "id": "bfc10d47-e1ba-4456-9476-4eb81ab28001",
       "key": "{{key}}",
       "value": "",
       "type": "string"
