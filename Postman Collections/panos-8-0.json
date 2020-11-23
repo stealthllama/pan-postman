@@ -9494,7 +9494,7 @@
           "name": "Configuration",
           "item": [
             {
-              "name": "Get Active Configuration",
+              "name": "Get Running Configuration",
               "item": [
                 {
                   "name": "Get full configuration",
@@ -9661,6 +9661,28 @@
                 }
               ],
               "_postman_id": "29dad679-3de2-4bfd-9270-8fc27f899523",
+              "event": [
+                {
+                  "listen": "prerequest",
+                  "script": {
+                    "id": "4f9eff2b-088a-47e6-8837-2603bd3e0a6b",
+                    "type": "text/javascript",
+                    "exec": [
+                      ""
+                    ]
+                  }
+                },
+                {
+                  "listen": "test",
+                  "script": {
+                    "id": "c09d21f0-d740-40df-89bf-a9b2a07bd8cf",
+                    "type": "text/javascript",
+                    "exec": [
+                      ""
+                    ]
+                  }
+                }
+              ],
               "_postman_isSubFolder": true
             }
           ],
@@ -9895,13 +9917,13 @@
   ],
   "variable": [
     {
-      "id": "eb15eb31-6215-4ea6-b2fc-90e5b2ac18a0",
+      "id": "1c13cca8-6e10-44c7-bdca-b54ab6244c8d",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "abb23885-e557-4508-b4a4-ce3467c6ad3c",
+      "id": "8964b20f-f875-4aa9-a088-d3a31e019b1e",
       "key": "{{key}}",
       "value": "",
       "type": "string"
