@@ -2130,7 +2130,8 @@
                           "value": "New-Address"
                         }
                       ]
-                    }
+                    },
+                    "description": "Clones the address object `Old-Address` to `New-Address`."
                   },
                   "response": [
                     {
@@ -2493,13 +2494,13 @@
   ],
   "variable": [
     {
-      "id": "0a101365-3f89-4822-a7e8-5213a7eac20e",
+      "id": "e342a7d2-353b-4f7e-bb28-fb8821ec5632",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "caaeba94-03ca-4c8e-9d9c-c57508ddb3b4",
+      "id": "a6029a4b-33eb-4e77-bef4-17762ff4bfa7",
       "key": "{{key}}",
       "value": "",
       "type": "string"
