@@ -1603,7 +1603,35 @@
                   "request": {
                     "method": "GET",
                     "header": [],
-                    "url": ""
+                    "url": {
+                      "raw": "https://{{host}}/api/?type=config&action=edit&xpath=/config/devices/entry[@name='localhost.localdomain']/vsys/entry[@name='vsys1']/address-group/entry[@name='Data-Center']&element=<static><member>Data-Center-192.168.1.0-24</member></static>",
+                      "protocol": "https",
+                      "host": [
+                        "{{host}}"
+                      ],
+                      "path": [
+                        "api",
+                        ""
+                      ],
+                      "query": [
+                        {
+                          "key": "type",
+                          "value": "config"
+                        },
+                        {
+                          "key": "action",
+                          "value": "edit"
+                        },
+                        {
+                          "key": "xpath",
+                          "value": "/config/devices/entry[@name='localhost.localdomain']/vsys/entry[@name='vsys1']/address-group/entry[@name='Data-Center']"
+                        },
+                        {
+                          "key": "element",
+                          "value": "<static><member>Data-Center-192.168.1.0-24</member></static>"
+                        }
+                      ]
+                    }
                   },
                   "response": []
                 }
@@ -1830,13 +1858,13 @@
   ],
   "variable": [
     {
-      "id": "0041df2f-aebe-40bf-8d31-2aadc47ebe41",
+      "id": "ba90b45c-a268-4c58-8eae-8386b9355486",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "ff677557-5088-4eb0-9548-df269245793a",
+      "id": "e6769532-5d0f-4b13-91e0-92df6e0d9e44",
       "key": "{{key}}",
       "value": "",
       "type": "string"
