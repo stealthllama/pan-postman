@@ -2080,7 +2080,15 @@
                       "body": "<response status=\"success\" code=\"20\">\n    <msg>command succeeded</msg>\n</response>"
                     }
                   ]
-                },
+                }
+              ],
+              "_postman_id": "68ca3234-062c-4fe3-b54a-b1cec4573c4c",
+              "description": "Use `action=rename` to rename an object at a specified location in the configuration.\n\nUse the `xpath` parameter to specify the location of the object to be renamed.\nUse the `newname` parameter to provide a new name for the object.",
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "Clone Configuration",
+              "item": [
                 {
                   "name": "Rename an address object Copy",
                   "_postman_id": "3b86fc7f-f54e-4640-81a8-6cbb978cf988",
@@ -2222,13 +2230,6 @@
                   ]
                 }
               ],
-              "_postman_id": "68ca3234-062c-4fe3-b54a-b1cec4573c4c",
-              "description": "Use `action=rename` to rename an object at a specified location in the configuration.\n\nUse the `xpath` parameter to specify the location of the object to be renamed.\nUse the `newname` parameter to provide a new name for the object.",
-              "_postman_isSubFolder": true
-            },
-            {
-              "name": "Clone Configuration",
-              "item": [],
               "_postman_id": "2b0dbcc4-4eaa-4b9d-9cc8-2d46cc7c75e9",
               "description": "Use `action=clone` to clone an existing configuration object.\n\nUse the `xpath` parameter to specify the location of the object to be cloned.\nUse the `from` parameter to specify the source object.\nUse the `newname` parameter to provide a name for the cloned object.",
               "_postman_isSubFolder": true
@@ -2429,13 +2430,13 @@
   ],
   "variable": [
     {
-      "id": "5107e3f0-92c1-4ed2-9f73-7c6272ab4cae",
+      "id": "62407630-a420-4e81-9def-c119d4b660ce",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "f27bbeeb-8cd1-4c05-8764-a1824cbba85f",
+      "id": "7cce6e2f-990b-4c88-8e67-805f886bb562",
       "key": "{{key}}",
       "value": "",
       "type": "string"
