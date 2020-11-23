@@ -9785,7 +9785,7 @@
               "name": "Get Candidate Configuration",
               "item": [
                 {
-                  "name": "Get specific config portion Copy",
+                  "name": "Get specific config portion",
                   "_postman_id": "b2179207-9fd2-4dd7-96a6-41613f0e8451",
                   "protocolProfileBehavior": {
                     "disableBodyPruning": true
@@ -10177,13 +10177,13 @@
   ],
   "variable": [
     {
-      "id": "c7688be1-de9c-450d-b675-6f9b97c582b1",
+      "id": "e63378ca-85f3-42cb-955a-3191af83dfc8",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "ddfab011-0979-4bf6-a1a1-a8fec756e692",
+      "id": "d00f2b95-1a38-4575-b2f6-29f88ec57e69",
       "key": "{{key}}",
       "value": "",
       "type": "string"
