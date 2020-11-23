@@ -9957,7 +9957,7 @@
                   ]
                 },
                 {
-                  "name": "Full list of all applications Copy",
+                  "name": "Specific application details",
                   "_postman_id": "2bc98fea-12cb-4fda-9e8d-7a406cea5601",
                   "protocolProfileBehavior": {
                     "disableBodyPruning": true
@@ -10348,13 +10348,13 @@
   ],
   "variable": [
     {
-      "id": "8cddb5d2-322a-4242-afd2-dac6ebaee7a2",
+      "id": "64cfe7ef-41cb-4e59-a65b-318ad827ed49",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "5acda430-9b97-47c7-b365-aa3f00a9cb54",
+      "id": "afa66f95-2240-4aa0-ad24-6b58443cffbc",
       "key": "{{key}}",
       "value": "",
       "type": "string"
