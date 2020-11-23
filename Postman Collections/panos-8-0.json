@@ -9812,7 +9812,101 @@
                       ]
                     }
                   },
-                  "response": []
+                  "response": [
+                    {
+                      "id": "de4854be-9bfd-4da8-b799-2f616e716698",
+                      "name": "Firewall candidate configuration",
+                      "originalRequest": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                          "raw": "https://{{host}}/api/?type=config&action=get&xpath=/config/devices/entry/vsys/entry[@name='vsys1']",
+                          "protocol": "https",
+                          "host": [
+                            "{{host}}"
+                          ],
+                          "path": [
+                            "api",
+                            ""
+                          ],
+                          "query": [
+                            {
+                              "key": "type",
+                              "value": "config"
+                            },
+                            {
+                              "key": "action",
+                              "value": "get"
+                            },
+                            {
+                              "key": "xpath",
+                              "value": "/config/devices/entry/vsys/entry[@name='vsys1']"
+                            }
+                          ]
+                        }
+                      },
+                      "status": "OK",
+                      "code": 200,
+                      "_postman_previewlanguage": "xml",
+                      "header": [
+                        {
+                          "key": "Date",
+                          "value": "Mon, 23 Nov 2020 19:16:05 GMT"
+                        },
+                        {
+                          "key": "Content-Type",
+                          "value": "application/xml; charset=UTF-8"
+                        },
+                        {
+                          "key": "Content-Length",
+                          "value": "4553"
+                        },
+                        {
+                          "key": "Connection",
+                          "value": "keep-alive"
+                        },
+                        {
+                          "key": "X-FRAME-OPTIONS",
+                          "value": "SAMEORIGIN"
+                        },
+                        {
+                          "key": "X-XSS-Protection",
+                          "value": "1; mode=block"
+                        },
+                        {
+                          "key": "X-Content-Type-Options",
+                          "value": "nosniff"
+                        },
+                        {
+                          "key": "Content-Security-Policy",
+                          "value": "default-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:;"
+                        },
+                        {
+                          "key": "Strict-Transport-Security",
+                          "value": "max-age=31536000"
+                        },
+                        {
+                          "key": "Cache-Control",
+                          "value": "no-store, no-cache, must-revalidate, post-check=0, pre-check=0"
+                        },
+                        {
+                          "key": "Expires",
+                          "value": "Thu, 19 Nov 1981 08:52:00 GMT"
+                        },
+                        {
+                          "key": "Pragma",
+                          "value": "no-cache"
+                        },
+                        {
+                          "key": "Allow",
+                          "value": "GET, HEAD, POST, PUT, DELETE, OPTIONS"
+                        }
+                      ],
+                      "cookie": [],
+                      "responseTime": null,
+                      "body": "<response status=\"success\" code=\"19\">\n    <result total-count=\"1\" count=\"1\">\n        <entry name=\"vsys1\">\n            ... example output truncated ...\n        </entry>\n    </result>\n</response>"
+                    }
+                  ]
                 },
                 {
                   "name": "Address objects in a virtual system",
@@ -10158,7 +10252,39 @@
                   "request": {
                     "method": "GET",
                     "header": [],
-                    "url": ""
+                    "url": {
+                      "raw": "https://{{host}}/api/?type=config&action=set&xpath=/config/devices/entry/vsys/entry[@name='vsys1']/rulebase/security/rules/entry[@name='New Rule']&element-value=<profile-setting><group><member>Best-Practice</member></group></profile-setting><to><member>untrust</member></to><from><member>trust</member></from><source><member>any</member></source><destination><member>any</member></destination><source-user><member>any</member></source-user><category><member>any</member></category><application><member>any</member></application><service><member>application-default</member></service><source-hip><member>any</member></source-hip><destination-hip><member>any</member></destination-hip><action>allow</action><log-setting>default</log-setting><description>Standard outbound access</description>",
+                      "protocol": "https",
+                      "host": [
+                        "{{host}}"
+                      ],
+                      "path": [
+                        "api",
+                        ""
+                      ],
+                      "query": [
+                        {
+                          "key": "type",
+                          "value": "config",
+                          "type": "text"
+                        },
+                        {
+                          "key": "action",
+                          "value": "set",
+                          "type": "text"
+                        },
+                        {
+                          "key": "xpath",
+                          "value": "/config/devices/entry/vsys/entry[@name='vsys1']/rulebase/security/rules/entry[@name='New Rule']",
+                          "type": "text"
+                        },
+                        {
+                          "key": "element-value",
+                          "value": "<profile-setting><group><member>Best-Practice</member></group></profile-setting><to><member>untrust</member></to><from><member>trust</member></from><source><member>any</member></source><destination><member>any</member></destination><source-user><member>any</member></source-user><category><member>any</member></category><application><member>any</member></application><service><member>application-default</member></service><source-hip><member>any</member></source-hip><destination-hip><member>any</member></destination-hip><action>allow</action><log-setting>default</log-setting><description>Standard outbound access</description>",
+                          "type": "text"
+                        }
+                      ]
+                    }
                   },
                   "response": []
                 }
@@ -10399,13 +10525,13 @@
   ],
   "variable": [
     {
-      "id": "34851f65-1152-4737-b1d9-66fd6c0f2208",
+      "id": "2ce5d9c7-c9af-4cda-8415-d4eb6e9ca988",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "5635e973-4d2d-4a64-a4a6-f56e960ff120",
+      "id": "77e9dd07-85ec-412a-a041-d0d04775c0ae",
       "key": "{{key}}",
       "value": "",
       "type": "string"
