@@ -271,7 +271,7 @@
                         }
                       ]
                     },
-                    "description": "Use `action=show` along with the `xpath` parameter to target a specific portion of the configuration."
+                    "description": "Gets a portion of the running config.\n\nUse `action=show` along with the `xpath` parameter to target a specific portion of the configuration."
                   },
                   "response": [
                     {
@@ -433,7 +433,8 @@
                           "value": "/config/devices/entry/vsys/entry[@name='vsys1']"
                         }
                       ]
-                    }
+                    },
+                    "description": "Gets the candidate configuration of the device."
                   },
                   "response": [
                     {
@@ -2499,13 +2500,13 @@
   ],
   "variable": [
     {
-      "id": "21133dc0-c664-4618-a61a-cc4b64455c79",
+      "id": "75185087-1b2b-4ca1-85da-58744c4d42a1",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "bf5edddf-224b-41c9-8974-71cc406e95ed",
+      "id": "33db1df6-cde6-43e5-a42a-ebe646a3c2e9",
       "key": "{{key}}",
       "value": "",
       "type": "string"
