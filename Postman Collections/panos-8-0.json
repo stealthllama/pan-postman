@@ -2,7 +2,7 @@
   "info": {
     "_postman_id": "241ff148-5458-dde5-cbaa-a80527e7dc55",
     "name": "PAN-OS XML API",
-    "description": "XML API request collection for PAN-OS\n\nhttps://docs.paloaltonetworks.com/pan-os/10-0/pan-os-panorama-api.html\n\n# Authentication\n\nTo use the API, you must generate the API key required for authenticating API calls.\n\nThen, when you use this API key in your request, you can either provide the URL encoded API key in the request URL, or use the custom **X-PAN-KEY: <key>** parameter to add the key as a name-value pair in the HTTP header.",
+    "description": "XML API request collection for PAN-OS\n\nhttps://docs.paloaltonetworks.com/pan-os/10-0/pan-os-panorama-api.html",
     "schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
   },
   "item": [
@@ -9426,21 +9426,6 @@
       "item": [
         {
           "name": "Generate API key",
-          "event": [
-            {
-              "listen": "test",
-              "script": {
-                "id": "d1324464-0da5-42e8-ac17-5c4edf686178",
-                "exec": [
-                  "var jsonObject = xml2Json(responseBody);",
-                  "",
-                  "console.log(jsonObject.response.result.key);",
-                  "pm.environment.set(\"key\", jsonObject.response.result.key);"
-                ],
-                "type": "text/javascript"
-              }
-            }
-          ],
           "_postman_id": "5a6eec54-51a0-9716-fa38-5f894bf3c2ff",
           "protocolProfileBehavior": {
             "disableBodyPruning": true
@@ -9449,7 +9434,7 @@
             "auth": {
               "type": "noauth"
             },
-            "method": "POST",
+            "method": "GET",
             "header": [
               {
                 "key": "Content-Type",
@@ -9464,7 +9449,7 @@
               }
             },
             "url": {
-              "raw": "https://{{host}}/api?type=keygen&user=admin&password=PaloAlto123!",
+              "raw": "https://{{host}}/api?type=keygen&user=&password=",
               "protocol": "https",
               "host": [
                 "{{host}}"
@@ -9479,17 +9464,68 @@
                 },
                 {
                   "key": "user",
-                  "value": "admin"
+                  "value": "",
+                  "description": "Username used to generate API key."
                 },
                 {
                   "key": "password",
-                  "value": "PaloAlto123!"
+                  "value": "",
+                  "description": "Password sued to generate API key."
                 }
               ]
             },
             "description": "Generate API key"
           },
-          "response": []
+          "response": [
+            {
+              "id": "378ac429-d8a3-428e-9062-754aa154e954",
+              "name": "Generate API key",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/x-www-form-urlencoded"
+                  }
+                ],
+                "body": {
+                  "mode": "urlencoded",
+                  "urlencoded": []
+                },
+                "url": {
+                  "raw": "https://{{host}}/api?type=keygen&user=&password=",
+                  "protocol": "https",
+                  "host": [
+                    "{{host}}"
+                  ],
+                  "path": [
+                    "api"
+                  ],
+                  "query": [
+                    {
+                      "key": "type",
+                      "value": "keygen"
+                    },
+                    {
+                      "key": "user",
+                      "value": "",
+                      "description": "Username used to generate API key."
+                    },
+                    {
+                      "key": "password",
+                      "value": "",
+                      "description": "Password sued to generate API key."
+                    }
+                  ]
+                }
+              },
+              "_postman_previewlanguage": "xml",
+              "header": null,
+              "cookie": [],
+              "responseTime": null,
+              "body": "<response status=\"success\">\n    <result>\n        <key>gJlQWE56987nBxIqyfa62sZeRtYuIo2BgzEA9UOnlZBhU</key>\n    </result>\n</response>"
+            }
+          ]
         }
       ],
       "_postman_id": "8d657926-6a63-40c0-a285-7cb3a670e5c9"
