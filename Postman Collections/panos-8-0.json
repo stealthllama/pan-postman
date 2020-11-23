@@ -9615,7 +9615,7 @@
                       ],
                       "cookie": [],
                       "responseTime": null,
-                      "body": "<response status=\"success\">\n    <result>\n        <config version=\"10.0.0\" urldb=\"paloaltonetworks\">\n            ...\n\n        </config>\n    </result>\n</response>"
+                      "body": "<response status=\"success\">\n    <result>\n        <config version=\"10.0.0\" urldb=\"paloaltonetworks\">\n            ...\n        </config>\n    </result>\n</response>"
                     }
                   ]
                 }
@@ -9695,8 +9695,7 @@
                       "value": "version"
                     }
                   ]
-                },
-                "description": "Use this request to show:\n\n- PAN-OS version\n- Serial number\n- Model number"
+                }
               },
               "response": [
                 {
@@ -9796,6 +9795,29 @@
             }
           ],
           "_postman_id": "2b35b2a1-42c2-4d84-833d-e9fc5e0efa98",
+          "description": "Use this request to show:\n\n- PAN-OS version\n- Serial number\n- Model number",
+          "event": [
+            {
+              "listen": "prerequest",
+              "script": {
+                "id": "ee1727c9-a6a9-4b4a-9661-2604ed8fa46e",
+                "type": "text/javascript",
+                "exec": [
+                  ""
+                ]
+              }
+            },
+            {
+              "listen": "test",
+              "script": {
+                "id": "bd2e86c3-cfc0-45e7-afee-1acea30b921e",
+                "type": "text/javascript",
+                "exec": [
+                  ""
+                ]
+              }
+            }
+          ],
           "_postman_isSubFolder": true
         }
       ],
@@ -9833,13 +9855,13 @@
   ],
   "variable": [
     {
-      "id": "13324314-b14f-4413-99b5-296531888f0f",
+      "id": "0fc660fe-3e71-4641-93b5-b7fc602c4dfa",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "8f404d3f-7671-4a2d-9270-2bc6b4dbccf6",
+      "id": "01e0b4b4-afe5-4e04-9c33-a0fa54318030",
       "key": "{{key}}",
       "value": "",
       "type": "string"
