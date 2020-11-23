@@ -1493,7 +1493,7 @@
                         }
                       ]
                     },
-                    "description": "A portion of an object can be replaced by specifying the object's name within the `xpath`."
+                    "description": "Replaces the applications in the `IT DNS Services` rule with `dns`.\n\nA portion of an object can be replaced by specifying the object's name within the `xpath`."
                   },
                   "response": [
                     {
@@ -1633,7 +1633,7 @@
                         }
                       ]
                     },
-                    "description": "The entire contents of an object can be replaced as well, but the name must be specified in both the `xpath` and the `element`."
+                    "description": "Replaces the address objects in the `Data-Center` address group with `Data-Center-192.168.1.0-24` and `Data-Center-192.168.2.0-24`.\n\nThe entire contents of an object can be replaced as well, but the name must be specified in both the `xpath` and the `element`."
                   },
                   "response": [
                     {
@@ -2496,13 +2496,13 @@
   ],
   "variable": [
     {
-      "id": "e3570e56-e792-4114-b984-72bf9ff93523",
+      "id": "7bf40aef-2d06-405e-8b92-877d9d64e576",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "97f79dd8-ca5c-4706-a32c-cbcb7580505a",
+      "id": "58260e99-12f6-4583-918a-40e59c9dfba3",
       "key": "{{key}}",
       "value": "",
       "type": "string"
