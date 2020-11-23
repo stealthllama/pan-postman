@@ -2090,7 +2090,7 @@
               "name": "Clone Configuration",
               "item": [
                 {
-                  "name": "Rename an address object Copy",
+                  "name": "Clone an address object",
                   "_postman_id": "3b86fc7f-f54e-4640-81a8-6cbb978cf988",
                   "protocolProfileBehavior": {
                     "disableBodyPruning": true
@@ -2430,13 +2430,13 @@
   ],
   "variable": [
     {
-      "id": "a285cc48-4822-461b-8ab9-fbedc3904325",
+      "id": "638dc91d-0b2a-4602-86c4-140b2467c330",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "aec296e3-9335-4b74-839b-5a00566ff4d8",
+      "id": "a25e566e-5bae-4d33-b963-4bfb92c0bda5",
       "key": "{{key}}",
       "value": "",
       "type": "string"
