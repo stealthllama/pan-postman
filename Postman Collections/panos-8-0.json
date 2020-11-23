@@ -9785,7 +9785,7 @@
               "name": "Get Candidate Configuration",
               "item": [
                 {
-                  "name": "Get full configuration Copy",
+                  "name": "Get full configuration",
                   "_postman_id": "79626b04-18ff-44ab-a5f6-e606c6eeb63e",
                   "protocolProfileBehavior": {
                     "disableBodyPruning": true
@@ -9905,6 +9905,140 @@
                       "cookie": [],
                       "responseTime": null,
                       "body": "<response status=\"success\">\n    <result>\n        <config version=\"10.0.0\" urldb=\"paloaltonetworks\">\n            ... example output truncated ...\n        </config>\n    </result>\n</response>"
+                    }
+                  ]
+                },
+                {
+                  "name": "Get specific config portion Copy",
+                  "_postman_id": "b2179207-9fd2-4dd7-96a6-41613f0e8451",
+                  "protocolProfileBehavior": {
+                    "disableBodyPruning": true
+                  },
+                  "request": {
+                    "method": "GET",
+                    "header": [],
+                    "url": {
+                      "raw": "https://{{host}}/api/?type=config&action=show&xpath=/config/devices/entry/vsys/entry/rulebase/security",
+                      "protocol": "https",
+                      "host": [
+                        "{{host}}"
+                      ],
+                      "path": [
+                        "api",
+                        ""
+                      ],
+                      "query": [
+                        {
+                          "key": "type",
+                          "value": "config"
+                        },
+                        {
+                          "key": "action",
+                          "value": "show"
+                        },
+                        {
+                          "key": "xpath",
+                          "value": "/config/devices/entry/vsys/entry/rulebase/security",
+                          "description": "XPath to desired portion of configuration"
+                        }
+                      ]
+                    },
+                    "description": "Use `action=show` along with the `xpath` parameter to target a specific portion of the configuration."
+                  },
+                  "response": [
+                    {
+                      "id": "43a5d75c-3d5e-4c7b-abcd-fefeac9f52cd",
+                      "name": "Get specific config portion",
+                      "originalRequest": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                          "raw": "https://{{host}}/api/?type=config&action=show&xpath=/config/devices/entry/vsys/entry/rulebase/security",
+                          "protocol": "https",
+                          "host": [
+                            "{{host}}"
+                          ],
+                          "path": [
+                            "api",
+                            ""
+                          ],
+                          "query": [
+                            {
+                              "key": "type",
+                              "value": "config"
+                            },
+                            {
+                              "key": "action",
+                              "value": "show"
+                            },
+                            {
+                              "key": "xpath",
+                              "value": "/config/devices/entry/vsys/entry/rulebase/security",
+                              "description": "XPath to desired portion of configuration"
+                            }
+                          ]
+                        }
+                      },
+                      "status": "OK",
+                      "code": 200,
+                      "_postman_previewlanguage": "xml",
+                      "header": [
+                        {
+                          "key": "Date",
+                          "value": "Mon, 23 Nov 2020 18:42:59 GMT"
+                        },
+                        {
+                          "key": "Content-Type",
+                          "value": "application/xml; charset=UTF-8"
+                        },
+                        {
+                          "key": "Content-Length",
+                          "value": "1132"
+                        },
+                        {
+                          "key": "Connection",
+                          "value": "keep-alive"
+                        },
+                        {
+                          "key": "X-FRAME-OPTIONS",
+                          "value": "SAMEORIGIN"
+                        },
+                        {
+                          "key": "X-XSS-Protection",
+                          "value": "1; mode=block"
+                        },
+                        {
+                          "key": "X-Content-Type-Options",
+                          "value": "nosniff"
+                        },
+                        {
+                          "key": "Content-Security-Policy",
+                          "value": "default-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:;"
+                        },
+                        {
+                          "key": "Strict-Transport-Security",
+                          "value": "max-age=31536000"
+                        },
+                        {
+                          "key": "Cache-Control",
+                          "value": "no-store, no-cache, must-revalidate, post-check=0, pre-check=0"
+                        },
+                        {
+                          "key": "Expires",
+                          "value": "Thu, 19 Nov 1981 08:52:00 GMT"
+                        },
+                        {
+                          "key": "Pragma",
+                          "value": "no-cache"
+                        },
+                        {
+                          "key": "Allow",
+                          "value": "GET, HEAD, POST, PUT, DELETE, OPTIONS"
+                        }
+                      ],
+                      "cookie": [],
+                      "responseTime": null,
+                      "body": "<response status=\"success\">\n    <result>\n        <security>\n            <rules>\n                <entry name=\"IT DNS Services\" uuid=\"3e888b2c-7325-4778-ba20-4b0c90f92980\">\n                    <to>\n                        <member>trust</member>\n                    </to>\n                    <from>\n                        <member>untrust</member>\n                    </from>\n                    <source>\n                        <member>any</member>\n                    </source>\n                    <destination>\n                        <member>Data-Center</member>\n                    </destination>\n                    <source-user>\n                        <member>any</member>\n                    </source-user>\n                    <category>\n                        <member>any</member>\n                    </category>\n                    <application>\n                        <member>dns</member>\n                    </application>\n                    <service>\n                        <member>application-default</member>\n                    </service>\n                    <source-hip>\n                        <member>any</member>\n                    </source-hip>\n                    <destination-hip>\n                        <member>any</member>\n                    </destination-hip>\n                    <action>allow</action>\n                    <log-setting>default</log-setting>\n                    <profile-setting>\n                        <group>\n                            <member>Best-Practice</member>\n                        </group>\n                    </profile-setting>\n                    <description>Inbound DNS requests to data center</description>\n                </entry>\n            </rules>\n        </security>\n    </result>\n</response>"
                     }
                   ]
                 }
@@ -10167,13 +10301,13 @@
   ],
   "variable": [
     {
-      "id": "11f3640a-d622-43d8-ae69-2fef797507b4",
+      "id": "b636ab49-c348-4ae2-a653-67127f2b8562",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "0a4e8616-84b5-41ed-a358-7468d1257512",
+      "id": "bc74a101-5e45-4669-bddc-2aea37e75e67",
       "key": "{{key}}",
       "value": "",
       "type": "string"
