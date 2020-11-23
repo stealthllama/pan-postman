@@ -1774,7 +1774,31 @@
                   "request": {
                     "method": "GET",
                     "header": [],
-                    "url": ""
+                    "url": {
+                      "raw": "https://{{host}}/api/?type=config&action=delete&xpath=/config/devices/entry[@name='localhost.localdomain']/vsys/entry[@name='vsys1']/rulebase/security/rules/entry[@name='IT DNS Services']",
+                      "protocol": "https",
+                      "host": [
+                        "{{host}}"
+                      ],
+                      "path": [
+                        "api",
+                        ""
+                      ],
+                      "query": [
+                        {
+                          "key": "type",
+                          "value": "config"
+                        },
+                        {
+                          "key": "action",
+                          "value": "delete"
+                        },
+                        {
+                          "key": "xpath",
+                          "value": "/config/devices/entry[@name='localhost.localdomain']/vsys/entry[@name='vsys1']/rulebase/security/rules/entry[@name='IT DNS Services']"
+                        }
+                      ]
+                    }
                   },
                   "response": []
                 }
@@ -1979,13 +2003,13 @@
   ],
   "variable": [
     {
-      "id": "575744d0-4032-4713-a962-5b0ac934c4d9",
+      "id": "dc9bd5ab-8d0b-4c7e-8b37-197fa79161c9",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "f2ec9651-4cfd-467e-95a1-87861446c977",
+      "id": "65fa411d-de4a-4efe-a30e-d60d03e76172",
       "key": "{{key}}",
       "value": "",
       "type": "string"
