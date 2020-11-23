@@ -1950,7 +1950,36 @@
                   "request": {
                     "method": "GET",
                     "header": [],
-                    "url": ""
+                    "url": {
+                      "raw": "https://{{host}}/api/?type=config&action=rename&xpath=/config/devices/entry[@name='localhost.localdomain']/vsys/entry[@name='vsys1']/address/entry[@name='Old-Address']&newname=New-Address",
+                      "protocol": "https",
+                      "host": [
+                        "{{host}}"
+                      ],
+                      "path": [
+                        "api",
+                        ""
+                      ],
+                      "query": [
+                        {
+                          "key": "type",
+                          "value": "config"
+                        },
+                        {
+                          "key": "action",
+                          "value": "rename"
+                        },
+                        {
+                          "key": "xpath",
+                          "value": "/config/devices/entry[@name='localhost.localdomain']/vsys/entry[@name='vsys1']/address/entry[@name='Old-Address']"
+                        },
+                        {
+                          "key": "newname",
+                          "value": "New-Address",
+                          "type": "text"
+                        }
+                      ]
+                    }
                   },
                   "response": []
                 }
@@ -2155,13 +2184,13 @@
   ],
   "variable": [
     {
-      "id": "acb07573-a35a-492f-a519-da6486b85c92",
+      "id": "4c8ef35b-3534-47d6-95c4-b976f4a998f6",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "d4c7277a-a695-449a-981a-553ad1f88c13",
+      "id": "10429597-08b2-490f-b52f-059fedbd65f0",
       "key": "{{key}}",
       "value": "",
       "type": "string"
