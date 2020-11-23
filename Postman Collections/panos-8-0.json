@@ -2287,7 +2287,8 @@
                           "type": "text"
                         }
                       ]
-                    }
+                    },
+                    "description": "Moves the rule `Outbound Access` after the rule `IT DNS Services`."
                   },
                   "response": []
                 }
@@ -2492,13 +2493,13 @@
   ],
   "variable": [
     {
-      "id": "4bb5139b-0fbc-42e1-a8aa-2f905f269954",
+      "id": "0a101365-3f89-4822-a7e8-5213a7eac20e",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "13ada418-f092-49ff-8030-23144c220bde",
+      "id": "caaeba94-03ca-4c8e-9d9c-c57508ddb3b4",
       "key": "{{key}}",
       "value": "",
       "type": "string"
