@@ -10265,23 +10265,19 @@
                       "query": [
                         {
                           "key": "type",
-                          "value": "config",
-                          "type": "text"
+                          "value": "config"
                         },
                         {
                           "key": "action",
-                          "value": "set",
-                          "type": "text"
+                          "value": "set"
                         },
                         {
                           "key": "xpath",
-                          "value": "/config/devices/entry[@name='localhost.localdomain']/vsys/entry[@name='vsys1']/rulebase/security/rules/entry[@name='New Rule']",
-                          "type": "text"
+                          "value": "/config/devices/entry[@name='localhost.localdomain']/vsys/entry[@name='vsys1']/rulebase/security/rules/entry[@name='New Rule']"
                         },
                         {
                           "key": "element-value",
-                          "value": "<profile-setting><group><member>Best-Practice</member></group></profile-setting><to><member>untrust</member></to><from><member>trust</member></from><source><member>any</member></source><destination><member>any</member></destination><source-user><member>any</member></source-user><category><member>any</member></category><application><member>any</member></application><service><member>application-default</member></service><source-hip><member>any</member></source-hip><destination-hip><member>any</member></destination-hip><action>allow</action><log-setting>default</log-setting><description>Standard outbound access</description>",
-                          "type": "text"
+                          "value": "<profile-setting><group><member>Best-Practice</member></group></profile-setting><to><member>untrust</member></to><from><member>trust</member></from><source><member>any</member></source><destination><member>any</member></destination><source-user><member>any</member></source-user><category><member>any</member></category><application><member>any</member></application><service><member>application-default</member></service><source-hip><member>any</member></source-hip><destination-hip><member>any</member></destination-hip><action>allow</action><log-setting>default</log-setting><description>Standard outbound access</description>"
                         }
                       ]
                     }
@@ -10525,13 +10521,13 @@
   ],
   "variable": [
     {
-      "id": "fb8a7010-ae5e-4022-b03a-fd6a0a770636",
+      "id": "4c8f6896-2aff-4c23-bf5f-542996358ef9",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "f84f9b52-6394-4270-bcc3-42b6d86e84bc",
+      "id": "83853973-1f5f-4a08-a36c-c557a2265d9c",
       "key": "{{key}}",
       "value": "",
       "type": "string"
