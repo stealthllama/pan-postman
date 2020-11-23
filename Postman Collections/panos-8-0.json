@@ -9492,7 +9492,14 @@
       "item": [
         {
           "name": "Configuration",
-          "item": [],
+          "item": [
+            {
+              "name": "Get Active Configuration",
+              "item": [],
+              "_postman_id": "29dad679-3de2-4bfd-9270-8fc27f899523",
+              "_postman_isSubFolder": true
+            }
+          ],
           "_postman_id": "a69adbc2-0b8b-47f1-ab6f-118ce8aa1a63",
           "_postman_isSubFolder": true
         },
@@ -9702,13 +9709,13 @@
   ],
   "variable": [
     {
-      "id": "f1486b73-c17c-4103-96da-9666854f11cf",
+      "id": "9bf48958-7687-4d8e-a2f5-b4ddb50ae5f1",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "a2011f24-4d6b-4b77-8f3c-279c1260acc1",
+      "id": "34dd9371-a058-41db-a17c-ef109edc6d13",
       "key": "{{key}}",
       "value": "",
       "type": "string"
