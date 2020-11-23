@@ -1462,12 +1462,6 @@
           "_postman_isSubFolder": true
         },
         {
-          "name": "Get Reports",
-          "item": [],
-          "_postman_id": "0ddb6ffc-c178-485b-b2ac-93317191d3d1",
-          "_postman_isSubFolder": true
-        },
-        {
           "name": "Export Files",
           "item": [],
           "_postman_id": "36476743-b43d-4ac5-b99a-090e7664693f",
@@ -1677,13 +1671,13 @@
   ],
   "variable": [
     {
-      "id": "5807d49a-db78-4198-bea3-4cedd530dc1e",
+      "id": "c558e87b-44b5-4329-b4e1-b2b69ecfeb02",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "7bae3cad-98a7-4c88-8ad6-5b13244591bb",
+      "id": "e758fdce-e107-41d6-b1bb-837134de128e",
       "key": "{{key}}",
       "value": "",
       "type": "string"
