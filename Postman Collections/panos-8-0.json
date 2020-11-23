@@ -9629,7 +9629,31 @@
                   "request": {
                     "method": "GET",
                     "header": [],
-                    "url": "",
+                    "url": {
+                      "raw": "https://{{host}}/api/?type=config&action=show&xpath=/config/devices/entry/vsys/entry/rulebase/security",
+                      "protocol": "https",
+                      "host": [
+                        "{{host}}"
+                      ],
+                      "path": [
+                        "api",
+                        ""
+                      ],
+                      "query": [
+                        {
+                          "key": "type",
+                          "value": "config"
+                        },
+                        {
+                          "key": "action",
+                          "value": "show"
+                        },
+                        {
+                          "key": "xpath",
+                          "value": "/config/devices/entry/vsys/entry/rulebase/security"
+                        }
+                      ]
+                    },
                     "description": "Use `action=show` along with the `xpath` parameter to target a specific portion of the configuration."
                   },
                   "response": []
@@ -9870,13 +9894,13 @@
   ],
   "variable": [
     {
-      "id": "fd5ad864-14c2-4f41-81a3-b93ca324115c",
+      "id": "9e2b4a2f-7858-47cd-af6c-64be6b403bb8",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "c70ae4cd-9b07-41f2-8173-4cd4f0699cde",
+      "id": "9c65f079-be79-401c-bf15-7e4798e4485c",
       "key": "{{key}}",
       "value": "",
       "type": "string"
