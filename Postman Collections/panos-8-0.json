@@ -1462,7 +1462,37 @@
                   "request": {
                     "method": "GET",
                     "header": [],
-                    "url": ""
+                    "url": {
+                      "raw": "https://{{host}}/api/?type=config&action=edit&xpath=/config/devices/entry[@name='localhost.localdomain']/vsys/entry[@name='vsys1']/rulebase/security/rules/entry[@name='IT DNS Services']/application&element=<application><member>dns</member></application>",
+                      "protocol": "https",
+                      "host": [
+                        "{{host}}"
+                      ],
+                      "path": [
+                        "api",
+                        ""
+                      ],
+                      "query": [
+                        {
+                          "key": "type",
+                          "value": "config"
+                        },
+                        {
+                          "key": "action",
+                          "value": "edit"
+                        },
+                        {
+                          "key": "xpath",
+                          "value": "/config/devices/entry[@name='localhost.localdomain']/vsys/entry[@name='vsys1']/rulebase/security/rules/entry[@name='IT DNS Services']/application",
+                          "type": "text"
+                        },
+                        {
+                          "key": "element",
+                          "value": "<application><member>dns</member></application>",
+                          "type": "text"
+                        }
+                      ]
+                    }
                   },
                   "response": []
                 }
@@ -1689,13 +1719,13 @@
   ],
   "variable": [
     {
-      "id": "8b86ec94-b598-471c-b7a3-75be5d90301e",
+      "id": "018855f4-a2f2-48c4-9690-d638f138033a",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "eb3a5888-b207-4281-af27-bc0df241d20b",
+      "id": "704b0e36-44e9-442e-9248-5d91172d540f",
       "key": "{{key}}",
       "value": "",
       "type": "string"
