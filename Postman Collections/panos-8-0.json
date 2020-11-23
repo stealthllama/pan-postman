@@ -47,7 +47,7 @@
                 }
               ]
             },
-            "description": "Generate API key"
+            "description": "To use the API, you must generate the API requred for authenticating API calls.\n\nThe generated key can be used as a parameter in the request URL, or in the `X-PAN-KEY` HTTP header."
           },
           "response": [
             {
@@ -1385,13 +1385,13 @@
   ],
   "variable": [
     {
-      "id": "9701c561-423d-41ac-ae84-d6ef03304872",
+      "id": "ca89697b-ec74-40ee-ab57-2c681cca5a0d",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "022fda15-99d1-4470-8f18-ef82eca180b8",
+      "id": "833329af-d200-41b3-a75f-096fb1627283",
       "key": "{{key}}",
       "value": "",
       "type": "string"
