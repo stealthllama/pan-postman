@@ -2624,7 +2624,21 @@
             },
             {
               "name": "Multi-Move or Multi-Clone Configuration",
-              "item": [],
+              "item": [
+                {
+                  "name": "Move addresses between device groups",
+                  "_postman_id": "de1f0332-96c2-411a-8065-23097c15966f",
+                  "protocolProfileBehavior": {
+                    "disableBodyPruning": true
+                  },
+                  "request": {
+                    "method": "GET",
+                    "header": [],
+                    "url": ""
+                  },
+                  "response": []
+                }
+              ],
               "_postman_id": "a97f6a0b-e916-48ab-af31-69126c029301",
               "description": "Use the `action=multi-move` and `action=multi-clone` actions to move and clone addresses across device groups and virtual systems.  Templates do not support the multi-move and multi-clone capability.",
               "_postman_isSubFolder": true
@@ -2825,13 +2839,13 @@
   ],
   "variable": [
     {
-      "id": "e4c0da01-4e0f-445f-8855-472bacffed80",
+      "id": "491871f8-b97f-47ff-9d89-6706a9723ca8",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "892b9df3-69e2-44fa-a9c1-cd36ab721e71",
+      "id": "2e218126-0d43-4b02-b410-4542f16054be",
       "key": "{{key}}",
       "value": "",
       "type": "string"
