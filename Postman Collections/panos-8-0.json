@@ -3676,13 +3676,13 @@
   ],
   "variable": [
     {
-      "id": "1bc095e7-4bdc-4524-95e1-d0e2b0def26d",
+      "id": "5bc5ed85-9f67-4003-ad45-20e769ac10be",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "b30b3ff8-e1ab-4e05-84b9-9032f47aaa13",
+      "id": "ae10baaa-389f-40d2-8cea-20fe53c5969d",
       "key": "{{key}}",
       "value": "",
       "type": "string"
