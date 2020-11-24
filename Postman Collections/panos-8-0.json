@@ -2676,7 +2676,7 @@
               "name": "View Configuration Node Values for XPath",
               "item": [
                 {
-                  "name": "Get possible virtual systems",
+                  "name": "Get completions for virtual systems",
                   "_postman_id": "feabb078-1c3e-45c3-bc4b-fe6b073ada3e",
                   "protocolProfileBehavior": {
                     "disableBodyPruning": true
@@ -2911,13 +2911,13 @@
   ],
   "variable": [
     {
-      "id": "2dc42bf0-1064-4d1e-b580-117d00291510",
+      "id": "0c7cee94-b147-4502-a88b-bad50e23d495",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "a88ca0e0-3d01-4af6-81b9-fd587e0eaec2",
+      "id": "8aaf12c7-17fb-440d-bdf0-b91f7aa0c97a",
       "key": "{{key}}",
       "value": "",
       "type": "string"
