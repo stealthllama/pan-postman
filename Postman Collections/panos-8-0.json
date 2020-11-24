@@ -570,7 +570,8 @@
                           "description": "Serial number of the desired firewall"
                         }
                       ]
-                    }
+                    },
+                    "description": "Fetch the candidate configuration of a managed firewall through Panorama, rather than by contacting the firewall directly."
                   },
                   "response": [
                     {
@@ -2643,13 +2644,13 @@
   ],
   "variable": [
     {
-      "id": "178ff638-23cc-4206-8742-2e1d93b9255a",
+      "id": "6f8484c1-dd9b-42c7-9f61-adcac9790867",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "3f5b0bb1-47cb-4ac9-be70-8ca495bef126",
+      "id": "7c661b6e-cfa5-4796-8c77-8fd57b4f59e3",
       "key": "{{key}}",
       "value": "",
       "type": "string"
