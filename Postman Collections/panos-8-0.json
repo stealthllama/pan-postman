@@ -4140,7 +4140,7 @@
               "_postman_isSubFolder": true
             },
             {
-              "name": "Query commit job status",
+              "name": "Show commit job status",
               "_postman_id": "eb801c65-7bf7-45d7-ab98-45ade4ca0746",
               "protocolProfileBehavior": {
                 "disableBodyPruning": true
@@ -4280,6 +4280,35 @@
               "listen": "test",
               "script": {
                 "id": "f6fe06ff-20ef-44cf-8cad-044562078a4d",
+                "type": "text/javascript",
+                "exec": [
+                  ""
+                ]
+              }
+            }
+          ],
+          "_postman_isSubFolder": true
+        },
+        {
+          "name": "Operational Commands",
+          "item": [],
+          "_postman_id": "5f996648-39ef-462b-97fc-9b8c6c5bd21d",
+          "description": "Use any of the operational mode commands available on the command line with the `type=op` command.\n\nSome operational commands, including download, upgrade, and installation requests, are asynchronous, meaning they require more than one request to get final results.",
+          "event": [
+            {
+              "listen": "prerequest",
+              "script": {
+                "id": "be4e79fd-4f84-4416-8448-2f79f875bb35",
+                "type": "text/javascript",
+                "exec": [
+                  ""
+                ]
+              }
+            },
+            {
+              "listen": "test",
+              "script": {
+                "id": "06105f72-76ac-4372-82e0-2785cfdb6ffe",
                 "type": "text/javascript",
                 "exec": [
                   ""
@@ -4445,12 +4474,6 @@
             }
           ],
           "_postman_isSubFolder": true
-        },
-        {
-          "name": "Operational Commands",
-          "item": [],
-          "_postman_id": "5f996648-39ef-462b-97fc-9b8c6c5bd21d",
-          "_postman_isSubFolder": true
         }
       ],
       "_postman_id": "3178f469-44ee-4373-82b4-9d5bdd5d59b8"
@@ -4487,13 +4510,13 @@
   ],
   "variable": [
     {
-      "id": "0e13b82a-a314-484c-8e1d-90b1b215c552",
+      "id": "422bca76-5f59-4ad4-8b70-cd3085445d6c",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "0a5ba7d3-26d3-43e0-8e44-8c90e649d729",
+      "id": "22f2b608-468f-40e0-a86d-766e9acdb78f",
       "key": "{{key}}",
       "value": "",
       "type": "string"
