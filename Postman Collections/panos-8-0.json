@@ -3077,6 +3077,35 @@
           "_postman_isSubFolder": true
         },
         {
+          "name": "Commit Configuration",
+          "item": [],
+          "_postman_id": "64d2721e-c645-4648-a4e8-5848d448bac5",
+          "description": "You can use the `commit` API request to commit a candidate configuration to a firewall.",
+          "event": [
+            {
+              "listen": "prerequest",
+              "script": {
+                "id": "0f883258-a655-4775-b2b5-9d1ded37d313",
+                "type": "text/javascript",
+                "exec": [
+                  ""
+                ]
+              }
+            },
+            {
+              "listen": "test",
+              "script": {
+                "id": "f6fe06ff-20ef-44cf-8cad-044562078a4d",
+                "type": "text/javascript",
+                "exec": [
+                  ""
+                ]
+              }
+            }
+          ],
+          "_postman_isSubFolder": true
+        },
+        {
           "name": "Get Version Info",
           "item": [
             {
@@ -3232,12 +3261,6 @@
             }
           ],
           "_postman_isSubFolder": true
-        },
-        {
-          "name": "Commit Configuration",
-          "item": [],
-          "_postman_id": "64d2721e-c645-4648-a4e8-5848d448bac5",
-          "_postman_isSubFolder": true
         }
       ],
       "_postman_id": "3178f469-44ee-4373-82b4-9d5bdd5d59b8"
@@ -3274,13 +3297,13 @@
   ],
   "variable": [
     {
-      "id": "672d24b2-edcf-49d9-902d-cfcfb8c7b1e8",
+      "id": "a426e116-f012-45db-bcf0-33858ca0a9b1",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "0040d563-2e66-42f1-a1dd-c1b5b2cffbd1",
+      "id": "836aea17-515a-46c9-b51c-ad5f0d0a1309",
       "key": "{{key}}",
       "value": "",
       "type": "string"
