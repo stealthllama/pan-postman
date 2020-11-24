@@ -4034,6 +4034,138 @@
                       "body": "<response status=\"success\" code=\"19\">\n    <result>\n        <msg>\n            <line>Job enqueued with jobid 297</line>\n        </msg>\n        <job>297</job>\n    </result>\n</response>"
                     }
                   ]
+                },
+                {
+                  "name": "Virtual system (vsys) commit Copy",
+                  "_postman_id": "19891442-f639-43d8-81b7-fa562c18b0c8",
+                  "protocolProfileBehavior": {
+                    "disableBodyPruning": true
+                  },
+                  "request": {
+                    "method": "GET",
+                    "header": [],
+                    "url": {
+                      "raw": "https://{{host}}/api/?type=commit&action=all&cmd=<commit-all><shared-policy><device-group><entry name='norcal'><devices><entry name='015351000039218'><vsys><member>vsys1</member></vsys></entry></devices></entry></device-group></shared-policy></commit-all>",
+                      "protocol": "https",
+                      "host": [
+                        "{{host}}"
+                      ],
+                      "path": [
+                        "api",
+                        ""
+                      ],
+                      "query": [
+                        {
+                          "key": "type",
+                          "value": "commit"
+                        },
+                        {
+                          "key": "action",
+                          "value": "all"
+                        },
+                        {
+                          "key": "cmd",
+                          "value": "<commit-all><shared-policy><device-group><entry name='norcal'><devices><entry name='015351000039218'><vsys><member>vsys1</member></vsys></entry></devices></entry></device-group></shared-policy></commit-all>"
+                        }
+                      ]
+                    },
+                    "description": "Commit shared policy to a specific virtual system."
+                  },
+                  "response": [
+                    {
+                      "id": "802cadc5-dd2c-455b-b9d9-d2054cafe907",
+                      "name": "Virtual system (vsys) commit",
+                      "originalRequest": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                          "raw": "https://{{host}}/api/?type=commit&action=all&cmd=<commit-all><shared-policy><device-group><entry name='norcal'><devices><entry name='015351000039218'><vsys><member>vsys1</member></vsys></entry></devices></entry></device-group></shared-policy></commit-all>",
+                          "protocol": "https",
+                          "host": [
+                            "{{host}}"
+                          ],
+                          "path": [
+                            "api",
+                            ""
+                          ],
+                          "query": [
+                            {
+                              "key": "type",
+                              "value": "commit"
+                            },
+                            {
+                              "key": "action",
+                              "value": "all"
+                            },
+                            {
+                              "key": "cmd",
+                              "value": "<commit-all><shared-policy><device-group><entry name='norcal'><devices><entry name='015351000039218'><vsys><member>vsys1</member></vsys></entry></devices></entry></device-group></shared-policy></commit-all>"
+                            }
+                          ]
+                        }
+                      },
+                      "status": "OK",
+                      "code": 200,
+                      "_postman_previewlanguage": "xml",
+                      "header": [
+                        {
+                          "key": "Date",
+                          "value": "Tue, 24 Nov 2020 16:27:30 GMT"
+                        },
+                        {
+                          "key": "Content-Type",
+                          "value": "application/xml; charset=UTF-8"
+                        },
+                        {
+                          "key": "Content-Length",
+                          "value": "130"
+                        },
+                        {
+                          "key": "Connection",
+                          "value": "keep-alive"
+                        },
+                        {
+                          "key": "X-FRAME-OPTIONS",
+                          "value": "SAMEORIGIN"
+                        },
+                        {
+                          "key": "X-XSS-Protection",
+                          "value": "1; mode=block"
+                        },
+                        {
+                          "key": "X-Content-Type-Options",
+                          "value": "nosniff"
+                        },
+                        {
+                          "key": "Content-Security-Policy",
+                          "value": "default-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:;"
+                        },
+                        {
+                          "key": "Strict-Transport-Security",
+                          "value": "max-age=31536000"
+                        },
+                        {
+                          "key": "Cache-Control",
+                          "value": "no-store, no-cache, must-revalidate, post-check=0, pre-check=0"
+                        },
+                        {
+                          "key": "Expires",
+                          "value": "Thu, 19 Nov 1981 08:52:00 GMT"
+                        },
+                        {
+                          "key": "Pragma",
+                          "value": "no-cache"
+                        },
+                        {
+                          "key": "Allow",
+                          "value": "GET, HEAD, POST, PUT, DELETE, OPTIONS"
+                        }
+                      ],
+                      "cookie": [],
+                      "responseTime": null,
+                      "body": "<response status=\"success\" code=\"19\">\n    <result>\n        <msg>\n            <line>Job enqueued with jobid 297</line>\n        </msg>\n        <job>297</job>\n    </result>\n</response>"
+                    }
+                  ]
                 }
               ],
               "_postman_id": "4ffe6f09-9cb7-4997-9010-29629ba45b75",
@@ -4404,13 +4536,13 @@
   ],
   "variable": [
     {
-      "id": "206ae63e-d9f4-4b51-b272-a45714387f20",
+      "id": "2d3fb206-41b2-4d8c-8192-bc7d0059d194",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "b8df6c5a-1664-470b-800e-240c6379e59a",
+      "id": "31e03b80-5ce1-49b4-a79a-08ceafc9f9b3",
       "key": "{{key}}",
       "value": "",
       "type": "string"
