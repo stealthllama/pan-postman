@@ -3078,9 +3078,23 @@
         },
         {
           "name": "Commit Configuration",
-          "item": [],
+          "item": [
+            {
+              "name": "Commit",
+              "_postman_id": "c77c788b-b3d5-4a30-9b39-fcaddfe8006a",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": ""
+              },
+              "response": []
+            }
+          ],
           "_postman_id": "64d2721e-c645-4648-a4e8-5848d448bac5",
-          "description": "You can use the `commit` API request to commit a candidate configuration to a firewall.",
+          "description": "You can use the `commit` API request to commit a candidate configuration to a firewall.\n\nValidating and reverting configurations are documented in the operational commands section.",
           "event": [
             {
               "listen": "prerequest",
@@ -3297,13 +3311,13 @@
   ],
   "variable": [
     {
-      "id": "a426e116-f012-45db-bcf0-33858ca0a9b1",
+      "id": "bd6f3650-5309-44ef-a692-37b6fd7dc141",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "836aea17-515a-46c9-b51c-ad5f0d0a1309",
+      "id": "6c1d54c3-654a-4fd9-a484-86c60c1d5638",
       "key": "{{key}}",
       "value": "",
       "type": "string"
