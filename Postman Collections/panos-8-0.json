@@ -3318,13 +3318,13 @@
   ],
   "variable": [
     {
-      "id": "b9303a30-843b-427c-81f1-08cae2f027a5",
+      "id": "05bce78f-8465-47e2-af53-6d53391f838f",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "b0fbe3da-cc9e-4674-9440-e83fa02ef366",
+      "id": "386246a7-7349-498e-8f7d-102d1df2c6ee",
       "key": "{{key}}",
       "value": "",
       "type": "string"
