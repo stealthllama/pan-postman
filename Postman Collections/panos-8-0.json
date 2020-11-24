@@ -2684,9 +2684,104 @@
                   "request": {
                     "method": "GET",
                     "header": [],
-                    "url": ""
+                    "url": "",
+                    "description": "Get all the possible values for `vsys` at this XPath."
                   },
-                  "response": []
+                  "response": [
+                    {
+                      "id": "fcf9d95d-8338-423c-b4c9-ac9eaf83c3ba",
+                      "name": "Get completions for virtual systems",
+                      "originalRequest": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                          "raw": "https://{{host}}/api/?type=config&action=complete&xpath=/config/devices/entry[@name='localhost.localdomain']/vsys",
+                          "protocol": "https",
+                          "host": [
+                            "{{host}}"
+                          ],
+                          "path": [
+                            "api",
+                            ""
+                          ],
+                          "query": [
+                            {
+                              "key": "type",
+                              "value": "config"
+                            },
+                            {
+                              "key": "action",
+                              "value": "complete"
+                            },
+                            {
+                              "key": "xpath",
+                              "value": "/config/devices/entry[@name='localhost.localdomain']/vsys"
+                            }
+                          ]
+                        }
+                      },
+                      "status": "OK",
+                      "code": 200,
+                      "_postman_previewlanguage": "xml",
+                      "header": [
+                        {
+                          "key": "Date",
+                          "value": "Tue, 24 Nov 2020 15:28:16 GMT"
+                        },
+                        {
+                          "key": "Content-Type",
+                          "value": "application/xml; charset=UTF-8"
+                        },
+                        {
+                          "key": "Content-Length",
+                          "value": "212"
+                        },
+                        {
+                          "key": "Connection",
+                          "value": "keep-alive"
+                        },
+                        {
+                          "key": "X-FRAME-OPTIONS",
+                          "value": "SAMEORIGIN"
+                        },
+                        {
+                          "key": "X-XSS-Protection",
+                          "value": "1; mode=block"
+                        },
+                        {
+                          "key": "X-Content-Type-Options",
+                          "value": "nosniff"
+                        },
+                        {
+                          "key": "Content-Security-Policy",
+                          "value": "default-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:;"
+                        },
+                        {
+                          "key": "Strict-Transport-Security",
+                          "value": "max-age=31536000"
+                        },
+                        {
+                          "key": "Cache-Control",
+                          "value": "no-store, no-cache, must-revalidate, post-check=0, pre-check=0"
+                        },
+                        {
+                          "key": "Expires",
+                          "value": "Thu, 19 Nov 1981 08:52:00 GMT"
+                        },
+                        {
+                          "key": "Pragma",
+                          "value": "no-cache"
+                        },
+                        {
+                          "key": "Allow",
+                          "value": "GET, HEAD, POST, PUT, DELETE, OPTIONS"
+                        }
+                      ],
+                      "cookie": [],
+                      "responseTime": null,
+                      "body": "<response status=\"success\" code=\"19\">\n    <completions>\n        <completion value=\"vsys1\" vxpath=\"/config/devices/entry[@name='localhost.localdomain']/vsys/entry[@name='vsys1']\" current=\"yes\"/>\n    </completions>\n</response>"
+                    }
+                  ]
                 }
               ],
               "_postman_id": "2692481d-2410-49da-89e6-dc5d8f617352",
@@ -2911,13 +3006,13 @@
   ],
   "variable": [
     {
-      "id": "0c7cee94-b147-4502-a88b-bad50e23d495",
+      "id": "05522388-1d6c-4b85-ad2a-1bfb67bdbca9",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "8aaf12c7-17fb-440d-bdf0-b91f7aa0c97a",
+      "id": "5d93dd76-7bf1-4cde-b903-ed4b01d56089",
       "key": "{{key}}",
       "value": "",
       "type": "string"
