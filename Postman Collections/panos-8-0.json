@@ -5442,6 +5442,131 @@
               "request": {
                 "method": "GET",
                 "header": [],
+                "url": {
+                  "raw": "https://{{host}}/api/?type=op&cmd=<revert><config><partial><admin><member>admin</member></admin><device-group><member>norcal</member></device-group><no-template/><no-template-stack/><no-log-collector-group/><no-log-collector/><no-wildfire-appliance-cluster/><no-wildfire-appliance/><device-and-network>excluded</device-and-network><shared-object>excluded</shared-object></partial></config></revert>",
+                  "protocol": "https",
+                  "host": [
+                    "{{host}}"
+                  ],
+                  "path": [
+                    "api",
+                    ""
+                  ],
+                  "query": [
+                    {
+                      "key": "type",
+                      "value": "op",
+                      "type": "text"
+                    },
+                    {
+                      "key": "cmd",
+                      "value": "<revert><config><partial><admin><member>admin</member></admin><device-group><member>norcal</member></device-group><no-template/><no-template-stack/><no-log-collector-group/><no-log-collector/><no-wildfire-appliance-cluster/><no-wildfire-appliance/><device-and-network>excluded</device-and-network><shared-object>excluded</shared-object></partial></config></revert>",
+                      "type": "text"
+                    }
+                  ]
+                }
+              },
+              "response": [
+                {
+                  "id": "a2052124-be76-4ea9-b60f-23e01aa0cf7a",
+                  "name": "Partial revert of changes to Panorama",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [],
+                    "url": {
+                      "raw": "https://{{host}}/api/?type=op&cmd=<revert><config><partial><admin><member>admin</member></admin><device-group><member>norcal</member></device-group><no-template/><no-template-stack/><no-log-collector-group/><no-log-collector/><no-wildfire-appliance-cluster/><no-wildfire-appliance/><device-and-network>excluded</device-and-network><shared-object>excluded</shared-object></partial></config></revert>",
+                      "protocol": "https",
+                      "host": [
+                        "{{host}}"
+                      ],
+                      "path": [
+                        "api",
+                        ""
+                      ],
+                      "query": [
+                        {
+                          "key": "type",
+                          "value": "op"
+                        },
+                        {
+                          "key": "cmd",
+                          "value": "<revert><config><partial><admin><member>admin</member></admin><device-group><member>norcal</member></device-group><no-template/><no-template-stack/><no-log-collector-group/><no-log-collector/><no-wildfire-appliance-cluster/><no-wildfire-appliance/><device-and-network>excluded</device-and-network><shared-object>excluded</shared-object></partial></config></revert>"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "xml",
+                  "header": [
+                    {
+                      "key": "Date",
+                      "value": "Tue, 24 Nov 2020 20:30:05 GMT"
+                    },
+                    {
+                      "key": "Content-Type",
+                      "value": "application/xml; charset=UTF-8"
+                    },
+                    {
+                      "key": "Content-Length",
+                      "value": "128"
+                    },
+                    {
+                      "key": "Connection",
+                      "value": "keep-alive"
+                    },
+                    {
+                      "key": "X-FRAME-OPTIONS",
+                      "value": "SAMEORIGIN"
+                    },
+                    {
+                      "key": "X-XSS-Protection",
+                      "value": "1; mode=block"
+                    },
+                    {
+                      "key": "X-Content-Type-Options",
+                      "value": "nosniff"
+                    },
+                    {
+                      "key": "Content-Security-Policy",
+                      "value": "default-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:;"
+                    },
+                    {
+                      "key": "Strict-Transport-Security",
+                      "value": "max-age=31536000"
+                    },
+                    {
+                      "key": "Cache-Control",
+                      "value": "no-store, no-cache, must-revalidate, post-check=0, pre-check=0"
+                    },
+                    {
+                      "key": "Expires",
+                      "value": "Thu, 19 Nov 1981 08:52:00 GMT"
+                    },
+                    {
+                      "key": "Pragma",
+                      "value": "no-cache"
+                    },
+                    {
+                      "key": "Allow",
+                      "value": "GET, HEAD, POST, PUT, DELETE, OPTIONS"
+                    }
+                  ],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "<response status=\"success\">\n    <result>\n        <msg>\n            <line>Selected changes were reverted from configuration</line>\n        </msg>\n    </result>\n</response>"
+                }
+              ]
+            },
+            {
+              "name": "Show summary of changes",
+              "_postman_id": "4442e42c-5fea-4395-948b-8741e9fe53bb",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "GET",
+                "header": [],
                 "url": ""
               },
               "response": []
@@ -5665,13 +5790,13 @@
   ],
   "variable": [
     {
-      "id": "3e1da4e0-fc11-4a4e-bc0c-9aa48c0a406e",
+      "id": "13df0990-1a7c-4bfd-82d0-d6e8a6d16755",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "fbba61fd-529f-40bb-8b7f-deaea1482575",
+      "id": "01261334-e15b-4f83-9926-b1312e765b28",
       "key": "{{key}}",
       "value": "",
       "type": "string"
