@@ -3219,7 +3219,27 @@
               "request": {
                 "method": "GET",
                 "header": [],
-                "url": ""
+                "url": {
+                  "raw": "https://{{host}}/api/?type=op&cmd=<show><jobs><id>4</id></jobs></show>",
+                  "protocol": "https",
+                  "host": [
+                    "{{host}}"
+                  ],
+                  "path": [
+                    "api",
+                    ""
+                  ],
+                  "query": [
+                    {
+                      "key": "type",
+                      "value": "op"
+                    },
+                    {
+                      "key": "cmd",
+                      "value": "<show><jobs><id>4</id></jobs></show>"
+                    }
+                  ]
+                }
               },
               "response": []
             }
@@ -3442,13 +3462,13 @@
   ],
   "variable": [
     {
-      "id": "e8e65e42-956e-459d-9ff6-582fcaedc8ba",
+      "id": "62005839-a2d4-4578-b3cb-8be8ae9cb05c",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "f890db28-8012-49de-a320-6ae1b24da57e",
+      "id": "a38e1705-aff9-492d-bf24-8fa6057c453a",
       "key": "{{key}}",
       "value": "",
       "type": "string"
