@@ -3339,9 +3339,127 @@
                   "request": {
                     "method": "GET",
                     "header": [],
-                    "url": ""
+                    "url": {
+                      "raw": "https://{{host}}/api/?type=commit&action=partial&cmd=<commit><partial><device-and-network>excluded</device-and-network><shared-object>excluded</shared-object></partial></commit>",
+                      "protocol": "https",
+                      "host": [
+                        "{{host}}"
+                      ],
+                      "path": [
+                        "api",
+                        ""
+                      ],
+                      "query": [
+                        {
+                          "key": "type",
+                          "value": "commit"
+                        },
+                        {
+                          "key": "action",
+                          "value": "partial"
+                        },
+                        {
+                          "key": "cmd",
+                          "value": "<commit><partial><device-and-network>excluded</device-and-network><shared-object>excluded</shared-object></partial></commit>"
+                        }
+                      ]
+                    }
                   },
-                  "response": []
+                  "response": [
+                    {
+                      "id": "bf049293-ee56-4753-a639-328885feb8c9",
+                      "name": "Partial commit while excluding shared objects and device and network configuration",
+                      "originalRequest": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                          "raw": "https://{{host}}/api/?type=commit&action=partial&cmd=<commit><partial><device-and-network>excluded</device-and-network><shared-object>excluded</shared-object></partial></commit>",
+                          "protocol": "https",
+                          "host": [
+                            "{{host}}"
+                          ],
+                          "path": [
+                            "api",
+                            ""
+                          ],
+                          "query": [
+                            {
+                              "key": "type",
+                              "value": "commit"
+                            },
+                            {
+                              "key": "action",
+                              "value": "partial"
+                            },
+                            {
+                              "key": "cmd",
+                              "value": "<commit><partial><device-and-network>excluded</device-and-network><shared-object>excluded</shared-object></partial></commit>"
+                            }
+                          ]
+                        }
+                      },
+                      "status": "OK",
+                      "code": 200,
+                      "_postman_previewlanguage": "xml",
+                      "header": [
+                        {
+                          "key": "Date",
+                          "value": "Tue, 24 Nov 2020 16:05:36 GMT"
+                        },
+                        {
+                          "key": "Content-Type",
+                          "value": "application/xml; charset=UTF-8"
+                        },
+                        {
+                          "key": "Content-Length",
+                          "value": "133"
+                        },
+                        {
+                          "key": "Connection",
+                          "value": "keep-alive"
+                        },
+                        {
+                          "key": "X-FRAME-OPTIONS",
+                          "value": "SAMEORIGIN"
+                        },
+                        {
+                          "key": "X-XSS-Protection",
+                          "value": "1; mode=block"
+                        },
+                        {
+                          "key": "X-Content-Type-Options",
+                          "value": "nosniff"
+                        },
+                        {
+                          "key": "Content-Security-Policy",
+                          "value": "default-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:;"
+                        },
+                        {
+                          "key": "Strict-Transport-Security",
+                          "value": "max-age=31536000"
+                        },
+                        {
+                          "key": "Cache-Control",
+                          "value": "no-store, no-cache, must-revalidate, post-check=0, pre-check=0"
+                        },
+                        {
+                          "key": "Expires",
+                          "value": "Thu, 19 Nov 1981 08:52:00 GMT"
+                        },
+                        {
+                          "key": "Pragma",
+                          "value": "no-cache"
+                        },
+                        {
+                          "key": "Allow",
+                          "value": "GET, HEAD, POST, PUT, DELETE, OPTIONS"
+                        }
+                      ],
+                      "cookie": [],
+                      "responseTime": null,
+                      "body": "<response status=\"success\" code=\"19\">\n    <result>\n        <msg>\n            <line>Commit job enqueued with jobid 9</line>\n        </msg>\n        <job>9</job>\n    </result>\n</response>"
+                    }
+                  ]
                 }
               ],
               "_postman_id": "90d96624-7d94-4518-b6c1-989630447158",
@@ -3689,13 +3807,13 @@
   ],
   "variable": [
     {
-      "id": "d64cb2d8-839c-4253-9d29-eb35591b48c1",
+      "id": "900d9689-7d7d-40b2-ab16-461f994c22bc",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "ae0e1261-5d45-4031-a3fd-e66e4fe0e958",
+      "id": "e30b0972-5aae-4e2e-b927-10c763aac371",
       "key": "{{key}}",
       "value": "",
       "type": "string"
