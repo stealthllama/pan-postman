@@ -3216,7 +3216,7 @@
                     "method": "GET",
                     "header": [],
                     "url": {
-                      "raw": "https://{{host}}/api/?type=commit&cmd=<commit></commit>",
+                      "raw": "https://{{host}}/api/?type=commit&cmd=<commit><force></force></commit>",
                       "protocol": "https",
                       "host": [
                         "{{host}}"
@@ -3232,7 +3232,7 @@
                         },
                         {
                           "key": "cmd",
-                          "value": "<commit></commit>"
+                          "value": "<commit><force></force></commit>"
                         }
                       ]
                     },
@@ -3676,13 +3676,13 @@
   ],
   "variable": [
     {
-      "id": "e35872be-c6ee-456c-b5b0-972b8d515a09",
+      "id": "92d7ca9d-b562-4cc3-be8e-b000151ea096",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "7d68e84d-4d2f-47eb-ad8d-aa7dfb99ddd5",
+      "id": "eef4244d-b091-44d2-847f-6b8508f970ad",
       "key": "{{key}}",
       "value": "",
       "type": "string"
