@@ -4602,7 +4602,8 @@
                       "value": "<schedule><uar-report><user>user</user><title>title</title></uar-report></schedule>"
                     }
                   ]
-                }
+                },
+                "description": "Schedule the User Activity Report for user `user`.\n\nAsynchronous command - check result with \"show op command status\"."
               },
               "response": [
                 {
@@ -6024,13 +6025,13 @@
   ],
   "variable": [
     {
-      "id": "7ae5fbfb-8131-4d21-9c55-d8085be6edb9",
+      "id": "8a405d6a-9553-4143-b31f-eabb8d4c78f5",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "bad53e18-dd0e-4129-b706-96cd8db20785",
+      "id": "7b381b3c-0e7a-495b-8c70-abc0e8464038",
       "key": "{{key}}",
       "value": "",
       "type": "string"
