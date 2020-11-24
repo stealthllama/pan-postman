@@ -3207,7 +3207,7 @@
                   ]
                 },
                 {
-                  "name": "Commit Copy",
+                  "name": "Force commit",
                   "_postman_id": "e98e822d-d24b-4afa-8dca-400d57b734b8",
                   "protocolProfileBehavior": {
                     "disableBodyPruning": true
@@ -3676,13 +3676,13 @@
   ],
   "variable": [
     {
-      "id": "5bc5ed85-9f67-4003-ad45-20e769ac10be",
+      "id": "e35872be-c6ee-456c-b5b0-972b8d515a09",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "ae10baaa-389f-40d2-8cea-20fe53c5969d",
+      "id": "7d68e84d-4d2f-47eb-ad8d-aa7dfb99ddd5",
       "key": "{{key}}",
       "value": "",
       "type": "string"
