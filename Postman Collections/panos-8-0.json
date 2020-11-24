@@ -3610,7 +3610,8 @@
                   "request": {
                     "method": "GET",
                     "header": [],
-                    "url": ""
+                    "url": "",
+                    "description": "Validate the shared policy from device group `norcal`."
                   },
                   "response": []
                 }
@@ -3983,13 +3984,13 @@
   ],
   "variable": [
     {
-      "id": "ffca3479-1b57-43d7-9aeb-e4de8b1b79f8",
+      "id": "cd04e0b6-f8e3-4c31-949d-57f68361395e",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "99cfa13e-9330-48d3-bd9d-69f4352929b6",
+      "id": "b7d15b10-4e7c-4e22-a2e2-c49a4b087e2a",
       "key": "{{key}}",
       "value": "",
       "type": "string"
