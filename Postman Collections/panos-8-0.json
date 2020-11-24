@@ -3461,6 +3461,20 @@
                       "body": "<response status=\"success\" code=\"19\">\n    <result>\n        <msg>\n            <line>Commit job enqueued with jobid 9</line>\n        </msg>\n        <job>9</job>\n    </result>\n</response>"
                     }
                   ]
+                },
+                {
+                  "name": "Partial commit admin-level changes",
+                  "_postman_id": "7af1971f-52e9-4250-a0ed-db759a78eae4",
+                  "protocolProfileBehavior": {
+                    "disableBodyPruning": true
+                  },
+                  "request": {
+                    "method": "GET",
+                    "header": [],
+                    "url": "",
+                    "description": "Commit changes made only by the administrator `admin`."
+                  },
+                  "response": []
                 }
               ],
               "_postman_id": "90d96624-7d94-4518-b6c1-989630447158",
@@ -3808,13 +3822,13 @@
   ],
   "variable": [
     {
-      "id": "79d23bf0-9f60-4b32-8c98-20f2aafb7934",
+      "id": "043d31ce-4ff1-4244-8f99-c3a67d1593a3",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "37264bec-e362-430b-869a-8513dadcb1f3",
+      "id": "971b4ba7-af15-489b-a0da-6509b3742bfb",
       "key": "{{key}}",
       "value": "",
       "type": "string"
