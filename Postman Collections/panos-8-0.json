@@ -4696,7 +4696,7 @@
               "response": []
             },
             {
-              "name": "Threat details",
+              "name": "Threat signature details",
               "_postman_id": "839add73-3545-4581-83ca-7fdb734a0707",
               "protocolProfileBehavior": {
                 "disableBodyPruning": true
@@ -4927,13 +4927,13 @@
   ],
   "variable": [
     {
-      "id": "4282878c-6242-4bfe-8b45-c6525b84e937",
+      "id": "a877a605-0029-4168-bf39-6af29a463d0d",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "830dab9a-a10b-40f7-bdce-e5ebf5d4386c",
+      "id": "17e1d48e-33f2-41d9-b0bc-d814a3dc9592",
       "key": "{{key}}",
       "value": "",
       "type": "string"
