@@ -3742,7 +3742,31 @@
                   "request": {
                     "method": "GET",
                     "header": [],
-                    "url": "",
+                    "url": {
+                      "raw": "https://{{host}}/api/?type=commit&action=all&cmd=<commit-all><shared-policy><device-group><entry name=\"norcal\"/></device-group></shared-policy></commit-all>",
+                      "protocol": "https",
+                      "host": [
+                        "{{host}}"
+                      ],
+                      "path": [
+                        "api",
+                        ""
+                      ],
+                      "query": [
+                        {
+                          "key": "type",
+                          "value": "commit"
+                        },
+                        {
+                          "key": "action",
+                          "value": "all"
+                        },
+                        {
+                          "key": "cmd",
+                          "value": "<commit-all><shared-policy><device-group><entry name=\"norcal\"/></device-group></shared-policy></commit-all>"
+                        }
+                      ]
+                    },
                     "description": "Commit the shared policy to firewalls in the device group `norcal`."
                   },
                   "response": []
@@ -4248,13 +4272,13 @@
   ],
   "variable": [
     {
-      "id": "43d4b858-db19-40cb-a81d-42bf763757f1",
+      "id": "0dc88d68-90c1-461b-a6bd-864748aeeb38",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "e61ac9c4-de66-49ae-93d3-0c5d37990911",
+      "id": "9891c696-a6da-41cf-82ab-ff952fd035fb",
       "key": "{{key}}",
       "value": "",
       "type": "string"
