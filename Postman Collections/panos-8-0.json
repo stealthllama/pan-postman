@@ -4704,9 +4704,119 @@
               "request": {
                 "method": "GET",
                 "header": [],
-                "url": ""
+                "url": {
+                  "raw": "https://{{host}}/api/?type=op&cmd=<show><predefined><xpath>/predefined/threats/vulnerability/entry[@name='30003']</xpath></predefined></show>",
+                  "protocol": "https",
+                  "host": [
+                    "{{host}}"
+                  ],
+                  "path": [
+                    "api",
+                    ""
+                  ],
+                  "query": [
+                    {
+                      "key": "type",
+                      "value": "op"
+                    },
+                    {
+                      "key": "cmd",
+                      "value": "<show><predefined><xpath>/predefined/threats/vulnerability/entry[@name='30003']</xpath></predefined></show>"
+                    }
+                  ]
+                }
               },
-              "response": []
+              "response": [
+                {
+                  "id": "2a3277cc-bd1b-4b41-95d3-2258abdc245e",
+                  "name": "Threat details",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [],
+                    "url": {
+                      "raw": "https://{{host}}/api/?type=op&cmd=<show><predefined><xpath>/predefined/threats/vulnerability/entry[@name='30003']</xpath></predefined></show>",
+                      "protocol": "https",
+                      "host": [
+                        "{{host}}"
+                      ],
+                      "path": [
+                        "api",
+                        ""
+                      ],
+                      "query": [
+                        {
+                          "key": "type",
+                          "value": "op"
+                        },
+                        {
+                          "key": "cmd",
+                          "value": "<show><predefined><xpath>/predefined/threats/vulnerability/entry[@name='30003']</xpath></predefined></show>"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "xml",
+                  "header": [
+                    {
+                      "key": "Date",
+                      "value": "Tue, 24 Nov 2020 20:06:25 GMT"
+                    },
+                    {
+                      "key": "Content-Type",
+                      "value": "application/xml; charset=UTF-8"
+                    },
+                    {
+                      "key": "Content-Length",
+                      "value": "608"
+                    },
+                    {
+                      "key": "Connection",
+                      "value": "keep-alive"
+                    },
+                    {
+                      "key": "X-FRAME-OPTIONS",
+                      "value": "SAMEORIGIN"
+                    },
+                    {
+                      "key": "X-XSS-Protection",
+                      "value": "1; mode=block"
+                    },
+                    {
+                      "key": "X-Content-Type-Options",
+                      "value": "nosniff"
+                    },
+                    {
+                      "key": "Content-Security-Policy",
+                      "value": "default-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:;"
+                    },
+                    {
+                      "key": "Strict-Transport-Security",
+                      "value": "max-age=31536000"
+                    },
+                    {
+                      "key": "Cache-Control",
+                      "value": "no-store, no-cache, must-revalidate, post-check=0, pre-check=0"
+                    },
+                    {
+                      "key": "Expires",
+                      "value": "Thu, 19 Nov 1981 08:52:00 GMT"
+                    },
+                    {
+                      "key": "Pragma",
+                      "value": "no-cache"
+                    },
+                    {
+                      "key": "Allow",
+                      "value": "GET, HEAD, POST, PUT, DELETE, OPTIONS"
+                    }
+                  ],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "<response status=\"success\">\n    <result>\n        <entry name=\"30003\" p=\"yes\">\n            <threatname>Microsoft Windows DCOM RPC Interface Buffer Overrun Vulnerability</threatname>\n            <cve xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\n                <member>CVE-2003-0352</member>\n            </cve>\n            <vendor xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\n                <member>MS03-026</member>\n            </vendor>\n            <category>code-execution</category>\n            <severity>critical</severity>\n            <engine-version min=\"1.0\"/>\n            <affected-host>\n                <server>yes</server>\n            </affected-host>\n            <default-action>reset-server</default-action>\n        </entry>\n    </result>\n</response>"
+                }
+              ]
             }
           ],
           "_postman_id": "5f996648-39ef-462b-97fc-9b8c6c5bd21d",
@@ -4927,13 +5037,13 @@
   ],
   "variable": [
     {
-      "id": "a877a605-0029-4168-bf39-6af29a463d0d",
+      "id": "8ef1dd99-e95e-45df-8374-eb212f05e1a4",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "17e1d48e-33f2-41d9-b0bc-d814a3dc9592",
+      "id": "2eb6ab70-b7c4-42c6-b48a-2e5163d8b5dd",
       "key": "{{key}}",
       "value": "",
       "type": "string"
