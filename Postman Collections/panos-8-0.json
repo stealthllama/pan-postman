@@ -4940,6 +4940,19 @@
                   "body": "<response status=\"success\" code=\"19\">\n    <result>\n        <msg>\n            <line>Validate job enqueued with jobid 2</line>\n        </msg>\n        <job>2</job>\n    </result>\n</response>"
                 }
               ]
+            },
+            {
+              "name": "Partial configuration validation",
+              "_postman_id": "e254bd41-3675-4037-8a87-ccd68407765b",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": ""
+              },
+              "response": []
             }
           ],
           "_postman_id": "5f996648-39ef-462b-97fc-9b8c6c5bd21d",
@@ -5160,13 +5173,13 @@
   ],
   "variable": [
     {
-      "id": "94208d4b-39db-4967-aab9-2d4565d3a5d9",
+      "id": "065ce301-bdb8-40da-8548-35e865161ce7",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "d09cc881-685f-4fbe-b6b3-e0ecc8cb864d",
+      "id": "1650b0e0-7fe9-4dce-aa3f-97703204a358",
       "key": "{{key}}",
       "value": "",
       "type": "string"
