@@ -2460,7 +2460,35 @@
                   "request": {
                     "method": "GET",
                     "header": [],
-                    "url": ""
+                    "url": {
+                      "raw": "https://{{host}}/api/?type=config&action=override&xpath=/config/shared/log-settings/snmptrap&element=<entry name=\"snmp\" src=\"tpl\"><version src=\"tpl\"><v2c src=\"tpl\"><server src=\"tpl\"><entry name=\"test\" src=\"tpl\"><manager src=\"tpl\">2.2.2.2</manager><community src=\"tpl\">test</community></entry></server></v2c></version></entry>",
+                      "protocol": "https",
+                      "host": [
+                        "{{host}}"
+                      ],
+                      "path": [
+                        "api",
+                        ""
+                      ],
+                      "query": [
+                        {
+                          "key": "type",
+                          "value": "config"
+                        },
+                        {
+                          "key": "action",
+                          "value": "override"
+                        },
+                        {
+                          "key": "xpath",
+                          "value": "/config/shared/log-settings/snmptrap"
+                        },
+                        {
+                          "key": "element",
+                          "value": "<entry name=\"snmp\" src=\"tpl\"><version src=\"tpl\"><v2c src=\"tpl\"><server src=\"tpl\"><entry name=\"test\" src=\"tpl\"><manager src=\"tpl\">2.2.2.2</manager><community src=\"tpl\">test</community></entry></server></v2c></version></entry>"
+                        }
+                      ]
+                    }
                   },
                   "response": []
                 }
@@ -2687,13 +2715,13 @@
   ],
   "variable": [
     {
-      "id": "ef202f0e-4648-4a7d-ae57-6d999b3794ee",
+      "id": "1acf8c4a-fe57-4e39-b1b3-4dcb7555eb6c",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "2aa640da-4603-49ad-ad38-b0d2176a7794",
+      "id": "d352876e-4b9a-4c0b-a11f-d517929d34e3",
       "key": "{{key}}",
       "value": "",
       "type": "string"
