@@ -2452,6 +2452,29 @@
               "name": "Override Configuration",
               "item": [],
               "_postman_id": "e56f3e70-96b5-4372-822c-07e4d55e7666",
+              "description": "Use `action=override` to override a setting that was pushed to a firewall from a template.\n\nUse the `xpath` parameter to specify the location of the object to override.",
+              "event": [
+                {
+                  "listen": "prerequest",
+                  "script": {
+                    "id": "7f0f5f34-7e44-4454-a473-fd6157733b17",
+                    "type": "text/javascript",
+                    "exec": [
+                      ""
+                    ]
+                  }
+                },
+                {
+                  "listen": "test",
+                  "script": {
+                    "id": "aa51a03a-c35b-4ac4-9e0b-611af67f17bf",
+                    "type": "text/javascript",
+                    "exec": [
+                      ""
+                    ]
+                  }
+                }
+              ],
               "_postman_isSubFolder": true
             }
           ],
@@ -2650,13 +2673,13 @@
   ],
   "variable": [
     {
-      "id": "de810d61-309c-40d3-af20-307508a0129e",
+      "id": "2dc4152c-6f55-49a0-9756-58e39e4a9b73",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "1ebd53c4-1406-4503-9d97-8a93e212c275",
+      "id": "a8bb5bb0-931e-4363-a1cc-4bcd0fe53bce",
       "key": "{{key}}",
       "value": "",
       "type": "string"
