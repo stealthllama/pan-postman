@@ -5567,6 +5567,129 @@
               "request": {
                 "method": "GET",
                 "header": [],
+                "url": {
+                  "raw": "https://{{host}}/api/?type=op&cmd=<show><config><list><change-summary/></list></config></show>",
+                  "protocol": "https",
+                  "host": [
+                    "{{host}}"
+                  ],
+                  "path": [
+                    "api",
+                    ""
+                  ],
+                  "query": [
+                    {
+                      "key": "type",
+                      "value": "op"
+                    },
+                    {
+                      "key": "cmd",
+                      "value": "<show><config><list><change-summary/></list></config></show>"
+                    }
+                  ]
+                }
+              },
+              "response": [
+                {
+                  "id": "0419eaf2-001f-4912-9e62-9f0d50915870",
+                  "name": "Show summary of changes",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [],
+                    "url": {
+                      "raw": "https://{{host}}/api/?type=op&cmd=<show><config><list><change-summary/></list></config></show>",
+                      "protocol": "https",
+                      "host": [
+                        "{{host}}"
+                      ],
+                      "path": [
+                        "api",
+                        ""
+                      ],
+                      "query": [
+                        {
+                          "key": "type",
+                          "value": "op"
+                        },
+                        {
+                          "key": "cmd",
+                          "value": "<show><config><list><change-summary/></list></config></show>"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "xml",
+                  "header": [
+                    {
+                      "key": "Date",
+                      "value": "Tue, 24 Nov 2020 20:32:19 GMT"
+                    },
+                    {
+                      "key": "Content-Type",
+                      "value": "application/xml; charset=UTF-8"
+                    },
+                    {
+                      "key": "Content-Length",
+                      "value": "95"
+                    },
+                    {
+                      "key": "Connection",
+                      "value": "keep-alive"
+                    },
+                    {
+                      "key": "X-FRAME-OPTIONS",
+                      "value": "SAMEORIGIN"
+                    },
+                    {
+                      "key": "X-XSS-Protection",
+                      "value": "1; mode=block"
+                    },
+                    {
+                      "key": "X-Content-Type-Options",
+                      "value": "nosniff"
+                    },
+                    {
+                      "key": "Content-Security-Policy",
+                      "value": "default-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:;"
+                    },
+                    {
+                      "key": "Strict-Transport-Security",
+                      "value": "max-age=31536000"
+                    },
+                    {
+                      "key": "Cache-Control",
+                      "value": "no-store, no-cache, must-revalidate, post-check=0, pre-check=0"
+                    },
+                    {
+                      "key": "Expires",
+                      "value": "Thu, 19 Nov 1981 08:52:00 GMT"
+                    },
+                    {
+                      "key": "Pragma",
+                      "value": "no-cache"
+                    },
+                    {
+                      "key": "Allow",
+                      "value": "GET, HEAD, POST, PUT, DELETE, OPTIONS"
+                    }
+                  ],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "<response status=\"success\">\n    <result>\n        <summary>\n            <policy-and-objects/>\n        </summary>\n    </result>\n</response>"
+                }
+              ]
+            },
+            {
+              "name": "Show commit locks",
+              "_postman_id": "d382444a-f10d-4315-81c3-dcc58fbe1d12",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "GET",
+                "header": [],
                 "url": ""
               },
               "response": []
@@ -5790,13 +5913,13 @@
   ],
   "variable": [
     {
-      "id": "a1688985-02dc-4e62-aacd-ac2b474e7bd3",
+      "id": "daf07292-1f8b-4715-832a-b406eb6a29c1",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "4f8a044d-ac93-4f27-8832-986bf8447f77",
+      "id": "28a4816c-d9b2-4abc-bb76-c6af6634d1a8",
       "key": "{{key}}",
       "value": "",
       "type": "string"
