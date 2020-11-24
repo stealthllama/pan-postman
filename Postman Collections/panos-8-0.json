@@ -4927,13 +4927,13 @@
   ],
   "variable": [
     {
-      "id": "2430a0ae-273e-45e2-bb53-57988f991ab9",
+      "id": "4282878c-6242-4bfe-8b45-c6525b84e937",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "a741f082-0409-4794-8c55-ee0ee6fd8887",
+      "id": "830dab9a-a10b-40f7-bdce-e5ebf5d4386c",
       "key": "{{key}}",
       "value": "",
       "type": "string"
