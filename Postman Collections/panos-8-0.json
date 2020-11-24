@@ -3902,6 +3902,19 @@
                       "body": "<response status=\"success\" code=\"19\">\n    <result>\n        <msg>\n            <line>Job enqueued with jobid 294</line>\n        </msg>\n        <job>294</job>\n    </result>\n</response>"
                     }
                   ]
+                },
+                {
+                  "name": "Virtual system (vsys) commit",
+                  "_postman_id": "dfdca1c4-7ead-4131-ae2f-24ec8e243c2e",
+                  "protocolProfileBehavior": {
+                    "disableBodyPruning": true
+                  },
+                  "request": {
+                    "method": "GET",
+                    "header": [],
+                    "url": ""
+                  },
+                  "response": []
                 }
               ],
               "_postman_id": "4ffe6f09-9cb7-4997-9010-29629ba45b75",
@@ -4272,13 +4285,13 @@
   ],
   "variable": [
     {
-      "id": "0dc88d68-90c1-461b-a6bd-864748aeeb38",
+      "id": "70625c4d-c9ec-4d86-b937-5c8cd4f11dd0",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "9891c696-a6da-41cf-82ab-ff952fd035fb",
+      "id": "642e4099-5eb3-404a-bf0e-0cf17cfe856c",
       "key": "{{key}}",
       "value": "",
       "type": "string"
