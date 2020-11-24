@@ -4305,6 +4305,19 @@
                 "url": ""
               },
               "response": []
+            },
+            {
+              "name": "System restart",
+              "_postman_id": "2b68b6ce-ec7f-4e22-ac27-4d55ee211bf8",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": ""
+              },
+              "response": []
             }
           ],
           "_postman_id": "5f996648-39ef-462b-97fc-9b8c6c5bd21d",
@@ -4525,13 +4538,13 @@
   ],
   "variable": [
     {
-      "id": "8112be56-b1e9-45c0-b064-788e31338eb2",
+      "id": "6cdf48dd-e047-413a-8cb1-febbf500acae",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "f20e3d8a-7edc-483f-a3ee-cfe2513b5dd6",
+      "id": "517635b6-c905-45cf-8bbf-20815b0f0f6d",
       "key": "{{key}}",
       "value": "",
       "type": "string"
