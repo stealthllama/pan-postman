@@ -3220,7 +3220,7 @@
                 "method": "GET",
                 "header": [],
                 "url": {
-                  "raw": "https://{{host}}/api/?type=op&cmd=<show><jobs><id>4</id></jobs></show>",
+                  "raw": "https://{{host}}/api/?type=op&cmd=<show><jobs><id>6</id></jobs></show>",
                   "protocol": "https",
                   "host": [
                     "{{host}}"
@@ -3236,7 +3236,7 @@
                     },
                     {
                       "key": "cmd",
-                      "value": "<show><jobs><id>4</id></jobs></show>"
+                      "value": "<show><jobs><id>6</id></jobs></show>"
                     }
                   ]
                 }
@@ -3462,13 +3462,13 @@
   ],
   "variable": [
     {
-      "id": "62005839-a2d4-4578-b3cb-8be8ae9cb05c",
+      "id": "2e5ba37b-99bb-4f0c-9ffc-d95e15295c12",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "a38e1705-aff9-492d-bf24-8fa6057c453a",
+      "id": "bd93c2f0-4dfa-4026-85bd-927e0a031dd7",
       "key": "{{key}}",
       "value": "",
       "type": "string"
