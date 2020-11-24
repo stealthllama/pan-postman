@@ -3732,6 +3732,20 @@
                       "body": "<response status=\"success\" code=\"19\">\n    <result>\n        <msg>\n            <line>Job enqueued with jobid 290</line>\n        </msg>\n        <job>290</job>\n    </result>\n</response>"
                     }
                   ]
+                },
+                {
+                  "name": "Specifc device group commit",
+                  "_postman_id": "95ce8b77-2dcd-4490-9677-fa31496813c5",
+                  "protocolProfileBehavior": {
+                    "disableBodyPruning": true
+                  },
+                  "request": {
+                    "method": "GET",
+                    "header": [],
+                    "url": "",
+                    "description": "Commit the shared policy to firewalls in the device group `norcal`."
+                  },
+                  "response": []
                 }
               ],
               "_postman_id": "4ffe6f09-9cb7-4997-9010-29629ba45b75",
@@ -4102,13 +4116,13 @@
   ],
   "variable": [
     {
-      "id": "c4c5ca5d-572c-4d44-97aa-1abf16cead4e",
+      "id": "f740dead-d3f6-46ff-b4e2-86b375116f4a",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "21acbd10-5947-49cf-84ac-654b6af6f64d",
+      "id": "6c370519-2aef-4e63-8da5-1bd9f4f62524",
       "key": "{{key}}",
       "value": "",
       "type": "string"
