@@ -4063,6 +4063,470 @@
               "_postman_isSubFolder": true
             },
             {
+              "name": "Commit-All Copy",
+              "item": [
+                {
+                  "name": "Pre-commit policy validation",
+                  "_postman_id": "6727247f-f64c-4cc4-ad16-ce456e434d6f",
+                  "protocolProfileBehavior": {
+                    "disableBodyPruning": true
+                  },
+                  "request": {
+                    "method": "GET",
+                    "header": [],
+                    "url": {
+                      "raw": "https://{{host}}/api/?type=commit&action=all&cmd=<commit-all><shared-policy><validate-only>yes</validate-only><device-group><entry name='norcal'/></device-group></shared-policy></commit-all>",
+                      "protocol": "https",
+                      "host": [
+                        "{{host}}"
+                      ],
+                      "path": [
+                        "api",
+                        ""
+                      ],
+                      "query": [
+                        {
+                          "key": "type",
+                          "value": "commit"
+                        },
+                        {
+                          "key": "action",
+                          "value": "all"
+                        },
+                        {
+                          "key": "cmd",
+                          "value": "<commit-all><shared-policy><validate-only>yes</validate-only><device-group><entry name='norcal'/></device-group></shared-policy></commit-all>"
+                        }
+                      ]
+                    },
+                    "description": "Validate the shared policy from device group `norcal`."
+                  },
+                  "response": [
+                    {
+                      "id": "bdd5f168-08ae-4a6f-8def-98da4df67657",
+                      "name": "Pre-commit policy validation",
+                      "originalRequest": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                          "raw": "https://{{host}}/api/?type=commit&action=all&cmd=<commit-all><shared-policy><validate-only>yes</validate-only><device-group><entry name='norcal'/></device-group></shared-policy></commit-all>",
+                          "protocol": "https",
+                          "host": [
+                            "{{host}}"
+                          ],
+                          "path": [
+                            "api",
+                            ""
+                          ],
+                          "query": [
+                            {
+                              "key": "type",
+                              "value": "commit"
+                            },
+                            {
+                              "key": "action",
+                              "value": "all"
+                            },
+                            {
+                              "key": "cmd",
+                              "value": "<commit-all><shared-policy><validate-only>yes</validate-only><device-group><entry name='norcal'/></device-group></shared-policy></commit-all>"
+                            }
+                          ]
+                        }
+                      },
+                      "status": "OK",
+                      "code": 200,
+                      "_postman_previewlanguage": "xml",
+                      "header": [
+                        {
+                          "key": "Date",
+                          "value": "Tue, 24 Nov 2020 16:14:38 GMT"
+                        },
+                        {
+                          "key": "Content-Type",
+                          "value": "application/xml; charset=UTF-8"
+                        },
+                        {
+                          "key": "Content-Length",
+                          "value": "130"
+                        },
+                        {
+                          "key": "Connection",
+                          "value": "keep-alive"
+                        },
+                        {
+                          "key": "X-FRAME-OPTIONS",
+                          "value": "SAMEORIGIN"
+                        },
+                        {
+                          "key": "X-XSS-Protection",
+                          "value": "1; mode=block"
+                        },
+                        {
+                          "key": "X-Content-Type-Options",
+                          "value": "nosniff"
+                        },
+                        {
+                          "key": "Content-Security-Policy",
+                          "value": "default-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:;"
+                        },
+                        {
+                          "key": "Strict-Transport-Security",
+                          "value": "max-age=31536000"
+                        },
+                        {
+                          "key": "Cache-Control",
+                          "value": "no-store, no-cache, must-revalidate, post-check=0, pre-check=0"
+                        },
+                        {
+                          "key": "Expires",
+                          "value": "Thu, 19 Nov 1981 08:52:00 GMT"
+                        },
+                        {
+                          "key": "Pragma",
+                          "value": "no-cache"
+                        },
+                        {
+                          "key": "Allow",
+                          "value": "GET, HEAD, POST, PUT, DELETE, OPTIONS"
+                        }
+                      ],
+                      "cookie": [],
+                      "responseTime": null,
+                      "body": "<response status=\"success\" code=\"19\">\n    <result>\n        <msg>\n            <line>Job enqueued with jobid 290</line>\n        </msg>\n        <job>290</job>\n    </result>\n</response>"
+                    }
+                  ]
+                },
+                {
+                  "name": "Specifc device group commit",
+                  "_postman_id": "b37e66ca-1317-4de6-99b7-e52ba91f1e70",
+                  "protocolProfileBehavior": {
+                    "disableBodyPruning": true
+                  },
+                  "request": {
+                    "method": "GET",
+                    "header": [],
+                    "url": {
+                      "raw": "https://{{host}}/api/?type=commit&action=all&cmd=<commit-all><shared-policy><device-group><entry name=\"norcal\"/></device-group></shared-policy></commit-all>",
+                      "protocol": "https",
+                      "host": [
+                        "{{host}}"
+                      ],
+                      "path": [
+                        "api",
+                        ""
+                      ],
+                      "query": [
+                        {
+                          "key": "type",
+                          "value": "commit"
+                        },
+                        {
+                          "key": "action",
+                          "value": "all"
+                        },
+                        {
+                          "key": "cmd",
+                          "value": "<commit-all><shared-policy><device-group><entry name=\"norcal\"/></device-group></shared-policy></commit-all>"
+                        }
+                      ]
+                    },
+                    "description": "Commit the shared policy to firewalls in the device group `norcal`."
+                  },
+                  "response": []
+                },
+                {
+                  "name": "Specifc device group commit without including template changes",
+                  "_postman_id": "bea6905e-f2aa-4ebd-97e3-5852e0db1662",
+                  "protocolProfileBehavior": {
+                    "disableBodyPruning": true
+                  },
+                  "request": {
+                    "method": "GET",
+                    "header": [],
+                    "url": {
+                      "raw": "https://{{host}}/api/?type=commit&action=all&cmd=<commit-all><shared-policy><include-template>no</include-template><device-group><entry name=\"norcal\"/></device-group></shared-policy></commit-all>",
+                      "protocol": "https",
+                      "host": [
+                        "{{host}}"
+                      ],
+                      "path": [
+                        "api",
+                        ""
+                      ],
+                      "query": [
+                        {
+                          "key": "type",
+                          "value": "commit"
+                        },
+                        {
+                          "key": "action",
+                          "value": "all"
+                        },
+                        {
+                          "key": "cmd",
+                          "value": "<commit-all><shared-policy><include-template>no</include-template><device-group><entry name=\"norcal\"/></device-group></shared-policy></commit-all>"
+                        }
+                      ]
+                    },
+                    "description": "Commit the shared policy to firewalls in the device group `norcal`, without including template changes."
+                  },
+                  "response": [
+                    {
+                      "id": "8130dd1c-45b7-4406-9cd4-707bc25f3feb",
+                      "name": "Specifc device group commit without including template changes",
+                      "originalRequest": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                          "raw": "https://{{host}}/api/?type=commit&action=all&cmd=<commit-all><shared-policy><include-template>no</include-template><device-group><entry name=\"norcal\"/></device-group></shared-policy></commit-all>",
+                          "protocol": "https",
+                          "host": [
+                            "{{host}}"
+                          ],
+                          "path": [
+                            "api",
+                            ""
+                          ],
+                          "query": [
+                            {
+                              "key": "type",
+                              "value": "commit"
+                            },
+                            {
+                              "key": "action",
+                              "value": "all"
+                            },
+                            {
+                              "key": "cmd",
+                              "value": "<commit-all><shared-policy><include-template>no</include-template><device-group><entry name=\"norcal\"/></device-group></shared-policy></commit-all>"
+                            }
+                          ]
+                        }
+                      },
+                      "status": "OK",
+                      "code": 200,
+                      "_postman_previewlanguage": "xml",
+                      "header": [
+                        {
+                          "key": "Date",
+                          "value": "Tue, 24 Nov 2020 16:22:58 GMT"
+                        },
+                        {
+                          "key": "Content-Type",
+                          "value": "application/xml; charset=UTF-8"
+                        },
+                        {
+                          "key": "Content-Length",
+                          "value": "130"
+                        },
+                        {
+                          "key": "Connection",
+                          "value": "keep-alive"
+                        },
+                        {
+                          "key": "X-FRAME-OPTIONS",
+                          "value": "SAMEORIGIN"
+                        },
+                        {
+                          "key": "X-XSS-Protection",
+                          "value": "1; mode=block"
+                        },
+                        {
+                          "key": "X-Content-Type-Options",
+                          "value": "nosniff"
+                        },
+                        {
+                          "key": "Content-Security-Policy",
+                          "value": "default-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:;"
+                        },
+                        {
+                          "key": "Strict-Transport-Security",
+                          "value": "max-age=31536000"
+                        },
+                        {
+                          "key": "Cache-Control",
+                          "value": "no-store, no-cache, must-revalidate, post-check=0, pre-check=0"
+                        },
+                        {
+                          "key": "Expires",
+                          "value": "Thu, 19 Nov 1981 08:52:00 GMT"
+                        },
+                        {
+                          "key": "Pragma",
+                          "value": "no-cache"
+                        },
+                        {
+                          "key": "Allow",
+                          "value": "GET, HEAD, POST, PUT, DELETE, OPTIONS"
+                        }
+                      ],
+                      "cookie": [],
+                      "responseTime": null,
+                      "body": "<response status=\"success\" code=\"19\">\n    <result>\n        <msg>\n            <line>Job enqueued with jobid 294</line>\n        </msg>\n        <job>294</job>\n    </result>\n</response>"
+                    }
+                  ]
+                },
+                {
+                  "name": "Virtual system (vsys) commit",
+                  "_postman_id": "66b35810-87b1-4c36-a285-ef4f34c0a560",
+                  "protocolProfileBehavior": {
+                    "disableBodyPruning": true
+                  },
+                  "request": {
+                    "method": "GET",
+                    "header": [],
+                    "url": {
+                      "raw": "https://{{host}}/api/?type=commit&action=all&cmd=<commit-all><shared-policy><device-group><entry name='norcal'><devices><entry name='015351000039218'><vsys><member>vsys1</member></vsys></entry></devices></entry></device-group></shared-policy></commit-all>",
+                      "protocol": "https",
+                      "host": [
+                        "{{host}}"
+                      ],
+                      "path": [
+                        "api",
+                        ""
+                      ],
+                      "query": [
+                        {
+                          "key": "type",
+                          "value": "commit"
+                        },
+                        {
+                          "key": "action",
+                          "value": "all"
+                        },
+                        {
+                          "key": "cmd",
+                          "value": "<commit-all><shared-policy><device-group><entry name='norcal'><devices><entry name='015351000039218'><vsys><member>vsys1</member></vsys></entry></devices></entry></device-group></shared-policy></commit-all>"
+                        }
+                      ]
+                    },
+                    "description": "Commit shared policy to a specific virtual system."
+                  },
+                  "response": [
+                    {
+                      "id": "cd9756eb-720d-4286-8d5e-5f4da4da79b4",
+                      "name": "Virtual system (vsys) commit",
+                      "originalRequest": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                          "raw": "https://{{host}}/api/?type=commit&action=all&cmd=<commit-all><shared-policy><device-group><entry name='norcal'><devices><entry name='015351000039218'><vsys><member>vsys1</member></vsys></entry></devices></entry></device-group></shared-policy></commit-all>",
+                          "protocol": "https",
+                          "host": [
+                            "{{host}}"
+                          ],
+                          "path": [
+                            "api",
+                            ""
+                          ],
+                          "query": [
+                            {
+                              "key": "type",
+                              "value": "commit"
+                            },
+                            {
+                              "key": "action",
+                              "value": "all"
+                            },
+                            {
+                              "key": "cmd",
+                              "value": "<commit-all><shared-policy><device-group><entry name='norcal'><devices><entry name='015351000039218'><vsys><member>vsys1</member></vsys></entry></devices></entry></device-group></shared-policy></commit-all>"
+                            }
+                          ]
+                        }
+                      },
+                      "status": "OK",
+                      "code": 200,
+                      "_postman_previewlanguage": "xml",
+                      "header": [
+                        {
+                          "key": "Date",
+                          "value": "Tue, 24 Nov 2020 16:27:30 GMT"
+                        },
+                        {
+                          "key": "Content-Type",
+                          "value": "application/xml; charset=UTF-8"
+                        },
+                        {
+                          "key": "Content-Length",
+                          "value": "130"
+                        },
+                        {
+                          "key": "Connection",
+                          "value": "keep-alive"
+                        },
+                        {
+                          "key": "X-FRAME-OPTIONS",
+                          "value": "SAMEORIGIN"
+                        },
+                        {
+                          "key": "X-XSS-Protection",
+                          "value": "1; mode=block"
+                        },
+                        {
+                          "key": "X-Content-Type-Options",
+                          "value": "nosniff"
+                        },
+                        {
+                          "key": "Content-Security-Policy",
+                          "value": "default-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:;"
+                        },
+                        {
+                          "key": "Strict-Transport-Security",
+                          "value": "max-age=31536000"
+                        },
+                        {
+                          "key": "Cache-Control",
+                          "value": "no-store, no-cache, must-revalidate, post-check=0, pre-check=0"
+                        },
+                        {
+                          "key": "Expires",
+                          "value": "Thu, 19 Nov 1981 08:52:00 GMT"
+                        },
+                        {
+                          "key": "Pragma",
+                          "value": "no-cache"
+                        },
+                        {
+                          "key": "Allow",
+                          "value": "GET, HEAD, POST, PUT, DELETE, OPTIONS"
+                        }
+                      ],
+                      "cookie": [],
+                      "responseTime": null,
+                      "body": "<response status=\"success\" code=\"19\">\n    <result>\n        <msg>\n            <line>Job enqueued with jobid 297</line>\n        </msg>\n        <job>297</job>\n    </result>\n</response>"
+                    }
+                  ]
+                }
+              ],
+              "_postman_id": "9a53e9c1-42d2-4538-a8b3-2655935f3068",
+              "description": "To centrally manage firewalls from Panorama, use the `commit-all` API request type to:\n\n- Validate and push shared policy to firewalls using device groups.\n- Validate and push configuration to firewalls and log collectors using templates and template stacks.",
+              "event": [
+                {
+                  "listen": "prerequest",
+                  "script": {
+                    "id": "244e3bea-2cd2-41ec-8571-8fd6f789f358",
+                    "type": "text/javascript",
+                    "exec": [
+                      ""
+                    ]
+                  }
+                },
+                {
+                  "listen": "test",
+                  "script": {
+                    "id": "422eafb0-6411-47dd-872b-680bfda94bb3",
+                    "type": "text/javascript",
+                    "exec": [
+                      ""
+                    ]
+                  }
+                }
+              ],
+              "_postman_isSubFolder": true
+            },
+            {
               "name": "Query commit job status",
               "_postman_id": "eb801c65-7bf7-45d7-ab98-45ade4ca0746",
               "protocolProfileBehavior": {
@@ -4404,13 +4868,13 @@
   ],
   "variable": [
     {
-      "id": "b755270d-43b7-48de-ae6f-86716521921e",
+      "id": "e83ac9c5-f36b-49da-963e-a4d3e9f529a9",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "1b192543-ff26-4b59-8d82-508dd64a00e2",
+      "id": "7685e00e-4639-4f76-9b5b-339acd23ea6b",
       "key": "{{key}}",
       "value": "",
       "type": "string"
