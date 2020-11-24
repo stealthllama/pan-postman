@@ -4036,7 +4036,7 @@
                   ]
                 },
                 {
-                  "name": "Virtual system (vsys) commit Copy",
+                  "name": "Specific firewall commit",
                   "_postman_id": "19891442-f639-43d8-81b7-fa562c18b0c8",
                   "protocolProfileBehavior": {
                     "disableBodyPruning": true
@@ -4536,13 +4536,13 @@
   ],
   "variable": [
     {
-      "id": "2d3fb206-41b2-4d8c-8192-bc7d0059d194",
+      "id": "f652288c-b8a4-40f4-a50c-5f3090af651e",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "31e03b80-5ce1-49b4-a79a-08ceafc9f9b3",
+      "id": "5903862d-ce4f-4617-a940-53ff72116596",
       "key": "{{key}}",
       "value": "",
       "type": "string"
