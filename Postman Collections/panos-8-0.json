@@ -4425,9 +4425,119 @@
               "request": {
                 "method": "GET",
                 "header": [],
-                "url": ""
+                "url": {
+                  "raw": "https://{{host}}/api/?type=op&cmd=<request><system><software><install><version>10.0.1</version></install></software></system></request>",
+                  "protocol": "https",
+                  "host": [
+                    "{{host}}"
+                  ],
+                  "path": [
+                    "api",
+                    ""
+                  ],
+                  "query": [
+                    {
+                      "key": "type",
+                      "value": "op"
+                    },
+                    {
+                      "key": "cmd",
+                      "value": "<request><system><software><install><version>10.0.1</version></install></software></system></request>"
+                    }
+                  ]
+                }
               },
-              "response": []
+              "response": [
+                {
+                  "id": "cdffc3bb-80b0-4c34-960d-cdc825906d66",
+                  "name": "System software version installation",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [],
+                    "url": {
+                      "raw": "https://{{host}}/api/?type=op&cmd=<request><system><software><install><version>10.0.1</version></install></software></system></request>",
+                      "protocol": "https",
+                      "host": [
+                        "{{host}}"
+                      ],
+                      "path": [
+                        "api",
+                        ""
+                      ],
+                      "query": [
+                        {
+                          "key": "type",
+                          "value": "op"
+                        },
+                        {
+                          "key": "cmd",
+                          "value": "<request><system><software><install><version>10.0.1</version></install></software></system></request>"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "xml",
+                  "header": [
+                    {
+                      "key": "Date",
+                      "value": "Tue, 24 Nov 2020 20:04:33 GMT"
+                    },
+                    {
+                      "key": "Content-Type",
+                      "value": "application/xml; charset=UTF-8"
+                    },
+                    {
+                      "key": "Content-Length",
+                      "value": "245"
+                    },
+                    {
+                      "key": "Connection",
+                      "value": "keep-alive"
+                    },
+                    {
+                      "key": "X-FRAME-OPTIONS",
+                      "value": "SAMEORIGIN"
+                    },
+                    {
+                      "key": "X-XSS-Protection",
+                      "value": "1; mode=block"
+                    },
+                    {
+                      "key": "X-Content-Type-Options",
+                      "value": "nosniff"
+                    },
+                    {
+                      "key": "Content-Security-Policy",
+                      "value": "default-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:;"
+                    },
+                    {
+                      "key": "Strict-Transport-Security",
+                      "value": "max-age=31536000"
+                    },
+                    {
+                      "key": "Cache-Control",
+                      "value": "no-store, no-cache, must-revalidate, post-check=0, pre-check=0"
+                    },
+                    {
+                      "key": "Expires",
+                      "value": "Thu, 19 Nov 1981 08:52:00 GMT"
+                    },
+                    {
+                      "key": "Pragma",
+                      "value": "no-cache"
+                    },
+                    {
+                      "key": "Allow",
+                      "value": "GET, HEAD, POST, PUT, DELETE, OPTIONS"
+                    }
+                  ],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "<response status=\"success\" code=\"19\">\n    <result>\n        <msg>\n            <line>Software install job enqueued with jobid 5. Run 'show jobs id 5' to monitor its status. Please reboot the device after the installation is done.</line>\n        </msg>\n        <job>5</job>\n    </result>\n</response>"
+                }
+              ]
             },
             {
               "name": "User Activity Report scheduling",
@@ -4784,13 +4894,13 @@
   ],
   "variable": [
     {
-      "id": "afc54151-55de-4f6d-a5ad-06fa4413b1bb",
+      "id": "94683da8-6f5e-46d6-bf4c-b2c6a4c1c94d",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "747515c3-9c94-483f-84cb-f8d4c314e1cc",
+      "id": "6ca0eb18-bd44-4af2-85bb-d531f360e5a0",
       "key": "{{key}}",
       "value": "",
       "type": "string"
