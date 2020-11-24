@@ -4694,6 +4694,19 @@
                 }
               },
               "response": []
+            },
+            {
+              "name": "Threat details",
+              "_postman_id": "839add73-3545-4581-83ca-7fdb734a0707",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": ""
+              },
+              "response": []
             }
           ],
           "_postman_id": "5f996648-39ef-462b-97fc-9b8c6c5bd21d",
@@ -4914,13 +4927,13 @@
   ],
   "variable": [
     {
-      "id": "8b86650b-d6aa-4b8c-9c6e-07daab9d3a18",
+      "id": "2430a0ae-273e-45e2-bb53-57988f991ab9",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "832161ba-07dd-41c8-b030-adbc0b873a4c",
+      "id": "a741f082-0409-4794-8c55-ee0ee6fd8887",
       "key": "{{key}}",
       "value": "",
       "type": "string"
