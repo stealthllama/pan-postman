@@ -2450,7 +2450,21 @@
             },
             {
               "name": "Override Configuration",
-              "item": [],
+              "item": [
+                {
+                  "name": "Override SNMP trap profile",
+                  "_postman_id": "03d72bb8-f062-42b7-9f44-95efaf361852",
+                  "protocolProfileBehavior": {
+                    "disableBodyPruning": true
+                  },
+                  "request": {
+                    "method": "GET",
+                    "header": [],
+                    "url": ""
+                  },
+                  "response": []
+                }
+              ],
               "_postman_id": "e56f3e70-96b5-4372-822c-07e4d55e7666",
               "description": "Use `action=override` to override a setting that was pushed to a firewall from a template.\n\nUse the `xpath` parameter to specify the location of the object to override.",
               "event": [
@@ -2673,13 +2687,13 @@
   ],
   "variable": [
     {
-      "id": "2dc4152c-6f55-49a0-9756-58e39e4a9b73",
+      "id": "ef202f0e-4648-4a7d-ae57-6d999b3794ee",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "a8bb5bb0-931e-4363-a1cc-4bcd0fe53bce",
+      "id": "2aa640da-4603-49ad-ad38-b0d2176a7794",
       "key": "{{key}}",
       "value": "",
       "type": "string"
