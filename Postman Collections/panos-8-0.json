@@ -5542,13 +5542,13 @@
   ],
   "variable": [
     {
-      "id": "90722b08-4167-4071-8e9c-b5e193a10e68",
+      "id": "54967800-4fc0-4001-83b6-8dbb02bad678",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "eff7d280-f44e-4dee-8c93-634c0a83ff73",
+      "id": "9cee5d4f-17b6-49ba-b13b-ecdb039a4def",
       "key": "{{key}}",
       "value": "",
       "type": "string"
