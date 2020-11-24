@@ -3746,6 +3746,20 @@
                     "description": "Commit the shared policy to firewalls in the device group `norcal`."
                   },
                   "response": []
+                },
+                {
+                  "name": "Specifc device group commit Copy",
+                  "_postman_id": "592298d7-4621-4781-be9a-f3d57ed18b75",
+                  "protocolProfileBehavior": {
+                    "disableBodyPruning": true
+                  },
+                  "request": {
+                    "method": "GET",
+                    "header": [],
+                    "url": "",
+                    "description": "Commit the shared policy to firewalls in the device group `norcal`."
+                  },
+                  "response": []
                 }
               ],
               "_postman_id": "4ffe6f09-9cb7-4997-9010-29629ba45b75",
@@ -4116,13 +4130,13 @@
   ],
   "variable": [
     {
-      "id": "f740dead-d3f6-46ff-b4e2-86b375116f4a",
+      "id": "58b424f6-4d50-4b37-b19a-3e5cedca23a8",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "6c370519-2aef-4e63-8da5-1bd9f4f62524",
+      "id": "62fe2ed3-0ffb-4bfc-9606-22e83f1de716",
       "key": "{{key}}",
       "value": "",
       "type": "string"
