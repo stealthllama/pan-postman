@@ -4850,7 +4850,8 @@
                       "value": "<validate><full></full></validate>"
                     }
                   ]
-                }
+                },
+                "description": "Validate the full config."
               },
               "response": [
                 {
@@ -6026,13 +6027,13 @@
   ],
   "variable": [
     {
-      "id": "f5ec075f-1979-4de8-8117-f8ab53310aa0",
+      "id": "663bf8a7-5a94-4335-9fe5-c0198666c34e",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "5fdc7024-8c32-4c83-9a59-8f27ad02a7b3",
+      "id": "2650762e-5513-4c4f-8202-13dbad7e2961",
       "key": "{{key}}",
       "value": "",
       "type": "string"
