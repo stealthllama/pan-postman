@@ -4974,7 +4974,8 @@
                       "value": "<validate><partial><device-and-network>excluded</device-and-network></partial></validate>"
                     }
                   ]
-                }
+                },
+                "description": "Validate a portion of the config."
               },
               "response": [
                 {
@@ -6027,13 +6028,13 @@
   ],
   "variable": [
     {
-      "id": "663bf8a7-5a94-4335-9fe5-c0198666c34e",
+      "id": "ccc0852f-e857-43b1-bdfd-64fbe12cd32e",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "2650762e-5513-4c4f-8202-13dbad7e2961",
+      "id": "b1f10ebe-2614-42be-8d1c-72d13e2b44e6",
       "key": "{{key}}",
       "value": "",
       "type": "string"
