@@ -4441,6 +4441,19 @@
                 "url": ""
               },
               "response": []
+            },
+            {
+              "name": "User Activity Report scheduling",
+              "_postman_id": "c4a02d5f-e0d9-4f0b-b7e3-964da835ac19",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": ""
+              },
+              "response": []
             }
           ],
           "_postman_id": "5f996648-39ef-462b-97fc-9b8c6c5bd21d",
@@ -4661,13 +4674,13 @@
   ],
   "variable": [
     {
-      "id": "0b46bc2b-aff3-489c-86bb-a0399cf986cb",
+      "id": "b59e90df-4dc7-4b22-ac2c-64d1d14ec7fa",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "52fe4d49-e652-4deb-a521-bd2e5c944a2d",
+      "id": "2bf522ac-4de8-441c-ad42-8e66e6acccae",
       "key": "{{key}}",
       "value": "",
       "type": "string"
