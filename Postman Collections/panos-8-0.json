@@ -4294,8 +4294,8 @@
           "name": "Operational Commands",
           "item": [
             {
-              "name": "Show op command status",
-              "_postman_id": "58b71197-dd47-444a-913f-b3a85e82cfc7",
+              "name": "System restart",
+              "_postman_id": "2b68b6ce-ec7f-4e22-ac27-4d55ee211bf8",
               "protocolProfileBehavior": {
                 "disableBodyPruning": true
               },
@@ -4307,8 +4307,8 @@
               "response": []
             },
             {
-              "name": "System restart",
-              "_postman_id": "2b68b6ce-ec7f-4e22-ac27-4d55ee211bf8",
+              "name": "Show op command status",
+              "_postman_id": "58b71197-dd47-444a-913f-b3a85e82cfc7",
               "protocolProfileBehavior": {
                 "disableBodyPruning": true
               },
@@ -4538,13 +4538,13 @@
   ],
   "variable": [
     {
-      "id": "6cdf48dd-e047-413a-8cb1-febbf500acae",
+      "id": "dde122a4-cda2-4a40-a9b3-90440a558c5e",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "517635b6-c905-45cf-8bbf-20815b0f0f6d",
+      "id": "05a98a05-908d-4c29-8038-9049a36a00c5",
       "key": "{{key}}",
       "value": "",
       "type": "string"
