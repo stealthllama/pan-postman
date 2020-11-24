@@ -2634,7 +2634,35 @@
                   "request": {
                     "method": "GET",
                     "header": [],
-                    "url": ""
+                    "url": {
+                      "raw": "https://{{host}}/api/?type=config&action=multi-move&to=/config/devices/entry[@name='localhost.localdomain']/device-group/entry[@name='norcal']/address&element=<selected-list><source xpath=\"/config/devices/entry[@name='localhost.localdomain']/devicegroup/entry[@name='socal']/address\"><member>addr1</member><member>addr2</member></source></selected-list><all-errors>no</all-errors>",
+                      "protocol": "https",
+                      "host": [
+                        "{{host}}"
+                      ],
+                      "path": [
+                        "api",
+                        ""
+                      ],
+                      "query": [
+                        {
+                          "key": "type",
+                          "value": "config"
+                        },
+                        {
+                          "key": "action",
+                          "value": "multi-move"
+                        },
+                        {
+                          "key": "to",
+                          "value": "/config/devices/entry[@name='localhost.localdomain']/device-group/entry[@name='norcal']/address"
+                        },
+                        {
+                          "key": "element",
+                          "value": "<selected-list><source xpath=\"/config/devices/entry[@name='localhost.localdomain']/devicegroup/entry[@name='socal']/address\"><member>addr1</member><member>addr2</member></source></selected-list><all-errors>no</all-errors>"
+                        }
+                      ]
+                    }
                   },
                   "response": []
                 }
@@ -2839,13 +2867,13 @@
   ],
   "variable": [
     {
-      "id": "813ca294-f3ac-4f2e-9af4-6f3f6f891297",
+      "id": "f3393793-76cb-4c77-93d5-95bdb2202a12",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "2952afd4-aa29-4849-8e0e-ed9d530e8227",
+      "id": "359007b8-1b8f-4cf3-8bcf-7b3fbdd642c0",
       "key": "{{key}}",
       "value": "",
       "type": "string"
