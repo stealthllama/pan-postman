@@ -4073,8 +4073,8 @@
                   },
                   "response": [
                     {
-                      "id": "802cadc5-dd2c-455b-b9d9-d2054cafe907",
-                      "name": "Virtual system (vsys) commit",
+                      "id": "7f2d1dae-1ae2-4c68-ba31-5846a7380930",
+                      "name": "Specific firewall commit",
                       "originalRequest": {
                         "method": "GET",
                         "header": [],
@@ -4104,66 +4104,11 @@
                           ]
                         }
                       },
-                      "status": "OK",
-                      "code": 200,
-                      "_postman_previewlanguage": "xml",
-                      "header": [
-                        {
-                          "key": "Date",
-                          "value": "Tue, 24 Nov 2020 16:27:30 GMT"
-                        },
-                        {
-                          "key": "Content-Type",
-                          "value": "application/xml; charset=UTF-8"
-                        },
-                        {
-                          "key": "Content-Length",
-                          "value": "130"
-                        },
-                        {
-                          "key": "Connection",
-                          "value": "keep-alive"
-                        },
-                        {
-                          "key": "X-FRAME-OPTIONS",
-                          "value": "SAMEORIGIN"
-                        },
-                        {
-                          "key": "X-XSS-Protection",
-                          "value": "1; mode=block"
-                        },
-                        {
-                          "key": "X-Content-Type-Options",
-                          "value": "nosniff"
-                        },
-                        {
-                          "key": "Content-Security-Policy",
-                          "value": "default-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:;"
-                        },
-                        {
-                          "key": "Strict-Transport-Security",
-                          "value": "max-age=31536000"
-                        },
-                        {
-                          "key": "Cache-Control",
-                          "value": "no-store, no-cache, must-revalidate, post-check=0, pre-check=0"
-                        },
-                        {
-                          "key": "Expires",
-                          "value": "Thu, 19 Nov 1981 08:52:00 GMT"
-                        },
-                        {
-                          "key": "Pragma",
-                          "value": "no-cache"
-                        },
-                        {
-                          "key": "Allow",
-                          "value": "GET, HEAD, POST, PUT, DELETE, OPTIONS"
-                        }
-                      ],
+                      "_postman_previewlanguage": null,
+                      "header": null,
                       "cookie": [],
                       "responseTime": null,
-                      "body": "<response status=\"success\" code=\"19\">\n    <result>\n        <msg>\n            <line>Job enqueued with jobid 297</line>\n        </msg>\n        <job>297</job>\n    </result>\n</response>"
+                      "body": null
                     }
                   ]
                 }
@@ -4500,6 +4445,12 @@
             }
           ],
           "_postman_isSubFolder": true
+        },
+        {
+          "name": "Operational Commands",
+          "item": [],
+          "_postman_id": "5f996648-39ef-462b-97fc-9b8c6c5bd21d",
+          "_postman_isSubFolder": true
         }
       ],
       "_postman_id": "3178f469-44ee-4373-82b4-9d5bdd5d59b8"
@@ -4536,13 +4487,13 @@
   ],
   "variable": [
     {
-      "id": "f652288c-b8a4-40f4-a50c-5f3090af651e",
+      "id": "0e13b82a-a314-484c-8e1d-90b1b215c552",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "5903862d-ce4f-4617-a940-53ff72116596",
+      "id": "0a5ba7d3-26d3-43e0-8e44-8c90e649d729",
       "key": "{{key}}",
       "value": "",
       "type": "string"
