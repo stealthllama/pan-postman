@@ -4417,8 +4417,8 @@
               ]
             },
             {
-              "name": "Show op command status",
-              "_postman_id": "58b71197-dd47-444a-913f-b3a85e82cfc7",
+              "name": "System software version installation",
+              "_postman_id": "e946a80d-799e-41ac-a67f-cbb04a568916",
               "protocolProfileBehavior": {
                 "disableBodyPruning": true
               },
@@ -4430,8 +4430,8 @@
               "response": []
             },
             {
-              "name": "System software version installation",
-              "_postman_id": "e946a80d-799e-41ac-a67f-cbb04a568916",
+              "name": "Show op command status",
+              "_postman_id": "58b71197-dd47-444a-913f-b3a85e82cfc7",
               "protocolProfileBehavior": {
                 "disableBodyPruning": true
               },
@@ -4661,13 +4661,13 @@
   ],
   "variable": [
     {
-      "id": "77242611-0d60-40e2-9aa9-8dfb883b7726",
+      "id": "0b46bc2b-aff3-489c-86bb-a0399cf986cb",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "4ed4f7d1-17a6-4f6c-8033-33df0dea7f99",
+      "id": "52fe4d49-e652-4deb-a521-bd2e5c944a2d",
       "key": "{{key}}",
       "value": "",
       "type": "string"
