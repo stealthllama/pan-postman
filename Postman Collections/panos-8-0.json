@@ -5222,7 +5222,8 @@
                       "value": "<load><config><from>config.xml</from></config></load>"
                     }
                   ]
-                }
+                },
+                "description": "Load the config from a local file."
               },
               "response": [
                 {
@@ -6029,13 +6030,13 @@
   ],
   "variable": [
     {
-      "id": "a32f5909-eed0-462a-bee0-68cce35466d1",
+      "id": "a00f66ac-0248-45b7-8ddc-07976c37a5d9",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "45c0edc6-4b06-45a8-8345-7fbbc56afbdd",
+      "id": "e1eb0606-630c-404c-8845-cdc972b27247",
       "key": "{{key}}",
       "value": "",
       "type": "string"
