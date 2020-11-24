@@ -3240,13 +3240,13 @@
                   },
                   "response": [
                     {
-                      "id": "05c8134a-b9b5-423e-ba75-c94774fcb274",
-                      "name": "Commit",
+                      "id": "523f841e-5694-4c47-af9f-f51e50ab6f16",
+                      "name": "Force commit",
                       "originalRequest": {
                         "method": "GET",
                         "header": [],
                         "url": {
-                          "raw": "https://{{host}}/api/?type=commit&cmd=<commit></commit>",
+                          "raw": "https://{{host}}/api/?type=commit&cmd=<commit><force></force></commit>",
                           "protocol": "https",
                           "host": [
                             "{{host}}"
@@ -3262,7 +3262,7 @@
                             },
                             {
                               "key": "cmd",
-                              "value": "<commit></commit>"
+                              "value": "<commit><force></force></commit>"
                             }
                           ]
                         }
@@ -3273,7 +3273,7 @@
                       "header": [
                         {
                           "key": "Date",
-                          "value": "Tue, 24 Nov 2020 15:46:56 GMT"
+                          "value": "Tue, 24 Nov 2020 15:53:04 GMT"
                         },
                         {
                           "key": "Content-Type",
@@ -3326,9 +3326,22 @@
                       ],
                       "cookie": [],
                       "responseTime": null,
-                      "body": "<response status=\"success\" code=\"19\">\n    <result>\n        <msg>\n            <line>Commit job enqueued with jobid 4</line>\n        </msg>\n        <job>4</job>\n    </result>\n</response>"
+                      "body": "<response status=\"success\" code=\"19\">\n    <result>\n        <msg>\n            <line>Commit job enqueued with jobid 7</line>\n        </msg>\n        <job>7</job>\n    </result>\n</response>"
                     }
                   ]
+                },
+                {
+                  "name": "Partial commit while excluding shared objects and device and network configuration",
+                  "_postman_id": "0c6f2c1c-1118-4ca8-acc8-cf212515babe",
+                  "protocolProfileBehavior": {
+                    "disableBodyPruning": true
+                  },
+                  "request": {
+                    "method": "GET",
+                    "header": [],
+                    "url": ""
+                  },
+                  "response": []
                 }
               ],
               "_postman_id": "90d96624-7d94-4518-b6c1-989630447158",
@@ -3676,13 +3689,13 @@
   ],
   "variable": [
     {
-      "id": "92d7ca9d-b562-4cc3-be8e-b000151ea096",
+      "id": "d64cb2d8-839c-4253-9d29-eb35591b48c1",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "eef4244d-b091-44d2-847f-6b8508f970ad",
+      "id": "ae0e1261-5d45-4031-a3fd-e66e4fe0e958",
       "key": "{{key}}",
       "value": "",
       "type": "string"
