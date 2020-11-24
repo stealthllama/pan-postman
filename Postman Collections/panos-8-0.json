@@ -3602,6 +3602,29 @@
               "name": "Commit-All",
               "item": [],
               "_postman_id": "4ffe6f09-9cb7-4997-9010-29629ba45b75",
+              "description": "To centrally manage firewalls from Panorama, use the `commit-all` API request type to:\n\n- Validate and push shared policy to firewalls using device groups.\n- Validate and push configuration to firewalls and log collectors using templates and template stacks.",
+              "event": [
+                {
+                  "listen": "prerequest",
+                  "script": {
+                    "id": "b32634a2-e7aa-45c0-948d-31c6edfc0cb5",
+                    "type": "text/javascript",
+                    "exec": [
+                      ""
+                    ]
+                  }
+                },
+                {
+                  "listen": "test",
+                  "script": {
+                    "id": "f9765791-106c-4d13-aee5-ba3c3bbde569",
+                    "type": "text/javascript",
+                    "exec": [
+                      ""
+                    ]
+                  }
+                }
+              ],
               "_postman_isSubFolder": true
             },
             {
@@ -3946,13 +3969,13 @@
   ],
   "variable": [
     {
-      "id": "e67a914c-c9d6-40b9-8b58-abaa6e1f1bda",
+      "id": "a082b169-d867-40ac-87b2-e4ee9b5d5ceb",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "c632a465-5a07-48c9-a6c7-19ce0c5faf49",
+      "id": "96ca7c13-2f75-4fea-927c-565412b825a0",
       "key": "{{key}}",
       "value": "",
       "type": "string"
