@@ -5690,9 +5690,119 @@
               "request": {
                 "method": "GET",
                 "header": [],
-                "url": ""
+                "url": {
+                  "raw": "https://{{host}}/api/?type=op&cmd=<show><commit-locks><vsys>all</vsys></commit-locks></show>",
+                  "protocol": "https",
+                  "host": [
+                    "{{host}}"
+                  ],
+                  "path": [
+                    "api",
+                    ""
+                  ],
+                  "query": [
+                    {
+                      "key": "type",
+                      "value": "op"
+                    },
+                    {
+                      "key": "cmd",
+                      "value": "<show><commit-locks><vsys>all</vsys></commit-locks></show>"
+                    }
+                  ]
+                }
               },
-              "response": []
+              "response": [
+                {
+                  "id": "4aac6beb-7404-49da-9bd3-746b0e8804f8",
+                  "name": "Show commit locks",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [],
+                    "url": {
+                      "raw": "https://{{host}}/api/?type=op&cmd=<show><commit-locks><vsys>all</vsys></commit-locks></show>",
+                      "protocol": "https",
+                      "host": [
+                        "{{host}}"
+                      ],
+                      "path": [
+                        "api",
+                        ""
+                      ],
+                      "query": [
+                        {
+                          "key": "type",
+                          "value": "op"
+                        },
+                        {
+                          "key": "cmd",
+                          "value": "<show><commit-locks><vsys>all</vsys></commit-locks></show>"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "xml",
+                  "header": [
+                    {
+                      "key": "Date",
+                      "value": "Tue, 24 Nov 2020 20:35:21 GMT"
+                    },
+                    {
+                      "key": "Content-Type",
+                      "value": "application/xml; charset=UTF-8"
+                    },
+                    {
+                      "key": "Content-Length",
+                      "value": "299"
+                    },
+                    {
+                      "key": "Connection",
+                      "value": "keep-alive"
+                    },
+                    {
+                      "key": "X-FRAME-OPTIONS",
+                      "value": "SAMEORIGIN"
+                    },
+                    {
+                      "key": "X-XSS-Protection",
+                      "value": "1; mode=block"
+                    },
+                    {
+                      "key": "X-Content-Type-Options",
+                      "value": "nosniff"
+                    },
+                    {
+                      "key": "Content-Security-Policy",
+                      "value": "default-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:;"
+                    },
+                    {
+                      "key": "Strict-Transport-Security",
+                      "value": "max-age=31536000"
+                    },
+                    {
+                      "key": "Cache-Control",
+                      "value": "no-store, no-cache, must-revalidate, post-check=0, pre-check=0"
+                    },
+                    {
+                      "key": "Expires",
+                      "value": "Thu, 19 Nov 1981 08:52:00 GMT"
+                    },
+                    {
+                      "key": "Pragma",
+                      "value": "no-cache"
+                    },
+                    {
+                      "key": "Allow",
+                      "value": "GET, HEAD, POST, PUT, DELETE, OPTIONS"
+                    }
+                  ],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "<response status=\"success\">\n    <result>\n        <commit-locks>\n            <entry name=\"admin\">\n                <type>shared</type>\n                <name>shared</name>\n                <created>2020/11/24 12:35:14</created>\n                <last-activity>2020/11/24 12:35:14</last-activity>\n                <loggedin>yes</loggedin>\n                <comment>\n                    <![CDATA[(null)]]>\n                </comment>\n            </entry>\n        </commit-locks>\n    </result>\n</response>"
+                }
+              ]
             }
           ],
           "_postman_id": "5f996648-39ef-462b-97fc-9b8c6c5bd21d",
@@ -5913,13 +6023,13 @@
   ],
   "variable": [
     {
-      "id": "daf07292-1f8b-4715-832a-b406eb6a29c1",
+      "id": "287cd80e-ef96-43cb-9f5c-ac73c28230c4",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "28a4816c-d9b2-4abc-bb76-c6af6634d1a8",
+      "id": "e30c140d-bc92-44f2-973c-018e7b8c0b41",
       "key": "{{key}}",
       "value": "",
       "type": "string"
