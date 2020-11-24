@@ -4168,7 +4168,8 @@
                       "value": "<show><jobs><id>6</id></jobs></show>"
                     }
                   ]
-                }
+                },
+                "description": "Retrieves the output of job id `6`, which was a commit job."
               },
               "response": [
                 {
@@ -4291,7 +4292,21 @@
         },
         {
           "name": "Operational Commands",
-          "item": [],
+          "item": [
+            {
+              "name": "Show op command status",
+              "_postman_id": "58b71197-dd47-444a-913f-b3a85e82cfc7",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": ""
+              },
+              "response": []
+            }
+          ],
           "_postman_id": "5f996648-39ef-462b-97fc-9b8c6c5bd21d",
           "description": "Use any of the operational mode commands available on the command line with the `type=op` command.\n\nSome operational commands, including download, upgrade, and installation requests, are asynchronous, meaning they require more than one request to get final results.",
           "event": [
@@ -4510,13 +4525,13 @@
   ],
   "variable": [
     {
-      "id": "422bca76-5f59-4ad4-8b70-cd3085445d6c",
+      "id": "8112be56-b1e9-45c0-b064-788e31338eb2",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "22f2b608-468f-40e0-a86d-766e9acdb78f",
+      "id": "f20e3d8a-7edc-483f-a3ee-cfe2513b5dd6",
       "key": "{{key}}",
       "value": "",
       "type": "string"
