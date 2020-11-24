@@ -2635,7 +2635,7 @@
                     "method": "GET",
                     "header": [],
                     "url": {
-                      "raw": "https://{{host}}/api/?type=config&action=multi-clone&xpath=/config/devices/entry[@name='localhost.localdomain']/device-group/entry[@name='norcal']/address",
+                      "raw": "https://{{host}}/api/?type=config&action=multi-move&xpath=/config/devices/entry[@name='localhost.localdomain']/device-group/entry[@name='norcal']/address&element=<selected-list><source xpath=\"/config/devices/entry[@name='localhost.localdomain']/device-group/entry[@name='socal']/address\"><member>addr1</member><member>addr2</member></source></selected-list><all-errors>no</all-errors>",
                       "protocol": "https",
                       "host": [
                         "{{host}}"
@@ -2651,7 +2651,7 @@
                         },
                         {
                           "key": "action",
-                          "value": "multi-clone"
+                          "value": "multi-move"
                         },
                         {
                           "key": "xpath",
@@ -2659,13 +2659,251 @@
                         },
                         {
                           "key": "element",
-                          "value": "<selected-list><source xpath=\"/config/devices/entry[@name='localhost.localdomain']/device-group/entry[@name='socal']/address\"><member>addr1</member><member>addr2</member></source></selected-list><all-errors>no</all-errors>",
-                          "disabled": true
+                          "value": "<selected-list><source xpath=\"/config/devices/entry[@name='localhost.localdomain']/device-group/entry[@name='socal']/address\"><member>addr1</member><member>addr2</member></source></selected-list><all-errors>no</all-errors>"
                         }
                       ]
-                    }
+                    },
+                    "description": "Move the address objects `addr1` and `addr2` from the `socal` device group to the `norcal` device group."
                   },
-                  "response": []
+                  "response": [
+                    {
+                      "id": "c798cb88-db29-48af-86d0-69e3db9d4343",
+                      "name": "Move addresses between device groups",
+                      "originalRequest": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                          "raw": "https://{{host}}/api/?type=config&action=multi-move&xpath=/config/devices/entry[@name='localhost.localdomain']/device-group/entry[@name='norcal']/address&element=<selected-list><source xpath=\"/config/devices/entry[@name='localhost.localdomain']/device-group/entry[@name='socal']/address\"><member>addr1</member><member>addr2</member></source></selected-list><all-errors>no</all-errors>",
+                          "protocol": "https",
+                          "host": [
+                            "{{host}}"
+                          ],
+                          "path": [
+                            "api",
+                            ""
+                          ],
+                          "query": [
+                            {
+                              "key": "type",
+                              "value": "config"
+                            },
+                            {
+                              "key": "action",
+                              "value": "multi-move"
+                            },
+                            {
+                              "key": "xpath",
+                              "value": "/config/devices/entry[@name='localhost.localdomain']/device-group/entry[@name='norcal']/address"
+                            },
+                            {
+                              "key": "element",
+                              "value": "<selected-list><source xpath=\"/config/devices/entry[@name='localhost.localdomain']/device-group/entry[@name='socal']/address\"><member>addr1</member><member>addr2</member></source></selected-list><all-errors>no</all-errors>"
+                            }
+                          ]
+                        }
+                      },
+                      "status": "OK",
+                      "code": 200,
+                      "_postman_previewlanguage": "xml",
+                      "header": [
+                        {
+                          "key": "Date",
+                          "value": "Tue, 24 Nov 2020 15:30:02 GMT"
+                        },
+                        {
+                          "key": "Content-Type",
+                          "value": "application/xml; charset=UTF-8"
+                        },
+                        {
+                          "key": "Content-Length",
+                          "value": "285"
+                        },
+                        {
+                          "key": "Connection",
+                          "value": "keep-alive"
+                        },
+                        {
+                          "key": "X-FRAME-OPTIONS",
+                          "value": "SAMEORIGIN"
+                        },
+                        {
+                          "key": "X-XSS-Protection",
+                          "value": "1; mode=block"
+                        },
+                        {
+                          "key": "X-Content-Type-Options",
+                          "value": "nosniff"
+                        },
+                        {
+                          "key": "Content-Security-Policy",
+                          "value": "default-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:;"
+                        },
+                        {
+                          "key": "Strict-Transport-Security",
+                          "value": "max-age=31536000"
+                        },
+                        {
+                          "key": "Cache-Control",
+                          "value": "no-store, no-cache, must-revalidate, post-check=0, pre-check=0"
+                        },
+                        {
+                          "key": "Expires",
+                          "value": "Thu, 19 Nov 1981 08:52:00 GMT"
+                        },
+                        {
+                          "key": "Pragma",
+                          "value": "no-cache"
+                        },
+                        {
+                          "key": "Allow",
+                          "value": "GET, HEAD, POST, PUT, DELETE, OPTIONS"
+                        }
+                      ],
+                      "cookie": [],
+                      "responseTime": null,
+                      "body": "<response status=\"success\" from=\"/config/devices/entry[@name='localhost.localdomain']/device-group/entry[@name='socal']/address\" to=\"/config/devices/entry[@name='localhost.localdomain']/device-group/entry[@name='norcal']/address\">\n    <member>addr1</member>\n    <member>addr2</member>\n</response>"
+                    }
+                  ]
+                },
+                {
+                  "name": "Move addresses between device groups Copy",
+                  "_postman_id": "699a8ba4-8ae9-438f-bce2-cb3a539abd96",
+                  "protocolProfileBehavior": {
+                    "disableBodyPruning": true
+                  },
+                  "request": {
+                    "method": "GET",
+                    "header": [],
+                    "url": {
+                      "raw": "https://{{host}}/api/?type=config&action=multi-move&xpath=/config/devices/entry[@name='localhost.localdomain']/device-group/entry[@name='norcal']/address&element=<selected-list><source xpath=\"/config/devices/entry[@name='localhost.localdomain']/device-group/entry[@name='socal']/address\"><member>addr1</member><member>addr2</member></source></selected-list><all-errors>no</all-errors>",
+                      "protocol": "https",
+                      "host": [
+                        "{{host}}"
+                      ],
+                      "path": [
+                        "api",
+                        ""
+                      ],
+                      "query": [
+                        {
+                          "key": "type",
+                          "value": "config"
+                        },
+                        {
+                          "key": "action",
+                          "value": "multi-move"
+                        },
+                        {
+                          "key": "xpath",
+                          "value": "/config/devices/entry[@name='localhost.localdomain']/device-group/entry[@name='norcal']/address"
+                        },
+                        {
+                          "key": "element",
+                          "value": "<selected-list><source xpath=\"/config/devices/entry[@name='localhost.localdomain']/device-group/entry[@name='socal']/address\"><member>addr1</member><member>addr2</member></source></selected-list><all-errors>no</all-errors>"
+                        }
+                      ]
+                    },
+                    "description": "Move the address objects `addr1` and `addr2` from the `socal` device group to the `norcal` device group."
+                  },
+                  "response": [
+                    {
+                      "id": "40b0ffc8-ba80-4439-99da-5e57fc6ccbf9",
+                      "name": "Move addresses between device groups",
+                      "originalRequest": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                          "raw": "https://{{host}}/api/?type=config&action=multi-move&xpath=/config/devices/entry[@name='localhost.localdomain']/device-group/entry[@name='norcal']/address&element=<selected-list><source xpath=\"/config/devices/entry[@name='localhost.localdomain']/device-group/entry[@name='socal']/address\"><member>addr1</member><member>addr2</member></source></selected-list><all-errors>no</all-errors>",
+                          "protocol": "https",
+                          "host": [
+                            "{{host}}"
+                          ],
+                          "path": [
+                            "api",
+                            ""
+                          ],
+                          "query": [
+                            {
+                              "key": "type",
+                              "value": "config"
+                            },
+                            {
+                              "key": "action",
+                              "value": "multi-move"
+                            },
+                            {
+                              "key": "xpath",
+                              "value": "/config/devices/entry[@name='localhost.localdomain']/device-group/entry[@name='norcal']/address"
+                            },
+                            {
+                              "key": "element",
+                              "value": "<selected-list><source xpath=\"/config/devices/entry[@name='localhost.localdomain']/device-group/entry[@name='socal']/address\"><member>addr1</member><member>addr2</member></source></selected-list><all-errors>no</all-errors>"
+                            }
+                          ]
+                        }
+                      },
+                      "status": "OK",
+                      "code": 200,
+                      "_postman_previewlanguage": "xml",
+                      "header": [
+                        {
+                          "key": "Date",
+                          "value": "Tue, 24 Nov 2020 15:30:02 GMT"
+                        },
+                        {
+                          "key": "Content-Type",
+                          "value": "application/xml; charset=UTF-8"
+                        },
+                        {
+                          "key": "Content-Length",
+                          "value": "285"
+                        },
+                        {
+                          "key": "Connection",
+                          "value": "keep-alive"
+                        },
+                        {
+                          "key": "X-FRAME-OPTIONS",
+                          "value": "SAMEORIGIN"
+                        },
+                        {
+                          "key": "X-XSS-Protection",
+                          "value": "1; mode=block"
+                        },
+                        {
+                          "key": "X-Content-Type-Options",
+                          "value": "nosniff"
+                        },
+                        {
+                          "key": "Content-Security-Policy",
+                          "value": "default-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:;"
+                        },
+                        {
+                          "key": "Strict-Transport-Security",
+                          "value": "max-age=31536000"
+                        },
+                        {
+                          "key": "Cache-Control",
+                          "value": "no-store, no-cache, must-revalidate, post-check=0, pre-check=0"
+                        },
+                        {
+                          "key": "Expires",
+                          "value": "Thu, 19 Nov 1981 08:52:00 GMT"
+                        },
+                        {
+                          "key": "Pragma",
+                          "value": "no-cache"
+                        },
+                        {
+                          "key": "Allow",
+                          "value": "GET, HEAD, POST, PUT, DELETE, OPTIONS"
+                        }
+                      ],
+                      "cookie": [],
+                      "responseTime": null,
+                      "body": "<response status=\"success\" from=\"/config/devices/entry[@name='localhost.localdomain']/device-group/entry[@name='socal']/address\" to=\"/config/devices/entry[@name='localhost.localdomain']/device-group/entry[@name='norcal']/address\">\n    <member>addr1</member>\n    <member>addr2</member>\n</response>"
+                    }
+                  ]
                 }
               ],
               "_postman_id": "a97f6a0b-e916-48ab-af31-69126c029301",
@@ -2684,7 +2922,31 @@
                   "request": {
                     "method": "GET",
                     "header": [],
-                    "url": "",
+                    "url": {
+                      "raw": "https://{{host}}/api/?type=config&action=complete&xpath=/config/devices/entry[@name='localhost.localdomain']/vsys",
+                      "protocol": "https",
+                      "host": [
+                        "{{host}}"
+                      ],
+                      "path": [
+                        "api",
+                        ""
+                      ],
+                      "query": [
+                        {
+                          "key": "type",
+                          "value": "config"
+                        },
+                        {
+                          "key": "action",
+                          "value": "complete"
+                        },
+                        {
+                          "key": "xpath",
+                          "value": "/config/devices/entry[@name='localhost.localdomain']/vsys"
+                        }
+                      ]
+                    },
                     "description": "Get all the possible values for `vsys` at this XPath."
                   },
                   "response": [
@@ -3006,13 +3268,13 @@
   ],
   "variable": [
     {
-      "id": "05522388-1d6c-4b85-ad2a-1bfb67bdbca9",
+      "id": "b33fea46-b697-4431-a32c-679cf9d953ba",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "5d93dd76-7bf1-4cde-b903-ed4b01d56089",
+      "id": "81c2d778-947a-4246-a557-57284e0cd910",
       "key": "{{key}}",
       "value": "",
       "type": "string"
