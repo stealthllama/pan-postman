@@ -3912,7 +3912,8 @@
                   "request": {
                     "method": "GET",
                     "header": [],
-                    "url": ""
+                    "url": "",
+                    "description": "Commit shared policy to a specific virtual system."
                   },
                   "response": []
                 }
@@ -4285,13 +4286,13 @@
   ],
   "variable": [
     {
-      "id": "70625c4d-c9ec-4d86-b937-5c8cd4f11dd0",
+      "id": "b6400f20-b0bd-4716-a664-9b47c1b3cc63",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "642e4099-5eb3-404a-bf0e-0cf17cfe856c",
+      "id": "74b45fda-b61d-46b9-9691-51f2de043b1d",
       "key": "{{key}}",
       "value": "",
       "type": "string"
