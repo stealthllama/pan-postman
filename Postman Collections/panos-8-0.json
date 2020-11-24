@@ -5472,7 +5472,8 @@
                       "type": "text"
                     }
                   ]
-                }
+                },
+                "description": "Revert changes made to Panorama by administrator `admin` in the device-group `norcal`."
               },
               "response": [
                 {
@@ -5595,7 +5596,8 @@
                       "value": "<show><config><list><change-summary/></list></config></show>"
                     }
                   ]
-                }
+                },
+                "description": "Show a summary of changes between the candidate and active configuration."
               },
               "response": [
                 {
@@ -5718,7 +5720,8 @@
                       "value": "<show><commit-locks><vsys>all</vsys></commit-locks></show>"
                     }
                   ]
-                }
+                },
+                "description": "Show commit locks for the device."
               },
               "response": [
                 {
@@ -6031,13 +6034,13 @@
   ],
   "variable": [
     {
-      "id": "a4721ab4-3504-4ee1-8317-03ba2919009d",
+      "id": "5f169689-7017-4bba-aa53-4fc6c7b86aa2",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "a0a5a7a1-67f6-4e72-bbd3-cd42bae2f365",
+      "id": "17f45e21-5a3a-442f-a2cc-ebb0917989b4",
       "key": "{{key}}",
       "value": "",
       "type": "string"
