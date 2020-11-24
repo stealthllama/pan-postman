@@ -4294,6 +4294,39 @@
           "name": "Operational Commands",
           "item": [
             {
+              "name": "Show op command status",
+              "_postman_id": "58b71197-dd47-444a-913f-b3a85e82cfc7",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "https://{{host}}/api/?type=op&cmd=<show><jobs><id></id></jobs></show>",
+                  "protocol": "https",
+                  "host": [
+                    "{{host}}"
+                  ],
+                  "path": [
+                    "api",
+                    ""
+                  ],
+                  "query": [
+                    {
+                      "key": "type",
+                      "value": "op"
+                    },
+                    {
+                      "key": "cmd",
+                      "value": "<show><jobs><id></id></jobs></show>"
+                    }
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
               "name": "System restart",
               "_postman_id": "2b68b6ce-ec7f-4e22-ac27-4d55ee211bf8",
               "protocolProfileBehavior": {
@@ -4661,39 +4694,6 @@
                   "body": "<response status=\"success\" code=\"19\">\n    <result>\n        <msg>\n            <line>Exec job enqueued with jobid 4</line>\n        </msg>\n        <job>4</job>\n    </result>\n</response>"
                 }
               ]
-            },
-            {
-              "name": "Show op command status",
-              "_postman_id": "58b71197-dd47-444a-913f-b3a85e82cfc7",
-              "protocolProfileBehavior": {
-                "disableBodyPruning": true
-              },
-              "request": {
-                "method": "GET",
-                "header": [],
-                "url": {
-                  "raw": "https://{{host}}/api/?type=op&cmd=<show><jobs><id></id></jobs></show>",
-                  "protocol": "https",
-                  "host": [
-                    "{{host}}"
-                  ],
-                  "path": [
-                    "api",
-                    ""
-                  ],
-                  "query": [
-                    {
-                      "key": "type",
-                      "value": "op"
-                    },
-                    {
-                      "key": "cmd",
-                      "value": "<show><jobs><id></id></jobs></show>"
-                    }
-                  ]
-                }
-              },
-              "response": []
             },
             {
               "name": "Threat signature details",
@@ -6023,13 +6023,13 @@
   ],
   "variable": [
     {
-      "id": "287cd80e-ef96-43cb-9f5c-ac73c28230c4",
+      "id": "3453252a-e199-4b77-9923-45f4820ed9cc",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "e30c140d-bc92-44f2-973c-018e7b8c0b41",
+      "id": "c3372f3e-8a80-4dd2-b417-94f749b64cf5",
       "key": "{{key}}",
       "value": "",
       "type": "string"
