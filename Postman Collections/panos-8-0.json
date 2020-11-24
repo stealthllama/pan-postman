@@ -3209,6 +3209,19 @@
               ],
               "_postman_id": "90d96624-7d94-4518-b6c1-989630447158",
               "_postman_isSubFolder": true
+            },
+            {
+              "name": "Query commit job status",
+              "_postman_id": "eb801c65-7bf7-45d7-ab98-45ade4ca0746",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": ""
+              },
+              "response": []
             }
           ],
           "_postman_id": "64d2721e-c645-4648-a4e8-5848d448bac5",
@@ -3429,13 +3442,13 @@
   ],
   "variable": [
     {
-      "id": "a91cc0d5-b877-4d0a-977a-bf0afa4e444c",
+      "id": "e8e65e42-956e-459d-9ff6-582fcaedc8ba",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "fd937ad4-3da1-4b9f-86c5-747797ddeec8",
+      "id": "f890db28-8012-49de-a320-6ae1b24da57e",
       "key": "{{key}}",
       "value": "",
       "type": "string"
