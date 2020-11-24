@@ -2805,7 +2805,105 @@
                     },
                     "description": "Clone the address objects `addr1` and `addr2` from the `socal` device group to the `norcal` device group."
                   },
-                  "response": []
+                  "response": [
+                    {
+                      "id": "4382b9d8-6485-4280-b68c-e4c55c55323b",
+                      "name": "Clone addresses between device groups",
+                      "originalRequest": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                          "raw": "https://{{host}}/api/?type=config&action=multi-clone&xpath=/config/devices/entry[@name='localhost.localdomain']/device-group/entry[@name='norcal']/address&element=<selected-list><source xpath=\"/config/devices/entry[@name='localhost.localdomain']/device-group/entry[@name='socal']/address\"><member>addr1</member><member>addr2</member></source></selected-list><all-errors>no</all-errors>",
+                          "protocol": "https",
+                          "host": [
+                            "{{host}}"
+                          ],
+                          "path": [
+                            "api",
+                            ""
+                          ],
+                          "query": [
+                            {
+                              "key": "type",
+                              "value": "config"
+                            },
+                            {
+                              "key": "action",
+                              "value": "multi-clone"
+                            },
+                            {
+                              "key": "xpath",
+                              "value": "/config/devices/entry[@name='localhost.localdomain']/device-group/entry[@name='norcal']/address"
+                            },
+                            {
+                              "key": "element",
+                              "value": "<selected-list><source xpath=\"/config/devices/entry[@name='localhost.localdomain']/device-group/entry[@name='socal']/address\"><member>addr1</member><member>addr2</member></source></selected-list><all-errors>no</all-errors>"
+                            }
+                          ]
+                        }
+                      },
+                      "status": "OK",
+                      "code": 200,
+                      "_postman_previewlanguage": "xml",
+                      "header": [
+                        {
+                          "key": "Date",
+                          "value": "Tue, 24 Nov 2020 15:33:29 GMT"
+                        },
+                        {
+                          "key": "Content-Type",
+                          "value": "application/xml; charset=UTF-8"
+                        },
+                        {
+                          "key": "Content-Length",
+                          "value": "187"
+                        },
+                        {
+                          "key": "Connection",
+                          "value": "keep-alive"
+                        },
+                        {
+                          "key": "X-FRAME-OPTIONS",
+                          "value": "SAMEORIGIN"
+                        },
+                        {
+                          "key": "X-XSS-Protection",
+                          "value": "1; mode=block"
+                        },
+                        {
+                          "key": "X-Content-Type-Options",
+                          "value": "nosniff"
+                        },
+                        {
+                          "key": "Content-Security-Policy",
+                          "value": "default-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:;"
+                        },
+                        {
+                          "key": "Strict-Transport-Security",
+                          "value": "max-age=31536000"
+                        },
+                        {
+                          "key": "Cache-Control",
+                          "value": "no-store, no-cache, must-revalidate, post-check=0, pre-check=0"
+                        },
+                        {
+                          "key": "Expires",
+                          "value": "Thu, 19 Nov 1981 08:52:00 GMT"
+                        },
+                        {
+                          "key": "Pragma",
+                          "value": "no-cache"
+                        },
+                        {
+                          "key": "Allow",
+                          "value": "GET, HEAD, POST, PUT, DELETE, OPTIONS"
+                        }
+                      ],
+                      "cookie": [],
+                      "responseTime": null,
+                      "body": "<response status=\"success\" to=\"/config/devices/entry[@name='localhost.localdomain']/device-group/entry[@name='norcal']/address\">\n    <member>addr1-1</member>\n    <member>addr2-1</member>\n</response>"
+                    }
+                  ]
                 }
               ],
               "_postman_id": "a97f6a0b-e916-48ab-af31-69126c029301",
@@ -3134,6 +3232,12 @@
             }
           ],
           "_postman_isSubFolder": true
+        },
+        {
+          "name": "Commit Configuration",
+          "item": [],
+          "_postman_id": "64d2721e-c645-4648-a4e8-5848d448bac5",
+          "_postman_isSubFolder": true
         }
       ],
       "_postman_id": "3178f469-44ee-4373-82b4-9d5bdd5d59b8"
@@ -3170,13 +3274,13 @@
   ],
   "variable": [
     {
-      "id": "39335098-abc4-4ba9-9b43-975fa7f11f24",
+      "id": "672d24b2-edcf-49d9-902d-cfcfb8c7b1e8",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "c1cd4475-6fc4-4d17-823b-a0342313a715",
+      "id": "0040d563-2e66-42f1-a1dd-c1b5b2cffbd1",
       "key": "{{key}}",
       "value": "",
       "type": "string"
