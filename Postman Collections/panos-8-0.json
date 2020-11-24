@@ -2635,7 +2635,7 @@
                     "method": "GET",
                     "header": [],
                     "url": {
-                      "raw": "https://{{host}}/api/?type=config&action=multi-move&xpath=/config/devices/entry[@name='localhost.localdomain']/device-group/entry[@name='norcal']/address&element=<selected-list><source xpath=\"/config/devices/entry[@name='localhost.localdomain']/devicegroup/entry[@name='socal']/address\"><member>addr1</member><member>addr2</member></source></selected-list><all-errors>no</all-errors>",
+                      "raw": "https://{{host}}/api/?type=config&action=multi-clone&xpath=/config/devices/entry[@name='localhost.localdomain']/device-group/entry[@name='norcal']/address",
                       "protocol": "https",
                       "host": [
                         "{{host}}"
@@ -2647,23 +2647,20 @@
                       "query": [
                         {
                           "key": "type",
-                          "value": "config",
-                          "type": "text"
+                          "value": "config"
                         },
                         {
                           "key": "action",
-                          "value": "multi-move",
-                          "type": "text"
+                          "value": "multi-clone"
                         },
                         {
                           "key": "xpath",
-                          "value": "/config/devices/entry[@name='localhost.localdomain']/device-group/entry[@name='norcal']/address",
-                          "type": "text"
+                          "value": "/config/devices/entry[@name='localhost.localdomain']/device-group/entry[@name='norcal']/address"
                         },
                         {
                           "key": "element",
-                          "value": "<selected-list><source xpath=\"/config/devices/entry[@name='localhost.localdomain']/devicegroup/entry[@name='socal']/address\"><member>addr1</member><member>addr2</member></source></selected-list><all-errors>no</all-errors>",
-                          "type": "text"
+                          "value": "<selected-list><source xpath=\"/config/devices/entry[@name='localhost.localdomain']/device-group/entry[@name='socal']/address\"><member>addr1</member><member>addr2</member></source></selected-list><all-errors>no</all-errors>",
+                          "disabled": true
                         }
                       ]
                     }
@@ -2673,6 +2670,49 @@
               ],
               "_postman_id": "a97f6a0b-e916-48ab-af31-69126c029301",
               "description": "Use the `action=multi-move` and `action=multi-clone` actions to move and clone addresses across device groups and virtual systems.  Templates do not support the multi-move and multi-clone capability.",
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "View Configuration Node Values for XPath",
+              "item": [
+                {
+                  "name": "Get possible virtual systems",
+                  "_postman_id": "feabb078-1c3e-45c3-bc4b-fe6b073ada3e",
+                  "protocolProfileBehavior": {
+                    "disableBodyPruning": true
+                  },
+                  "request": {
+                    "method": "GET",
+                    "header": [],
+                    "url": ""
+                  },
+                  "response": []
+                }
+              ],
+              "_postman_id": "2692481d-2410-49da-89e6-dc5d8f617352",
+              "description": "Use `action=complete` along with an XPath to see possible values that are available with the XPath node.",
+              "event": [
+                {
+                  "listen": "prerequest",
+                  "script": {
+                    "id": "1f55a5a6-32c9-4ef9-be8b-ec17303d6264",
+                    "type": "text/javascript",
+                    "exec": [
+                      ""
+                    ]
+                  }
+                },
+                {
+                  "listen": "test",
+                  "script": {
+                    "id": "107c5a3e-f881-44a5-9663-f06688624246",
+                    "type": "text/javascript",
+                    "exec": [
+                      ""
+                    ]
+                  }
+                }
+              ],
               "_postman_isSubFolder": true
             }
           ],
@@ -2871,13 +2911,13 @@
   ],
   "variable": [
     {
-      "id": "723f3514-3f6b-484c-a58b-af0714da4b29",
+      "id": "2dc42bf0-1064-4d1e-b580-117d00291510",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "4c0444da-0547-41da-8ba1-d8dfd74a41da",
+      "id": "a88ca0e0-3d01-4af6-81b9-fd587e0eaec2",
       "key": "{{key}}",
       "value": "",
       "type": "string"
