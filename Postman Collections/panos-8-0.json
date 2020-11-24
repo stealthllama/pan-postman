@@ -5188,7 +5188,7 @@
               ]
             },
             {
-              "name": "Configuration loading",
+              "name": "Load config",
               "_postman_id": "97d2e1e8-0cf6-4519-ae0b-73c9c4c6a022",
               "protocolProfileBehavior": {
                 "disableBodyPruning": true
@@ -5419,13 +5419,13 @@
   ],
   "variable": [
     {
-      "id": "44c75ede-d6f6-450d-87c3-872413b764de",
+      "id": "efa2e5e1-de82-4945-9ea7-d71b7d2fe13f",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "21c0453b-ba2c-44de-a8f4-2b716563417f",
+      "id": "c463a138-0092-4382-b0a8-d9ab57416dd6",
       "key": "{{key}}",
       "value": "",
       "type": "string"
