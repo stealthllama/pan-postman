@@ -2839,13 +2839,13 @@
   ],
   "variable": [
     {
-      "id": "491871f8-b97f-47ff-9d89-6706a9723ca8",
+      "id": "813ca294-f3ac-4f2e-9af4-6f3f6f891297",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "2e218126-0d43-4b02-b410-4542f16054be",
+      "id": "2952afd4-aa29-4849-8e0e-ed9d530e8227",
       "key": "{{key}}",
       "value": "",
       "type": "string"
