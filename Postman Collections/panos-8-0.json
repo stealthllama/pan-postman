@@ -5218,6 +5218,109 @@
                   ]
                 }
               },
+              "response": [
+                {
+                  "id": "61bfde14-6aef-4bcd-9491-320209a9ebf9",
+                  "name": "Load config",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [],
+                    "url": {
+                      "raw": "https://{{host}}/api/?type=op&cmd=<load><config><from>config.xml</from></config></load>",
+                      "protocol": "https",
+                      "host": [
+                        "{{host}}"
+                      ],
+                      "path": [
+                        "api",
+                        ""
+                      ],
+                      "query": [
+                        {
+                          "key": "type",
+                          "value": "op"
+                        },
+                        {
+                          "key": "cmd",
+                          "value": "<load><config><from>config.xml</from></config></load>"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "xml",
+                  "header": [
+                    {
+                      "key": "Date",
+                      "value": "Tue, 24 Nov 2020 20:20:07 GMT"
+                    },
+                    {
+                      "key": "Content-Type",
+                      "value": "application/xml; charset=UTF-8"
+                    },
+                    {
+                      "key": "Content-Length",
+                      "value": "132"
+                    },
+                    {
+                      "key": "Connection",
+                      "value": "keep-alive"
+                    },
+                    {
+                      "key": "X-FRAME-OPTIONS",
+                      "value": "SAMEORIGIN"
+                    },
+                    {
+                      "key": "X-XSS-Protection",
+                      "value": "1; mode=block"
+                    },
+                    {
+                      "key": "X-Content-Type-Options",
+                      "value": "nosniff"
+                    },
+                    {
+                      "key": "Content-Security-Policy",
+                      "value": "default-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:;"
+                    },
+                    {
+                      "key": "Strict-Transport-Security",
+                      "value": "max-age=31536000"
+                    },
+                    {
+                      "key": "Cache-Control",
+                      "value": "no-store, no-cache, must-revalidate, post-check=0, pre-check=0"
+                    },
+                    {
+                      "key": "Expires",
+                      "value": "Thu, 19 Nov 1981 08:52:00 GMT"
+                    },
+                    {
+                      "key": "Pragma",
+                      "value": "no-cache"
+                    },
+                    {
+                      "key": "Allow",
+                      "value": "GET, HEAD, POST, PUT, DELETE, OPTIONS"
+                    }
+                  ],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "<response status=\"success\">\n    <result>\n        <msg>\n            <line>\n                <msg>\n                    <line>Config loaded from config.xml</line>\n                </msg>\n            </line>\n        </msg>\n    </result>\n</response>"
+                }
+              ]
+            },
+            {
+              "name": "Partial revert of admin-level changes",
+              "_postman_id": "1b13e832-6d66-4fea-868d-d41c91f97f0b",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": ""
+              },
               "response": []
             }
           ],
@@ -5439,13 +5542,13 @@
   ],
   "variable": [
     {
-      "id": "6937c5ea-91ea-4607-8b70-85bc3fdc885d",
+      "id": "90722b08-4167-4071-8e9c-b5e193a10e68",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "c2d4bcc2-4f16-40d0-8167-d09c773c841d",
+      "id": "eff7d280-f44e-4dee-8c93-634c0a83ff73",
       "key": "{{key}}",
       "value": "",
       "type": "string"
