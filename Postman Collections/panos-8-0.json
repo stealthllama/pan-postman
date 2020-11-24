@@ -4478,7 +4478,8 @@
                       "value": "<request><system><software><install><version>10.0.1</version></install></software></system></request>"
                     }
                   ]
-                }
+                },
+                "description": "Installs PAN-OS 10.0.1 on this device.\n\nAsynchronous command - check result with \"show op command status\"."
               },
               "response": [
                 {
@@ -6023,13 +6024,13 @@
   ],
   "variable": [
     {
-      "id": "3453252a-e199-4b77-9923-45f4820ed9cc",
+      "id": "7ae5fbfb-8131-4d21-9c55-d8085be6edb9",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "c3372f3e-8a80-4dd2-b417-94f749b64cf5",
+      "id": "bad53e18-dd0e-4129-b706-96cd8db20785",
       "key": "{{key}}",
       "value": "",
       "type": "string"
