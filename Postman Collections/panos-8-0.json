@@ -3757,9 +3757,103 @@
                     "method": "GET",
                     "header": [],
                     "url": "",
-                    "description": "Commit the shared policy to firewalls in the device group `norcal`."
+                    "description": "Commit the shared policy to firewalls in the device group `norcal`, without including template changes."
                   },
-                  "response": []
+                  "response": [
+                    {
+                      "id": "baeb0664-88b6-4b0e-bae0-c971014b7e7b",
+                      "name": "Specifc device group commit without including template changes",
+                      "originalRequest": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                          "raw": "https://{{host}}/api/?type=commit&action=all&cmd=<commit-all><shared-policy><include-template>no</include-template><device-group><entry name=\"norcal\"/></device-group></shared-policy></commit-all>",
+                          "protocol": "https",
+                          "host": [
+                            "{{host}}"
+                          ],
+                          "path": [
+                            "api",
+                            ""
+                          ],
+                          "query": [
+                            {
+                              "key": "type",
+                              "value": "commit"
+                            },
+                            {
+                              "key": "action",
+                              "value": "all"
+                            },
+                            {
+                              "key": "cmd",
+                              "value": "<commit-all><shared-policy><include-template>no</include-template><device-group><entry name=\"norcal\"/></device-group></shared-policy></commit-all>"
+                            }
+                          ]
+                        }
+                      },
+                      "status": "OK",
+                      "code": 200,
+                      "_postman_previewlanguage": "xml",
+                      "header": [
+                        {
+                          "key": "Date",
+                          "value": "Tue, 24 Nov 2020 16:22:58 GMT"
+                        },
+                        {
+                          "key": "Content-Type",
+                          "value": "application/xml; charset=UTF-8"
+                        },
+                        {
+                          "key": "Content-Length",
+                          "value": "130"
+                        },
+                        {
+                          "key": "Connection",
+                          "value": "keep-alive"
+                        },
+                        {
+                          "key": "X-FRAME-OPTIONS",
+                          "value": "SAMEORIGIN"
+                        },
+                        {
+                          "key": "X-XSS-Protection",
+                          "value": "1; mode=block"
+                        },
+                        {
+                          "key": "X-Content-Type-Options",
+                          "value": "nosniff"
+                        },
+                        {
+                          "key": "Content-Security-Policy",
+                          "value": "default-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:;"
+                        },
+                        {
+                          "key": "Strict-Transport-Security",
+                          "value": "max-age=31536000"
+                        },
+                        {
+                          "key": "Cache-Control",
+                          "value": "no-store, no-cache, must-revalidate, post-check=0, pre-check=0"
+                        },
+                        {
+                          "key": "Expires",
+                          "value": "Thu, 19 Nov 1981 08:52:00 GMT"
+                        },
+                        {
+                          "key": "Pragma",
+                          "value": "no-cache"
+                        },
+                        {
+                          "key": "Allow",
+                          "value": "GET, HEAD, POST, PUT, DELETE, OPTIONS"
+                        }
+                      ],
+                      "cookie": [],
+                      "responseTime": null,
+                      "body": "<response status=\"success\" code=\"19\">\n    <result>\n        <msg>\n            <line>Job enqueued with jobid 294</line>\n        </msg>\n        <job>294</job>\n    </result>\n</response>"
+                    }
+                  ]
                 }
               ],
               "_postman_id": "4ffe6f09-9cb7-4997-9010-29629ba45b75",
@@ -4130,13 +4224,13 @@
   ],
   "variable": [
     {
-      "id": "7065e737-65e1-46fc-aa2a-c32c6b7384b8",
+      "id": "2ec97f21-cd88-4b95-946e-40596ea88468",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "0fdb3b32-99fe-41ff-aa7a-6f81ede36c63",
+      "id": "5284e2a3-e800-4382-8d68-d8a60f6d5a90",
       "key": "{{key}}",
       "value": "",
       "type": "string"
