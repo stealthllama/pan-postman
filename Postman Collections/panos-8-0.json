@@ -4428,6 +4428,19 @@
                 "url": ""
               },
               "response": []
+            },
+            {
+              "name": "System software version installation",
+              "_postman_id": "e946a80d-799e-41ac-a67f-cbb04a568916",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": ""
+              },
+              "response": []
             }
           ],
           "_postman_id": "5f996648-39ef-462b-97fc-9b8c6c5bd21d",
@@ -4648,13 +4661,13 @@
   ],
   "variable": [
     {
-      "id": "b1da76fb-013b-4828-a49b-0e660ddd33a7",
+      "id": "77242611-0d60-40e2-9aa9-8dfb883b7726",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "319bac8b-6654-4a13-a597-6d340d758abd",
+      "id": "4ed4f7d1-17a6-4f6c-8033-33df0dea7f99",
       "key": "{{key}}",
       "value": "",
       "type": "string"
