@@ -3748,7 +3748,7 @@
                   "response": []
                 },
                 {
-                  "name": "Specifc device group commit Copy",
+                  "name": "Specifc device group commit without including template changes",
                   "_postman_id": "592298d7-4621-4781-be9a-f3d57ed18b75",
                   "protocolProfileBehavior": {
                     "disableBodyPruning": true
@@ -4130,13 +4130,13 @@
   ],
   "variable": [
     {
-      "id": "58b424f6-4d50-4b37-b19a-3e5cedca23a8",
+      "id": "7065e737-65e1-46fc-aa2a-c32c6b7384b8",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "62fe2ed3-0ffb-4bfc-9606-22e83f1de716",
+      "id": "0fdb3b32-99fe-41ff-aa7a-6f81ede36c63",
       "key": "{{key}}",
       "value": "",
       "type": "string"
