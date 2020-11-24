@@ -2635,7 +2635,7 @@
                     "method": "GET",
                     "header": [],
                     "url": {
-                      "raw": "https://{{host}}/api/?type=config&action=multi-move&to=/config/devices/entry[@name='localhost.localdomain']/device-group/entry[@name='norcal']/address&element=<selected-list><source xpath=\"/config/devices/entry[@name='localhost.localdomain']/devicegroup/entry[@name='socal']/address\"><member>addr1</member><member>addr2</member></source></selected-list><all-errors>no</all-errors>",
+                      "raw": "https://{{host}}/api/?type=config&action=multi-move&xpath=/config/devices/entry[@name='localhost.localdomain']/device-group/entry[@name='norcal']/address&element=<selected-list><source xpath=\"/config/devices/entry[@name='localhost.localdomain']/devicegroup/entry[@name='socal']/address\"><member>addr1</member><member>addr2</member></source></selected-list><all-errors>no</all-errors>",
                       "protocol": "https",
                       "host": [
                         "{{host}}"
@@ -2647,19 +2647,23 @@
                       "query": [
                         {
                           "key": "type",
-                          "value": "config"
+                          "value": "config",
+                          "type": "text"
                         },
                         {
                           "key": "action",
-                          "value": "multi-move"
+                          "value": "multi-move",
+                          "type": "text"
                         },
                         {
-                          "key": "to",
-                          "value": "/config/devices/entry[@name='localhost.localdomain']/device-group/entry[@name='norcal']/address"
+                          "key": "xpath",
+                          "value": "/config/devices/entry[@name='localhost.localdomain']/device-group/entry[@name='norcal']/address",
+                          "type": "text"
                         },
                         {
                           "key": "element",
-                          "value": "<selected-list><source xpath=\"/config/devices/entry[@name='localhost.localdomain']/devicegroup/entry[@name='socal']/address\"><member>addr1</member><member>addr2</member></source></selected-list><all-errors>no</all-errors>"
+                          "value": "<selected-list><source xpath=\"/config/devices/entry[@name='localhost.localdomain']/devicegroup/entry[@name='socal']/address\"><member>addr1</member><member>addr2</member></source></selected-list><all-errors>no</all-errors>",
+                          "type": "text"
                         }
                       ]
                     }
@@ -2867,13 +2871,13 @@
   ],
   "variable": [
     {
-      "id": "f3393793-76cb-4c77-93d5-95bdb2202a12",
+      "id": "723f3514-3f6b-484c-a58b-af0714da4b29",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "359007b8-1b8f-4cf3-8bcf-7b3fbdd642c0",
+      "id": "4c0444da-0547-41da-8ba1-d8dfd74a41da",
       "key": "{{key}}",
       "value": "",
       "type": "string"
