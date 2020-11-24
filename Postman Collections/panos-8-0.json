@@ -5196,7 +5196,27 @@
               "request": {
                 "method": "GET",
                 "header": [],
-                "url": ""
+                "url": {
+                  "raw": "https://{{host}}/api/?type=op&cmd=<load><config><from>config.xml</from></config></load>",
+                  "protocol": "https",
+                  "host": [
+                    "{{host}}"
+                  ],
+                  "path": [
+                    "api",
+                    ""
+                  ],
+                  "query": [
+                    {
+                      "key": "type",
+                      "value": "op"
+                    },
+                    {
+                      "key": "cmd",
+                      "value": "<load><config><from>config.xml</from></config></load>"
+                    }
+                  ]
+                }
               },
               "response": []
             }
@@ -5419,13 +5439,13 @@
   ],
   "variable": [
     {
-      "id": "efa2e5e1-de82-4945-9ea7-d71b7d2fe13f",
+      "id": "6937c5ea-91ea-4607-8b70-85bc3fdc885d",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "c463a138-0092-4382-b0a8-d9ab57416dd6",
+      "id": "c2d4bcc2-4f16-40d0-8167-d09c773c841d",
       "key": "{{key}}",
       "value": "",
       "type": "string"
