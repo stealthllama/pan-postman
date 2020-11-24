@@ -5065,7 +5065,7 @@
               ]
             },
             {
-              "name": "Configuration saving",
+              "name": "Save config",
               "_postman_id": "b0c1fd3b-f789-4e75-b640-17fe270ae97a",
               "protocolProfileBehavior": {
                 "disableBodyPruning": true
@@ -5419,13 +5419,13 @@
   ],
   "variable": [
     {
-      "id": "7c614ccf-061f-4b8c-8ce5-d4157a1a9a0b",
+      "id": "44c75ede-d6f6-450d-87c3-872413b764de",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "d263dca0-8e88-46f1-af0d-2e1d090cee83",
+      "id": "21c0453b-ba2c-44de-a8f4-2b716563417f",
       "key": "{{key}}",
       "value": "",
       "type": "string"
