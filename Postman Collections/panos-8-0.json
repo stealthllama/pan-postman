@@ -5098,7 +5098,8 @@
                       "value": "<save><config><to>config.xml</to></config></save>"
                     }
                   ]
-                }
+                },
+                "description": "Save the current config to a local file."
               },
               "response": [
                 {
@@ -6028,13 +6029,13 @@
   ],
   "variable": [
     {
-      "id": "ccc0852f-e857-43b1-bdfd-64fbe12cd32e",
+      "id": "a32f5909-eed0-462a-bee0-68cce35466d1",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "b1f10ebe-2614-42be-8d1c-72d13e2b44e6",
+      "id": "45c0edc6-4b06-45a8-8345-7fbbc56afbdd",
       "key": "{{key}}",
       "value": "",
       "type": "string"
