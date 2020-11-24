@@ -4817,6 +4817,19 @@
                   "body": "<response status=\"success\">\n    <result>\n        <entry name=\"30003\" p=\"yes\">\n            <threatname>Microsoft Windows DCOM RPC Interface Buffer Overrun Vulnerability</threatname>\n            <cve xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\n                <member>CVE-2003-0352</member>\n            </cve>\n            <vendor xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\n                <member>MS03-026</member>\n            </vendor>\n            <category>code-execution</category>\n            <severity>critical</severity>\n            <engine-version min=\"1.0\"/>\n            <affected-host>\n                <server>yes</server>\n            </affected-host>\n            <default-action>reset-server</default-action>\n        </entry>\n    </result>\n</response>"
                 }
               ]
+            },
+            {
+              "name": "Validate full config",
+              "_postman_id": "f91153bb-5b8c-46ef-941e-1e164b24ec17",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": ""
+              },
+              "response": []
             }
           ],
           "_postman_id": "5f996648-39ef-462b-97fc-9b8c6c5bd21d",
@@ -5037,13 +5050,13 @@
   ],
   "variable": [
     {
-      "id": "8ef1dd99-e95e-45df-8374-eb212f05e1a4",
+      "id": "80206b92-67eb-497c-9dc7-6595ee2400d7",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "2eb6ab70-b7c4-42c6-b48a-2e5163d8b5dd",
+      "id": "61371fe2-0238-4c16-88cc-764a8e677943",
       "key": "{{key}}",
       "value": "",
       "type": "string"
