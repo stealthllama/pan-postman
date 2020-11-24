@@ -4430,21 +4430,131 @@
               "response": []
             },
             {
-              "name": "Show op command status",
-              "_postman_id": "58b71197-dd47-444a-913f-b3a85e82cfc7",
+              "name": "User Activity Report scheduling",
+              "_postman_id": "c4a02d5f-e0d9-4f0b-b7e3-964da835ac19",
               "protocolProfileBehavior": {
                 "disableBodyPruning": true
               },
               "request": {
                 "method": "GET",
                 "header": [],
-                "url": ""
+                "url": {
+                  "raw": "https://{{host}}/api/?type=op&cmd=<schedule><uar-report><user>user</user><title>title</title></uar-report></schedule>",
+                  "protocol": "https",
+                  "host": [
+                    "{{host}}"
+                  ],
+                  "path": [
+                    "api",
+                    ""
+                  ],
+                  "query": [
+                    {
+                      "key": "type",
+                      "value": "op"
+                    },
+                    {
+                      "key": "cmd",
+                      "value": "<schedule><uar-report><user>user</user><title>title</title></uar-report></schedule>"
+                    }
+                  ]
+                }
               },
-              "response": []
+              "response": [
+                {
+                  "id": "ebfca3a0-f49e-45c4-9f5e-384886ca68c3",
+                  "name": "User Activity Report scheduling",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [],
+                    "url": {
+                      "raw": "https://{{host}}/api/?type=op&cmd=<schedule><uar-report><user>user</user><title>title</title></uar-report></schedule>",
+                      "protocol": "https",
+                      "host": [
+                        "{{host}}"
+                      ],
+                      "path": [
+                        "api",
+                        ""
+                      ],
+                      "query": [
+                        {
+                          "key": "type",
+                          "value": "op"
+                        },
+                        {
+                          "key": "cmd",
+                          "value": "<schedule><uar-report><user>user</user><title>title</title></uar-report></schedule>"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "xml",
+                  "header": [
+                    {
+                      "key": "Date",
+                      "value": "Tue, 24 Nov 2020 20:04:16 GMT"
+                    },
+                    {
+                      "key": "Content-Type",
+                      "value": "application/xml; charset=UTF-8"
+                    },
+                    {
+                      "key": "Content-Length",
+                      "value": "131"
+                    },
+                    {
+                      "key": "Connection",
+                      "value": "keep-alive"
+                    },
+                    {
+                      "key": "X-FRAME-OPTIONS",
+                      "value": "SAMEORIGIN"
+                    },
+                    {
+                      "key": "X-XSS-Protection",
+                      "value": "1; mode=block"
+                    },
+                    {
+                      "key": "X-Content-Type-Options",
+                      "value": "nosniff"
+                    },
+                    {
+                      "key": "Content-Security-Policy",
+                      "value": "default-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:;"
+                    },
+                    {
+                      "key": "Strict-Transport-Security",
+                      "value": "max-age=31536000"
+                    },
+                    {
+                      "key": "Cache-Control",
+                      "value": "no-store, no-cache, must-revalidate, post-check=0, pre-check=0"
+                    },
+                    {
+                      "key": "Expires",
+                      "value": "Thu, 19 Nov 1981 08:52:00 GMT"
+                    },
+                    {
+                      "key": "Pragma",
+                      "value": "no-cache"
+                    },
+                    {
+                      "key": "Allow",
+                      "value": "GET, HEAD, POST, PUT, DELETE, OPTIONS"
+                    }
+                  ],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "<response status=\"success\" code=\"19\">\n    <result>\n        <msg>\n            <line>Exec job enqueued with jobid 4</line>\n        </msg>\n        <job>4</job>\n    </result>\n</response>"
+                }
+              ]
             },
             {
-              "name": "User Activity Report scheduling",
-              "_postman_id": "c4a02d5f-e0d9-4f0b-b7e3-964da835ac19",
+              "name": "Show op command status",
+              "_postman_id": "58b71197-dd47-444a-913f-b3a85e82cfc7",
               "protocolProfileBehavior": {
                 "disableBodyPruning": true
               },
@@ -4674,13 +4784,13 @@
   ],
   "variable": [
     {
-      "id": "b0858010-dc56-41b0-bbdb-431a6a474e05",
+      "id": "afc54151-55de-4f6d-a5ad-06fa4413b1bb",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "fb5e585f-a97d-45cb-adcf-85bbf8ed60dd",
+      "id": "747515c3-9c94-483f-84cb-f8d4c314e1cc",
       "key": "{{key}}",
       "value": "",
       "type": "string"
