@@ -3822,13 +3822,13 @@
   ],
   "variable": [
     {
-      "id": "043d31ce-4ff1-4244-8f99-c3a67d1593a3",
+      "id": "5e486028-c3f9-41d8-bacc-f37441f5e7d4",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "971b4ba7-af15-489b-a0da-6509b3742bfb",
+      "id": "8c07ab8d-346f-4688-91cc-b53c48970da0",
       "key": "{{key}}",
       "value": "",
       "type": "string"
