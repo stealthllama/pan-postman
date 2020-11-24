@@ -5346,7 +5346,8 @@
                       "value": "<revert><config><partial><admin><member>admin</member></admin></partial></config></revert>"
                     }
                   ]
-                }
+                },
+                "description": "Revert changes made by administrator `admin`."
               },
               "response": [
                 {
@@ -6030,13 +6031,13 @@
   ],
   "variable": [
     {
-      "id": "a00f66ac-0248-45b7-8ddc-07976c37a5d9",
+      "id": "a4721ab4-3504-4ee1-8317-03ba2919009d",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "e1eb0606-630c-404c-8845-cdc972b27247",
+      "id": "a0a5a7a1-67f6-4e72-bbd3-cd42bae2f365",
       "key": "{{key}}",
       "value": "",
       "type": "string"
