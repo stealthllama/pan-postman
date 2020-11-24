@@ -3236,7 +3236,7 @@
                         }
                       ]
                     },
-                    "description": "Commit candidate changes to the firewall."
+                    "description": "Commit candidate changes to the firewall (force)."
                   },
                   "response": [
                     {
@@ -3363,7 +3363,8 @@
                           "value": "<commit><partial><device-and-network>excluded</device-and-network><shared-object>excluded</shared-object></partial></commit>"
                         }
                       ]
-                    }
+                    },
+                    "description": "Only commit changes local to the firewall, not from Panorama."
                   },
                   "response": [
                     {
@@ -3807,13 +3808,13 @@
   ],
   "variable": [
     {
-      "id": "900d9689-7d7d-40b2-ab16-461f994c22bc",
+      "id": "79d23bf0-9f60-4b32-8c98-20f2aafb7934",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "e30b0972-5aae-4e2e-b927-10c763aac371",
+      "id": "37264bec-e362-430b-869a-8513dadcb1f3",
       "key": "{{key}}",
       "value": "",
       "type": "string"
