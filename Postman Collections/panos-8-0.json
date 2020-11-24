@@ -5341,6 +5341,109 @@
                   ]
                 }
               },
+              "response": [
+                {
+                  "id": "5aefb7af-bf89-4fc7-9c2b-2da1ad783e4f",
+                  "name": "Partial revert of admin-level changes",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [],
+                    "url": {
+                      "raw": "https://{{host}}/api/?type=op&cmd=<revert><config><partial><admin><member>admin</member></admin></partial></config></revert>",
+                      "protocol": "https",
+                      "host": [
+                        "{{host}}"
+                      ],
+                      "path": [
+                        "api",
+                        ""
+                      ],
+                      "query": [
+                        {
+                          "key": "type",
+                          "value": "op"
+                        },
+                        {
+                          "key": "cmd",
+                          "value": "<revert><config><partial><admin><member>admin</member></admin></partial></config></revert>"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "xml",
+                  "header": [
+                    {
+                      "key": "Date",
+                      "value": "Tue, 24 Nov 2020 20:22:36 GMT"
+                    },
+                    {
+                      "key": "Content-Type",
+                      "value": "application/xml; charset=UTF-8"
+                    },
+                    {
+                      "key": "Content-Length",
+                      "value": "128"
+                    },
+                    {
+                      "key": "Connection",
+                      "value": "keep-alive"
+                    },
+                    {
+                      "key": "X-FRAME-OPTIONS",
+                      "value": "SAMEORIGIN"
+                    },
+                    {
+                      "key": "X-XSS-Protection",
+                      "value": "1; mode=block"
+                    },
+                    {
+                      "key": "X-Content-Type-Options",
+                      "value": "nosniff"
+                    },
+                    {
+                      "key": "Content-Security-Policy",
+                      "value": "default-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:;"
+                    },
+                    {
+                      "key": "Strict-Transport-Security",
+                      "value": "max-age=31536000"
+                    },
+                    {
+                      "key": "Cache-Control",
+                      "value": "no-store, no-cache, must-revalidate, post-check=0, pre-check=0"
+                    },
+                    {
+                      "key": "Expires",
+                      "value": "Thu, 19 Nov 1981 08:52:00 GMT"
+                    },
+                    {
+                      "key": "Pragma",
+                      "value": "no-cache"
+                    },
+                    {
+                      "key": "Allow",
+                      "value": "GET, HEAD, POST, PUT, DELETE, OPTIONS"
+                    }
+                  ],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "<response status=\"success\">\n    <result>\n        <msg>\n            <line>Selected changes were reverted from configuration</line>\n        </msg>\n    </result>\n</response>"
+                }
+              ]
+            },
+            {
+              "name": "Partial revert of admin-level changes to Panorama",
+              "_postman_id": "415ab813-b67a-4f34-bd29-93fa40c6066c",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": ""
+              },
               "response": []
             }
           ],
@@ -5562,13 +5665,13 @@
   ],
   "variable": [
     {
-      "id": "90ffe99a-65d3-470d-a384-369ce5f6c867",
+      "id": "2ecf1376-7942-4586-bcdb-1a23e41e901d",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "5c744752-3cdc-4bab-8cdb-10a3e7b03379",
+      "id": "4a22a59c-a56e-4d6b-85ec-15a37b08d6f7",
       "key": "{{key}}",
       "value": "",
       "type": "string"
