@@ -3610,10 +3610,128 @@
                   "request": {
                     "method": "GET",
                     "header": [],
-                    "url": "",
+                    "url": {
+                      "raw": "https://{{host}}/api/?type=commit&action=all&cmd=<commit-all><shared-policy><validate-only>yes</validate-only><device-group><entry name='norcal'/></device-group></shared-policy></commit-all>",
+                      "protocol": "https",
+                      "host": [
+                        "{{host}}"
+                      ],
+                      "path": [
+                        "api",
+                        ""
+                      ],
+                      "query": [
+                        {
+                          "key": "type",
+                          "value": "commit"
+                        },
+                        {
+                          "key": "action",
+                          "value": "all"
+                        },
+                        {
+                          "key": "cmd",
+                          "value": "<commit-all><shared-policy><validate-only>yes</validate-only><device-group><entry name='norcal'/></device-group></shared-policy></commit-all>"
+                        }
+                      ]
+                    },
                     "description": "Validate the shared policy from device group `norcal`."
                   },
-                  "response": []
+                  "response": [
+                    {
+                      "id": "ae8557d9-50ab-4348-8507-587ed6dd0f5f",
+                      "name": "Pre-commit policy validation",
+                      "originalRequest": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                          "raw": "https://{{host}}/api/?type=commit&action=all&cmd=<commit-all><shared-policy><validate-only>yes</validate-only><device-group><entry name='norcal'/></device-group></shared-policy></commit-all>",
+                          "protocol": "https",
+                          "host": [
+                            "{{host}}"
+                          ],
+                          "path": [
+                            "api",
+                            ""
+                          ],
+                          "query": [
+                            {
+                              "key": "type",
+                              "value": "commit"
+                            },
+                            {
+                              "key": "action",
+                              "value": "all"
+                            },
+                            {
+                              "key": "cmd",
+                              "value": "<commit-all><shared-policy><validate-only>yes</validate-only><device-group><entry name='norcal'/></device-group></shared-policy></commit-all>"
+                            }
+                          ]
+                        }
+                      },
+                      "status": "OK",
+                      "code": 200,
+                      "_postman_previewlanguage": "xml",
+                      "header": [
+                        {
+                          "key": "Date",
+                          "value": "Tue, 24 Nov 2020 16:14:38 GMT"
+                        },
+                        {
+                          "key": "Content-Type",
+                          "value": "application/xml; charset=UTF-8"
+                        },
+                        {
+                          "key": "Content-Length",
+                          "value": "130"
+                        },
+                        {
+                          "key": "Connection",
+                          "value": "keep-alive"
+                        },
+                        {
+                          "key": "X-FRAME-OPTIONS",
+                          "value": "SAMEORIGIN"
+                        },
+                        {
+                          "key": "X-XSS-Protection",
+                          "value": "1; mode=block"
+                        },
+                        {
+                          "key": "X-Content-Type-Options",
+                          "value": "nosniff"
+                        },
+                        {
+                          "key": "Content-Security-Policy",
+                          "value": "default-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:;"
+                        },
+                        {
+                          "key": "Strict-Transport-Security",
+                          "value": "max-age=31536000"
+                        },
+                        {
+                          "key": "Cache-Control",
+                          "value": "no-store, no-cache, must-revalidate, post-check=0, pre-check=0"
+                        },
+                        {
+                          "key": "Expires",
+                          "value": "Thu, 19 Nov 1981 08:52:00 GMT"
+                        },
+                        {
+                          "key": "Pragma",
+                          "value": "no-cache"
+                        },
+                        {
+                          "key": "Allow",
+                          "value": "GET, HEAD, POST, PUT, DELETE, OPTIONS"
+                        }
+                      ],
+                      "cookie": [],
+                      "responseTime": null,
+                      "body": "<response status=\"success\" code=\"19\">\n    <result>\n        <msg>\n            <line>Job enqueued with jobid 290</line>\n        </msg>\n        <job>290</job>\n    </result>\n</response>"
+                    }
+                  ]
                 }
               ],
               "_postman_id": "4ffe6f09-9cb7-4997-9010-29629ba45b75",
@@ -3984,13 +4102,13 @@
   ],
   "variable": [
     {
-      "id": "cd04e0b6-f8e3-4c31-949d-57f68361395e",
+      "id": "c4c5ca5d-572c-4d44-97aa-1abf16cead4e",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "b7d15b10-4e7c-4e22-a2e2-c49a4b087e2a",
+      "id": "21acbd10-5947-49cf-84ac-654b6af6f64d",
       "key": "{{key}}",
       "value": "",
       "type": "string"
