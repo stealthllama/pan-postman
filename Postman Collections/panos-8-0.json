@@ -7215,7 +7215,7 @@
           "name": "Export Files",
           "item": [
             {
-              "name": "Export Application pcaps",
+              "name": "Export Application packet captures",
               "item": [
                 {
                   "name": "Application pcap directory list",
@@ -7470,6 +7470,51 @@
                       "body": "<?xml version=\"1.0\"?>\n<response status=\"success\">\n    <result>\n        <dir-listing>\n            <file>/20201130/192.168.45.98-138-192.168.45.255-138-977.pcap</file>\n            <file>/20201130/192.168.45.98-138-192.168.45.255-138-317.pcap</file>\n            <file>/20201130/192.168.45.98-138-192.168.45.255-138-8.pcap</file>\n        </dir-listing>\n    </result>\n</response>"
                     }
                   ]
+                },
+                {
+                  "name": "Application pcap file by name",
+                  "_postman_id": "33a40c37-2df5-4e66-a8bb-45863aef0cdc",
+                  "protocolProfileBehavior": {
+                    "disableBodyPruning": true
+                  },
+                  "request": {
+                    "method": "GET",
+                    "header": [],
+                    "url": {
+                      "raw": "https://{{host}}/api/?type=export&category=application-pcap&from=&to=",
+                      "protocol": "https",
+                      "host": [
+                        "{{host}}"
+                      ],
+                      "path": [
+                        "api",
+                        ""
+                      ],
+                      "query": [
+                        {
+                          "key": "type",
+                          "value": "export"
+                        },
+                        {
+                          "key": "category",
+                          "value": "application-pcap"
+                        },
+                        {
+                          "key": "from",
+                          "value": "",
+                          "description": "Packet capture file to retrieve.",
+                          "type": "text"
+                        },
+                        {
+                          "key": "to",
+                          "value": "",
+                          "description": "(OPTIONAL) Save file locally using a custom name.",
+                          "type": "text"
+                        }
+                      ]
+                    }
+                  },
+                  "response": []
                 }
               ],
               "_postman_id": "5128f380-056b-49f1-b0db-c6df51b9839d",
@@ -7694,13 +7739,13 @@
   ],
   "variable": [
     {
-      "id": "8e984108-7b6a-4301-93ff-f7078dc6ac70",
+      "id": "dd102933-a780-4cff-a14c-c3d17c682a30",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "9f2aef48-db40-42a7-b6ff-c4ac4842e83a",
+      "id": "ee48a95a-7361-423c-bdc4-e3bb30c6b0c8",
       "key": "{{key}}",
       "value": "",
       "type": "string"
