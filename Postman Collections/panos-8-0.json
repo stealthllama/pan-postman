@@ -5843,6 +5843,74 @@
           "_postman_isSubFolder": true
         },
         {
+          "name": "Get Reports",
+          "item": [
+            {
+              "name": "Retrieve report results",
+              "_postman_id": "cb8a1f2f-df9c-4c9f-b6dc-f67650ddbeb2",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "https://{{host}}/api/?type=report&action=get&job-id=",
+                  "protocol": "https",
+                  "host": [
+                    "{{host}}"
+                  ],
+                  "path": [
+                    "api",
+                    ""
+                  ],
+                  "query": [
+                    {
+                      "key": "type",
+                      "value": "report"
+                    },
+                    {
+                      "key": "action",
+                      "value": "get"
+                    },
+                    {
+                      "key": "job-id",
+                      "value": "",
+                      "description": "Report ID to retrieve results for"
+                    }
+                  ]
+                }
+              },
+              "response": []
+            }
+          ],
+          "_postman_id": "f47e1b8c-25bd-4409-8a23-c915cac77f22",
+          "description": "Results of any report defined in the system can be retrieved using the `type=report` parameter:\n\nThe three types of reports that can be retrieved are:\n\n- Dynamic Reports (ACC reports) - `reporttype=dynamic`\n- Predefined Reports - `reporttype=predefined`\n- Custom Reports - `reporttype=custom`\n\nTo retrieve a specific report by name, use the `reportname` parameter.\n\nWhen you request a report, the API responds asyncronously with a job ID, which you can use to retrieve the reports.",
+          "event": [
+            {
+              "listen": "prerequest",
+              "script": {
+                "id": "b348aff7-6e75-4ff3-8dab-8d5a063813ba",
+                "type": "text/javascript",
+                "exec": [
+                  ""
+                ]
+              }
+            },
+            {
+              "listen": "test",
+              "script": {
+                "id": "2242283b-91da-4e1e-97ad-29f870b557e9",
+                "type": "text/javascript",
+                "exec": [
+                  ""
+                ]
+              }
+            }
+          ],
+          "_postman_isSubFolder": true
+        },
+        {
           "name": "Get Version Info",
           "item": [
             {
@@ -5998,12 +6066,6 @@
             }
           ],
           "_postman_isSubFolder": true
-        },
-        {
-          "name": "Get Reports",
-          "item": [],
-          "_postman_id": "f47e1b8c-25bd-4409-8a23-c915cac77f22",
-          "_postman_isSubFolder": true
         }
       ],
       "_postman_id": "3178f469-44ee-4373-82b4-9d5bdd5d59b8"
@@ -6040,13 +6102,13 @@
   ],
   "variable": [
     {
-      "id": "fd939dc8-e83f-4fa9-bf1a-53e95ef84aed",
+      "id": "176df930-7262-486d-ae54-93c76ec0b447",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "d1fb96c7-cf1f-4faa-a299-b721d84c185c",
+      "id": "d858b8aa-4c87-4ee8-857e-2ec758b85e53",
       "key": "{{key}}",
       "value": "",
       "type": "string"
