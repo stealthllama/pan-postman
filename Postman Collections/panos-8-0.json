@@ -7052,6 +7052,13 @@
               "_postman_isSubFolder": true
             },
             {
+              "name": "Export Files",
+              "item": [],
+              "_postman_id": "23756299-0092-4f5e-aac4-b873e07acf55",
+              "description": "You can export certain types of files from the firewall using the `type=export` parameter in the API request.\n\nUse the `category` parameter to specify the type of file that you want to export:\n\n- Configuration - `category=configuration`\n- Certificates/Keys - `category=certificate`",
+              "_postman_isSubFolder": true
+            },
+            {
               "name": "Retrieve report results",
               "_postman_id": "cb8a1f2f-df9c-4c9f-b6dc-f67650ddbeb2",
               "protocolProfileBehavior": {
@@ -7403,13 +7410,13 @@
   ],
   "variable": [
     {
-      "id": "1c9d8406-68d7-4ef6-bdd0-85dd9b36a908",
+      "id": "15979f2a-a760-433f-a5b9-58c64c4b1bb3",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "66901c7c-0a1e-4fd1-888e-9d1b1c69ff8b",
+      "id": "8b487b36-913f-4bad-8e03-02c516d94e5a",
       "key": "{{key}}",
       "value": "",
       "type": "string"
