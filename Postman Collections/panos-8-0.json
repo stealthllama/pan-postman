@@ -5998,6 +5998,12 @@
             }
           ],
           "_postman_isSubFolder": true
+        },
+        {
+          "name": "Get Reports",
+          "item": [],
+          "_postman_id": "f47e1b8c-25bd-4409-8a23-c915cac77f22",
+          "_postman_isSubFolder": true
         }
       ],
       "_postman_id": "3178f469-44ee-4373-82b4-9d5bdd5d59b8"
@@ -6034,13 +6040,13 @@
   ],
   "variable": [
     {
-      "id": "5f169689-7017-4bba-aa53-4fc6c7b86aa2",
+      "id": "fd939dc8-e83f-4fa9-bf1a-53e95ef84aed",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "17f45e21-5a3a-442f-a2cc-ebb0917989b4",
+      "id": "d1fb96c7-cf1f-4faa-a299-b721d84c185c",
       "key": "{{key}}",
       "value": "",
       "type": "string"
