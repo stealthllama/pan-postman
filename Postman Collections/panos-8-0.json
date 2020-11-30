@@ -6668,13 +6668,13 @@
   ],
   "variable": [
     {
-      "id": "af8fdd2e-fabc-4a9b-9a00-2b075ac1006e",
+      "id": "dae59f2c-aad9-4521-8ae8-d65b97ba4bf1",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "5cea083e-6767-485a-8bde-958bdea4825e",
+      "id": "6a8339d3-bfe6-4060-ae27-6ca3ab3cb90d",
       "key": "{{key}}",
       "value": "",
       "type": "string"
