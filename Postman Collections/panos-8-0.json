@@ -6815,13 +6815,13 @@
   ],
   "variable": [
     {
-      "id": "dc7b63e9-1d8a-4ebf-9014-5537c715831b",
+      "id": "02ffdd29-e63f-4fee-94c8-ccc2d08ada85",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "2794e737-6578-45b3-8eab-3f3bcb7ca9c3",
+      "id": "8aea4ec1-e378-40eb-a888-e965ae00769a",
       "key": "{{key}}",
       "value": "",
       "type": "string"
