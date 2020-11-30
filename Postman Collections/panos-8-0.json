@@ -5849,35 +5849,15 @@
               "name": "Dynamic Reports",
               "item": [
                 {
-                  "name": "Full dynamic report list",
-                  "_postman_id": "c7eb0966-ccc1-4010-b73b-bb241a30f8ca",
+                  "name": "Last 60 seconds",
+                  "_postman_id": "20ff57dd-3b88-43a2-bcfe-d6b2fc67090a",
                   "protocolProfileBehavior": {
                     "disableBodyPruning": true
                   },
                   "request": {
                     "method": "GET",
                     "header": [],
-                    "url": {
-                      "raw": "https://{{host}}/api/?type=report&reporttype=dynamic",
-                      "protocol": "https",
-                      "host": [
-                        "{{host}}"
-                      ],
-                      "path": [
-                        "api",
-                        ""
-                      ],
-                      "query": [
-                        {
-                          "key": "type",
-                          "value": "report"
-                        },
-                        {
-                          "key": "reporttype",
-                          "value": "dynamic"
-                        }
-                      ]
-                    }
+                    "url": ""
                   },
                   "response": []
                 }
@@ -6165,13 +6145,13 @@
   ],
   "variable": [
     {
-      "id": "a89d32ca-080f-4ac2-b66d-e1f1df6e1279",
+      "id": "91e9aff7-b873-4729-b0f8-4d8392897923",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "e6c8912a-0a52-4683-85e9-d07c88aba5f9",
+      "id": "ea851850-7800-4119-8504-3165fcda00f1",
       "key": "{{key}}",
       "value": "",
       "type": "string"
