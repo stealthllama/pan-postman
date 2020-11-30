@@ -5857,7 +5857,39 @@
                   "request": {
                     "method": "GET",
                     "header": [],
-                    "url": ""
+                    "url": {
+                      "raw": "https://{{host}}/api/?type=report&reporttype=dynamic&reportname=top-app-summary&period=last-60-seconds&topn=5",
+                      "protocol": "https",
+                      "host": [
+                        "{{host}}"
+                      ],
+                      "path": [
+                        "api",
+                        ""
+                      ],
+                      "query": [
+                        {
+                          "key": "type",
+                          "value": "report"
+                        },
+                        {
+                          "key": "reporttype",
+                          "value": "dynamic"
+                        },
+                        {
+                          "key": "reportname",
+                          "value": "top-app-summary"
+                        },
+                        {
+                          "key": "period",
+                          "value": "last-60-seconds"
+                        },
+                        {
+                          "key": "topn",
+                          "value": "5"
+                        }
+                      ]
+                    }
                   },
                   "response": []
                 }
@@ -6145,13 +6177,13 @@
   ],
   "variable": [
     {
-      "id": "91e9aff7-b873-4729-b0f8-4d8392897923",
+      "id": "d02da811-6e22-470f-b5cc-8d36b64dd91d",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "ea851850-7800-4119-8504-3165fcda00f1",
+      "id": "4931908a-424f-4e33-8dac-47daa1a0b806",
       "key": "{{key}}",
       "value": "",
       "type": "string"
