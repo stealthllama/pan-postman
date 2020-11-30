@@ -6887,7 +6887,7 @@
                     "method": "GET",
                     "header": [],
                     "url": {
-                      "raw": "https://{{host}}/api/?type=report&reporttype=dynamic&reportname=top-app-summary&period=last-calendar-week&topn=5",
+                      "raw": "https://{{host}}/api/?type=report&reporttype=dynamic&reportname=top-app-summary&period=last-30-days&topn=5",
                       "protocol": "https",
                       "host": [
                         "{{host}}"
@@ -6911,7 +6911,7 @@
                         },
                         {
                           "key": "period",
-                          "value": "last-calendar-week"
+                          "value": "last-30-days"
                         },
                         {
                           "key": "topn",
@@ -6922,13 +6922,13 @@
                   },
                   "response": [
                     {
-                      "id": "ceb7687d-9f31-49cf-b86d-74e31b7e4b23",
-                      "name": "Last 7 days Copy",
+                      "id": "4845a9b8-c4a6-4562-839c-73007cf59507",
+                      "name": "Last 30 days",
                       "originalRequest": {
                         "method": "GET",
                         "header": [],
                         "url": {
-                          "raw": "https://{{host}}/api/?type=report&reporttype=dynamic&reportname=top-app-summary&period=last-calendar-week&topn=5",
+                          "raw": "https://{{host}}/api/?type=report&reporttype=dynamic&reportname=top-app-summary&period=last-30-days&topn=5",
                           "protocol": "https",
                           "host": [
                             "{{host}}"
@@ -6952,7 +6952,7 @@
                             },
                             {
                               "key": "period",
-                              "value": "last-calendar-week"
+                              "value": "last-30-days"
                             },
                             {
                               "key": "topn",
@@ -6967,7 +6967,7 @@
                       "header": [
                         {
                           "key": "Date",
-                          "value": "Mon, 30 Nov 2020 15:07:13 GMT"
+                          "value": "Mon, 30 Nov 2020 15:07:59 GMT"
                         },
                         {
                           "key": "Content-Type",
@@ -7020,7 +7020,7 @@
                       ],
                       "cookie": [],
                       "responseTime": null,
-                      "body": "<response status=\"success\">\n    <result>\n        <msg>\n            <line>Report job enqueued with jobid 10</line>\n        </msg>\n        <job>10</job>\n    </result>\n</response>"
+                      "body": "<response status=\"success\">\n    <result>\n        <msg>\n            <line>Report job enqueued with jobid 11</line>\n        </msg>\n        <job>11</job>\n    </result>\n</response>"
                     }
                   ]
                 }
@@ -7049,6 +7049,12 @@
                   }
                 }
               ],
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "Predefined Reports",
+              "item": [],
+              "_postman_id": "a42a254d-478a-4402-bf69-33039d289947",
               "_postman_isSubFolder": true
             },
             {
@@ -7403,13 +7409,13 @@
   ],
   "variable": [
     {
-      "id": "75671326-83c5-4abc-8ed5-f6fd801e5d4e",
+      "id": "28b45c1c-f7e7-45e8-8234-3541bfe973e1",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "89f17e57-4773-409d-b593-a950ac582e32",
+      "id": "4ed387cc-69b5-4366-b744-3de887b59ac9",
       "key": "{{key}}",
       "value": "",
       "type": "string"
