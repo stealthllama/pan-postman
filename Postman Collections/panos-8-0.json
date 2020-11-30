@@ -7215,7 +7215,7 @@
           "name": "Export Files",
           "item": [
             {
-              "name": "Export Application packet captures",
+              "name": "Export Application Packet Captures",
               "item": [
                 {
                   "name": "Application pcap directory list",
@@ -7739,13 +7739,13 @@
   ],
   "variable": [
     {
-      "id": "dd102933-a780-4cff-a14c-c3d17c682a30",
+      "id": "887296be-a286-4f7b-8000-2fbab09709e6",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "ee48a95a-7361-423c-bdc4-e3bb30c6b0c8",
+      "id": "cdf08d6e-50cc-46c5-861b-b154fd553cb4",
       "key": "{{key}}",
       "value": "",
       "type": "string"
