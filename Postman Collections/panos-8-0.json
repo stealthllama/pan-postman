@@ -7522,21 +7522,7 @@
             },
             {
               "name": "Export Threat, Filter, and Data Filtering PCAPs",
-              "item": [
-                {
-                  "name": "Threat PCAP using PCAP ID, device name, session ID, and search",
-                  "_postman_id": "b5021c67-86e6-4be4-8990-26638cbe369d",
-                  "protocolProfileBehavior": {
-                    "disableBodyPruning": true
-                  },
-                  "request": {
-                    "method": "GET",
-                    "header": [],
-                    "url": ""
-                  },
-                  "response": []
-                }
-              ],
+              "item": [],
               "_postman_id": "c2e45f13-e8cc-48c5-acb0-f30ffe04c1f1",
               "_postman_isSubFolder": true
             }
@@ -7759,13 +7745,13 @@
   ],
   "variable": [
     {
-      "id": "fdc33cd2-3433-4d8b-9b7a-5102c1c039f8",
+      "id": "71348170-4966-462d-90ad-7cc251924b05",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "77205144-b070-4a12-bd9f-726ec0eaf679",
+      "id": "5668ef96-0ad6-412b-b043-46a444e47fb9",
       "key": "{{key}}",
       "value": "",
       "type": "string"
