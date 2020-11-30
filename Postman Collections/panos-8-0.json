@@ -6521,13 +6521,13 @@
   ],
   "variable": [
     {
-      "id": "4e532540-8899-4ed5-9452-483a6d3cd88c",
+      "id": "89a66160-8a39-40fe-8b91-beebde2362c6",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "30654512-7338-4c1f-9588-8d091122c729",
+      "id": "98c2c0f9-c9fa-400c-9715-94338dcdcd7d",
       "key": "{{key}}",
       "value": "",
       "type": "string"
