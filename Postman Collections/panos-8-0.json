@@ -7053,21 +7053,7 @@
             },
             {
               "name": "Predefined Reports",
-              "item": [
-                {
-                  "name": "Full predefined report list",
-                  "_postman_id": "6d36392a-47b2-42bc-bccd-191bd4a8ed00",
-                  "protocolProfileBehavior": {
-                    "disableBodyPruning": true
-                  },
-                  "request": {
-                    "method": "GET",
-                    "header": [],
-                    "url": ""
-                  },
-                  "response": []
-                }
-              ],
+              "item": [],
               "_postman_id": "a42a254d-478a-4402-bf69-33039d289947",
               "_postman_isSubFolder": true
             },
@@ -7423,13 +7409,13 @@
   ],
   "variable": [
     {
-      "id": "7b844c8e-6567-4755-b59e-138eb3af0594",
+      "id": "6dc176b1-f8ce-4738-97f1-5ddaaf9b9de9",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "3897d636-4f6f-46fa-9369-fc7cf7c00324",
+      "id": "6d5550b2-8ecd-41b1-aded-5f8afc7b8a1e",
       "key": "{{key}}",
       "value": "",
       "type": "string"
