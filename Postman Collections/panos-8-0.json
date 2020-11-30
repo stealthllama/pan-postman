@@ -6152,7 +6152,7 @@
                     "method": "GET",
                     "header": [],
                     "url": {
-                      "raw": "https://{{host}}/api/?type=report&reporttype=dynamic&reportname=top-app-summary&period=last-15-minutes&topn=5",
+                      "raw": "https://{{host}}/api/?type=report&reporttype=dynamic&reportname=top-app-summary&period=last-hour&topn=5",
                       "protocol": "https",
                       "host": [
                         "{{host}}"
@@ -6176,7 +6176,7 @@
                         },
                         {
                           "key": "period",
-                          "value": "last-15-minutes"
+                          "value": "last-hour"
                         },
                         {
                           "key": "topn",
@@ -6187,13 +6187,13 @@
                   },
                   "response": [
                     {
-                      "id": "d2e4e586-e4ad-4312-886b-e0733522e156",
-                      "name": "Last 15 minutes",
+                      "id": "95ef9485-798c-4f31-b2dd-87a90d7ad147",
+                      "name": "Last hour",
                       "originalRequest": {
                         "method": "GET",
                         "header": [],
                         "url": {
-                          "raw": "https://{{host}}/api/?type=report&reporttype=dynamic&reportname=top-app-summary&period=last-15-minutes&topn=5",
+                          "raw": "https://{{host}}/api/?type=report&reporttype=dynamic&reportname=top-app-summary&period=last-hour&topn=5",
                           "protocol": "https",
                           "host": [
                             "{{host}}"
@@ -6217,7 +6217,7 @@
                             },
                             {
                               "key": "period",
-                              "value": "last-15-minutes"
+                              "value": "last-hour"
                             },
                             {
                               "key": "topn",
@@ -6232,7 +6232,7 @@
                       "header": [
                         {
                           "key": "Date",
-                          "value": "Mon, 30 Nov 2020 15:02:41 GMT"
+                          "value": "Mon, 30 Nov 2020 15:03:15 GMT"
                         },
                         {
                           "key": "Content-Type",
@@ -6285,7 +6285,154 @@
                       ],
                       "cookie": [],
                       "responseTime": null,
-                      "body": "<response status=\"success\">\n    <result>\n        <msg>\n            <line>Report job enqueued with jobid 4</line>\n        </msg>\n        <job>4</job>\n    </result>\n</response>"
+                      "body": "<response status=\"success\">\n    <result>\n        <msg>\n            <line>Report job enqueued with jobid 5</line>\n        </msg>\n        <job>5</job>\n    </result>\n</response>"
+                    }
+                  ]
+                },
+                {
+                  "name": "Last hour Copy",
+                  "_postman_id": "d9a3aa52-5515-47a5-92b4-07fd6b207372",
+                  "protocolProfileBehavior": {
+                    "disableBodyPruning": true
+                  },
+                  "request": {
+                    "method": "GET",
+                    "header": [],
+                    "url": {
+                      "raw": "https://{{host}}/api/?type=report&reporttype=dynamic&reportname=top-app-summary&period=last-hour&topn=5",
+                      "protocol": "https",
+                      "host": [
+                        "{{host}}"
+                      ],
+                      "path": [
+                        "api",
+                        ""
+                      ],
+                      "query": [
+                        {
+                          "key": "type",
+                          "value": "report"
+                        },
+                        {
+                          "key": "reporttype",
+                          "value": "dynamic"
+                        },
+                        {
+                          "key": "reportname",
+                          "value": "top-app-summary"
+                        },
+                        {
+                          "key": "period",
+                          "value": "last-hour"
+                        },
+                        {
+                          "key": "topn",
+                          "value": "5"
+                        }
+                      ]
+                    }
+                  },
+                  "response": [
+                    {
+                      "id": "402b545b-a809-4c9c-8d20-1249c2f61972",
+                      "name": "Last hour",
+                      "originalRequest": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                          "raw": "https://{{host}}/api/?type=report&reporttype=dynamic&reportname=top-app-summary&period=last-hour&topn=5",
+                          "protocol": "https",
+                          "host": [
+                            "{{host}}"
+                          ],
+                          "path": [
+                            "api",
+                            ""
+                          ],
+                          "query": [
+                            {
+                              "key": "type",
+                              "value": "report"
+                            },
+                            {
+                              "key": "reporttype",
+                              "value": "dynamic"
+                            },
+                            {
+                              "key": "reportname",
+                              "value": "top-app-summary"
+                            },
+                            {
+                              "key": "period",
+                              "value": "last-hour"
+                            },
+                            {
+                              "key": "topn",
+                              "value": "5"
+                            }
+                          ]
+                        }
+                      },
+                      "status": "OK",
+                      "code": 200,
+                      "_postman_previewlanguage": "xml",
+                      "header": [
+                        {
+                          "key": "Date",
+                          "value": "Mon, 30 Nov 2020 15:03:15 GMT"
+                        },
+                        {
+                          "key": "Content-Type",
+                          "value": "application/xml; charset=UTF-8"
+                        },
+                        {
+                          "key": "Content-Length",
+                          "value": "148"
+                        },
+                        {
+                          "key": "Connection",
+                          "value": "keep-alive"
+                        },
+                        {
+                          "key": "X-FRAME-OPTIONS",
+                          "value": "SAMEORIGIN"
+                        },
+                        {
+                          "key": "X-XSS-Protection",
+                          "value": "1; mode=block"
+                        },
+                        {
+                          "key": "X-Content-Type-Options",
+                          "value": "nosniff"
+                        },
+                        {
+                          "key": "Content-Security-Policy",
+                          "value": "default-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:;"
+                        },
+                        {
+                          "key": "Strict-Transport-Security",
+                          "value": "max-age=31536000"
+                        },
+                        {
+                          "key": "Cache-Control",
+                          "value": "no-store, no-cache, must-revalidate, post-check=0, pre-check=0"
+                        },
+                        {
+                          "key": "Expires",
+                          "value": "Thu, 19 Nov 1981 08:52:00 GMT"
+                        },
+                        {
+                          "key": "Pragma",
+                          "value": "no-cache"
+                        },
+                        {
+                          "key": "Allow",
+                          "value": "GET, HEAD, POST, PUT, DELETE, OPTIONS"
+                        }
+                      ],
+                      "cookie": [],
+                      "responseTime": null,
+                      "body": "<response status=\"success\">\n    <result>\n        <msg>\n            <line>Report job enqueued with jobid 5</line>\n        </msg>\n        <job>5</job>\n    </result>\n</response>"
                     }
                   ]
                 }
@@ -6668,13 +6815,13 @@
   ],
   "variable": [
     {
-      "id": "cc947bbf-a5b2-485e-ab5c-1921f0997988",
+      "id": "dc7b63e9-1d8a-4ebf-9014-5537c715831b",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "0e88981e-1419-4b64-8fa8-f4acdef04aca",
+      "id": "2794e737-6578-45b3-8eab-3f3bcb7ca9c3",
       "key": "{{key}}",
       "value": "",
       "type": "string"
