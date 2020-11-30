@@ -6731,7 +6731,7 @@
                   ]
                 },
                 {
-                  "name": "Last 7 days Copy",
+                  "name": "Last calendar week",
                   "_postman_id": "15079c37-e284-4716-8484-591e5d13fc11",
                   "protocolProfileBehavior": {
                     "disableBodyPruning": true
@@ -7256,13 +7256,13 @@
   ],
   "variable": [
     {
-      "id": "a75cd190-c0e6-4660-bd4b-a94b7e646c6b",
+      "id": "b0582e21-807b-4851-b25f-c4b5441d057b",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "fecf0ec6-501c-4a73-85d0-744b35bcba1b",
+      "id": "c8844c62-6cb9-47b9-996b-3b9f1926323e",
       "key": "{{key}}",
       "value": "",
       "type": "string"
