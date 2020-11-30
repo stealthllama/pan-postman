@@ -7248,7 +7248,228 @@
                       ]
                     }
                   },
-                  "response": []
+                  "response": [
+                    {
+                      "id": "ed993204-57cb-45fa-811b-8237957b41c4",
+                      "name": "Application pcap directory list",
+                      "originalRequest": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                          "raw": "https://{{host}}/api/?type=export&category=application-pcap",
+                          "protocol": "https",
+                          "host": [
+                            "{{host}}"
+                          ],
+                          "path": [
+                            "api",
+                            ""
+                          ],
+                          "query": [
+                            {
+                              "key": "type",
+                              "value": "export"
+                            },
+                            {
+                              "key": "category",
+                              "value": "application-pcap"
+                            }
+                          ]
+                        }
+                      },
+                      "status": "OK",
+                      "code": 200,
+                      "_postman_previewlanguage": "xml",
+                      "header": [
+                        {
+                          "key": "Date",
+                          "value": "Mon, 30 Nov 2020 15:26:55 GMT"
+                        },
+                        {
+                          "key": "Content-Type",
+                          "value": "application/xml; charset=UTF-8"
+                        },
+                        {
+                          "key": "Content-Length",
+                          "value": "257"
+                        },
+                        {
+                          "key": "Connection",
+                          "value": "keep-alive"
+                        },
+                        {
+                          "key": "X-FRAME-OPTIONS",
+                          "value": "SAMEORIGIN"
+                        },
+                        {
+                          "key": "X-XSS-Protection",
+                          "value": "1; mode=block"
+                        },
+                        {
+                          "key": "X-Content-Type-Options",
+                          "value": "nosniff"
+                        },
+                        {
+                          "key": "Content-Security-Policy",
+                          "value": "default-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:;"
+                        },
+                        {
+                          "key": "Strict-Transport-Security",
+                          "value": "max-age=31536000"
+                        },
+                        {
+                          "key": "Cache-Control",
+                          "value": "no-store, no-cache, must-revalidate, post-check=0, pre-check=0"
+                        },
+                        {
+                          "key": "Expires",
+                          "value": "Thu, 19 Nov 1981 08:52:00 GMT"
+                        },
+                        {
+                          "key": "Pragma",
+                          "value": "no-cache"
+                        },
+                        {
+                          "key": "Allow",
+                          "value": "GET, HEAD, POST, PUT, DELETE, OPTIONS"
+                        }
+                      ],
+                      "cookie": [],
+                      "responseTime": null,
+                      "body": "<?xml version=\"1.0\"?>\n<response status=\"success\">\n    <result>\n        <dir-listing>\n            <dir>/20200320</dir>\n            <dir>/20201130</dir>\n            <dir>/20200102</dir>\n            <dir>/20191231</dir>\n            <dir>/20200327</dir>\n        </dir-listing>\n    </result>\n</response>"
+                    }
+                  ]
+                },
+                {
+                  "name": "List of files under a directory",
+                  "_postman_id": "3af48685-fa70-4ab4-9127-af28b7ba526a",
+                  "protocolProfileBehavior": {
+                    "disableBodyPruning": true
+                  },
+                  "request": {
+                    "method": "GET",
+                    "header": [],
+                    "url": {
+                      "raw": "https://{{host}}/api/?type=export&category=application-pcap&from=20201130",
+                      "protocol": "https",
+                      "host": [
+                        "{{host}}"
+                      ],
+                      "path": [
+                        "api",
+                        ""
+                      ],
+                      "query": [
+                        {
+                          "key": "type",
+                          "value": "export"
+                        },
+                        {
+                          "key": "category",
+                          "value": "application-pcap"
+                        },
+                        {
+                          "key": "from",
+                          "value": "20201130"
+                        }
+                      ]
+                    }
+                  },
+                  "response": [
+                    {
+                      "id": "c7ee5df3-a6ef-4386-89b3-ab5bbadd33b9",
+                      "name": "List of files under a directory",
+                      "originalRequest": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                          "raw": "https://{{host}}/api/?type=export&category=application-pcap&from=20201130",
+                          "protocol": "https",
+                          "host": [
+                            "{{host}}"
+                          ],
+                          "path": [
+                            "api",
+                            ""
+                          ],
+                          "query": [
+                            {
+                              "key": "type",
+                              "value": "export"
+                            },
+                            {
+                              "key": "category",
+                              "value": "application-pcap"
+                            },
+                            {
+                              "key": "from",
+                              "value": "20201130"
+                            }
+                          ]
+                        }
+                      },
+                      "status": "OK",
+                      "code": 200,
+                      "_postman_previewlanguage": "xml",
+                      "header": [
+                        {
+                          "key": "Date",
+                          "value": "Mon, 30 Nov 2020 15:27:47 GMT"
+                        },
+                        {
+                          "key": "Content-Type",
+                          "value": "application/xml; charset=UTF-8"
+                        },
+                        {
+                          "key": "Content-Length",
+                          "value": "345"
+                        },
+                        {
+                          "key": "Connection",
+                          "value": "keep-alive"
+                        },
+                        {
+                          "key": "X-FRAME-OPTIONS",
+                          "value": "SAMEORIGIN"
+                        },
+                        {
+                          "key": "X-XSS-Protection",
+                          "value": "1; mode=block"
+                        },
+                        {
+                          "key": "X-Content-Type-Options",
+                          "value": "nosniff"
+                        },
+                        {
+                          "key": "Content-Security-Policy",
+                          "value": "default-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:;"
+                        },
+                        {
+                          "key": "Strict-Transport-Security",
+                          "value": "max-age=31536000"
+                        },
+                        {
+                          "key": "Cache-Control",
+                          "value": "no-store, no-cache, must-revalidate, post-check=0, pre-check=0"
+                        },
+                        {
+                          "key": "Expires",
+                          "value": "Thu, 19 Nov 1981 08:52:00 GMT"
+                        },
+                        {
+                          "key": "Pragma",
+                          "value": "no-cache"
+                        },
+                        {
+                          "key": "Allow",
+                          "value": "GET, HEAD, POST, PUT, DELETE, OPTIONS"
+                        }
+                      ],
+                      "cookie": [],
+                      "responseTime": null,
+                      "body": "<?xml version=\"1.0\"?>\n<response status=\"success\">\n    <result>\n        <dir-listing>\n            <file>/20201130/192.168.45.98-138-192.168.45.255-138-977.pcap</file>\n            <file>/20201130/192.168.45.98-138-192.168.45.255-138-317.pcap</file>\n            <file>/20201130/192.168.45.98-138-192.168.45.255-138-8.pcap</file>\n        </dir-listing>\n    </result>\n</response>"
+                    }
+                  ]
                 }
               ],
               "_postman_id": "5128f380-056b-49f1-b0db-c6df51b9839d",
@@ -7473,13 +7694,13 @@
   ],
   "variable": [
     {
-      "id": "ce41a944-fce4-416c-8708-80c154f6a413",
+      "id": "8e984108-7b6a-4301-93ff-f7078dc6ac70",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "f08573db-4f02-4785-9659-0e42abffcb18",
+      "id": "9f2aef48-db40-42a7-b6ff-c4ac4842e83a",
       "key": "{{key}}",
       "value": "",
       "type": "string"
