@@ -7226,7 +7226,27 @@
                   "request": {
                     "method": "GET",
                     "header": [],
-                    "url": ""
+                    "url": {
+                      "raw": "https://{{host}}/api/?type=export&category=application-pcap",
+                      "protocol": "https",
+                      "host": [
+                        "{{host}}"
+                      ],
+                      "path": [
+                        "api",
+                        ""
+                      ],
+                      "query": [
+                        {
+                          "key": "type",
+                          "value": "export"
+                        },
+                        {
+                          "key": "category",
+                          "value": "application-pcap"
+                        }
+                      ]
+                    }
                   },
                   "response": []
                 }
@@ -7453,13 +7473,13 @@
   ],
   "variable": [
     {
-      "id": "614bf275-e6d3-4077-9f72-199f59a0829a",
+      "id": "ce41a944-fce4-416c-8708-80c154f6a413",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "457ddd27-f9eb-40df-a7cc-3c988dc3bf97",
+      "id": "f08573db-4f02-4785-9659-0e42abffcb18",
       "key": "{{key}}",
       "value": "",
       "type": "string"
