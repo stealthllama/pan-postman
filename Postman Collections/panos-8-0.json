@@ -7519,6 +7519,26 @@
               ],
               "_postman_id": "5128f380-056b-49f1-b0db-c6df51b9839d",
               "_postman_isSubFolder": true
+            },
+            {
+              "name": "Export Threat, Filter, and Data Filtering PCAPs",
+              "item": [
+                {
+                  "name": "Threat PCAP using PCAP ID, device name, session ID, and search",
+                  "_postman_id": "b5021c67-86e6-4be4-8990-26638cbe369d",
+                  "protocolProfileBehavior": {
+                    "disableBodyPruning": true
+                  },
+                  "request": {
+                    "method": "GET",
+                    "header": [],
+                    "url": ""
+                  },
+                  "response": []
+                }
+              ],
+              "_postman_id": "c2e45f13-e8cc-48c5-acb0-f30ffe04c1f1",
+              "_postman_isSubFolder": true
             }
           ],
           "_postman_id": "23756299-0092-4f5e-aac4-b873e07acf55",
@@ -7739,13 +7759,13 @@
   ],
   "variable": [
     {
-      "id": "887296be-a286-4f7b-8000-2fbab09709e6",
+      "id": "fdc33cd2-3433-4d8b-9b7a-5102c1c039f8",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "cdf08d6e-50cc-46c5-861b-b154fd553cb4",
+      "id": "77205144-b070-4a12-bd9f-726ec0eaf679",
       "key": "{{key}}",
       "value": "",
       "type": "string"
