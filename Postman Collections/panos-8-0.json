@@ -7216,7 +7216,21 @@
           "item": [
             {
               "name": "Export Application pcaps",
-              "item": [],
+              "item": [
+                {
+                  "name": "Application pcap directory list",
+                  "_postman_id": "7881e4a6-b68b-4673-9155-6ac1d35433b1",
+                  "protocolProfileBehavior": {
+                    "disableBodyPruning": true
+                  },
+                  "request": {
+                    "method": "GET",
+                    "header": [],
+                    "url": ""
+                  },
+                  "response": []
+                }
+              ],
               "_postman_id": "5128f380-056b-49f1-b0db-c6df51b9839d",
               "_postman_isSubFolder": true
             }
@@ -7439,13 +7453,13 @@
   ],
   "variable": [
     {
-      "id": "13be83b8-05c6-453c-b636-bfdbef8b2412",
+      "id": "614bf275-e6d3-4077-9f72-199f59a0829a",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "289b0b66-f922-4538-895a-24a220f6b5eb",
+      "id": "457ddd27-f9eb-40df-a7cc-3c988dc3bf97",
       "key": "{{key}}",
       "value": "",
       "type": "string"
