@@ -7052,12 +7052,6 @@
               "_postman_isSubFolder": true
             },
             {
-              "name": "Predefined Reports",
-              "item": [],
-              "_postman_id": "a42a254d-478a-4402-bf69-33039d289947",
-              "_postman_isSubFolder": true
-            },
-            {
               "name": "Retrieve report results",
               "_postman_id": "cb8a1f2f-df9c-4c9f-b6dc-f67650ddbeb2",
               "protocolProfileBehavior": {
@@ -7409,13 +7403,13 @@
   ],
   "variable": [
     {
-      "id": "6dc176b1-f8ce-4738-97f1-5ddaaf9b9de9",
+      "id": "1c9d8406-68d7-4ef6-bdd0-85dd9b36a908",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "6d5550b2-8ecd-41b1-aded-5f8afc7b8a1e",
+      "id": "66901c7c-0a1e-4fd1-888e-9d1b1c69ff8b",
       "key": "{{key}}",
       "value": "",
       "type": "string"
