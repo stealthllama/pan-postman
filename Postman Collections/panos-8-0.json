@@ -7423,13 +7423,13 @@
   ],
   "variable": [
     {
-      "id": "0f1a7a03-d471-4d69-a431-5df8295b28a0",
+      "id": "7b844c8e-6567-4755-b59e-138eb3af0594",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "e05f9f3b-372a-4cb1-8682-7e5341009ee8",
+      "id": "3897d636-4f6f-46fa-9369-fc7cf7c00324",
       "key": "{{key}}",
       "value": "",
       "type": "string"
