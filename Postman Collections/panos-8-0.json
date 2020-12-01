@@ -9712,7 +9712,7 @@
               ]
             },
             {
-              "name": "Download latest Application & Threat update Copy",
+              "name": "Install latest Application & Threat update",
               "_postman_id": "5d919f62-5728-4b12-a558-6fd66c6abab5",
               "protocolProfileBehavior": {
                 "disableBodyPruning": true
@@ -10019,13 +10019,13 @@
   ],
   "variable": [
     {
-      "id": "816553d7-0894-46ad-a798-8c3b37f8081f",
+      "id": "9b7dc81e-7cb9-4632-b1b6-1aae4992cd8a",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "1b51ba29-6260-4e15-82ee-7e75b767b86b",
+      "id": "89069e8d-c1b8-4ad5-935b-74bd2860fa35",
       "key": "{{key}}",
       "value": "",
       "type": "string"
