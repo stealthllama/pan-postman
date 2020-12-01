@@ -8486,7 +8486,7 @@
             }
           ],
           "_postman_id": "39927bcc-4096-4ae1-951d-58c8af1e2324",
-          "description": "View the [official documentation](https://docs.paloaltonetworks.com/pan-os/10-0/pan-os-panorama-api/pan-os-xml-api-use-cases/upgrade-a-firewall-to-the-latest-pan-os-version-api.html).\n\nYou can use the PAN-OS XML API to update your firewall with the latest PAN-OS and Content Release versions.",
+          "description": "View the [official documentation](https://docs.paloaltonetworks.com/pan-os/10-0/pan-os-panorama-api/pan-os-xml-api-use-cases/upgrade-a-firewall-to-the-latest-pan-os-version-api.html).\n\nYou can use the PAN-OS XML API to update your firewall with the latest PAN-OS and Content Release versions.\n\nThe example requests in this section are meant to be executed in sequence.",
           "event": [
             {
               "listen": "prerequest",
@@ -8546,13 +8546,13 @@
   ],
   "variable": [
     {
-      "id": "b33b3510-710d-4290-826a-ce265ee346dc",
+      "id": "56d43766-9b36-4209-b2ba-6983c7860fb6",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "c109c36e-f2c8-4dfe-97b5-49a40697e551",
+      "id": "a9e77905-b41d-4b32-a4bc-10916b5a56c3",
       "key": "{{key}}",
       "value": "",
       "type": "string"
