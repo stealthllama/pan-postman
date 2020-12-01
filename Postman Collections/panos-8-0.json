@@ -8969,6 +8969,12 @@
             }
           ],
           "_postman_isSubFolder": true
+        },
+        {
+          "name": "Automatically Check for and Install Content Updates",
+          "item": [],
+          "_postman_id": "d614d66c-c68e-4e80-9f1f-2fbf6af9045a",
+          "_postman_isSubFolder": true
         }
       ],
       "_postman_id": "48a4821f-5bbb-4b0c-ad3a-eb55970c295e"
@@ -9005,13 +9011,13 @@
   ],
   "variable": [
     {
-      "id": "8c20746f-2322-47d9-8783-487f392d25ef",
+      "id": "0d1fc200-1c2f-498f-a1a0-0ebf2d0b65cc",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "703da91c-6800-4af9-90c9-33f3669eff59",
+      "id": "d6a4bd38-6c21-41cd-8084-e99bfa4ee7c1",
       "key": "{{key}}",
       "value": "",
       "type": "string"
