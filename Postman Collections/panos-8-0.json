@@ -9229,7 +9229,7 @@
                 "method": "GET",
                 "header": [],
                 "url": {
-                  "raw": "https://{{host}}/api/?type=op&cmd=<request><content><upgrade><check></check></upgrade></content></request>",
+                  "raw": "https://{{host}}/api/?type=op&cmd=<request><global-protect-client><software><check></check></software></global-protect-client></request>",
                   "protocol": "https",
                   "host": [
                     "{{host}}"
@@ -9245,7 +9245,7 @@
                     },
                     {
                       "key": "cmd",
-                      "value": "<request><content><upgrade><check></check></upgrade></content></request>"
+                      "value": "<request><global-protect-client><software><check></check></software></global-protect-client></request>"
                     }
                   ]
                 }
@@ -9404,13 +9404,13 @@
   ],
   "variable": [
     {
-      "id": "0fc51539-739c-4e0e-a100-4e68990f2202",
+      "id": "d24b88e6-2659-4c39-8ac0-f294f18aca47",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "6d811c96-6be1-47db-b9c2-2b5000d1d9ad",
+      "id": "465be6c9-93b7-4c57-9cfb-7b5a4ddcd986",
       "key": "{{key}}",
       "value": "",
       "type": "string"
