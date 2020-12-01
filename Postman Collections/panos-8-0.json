@@ -9025,13 +9025,13 @@
   ],
   "variable": [
     {
-      "id": "29d160be-7cdc-4489-b735-4087c783498d",
+      "id": "199135c1-9863-46cd-a083-6c6acd914e8a",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "9fd802f2-34a4-48b1-9aca-9805b44ee025",
+      "id": "6847b31d-1b04-4ed1-be72-b1e8f71c4475",
       "key": "{{key}}",
       "value": "",
       "type": "string"
