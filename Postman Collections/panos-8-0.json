@@ -9171,13 +9171,13 @@
   ],
   "variable": [
     {
-      "id": "5201fad4-e579-4a4a-8a7e-d4d62038c345",
+      "id": "5ec2034c-aa4d-43ff-9a3a-332112d8f7a2",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "c9b4eaaf-70eb-408e-910c-48b90e1d151d",
+      "id": "0a59146d-cd11-4dc9-9b0a-fa60be2a306f",
       "key": "{{key}}",
       "value": "",
       "type": "string"
