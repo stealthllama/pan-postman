@@ -9835,129 +9835,6 @@
               ]
             },
             {
-              "name": "Download latest WildFire update Copy",
-              "_postman_id": "15258570-b669-4394-abdc-df157de323aa",
-              "protocolProfileBehavior": {
-                "disableBodyPruning": true
-              },
-              "request": {
-                "method": "GET",
-                "header": [],
-                "url": {
-                  "raw": "https://{{host}}/api/?type=op&cmd=<request><wildfire><upgrade><download><latest></latest></download></upgrade></wildfire></request>",
-                  "protocol": "https",
-                  "host": [
-                    "{{host}}"
-                  ],
-                  "path": [
-                    "api",
-                    ""
-                  ],
-                  "query": [
-                    {
-                      "key": "type",
-                      "value": "op"
-                    },
-                    {
-                      "key": "cmd",
-                      "value": "<request><wildfire><upgrade><download><latest></latest></download></upgrade></wildfire></request>"
-                    }
-                  ]
-                }
-              },
-              "response": [
-                {
-                  "id": "29cbac56-3653-4894-83ab-ccec344f5dc1",
-                  "name": "Download latest WildFire update",
-                  "originalRequest": {
-                    "method": "GET",
-                    "header": [],
-                    "url": {
-                      "raw": "https://{{host}}/api/?type=op&cmd=<request><wildfire><upgrade><download><latest></latest></download></upgrade></wildfire></request>",
-                      "protocol": "https",
-                      "host": [
-                        "{{host}}"
-                      ],
-                      "path": [
-                        "api",
-                        ""
-                      ],
-                      "query": [
-                        {
-                          "key": "type",
-                          "value": "op"
-                        },
-                        {
-                          "key": "cmd",
-                          "value": "<request><wildfire><upgrade><download><latest></latest></download></upgrade></wildfire></request>"
-                        }
-                      ]
-                    }
-                  },
-                  "status": "OK",
-                  "code": 200,
-                  "_postman_previewlanguage": "xml",
-                  "header": [
-                    {
-                      "key": "Date",
-                      "value": "Tue, 01 Dec 2020 20:38:40 GMT"
-                    },
-                    {
-                      "key": "Content-Type",
-                      "value": "application/xml; charset=UTF-8"
-                    },
-                    {
-                      "key": "Content-Length",
-                      "value": "135"
-                    },
-                    {
-                      "key": "Connection",
-                      "value": "keep-alive"
-                    },
-                    {
-                      "key": "X-FRAME-OPTIONS",
-                      "value": "SAMEORIGIN"
-                    },
-                    {
-                      "key": "X-XSS-Protection",
-                      "value": "1; mode=block"
-                    },
-                    {
-                      "key": "X-Content-Type-Options",
-                      "value": "nosniff"
-                    },
-                    {
-                      "key": "Content-Security-Policy",
-                      "value": "default-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:;"
-                    },
-                    {
-                      "key": "Strict-Transport-Security",
-                      "value": "max-age=31536000"
-                    },
-                    {
-                      "key": "Cache-Control",
-                      "value": "no-store, no-cache, must-revalidate, post-check=0, pre-check=0"
-                    },
-                    {
-                      "key": "Expires",
-                      "value": "Thu, 19 Nov 1981 08:52:00 GMT"
-                    },
-                    {
-                      "key": "Pragma",
-                      "value": "no-cache"
-                    },
-                    {
-                      "key": "Allow",
-                      "value": "GET, HEAD, POST, PUT, DELETE, OPTIONS"
-                    }
-                  ],
-                  "cookie": [],
-                  "responseTime": null,
-                  "body": "<response status=\"success\" code=\"19\">\n    <result>\n        <msg>\n            <line>Download job enqueued with jobid 4</line>\n        </msg>\n        <job>4</job>\n    </result>\n</response>"
-                }
-              ]
-            },
-            {
               "name": "Install latest Application & Threat update",
               "_postman_id": "5d919f62-5728-4b12-a558-6fd66c6abab5",
               "protocolProfileBehavior": {
@@ -10077,6 +9954,129 @@
                   "cookie": [],
                   "responseTime": null,
                   "body": "<response status=\"success\" code=\"19\">\n    <result>\n        <msg>\n            <line>Content install job enqueued with jobid 3</line>\n        </msg>\n        <job>3</job>\n    </result>\n</response>"
+                }
+              ]
+            },
+            {
+              "name": "Install latest WildFire update",
+              "_postman_id": "15258570-b669-4394-abdc-df157de323aa",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "https://{{host}}/api/?type=op&cmd=<request><wildfire><upgrade><download><latest></latest></download></upgrade></wildfire></request>",
+                  "protocol": "https",
+                  "host": [
+                    "{{host}}"
+                  ],
+                  "path": [
+                    "api",
+                    ""
+                  ],
+                  "query": [
+                    {
+                      "key": "type",
+                      "value": "op"
+                    },
+                    {
+                      "key": "cmd",
+                      "value": "<request><wildfire><upgrade><download><latest></latest></download></upgrade></wildfire></request>"
+                    }
+                  ]
+                }
+              },
+              "response": [
+                {
+                  "id": "29cbac56-3653-4894-83ab-ccec344f5dc1",
+                  "name": "Download latest WildFire update",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [],
+                    "url": {
+                      "raw": "https://{{host}}/api/?type=op&cmd=<request><wildfire><upgrade><download><latest></latest></download></upgrade></wildfire></request>",
+                      "protocol": "https",
+                      "host": [
+                        "{{host}}"
+                      ],
+                      "path": [
+                        "api",
+                        ""
+                      ],
+                      "query": [
+                        {
+                          "key": "type",
+                          "value": "op"
+                        },
+                        {
+                          "key": "cmd",
+                          "value": "<request><wildfire><upgrade><download><latest></latest></download></upgrade></wildfire></request>"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "xml",
+                  "header": [
+                    {
+                      "key": "Date",
+                      "value": "Tue, 01 Dec 2020 20:38:40 GMT"
+                    },
+                    {
+                      "key": "Content-Type",
+                      "value": "application/xml; charset=UTF-8"
+                    },
+                    {
+                      "key": "Content-Length",
+                      "value": "135"
+                    },
+                    {
+                      "key": "Connection",
+                      "value": "keep-alive"
+                    },
+                    {
+                      "key": "X-FRAME-OPTIONS",
+                      "value": "SAMEORIGIN"
+                    },
+                    {
+                      "key": "X-XSS-Protection",
+                      "value": "1; mode=block"
+                    },
+                    {
+                      "key": "X-Content-Type-Options",
+                      "value": "nosniff"
+                    },
+                    {
+                      "key": "Content-Security-Policy",
+                      "value": "default-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:;"
+                    },
+                    {
+                      "key": "Strict-Transport-Security",
+                      "value": "max-age=31536000"
+                    },
+                    {
+                      "key": "Cache-Control",
+                      "value": "no-store, no-cache, must-revalidate, post-check=0, pre-check=0"
+                    },
+                    {
+                      "key": "Expires",
+                      "value": "Thu, 19 Nov 1981 08:52:00 GMT"
+                    },
+                    {
+                      "key": "Pragma",
+                      "value": "no-cache"
+                    },
+                    {
+                      "key": "Allow",
+                      "value": "GET, HEAD, POST, PUT, DELETE, OPTIONS"
+                    }
+                  ],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "<response status=\"success\" code=\"19\">\n    <result>\n        <msg>\n            <line>Download job enqueued with jobid 4</line>\n        </msg>\n        <job>4</job>\n    </result>\n</response>"
                 }
               ]
             },
@@ -10265,13 +10265,13 @@
   ],
   "variable": [
     {
-      "id": "d85e66e7-7308-4243-a212-582b2862a63b",
+      "id": "bd043047-fd59-4216-a247-cbefe1caa619",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "694f5964-76d3-4c07-9a70-8ed51966577c",
+      "id": "d6fbf74e-4988-44dc-9971-65641bcdeaef",
       "key": "{{key}}",
       "value": "",
       "type": "string"
