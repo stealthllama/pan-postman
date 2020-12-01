@@ -9404,13 +9404,13 @@
   ],
   "variable": [
     {
-      "id": "7170a806-ee38-4335-98a4-5d8d26df0d75",
+      "id": "b3ee1141-1ad5-4e9a-8083-b76787d2a56a",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "67984988-5da0-46a5-ac54-c810d11bccbf",
+      "id": "1e617661-5961-4f21-a126-ab31bbb9aa3d",
       "key": "{{key}}",
       "value": "",
       "type": "string"
