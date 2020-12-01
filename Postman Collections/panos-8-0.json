@@ -8982,12 +8982,145 @@
               "request": {
                 "method": "GET",
                 "header": [],
-                "url": ""
+                "url": {
+                  "raw": "https://{{host}}/api/?type=op&cmd=<show><system><info></info></system></show>",
+                  "protocol": "https",
+                  "host": [
+                    "{{host}}"
+                  ],
+                  "path": [
+                    "api",
+                    ""
+                  ],
+                  "query": [
+                    {
+                      "key": "type",
+                      "value": "op"
+                    },
+                    {
+                      "key": "cmd",
+                      "value": "<show><system><info></info></system></show>"
+                    }
+                  ]
+                }
               },
-              "response": []
+              "response": [
+                {
+                  "id": "cdee6668-3f37-4251-8b73-433ab897fff9",
+                  "name": "View current system information",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [],
+                    "url": {
+                      "raw": "https://{{host}}/api/?type=op&cmd=<show><system><info></info></system></show>",
+                      "protocol": "https",
+                      "host": [
+                        "{{host}}"
+                      ],
+                      "path": [
+                        "api",
+                        ""
+                      ],
+                      "query": [
+                        {
+                          "key": "type",
+                          "value": "op"
+                        },
+                        {
+                          "key": "cmd",
+                          "value": "<show><system><info></info></system></show>"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "xml",
+                  "header": [
+                    {
+                      "key": "Date",
+                      "value": "Tue, 01 Dec 2020 20:20:54 GMT"
+                    },
+                    {
+                      "key": "Content-Type",
+                      "value": "application/xml; charset=UTF-8"
+                    },
+                    {
+                      "key": "Content-Length",
+                      "value": "2403"
+                    },
+                    {
+                      "key": "Connection",
+                      "value": "keep-alive"
+                    },
+                    {
+                      "key": "X-FRAME-OPTIONS",
+                      "value": "SAMEORIGIN"
+                    },
+                    {
+                      "key": "X-XSS-Protection",
+                      "value": "1; mode=block"
+                    },
+                    {
+                      "key": "X-Content-Type-Options",
+                      "value": "nosniff"
+                    },
+                    {
+                      "key": "Content-Security-Policy",
+                      "value": "default-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:;"
+                    },
+                    {
+                      "key": "Strict-Transport-Security",
+                      "value": "max-age=31536000"
+                    },
+                    {
+                      "key": "Cache-Control",
+                      "value": "no-store, no-cache, must-revalidate, post-check=0, pre-check=0"
+                    },
+                    {
+                      "key": "Expires",
+                      "value": "Thu, 19 Nov 1981 08:52:00 GMT"
+                    },
+                    {
+                      "key": "Pragma",
+                      "value": "no-cache"
+                    },
+                    {
+                      "key": "Allow",
+                      "value": "GET, HEAD, POST, PUT, DELETE, OPTIONS"
+                    }
+                  ],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "<response status=\"success\">\n    <result>\n        <system>\n            <hostname>PA-VM</hostname>\n            <ip-address>192.168.55.10</ip-address>\n            <public-ip-address>unknown</public-ip-address>\n            <netmask>255.255.255.0</netmask>\n            <default-gateway>192.168.55.2</default-gateway>\n            <is-dhcp>no</is-dhcp>\n            <ipv6-address>unknown</ipv6-address>\n            <ipv6-link-local-address>fe80::20c:29ff:fe5a:1b7/64</ipv6-link-local-address>\n            <mac-address>00:0c:29:5a:01:b7</mac-address>\n            <time>Tue Dec  1 12:20:53 2020\n</time>\n            <uptime>0 days, 0:07:57</uptime>\n            <devicename>PA-VM</devicename>\n            <family>vm</family>\n            <model>PA-VM</model>\n            <serial>015351000039218</serial>\n            <vm-mac-base>7C:89:C1:1E:86:00</vm-mac-base>\n            <vm-mac-count>256</vm-mac-count>\n            <vm-uuid>564DE640-DE7B-B088-C549-CD8F3C5A01B7</vm-uuid>\n            <vm-cpuid>ESX:ED060900FFFB8B1F</vm-cpuid>\n            <vm-license>VM-50</vm-license>\n            <vm-mode>VMware ESXi</vm-mode>\n            <cloud-mode>non-cloud</cloud-mode>\n            <sw-version>10.0.2</sw-version>\n            <global-protect-client-package-version>5.0.8</global-protect-client-package-version>\n            <device-dictionary-version>12-242</device-dictionary-version>\n            <device-dictionary-release-date>2020/11/19 19:45:46 PST</device-dictionary-release-date>\n            <app-version>8348-6427</app-version>\n            <app-release-date>2020/11/24 17:11:39 PST</app-release-date>\n            <av-version>3541-4052</av-version>\n            <av-release-date>2020/11/23 04:00:01 PST</av-release-date>\n            <threat-version>8348-6427</threat-version>\n            <threat-release-date>2020/11/24 17:11:39 PST</threat-release-date>\n            <wf-private-version>0</wf-private-version>\n            <wf-private-release-date>unknown</wf-private-release-date>\n            <url-db>paloaltonetworks</url-db>\n            <wildfire-version>0</wildfire-version>\n            <wildfire-rt>Disabled</wildfire-rt>\n            <url-filtering-version>20201201.20306</url-filtering-version>\n            <global-protect-datafile-version>unknown</global-protect-datafile-version>\n            <global-protect-datafile-release-date>unknown</global-protect-datafile-release-date>\n            <global-protect-clientless-vpn-version>0</global-protect-clientless-vpn-version>\n            <logdb-version>10.0.2</logdb-version>\n            <plugin_versions>\n                <entry name='vm_series' version='2.0.2'>\n                    <pkginfo>vm_series-2.0.2</pkginfo>\n                </entry>\n                <entry name='dlp' version='1.0.1'>\n                    <pkginfo>dlp-1.0.1</pkginfo>\n                </entry>\n            </plugin_versions>\n            <platform-family>vm</platform-family>\n            <vpn-disable-mode>off</vpn-disable-mode>\n            <multi-vsys>off</multi-vsys>\n            <operational-mode>normal</operational-mode>\n            <device-certificate-status>Expired</device-certificate-status>\n        </system>\n    </result>\n</response>"
+                }
+              ]
             }
           ],
           "_postman_id": "d614d66c-c68e-4e80-9f1f-2fbf6af9045a",
+          "description": "View the [official documentation](https://docs.paloaltonetworks.com/pan-os/10-0/pan-os-panorama-api/pan-os-xml-api-use-cases/automatically-check-for-and-install-content-updates-api.html).\n\nUsing the XML API, you can programmatically check and install new content updates, including antivirus, WildFire, and GlobalProtect updates. Check for new updates available and download updates that have been released for at least one week.",
+          "event": [
+            {
+              "listen": "prerequest",
+              "script": {
+                "id": "07a77905-9f45-4595-be7c-19d74fbbf70b",
+                "type": "text/javascript",
+                "exec": [
+                  ""
+                ]
+              }
+            },
+            {
+              "listen": "test",
+              "script": {
+                "id": "3c419eed-f156-48fc-b5d7-b8c750fdd848",
+                "type": "text/javascript",
+                "exec": [
+                  ""
+                ]
+              }
+            }
+          ],
           "_postman_isSubFolder": true
         }
       ],
@@ -9025,13 +9158,13 @@
   ],
   "variable": [
     {
-      "id": "199135c1-9863-46cd-a083-6c6acd914e8a",
+      "id": "e4005545-69a3-4dd3-a657-69c639bc5157",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "6847b31d-1b04-4ed1-be72-b1e8f71c4475",
+      "id": "ed124bce-6a37-4585-bb31-66295736df27",
       "key": "{{key}}",
       "value": "",
       "type": "string"
