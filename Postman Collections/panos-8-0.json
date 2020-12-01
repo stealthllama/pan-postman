@@ -7751,13 +7751,13 @@
   ],
   "variable": [
     {
-      "id": "9d787da5-edea-460e-9a6a-01f6b32c82af",
+      "id": "87bb4cda-5aba-48e1-91df-fb0762dad114",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "898bbb05-4d8b-459e-b5a4-1bcd5ce89f69",
+      "id": "9e3869f4-0b41-40e5-aaa8-ff893b409d75",
       "key": "{{key}}",
       "value": "",
       "type": "string"
