@@ -10204,6 +10204,39 @@
               ]
             },
             {
+              "name": "Install latest Anti-Virus update",
+              "_postman_id": "74146118-7494-47a6-85ec-4e916b2cba8d",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "https://{{host}}/api/?type=op&cmd=<request><wildfire><upgrade><install><version>latest</version></install></upgrade></wildfire></request>",
+                  "protocol": "https",
+                  "host": [
+                    "{{host}}"
+                  ],
+                  "path": [
+                    "api",
+                    ""
+                  ],
+                  "query": [
+                    {
+                      "key": "type",
+                      "value": "op"
+                    },
+                    {
+                      "key": "cmd",
+                      "value": "<request><wildfire><upgrade><install><version>latest</version></install></upgrade></wildfire></request>"
+                    }
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
               "name": "Check job status",
               "_postman_id": "2d936ec7-ebd8-405f-9ae5-48aeeb159455",
               "protocolProfileBehavior": {
@@ -10325,129 +10358,6 @@
                   "body": "<response status=\"success\">\n    <result>\n        <job>\n            <tenq>2020/12/01 12:30:34</tenq>\n            <tdeq>12:30:34</tdeq>\n            <id>2</id>\n            <user></user>\n            <type>Downld</type>\n            <status>FIN</status>\n            <queued>NO</queued>\n            <stoppable>no</stoppable>\n            <result>OK</result>\n            <tfin>12:30:37</tfin>\n            <description></description>\n            <positionInQ>0</positionInQ>\n            <progress>12:30:37</progress>\n            <details>\n                <line>File successfully downloaded\n</line>\n            </details>\n            <warnings></warnings>\n        </job>\n    </result>\n</response>"
                 }
               ]
-            },
-            {
-              "name": "Install latest WildFire update Copy",
-              "_postman_id": "74146118-7494-47a6-85ec-4e916b2cba8d",
-              "protocolProfileBehavior": {
-                "disableBodyPruning": true
-              },
-              "request": {
-                "method": "GET",
-                "header": [],
-                "url": {
-                  "raw": "https://{{host}}/api/?type=op&cmd=<request><wildfire><upgrade><install><version>latest</version></install></upgrade></wildfire></request>",
-                  "protocol": "https",
-                  "host": [
-                    "{{host}}"
-                  ],
-                  "path": [
-                    "api",
-                    ""
-                  ],
-                  "query": [
-                    {
-                      "key": "type",
-                      "value": "op"
-                    },
-                    {
-                      "key": "cmd",
-                      "value": "<request><wildfire><upgrade><install><version>latest</version></install></upgrade></wildfire></request>"
-                    }
-                  ]
-                }
-              },
-              "response": [
-                {
-                  "id": "0cbe324d-9e9b-4f0a-9e74-6e787a8bf804",
-                  "name": "Install latest WildFire update",
-                  "originalRequest": {
-                    "method": "GET",
-                    "header": [],
-                    "url": {
-                      "raw": "https://{{host}}/api/?type=op&cmd=<request><wildfire><upgrade><install><version>latest</version></install></upgrade></wildfire></request>",
-                      "protocol": "https",
-                      "host": [
-                        "{{host}}"
-                      ],
-                      "path": [
-                        "api",
-                        ""
-                      ],
-                      "query": [
-                        {
-                          "key": "type",
-                          "value": "op"
-                        },
-                        {
-                          "key": "cmd",
-                          "value": "<request><wildfire><upgrade><install><version>latest</version></install></upgrade></wildfire></request>"
-                        }
-                      ]
-                    }
-                  },
-                  "status": "OK",
-                  "code": 200,
-                  "_postman_previewlanguage": "xml",
-                  "header": [
-                    {
-                      "key": "Date",
-                      "value": "Tue, 01 Dec 2020 20:40:42 GMT"
-                    },
-                    {
-                      "key": "Content-Type",
-                      "value": "application/xml; charset=UTF-8"
-                    },
-                    {
-                      "key": "Content-Length",
-                      "value": "142"
-                    },
-                    {
-                      "key": "Connection",
-                      "value": "keep-alive"
-                    },
-                    {
-                      "key": "X-FRAME-OPTIONS",
-                      "value": "SAMEORIGIN"
-                    },
-                    {
-                      "key": "X-XSS-Protection",
-                      "value": "1; mode=block"
-                    },
-                    {
-                      "key": "X-Content-Type-Options",
-                      "value": "nosniff"
-                    },
-                    {
-                      "key": "Content-Security-Policy",
-                      "value": "default-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:;"
-                    },
-                    {
-                      "key": "Strict-Transport-Security",
-                      "value": "max-age=31536000"
-                    },
-                    {
-                      "key": "Cache-Control",
-                      "value": "no-store, no-cache, must-revalidate, post-check=0, pre-check=0"
-                    },
-                    {
-                      "key": "Expires",
-                      "value": "Thu, 19 Nov 1981 08:52:00 GMT"
-                    },
-                    {
-                      "key": "Pragma",
-                      "value": "no-cache"
-                    },
-                    {
-                      "key": "Allow",
-                      "value": "GET, HEAD, POST, PUT, DELETE, OPTIONS"
-                    }
-                  ],
-                  "cookie": [],
-                  "responseTime": null,
-                  "body": "<response status=\"success\" code=\"19\">\n    <result>\n        <msg>\n            <line>Content install job enqueued with jobid 6</line>\n        </msg>\n        <job>6</job>\n    </result>\n</response>"
-                }
-              ]
             }
           ],
           "_postman_id": "d614d66c-c68e-4e80-9f1f-2fbf6af9045a",
@@ -10511,13 +10421,13 @@
   ],
   "variable": [
     {
-      "id": "cd075497-12ca-4325-b731-825cd7a89f1c",
+      "id": "9570dbbf-ee74-4c2c-8888-b0003d1f62d3",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "49a6a35c-0722-42fb-9c09-a2091352c24d",
+      "id": "1d8d6a71-5bbf-4da8-a090-bf28a291f5cb",
       "key": "{{key}}",
       "value": "",
       "type": "string"
