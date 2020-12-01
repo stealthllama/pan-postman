@@ -8380,13 +8380,13 @@
   ],
   "variable": [
     {
-      "id": "b7a30d38-56a5-4372-8a07-0814b78383ac",
+      "id": "25c02714-d919-415b-9f6d-be1757b25c21",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "aab43e8f-9bcc-49d2-9b6b-6382c7b61424",
+      "id": "7f73a76e-c7bc-4ae7-a6b2-6be353ac253b",
       "key": "{{key}}",
       "value": "",
       "type": "string"
