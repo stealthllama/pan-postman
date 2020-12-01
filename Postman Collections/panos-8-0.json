@@ -9098,7 +9098,7 @@
             }
           ],
           "_postman_id": "d614d66c-c68e-4e80-9f1f-2fbf6af9045a",
-          "description": "View the [official documentation](https://docs.paloaltonetworks.com/pan-os/10-0/pan-os-panorama-api/pan-os-xml-api-use-cases/automatically-check-for-and-install-content-updates-api.html).\n\nUsing the XML API, you can programmatically check and install new content updates, including antivirus, WildFire, and GlobalProtect updates. Check for new updates available and download updates that have been released for at least one week.",
+          "description": "View the [official documentation](https://docs.paloaltonetworks.com/pan-os/10-0/pan-os-panorama-api/pan-os-xml-api-use-cases/automatically-check-for-and-install-content-updates-api.html).\n\nUsing the XML API, you can programmatically check and install new content updates, including antivirus, WildFire, and GlobalProtect updates. Check for new updates available and download updates that have been released for at least one week.\n\nThe example requests in this section are meant to be executed in sequence.  Any of the check status requests (e.x. \"Check software download status\") are meant to be executed until the returned job result is `FIN`.",
           "event": [
             {
               "listen": "prerequest",
@@ -9158,13 +9158,13 @@
   ],
   "variable": [
     {
-      "id": "e4005545-69a3-4dd3-a657-69c639bc5157",
+      "id": "bd65950f-12c9-4e7e-8685-57345934eddb",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "ed124bce-6a37-4585-bb31-66295736df27",
+      "id": "6f1368d7-b97a-460b-b8d5-bccb2ba14d95",
       "key": "{{key}}",
       "value": "",
       "type": "string"
