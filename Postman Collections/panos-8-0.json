@@ -7709,7 +7709,14 @@
     },
     {
       "name": "Use Cases",
-      "item": [],
+      "item": [
+        {
+          "name": "Upgrade a Firewall to the Latest PAN-OS Version",
+          "item": [],
+          "_postman_id": "39927bcc-4096-4ae1-951d-58c8af1e2324",
+          "_postman_isSubFolder": true
+        }
+      ],
       "_postman_id": "48a4821f-5bbb-4b0c-ad3a-eb55970c295e"
     }
   ],
@@ -7744,13 +7751,13 @@
   ],
   "variable": [
     {
-      "id": "763c3327-e32b-4302-8949-a55d4d82ef92",
+      "id": "9d787da5-edea-460e-9a6a-01f6b32c82af",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "1f1b1f2a-0642-4ed0-bdab-00111a0e7a7f",
+      "id": "898bbb05-4d8b-459e-b5a4-1bcd5ce89f69",
       "key": "{{key}}",
       "value": "",
       "type": "string"
