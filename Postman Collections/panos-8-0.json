@@ -8649,13 +8649,13 @@
   ],
   "variable": [
     {
-      "id": "44002674-7530-48f2-a675-8eb2f7e864ee",
+      "id": "fadf9441-f5eb-40e2-a804-a2a0f75017f9",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "410bff18-11d6-4bc1-937c-9c636e00f93a",
+      "id": "ec968e1a-f36f-491c-a89b-12c306052860",
       "key": "{{key}}",
       "value": "",
       "type": "string"
