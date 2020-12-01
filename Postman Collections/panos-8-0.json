@@ -9229,7 +9229,7 @@
                 "method": "GET",
                 "header": [],
                 "url": {
-                  "raw": "https://{{host}}/api/?type=op&cmd=<request><content><upgrade><check></check></upgrade></content></request>",
+                  "raw": "https://{{host}}/api/?type=op&cmd=<request><wildfire><upgrade><check></check></upgrade></wildfire></request>",
                   "protocol": "https",
                   "host": [
                     "{{host}}"
@@ -9245,12 +9245,102 @@
                     },
                     {
                       "key": "cmd",
-                      "value": "<request><content><upgrade><check></check></upgrade></content></request>"
+                      "value": "<request><wildfire><upgrade><check></check></upgrade></wildfire></request>"
                     }
                   ]
                 }
               },
-              "response": []
+              "response": [
+                {
+                  "id": "d128e161-06bc-49aa-8c63-b9a9526261c2",
+                  "name": "Check for WildFire updates",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [],
+                    "url": {
+                      "raw": "https://{{host}}/api/?type=op&cmd=<request><wildfire><upgrade><check></check></upgrade></wildfire></request>",
+                      "protocol": "https",
+                      "host": [
+                        "{{host}}"
+                      ],
+                      "path": [
+                        "api",
+                        ""
+                      ],
+                      "query": [
+                        {
+                          "key": "type",
+                          "value": "op"
+                        },
+                        {
+                          "key": "cmd",
+                          "value": "<request><wildfire><upgrade><check></check></upgrade></wildfire></request>"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "xml",
+                  "header": [
+                    {
+                      "key": "Date",
+                      "value": "Tue, 01 Dec 2020 20:28:03 GMT"
+                    },
+                    {
+                      "key": "Content-Type",
+                      "value": "application/xml; charset=UTF-8"
+                    },
+                    {
+                      "key": "Content-Length",
+                      "value": "923"
+                    },
+                    {
+                      "key": "Connection",
+                      "value": "keep-alive"
+                    },
+                    {
+                      "key": "X-FRAME-OPTIONS",
+                      "value": "SAMEORIGIN"
+                    },
+                    {
+                      "key": "X-XSS-Protection",
+                      "value": "1; mode=block"
+                    },
+                    {
+                      "key": "X-Content-Type-Options",
+                      "value": "nosniff"
+                    },
+                    {
+                      "key": "Content-Security-Policy",
+                      "value": "default-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:;"
+                    },
+                    {
+                      "key": "Strict-Transport-Security",
+                      "value": "max-age=31536000"
+                    },
+                    {
+                      "key": "Cache-Control",
+                      "value": "no-store, no-cache, must-revalidate, post-check=0, pre-check=0"
+                    },
+                    {
+                      "key": "Expires",
+                      "value": "Thu, 19 Nov 1981 08:52:00 GMT"
+                    },
+                    {
+                      "key": "Pragma",
+                      "value": "no-cache"
+                    },
+                    {
+                      "key": "Allow",
+                      "value": "GET, HEAD, POST, PUT, DELETE, OPTIONS"
+                    }
+                  ],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "<response status=\"success\">\n    <result>\n        <content-updates last-updated-at=\"2020/12/01 12:28:03 PST\">\n            <entry>\n                <version>511621-514620</version>\n                <app-version>511621-514620</app-version>\n                <filename>panupv3-all-wildfire-511621-514620</filename>\n                <size>6</size>\n                <size-kb>6985</size-kb>\n                <released-on>2020/12/01 12:27:28 PST</released-on>\n                <release-notes>\n                    <![CDATA[https://proditpdownloads.paloaltonetworks.com/wildfire/WildfireExternal-v2-511621.html?__token__=exp=1607459283~acl=/wildfire/WildfireExternal-v2-511621.html*~hmac=5cc9a0bda7567893a6b734ad7b5e6d080c4d07c595a4e98cef0a06c4eaa9f03c]]>\n                </release-notes>\n                <downloaded>no</downloaded>\n                <current>no</current>\n                <previous>no</previous>\n                <installing>no</installing>\n                <features>wildfire</features>\n                <update-type>Full</update-type>\n                <feature-desc>PAN-OS 10.0 and later</feature-desc>\n                <sha256>61903fce63d8ed3aa9550ab2e6fe77ab68bbdfb7ff9eb131de3bd6dda38f65db</sha256>\n            </entry>\n        </content-updates>\n    </result>\n</response>"
+                }
+              ]
             },
             {
               "name": "Check for GlobalProtect client updates",
@@ -9437,13 +9527,13 @@
   ],
   "variable": [
     {
-      "id": "4a30a586-788c-4473-a413-64a7ca6633ec",
+      "id": "371112c2-4df5-4940-a5be-0bdfd279ef9d",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "f81871a9-aaa8-4221-ba2e-e62c4742f2f3",
+      "id": "53b55e91-16ae-4605-9b97-148f21df13a0",
       "key": "{{key}}",
       "value": "",
       "type": "string"
