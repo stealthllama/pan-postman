@@ -7722,6 +7722,129 @@
               "request": {
                 "method": "GET",
                 "header": [],
+                "url": {
+                  "raw": "https://{{host}}/api/?type=op&cmd=<request><content><upgrade><download><latest/></download></upgrade></content></request>",
+                  "protocol": "https",
+                  "host": [
+                    "{{host}}"
+                  ],
+                  "path": [
+                    "api",
+                    ""
+                  ],
+                  "query": [
+                    {
+                      "key": "type",
+                      "value": "op"
+                    },
+                    {
+                      "key": "cmd",
+                      "value": "<request><content><upgrade><download><latest/></download></upgrade></content></request>"
+                    }
+                  ]
+                }
+              },
+              "response": [
+                {
+                  "id": "bc23d674-66c2-4ec2-9142-3d2619fc44c2",
+                  "name": "Download the latest content update",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [],
+                    "url": {
+                      "raw": "https://{{host}}/api/?type=op&cmd=<request><content><upgrade><download><latest/></download></upgrade></content></request>",
+                      "protocol": "https",
+                      "host": [
+                        "{{host}}"
+                      ],
+                      "path": [
+                        "api",
+                        ""
+                      ],
+                      "query": [
+                        {
+                          "key": "type",
+                          "value": "op"
+                        },
+                        {
+                          "key": "cmd",
+                          "value": "<request><content><upgrade><download><latest/></download></upgrade></content></request>"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "xml",
+                  "header": [
+                    {
+                      "key": "Date",
+                      "value": "Tue, 01 Dec 2020 19:54:52 GMT"
+                    },
+                    {
+                      "key": "Content-Type",
+                      "value": "application/xml; charset=UTF-8"
+                    },
+                    {
+                      "key": "Content-Length",
+                      "value": "135"
+                    },
+                    {
+                      "key": "Connection",
+                      "value": "keep-alive"
+                    },
+                    {
+                      "key": "X-FRAME-OPTIONS",
+                      "value": "SAMEORIGIN"
+                    },
+                    {
+                      "key": "X-XSS-Protection",
+                      "value": "1; mode=block"
+                    },
+                    {
+                      "key": "X-Content-Type-Options",
+                      "value": "nosniff"
+                    },
+                    {
+                      "key": "Content-Security-Policy",
+                      "value": "default-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:;"
+                    },
+                    {
+                      "key": "Strict-Transport-Security",
+                      "value": "max-age=31536000"
+                    },
+                    {
+                      "key": "Cache-Control",
+                      "value": "no-store, no-cache, must-revalidate, post-check=0, pre-check=0"
+                    },
+                    {
+                      "key": "Expires",
+                      "value": "Thu, 19 Nov 1981 08:52:00 GMT"
+                    },
+                    {
+                      "key": "Pragma",
+                      "value": "no-cache"
+                    },
+                    {
+                      "key": "Allow",
+                      "value": "GET, HEAD, POST, PUT, DELETE, OPTIONS"
+                    }
+                  ],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "<response status=\"success\" code=\"19\">\n    <result>\n        <msg>\n            <line>Download job enqueued with jobid 2</line>\n        </msg>\n        <job>2</job>\n    </result>\n</response>"
+                }
+              ]
+            },
+            {
+              "name": "Check content download status",
+              "_postman_id": "82d29a5c-be79-48ac-8d64-e4730cdaed06",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "GET",
+                "header": [],
                 "url": ""
               },
               "response": []
@@ -7765,13 +7888,13 @@
   ],
   "variable": [
     {
-      "id": "9a59f4b2-cf53-40a3-b2ec-6de936c02a95",
+      "id": "3080fda8-f040-4fb5-be87-da3380ce8617",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "3dd17d47-3746-4238-8f7f-74d8a3781810",
+      "id": "7bb4554a-ca0d-4ef7-a7e5-cff42b00cb8b",
       "key": "{{key}}",
       "value": "",
       "type": "string"
