@@ -9958,6 +9958,129 @@
               ]
             },
             {
+              "name": "Download latest GlobalProtect client update",
+              "_postman_id": "b529b88d-b1b0-4ccb-85eb-ebb93432352b",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "https://{{host}}/api/?type=op&cmd=<request><global-protect-client><software><download><version>5.2.4</version></download></software></global-protect-client></request>",
+                  "protocol": "https",
+                  "host": [
+                    "{{host}}"
+                  ],
+                  "path": [
+                    "api",
+                    ""
+                  ],
+                  "query": [
+                    {
+                      "key": "type",
+                      "value": "op"
+                    },
+                    {
+                      "key": "cmd",
+                      "value": "<request><global-protect-client><software><download><version>5.2.4</version></download></software></global-protect-client></request>"
+                    }
+                  ]
+                }
+              },
+              "response": [
+                {
+                  "id": "0afa2d07-5898-4dc1-999b-07b174534aae",
+                  "name": "Download latest GlobalProtect client update",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [],
+                    "url": {
+                      "raw": "https://{{host}}/api/?type=op&cmd=<request><global-protect-client><software><download><version>5.2.4</version></download></software></global-protect-client></request>",
+                      "protocol": "https",
+                      "host": [
+                        "{{host}}"
+                      ],
+                      "path": [
+                        "api",
+                        ""
+                      ],
+                      "query": [
+                        {
+                          "key": "type",
+                          "value": "op"
+                        },
+                        {
+                          "key": "cmd",
+                          "value": "<request><global-protect-client><software><download><version>5.2.4</version></download></software></global-protect-client></request>"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "xml",
+                  "header": [
+                    {
+                      "key": "Date",
+                      "value": "Tue, 01 Dec 2020 20:47:15 GMT"
+                    },
+                    {
+                      "key": "Content-Type",
+                      "value": "application/xml; charset=UTF-8"
+                    },
+                    {
+                      "key": "Content-Length",
+                      "value": "135"
+                    },
+                    {
+                      "key": "Connection",
+                      "value": "keep-alive"
+                    },
+                    {
+                      "key": "X-FRAME-OPTIONS",
+                      "value": "SAMEORIGIN"
+                    },
+                    {
+                      "key": "X-XSS-Protection",
+                      "value": "1; mode=block"
+                    },
+                    {
+                      "key": "X-Content-Type-Options",
+                      "value": "nosniff"
+                    },
+                    {
+                      "key": "Content-Security-Policy",
+                      "value": "default-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:;"
+                    },
+                    {
+                      "key": "Strict-Transport-Security",
+                      "value": "max-age=31536000"
+                    },
+                    {
+                      "key": "Cache-Control",
+                      "value": "no-store, no-cache, must-revalidate, post-check=0, pre-check=0"
+                    },
+                    {
+                      "key": "Expires",
+                      "value": "Thu, 19 Nov 1981 08:52:00 GMT"
+                    },
+                    {
+                      "key": "Pragma",
+                      "value": "no-cache"
+                    },
+                    {
+                      "key": "Allow",
+                      "value": "GET, HEAD, POST, PUT, DELETE, OPTIONS"
+                    }
+                  ],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "<response status=\"success\" code=\"19\">\n    <result>\n        <msg>\n            <line>Download job enqueued with jobid 9</line>\n        </msg>\n        <job>9</job>\n    </result>\n</response>"
+                }
+              ]
+            },
+            {
               "name": "Install latest Application & Threat update",
               "_postman_id": "5d919f62-5728-4b12-a558-6fd66c6abab5",
               "protocolProfileBehavior": {
@@ -10327,6 +10450,129 @@
               ]
             },
             {
+              "name": "Install latest Anti-Virus update Copy",
+              "_postman_id": "201aadfa-9aab-4b5f-adc2-6a26cb0be4dd",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "https://{{host}}/api/?type=op&cmd=<request><anti-virus><upgrade><install><version>latest</version></install></upgrade></anti-virus></request>",
+                  "protocol": "https",
+                  "host": [
+                    "{{host}}"
+                  ],
+                  "path": [
+                    "api",
+                    ""
+                  ],
+                  "query": [
+                    {
+                      "key": "type",
+                      "value": "op"
+                    },
+                    {
+                      "key": "cmd",
+                      "value": "<request><anti-virus><upgrade><install><version>latest</version></install></upgrade></anti-virus></request>"
+                    }
+                  ]
+                }
+              },
+              "response": [
+                {
+                  "id": "3f2d348f-4215-4b44-972b-827426c9efb8",
+                  "name": "Install latest Anti-Virus update",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [],
+                    "url": {
+                      "raw": "https://{{host}}/api/?type=op&cmd=<request><anti-virus><upgrade><install><version>latest</version></install></upgrade></anti-virus></request>",
+                      "protocol": "https",
+                      "host": [
+                        "{{host}}"
+                      ],
+                      "path": [
+                        "api",
+                        ""
+                      ],
+                      "query": [
+                        {
+                          "key": "type",
+                          "value": "op"
+                        },
+                        {
+                          "key": "cmd",
+                          "value": "<request><anti-virus><upgrade><install><version>latest</version></install></upgrade></anti-virus></request>"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "xml",
+                  "header": [
+                    {
+                      "key": "Date",
+                      "value": "Tue, 01 Dec 2020 20:43:22 GMT"
+                    },
+                    {
+                      "key": "Content-Type",
+                      "value": "application/xml; charset=UTF-8"
+                    },
+                    {
+                      "key": "Content-Length",
+                      "value": "142"
+                    },
+                    {
+                      "key": "Connection",
+                      "value": "keep-alive"
+                    },
+                    {
+                      "key": "X-FRAME-OPTIONS",
+                      "value": "SAMEORIGIN"
+                    },
+                    {
+                      "key": "X-XSS-Protection",
+                      "value": "1; mode=block"
+                    },
+                    {
+                      "key": "X-Content-Type-Options",
+                      "value": "nosniff"
+                    },
+                    {
+                      "key": "Content-Security-Policy",
+                      "value": "default-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:;"
+                    },
+                    {
+                      "key": "Strict-Transport-Security",
+                      "value": "max-age=31536000"
+                    },
+                    {
+                      "key": "Cache-Control",
+                      "value": "no-store, no-cache, must-revalidate, post-check=0, pre-check=0"
+                    },
+                    {
+                      "key": "Expires",
+                      "value": "Thu, 19 Nov 1981 08:52:00 GMT"
+                    },
+                    {
+                      "key": "Pragma",
+                      "value": "no-cache"
+                    },
+                    {
+                      "key": "Allow",
+                      "value": "GET, HEAD, POST, PUT, DELETE, OPTIONS"
+                    }
+                  ],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "<response status=\"success\" code=\"19\">\n    <result>\n        <msg>\n            <line>Content install job enqueued with jobid 8</line>\n        </msg>\n        <job>8</job>\n    </result>\n</response>"
+                }
+              ]
+            },
+            {
               "name": "Check job status",
               "_postman_id": "2d936ec7-ebd8-405f-9ae5-48aeeb159455",
               "protocolProfileBehavior": {
@@ -10448,129 +10694,6 @@
                   "body": "<response status=\"success\">\n    <result>\n        <job>\n            <tenq>2020/12/01 12:30:34</tenq>\n            <tdeq>12:30:34</tdeq>\n            <id>2</id>\n            <user></user>\n            <type>Downld</type>\n            <status>FIN</status>\n            <queued>NO</queued>\n            <stoppable>no</stoppable>\n            <result>OK</result>\n            <tfin>12:30:37</tfin>\n            <description></description>\n            <positionInQ>0</positionInQ>\n            <progress>12:30:37</progress>\n            <details>\n                <line>File successfully downloaded\n</line>\n            </details>\n            <warnings></warnings>\n        </job>\n    </result>\n</response>"
                 }
               ]
-            },
-            {
-              "name": "Download latest GlobalProtect client update",
-              "_postman_id": "b529b88d-b1b0-4ccb-85eb-ebb93432352b",
-              "protocolProfileBehavior": {
-                "disableBodyPruning": true
-              },
-              "request": {
-                "method": "GET",
-                "header": [],
-                "url": {
-                  "raw": "https://{{host}}/api/?type=op&cmd=<request><global-protect-client><software><download><version>5.2.4</version></download></software></global-protect-client></request>",
-                  "protocol": "https",
-                  "host": [
-                    "{{host}}"
-                  ],
-                  "path": [
-                    "api",
-                    ""
-                  ],
-                  "query": [
-                    {
-                      "key": "type",
-                      "value": "op"
-                    },
-                    {
-                      "key": "cmd",
-                      "value": "<request><global-protect-client><software><download><version>5.2.4</version></download></software></global-protect-client></request>"
-                    }
-                  ]
-                }
-              },
-              "response": [
-                {
-                  "id": "0afa2d07-5898-4dc1-999b-07b174534aae",
-                  "name": "Download latest GlobalProtect client update",
-                  "originalRequest": {
-                    "method": "GET",
-                    "header": [],
-                    "url": {
-                      "raw": "https://{{host}}/api/?type=op&cmd=<request><global-protect-client><software><download><version>5.2.4</version></download></software></global-protect-client></request>",
-                      "protocol": "https",
-                      "host": [
-                        "{{host}}"
-                      ],
-                      "path": [
-                        "api",
-                        ""
-                      ],
-                      "query": [
-                        {
-                          "key": "type",
-                          "value": "op"
-                        },
-                        {
-                          "key": "cmd",
-                          "value": "<request><global-protect-client><software><download><version>5.2.4</version></download></software></global-protect-client></request>"
-                        }
-                      ]
-                    }
-                  },
-                  "status": "OK",
-                  "code": 200,
-                  "_postman_previewlanguage": "xml",
-                  "header": [
-                    {
-                      "key": "Date",
-                      "value": "Tue, 01 Dec 2020 20:47:15 GMT"
-                    },
-                    {
-                      "key": "Content-Type",
-                      "value": "application/xml; charset=UTF-8"
-                    },
-                    {
-                      "key": "Content-Length",
-                      "value": "135"
-                    },
-                    {
-                      "key": "Connection",
-                      "value": "keep-alive"
-                    },
-                    {
-                      "key": "X-FRAME-OPTIONS",
-                      "value": "SAMEORIGIN"
-                    },
-                    {
-                      "key": "X-XSS-Protection",
-                      "value": "1; mode=block"
-                    },
-                    {
-                      "key": "X-Content-Type-Options",
-                      "value": "nosniff"
-                    },
-                    {
-                      "key": "Content-Security-Policy",
-                      "value": "default-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:;"
-                    },
-                    {
-                      "key": "Strict-Transport-Security",
-                      "value": "max-age=31536000"
-                    },
-                    {
-                      "key": "Cache-Control",
-                      "value": "no-store, no-cache, must-revalidate, post-check=0, pre-check=0"
-                    },
-                    {
-                      "key": "Expires",
-                      "value": "Thu, 19 Nov 1981 08:52:00 GMT"
-                    },
-                    {
-                      "key": "Pragma",
-                      "value": "no-cache"
-                    },
-                    {
-                      "key": "Allow",
-                      "value": "GET, HEAD, POST, PUT, DELETE, OPTIONS"
-                    }
-                  ],
-                  "cookie": [],
-                  "responseTime": null,
-                  "body": "<response status=\"success\" code=\"19\">\n    <result>\n        <msg>\n            <line>Download job enqueued with jobid 9</line>\n        </msg>\n        <job>9</job>\n    </result>\n</response>"
-                }
-              ]
             }
           ],
           "_postman_id": "d614d66c-c68e-4e80-9f1f-2fbf6af9045a",
@@ -10634,13 +10757,13 @@
   ],
   "variable": [
     {
-      "id": "4ebc7782-51ad-42e7-a5d1-5e57b62ca366",
+      "id": "e2fb81f6-8489-46d8-b10f-2bf7a67dfb9c",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "c30cb1db-c671-46be-b373-3ef3070b1f0f",
+      "id": "5ad01da2-00f8-471d-8cb6-26c6d1a1b582",
       "key": "{{key}}",
       "value": "",
       "type": "string"
