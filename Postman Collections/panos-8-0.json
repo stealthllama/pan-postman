@@ -7714,7 +7714,7 @@
           "name": "Upgrade a Firewall to the Latest PAN-OS Version",
           "item": [
             {
-              "name": "1. Download the latest content update",
+              "name": "Download the latest content update",
               "_postman_id": "49016bb9-1d89-4f4d-9a62-f1acf2c4f9d1",
               "protocolProfileBehavior": {
                 "disableBodyPruning": true
@@ -7837,7 +7837,7 @@
               ]
             },
             {
-              "name": "2. Check content download status",
+              "name": "Check content download status",
               "_postman_id": "82d29a5c-be79-48ac-8d64-e4730cdaed06",
               "protocolProfileBehavior": {
                 "disableBodyPruning": true
@@ -8882,13 +8882,13 @@
   ],
   "variable": [
     {
-      "id": "ed70f8fd-78b5-43c1-9e1b-cfa14cc305f7",
+      "id": "c4cb7166-2178-47cd-8409-4dc27c03f5f2",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "e9d7f177-f789-40ec-a527-af8771b39660",
+      "id": "549f1651-1648-414c-a1d2-c95d9696c3d0",
       "key": "{{key}}",
       "value": "",
       "type": "string"
