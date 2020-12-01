@@ -7960,7 +7960,7 @@
               ]
             },
             {
-              "name": "3. Install the latest content update",
+              "name": "Install the latest content update",
               "_postman_id": "6835fa4e-d841-408d-8f64-55cc521c361b",
               "protocolProfileBehavior": {
                 "disableBodyPruning": true
@@ -8882,13 +8882,13 @@
   ],
   "variable": [
     {
-      "id": "56ba7f32-6a4c-4fdf-87e4-ab3af74dbe1c",
+      "id": "ed70f8fd-78b5-43c1-9e1b-cfa14cc305f7",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "ea1c689f-ef07-4310-844f-e86da85d44d1",
+      "id": "e9d7f177-f789-40ec-a527-af8771b39660",
       "key": "{{key}}",
       "value": "",
       "type": "string"
