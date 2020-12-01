@@ -7706,6 +7706,11 @@
         }
       ],
       "_postman_id": "3178f469-44ee-4373-82b4-9d5bdd5d59b8"
+    },
+    {
+      "name": "Use Cases",
+      "item": [],
+      "_postman_id": "48a4821f-5bbb-4b0c-ad3a-eb55970c295e"
     }
   ],
   "auth": {
@@ -7739,13 +7744,13 @@
   ],
   "variable": [
     {
-      "id": "ed42b2b3-ac45-492b-90e1-c2d898e635e2",
+      "id": "763c3327-e32b-4302-8949-a55d4d82ef92",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "3849f0d0-f4a4-4410-a117-be07d78af6fc",
+      "id": "1f1b1f2a-0642-4ed0-bdab-00111a0e7a7f",
       "key": "{{key}}",
       "value": "",
       "type": "string"
