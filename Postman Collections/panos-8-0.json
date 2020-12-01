@@ -10450,7 +10450,7 @@
               ]
             },
             {
-              "name": "Install latest Anti-Virus update Copy",
+              "name": "Install latest GlobalProtect client",
               "_postman_id": "201aadfa-9aab-4b5f-adc2-6a26cb0be4dd",
               "protocolProfileBehavior": {
                 "disableBodyPruning": true
@@ -10480,97 +10480,7 @@
                   ]
                 }
               },
-              "response": [
-                {
-                  "id": "3f2d348f-4215-4b44-972b-827426c9efb8",
-                  "name": "Install latest Anti-Virus update",
-                  "originalRequest": {
-                    "method": "GET",
-                    "header": [],
-                    "url": {
-                      "raw": "https://{{host}}/api/?type=op&cmd=<request><anti-virus><upgrade><install><version>latest</version></install></upgrade></anti-virus></request>",
-                      "protocol": "https",
-                      "host": [
-                        "{{host}}"
-                      ],
-                      "path": [
-                        "api",
-                        ""
-                      ],
-                      "query": [
-                        {
-                          "key": "type",
-                          "value": "op"
-                        },
-                        {
-                          "key": "cmd",
-                          "value": "<request><anti-virus><upgrade><install><version>latest</version></install></upgrade></anti-virus></request>"
-                        }
-                      ]
-                    }
-                  },
-                  "status": "OK",
-                  "code": 200,
-                  "_postman_previewlanguage": "xml",
-                  "header": [
-                    {
-                      "key": "Date",
-                      "value": "Tue, 01 Dec 2020 20:43:22 GMT"
-                    },
-                    {
-                      "key": "Content-Type",
-                      "value": "application/xml; charset=UTF-8"
-                    },
-                    {
-                      "key": "Content-Length",
-                      "value": "142"
-                    },
-                    {
-                      "key": "Connection",
-                      "value": "keep-alive"
-                    },
-                    {
-                      "key": "X-FRAME-OPTIONS",
-                      "value": "SAMEORIGIN"
-                    },
-                    {
-                      "key": "X-XSS-Protection",
-                      "value": "1; mode=block"
-                    },
-                    {
-                      "key": "X-Content-Type-Options",
-                      "value": "nosniff"
-                    },
-                    {
-                      "key": "Content-Security-Policy",
-                      "value": "default-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:;"
-                    },
-                    {
-                      "key": "Strict-Transport-Security",
-                      "value": "max-age=31536000"
-                    },
-                    {
-                      "key": "Cache-Control",
-                      "value": "no-store, no-cache, must-revalidate, post-check=0, pre-check=0"
-                    },
-                    {
-                      "key": "Expires",
-                      "value": "Thu, 19 Nov 1981 08:52:00 GMT"
-                    },
-                    {
-                      "key": "Pragma",
-                      "value": "no-cache"
-                    },
-                    {
-                      "key": "Allow",
-                      "value": "GET, HEAD, POST, PUT, DELETE, OPTIONS"
-                    }
-                  ],
-                  "cookie": [],
-                  "responseTime": null,
-                  "body": "<response status=\"success\" code=\"19\">\n    <result>\n        <msg>\n            <line>Content install job enqueued with jobid 8</line>\n        </msg>\n        <job>8</job>\n    </result>\n</response>"
-                }
-              ]
+              "response": []
             },
             {
               "name": "Check job status",
@@ -10757,13 +10667,13 @@
   ],
   "variable": [
     {
-      "id": "e2fb81f6-8489-46d8-b10f-2bf7a67dfb9c",
+      "id": "bb0fa493-737b-4fb5-8365-6258303c22ab",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "5ad01da2-00f8-471d-8cb6-26c6d1a1b582",
+      "id": "0ca3591c-39da-4161-a208-bb10cdb0cd05",
       "key": "{{key}}",
       "value": "",
       "type": "string"
