@@ -10202,6 +10202,19 @@
                   "body": "<response status=\"success\">\n    <result>\n        <job>\n            <tenq>2020/12/01 12:30:34</tenq>\n            <tdeq>12:30:34</tdeq>\n            <id>2</id>\n            <user></user>\n            <type>Downld</type>\n            <status>FIN</status>\n            <queued>NO</queued>\n            <stoppable>no</stoppable>\n            <result>OK</result>\n            <tfin>12:30:37</tfin>\n            <description></description>\n            <positionInQ>0</positionInQ>\n            <progress>12:30:37</progress>\n            <details>\n                <line>File successfully downloaded\n</line>\n            </details>\n            <warnings></warnings>\n        </job>\n    </result>\n</response>"
                 }
               ]
+            },
+            {
+              "name": "Download latest Anti-Virus update",
+              "_postman_id": "a481ac7c-1619-47d4-9569-ab677a50129a",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": ""
+              },
+              "response": []
             }
           ],
           "_postman_id": "d614d66c-c68e-4e80-9f1f-2fbf6af9045a",
@@ -10265,13 +10278,13 @@
   ],
   "variable": [
     {
-      "id": "65dec65c-5c2c-4a1b-8d08-884e386e6c04",
+      "id": "ecbae9f2-4e8b-4d89-9bdc-4293f17a1a2f",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "87f98f8e-a902-4bdb-81f7-98cab228a5ca",
+      "id": "246c2156-604d-4546-a9d7-c1ccec473895",
       "key": "{{key}}",
       "value": "",
       "type": "string"
