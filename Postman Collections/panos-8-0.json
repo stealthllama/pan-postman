@@ -7958,6 +7958,39 @@
                   "body": "<response status=\"success\">\n    <result>\n        <job>\n            <tenq>2020/12/01 11:54:52</tenq>\n            <tdeq>11:54:52</tdeq>\n            <id>2</id>\n            <user></user>\n            <type>Downld</type>\n            <status>FIN</status>\n            <queued>NO</queued>\n            <stoppable>no</stoppable>\n            <result>OK</result>\n            <tfin>11:54:54</tfin>\n            <description></description>\n            <positionInQ>0</positionInQ>\n            <progress>11:54:54</progress>\n            <details>\n                <line>File successfully downloaded\n</line>\n            </details>\n            <warnings></warnings>\n        </job>\n    </result>\n</response>"
                 }
               ]
+            },
+            {
+              "name": "Install the latest content update",
+              "_postman_id": "6835fa4e-d841-408d-8f64-55cc521c361b",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "https://{{host}}/api/?type=op&cmd=<request><content><upgrade><install><version>latest</version></install></upgrade></content></request>",
+                  "protocol": "https",
+                  "host": [
+                    "{{host}}"
+                  ],
+                  "path": [
+                    "api",
+                    ""
+                  ],
+                  "query": [
+                    {
+                      "key": "type",
+                      "value": "op"
+                    },
+                    {
+                      "key": "cmd",
+                      "value": "<request><content><upgrade><install><version>latest</version></install></upgrade></content></request>"
+                    }
+                  ]
+                }
+              },
+              "response": []
             }
           ],
           "_postman_id": "39927bcc-4096-4ae1-951d-58c8af1e2324",
@@ -7998,13 +8031,13 @@
   ],
   "variable": [
     {
-      "id": "9b70439e-edad-49eb-8105-be261506b9e8",
+      "id": "2aa93e7c-a56d-4b47-8679-2be52a41ec0c",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "fd4c6d17-b672-48ec-8134-7d6b3bbfb251",
+      "id": "35f2c2b4-7881-4d99-8ac4-86f5ab04b7de",
       "key": "{{key}}",
       "value": "",
       "type": "string"
