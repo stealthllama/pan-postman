@@ -9967,7 +9967,7 @@
                 "method": "GET",
                 "header": [],
                 "url": {
-                  "raw": "https://{{host}}/api/?type=op&cmd=<request><wildfire><upgrade><download><latest></latest></download></upgrade></wildfire></request>",
+                  "raw": "https://{{host}}/api/?type=op&cmd=<request><wildfire><upgrade><install><version>latest</version></install></upgrade></wildfire></request>",
                   "protocol": "https",
                   "host": [
                     "{{host}}"
@@ -9983,12 +9983,102 @@
                     },
                     {
                       "key": "cmd",
-                      "value": "<request><wildfire><upgrade><download><latest></latest></download></upgrade></wildfire></request>"
+                      "value": "<request><wildfire><upgrade><install><version>latest</version></install></upgrade></wildfire></request>"
                     }
                   ]
                 }
               },
-              "response": []
+              "response": [
+                {
+                  "id": "9fe9951e-3e6d-43e7-b053-202147adf38f",
+                  "name": "Install latest WildFire update",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [],
+                    "url": {
+                      "raw": "https://{{host}}/api/?type=op&cmd=<request><wildfire><upgrade><install><version>latest</version></install></upgrade></wildfire></request>",
+                      "protocol": "https",
+                      "host": [
+                        "{{host}}"
+                      ],
+                      "path": [
+                        "api",
+                        ""
+                      ],
+                      "query": [
+                        {
+                          "key": "type",
+                          "value": "op"
+                        },
+                        {
+                          "key": "cmd",
+                          "value": "<request><wildfire><upgrade><install><version>latest</version></install></upgrade></wildfire></request>"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "xml",
+                  "header": [
+                    {
+                      "key": "Date",
+                      "value": "Tue, 01 Dec 2020 20:40:42 GMT"
+                    },
+                    {
+                      "key": "Content-Type",
+                      "value": "application/xml; charset=UTF-8"
+                    },
+                    {
+                      "key": "Content-Length",
+                      "value": "142"
+                    },
+                    {
+                      "key": "Connection",
+                      "value": "keep-alive"
+                    },
+                    {
+                      "key": "X-FRAME-OPTIONS",
+                      "value": "SAMEORIGIN"
+                    },
+                    {
+                      "key": "X-XSS-Protection",
+                      "value": "1; mode=block"
+                    },
+                    {
+                      "key": "X-Content-Type-Options",
+                      "value": "nosniff"
+                    },
+                    {
+                      "key": "Content-Security-Policy",
+                      "value": "default-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:;"
+                    },
+                    {
+                      "key": "Strict-Transport-Security",
+                      "value": "max-age=31536000"
+                    },
+                    {
+                      "key": "Cache-Control",
+                      "value": "no-store, no-cache, must-revalidate, post-check=0, pre-check=0"
+                    },
+                    {
+                      "key": "Expires",
+                      "value": "Thu, 19 Nov 1981 08:52:00 GMT"
+                    },
+                    {
+                      "key": "Pragma",
+                      "value": "no-cache"
+                    },
+                    {
+                      "key": "Allow",
+                      "value": "GET, HEAD, POST, PUT, DELETE, OPTIONS"
+                    }
+                  ],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "<response status=\"success\" code=\"19\">\n    <result>\n        <msg>\n            <line>Content install job enqueued with jobid 6</line>\n        </msg>\n        <job>6</job>\n    </result>\n</response>"
+                }
+              ]
             },
             {
               "name": "Check job status",
@@ -10175,13 +10265,13 @@
   ],
   "variable": [
     {
-      "id": "631a2f8a-247b-4ab4-8e8f-0d2f71663877",
+      "id": "65dec65c-5c2c-4a1b-8d08-884e386e6c04",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "acaffad6-2bf7-4684-ac8b-df8857d1b158",
+      "id": "87f98f8e-a902-4bdb-81f7-98cab228a5ca",
       "key": "{{key}}",
       "value": "",
       "type": "string"
