@@ -9095,6 +9095,19 @@
                   "body": "<response status=\"success\">\n    <result>\n        <system>\n            <hostname>PA-VM</hostname>\n            <ip-address>192.168.55.10</ip-address>\n            <public-ip-address>unknown</public-ip-address>\n            <netmask>255.255.255.0</netmask>\n            <default-gateway>192.168.55.2</default-gateway>\n            <is-dhcp>no</is-dhcp>\n            <ipv6-address>unknown</ipv6-address>\n            <ipv6-link-local-address>fe80::20c:29ff:fe5a:1b7/64</ipv6-link-local-address>\n            <mac-address>00:0c:29:5a:01:b7</mac-address>\n            <time>Tue Dec  1 12:20:53 2020\n</time>\n            <uptime>0 days, 0:07:57</uptime>\n            <devicename>PA-VM</devicename>\n            <family>vm</family>\n            <model>PA-VM</model>\n            <serial>015351000039218</serial>\n            <vm-mac-base>7C:89:C1:1E:86:00</vm-mac-base>\n            <vm-mac-count>256</vm-mac-count>\n            <vm-uuid>564DE640-DE7B-B088-C549-CD8F3C5A01B7</vm-uuid>\n            <vm-cpuid>ESX:ED060900FFFB8B1F</vm-cpuid>\n            <vm-license>VM-50</vm-license>\n            <vm-mode>VMware ESXi</vm-mode>\n            <cloud-mode>non-cloud</cloud-mode>\n            <sw-version>10.0.2</sw-version>\n            <global-protect-client-package-version>5.0.8</global-protect-client-package-version>\n            <device-dictionary-version>12-242</device-dictionary-version>\n            <device-dictionary-release-date>2020/11/19 19:45:46 PST</device-dictionary-release-date>\n            <app-version>8348-6427</app-version>\n            <app-release-date>2020/11/24 17:11:39 PST</app-release-date>\n            <av-version>3541-4052</av-version>\n            <av-release-date>2020/11/23 04:00:01 PST</av-release-date>\n            <threat-version>8348-6427</threat-version>\n            <threat-release-date>2020/11/24 17:11:39 PST</threat-release-date>\n            <wf-private-version>0</wf-private-version>\n            <wf-private-release-date>unknown</wf-private-release-date>\n            <url-db>paloaltonetworks</url-db>\n            <wildfire-version>0</wildfire-version>\n            <wildfire-rt>Disabled</wildfire-rt>\n            <url-filtering-version>20201201.20306</url-filtering-version>\n            <global-protect-datafile-version>unknown</global-protect-datafile-version>\n            <global-protect-datafile-release-date>unknown</global-protect-datafile-release-date>\n            <global-protect-clientless-vpn-version>0</global-protect-clientless-vpn-version>\n            <logdb-version>10.0.2</logdb-version>\n            <plugin_versions>\n                <entry name='vm_series' version='2.0.2'>\n                    <pkginfo>vm_series-2.0.2</pkginfo>\n                </entry>\n                <entry name='dlp' version='1.0.1'>\n                    <pkginfo>dlp-1.0.1</pkginfo>\n                </entry>\n            </plugin_versions>\n            <platform-family>vm</platform-family>\n            <vpn-disable-mode>off</vpn-disable-mode>\n            <multi-vsys>off</multi-vsys>\n            <operational-mode>normal</operational-mode>\n            <device-certificate-status>Expired</device-certificate-status>\n        </system>\n    </result>\n</response>"
                 }
               ]
+            },
+            {
+              "name": "Check for Application & Threat updates",
+              "_postman_id": "c51cc27c-ea72-4f54-8ef3-167319869f61",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": ""
+              },
+              "response": []
             }
           ],
           "_postman_id": "d614d66c-c68e-4e80-9f1f-2fbf6af9045a",
@@ -9158,13 +9171,13 @@
   ],
   "variable": [
     {
-      "id": "bd65950f-12c9-4e7e-8685-57345934eddb",
+      "id": "5201fad4-e579-4a4a-8a7e-d4d62038c345",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "6f1368d7-b97a-460b-b8d5-bccb2ba14d95",
+      "id": "c9b4eaaf-70eb-408e-910c-48b90e1d151d",
       "key": "{{key}}",
       "value": "",
       "type": "string"
