@@ -9343,6 +9343,129 @@
               ]
             },
             {
+              "name": "Check for WildFire updates Copy",
+              "_postman_id": "c5a6a378-dbe6-4455-b1a5-2e4028ddf900",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "https://{{host}}/api/?type=op&cmd=<request><wildfire><upgrade><check></check></upgrade></wildfire></request>",
+                  "protocol": "https",
+                  "host": [
+                    "{{host}}"
+                  ],
+                  "path": [
+                    "api",
+                    ""
+                  ],
+                  "query": [
+                    {
+                      "key": "type",
+                      "value": "op"
+                    },
+                    {
+                      "key": "cmd",
+                      "value": "<request><wildfire><upgrade><check></check></upgrade></wildfire></request>"
+                    }
+                  ]
+                }
+              },
+              "response": [
+                {
+                  "id": "7b3c7bce-de2a-478a-a338-03761bcc1ec3",
+                  "name": "Check for WildFire updates",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [],
+                    "url": {
+                      "raw": "https://{{host}}/api/?type=op&cmd=<request><wildfire><upgrade><check></check></upgrade></wildfire></request>",
+                      "protocol": "https",
+                      "host": [
+                        "{{host}}"
+                      ],
+                      "path": [
+                        "api",
+                        ""
+                      ],
+                      "query": [
+                        {
+                          "key": "type",
+                          "value": "op"
+                        },
+                        {
+                          "key": "cmd",
+                          "value": "<request><wildfire><upgrade><check></check></upgrade></wildfire></request>"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "xml",
+                  "header": [
+                    {
+                      "key": "Date",
+                      "value": "Tue, 01 Dec 2020 20:28:03 GMT"
+                    },
+                    {
+                      "key": "Content-Type",
+                      "value": "application/xml; charset=UTF-8"
+                    },
+                    {
+                      "key": "Content-Length",
+                      "value": "923"
+                    },
+                    {
+                      "key": "Connection",
+                      "value": "keep-alive"
+                    },
+                    {
+                      "key": "X-FRAME-OPTIONS",
+                      "value": "SAMEORIGIN"
+                    },
+                    {
+                      "key": "X-XSS-Protection",
+                      "value": "1; mode=block"
+                    },
+                    {
+                      "key": "X-Content-Type-Options",
+                      "value": "nosniff"
+                    },
+                    {
+                      "key": "Content-Security-Policy",
+                      "value": "default-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:;"
+                    },
+                    {
+                      "key": "Strict-Transport-Security",
+                      "value": "max-age=31536000"
+                    },
+                    {
+                      "key": "Cache-Control",
+                      "value": "no-store, no-cache, must-revalidate, post-check=0, pre-check=0"
+                    },
+                    {
+                      "key": "Expires",
+                      "value": "Thu, 19 Nov 1981 08:52:00 GMT"
+                    },
+                    {
+                      "key": "Pragma",
+                      "value": "no-cache"
+                    },
+                    {
+                      "key": "Allow",
+                      "value": "GET, HEAD, POST, PUT, DELETE, OPTIONS"
+                    }
+                  ],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "<response status=\"success\">\n    <result>\n        <content-updates last-updated-at=\"2020/12/01 12:28:03 PST\">\n            <entry>\n                <version>511621-514620</version>\n                <app-version>511621-514620</app-version>\n                <filename>panupv3-all-wildfire-511621-514620</filename>\n                <size>6</size>\n                <size-kb>6985</size-kb>\n                <released-on>2020/12/01 12:27:28 PST</released-on>\n                <release-notes>\n                    <![CDATA[https://proditpdownloads.paloaltonetworks.com/wildfire/WildfireExternal-v2-511621.html?__token__=exp=1607459283~acl=/wildfire/WildfireExternal-v2-511621.html*~hmac=5cc9a0bda7567893a6b734ad7b5e6d080c4d07c595a4e98cef0a06c4eaa9f03c]]>\n                </release-notes>\n                <downloaded>no</downloaded>\n                <current>no</current>\n                <previous>no</previous>\n                <installing>no</installing>\n                <features>wildfire</features>\n                <update-type>Full</update-type>\n                <feature-desc>PAN-OS 10.0 and later</feature-desc>\n                <sha256>61903fce63d8ed3aa9550ab2e6fe77ab68bbdfb7ff9eb131de3bd6dda38f65db</sha256>\n            </entry>\n        </content-updates>\n    </result>\n</response>"
+                }
+              ]
+            },
+            {
               "name": "Check for Antivirus updates",
               "_postman_id": "da977e6d-555e-434e-b9de-5367b3b17bee",
               "protocolProfileBehavior": {
@@ -9956,129 +10079,6 @@
                   "body": "<response status=\"success\">\n    <result>\n        <job>\n            <tenq>2020/12/01 12:30:34</tenq>\n            <tdeq>12:30:34</tdeq>\n            <id>2</id>\n            <user></user>\n            <type>Downld</type>\n            <status>FIN</status>\n            <queued>NO</queued>\n            <stoppable>no</stoppable>\n            <result>OK</result>\n            <tfin>12:30:37</tfin>\n            <description></description>\n            <positionInQ>0</positionInQ>\n            <progress>12:30:37</progress>\n            <details>\n                <line>File successfully downloaded\n</line>\n            </details>\n            <warnings></warnings>\n        </job>\n    </result>\n</response>"
                 }
               ]
-            },
-            {
-              "name": "Check for WildFire updates Copy",
-              "_postman_id": "c5a6a378-dbe6-4455-b1a5-2e4028ddf900",
-              "protocolProfileBehavior": {
-                "disableBodyPruning": true
-              },
-              "request": {
-                "method": "GET",
-                "header": [],
-                "url": {
-                  "raw": "https://{{host}}/api/?type=op&cmd=<request><wildfire><upgrade><check></check></upgrade></wildfire></request>",
-                  "protocol": "https",
-                  "host": [
-                    "{{host}}"
-                  ],
-                  "path": [
-                    "api",
-                    ""
-                  ],
-                  "query": [
-                    {
-                      "key": "type",
-                      "value": "op"
-                    },
-                    {
-                      "key": "cmd",
-                      "value": "<request><wildfire><upgrade><check></check></upgrade></wildfire></request>"
-                    }
-                  ]
-                }
-              },
-              "response": [
-                {
-                  "id": "7b3c7bce-de2a-478a-a338-03761bcc1ec3",
-                  "name": "Check for WildFire updates",
-                  "originalRequest": {
-                    "method": "GET",
-                    "header": [],
-                    "url": {
-                      "raw": "https://{{host}}/api/?type=op&cmd=<request><wildfire><upgrade><check></check></upgrade></wildfire></request>",
-                      "protocol": "https",
-                      "host": [
-                        "{{host}}"
-                      ],
-                      "path": [
-                        "api",
-                        ""
-                      ],
-                      "query": [
-                        {
-                          "key": "type",
-                          "value": "op"
-                        },
-                        {
-                          "key": "cmd",
-                          "value": "<request><wildfire><upgrade><check></check></upgrade></wildfire></request>"
-                        }
-                      ]
-                    }
-                  },
-                  "status": "OK",
-                  "code": 200,
-                  "_postman_previewlanguage": "xml",
-                  "header": [
-                    {
-                      "key": "Date",
-                      "value": "Tue, 01 Dec 2020 20:28:03 GMT"
-                    },
-                    {
-                      "key": "Content-Type",
-                      "value": "application/xml; charset=UTF-8"
-                    },
-                    {
-                      "key": "Content-Length",
-                      "value": "923"
-                    },
-                    {
-                      "key": "Connection",
-                      "value": "keep-alive"
-                    },
-                    {
-                      "key": "X-FRAME-OPTIONS",
-                      "value": "SAMEORIGIN"
-                    },
-                    {
-                      "key": "X-XSS-Protection",
-                      "value": "1; mode=block"
-                    },
-                    {
-                      "key": "X-Content-Type-Options",
-                      "value": "nosniff"
-                    },
-                    {
-                      "key": "Content-Security-Policy",
-                      "value": "default-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:;"
-                    },
-                    {
-                      "key": "Strict-Transport-Security",
-                      "value": "max-age=31536000"
-                    },
-                    {
-                      "key": "Cache-Control",
-                      "value": "no-store, no-cache, must-revalidate, post-check=0, pre-check=0"
-                    },
-                    {
-                      "key": "Expires",
-                      "value": "Thu, 19 Nov 1981 08:52:00 GMT"
-                    },
-                    {
-                      "key": "Pragma",
-                      "value": "no-cache"
-                    },
-                    {
-                      "key": "Allow",
-                      "value": "GET, HEAD, POST, PUT, DELETE, OPTIONS"
-                    }
-                  ],
-                  "cookie": [],
-                  "responseTime": null,
-                  "body": "<response status=\"success\">\n    <result>\n        <content-updates last-updated-at=\"2020/12/01 12:28:03 PST\">\n            <entry>\n                <version>511621-514620</version>\n                <app-version>511621-514620</app-version>\n                <filename>panupv3-all-wildfire-511621-514620</filename>\n                <size>6</size>\n                <size-kb>6985</size-kb>\n                <released-on>2020/12/01 12:27:28 PST</released-on>\n                <release-notes>\n                    <![CDATA[https://proditpdownloads.paloaltonetworks.com/wildfire/WildfireExternal-v2-511621.html?__token__=exp=1607459283~acl=/wildfire/WildfireExternal-v2-511621.html*~hmac=5cc9a0bda7567893a6b734ad7b5e6d080c4d07c595a4e98cef0a06c4eaa9f03c]]>\n                </release-notes>\n                <downloaded>no</downloaded>\n                <current>no</current>\n                <previous>no</previous>\n                <installing>no</installing>\n                <features>wildfire</features>\n                <update-type>Full</update-type>\n                <feature-desc>PAN-OS 10.0 and later</feature-desc>\n                <sha256>61903fce63d8ed3aa9550ab2e6fe77ab68bbdfb7ff9eb131de3bd6dda38f65db</sha256>\n            </entry>\n        </content-updates>\n    </result>\n</response>"
-                }
-              ]
             }
           ],
           "_postman_id": "d614d66c-c68e-4e80-9f1f-2fbf6af9045a",
@@ -10142,13 +10142,13 @@
   ],
   "variable": [
     {
-      "id": "cc591c12-d11e-405f-8af3-dff598bc90f6",
+      "id": "df2e4df1-ad87-410c-b29e-bbbff58b3ca1",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "631609bb-945c-4387-baa5-05df7667028b",
+      "id": "17b6ba05-01ea-4844-be63-e342e5e0f67b",
       "key": "{{key}}",
       "value": "",
       "type": "string"
