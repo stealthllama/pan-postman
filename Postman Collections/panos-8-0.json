@@ -8698,7 +8698,7 @@
               ]
             },
             {
-              "name": "Check software download status Copy",
+              "name": "Check software install status",
               "_postman_id": "a6b07389-cccf-499e-9321-a9eba5f333c1",
               "protocolProfileBehavior": {
                 "disableBodyPruning": true
@@ -8882,13 +8882,13 @@
   ],
   "variable": [
     {
-      "id": "f2cfbadc-6cb6-4f7c-83a3-ddb8aeebb8e3",
+      "id": "83e29dd3-4da4-4f63-a2ec-153a03966bbb",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "85fddb6b-080e-4d9d-8dfa-2efe8d935006",
+      "id": "79eff67c-52de-43e3-8ab9-4c3c04d69393",
       "key": "{{key}}",
       "value": "",
       "type": "string"
