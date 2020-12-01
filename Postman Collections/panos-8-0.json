@@ -7845,9 +7845,119 @@
               "request": {
                 "method": "GET",
                 "header": [],
-                "url": ""
+                "url": {
+                  "raw": "https://{{host}}/api/?type=op&cmd=<show><jobs><id>2</id></jobs></show>",
+                  "protocol": "https",
+                  "host": [
+                    "{{host}}"
+                  ],
+                  "path": [
+                    "api",
+                    ""
+                  ],
+                  "query": [
+                    {
+                      "key": "type",
+                      "value": "op"
+                    },
+                    {
+                      "key": "cmd",
+                      "value": "<show><jobs><id>2</id></jobs></show>"
+                    }
+                  ]
+                }
               },
-              "response": []
+              "response": [
+                {
+                  "id": "c742b9ff-3db9-40ed-8cbd-355e518532ed",
+                  "name": "Check content download status",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [],
+                    "url": {
+                      "raw": "https://{{host}}/api/?type=op&cmd=<show><jobs><id>2</id></jobs></show>",
+                      "protocol": "https",
+                      "host": [
+                        "{{host}}"
+                      ],
+                      "path": [
+                        "api",
+                        ""
+                      ],
+                      "query": [
+                        {
+                          "key": "type",
+                          "value": "op"
+                        },
+                        {
+                          "key": "cmd",
+                          "value": "<show><jobs><id>2</id></jobs></show>"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "xml",
+                  "header": [
+                    {
+                      "key": "Date",
+                      "value": "Tue, 01 Dec 2020 19:56:05 GMT"
+                    },
+                    {
+                      "key": "Content-Type",
+                      "value": "application/xml; charset=UTF-8"
+                    },
+                    {
+                      "key": "Content-Length",
+                      "value": "431"
+                    },
+                    {
+                      "key": "Connection",
+                      "value": "keep-alive"
+                    },
+                    {
+                      "key": "X-FRAME-OPTIONS",
+                      "value": "SAMEORIGIN"
+                    },
+                    {
+                      "key": "X-XSS-Protection",
+                      "value": "1; mode=block"
+                    },
+                    {
+                      "key": "X-Content-Type-Options",
+                      "value": "nosniff"
+                    },
+                    {
+                      "key": "Content-Security-Policy",
+                      "value": "default-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:;"
+                    },
+                    {
+                      "key": "Strict-Transport-Security",
+                      "value": "max-age=31536000"
+                    },
+                    {
+                      "key": "Cache-Control",
+                      "value": "no-store, no-cache, must-revalidate, post-check=0, pre-check=0"
+                    },
+                    {
+                      "key": "Expires",
+                      "value": "Thu, 19 Nov 1981 08:52:00 GMT"
+                    },
+                    {
+                      "key": "Pragma",
+                      "value": "no-cache"
+                    },
+                    {
+                      "key": "Allow",
+                      "value": "GET, HEAD, POST, PUT, DELETE, OPTIONS"
+                    }
+                  ],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "<response status=\"success\">\n    <result>\n        <job>\n            <tenq>2020/12/01 11:54:52</tenq>\n            <tdeq>11:54:52</tdeq>\n            <id>2</id>\n            <user></user>\n            <type>Downld</type>\n            <status>FIN</status>\n            <queued>NO</queued>\n            <stoppable>no</stoppable>\n            <result>OK</result>\n            <tfin>11:54:54</tfin>\n            <description></description>\n            <positionInQ>0</positionInQ>\n            <progress>11:54:54</progress>\n            <details>\n                <line>File successfully downloaded\n</line>\n            </details>\n            <warnings></warnings>\n        </job>\n    </result>\n</response>"
+                }
+              ]
             }
           ],
           "_postman_id": "39927bcc-4096-4ae1-951d-58c8af1e2324",
@@ -7888,13 +7998,13 @@
   ],
   "variable": [
     {
-      "id": "87c05417-d305-4942-a454-a9d61e9daf49",
+      "id": "9b70439e-edad-49eb-8105-be261506b9e8",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "ff4dedb4-e962-4cd0-8dd7-8acc11dcb750",
+      "id": "fd4c6d17-b672-48ec-8134-7d6b3bbfb251",
       "key": "{{key}}",
       "value": "",
       "type": "string"
