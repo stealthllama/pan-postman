@@ -8206,129 +8206,6 @@
               ]
             },
             {
-              "name": "Check content install status Copy",
-              "_postman_id": "dffe152e-46c6-46b6-a106-87528244ef97",
-              "protocolProfileBehavior": {
-                "disableBodyPruning": true
-              },
-              "request": {
-                "method": "GET",
-                "header": [],
-                "url": {
-                  "raw": "https://{{host}}/api/?type=op&cmd=<show><jobs><id>3</id></jobs></show>",
-                  "protocol": "https",
-                  "host": [
-                    "{{host}}"
-                  ],
-                  "path": [
-                    "api",
-                    ""
-                  ],
-                  "query": [
-                    {
-                      "key": "type",
-                      "value": "op"
-                    },
-                    {
-                      "key": "cmd",
-                      "value": "<show><jobs><id>3</id></jobs></show>"
-                    }
-                  ]
-                }
-              },
-              "response": [
-                {
-                  "id": "81ab981c-8295-4176-88fa-e1926e906c88",
-                  "name": "Check content install status",
-                  "originalRequest": {
-                    "method": "GET",
-                    "header": [],
-                    "url": {
-                      "raw": "https://{{host}}/api/?type=op&cmd=<show><jobs><id>3</id></jobs></show>",
-                      "protocol": "https",
-                      "host": [
-                        "{{host}}"
-                      ],
-                      "path": [
-                        "api",
-                        ""
-                      ],
-                      "query": [
-                        {
-                          "key": "type",
-                          "value": "op"
-                        },
-                        {
-                          "key": "cmd",
-                          "value": "<show><jobs><id>3</id></jobs></show>"
-                        }
-                      ]
-                    }
-                  },
-                  "status": "OK",
-                  "code": 200,
-                  "_postman_previewlanguage": "xml",
-                  "header": [
-                    {
-                      "key": "Date",
-                      "value": "Tue, 01 Dec 2020 19:58:36 GMT"
-                    },
-                    {
-                      "key": "Content-Type",
-                      "value": "application/xml; charset=UTF-8"
-                    },
-                    {
-                      "key": "Content-Length",
-                      "value": "498"
-                    },
-                    {
-                      "key": "Connection",
-                      "value": "keep-alive"
-                    },
-                    {
-                      "key": "X-FRAME-OPTIONS",
-                      "value": "SAMEORIGIN"
-                    },
-                    {
-                      "key": "X-XSS-Protection",
-                      "value": "1; mode=block"
-                    },
-                    {
-                      "key": "X-Content-Type-Options",
-                      "value": "nosniff"
-                    },
-                    {
-                      "key": "Content-Security-Policy",
-                      "value": "default-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:;"
-                    },
-                    {
-                      "key": "Strict-Transport-Security",
-                      "value": "max-age=31536000"
-                    },
-                    {
-                      "key": "Cache-Control",
-                      "value": "no-store, no-cache, must-revalidate, post-check=0, pre-check=0"
-                    },
-                    {
-                      "key": "Expires",
-                      "value": "Thu, 19 Nov 1981 08:52:00 GMT"
-                    },
-                    {
-                      "key": "Pragma",
-                      "value": "no-cache"
-                    },
-                    {
-                      "key": "Allow",
-                      "value": "GET, HEAD, POST, PUT, DELETE, OPTIONS"
-                    }
-                  ],
-                  "cookie": [],
-                  "responseTime": null,
-                  "body": "<response status=\"success\">\n    <result>\n        <job>\n            <tenq>2020/12/01 11:57:19</tenq>\n            <tdeq>11:57:19</tdeq>\n            <id>3</id>\n            <user>admin</user>\n            <type>Content</type>\n            <status>FIN</status>\n            <queued>NO</queued>\n            <stoppable>no</stoppable>\n            <result>OK</result>\n            <tfin>11:58:24</tfin>\n            <description></description>\n            <positionInQ>0</positionInQ>\n            <progress>11:58:24</progress>\n            <details>\n                <line>Configuration committed successfully</line>\n                <line>Successfully committed last configuration</line>\n            </details>\n            <warnings></warnings>\n        </job>\n    </result>\n</response>"
-                }
-              ]
-            },
-            {
               "name": "Check for the latest PAN-OS software update",
               "_postman_id": "606a7fe2-8f2d-4a8c-bde8-07898f6290ca",
               "protocolProfileBehavior": {
@@ -8573,6 +8450,39 @@
                   "body": "<response status=\"success\" code=\"19\">\n    <result>\n        <msg>\n            <line>Download job enqueued with jobid 4</line>\n        </msg>\n        <job>4</job>\n    </result>\n</response>"
                 }
               ]
+            },
+            {
+              "name": "Check software download status",
+              "_postman_id": "dffe152e-46c6-46b6-a106-87528244ef97",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "https://{{host}}/api/?type=op&cmd=<show><jobs><id>4</id></jobs></show>",
+                  "protocol": "https",
+                  "host": [
+                    "{{host}}"
+                  ],
+                  "path": [
+                    "api",
+                    ""
+                  ],
+                  "query": [
+                    {
+                      "key": "type",
+                      "value": "op"
+                    },
+                    {
+                      "key": "cmd",
+                      "value": "<show><jobs><id>4</id></jobs></show>"
+                    }
+                  ]
+                }
+              },
+              "response": []
             }
           ],
           "_postman_id": "39927bcc-4096-4ae1-951d-58c8af1e2324",
@@ -8613,13 +8523,13 @@
   ],
   "variable": [
     {
-      "id": "8d57ab67-d023-4828-9cd2-41ebce2e9704",
+      "id": "c32fb899-ccb4-46f8-ada6-537e642218ec",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "e2da0ba3-10e9-4331-bce1-5aa71c632475",
+      "id": "e9a322b7-76f9-46cc-80d8-3a0e5a54840b",
       "key": "{{key}}",
       "value": "",
       "type": "string"
