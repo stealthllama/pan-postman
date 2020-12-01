@@ -9105,9 +9105,242 @@
               "request": {
                 "method": "GET",
                 "header": [],
-                "url": ""
+                "url": {
+                  "raw": "https://{{host}}/api/?type=op&cmd=<request><content><upgrade><check></check></upgrade></content></request>",
+                  "protocol": "https",
+                  "host": [
+                    "{{host}}"
+                  ],
+                  "path": [
+                    "api",
+                    ""
+                  ],
+                  "query": [
+                    {
+                      "key": "type",
+                      "value": "op"
+                    },
+                    {
+                      "key": "cmd",
+                      "value": "<request><content><upgrade><check></check></upgrade></content></request>"
+                    }
+                  ]
+                }
               },
-              "response": []
+              "response": [
+                {
+                  "id": "440ba700-b9a9-44f5-8e13-a9e9a7851136",
+                  "name": "Check for Application & Threat updates",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [],
+                    "url": {
+                      "raw": "https://{{host}}/api/?type=op&cmd=<request><content><upgrade><check></check></upgrade></content></request>",
+                      "protocol": "https",
+                      "host": [
+                        "{{host}}"
+                      ],
+                      "path": [
+                        "api",
+                        ""
+                      ],
+                      "query": [
+                        {
+                          "key": "type",
+                          "value": "op"
+                        },
+                        {
+                          "key": "cmd",
+                          "value": "<request><content><upgrade><check></check></upgrade></content></request>"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "xml",
+                  "header": [
+                    {
+                      "key": "Date",
+                      "value": "Tue, 01 Dec 2020 20:25:00 GMT"
+                    },
+                    {
+                      "key": "Content-Type",
+                      "value": "application/xml; charset=UTF-8"
+                    },
+                    {
+                      "key": "Content-Length",
+                      "value": "7638"
+                    },
+                    {
+                      "key": "Connection",
+                      "value": "keep-alive"
+                    },
+                    {
+                      "key": "X-FRAME-OPTIONS",
+                      "value": "SAMEORIGIN"
+                    },
+                    {
+                      "key": "X-XSS-Protection",
+                      "value": "1; mode=block"
+                    },
+                    {
+                      "key": "X-Content-Type-Options",
+                      "value": "nosniff"
+                    },
+                    {
+                      "key": "Content-Security-Policy",
+                      "value": "default-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:;"
+                    },
+                    {
+                      "key": "Strict-Transport-Security",
+                      "value": "max-age=31536000"
+                    },
+                    {
+                      "key": "Cache-Control",
+                      "value": "no-store, no-cache, must-revalidate, post-check=0, pre-check=0"
+                    },
+                    {
+                      "key": "Expires",
+                      "value": "Thu, 19 Nov 1981 08:52:00 GMT"
+                    },
+                    {
+                      "key": "Pragma",
+                      "value": "no-cache"
+                    },
+                    {
+                      "key": "Allow",
+                      "value": "GET, HEAD, POST, PUT, DELETE, OPTIONS"
+                    }
+                  ],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "<response status=\"success\">\n    <result>\n        <content-updates last-updated-at=\"2020/12/01 12:25:00 PST\">\n            <entry>\n                <version>8344-6411</version>\n                <app-version>8344-6411</app-version>\n                <filename>panupv2-all-contents-8344-6411</filename>\n                <size>57</size>\n                <size-kb>59009</size-kb>\n                <released-on>2020/11/16 16:57:09 PST</released-on>\n                <release-notes>\n                    <![CDATA[https://proditpdownloads.paloaltonetworks.com/content/content-8344-6411.html?__token__=exp=1607459100~acl=/content/content-8344-6411.html*~hmac=d5c6a025189a1467a5f993f5a82fef497737973e1776b24c265041cde59b7b51]]>\n                </release-notes>\n                <downloaded>no</downloaded>\n                <current>no</current>\n                <previous>no</previous>\n                <installing>no</installing>\n                <features>Apps, Threats</features>\n                <update-type>Full</update-type>\n                <feature-desc>Unknown</feature-desc>\n                <sha256>b6446f047fe29fa8013e2cf1bd11fc2364bd35cb3207b07ecff6268885ebb69e</sha256>\n            </entry>\n            <entry>\n                <version>8348-6427</version>\n                <app-version>8348-6427</app-version>\n                <filename>panupv2-all-contents-8348-6427</filename>\n                <size>57</size>\n                <size-kb>59025</size-kb>\n                <released-on>2020/11/24 17:11:39 PST</released-on>\n                <release-notes>\n                    <![CDATA[https://proditpdownloads.paloaltonetworks.com/content/content-8348-6427.html?__token__=exp=1607459100~acl=/content/content-8348-6427.html*~hmac=cfac777e237fb0ef6bb9438f726224c07fc9a04b69d1a17cfe11cca2d180ff62]]>\n                </release-notes>\n                <downloaded>yes</downloaded>\n                <current>yes</current>\n                <previous>no</previous>\n                <installing>no</installing>\n                <features>Apps, Threats</features>\n                <update-type>Full</update-type>\n                <feature-desc>Unknown</feature-desc>\n                <sha256>668e5a7e365b224c6b11948512839e0013288af8ec696e2a0fee01cfad04da71</sha256>\n            </entry>\n            <entry>\n                <version>8340-6384</version>\n                <app-version>8340-6384</app-version>\n                <filename>panupv2-all-contents-8340-6384</filename>\n                <size>57</size>\n                <size-kb>58920</size-kb>\n                <released-on>2020/11/05 18:34:17 PST</released-on>\n                <release-notes>\n                    <![CDATA[https://proditpdownloads.paloaltonetworks.com/content/content-8340-6384.html?__token__=exp=1607459100~acl=/content/content-8340-6384.html*~hmac=09bd8447a7f57e6280fa81b1dff1ad34eb09562962ba98e48d8056c21abcd1b9]]>\n                </release-notes>\n                <downloaded>no</downloaded>\n                <current>no</current>\n                <previous>no</previous>\n                <installing>no</installing>\n                <features>Apps, Threats</features>\n                <update-type>Full</update-type>\n                <feature-desc>Unknown</feature-desc>\n                <sha256>2645791aa20ddab3f9f0c509640ec831ec0376cb18a7808766dc3ca98815dd3d</sha256>\n            </entry>\n            <entry>\n                <version>8346-6423</version>\n                <app-version>8346-6423</app-version>\n                <filename>panupv2-all-contents-8346-6423</filename>\n                <size>57</size>\n                <size-kb>59049</size-kb>\n                <released-on>2020/11/18 18:24:20 PST</released-on>\n                <release-notes>\n                    <![CDATA[https://proditpdownloads.paloaltonetworks.com/content/content-8346-6423.html?__token__=exp=1607459100~acl=/content/content-8346-6423.html*~hmac=499490bb6c8e1391977901004aee900ffe68cfaff36c9c80a439c722aec2709d]]>\n                </release-notes>\n                <downloaded>no</downloaded>\n                <current>no</current>\n                <previous>no</previous>\n                <installing>no</installing>\n                <features>Apps, Threats</features>\n                <update-type>Full</update-type>\n                <feature-desc>Unknown</feature-desc>\n                <sha256>4248f6ff75be8c847c00b6e0546127b9664b18911dd218d386285b0658735d67</sha256>\n            </entry>\n            <entry>\n                <version>8347-6424</version>\n                <app-version>8347-6424</app-version>\n                <filename>panupv2-all-contents-8347-6424</filename>\n                <size>57</size>\n                <size-kb>59047</size-kb>\n                <released-on>2020/11/20 10:23:53 PST</released-on>\n                <release-notes>\n                    <![CDATA[https://proditpdownloads.paloaltonetworks.com/content/content-8347-6424.html?__token__=exp=1607459100~acl=/content/content-8347-6424.html*~hmac=99c50f8e3e153bec95a8868fc638ff1865933df9188b1e623f3049bc1d24562d]]>\n                </release-notes>\n                <downloaded>yes</downloaded>\n                <current>no</current>\n                <previous>yes</previous>\n                <installing>no</installing>\n                <features>Apps, Threats</features>\n                <update-type>Full</update-type>\n                <feature-desc>Unknown</feature-desc>\n                <sha256>121c3dcb616f2a674551a59dc3566126027a52fd02655eb8c7f25077a342413a</sha256>\n            </entry>\n            <entry>\n                <version>8341-6389</version>\n                <app-version>8341-6389</app-version>\n                <filename>panupv2-all-contents-8341-6389</filename>\n                <size>57</size>\n                <size-kb>58924</size-kb>\n                <released-on>2020/11/09 12:40:14 PST</released-on>\n                <release-notes>\n                    <![CDATA[https://proditpdownloads.paloaltonetworks.com/content/content-8341-6389.html?__token__=exp=1607459100~acl=/content/content-8341-6389.html*~hmac=b9b92dd103874eacef92ab03fc4ca41a70042a8cfb5fd290c67483fadaa06f53]]>\n                </release-notes>\n                <downloaded>no</downloaded>\n                <current>no</current>\n                <previous>no</previous>\n                <installing>no</installing>\n                <features>Apps, Threats</features>\n                <update-type>Full</update-type>\n                <feature-desc>Unknown</feature-desc>\n                <sha256>e3fa053b1180a05025da95d53316ee5a0bf0d33d0a4a276a2f6669c0b8e64acb</sha256>\n            </entry>\n            <entry>\n                <version>8339-6381</version>\n                <app-version>8339-6381</app-version>\n                <filename>panupv2-all-contents-8339-6381</filename>\n                <size>57</size>\n                <size-kb>58895</size-kb>\n                <released-on>2020/11/03 10:10:36 PST</released-on>\n                <release-notes>\n                    <![CDATA[https://proditpdownloads.paloaltonetworks.com/content/content-8339-6381.html?__token__=exp=1607459100~acl=/content/content-8339-6381.html*~hmac=dd4072c8fdb1f59ff02be81b6f59b06dd2fa1518426963d78fd05ac5fa285c8d]]>\n                </release-notes>\n                <downloaded>no</downloaded>\n                <current>no</current>\n                <previous>no</previous>\n                <installing>no</installing>\n                <features>Apps, Threats</features>\n                <update-type>Full</update-type>\n                <feature-desc>Unknown</feature-desc>\n                <sha256>0997c0441edead18e1a9429d21365df8bc15428693713e20ae61ab28e8a55744</sha256>\n            </entry>\n            <entry>\n                <version>8345-6420</version>\n                <app-version>8345-6420</app-version>\n                <filename>panupv2-all-contents-8345-6420</filename>\n                <size>57</size>\n                <size-kb>59011</size-kb>\n                <released-on>2020/11/17 21:17:11 PST</released-on>\n                <release-notes>\n                    <![CDATA[https://proditpdownloads.paloaltonetworks.com/content/content-8345-6420.html?__token__=exp=1607459100~acl=/content/content-8345-6420.html*~hmac=218eb7d37f19e5cbc223bb3eeca1f1b151b795393621ffa54432d46e99761289]]>\n                </release-notes>\n                <downloaded>no</downloaded>\n                <current>no</current>\n                <previous>no</previous>\n                <installing>no</installing>\n                <features>Apps, Threats</features>\n                <update-type>Full</update-type>\n                <feature-desc>Unknown</feature-desc>\n                <sha256>4ceaf91bf18562ebc5d7e94a5cf554fdf825cf20dd35333ab5dde2b7b2a88f23</sha256>\n            </entry>\n            <entry>\n                <version>8343-6404</version>\n                <app-version>8343-6404</app-version>\n                <filename>panupv2-all-contents-8343-6404</filename>\n                <size>57</size>\n                <size-kb>58997</size-kb>\n                <released-on>2020/11/12 16:11:18 PST</released-on>\n                <release-notes>\n                    <![CDATA[https://proditpdownloads.paloaltonetworks.com/content/content-8343-6404.html?__token__=exp=1607459100~acl=/content/content-8343-6404.html*~hmac=50d8a57001750c899696408af006da04de849c9e351eb7fefe95b9bad703609e]]>\n                </release-notes>\n                <downloaded>no</downloaded>\n                <current>no</current>\n                <previous>no</previous>\n                <installing>no</installing>\n                <features>Apps, Threats</features>\n                <update-type>Full</update-type>\n                <feature-desc>Unknown</feature-desc>\n                <sha256>ea48b23907762864a54cb3fc8179dc8dcbd81ef79f43629214bfee2f2559ead3</sha256>\n            </entry>\n            <entry>\n                <version>8342-6396</version>\n                <app-version>8342-6396</app-version>\n                <filename>panupv2-all-contents-8342-6396</filename>\n                <size>57</size>\n                <size-kb>58933</size-kb>\n                <released-on>2020/11/10 10:19:37 PST</released-on>\n                <release-notes>\n                    <![CDATA[https://proditpdownloads.paloaltonetworks.com/content/content-8342-6396.html?__token__=exp=1607459100~acl=/content/content-8342-6396.html*~hmac=5596da50d042394216333bbd0df1227c6927e8d794a84fe0baee6ef2b2abf6b4]]>\n                </release-notes>\n                <downloaded>no</downloaded>\n                <current>no</current>\n                <previous>no</previous>\n                <installing>no</installing>\n                <features>Apps, Threats</features>\n                <update-type>Full</update-type>\n                <feature-desc>Unknown</feature-desc>\n                <sha256>e29ad336e583612bba9d6c0d07d23420ccb89dcc204665da71623b4316796aea</sha256>\n            </entry>\n        </content-updates>\n    </result>\n</response>"
+                }
+              ]
+            },
+            {
+              "name": "Check for Application & Threat updates Copy",
+              "_postman_id": "d66074ec-1471-4d26-9562-76053526f4b0",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "https://{{host}}/api/?type=op&cmd=<request><content><upgrade><check></check></upgrade></content></request>",
+                  "protocol": "https",
+                  "host": [
+                    "{{host}}"
+                  ],
+                  "path": [
+                    "api",
+                    ""
+                  ],
+                  "query": [
+                    {
+                      "key": "type",
+                      "value": "op"
+                    },
+                    {
+                      "key": "cmd",
+                      "value": "<request><content><upgrade><check></check></upgrade></content></request>"
+                    }
+                  ]
+                }
+              },
+              "response": [
+                {
+                  "id": "1aa35210-758e-415c-a391-0d5b00829ec2",
+                  "name": "Check for Application & Threat updates",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [],
+                    "url": {
+                      "raw": "https://{{host}}/api/?type=op&cmd=<request><content><upgrade><check></check></upgrade></content></request>",
+                      "protocol": "https",
+                      "host": [
+                        "{{host}}"
+                      ],
+                      "path": [
+                        "api",
+                        ""
+                      ],
+                      "query": [
+                        {
+                          "key": "type",
+                          "value": "op"
+                        },
+                        {
+                          "key": "cmd",
+                          "value": "<request><content><upgrade><check></check></upgrade></content></request>"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "xml",
+                  "header": [
+                    {
+                      "key": "Date",
+                      "value": "Tue, 01 Dec 2020 20:25:00 GMT"
+                    },
+                    {
+                      "key": "Content-Type",
+                      "value": "application/xml; charset=UTF-8"
+                    },
+                    {
+                      "key": "Content-Length",
+                      "value": "7638"
+                    },
+                    {
+                      "key": "Connection",
+                      "value": "keep-alive"
+                    },
+                    {
+                      "key": "X-FRAME-OPTIONS",
+                      "value": "SAMEORIGIN"
+                    },
+                    {
+                      "key": "X-XSS-Protection",
+                      "value": "1; mode=block"
+                    },
+                    {
+                      "key": "X-Content-Type-Options",
+                      "value": "nosniff"
+                    },
+                    {
+                      "key": "Content-Security-Policy",
+                      "value": "default-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:;"
+                    },
+                    {
+                      "key": "Strict-Transport-Security",
+                      "value": "max-age=31536000"
+                    },
+                    {
+                      "key": "Cache-Control",
+                      "value": "no-store, no-cache, must-revalidate, post-check=0, pre-check=0"
+                    },
+                    {
+                      "key": "Expires",
+                      "value": "Thu, 19 Nov 1981 08:52:00 GMT"
+                    },
+                    {
+                      "key": "Pragma",
+                      "value": "no-cache"
+                    },
+                    {
+                      "key": "Allow",
+                      "value": "GET, HEAD, POST, PUT, DELETE, OPTIONS"
+                    }
+                  ],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "<response status=\"success\">\n    <result>\n        <content-updates last-updated-at=\"2020/12/01 12:25:00 PST\">\n            <entry>\n                <version>8344-6411</version>\n                <app-version>8344-6411</app-version>\n                <filename>panupv2-all-contents-8344-6411</filename>\n                <size>57</size>\n                <size-kb>59009</size-kb>\n                <released-on>2020/11/16 16:57:09 PST</released-on>\n                <release-notes>\n                    <![CDATA[https://proditpdownloads.paloaltonetworks.com/content/content-8344-6411.html?__token__=exp=1607459100~acl=/content/content-8344-6411.html*~hmac=d5c6a025189a1467a5f993f5a82fef497737973e1776b24c265041cde59b7b51]]>\n                </release-notes>\n                <downloaded>no</downloaded>\n                <current>no</current>\n                <previous>no</previous>\n                <installing>no</installing>\n                <features>Apps, Threats</features>\n                <update-type>Full</update-type>\n                <feature-desc>Unknown</feature-desc>\n                <sha256>b6446f047fe29fa8013e2cf1bd11fc2364bd35cb3207b07ecff6268885ebb69e</sha256>\n            </entry>\n            <entry>\n                <version>8348-6427</version>\n                <app-version>8348-6427</app-version>\n                <filename>panupv2-all-contents-8348-6427</filename>\n                <size>57</size>\n                <size-kb>59025</size-kb>\n                <released-on>2020/11/24 17:11:39 PST</released-on>\n                <release-notes>\n                    <![CDATA[https://proditpdownloads.paloaltonetworks.com/content/content-8348-6427.html?__token__=exp=1607459100~acl=/content/content-8348-6427.html*~hmac=cfac777e237fb0ef6bb9438f726224c07fc9a04b69d1a17cfe11cca2d180ff62]]>\n                </release-notes>\n                <downloaded>yes</downloaded>\n                <current>yes</current>\n                <previous>no</previous>\n                <installing>no</installing>\n                <features>Apps, Threats</features>\n                <update-type>Full</update-type>\n                <feature-desc>Unknown</feature-desc>\n                <sha256>668e5a7e365b224c6b11948512839e0013288af8ec696e2a0fee01cfad04da71</sha256>\n            </entry>\n            <entry>\n                <version>8340-6384</version>\n                <app-version>8340-6384</app-version>\n                <filename>panupv2-all-contents-8340-6384</filename>\n                <size>57</size>\n                <size-kb>58920</size-kb>\n                <released-on>2020/11/05 18:34:17 PST</released-on>\n                <release-notes>\n                    <![CDATA[https://proditpdownloads.paloaltonetworks.com/content/content-8340-6384.html?__token__=exp=1607459100~acl=/content/content-8340-6384.html*~hmac=09bd8447a7f57e6280fa81b1dff1ad34eb09562962ba98e48d8056c21abcd1b9]]>\n                </release-notes>\n                <downloaded>no</downloaded>\n                <current>no</current>\n                <previous>no</previous>\n                <installing>no</installing>\n                <features>Apps, Threats</features>\n                <update-type>Full</update-type>\n                <feature-desc>Unknown</feature-desc>\n                <sha256>2645791aa20ddab3f9f0c509640ec831ec0376cb18a7808766dc3ca98815dd3d</sha256>\n            </entry>\n            <entry>\n                <version>8346-6423</version>\n                <app-version>8346-6423</app-version>\n                <filename>panupv2-all-contents-8346-6423</filename>\n                <size>57</size>\n                <size-kb>59049</size-kb>\n                <released-on>2020/11/18 18:24:20 PST</released-on>\n                <release-notes>\n                    <![CDATA[https://proditpdownloads.paloaltonetworks.com/content/content-8346-6423.html?__token__=exp=1607459100~acl=/content/content-8346-6423.html*~hmac=499490bb6c8e1391977901004aee900ffe68cfaff36c9c80a439c722aec2709d]]>\n                </release-notes>\n                <downloaded>no</downloaded>\n                <current>no</current>\n                <previous>no</previous>\n                <installing>no</installing>\n                <features>Apps, Threats</features>\n                <update-type>Full</update-type>\n                <feature-desc>Unknown</feature-desc>\n                <sha256>4248f6ff75be8c847c00b6e0546127b9664b18911dd218d386285b0658735d67</sha256>\n            </entry>\n            <entry>\n                <version>8347-6424</version>\n                <app-version>8347-6424</app-version>\n                <filename>panupv2-all-contents-8347-6424</filename>\n                <size>57</size>\n                <size-kb>59047</size-kb>\n                <released-on>2020/11/20 10:23:53 PST</released-on>\n                <release-notes>\n                    <![CDATA[https://proditpdownloads.paloaltonetworks.com/content/content-8347-6424.html?__token__=exp=1607459100~acl=/content/content-8347-6424.html*~hmac=99c50f8e3e153bec95a8868fc638ff1865933df9188b1e623f3049bc1d24562d]]>\n                </release-notes>\n                <downloaded>yes</downloaded>\n                <current>no</current>\n                <previous>yes</previous>\n                <installing>no</installing>\n                <features>Apps, Threats</features>\n                <update-type>Full</update-type>\n                <feature-desc>Unknown</feature-desc>\n                <sha256>121c3dcb616f2a674551a59dc3566126027a52fd02655eb8c7f25077a342413a</sha256>\n            </entry>\n            <entry>\n                <version>8341-6389</version>\n                <app-version>8341-6389</app-version>\n                <filename>panupv2-all-contents-8341-6389</filename>\n                <size>57</size>\n                <size-kb>58924</size-kb>\n                <released-on>2020/11/09 12:40:14 PST</released-on>\n                <release-notes>\n                    <![CDATA[https://proditpdownloads.paloaltonetworks.com/content/content-8341-6389.html?__token__=exp=1607459100~acl=/content/content-8341-6389.html*~hmac=b9b92dd103874eacef92ab03fc4ca41a70042a8cfb5fd290c67483fadaa06f53]]>\n                </release-notes>\n                <downloaded>no</downloaded>\n                <current>no</current>\n                <previous>no</previous>\n                <installing>no</installing>\n                <features>Apps, Threats</features>\n                <update-type>Full</update-type>\n                <feature-desc>Unknown</feature-desc>\n                <sha256>e3fa053b1180a05025da95d53316ee5a0bf0d33d0a4a276a2f6669c0b8e64acb</sha256>\n            </entry>\n            <entry>\n                <version>8339-6381</version>\n                <app-version>8339-6381</app-version>\n                <filename>panupv2-all-contents-8339-6381</filename>\n                <size>57</size>\n                <size-kb>58895</size-kb>\n                <released-on>2020/11/03 10:10:36 PST</released-on>\n                <release-notes>\n                    <![CDATA[https://proditpdownloads.paloaltonetworks.com/content/content-8339-6381.html?__token__=exp=1607459100~acl=/content/content-8339-6381.html*~hmac=dd4072c8fdb1f59ff02be81b6f59b06dd2fa1518426963d78fd05ac5fa285c8d]]>\n                </release-notes>\n                <downloaded>no</downloaded>\n                <current>no</current>\n                <previous>no</previous>\n                <installing>no</installing>\n                <features>Apps, Threats</features>\n                <update-type>Full</update-type>\n                <feature-desc>Unknown</feature-desc>\n                <sha256>0997c0441edead18e1a9429d21365df8bc15428693713e20ae61ab28e8a55744</sha256>\n            </entry>\n            <entry>\n                <version>8345-6420</version>\n                <app-version>8345-6420</app-version>\n                <filename>panupv2-all-contents-8345-6420</filename>\n                <size>57</size>\n                <size-kb>59011</size-kb>\n                <released-on>2020/11/17 21:17:11 PST</released-on>\n                <release-notes>\n                    <![CDATA[https://proditpdownloads.paloaltonetworks.com/content/content-8345-6420.html?__token__=exp=1607459100~acl=/content/content-8345-6420.html*~hmac=218eb7d37f19e5cbc223bb3eeca1f1b151b795393621ffa54432d46e99761289]]>\n                </release-notes>\n                <downloaded>no</downloaded>\n                <current>no</current>\n                <previous>no</previous>\n                <installing>no</installing>\n                <features>Apps, Threats</features>\n                <update-type>Full</update-type>\n                <feature-desc>Unknown</feature-desc>\n                <sha256>4ceaf91bf18562ebc5d7e94a5cf554fdf825cf20dd35333ab5dde2b7b2a88f23</sha256>\n            </entry>\n            <entry>\n                <version>8343-6404</version>\n                <app-version>8343-6404</app-version>\n                <filename>panupv2-all-contents-8343-6404</filename>\n                <size>57</size>\n                <size-kb>58997</size-kb>\n                <released-on>2020/11/12 16:11:18 PST</released-on>\n                <release-notes>\n                    <![CDATA[https://proditpdownloads.paloaltonetworks.com/content/content-8343-6404.html?__token__=exp=1607459100~acl=/content/content-8343-6404.html*~hmac=50d8a57001750c899696408af006da04de849c9e351eb7fefe95b9bad703609e]]>\n                </release-notes>\n                <downloaded>no</downloaded>\n                <current>no</current>\n                <previous>no</previous>\n                <installing>no</installing>\n                <features>Apps, Threats</features>\n                <update-type>Full</update-type>\n                <feature-desc>Unknown</feature-desc>\n                <sha256>ea48b23907762864a54cb3fc8179dc8dcbd81ef79f43629214bfee2f2559ead3</sha256>\n            </entry>\n            <entry>\n                <version>8342-6396</version>\n                <app-version>8342-6396</app-version>\n                <filename>panupv2-all-contents-8342-6396</filename>\n                <size>57</size>\n                <size-kb>58933</size-kb>\n                <released-on>2020/11/10 10:19:37 PST</released-on>\n                <release-notes>\n                    <![CDATA[https://proditpdownloads.paloaltonetworks.com/content/content-8342-6396.html?__token__=exp=1607459100~acl=/content/content-8342-6396.html*~hmac=5596da50d042394216333bbd0df1227c6927e8d794a84fe0baee6ef2b2abf6b4]]>\n                </release-notes>\n                <downloaded>no</downloaded>\n                <current>no</current>\n                <previous>no</previous>\n                <installing>no</installing>\n                <features>Apps, Threats</features>\n                <update-type>Full</update-type>\n                <feature-desc>Unknown</feature-desc>\n                <sha256>e29ad336e583612bba9d6c0d07d23420ccb89dcc204665da71623b4316796aea</sha256>\n            </entry>\n        </content-updates>\n    </result>\n</response>"
+                }
+              ]
             }
           ],
           "_postman_id": "d614d66c-c68e-4e80-9f1f-2fbf6af9045a",
@@ -9171,13 +9404,13 @@
   ],
   "variable": [
     {
-      "id": "5ec2034c-aa4d-43ff-9a3a-332112d8f7a2",
+      "id": "7170a806-ee38-4335-98a4-5d8d26df0d75",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "0a59146d-cd11-4dc9-9b0a-fa60be2a306f",
+      "id": "67984988-5da0-46a5-ac54-c810d11bccbf",
       "key": "{{key}}",
       "value": "",
       "type": "string"
