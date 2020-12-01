@@ -9343,7 +9343,7 @@
               ]
             },
             {
-              "name": "Check for WildFire updates Copy",
+              "name": "Check for Antivirus updates",
               "_postman_id": "da977e6d-555e-434e-b9de-5367b3b17bee",
               "protocolProfileBehavior": {
                 "disableBodyPruning": true
@@ -9650,13 +9650,13 @@
   ],
   "variable": [
     {
-      "id": "3be7fe3e-a7c6-458f-8f7e-df153c8211fa",
+      "id": "bb400126-1be3-4921-9614-83b95b772fef",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "0b1c5101-359f-4cb8-b9cb-a94ea4606ad0",
+      "id": "7da91f25-47df-418d-9e53-743ea0ffd5d1",
       "key": "{{key}}",
       "value": "",
       "type": "string"
