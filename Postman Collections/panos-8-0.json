@@ -8575,129 +8575,6 @@
               ]
             },
             {
-              "name": "Check software download status Copy",
-              "_postman_id": "a6b07389-cccf-499e-9321-a9eba5f333c1",
-              "protocolProfileBehavior": {
-                "disableBodyPruning": true
-              },
-              "request": {
-                "method": "GET",
-                "header": [],
-                "url": {
-                  "raw": "https://{{host}}/api/?type=op&cmd=<show><jobs><id>4</id></jobs></show>",
-                  "protocol": "https",
-                  "host": [
-                    "{{host}}"
-                  ],
-                  "path": [
-                    "api",
-                    ""
-                  ],
-                  "query": [
-                    {
-                      "key": "type",
-                      "value": "op"
-                    },
-                    {
-                      "key": "cmd",
-                      "value": "<show><jobs><id>4</id></jobs></show>"
-                    }
-                  ]
-                }
-              },
-              "response": [
-                {
-                  "id": "6de7e750-de98-4640-861e-da8317ccfb72",
-                  "name": "Check software download status",
-                  "originalRequest": {
-                    "method": "GET",
-                    "header": [],
-                    "url": {
-                      "raw": "https://{{host}}/api/?type=op&cmd=<show><jobs><id>4</id></jobs></show>",
-                      "protocol": "https",
-                      "host": [
-                        "{{host}}"
-                      ],
-                      "path": [
-                        "api",
-                        ""
-                      ],
-                      "query": [
-                        {
-                          "key": "type",
-                          "value": "op"
-                        },
-                        {
-                          "key": "cmd",
-                          "value": "<show><jobs><id>4</id></jobs></show>"
-                        }
-                      ]
-                    }
-                  },
-                  "status": "OK",
-                  "code": 200,
-                  "_postman_previewlanguage": "xml",
-                  "header": [
-                    {
-                      "key": "Date",
-                      "value": "Tue, 01 Dec 2020 20:07:17 GMT"
-                    },
-                    {
-                      "key": "Content-Type",
-                      "value": "application/xml; charset=UTF-8"
-                    },
-                    {
-                      "key": "Content-Length",
-                      "value": "524"
-                    },
-                    {
-                      "key": "Connection",
-                      "value": "keep-alive"
-                    },
-                    {
-                      "key": "X-FRAME-OPTIONS",
-                      "value": "SAMEORIGIN"
-                    },
-                    {
-                      "key": "X-XSS-Protection",
-                      "value": "1; mode=block"
-                    },
-                    {
-                      "key": "X-Content-Type-Options",
-                      "value": "nosniff"
-                    },
-                    {
-                      "key": "Content-Security-Policy",
-                      "value": "default-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:;"
-                    },
-                    {
-                      "key": "Strict-Transport-Security",
-                      "value": "max-age=31536000"
-                    },
-                    {
-                      "key": "Cache-Control",
-                      "value": "no-store, no-cache, must-revalidate, post-check=0, pre-check=0"
-                    },
-                    {
-                      "key": "Expires",
-                      "value": "Thu, 19 Nov 1981 08:52:00 GMT"
-                    },
-                    {
-                      "key": "Pragma",
-                      "value": "no-cache"
-                    },
-                    {
-                      "key": "Allow",
-                      "value": "GET, HEAD, POST, PUT, DELETE, OPTIONS"
-                    }
-                  ],
-                  "cookie": [],
-                  "responseTime": null,
-                  "body": "<response status=\"success\">\n    <result>\n        <job>\n            <tenq>2020/12/01 12:02:41</tenq>\n            <tdeq>12:02:41</tdeq>\n            <id>4</id>\n            <user></user>\n            <type>Downld</type>\n            <status>FIN</status>\n            <queued>NO</queued>\n            <stoppable>no</stoppable>\n            <result>OK</result>\n            <tfin>12:05:37</tfin>\n            <description></description>\n            <positionInQ>0</positionInQ>\n            <progress>12:05:37</progress>\n            <details>\n                <line>Successfully downloaded</line>\n                <line>Preloading into software manager</line>\n                <line>Successfully loaded into software manager</line>\n            </details>\n            <warnings></warnings>\n        </job>\n    </result>\n</response>"
-                }
-              ]
-            },
-            {
               "name": "Install the latest PAN-OS software update",
               "_postman_id": "0e25d3b8-9eca-4577-9af8-310c1a8f93ea",
               "protocolProfileBehavior": {
@@ -8819,6 +8696,129 @@
                   "body": "<response status=\"success\" code=\"19\">\n    <result>\n        <msg>\n            <line>Software install job enqueued with jobid 5. Run 'show jobs id 5' to monitor its status. Please reboot the device after the installation is done.</line>\n        </msg>\n        <job>5</job>\n    </result>\n</response>"
                 }
               ]
+            },
+            {
+              "name": "Check software download status Copy",
+              "_postman_id": "a6b07389-cccf-499e-9321-a9eba5f333c1",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "https://{{host}}/api/?type=op&cmd=<show><jobs><id>4</id></jobs></show>",
+                  "protocol": "https",
+                  "host": [
+                    "{{host}}"
+                  ],
+                  "path": [
+                    "api",
+                    ""
+                  ],
+                  "query": [
+                    {
+                      "key": "type",
+                      "value": "op"
+                    },
+                    {
+                      "key": "cmd",
+                      "value": "<show><jobs><id>4</id></jobs></show>"
+                    }
+                  ]
+                }
+              },
+              "response": [
+                {
+                  "id": "6de7e750-de98-4640-861e-da8317ccfb72",
+                  "name": "Check software download status",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [],
+                    "url": {
+                      "raw": "https://{{host}}/api/?type=op&cmd=<show><jobs><id>4</id></jobs></show>",
+                      "protocol": "https",
+                      "host": [
+                        "{{host}}"
+                      ],
+                      "path": [
+                        "api",
+                        ""
+                      ],
+                      "query": [
+                        {
+                          "key": "type",
+                          "value": "op"
+                        },
+                        {
+                          "key": "cmd",
+                          "value": "<show><jobs><id>4</id></jobs></show>"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "xml",
+                  "header": [
+                    {
+                      "key": "Date",
+                      "value": "Tue, 01 Dec 2020 20:07:17 GMT"
+                    },
+                    {
+                      "key": "Content-Type",
+                      "value": "application/xml; charset=UTF-8"
+                    },
+                    {
+                      "key": "Content-Length",
+                      "value": "524"
+                    },
+                    {
+                      "key": "Connection",
+                      "value": "keep-alive"
+                    },
+                    {
+                      "key": "X-FRAME-OPTIONS",
+                      "value": "SAMEORIGIN"
+                    },
+                    {
+                      "key": "X-XSS-Protection",
+                      "value": "1; mode=block"
+                    },
+                    {
+                      "key": "X-Content-Type-Options",
+                      "value": "nosniff"
+                    },
+                    {
+                      "key": "Content-Security-Policy",
+                      "value": "default-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:;"
+                    },
+                    {
+                      "key": "Strict-Transport-Security",
+                      "value": "max-age=31536000"
+                    },
+                    {
+                      "key": "Cache-Control",
+                      "value": "no-store, no-cache, must-revalidate, post-check=0, pre-check=0"
+                    },
+                    {
+                      "key": "Expires",
+                      "value": "Thu, 19 Nov 1981 08:52:00 GMT"
+                    },
+                    {
+                      "key": "Pragma",
+                      "value": "no-cache"
+                    },
+                    {
+                      "key": "Allow",
+                      "value": "GET, HEAD, POST, PUT, DELETE, OPTIONS"
+                    }
+                  ],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "<response status=\"success\">\n    <result>\n        <job>\n            <tenq>2020/12/01 12:02:41</tenq>\n            <tdeq>12:02:41</tdeq>\n            <id>4</id>\n            <user></user>\n            <type>Downld</type>\n            <status>FIN</status>\n            <queued>NO</queued>\n            <stoppable>no</stoppable>\n            <result>OK</result>\n            <tfin>12:05:37</tfin>\n            <description></description>\n            <positionInQ>0</positionInQ>\n            <progress>12:05:37</progress>\n            <details>\n                <line>Successfully downloaded</line>\n                <line>Preloading into software manager</line>\n                <line>Successfully loaded into software manager</line>\n            </details>\n            <warnings></warnings>\n        </job>\n    </result>\n</response>"
+                }
+              ]
             }
           ],
           "_postman_id": "39927bcc-4096-4ae1-951d-58c8af1e2324",
@@ -8882,13 +8882,13 @@
   ],
   "variable": [
     {
-      "id": "cd3feb35-d6c1-4199-96fb-430bdb593935",
+      "id": "f2cfbadc-6cb6-4f7c-83a3-ddb8aeebb8e3",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "c39f47f0-4a1d-4d5e-8c24-ff0377aa5912",
+      "id": "85fddb6b-080e-4d9d-8dfa-2efe8d935006",
       "key": "{{key}}",
       "value": "",
       "type": "string"
