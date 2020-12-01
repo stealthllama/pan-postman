@@ -8728,6 +8728,109 @@
                   ]
                 }
               },
+              "response": [
+                {
+                  "id": "57708510-9367-4c94-8a98-3a71c73d62f6",
+                  "name": "Check software install status",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [],
+                    "url": {
+                      "raw": "https://{{host}}/api/?type=op&cmd=<show><jobs><id>5</id></jobs></show>",
+                      "protocol": "https",
+                      "host": [
+                        "{{host}}"
+                      ],
+                      "path": [
+                        "api",
+                        ""
+                      ],
+                      "query": [
+                        {
+                          "key": "type",
+                          "value": "op"
+                        },
+                        {
+                          "key": "cmd",
+                          "value": "<show><jobs><id>5</id></jobs></show>"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "xml",
+                  "header": [
+                    {
+                      "key": "Date",
+                      "value": "Tue, 01 Dec 2020 20:10:31 GMT"
+                    },
+                    {
+                      "key": "Content-Type",
+                      "value": "application/xml; charset=UTF-8"
+                    },
+                    {
+                      "key": "Content-Length",
+                      "value": "495"
+                    },
+                    {
+                      "key": "Connection",
+                      "value": "keep-alive"
+                    },
+                    {
+                      "key": "X-FRAME-OPTIONS",
+                      "value": "SAMEORIGIN"
+                    },
+                    {
+                      "key": "X-XSS-Protection",
+                      "value": "1; mode=block"
+                    },
+                    {
+                      "key": "X-Content-Type-Options",
+                      "value": "nosniff"
+                    },
+                    {
+                      "key": "Content-Security-Policy",
+                      "value": "default-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:;"
+                    },
+                    {
+                      "key": "Strict-Transport-Security",
+                      "value": "max-age=31536000"
+                    },
+                    {
+                      "key": "Cache-Control",
+                      "value": "no-store, no-cache, must-revalidate, post-check=0, pre-check=0"
+                    },
+                    {
+                      "key": "Expires",
+                      "value": "Thu, 19 Nov 1981 08:52:00 GMT"
+                    },
+                    {
+                      "key": "Pragma",
+                      "value": "no-cache"
+                    },
+                    {
+                      "key": "Allow",
+                      "value": "GET, HEAD, POST, PUT, DELETE, OPTIONS"
+                    }
+                  ],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "<response status=\"success\">\n    <result>\n        <job>\n            <tenq>2020/12/01 12:08:37</tenq>\n            <tdeq>12:08:37</tdeq>\n            <id>5</id>\n            <user></user>\n            <type>SWInstall</type>\n            <status>FIN</status>\n            <queued>NO</queued>\n            <stoppable>no</stoppable>\n            <result>OK</result>\n            <tfin>12:09:47</tfin>\n            <description></description>\n            <positionInQ>0</positionInQ>\n            <progress>12:09:47</progress>\n            <details>\n                <line>Software installation successfully completed. Please reboot to switch to the new version.\n</line>\n            </details>\n            <warnings></warnings>\n        </job>\n    </result>\n</response>"
+                }
+              ]
+            },
+            {
+              "name": "Reboot the firewall",
+              "_postman_id": "4e62921c-0215-4875-9e3b-8d61cd57c6a4",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": ""
+              },
               "response": []
             }
           ],
@@ -8792,13 +8895,13 @@
   ],
   "variable": [
     {
-      "id": "38f0bdea-8898-498e-afed-44b7c8771cd7",
+      "id": "d0636c0b-620b-4b77-a85e-d68d5bf9fe0e",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "b311a302-f6cf-46aa-9215-15a5bb6c9116",
+      "id": "388607cd-8326-4337-8ef4-d46a6ee38b7c",
       "key": "{{key}}",
       "value": "",
       "type": "string"
