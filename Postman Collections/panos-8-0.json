@@ -9220,7 +9220,7 @@
               ]
             },
             {
-              "name": "Check for Application & Threat updates Copy",
+              "name": "Check for GlobalProtect updates",
               "_postman_id": "d66074ec-1471-4d26-9562-76053526f4b0",
               "protocolProfileBehavior": {
                 "disableBodyPruning": true
@@ -9404,13 +9404,13 @@
   ],
   "variable": [
     {
-      "id": "b3ee1141-1ad5-4e9a-8083-b76787d2a56a",
+      "id": "3f970d92-cc23-4aa3-9dbb-6fc832e5407d",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "1e617661-5961-4f21-a126-ab31bbb9aa3d",
+      "id": "0e5d2230-bb0e-4245-ac54-2de25a13afe2",
       "key": "{{key}}",
       "value": "",
       "type": "string"
