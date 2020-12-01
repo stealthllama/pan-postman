@@ -10459,7 +10459,7 @@
                 "method": "GET",
                 "header": [],
                 "url": {
-                  "raw": "https://{{host}}/api/?type=op&cmd=<request><anti-virus><upgrade><install><version>latest</version></install></upgrade></anti-virus></request>",
+                  "raw": "https://{{host}}/api/?type=op&cmd=<request><global-protect-client><software><activate><version>5.2.4</version></activate></software></global-protect-client></request>",
                   "protocol": "https",
                   "host": [
                     "{{host}}"
@@ -10475,12 +10475,102 @@
                     },
                     {
                       "key": "cmd",
-                      "value": "<request><anti-virus><upgrade><install><version>latest</version></install></upgrade></anti-virus></request>"
+                      "value": "<request><global-protect-client><software><activate><version>5.2.4</version></activate></software></global-protect-client></request>"
                     }
                   ]
                 }
               },
-              "response": []
+              "response": [
+                {
+                  "id": "3ce6b1fa-9858-4f4b-a0ab-7fc5c7b9cf7d",
+                  "name": "Install latest GlobalProtect client",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [],
+                    "url": {
+                      "raw": "https://{{host}}/api/?type=op&cmd=<request><global-protect-client><software><activate><version>5.2.4</version></activate></software></global-protect-client></request>",
+                      "protocol": "https",
+                      "host": [
+                        "{{host}}"
+                      ],
+                      "path": [
+                        "api",
+                        ""
+                      ],
+                      "query": [
+                        {
+                          "key": "type",
+                          "value": "op"
+                        },
+                        {
+                          "key": "cmd",
+                          "value": "<request><global-protect-client><software><activate><version>5.2.4</version></activate></software></global-protect-client></request>"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "xml",
+                  "header": [
+                    {
+                      "key": "Date",
+                      "value": "Tue, 01 Dec 2020 20:51:03 GMT"
+                    },
+                    {
+                      "key": "Content-Type",
+                      "value": "application/xml; charset=UTF-8"
+                    },
+                    {
+                      "key": "Content-Length",
+                      "value": "199"
+                    },
+                    {
+                      "key": "Connection",
+                      "value": "keep-alive"
+                    },
+                    {
+                      "key": "X-FRAME-OPTIONS",
+                      "value": "SAMEORIGIN"
+                    },
+                    {
+                      "key": "X-XSS-Protection",
+                      "value": "1; mode=block"
+                    },
+                    {
+                      "key": "X-Content-Type-Options",
+                      "value": "nosniff"
+                    },
+                    {
+                      "key": "Content-Security-Policy",
+                      "value": "default-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:;"
+                    },
+                    {
+                      "key": "Strict-Transport-Security",
+                      "value": "max-age=31536000"
+                    },
+                    {
+                      "key": "Cache-Control",
+                      "value": "no-store, no-cache, must-revalidate, post-check=0, pre-check=0"
+                    },
+                    {
+                      "key": "Expires",
+                      "value": "Thu, 19 Nov 1981 08:52:00 GMT"
+                    },
+                    {
+                      "key": "Pragma",
+                      "value": "no-cache"
+                    },
+                    {
+                      "key": "Allow",
+                      "value": "GET, HEAD, POST, PUT, DELETE, OPTIONS"
+                    }
+                  ],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "<response status=\"success\" code=\"19\">\n    <result>\n        <msg>\n            <line>client package activate job enqueued with jobid 10. Run 'show jobs id 10' to monitor its status. </line>\n        </msg>\n        <job>10</job>\n    </result>\n</response>"
+                }
+              ]
             },
             {
               "name": "Check job status",
@@ -10667,13 +10757,13 @@
   ],
   "variable": [
     {
-      "id": "bb0fa493-737b-4fb5-8365-6258303c22ab",
+      "id": "0f609cd4-ea5b-4b93-b83d-f13571ab230a",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "0ca3591c-39da-4161-a208-bb10cdb0cd05",
+      "id": "961091c2-0c8d-4980-80e2-3cf2cd76f40a",
       "key": "{{key}}",
       "value": "",
       "type": "string"
