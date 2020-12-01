@@ -8972,7 +8972,21 @@
         },
         {
           "name": "Automatically Check for and Install Content Updates",
-          "item": [],
+          "item": [
+            {
+              "name": "View current system information",
+              "_postman_id": "5584edf9-ee4d-44ff-a6ce-bbfea8e46898",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": ""
+              },
+              "response": []
+            }
+          ],
           "_postman_id": "d614d66c-c68e-4e80-9f1f-2fbf6af9045a",
           "_postman_isSubFolder": true
         }
@@ -9011,13 +9025,13 @@
   ],
   "variable": [
     {
-      "id": "2bdbf6a4-f7e6-4496-a605-df97abd8effe",
+      "id": "29d160be-7cdc-4489-b735-4087c783498d",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "92601fc2-ac75-4be5-af07-36dee1e282fe",
+      "id": "9fd802f2-34a4-48b1-9aca-9805b44ee025",
       "key": "{{key}}",
       "value": "",
       "type": "string"
