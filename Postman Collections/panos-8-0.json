@@ -10721,6 +10721,12 @@
             }
           ],
           "_postman_isSubFolder": true
+        },
+        {
+          "name": "Manage Certificates (Panorama)",
+          "item": [],
+          "_postman_id": "05e52a2b-4bc5-469b-9862-d94b69f79739",
+          "_postman_isSubFolder": true
         }
       ],
       "_postman_id": "48a4821f-5bbb-4b0c-ad3a-eb55970c295e"
@@ -10757,13 +10763,13 @@
   ],
   "variable": [
     {
-      "id": "0f609cd4-ea5b-4b93-b83d-f13571ab230a",
+      "id": "35b5a909-841c-43a3-a4ab-50a464bc6a02",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "961091c2-0c8d-4980-80e2-3cf2cd76f40a",
+      "id": "3f915376-a3b6-449e-9a35-81067031dfea",
       "key": "{{key}}",
       "value": "",
       "type": "string"
