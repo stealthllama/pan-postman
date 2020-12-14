@@ -10724,7 +10724,21 @@
         },
         {
           "name": "Manage Certificates (Panorama)",
-          "item": [],
+          "item": [
+            {
+              "name": "Generate self-signed certificate",
+              "_postman_id": "71118844-1374-49c9-b99c-ea646514b8a3",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": ""
+              },
+              "response": []
+            }
+          ],
           "_postman_id": "05e52a2b-4bc5-469b-9862-d94b69f79739",
           "_postman_isSubFolder": true
         }
@@ -10763,13 +10777,13 @@
   ],
   "variable": [
     {
-      "id": "35b5a909-841c-43a3-a4ab-50a464bc6a02",
+      "id": "29565a4f-381e-4c14-bde2-9d332687cd95",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "3f915376-a3b6-449e-9a35-81067031dfea",
+      "id": "4ff3eb96-8000-4cd2-b064-39d1b90d60cc",
       "key": "{{key}}",
       "value": "",
       "type": "string"
