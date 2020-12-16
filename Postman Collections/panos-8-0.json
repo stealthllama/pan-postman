@@ -5822,25 +5822,26 @@
                 "disableBodyPruning": true
               },
               "request": {
-                "method": "GET",
+                "method": "POST",
                 "header": [],
                 "url": {
-                  "raw": "https://{{host}}/?type=opop&cmd=<show><system><info/></system></show>",
+                  "raw": "https://{{host}}?api&type=op&cmd=<show><system><info></info></system></show>",
                   "protocol": "https",
                   "host": [
                     "{{host}}"
                   ],
-                  "path": [
-                    ""
-                  ],
                   "query": [
                     {
+                      "key": "api",
+                      "value": null
+                    },
+                    {
                       "key": "type",
-                      "value": "opop"
+                      "value": "op"
                     },
                     {
                       "key": "cmd",
-                      "value": "<show><system><info/></system></show>"
+                      "value": "<show><system><info></info></system></show>"
                     }
                   ]
                 }
@@ -10809,13 +10810,13 @@
   ],
   "variable": [
     {
-      "id": "4a58c380-9167-4123-b546-cdf4505d3177",
+      "id": "b55a6808-105f-4a1c-959c-588aa501c930",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "9ed0d57f-d43f-4cf3-a424-42ae41453d1e",
+      "id": "3ccd8f34-2518-49fe-ba05-1c513dc8b9ba",
       "key": "{{key}}",
       "value": "",
       "type": "string"
