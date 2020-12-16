@@ -5824,7 +5824,26 @@
               "request": {
                 "method": "GET",
                 "header": [],
-                "url": ""
+                "url": {
+                  "raw": "https://{{host}}/?type=opop&cmd=<show><system><info/></system></show>",
+                  "protocol": "https",
+                  "host": [
+                    "{{host}}"
+                  ],
+                  "path": [
+                    ""
+                  ],
+                  "query": [
+                    {
+                      "key": "type",
+                      "value": "opop"
+                    },
+                    {
+                      "key": "cmd",
+                      "value": "<show><system><info/></system></show>"
+                    }
+                  ]
+                }
               },
               "response": []
             }
@@ -10790,13 +10809,13 @@
   ],
   "variable": [
     {
-      "id": "9ce16c8b-f8e1-4713-afb8-33bd5c1572f3",
+      "id": "4a58c380-9167-4123-b546-cdf4505d3177",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "fbb121e9-4a5d-412f-b47c-2f6c8b590089",
+      "id": "9ed0d57f-d43f-4cf3-a424-42ae41453d1e",
       "key": "{{key}}",
       "value": "",
       "type": "string"
