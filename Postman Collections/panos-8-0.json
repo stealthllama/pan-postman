@@ -5814,6 +5814,19 @@
                   "body": "<response status=\"success\">\n    <result>\n        <commit-locks>\n            <entry name=\"admin\">\n                <type>shared</type>\n                <name>shared</name>\n                <created>2020/11/24 12:35:14</created>\n                <last-activity>2020/11/24 12:35:14</last-activity>\n                <loggedin>yes</loggedin>\n                <comment>\n                    <![CDATA[(null)]]>\n                </comment>\n            </entry>\n        </commit-locks>\n    </result>\n</response>"
                 }
               ]
+            },
+            {
+              "name": "Show system info",
+              "_postman_id": "84ba1ccd-6a58-44ca-a3b3-144a0b6c7193",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": ""
+              },
+              "response": []
             }
           ],
           "_postman_id": "5f996648-39ef-462b-97fc-9b8c6c5bd21d",
@@ -10777,13 +10790,13 @@
   ],
   "variable": [
     {
-      "id": "95167529-5d03-4178-b119-4d41d213d153",
+      "id": "9ce16c8b-f8e1-4713-afb8-33bd5c1572f3",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "a1c02740-397c-402a-89bf-849f51ad960d",
+      "id": "fbb121e9-4a5d-412f-b47c-2f6c8b590089",
       "key": "{{key}}",
       "value": "",
       "type": "string"
