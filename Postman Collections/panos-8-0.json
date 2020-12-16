@@ -5832,16 +5832,15 @@
                 "method": "POST",
                 "header": [],
                 "url": {
-                  "raw": "https://{{host}}?api&type=op&cmd=<show><system><info></info></system></show>",
+                  "raw": "https://{{host}}/api?type=op&cmd=<show><system><info></info></system></show>",
                   "protocol": "https",
                   "host": [
                     "{{host}}"
                   ],
+                  "path": [
+                    "api"
+                  ],
                   "query": [
-                    {
-                      "key": "api",
-                      "value": null
-                    },
                     {
                       "key": "type",
                       "value": "op"
@@ -10817,13 +10816,13 @@
   ],
   "variable": [
     {
-      "id": "1c40e8f6-b143-4559-9069-a7e5e8114d24",
+      "id": "14f78a69-c774-4a22-9c6a-4a0611d9a9a4",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "19345905-613a-4249-ad56-e7c95670e90c",
+      "id": "94529f23-f567-4d4f-9a36-6a7bf8b41ab0",
       "key": "{{key}}",
       "value": "",
       "type": "string"
