@@ -5822,6 +5822,13 @@
                 "disableBodyPruning": true
               },
               "request": {
+                "auth": {
+                  "type": "basic",
+                  "basic": {
+                    "password": "PaloAlto123!",
+                    "username": "admin"
+                  }
+                },
                 "method": "POST",
                 "header": [],
                 "url": {
@@ -10810,13 +10817,13 @@
   ],
   "variable": [
     {
-      "id": "b55a6808-105f-4a1c-959c-588aa501c930",
+      "id": "1c40e8f6-b143-4559-9069-a7e5e8114d24",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "3ccd8f34-2518-49fe-ba05-1c513dc8b9ba",
+      "id": "19345905-613a-4249-ad56-e7c95670e90c",
       "key": "{{key}}",
       "value": "",
       "type": "string"
