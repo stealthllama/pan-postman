@@ -8971,6 +8971,19 @@
               "body": "<response status = \"success\">\n    <result>\n        <sw-version>10.0.2</sw-version>\n        <multi-vsys>off</multi-vsys>\n        <model>PA-VM</model>\n        <serial>007000001222</serial>\n    </result>\n</response>"
             }
           ]
+        },
+        {
+          "name": "Import Files",
+          "_postman_id": "02c6412f-14a1-4fa8-b8c6-87621efa28bd",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": ""
+          },
+          "response": []
         }
       ],
       "_postman_id": "3178f469-44ee-4373-82b4-9d5bdd5d59b8"
@@ -12214,13 +12227,13 @@
   ],
   "variable": [
     {
-      "id": "5f89e5dc-e788-4483-a2bf-11867ed2e4ea",
+      "id": "1d2b7033-e0c1-45fb-9f14-cadd34215844",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "f33a9eef-978c-4676-8875-868cd91285b2",
+      "id": "a5f280d0-f425-4ca7-a656-6b3f3255c06a",
       "key": "{{key}}",
       "value": "",
       "type": "string"
