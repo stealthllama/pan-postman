@@ -8601,9 +8601,240 @@
               "request": {
                 "method": "GET",
                 "header": [],
-                "url": ""
+                "url": {
+                  "raw": "https://{{host}}/api/?type=log&log-type=traffic&action=get&job-id=13",
+                  "protocol": "https",
+                  "host": [
+                    "{{host}}"
+                  ],
+                  "path": [
+                    "api",
+                    ""
+                  ],
+                  "query": [
+                    {
+                      "key": "type",
+                      "value": "log"
+                    },
+                    {
+                      "key": "log-type",
+                      "value": "traffic"
+                    },
+                    {
+                      "key": "query",
+                      "value": "( receive_time geq '2020/12/15 06:00:00' )",
+                      "disabled": true
+                    },
+                    {
+                      "key": "action",
+                      "value": "get",
+                      "type": "text"
+                    },
+                    {
+                      "key": "job-id",
+                      "value": "13",
+                      "type": "text"
+                    }
+                  ]
+                }
               },
-              "response": []
+              "response": [
+                {
+                  "id": "046e9a77-d4b2-4ea8-8987-eee0e96a1272",
+                  "name": "Create log retrieval job",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [],
+                    "url": {
+                      "raw": "https://{{host}}/api/?type=log&log-type=traffic&query=(receive_time geq '2020/12/15 06:00:00')",
+                      "protocol": "https",
+                      "host": [
+                        "{{host}}"
+                      ],
+                      "path": [
+                        "api",
+                        ""
+                      ],
+                      "query": [
+                        {
+                          "key": "type",
+                          "value": "log"
+                        },
+                        {
+                          "key": "log-type",
+                          "value": "traffic"
+                        },
+                        {
+                          "key": "query",
+                          "value": "(receive_time geq '2020/12/15 06:00:00')"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "xml",
+                  "header": [
+                    {
+                      "key": "Date",
+                      "value": "Thu, 17 Dec 2020 19:00:01 GMT"
+                    },
+                    {
+                      "key": "Content-Type",
+                      "value": "application/xml; charset=UTF-8"
+                    },
+                    {
+                      "key": "Content-Length",
+                      "value": "132"
+                    },
+                    {
+                      "key": "Connection",
+                      "value": "keep-alive"
+                    },
+                    {
+                      "key": "X-FRAME-OPTIONS",
+                      "value": "SAMEORIGIN"
+                    },
+                    {
+                      "key": "X-XSS-Protection",
+                      "value": "1; mode=block"
+                    },
+                    {
+                      "key": "X-Content-Type-Options",
+                      "value": "nosniff"
+                    },
+                    {
+                      "key": "Content-Security-Policy",
+                      "value": "default-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:;"
+                    },
+                    {
+                      "key": "Strict-Transport-Security",
+                      "value": "max-age=31536000"
+                    },
+                    {
+                      "key": "Cache-Control",
+                      "value": "no-store, no-cache, must-revalidate, post-check=0, pre-check=0"
+                    },
+                    {
+                      "key": "Expires",
+                      "value": "Thu, 19 Nov 1981 08:52:00 GMT"
+                    },
+                    {
+                      "key": "Pragma",
+                      "value": "no-cache"
+                    },
+                    {
+                      "key": "Allow",
+                      "value": "GET, HEAD, POST, PUT, DELETE, OPTIONS"
+                    }
+                  ],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "<response status=\"success\" code=\"19\">\n    <result>\n        <msg>\n            <line>query job enqueued with jobid 4</line>\n        </msg>\n        <job>4</job>\n    </result>\n</response>"
+                },
+                {
+                  "id": "4acd4d17-6257-40c0-afd2-476f3841a034",
+                  "name": "Retrieve traffic logs",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [],
+                    "url": {
+                      "raw": "https://{{host}}/api/?type=log&log-type=traffic&action=get&job-id=13",
+                      "protocol": "https",
+                      "host": [
+                        "{{host}}"
+                      ],
+                      "path": [
+                        "api",
+                        ""
+                      ],
+                      "query": [
+                        {
+                          "key": "type",
+                          "value": "log"
+                        },
+                        {
+                          "key": "log-type",
+                          "value": "traffic"
+                        },
+                        {
+                          "key": "query",
+                          "value": "( receive_time geq '2020/12/15 06:00:00' )",
+                          "disabled": true
+                        },
+                        {
+                          "key": "action",
+                          "value": "get"
+                        },
+                        {
+                          "key": "job-id",
+                          "value": "13"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "xml",
+                  "header": [
+                    {
+                      "key": "Date",
+                      "value": "Thu, 17 Dec 2020 19:10:55 GMT"
+                    },
+                    {
+                      "key": "Content-Type",
+                      "value": "application/xml; charset=UTF-8"
+                    },
+                    {
+                      "key": "Transfer-Encoding",
+                      "value": "chunked"
+                    },
+                    {
+                      "key": "Connection",
+                      "value": "keep-alive"
+                    },
+                    {
+                      "key": "X-FRAME-OPTIONS",
+                      "value": "SAMEORIGIN"
+                    },
+                    {
+                      "key": "X-XSS-Protection",
+                      "value": "1; mode=block"
+                    },
+                    {
+                      "key": "X-Content-Type-Options",
+                      "value": "nosniff"
+                    },
+                    {
+                      "key": "Content-Security-Policy",
+                      "value": "default-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:;"
+                    },
+                    {
+                      "key": "Strict-Transport-Security",
+                      "value": "max-age=31536000"
+                    },
+                    {
+                      "key": "Cache-Control",
+                      "value": "no-store, no-cache, must-revalidate, post-check=0, pre-check=0"
+                    },
+                    {
+                      "key": "Expires",
+                      "value": "Thu, 19 Nov 1981 08:52:00 GMT"
+                    },
+                    {
+                      "key": "Pragma",
+                      "value": "no-cache"
+                    },
+                    {
+                      "key": "Allow",
+                      "value": "GET, HEAD, POST, PUT, DELETE, OPTIONS"
+                    }
+                  ],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "<response status=\"success\">\n    <result>\n        <job>\n            <tenq>11:10:47</tenq>\n            <tdeq>11:10:47</tdeq>\n            <tlast>11:10:47</tlast>\n            <status>FIN</status>\n            <id>13</id>\n        </job>\n        <log>\n            <logs count=\"20\" progress=\"100\">\n                <entry logid=\"6907008350630707254\">\n                    <domain>1</domain>\n                    <receive_time>2020/12/17 11:09:50</receive_time>\n                    <serial>015351000057296</serial>\n                    <seqno>56</seqno>\n                    <actionflags>0x0</actionflags>\n                    <is-logging-service>no</is-logging-service>\n                    <type>TRAFFIC</type>\n                    <subtype>end</subtype>\n                    <config_ver>2560</config_ver>\n                    <time_generated>2020/12/17 11:09:50</time_generated>\n                    <high_res_timestamp>2020-12-17T11:09:51.828-08:00</high_res_timestamp>\n                    <src>192.168.45.98</src>\n                    <dst>8.8.4.4</dst>\n                    <natsrc>192.168.55.20</natsrc>\n                    <natdst>8.8.4.4</natdst>\n                    <rule>Outbound Internet</rule>\n                    <srcloc code=\"192.168.0.0-192.168.255.255\" cc=\"192.168.0.0-192.168.255.255\">192.168.0.0-192.168.255.255</srcloc>\n                    <dstloc code=\"United States\" cc=\"US\">United States</dstloc>\n                    <app>dns</app>\n                    <vsys>vsys1</vsys>\n                    <from>trust</from>\n                    <to>untrust</to>\n                    <inbound_if>ethernet1/2</inbound_if>\n                    <outbound_if>ethernet1/1</outbound_if>\n                    <time_received>2020/12/17 11:09:50</time_received>\n                    <sessionid>113</sessionid>\n                    <repeatcnt>1</repeatcnt>\n                    <sport>51872</sport>\n                    <dport>53</dport>\n                    <natsport>20409</natsport>\n                    <natdport>53</natdport>\n                    <flags>0x400019</flags>\n                    <flag-pcap>no</flag-pcap>\n                    <flag-flagged>no</flag-flagged>\n                    <flag-proxy>no</flag-proxy>\n                    <flag-url-denied>no</flag-url-denied>\n                    <flag-nat>yes</flag-nat>\n                    <captive-portal>no</captive-portal>\n                    <non-std-dport>no</non-std-dport>\n                    <transaction>no</transaction>\n                    <pbf-c2s>no</pbf-c2s>\n                    <pbf-s2c>no</pbf-s2c>\n                    <temporary-match>no</temporary-match>\n                    <sym-return>no</sym-return>\n                    <decrypt-mirror>no</decrypt-mirror>\n                    <credential-detected>no</credential-detected>\n                    <flag-mptcp-set>no</flag-mptcp-set>\n                    <flag-tunnel-inspected>no</flag-tunnel-inspected>\n                    <flag-recon-excluded>no</flag-recon-excluded>\n                    <flag-wf-channel>no</flag-wf-channel>\n                    <proto>udp</proto>\n                    <action>allow</action>\n                    <tunnel>N/A</tunnel>\n                    <tpadding>0</tpadding>\n                    <cpadding>0</cpadding>\n                    <rule_uuid>48b706eb-8392-45c1-82f4-4ef3592bb679</rule_uuid>\n                    <s_decrypted>0</s_decrypted>\n                    <s_encrypted>0</s_encrypted>\n                    <vpadding>0</vpadding>\n                    <dg_hier_level_1>14</dg_hier_level_1>\n                    <dg_hier_level_2>0</dg_hier_level_2>\n                    <dg_hier_level_3>0</dg_hier_level_3>\n                    <dg_hier_level_4>0</dg_hier_level_4>\n                    <device_name>PA-VM</device_name>\n                    <vsys_id>1</vsys_id>\n                    <tunnelid_imsi>0</tunnelid_imsi>\n                    <parent_session_id>0</parent_session_id>\n                    <bytes>261</bytes>\n                    <bytes_sent>100</bytes_sent>\n                    <bytes_received>161</bytes_received>\n                    <packets>2</packets>\n                    <start>2020/12/17 11:09:21</start>\n                    <elapsed>0</elapsed>\n                    <category>any</category>\n                    <traffic_flags>0x0</traffic_flags>\n                    <flag-decrypt-forwarded>no</flag-decrypt-forwarded>\n                    <flag-l7-skipped>no</flag-l7-skipped>\n                    <pkts_sent>1</pkts_sent>\n                    <pkts_received>1</pkts_received>\n                    <session_end_reason>aged-out</session_end_reason>\n                    <action_source>from-policy</action_source>\n                    <assoc_id>0</assoc_id>\n                    <chunks>0</chunks>\n                    <chunks_sent>0</chunks_sent>\n                    <chunks_received>0</chunks_received>\n                    <http2_connection>0</http2_connection>\n                    <xff_ip>0.0.0.0</xff_ip>\n                    <link_change_count>0</link_change_count>\n                    <sdwan_fec_data>0</sdwan_fec_data>\n                    <tunnelid>0</tunnelid>\n                    <imsi/>\n                    <monitortag/>\n                    <imei/>\n                </entry>\n                <entry logid=\"6907008350630707253\">\n                    <domain>1</domain>\n                    <receive_time>2020/12/17 11:09:50</receive_time>\n                    <serial>015351000057296</serial>\n                    <seqno>55</seqno>\n                    <actionflags>0x0</actionflags>\n                    <is-logging-service>no</is-logging-service>\n                    <type>TRAFFIC</type>\n                    <subtype>end</subtype>\n                    <config_ver>2560</config_ver>\n                    <time_generated>2020/12/17 11:09:50</time_generated>\n                    <high_res_timestamp>2020-12-17T11:09:51.828-08:00</high_res_timestamp>\n                    <src>192.168.45.98</src>\n                    <dst>8.8.4.4</dst>\n                    <natsrc>192.168.55.20</natsrc>\n                    <natdst>8.8.4.4</natdst>\n                    <rule>Outbound Internet</rule>\n                    <srcloc code=\"192.168.0.0-192.168.255.255\" cc=\"192.168.0.0-192.168.255.255\">192.168.0.0-192.168.255.255</srcloc>\n                    <dstloc code=\"United States\" cc=\"US\">United States</dstloc>\n                    <app>dns</app>\n                    <vsys>vsys1</vsys>\n                    <from>trust</from>\n                    <to>untrust</to>\n                    <inbound_if>ethernet1/2</inbound_if>\n                    <outbound_if>ethernet1/1</outbound_if>\n                    <time_received>2020/12/17 11:09:50</time_received>\n                    <sessionid>112</sessionid>\n                    <repeatcnt>1</repeatcnt>\n                    <sport>43102</sport>\n                    <dport>53</dport>\n                    <natsport>6204</natsport>\n                    <natdport>53</natdport>\n                    <flags>0x400019</flags>\n                    <flag-pcap>no</flag-pcap>\n                    <flag-flagged>no</flag-flagged>\n                    <flag-proxy>no</flag-proxy>\n                    <flag-url-denied>no</flag-url-denied>\n                    <flag-nat>yes</flag-nat>\n                    <captive-portal>no</captive-portal>\n                    <non-std-dport>no</non-std-dport>\n                    <transaction>no</transaction>\n                    <pbf-c2s>no</pbf-c2s>\n                    <pbf-s2c>no</pbf-s2c>\n                    <temporary-match>no</temporary-match>\n                    <sym-return>no</sym-return>\n                    <decrypt-mirror>no</decrypt-mirror>\n                    <credential-detected>no</credential-detected>\n                    <flag-mptcp-set>no</flag-mptcp-set>\n                    <flag-tunnel-inspected>no</flag-tunnel-inspected>\n                    <flag-recon-excluded>no</flag-recon-excluded>\n                    <flag-wf-channel>no</flag-wf-channel>\n                    <proto>udp</proto>\n                    <action>allow</action>\n                    <tunnel>N/A</tunnel>\n                    <tpadding>0</tpadding>\n                    <cpadding>0</cpadding>\n                    <rule_uuid>48b706eb-8392-45c1-82f4-4ef3592bb679</rule_uuid>\n                    <s_decrypted>0</s_decrypted>\n                    <s_encrypted>0</s_encrypted>\n                    <vpadding>0</vpadding>\n                    <dg_hier_level_1>14</dg_hier_level_1>\n                    <dg_hier_level_2>0</dg_hier_level_2>\n                    <dg_hier_level_3>0</dg_hier_level_3>\n                    <dg_hier_level_4>0</dg_hier_level_4>\n                    <device_name>PA-VM</device_name>\n                    <vsys_id>1</vsys_id>\n                    <tunnelid_imsi>0</tunnelid_imsi>\n                    <parent_session_id>0</parent_session_id>\n                    <bytes>261</bytes>\n                    <bytes_sent>100</bytes_sent>\n                    <bytes_received>161</bytes_received>\n                    <packets>2</packets>\n                    <start>2020/12/17 11:09:21</start>\n                    <elapsed>0</elapsed>\n                    <category>any</category>\n                    <traffic_flags>0x0</traffic_flags>\n                    <flag-decrypt-forwarded>no</flag-decrypt-forwarded>\n                    <flag-l7-skipped>no</flag-l7-skipped>\n                    <pkts_sent>1</pkts_sent>\n                    <pkts_received>1</pkts_received>\n                    <session_end_reason>aged-out</session_end_reason>\n                    <action_source>from-policy</action_source>\n                    <assoc_id>0</assoc_id>\n                    <chunks>0</chunks>\n                    <chunks_sent>0</chunks_sent>\n                    <chunks_received>0</chunks_received>\n                    <http2_connection>0</http2_connection>\n                    <xff_ip>0.0.0.0</xff_ip>\n                    <link_change_count>0</link_change_count>\n                    <sdwan_fec_data>0</sdwan_fec_data>\n                    <tunnelid>0</tunnelid>\n                    <imsi/>\n                    <monitortag/>\n                    <imei/>\n                </entry>\n                ... snip ...\n            </logs>\n        </log>\n        <meta>\n            <devices>\n                <entry name=\"localhost.localdomain\">\n                    <hostname>localhost.localdomain</hostname>\n                    <vsys>\n                        <entry name=\"vsys1\">\n                            <display-name>vsys1</display-name>\n                        </entry>\n                    </vsys>\n                </entry>\n            </devices>\n        </meta>\n    </result>\n</response>"
+                }
+              ]
             }
           ],
           "_postman_id": "c0aa4826-6814-462b-9b59-f424033a9a16",
@@ -12031,13 +12262,13 @@
   ],
   "variable": [
     {
-      "id": "8c7b0db8-6b32-4ef6-8601-c8e9bb9474ec",
+      "id": "cbfd7e6c-067b-4bec-9f6c-05b7f0b268b7",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "ef3c7698-592f-4849-bc8e-7d72c663f2d5",
+      "id": "4a34e7f0-fc3f-416b-aaaf-7d8976f33aeb",
       "key": "{{key}}",
       "value": "",
       "type": "string"
