@@ -7991,7 +7991,7 @@
                   ]
                 },
                 {
-                  "name": "Check tech support file status Copy",
+                  "name": "Retrieve tech support file",
                   "_postman_id": "6e3fa428-5215-4bb6-a874-fef52d4665e3",
                   "protocolProfileBehavior": {
                     "disableBodyPruning": true
@@ -11600,13 +11600,13 @@
   ],
   "variable": [
     {
-      "id": "d54bd1fc-088e-45cf-b12d-2a5b6ddd55f5",
+      "id": "c4b151df-ab0f-4815-b4e6-74c94aabe9d8",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "b1551255-6703-43d7-b4f9-af387753ae94",
+      "id": "97a6c520-9595-4daa-8b2e-aa5424284ddc",
       "key": "{{key}}",
       "value": "",
       "type": "string"
