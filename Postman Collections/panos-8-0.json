@@ -7561,7 +7561,21 @@
             },
             {
               "name": "Export Threat, Filter, and Data Filtering PCAPs",
-              "item": [],
+              "item": [
+                {
+                  "name": "List of filtered PCAPs",
+                  "_postman_id": "1debfeb5-bd17-450b-b483-cb873692e2ba",
+                  "protocolProfileBehavior": {
+                    "disableBodyPruning": true
+                  },
+                  "request": {
+                    "method": "GET",
+                    "header": [],
+                    "url": ""
+                  },
+                  "response": []
+                }
+              ],
               "_postman_id": "360e3fc8-4086-45bc-adb2-b05c5d1f708d",
               "_postman_isSubFolder": true
             }
@@ -11031,13 +11045,13 @@
   ],
   "variable": [
     {
-      "id": "c7196d98-02be-4444-b21d-e66c3fc4d8f4",
+      "id": "230394f2-0ac4-436b-808b-6b22bbf29c56",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "50a48e49-72d6-466f-8309-af5743378caf",
+      "id": "deb58726-3cba-4e07-8b55-a8bb06cf11fe",
       "key": "{{key}}",
       "value": "",
       "type": "string"
