@@ -7689,39 +7689,6 @@
               "name": "Export Technical Support Data",
               "item": [
                 {
-                  "name": "Begin tech support file creation",
-                  "_postman_id": "9602e8a5-6a23-4cb6-b3dc-5cc7bb0b4976",
-                  "protocolProfileBehavior": {
-                    "disableBodyPruning": true
-                  },
-                  "request": {
-                    "method": "GET",
-                    "header": [],
-                    "url": {
-                      "raw": "https://{{host}}/api/?type=export&category=tech-support",
-                      "protocol": "https",
-                      "host": [
-                        "{{host}}"
-                      ],
-                      "path": [
-                        "api",
-                        ""
-                      ],
-                      "query": [
-                        {
-                          "key": "type",
-                          "value": "export"
-                        },
-                        {
-                          "key": "category",
-                          "value": "tech-support"
-                        }
-                      ]
-                    }
-                  },
-                  "response": []
-                },
-                {
                   "name": "Export tech support data",
                   "_postman_id": "6e3fa428-5215-4bb6-a874-fef52d4665e3",
                   "protocolProfileBehavior": {
@@ -12309,13 +12276,13 @@
   ],
   "variable": [
     {
-      "id": "2e03fe21-fc72-42db-8746-ddf9c36c6322",
+      "id": "c49b9f61-7a61-476e-a780-f96b53ac27ac",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "f7f5dc73-8cf1-4fb2-9234-b5bd804338bd",
+      "id": "2cb3cf1b-7b12-4824-a7fd-c0e45c824aaa",
       "key": "{{key}}",
       "value": "",
       "type": "string"
