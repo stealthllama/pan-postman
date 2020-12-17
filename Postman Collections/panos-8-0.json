@@ -7560,23 +7560,10 @@
               "_postman_isSubFolder": true
             },
             {
-              "name": "Export Threat, Filter, and Data Filtering PCAPs",
-              "item": [
-                {
-                  "name": "List of filtered PCAPs",
-                  "_postman_id": "1debfeb5-bd17-450b-b483-cb873692e2ba",
-                  "protocolProfileBehavior": {
-                    "disableBodyPruning": true
-                  },
-                  "request": {
-                    "method": "GET",
-                    "header": [],
-                    "url": ""
-                  },
-                  "response": []
-                }
-              ],
-              "_postman_id": "360e3fc8-4086-45bc-adb2-b05c5d1f708d",
+              "name": "Export Certificates and Keys",
+              "item": [],
+              "_postman_id": "22f037d0-c330-46c7-a739-6c05cf6b0756",
+              "description": "When exporting certificates and keys, use the following parameters:\n\n- `certificate-name`: name of the certificate object on the firewall\n- `passphrase`: required when including the certificate key\n- `format`: certificate format - one of `pkcs12`, `pem`, `pkcs10`\n- `include-key`: whether to include the private key - `yes` or `no`\n- `vsys`: virtual system where the object is located, default is `shared`\n",
               "_postman_isSubFolder": true
             }
           ],
@@ -11045,13 +11032,13 @@
   ],
   "variable": [
     {
-      "id": "6bbb298d-1b69-4427-9fce-2f39989b9186",
+      "id": "d53f0c2c-c31b-4747-a6c7-292843642113",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "e0f86174-2a97-4558-8edd-c0694a60bce2",
+      "id": "6e2f929a-809e-4519-a06e-aff7957b6a14",
       "key": "{{key}}",
       "value": "",
       "type": "string"
