@@ -8602,7 +8602,7 @@
                 "method": "GET",
                 "header": [],
                 "url": {
-                  "raw": "https://{{host}}/api/?type=log&log-type=&query=&nlogs=&skip=&dir&action",
+                  "raw": "https://{{host}}/api/?type=log&log-type=&query=&nlogs=&skip=&dir&action&job-id",
                   "protocol": "https",
                   "host": [
                     "{{host}}"
@@ -8644,15 +8644,13 @@
                     {
                       "key": "action",
                       "value": null,
-                      "description": "*Optional*.  Action to perform.  Can be one of `get` or `finish`.  If not specified, a new retrieval job is started.",
-                      "type": "text"
+                      "description": "*Optional*.  Action to perform.  Can be one of `get` or `finish`.  If not specified, a new retrieval job is started."
                     },
                     {
                       "key": "job-id",
                       "value": null,
                       "description": "*Optional*  Return the results of this retrieval job.",
-                      "type": "text",
-                      "disabled": true
+                      "type": "text"
                     }
                   ]
                 }
@@ -12281,13 +12279,13 @@
   ],
   "variable": [
     {
-      "id": "2343320b-798b-44a6-89e3-59f9d44cb2f7",
+      "id": "a212aa0f-2ed3-4b5f-a631-8dc950af9ef8",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "061cf15c-249b-442f-ad85-db63612931c7",
+      "id": "abc5dd9f-96a0-450e-873d-d0e7dffa8822",
       "key": "{{key}}",
       "value": "",
       "type": "string"
