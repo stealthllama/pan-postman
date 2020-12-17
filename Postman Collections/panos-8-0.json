@@ -55,18 +55,13 @@
               "name": "Generate API key",
               "originalRequest": {
                 "method": "GET",
-                "header": [
-                  {
-                    "key": "Content-Type",
-                    "value": "application/x-www-form-urlencoded"
-                  }
-                ],
+                "header": [],
                 "body": {
                   "mode": "urlencoded",
                   "urlencoded": []
                 },
                 "url": {
-                  "raw": "https://{{host}}/api?type=keygen&user=&password=",
+                  "raw": "https://{{host}}/api?type=keygen&user=admin&password=paloalto",
                   "protocol": "https",
                   "host": [
                     "{{host}}"
@@ -81,13 +76,13 @@
                     },
                     {
                       "key": "user",
-                      "value": "",
+                      "value": "admin",
                       "description": "Username used to generate API key."
                     },
                     {
                       "key": "password",
-                      "value": "",
-                      "description": "Password sued to generate API key."
+                      "value": "paloalto",
+                      "description": "Password used to generate API key."
                     }
                   ]
                 }
@@ -7541,14 +7536,12 @@
                         {
                           "key": "from",
                           "value": "",
-                          "description": "Packet capture file to retrieve.",
-                          "type": "text"
+                          "description": "**Required**. Packet capture file to retrieve."
                         },
                         {
                           "key": "to",
                           "value": "",
-                          "description": "(OPTIONAL) Save file locally using a custom name.",
-                          "type": "text"
+                          "description": "*Optional*. Save file locally using a custom name."
                         }
                       ]
                     }
@@ -8453,6 +8446,19 @@
                   "body": "<response status=\"success\">\n    <result>Successfully imported Test-Cert into candidate configuration</result>\n</response>"
                 }
               ]
+            },
+            {
+              "name": "Import anti-virus content",
+              "_postman_id": "5b8aa10c-573f-4f28-a993-f3addd7fd6f8",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": ""
+              },
+              "response": []
             }
           ],
           "_postman_id": "b46a37c6-2ff6-4d05-b8e4-36bf282f7487",
@@ -11920,13 +11926,13 @@
   ],
   "variable": [
     {
-      "id": "f7a2327f-eb1e-457e-8202-7a839d2a4f63",
+      "id": "af401d5a-3eb8-45af-9300-3396e146d839",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "0653c8ec-25d5-47d4-af2b-d824ae410695",
+      "id": "b0c958a1-02aa-4b73-a389-3b0ec0bd2393",
       "key": "{{key}}",
       "value": "",
       "type": "string"
