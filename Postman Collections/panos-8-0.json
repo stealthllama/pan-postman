@@ -8745,7 +8745,7 @@
                   "formdata": [
                     {
                       "key": "file",
-                      "description": "Path to certificate.",
+                      "description": "Certificate file to import.",
                       "type": "file",
                       "value": null
                     }
@@ -8920,7 +8920,7 @@
                   "mode": "formdata",
                   "formdata": [
                     {
-                      "description": "Path to certificate.",
+                      "description": "Certificate file to import.",
                       "key": "file",
                       "type": "file",
                       "value": null
@@ -12902,13 +12902,13 @@
   ],
   "variable": [
     {
-      "id": "a5496770-6bb8-487e-a52e-29444df10e0e",
+      "id": "de24488f-9042-4131-b6bf-714fbb6afdf4",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "33deead2-0704-42cd-9cd0-996d6b8148e0",
+      "id": "99be2745-db3f-4b7f-a8d8-80447796cfcb",
       "key": "{{key}}",
       "value": "",
       "type": "string"
