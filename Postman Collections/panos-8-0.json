@@ -8591,35 +8591,6 @@
         },
         {
           "name": "Retrieve Logs",
-          "item": [],
-          "_postman_id": "c0aa4826-6814-462b-9b59-f424033a9a16",
-          "description": "Retrieve logs from a firewall using the API.",
-          "event": [
-            {
-              "listen": "prerequest",
-              "script": {
-                "id": "066e0b56-75f9-4768-98a7-67e75d76221a",
-                "type": "text/javascript",
-                "exec": [
-                  ""
-                ]
-              }
-            },
-            {
-              "listen": "test",
-              "script": {
-                "id": "58769d6c-ab5a-4328-85fb-f32ef0736abb",
-                "type": "text/javascript",
-                "exec": [
-                  ""
-                ]
-              }
-            }
-          ],
-          "_postman_isSubFolder": true
-        },
-        {
-          "name": "Retrieve Logs",
           "_postman_id": "e0d93f08-4f5c-4e74-be36-e85c51a67f19",
           "protocolProfileBehavior": {
             "disableBodyPruning": true
@@ -12249,13 +12220,13 @@
   ],
   "variable": [
     {
-      "id": "9c70a89c-a656-4202-8e86-cccd7e371f57",
+      "id": "9fa8831f-1362-4347-8ddb-b5823fa2da78",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "7d8f80c9-d9fe-4ffe-a032-f80a458fc4d4",
+      "id": "702ed347-c8bd-45ec-9c82-5f6a6e1da320",
       "key": "{{key}}",
       "value": "",
       "type": "string"
