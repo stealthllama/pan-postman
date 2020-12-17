@@ -8593,7 +8593,7 @@
           "name": "Retrieve Logs",
           "item": [],
           "_postman_id": "c0aa4826-6814-462b-9b59-f424033a9a16",
-          "description": "Retrieve logs from a firewall using the API.\n\n# Parameters\n\n| Parameter | Description |\n| --------- | ------------|\n| log-type  | The type of logs to retrieve |",
+          "description": "Retrieve logs from a firewall using the API.\n\n# Parameters\n\n| Parameter | Description |\n| --------- | ------------|\n| `log-type`  | The type of logs to retrieve.  Can be one of: |\n|             | - `traffic`: Traffic logs",
           "event": [
             {
               "listen": "prerequest",
@@ -12017,13 +12017,13 @@
   ],
   "variable": [
     {
-      "id": "b46b306d-d245-418d-bca6-8f739daad811",
+      "id": "d8bf329a-6a2f-40b2-9369-46d941431a02",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "d8d327e1-2ffb-4041-b1d8-9e3e3b366f65",
+      "id": "47815fbc-37ab-4f24-bab7-d95148b91a5a",
       "key": "{{key}}",
       "value": "",
       "type": "string"
