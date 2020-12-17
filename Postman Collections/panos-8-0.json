@@ -8044,12 +8044,6 @@
           "name": "Import Files",
           "item": [
             {
-              "name": "Retrieve Logs",
-              "item": [],
-              "_postman_id": "c65a27f9-b516-4e4b-b28b-f411f435f9bd",
-              "_postman_isSubFolder": true
-            },
-            {
               "name": "Import certificate",
               "_postman_id": "2140d4f3-cc79-4093-8fbf-04fe470ebdff",
               "protocolProfileBehavior": {
@@ -12220,13 +12214,13 @@
   ],
   "variable": [
     {
-      "id": "9a6e0c8a-6fdc-4022-85e3-3ae06d8b787b",
+      "id": "5f89e5dc-e788-4483-a2bf-11867ed2e4ea",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "dc1f6481-1f4d-4a83-bef2-58e8283a7e46",
+      "id": "f33a9eef-978c-4676-8875-868cd91285b2",
       "key": "{{key}}",
       "value": "",
       "type": "string"
