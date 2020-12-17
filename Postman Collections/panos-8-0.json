@@ -7737,9 +7737,119 @@
                   "request": {
                     "method": "GET",
                     "header": [],
-                    "url": ""
+                    "url": {
+                      "raw": "https://{{host}}/api/?type=export&category=tech-support",
+                      "protocol": "https",
+                      "host": [
+                        "{{host}}"
+                      ],
+                      "path": [
+                        "api",
+                        ""
+                      ],
+                      "query": [
+                        {
+                          "key": "type",
+                          "value": "export"
+                        },
+                        {
+                          "key": "category",
+                          "value": "tech-support"
+                        }
+                      ]
+                    }
                   },
-                  "response": []
+                  "response": [
+                    {
+                      "id": "1cac2007-b89c-47ea-a2df-664e8bf68ab8",
+                      "name": "Begin tech support file creation",
+                      "originalRequest": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                          "raw": "https://{{host}}/api/?type=export&category=tech-support",
+                          "protocol": "https",
+                          "host": [
+                            "{{host}}"
+                          ],
+                          "path": [
+                            "api",
+                            ""
+                          ],
+                          "query": [
+                            {
+                              "key": "type",
+                              "value": "export"
+                            },
+                            {
+                              "key": "category",
+                              "value": "tech-support"
+                            }
+                          ]
+                        }
+                      },
+                      "status": "OK",
+                      "code": 200,
+                      "_postman_previewlanguage": "xml",
+                      "header": [
+                        {
+                          "key": "Date",
+                          "value": "Thu, 17 Dec 2020 16:44:36 GMT"
+                        },
+                        {
+                          "key": "Content-Type",
+                          "value": "application/xml; charset=UTF-8"
+                        },
+                        {
+                          "key": "Content-Length",
+                          "value": "131"
+                        },
+                        {
+                          "key": "Connection",
+                          "value": "keep-alive"
+                        },
+                        {
+                          "key": "X-FRAME-OPTIONS",
+                          "value": "SAMEORIGIN"
+                        },
+                        {
+                          "key": "X-XSS-Protection",
+                          "value": "1; mode=block"
+                        },
+                        {
+                          "key": "X-Content-Type-Options",
+                          "value": "nosniff"
+                        },
+                        {
+                          "key": "Content-Security-Policy",
+                          "value": "default-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:;"
+                        },
+                        {
+                          "key": "Strict-Transport-Security",
+                          "value": "max-age=31536000"
+                        },
+                        {
+                          "key": "Cache-Control",
+                          "value": "no-store, no-cache, must-revalidate, post-check=0, pre-check=0"
+                        },
+                        {
+                          "key": "Expires",
+                          "value": "Thu, 19 Nov 1981 08:52:00 GMT"
+                        },
+                        {
+                          "key": "Pragma",
+                          "value": "no-cache"
+                        },
+                        {
+                          "key": "Allow",
+                          "value": "GET, HEAD, POST, PUT, DELETE, OPTIONS"
+                        }
+                      ],
+                      "cookie": [],
+                      "responseTime": null,
+                      "body": "<response status=\"success\" code=\"19\">\n    <result>\n        <msg>\n            <line>Exec job enqueued with jobid 3</line>\n        </msg>\n        <job>3</job>\n    </result>\n</response>"
+                    }
+                  ]
                 }
               ],
               "_postman_id": "ef49dbfe-e23b-4824-b6dc-4cbb11333113",
@@ -11212,13 +11322,13 @@
   ],
   "variable": [
     {
-      "id": "eda9b7c0-53cb-4543-a1ec-1c52cfafe1c0",
+      "id": "acde225b-425b-4e48-98b9-169c1f3f7f21",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "8398af50-7d15-4394-8f40-b86b916fabf4",
+      "id": "d0a7d770-2767-41c4-a2b5-72dbab921ebf",
       "key": "{{key}}",
       "value": "",
       "type": "string"
