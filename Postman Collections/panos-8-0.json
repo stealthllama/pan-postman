@@ -5809,45 +5809,6 @@
                   "body": "<response status=\"success\">\n    <result>\n        <commit-locks>\n            <entry name=\"admin\">\n                <type>shared</type>\n                <name>shared</name>\n                <created>2020/11/24 12:35:14</created>\n                <last-activity>2020/11/24 12:35:14</last-activity>\n                <loggedin>yes</loggedin>\n                <comment>\n                    <![CDATA[(null)]]>\n                </comment>\n            </entry>\n        </commit-locks>\n    </result>\n</response>"
                 }
               ]
-            },
-            {
-              "name": "Show system info",
-              "_postman_id": "84ba1ccd-6a58-44ca-a3b3-144a0b6c7193",
-              "protocolProfileBehavior": {
-                "disableBodyPruning": true
-              },
-              "request": {
-                "auth": {
-                  "type": "basic",
-                  "basic": {
-                    "password": "PaloAlto123!",
-                    "username": "admin"
-                  }
-                },
-                "method": "POST",
-                "header": [],
-                "url": {
-                  "raw": "https://{{host}}/api?type=op&cmd=<show><system><info></info></system></show>",
-                  "protocol": "https",
-                  "host": [
-                    "{{host}}"
-                  ],
-                  "path": [
-                    "api"
-                  ],
-                  "query": [
-                    {
-                      "key": "type",
-                      "value": "op"
-                    },
-                    {
-                      "key": "cmd",
-                      "value": "<show><system><info></info></system></show>"
-                    }
-                  ]
-                }
-              },
-              "response": []
             }
           ],
           "_postman_id": "5f996648-39ef-462b-97fc-9b8c6c5bd21d",
@@ -8463,7 +8424,7 @@
                       "key": "file",
                       "description": "File to upload.",
                       "type": "file",
-                      "src": "/Users/michaelr/Downloads/panup-all-antivirus-3566-4077"
+                      "value": null
                     }
                   ],
                   "options": {
@@ -8597,7 +8558,7 @@
             }
           ],
           "_postman_id": "b46a37c6-2ff6-4d05-b8e4-36bf282f7487",
-          "description": "You can import certain types of files, including software, content, licenses, and configuration into the firewall using the `type=import` parameter in the API request.\n\nUse the following values for the `category` parameter to import different types of files:\n\n- Software: `software`\n- Content: `anti-virus`, `content`, `url-database`, `signed-url-database`\n- Licenses: `license`\n- Configuration: `configuration`\n- Certificates and keys: `certificate`, `high-availability-key`, `key-pair`\n- Response pages: `application-block-page`, `captive-portal-text`, `file-block-continue-page`, `file-block-page`, `global-protect-portal-custom-help-page`, `global-protect-portal-custom-login-page` `global-protect-portal-custom-welcome-page`, `ssl-cert-status-page`, `ssl-optout-text`, `url-block-page`, `url-coach-text`, `virus-block-page`\n- Clients: `global-protect-client`\n- Custom Logo: `custom-logo`\n\nWhen importing files into a firewall, the following parameters are also allowed:\n\n- `vsys`: Target virtual system for import.  Defaults to `shared`.\n\nWhen importing files into Panorama, the following parameters are also allowed:\n\n- `target-tpl`: Target template to import into.  If not specified, import files directly into Panorama.\n- `target-tpl-vsys`: Virtual system with target template.  Defaults to `shared`.",
+          "description": "You can import certain types of files, including software, content, licenses, and configuration into the firewall using the `type=import` parameter in the API request.\n\nUse the following values for the `category` parameter to import different types of files:\n\n| Parameter | Description |\n| --------- | ----------- |\n| `software`|             |\n- Software: `software`\n- Content: `anti-virus`, `content`, `url-database`, `signed-url-database`\n- Licenses: `license`\n- Configuration: `configuration`\n- Certificates and keys: `certificate`, `high-availability-key`, `key-pair`\n- Response pages: `application-block-page`, `captive-portal-text`, `file-block-continue-page`, `file-block-page`, `global-protect-portal-custom-help-page`, `global-protect-portal-custom-login-page` `global-protect-portal-custom-welcome-page`, `ssl-cert-status-page`, `ssl-optout-text`, `url-block-page`, `url-coach-text`, `virus-block-page`\n- Clients: `global-protect-client`\n- Custom Logo: `custom-logo`\n\nWhen importing files into a firewall, the following parameters are also allowed:\n\n- `vsys`: Target virtual system for import.  Defaults to `shared`.\n\nWhen importing files into Panorama, the following parameters are also allowed:\n\n- `target-tpl`: Target template to import into.  If not specified, import files directly into Panorama.\n- `target-tpl-vsys`: Virtual system with target template.  Defaults to `shared`.",
           "event": [
             {
               "listen": "prerequest",
@@ -12061,13 +12022,13 @@
   ],
   "variable": [
     {
-      "id": "1b839413-8b64-4e60-a0ae-f7b40ed78a4c",
+      "id": "030d8e47-59e4-4172-9f88-d9af88526f09",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "b1adb4ca-898a-4677-b343-0d535b7ac233",
+      "id": "c8c33680-212d-4a68-9bef-ebd85c65d3f3",
       "key": "{{key}}",
       "value": "",
       "type": "string"
