@@ -7686,6 +7686,35 @@
               "_postman_isSubFolder": true
             },
             {
+              "name": "Export Technical Support Data",
+              "item": [],
+              "_postman_id": "ef49dbfe-e23b-4824-b6dc-4cbb11333113",
+              "description": "View the [official documentation](https://docs.paloaltonetworks.com/pan-os/10-0/pan-os-panorama-api/pan-os-xml-api-request-types/export-files-api/export-technical-support-data.html).\n\nDebug log data sizes are large, so the API uses an asynchronous job scheduling approach to retrieve technical support data.\n\nWhen exporting technical support data, the `action` parameter is used:\n\n- `action` not specified: The system will create a new job to retrieve tech support data. A job ID will be created for further use.\n\n- `action=status`: Check the status of the export job.  This will return an XML response with a status element - when the status text data is `FIN`, the job is completed and the tech support file can be retrieved.\n\n- `action=get`: Retrieve the tech support file as an attachment.  The response contains a `application/octet-stream` content type and a content disposition header with a suggested filename.\n\n- `action=finish`: Stop an active job.",
+              "event": [
+                {
+                  "listen": "prerequest",
+                  "script": {
+                    "id": "91fcbcbc-0a6d-41f0-bc33-fda043f2c9e5",
+                    "type": "text/javascript",
+                    "exec": [
+                      ""
+                    ]
+                  }
+                },
+                {
+                  "listen": "test",
+                  "script": {
+                    "id": "2b2468b9-31d8-49a1-a8cc-9ee0304abbd8",
+                    "type": "text/javascript",
+                    "exec": [
+                      ""
+                    ]
+                  }
+                }
+              ],
+              "_postman_isSubFolder": true
+            },
+            {
               "name": "Export tech support data",
               "_postman_id": "6e3fa428-5215-4bb6-a874-fef52d4665e3",
               "protocolProfileBehavior": {
@@ -12246,13 +12275,13 @@
   ],
   "variable": [
     {
-      "id": "3c0407b4-6438-4fed-bc17-85f407882b70",
+      "id": "d3b708ad-0d2f-4798-9859-95dd7ab4bed8",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "c6c40ba1-7f8c-4652-9511-f958d979e8a9",
+      "id": "ccb93740-a85b-43da-8d03-36df7a856dbf",
       "key": "{{key}}",
       "value": "",
       "type": "string"
