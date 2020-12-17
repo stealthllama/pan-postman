@@ -7885,8 +7885,7 @@
                         },
                         {
                           "key": "job-id",
-                          "value": "3",
-                          "description": "Job ID returned from 'Begin tech support file creation'"
+                          "value": "3"
                         }
                       ]
                     }
@@ -11526,13 +11525,13 @@
   ],
   "variable": [
     {
-      "id": "30ce9376-5113-47c0-9d3e-3661340de248",
+      "id": "7654446e-1978-4201-946a-8500e0d1d548",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "e056e0e7-8c23-4015-841b-e35bb7213ef6",
+      "id": "21e2e2e1-bfde-4061-ba03-70398623b2f8",
       "key": "{{key}}",
       "value": "",
       "type": "string"
