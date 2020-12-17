@@ -8618,7 +8618,8 @@
                     },
                     {
                       "key": "log-type",
-                      "value": "traffic"
+                      "value": "traffic",
+                      "description": "The type of logs to retrieve.  Can be one of `traffic`, `threat`, `config`, `system`, `hipmatch`, `wildfire`, `url`, `data`, `corr`, `corr-detail`, `corr-categ`, `user-id`, `auth`, `gtp`, `external`, `iptag`."
                     },
                     {
                       "key": "query",
@@ -8627,13 +8628,11 @@
                     },
                     {
                       "key": "action",
-                      "value": "get",
-                      "type": "text"
+                      "value": "get"
                     },
                     {
                       "key": "job-id",
-                      "value": "13",
-                      "type": "text"
+                      "value": "13"
                     }
                   ]
                 }
@@ -8838,7 +8837,7 @@
             }
           ],
           "_postman_id": "c0aa4826-6814-462b-9b59-f424033a9a16",
-          "description": "Retrieve logs from a firewall using the API.\n\n# Parameters\n\n| Parameter | Description |\n| --------- | ------------|\n| `log-type`  | The type of logs to retrieve.  Can be one of `traffic`, `threat`, `config`, `system`, `hipmatch`, `wildfire`, `url`, `data`, `corr`, `corr-detail`, `corr-categ`, `user-id`, `auth`, `gtp`, `external`, `iptag` |\n| `query`   | *Optional*. Specify the match criteria for the logs.  This is similar to the query provided in the web interface under the Monitor tab when viewing the logs.  The query must be URL encoded. |\n| `nlogs` | *Optional*.  Specify the number of logs to retrieve.  The default is 20 when the parameter is not specified.  The maximum is 5000. |",
+          "description": "Retrieve logs from a firewall using the API.",
           "event": [
             {
               "listen": "prerequest",
@@ -12262,13 +12261,13 @@
   ],
   "variable": [
     {
-      "id": "cbfd7e6c-067b-4bec-9f6c-05b7f0b268b7",
+      "id": "05848934-ece7-48b1-9df0-b7083db953e7",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "4a34e7f0-fc3f-416b-aaaf-7d8976f33aeb",
+      "id": "3f76382c-50b1-48a8-9ad1-ea059c370413",
       "key": "{{key}}",
       "value": "",
       "type": "string"
