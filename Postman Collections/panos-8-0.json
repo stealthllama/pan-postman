@@ -8113,7 +8113,7 @@
                   }
                 },
                 "url": {
-                  "raw": "https://{{host}}/api/?type=import&category=certificate&certificate-name=Test-Cert&format=pem",
+                  "raw": "https://{{host}}/api/?type=import&category=certificate&certificate-name=&format=&passphrase=&vsys",
                   "protocol": "https",
                   "host": [
                     "{{host}}"
@@ -8133,11 +8133,23 @@
                     },
                     {
                       "key": "certificate-name",
-                      "value": "Test-Cert"
+                      "value": "",
+                      "description": "**Required**.  Name for imported certificate."
                     },
                     {
                       "key": "format",
-                      "value": "pem"
+                      "value": "",
+                      "description": "**Required**.  Format of certificate.  One of `pem`, `pkcs10`, `pkcs12`."
+                    },
+                    {
+                      "key": "passphrase",
+                      "value": "",
+                      "description": "**Required when including certificate key**.  Passphrase to decrypt private key."
+                    },
+                    {
+                      "key": "vsys",
+                      "value": null,
+                      "description": "*Optional*. Target virtual system for import.  Defaults to `shared`."
                     }
                   ]
                 }
@@ -8277,7 +8289,7 @@
                   }
                 },
                 "url": {
-                  "raw": "https://{{host}}/api/?type=import&category=certificate&certificate-name=Test-Cert&format=&target-tpl=&target-tpl-vsys=",
+                  "raw": "https://{{host}}/api/?type=import&category=certificate&certificate-name=&format=&passphrase=&target-tpl=&target-tpl-vsys=",
                   "protocol": "https",
                   "host": [
                     "{{host}}"
@@ -8297,13 +8309,18 @@
                     },
                     {
                       "key": "certificate-name",
-                      "value": "Test-Cert",
+                      "value": "",
                       "description": "**Required**.  Name for imported certificate."
                     },
                     {
                       "key": "format",
                       "value": "",
                       "description": "**Required**.  Format of certificate.  One of `pem`, `pkcs10`, `pkcs12`."
+                    },
+                    {
+                      "key": "passphrase",
+                      "value": "",
+                      "description": "**Required when including certificate key**.  Passphrase to decrypt private key."
                     },
                     {
                       "key": "target-tpl",
@@ -8439,7 +8456,29 @@
             }
           ],
           "_postman_id": "b46a37c6-2ff6-4d05-b8e4-36bf282f7487",
-          "description": "You can import certain types of files, including software, content, licenses, and configuration into the firewall using the `type=import` parameter in the API request.\n\nUse the following values for the `category` parameter to import different types of files:\n\n- Software: `software`\n- Content: `anti-virus`, `content`, `url-database`, `signed-url-database`\n- Licenses: `license`\n- Configuration: `configuration`\n- Certificates and keys: `certificate`, `high-availability-key`, `key-pair`\n- Response pages: `application-block-page`, `captive-portal-text`, `file-block-continue-page`, `file-block-page`, `global-protect-portal-custom-help-page`, `global-protect-portal-custom-login-page` `global-protect-portal-custom-welcome-page`, `ssl-cert-status-page`, `ssl-optout-text`, `url-block-page`, `url-coach-text`, `virus-block-page`\n- Clients: `global-protect-client`\n- Custom Logo: `custom-logo`",
+          "description": "You can import certain types of files, including software, content, licenses, and configuration into the firewall using the `type=import` parameter in the API request.\n\nUse the following values for the `category` parameter to import different types of files:\n\n- Software: `software`\n- Content: `anti-virus`, `content`, `url-database`, `signed-url-database`\n- Licenses: `license`\n- Configuration: `configuration`\n- Certificates and keys: `certificate`, `high-availability-key`, `key-pair`\n- Response pages: `application-block-page`, `captive-portal-text`, `file-block-continue-page`, `file-block-page`, `global-protect-portal-custom-help-page`, `global-protect-portal-custom-login-page` `global-protect-portal-custom-welcome-page`, `ssl-cert-status-page`, `ssl-optout-text`, `url-block-page`, `url-coach-text`, `virus-block-page`\n- Clients: `global-protect-client`\n- Custom Logo: `custom-logo`\n\nWhen importing files into a firewall, the following parameters are also allowed:\n\n- `vsys`: ",
+          "event": [
+            {
+              "listen": "prerequest",
+              "script": {
+                "id": "e3ec69f4-7c65-470b-9ba3-3710858c2169",
+                "type": "text/javascript",
+                "exec": [
+                  ""
+                ]
+              }
+            },
+            {
+              "listen": "test",
+              "script": {
+                "id": "fba278fd-3e40-4be7-be13-814323d2b803",
+                "type": "text/javascript",
+                "exec": [
+                  ""
+                ]
+              }
+            }
+          ],
           "_postman_isSubFolder": true
         },
         {
@@ -11881,13 +11920,13 @@
   ],
   "variable": [
     {
-      "id": "6b134328-43e0-41fc-b9e9-be4739a9ec52",
+      "id": "2e88477e-583a-48c0-b1fc-508bb576344e",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "120afc04-9320-4639-bfc8-8f2b44392056",
+      "id": "c1f1b208-1df2-4d1e-96e1-b8c94b668855",
       "key": "{{key}}",
       "value": "",
       "type": "string"
