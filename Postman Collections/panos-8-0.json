@@ -8154,8 +8154,9 @@
                       "formdata": [
                         {
                           "key": "file",
+                          "description": "Path to certificate.",
                           "type": "file",
-                          "src": "/Users/michaelr/Downloads/cert_Test-Cert.crt"
+                          "value": null
                         }
                       ]
                     },
@@ -8196,6 +8197,186 @@
                     {
                       "key": "Date",
                       "value": "Thu, 17 Dec 2020 17:38:08 GMT"
+                    },
+                    {
+                      "key": "Content-Type",
+                      "value": "application/xml; charset=UTF-8"
+                    },
+                    {
+                      "key": "Content-Length",
+                      "value": "115"
+                    },
+                    {
+                      "key": "Connection",
+                      "value": "keep-alive"
+                    },
+                    {
+                      "key": "X-FRAME-OPTIONS",
+                      "value": "SAMEORIGIN"
+                    },
+                    {
+                      "key": "X-XSS-Protection",
+                      "value": "1; mode=block"
+                    },
+                    {
+                      "key": "X-Content-Type-Options",
+                      "value": "nosniff"
+                    },
+                    {
+                      "key": "Content-Security-Policy",
+                      "value": "default-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:;"
+                    },
+                    {
+                      "key": "Strict-Transport-Security",
+                      "value": "max-age=31536000"
+                    },
+                    {
+                      "key": "Cache-Control",
+                      "value": "no-store, no-cache, must-revalidate, post-check=0, pre-check=0"
+                    },
+                    {
+                      "key": "Expires",
+                      "value": "Thu, 19 Nov 1981 08:52:00 GMT"
+                    },
+                    {
+                      "key": "Pragma",
+                      "value": "no-cache"
+                    },
+                    {
+                      "key": "Allow",
+                      "value": "GET, HEAD, POST, PUT, DELETE, OPTIONS"
+                    }
+                  ],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "<response status=\"success\">\n    <result>Successfully imported Test-Cert into candidate configuration</result>\n</response>"
+                }
+              ]
+            },
+            {
+              "name": "Import certificate (Panorama)",
+              "_postman_id": "d407c6de-a778-49a2-ae4d-c7f76abea988",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "formdata",
+                  "formdata": [
+                    {
+                      "description": "Path to certificate.",
+                      "key": "file",
+                      "type": "file",
+                      "value": null
+                    }
+                  ],
+                  "options": {
+                    "formdata": {}
+                  }
+                },
+                "url": {
+                  "raw": "https://{{host}}/api/?type=import&category=certificate&certificate-name=Test-Cert&format=pem&target-tpl=Test-Template&target-tpl-vsys=vsys1",
+                  "protocol": "https",
+                  "host": [
+                    "{{host}}"
+                  ],
+                  "path": [
+                    "api",
+                    ""
+                  ],
+                  "query": [
+                    {
+                      "key": "type",
+                      "value": "import"
+                    },
+                    {
+                      "key": "category",
+                      "value": "certificate"
+                    },
+                    {
+                      "key": "certificate-name",
+                      "value": "Test-Cert"
+                    },
+                    {
+                      "key": "format",
+                      "value": "pem"
+                    },
+                    {
+                      "key": "target-tpl",
+                      "value": "Test-Template"
+                    },
+                    {
+                      "key": "target-tpl-vsys",
+                      "value": "vsys1"
+                    }
+                  ]
+                }
+              },
+              "response": [
+                {
+                  "id": "1d8c5920-0a8f-4655-9c82-f92972011c81",
+                  "name": "Import certificate (Panorama)",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [],
+                    "body": {
+                      "mode": "formdata",
+                      "formdata": [
+                        {
+                          "description": "Path to certificate.",
+                          "key": "file",
+                          "type": "file",
+                          "value": null
+                        }
+                      ]
+                    },
+                    "url": {
+                      "raw": "https://{{host}}/api/?type=import&category=certificate&certificate-name=Test-Cert&format=pem&target-tpl=Test-Template&target-tpl-vsys=vsys1",
+                      "protocol": "https",
+                      "host": [
+                        "{{host}}"
+                      ],
+                      "path": [
+                        "api",
+                        ""
+                      ],
+                      "query": [
+                        {
+                          "key": "type",
+                          "value": "import"
+                        },
+                        {
+                          "key": "category",
+                          "value": "certificate"
+                        },
+                        {
+                          "key": "certificate-name",
+                          "value": "Test-Cert"
+                        },
+                        {
+                          "key": "format",
+                          "value": "pem"
+                        },
+                        {
+                          "key": "target-tpl",
+                          "value": "Test-Template"
+                        },
+                        {
+                          "key": "target-tpl-vsys",
+                          "value": "vsys1"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "xml",
+                  "header": [
+                    {
+                      "key": "Date",
+                      "value": "Thu, 17 Dec 2020 17:41:56 GMT"
                     },
                     {
                       "key": "Content-Type",
@@ -11696,13 +11877,13 @@
   ],
   "variable": [
     {
-      "id": "1c83139c-c443-48ab-b6ea-dbb8bcf78f9e",
+      "id": "1d657390-8e70-4dbd-8099-c6be3584e676",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "d8d319d3-5955-4741-94f2-1415a1ec5bc9",
+      "id": "fb278f46-29db-4f68-a8f3-a43a758eda27",
       "key": "{{key}}",
       "value": "",
       "type": "string"
