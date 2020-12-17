@@ -7903,6 +7903,19 @@
               ]
             },
             {
+              "name": "Export packet capture",
+              "_postman_id": "6b46cdb4-d79b-4033-82cc-224ad61b665e",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": ""
+              },
+              "response": []
+            },
+            {
               "name": "Export tech support data",
               "_postman_id": "6e3fa428-5215-4bb6-a874-fef52d4665e3",
               "protocolProfileBehavior": {
@@ -8261,19 +8274,6 @@
                   "body": "... binary data omitted ..."
                 }
               ]
-            },
-            {
-              "name": "Export packet capture",
-              "_postman_id": "6b46cdb4-d79b-4033-82cc-224ad61b665e",
-              "protocolProfileBehavior": {
-                "disableBodyPruning": true
-              },
-              "request": {
-                "method": "GET",
-                "header": [],
-                "url": ""
-              },
-              "response": []
             }
           ],
           "_postman_id": "23756299-0092-4f5e-aac4-b873e07acf55",
@@ -12476,13 +12476,13 @@
   ],
   "variable": [
     {
-      "id": "36090e95-0a18-49aa-a7ba-5e77aa1ac51d",
+      "id": "1a33a0f5-c455-4207-aee6-14ccadb12f33",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "0f9d8a4c-3cc9-48e0-a2a9-c2ca763ed719",
+      "id": "cb6c6799-375f-4d3a-b217-f1751d47e323",
       "key": "{{key}}",
       "value": "",
       "type": "string"
