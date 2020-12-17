@@ -7912,7 +7912,7 @@
                 "method": "GET",
                 "header": [],
                 "url": {
-                  "raw": "https://{{host}}/api/?type=export&category=filters-pcap&from=fw",
+                  "raw": "https://{{host}}/api/?type=export&category=filters-pcap&from=",
                   "protocol": "https",
                   "host": [
                     "{{host}}"
@@ -7932,9 +7932,8 @@
                     },
                     {
                       "key": "from",
-                      "value": "fw",
-                      "description": "*Optional*.  Retrieve a specific capture file.",
-                      "type": "text"
+                      "value": "",
+                      "description": "*Optional*.  Retrieve a specific capture file.  If not specified, a list of capture files will be returned."
                     }
                   ]
                 }
@@ -8494,6 +8493,19 @@
                   "body": "... binary data omitted ..."
                 }
               ]
+            },
+            {
+              "name": "Export threat packet capture",
+              "_postman_id": "a26a6ddf-da0d-4263-be19-eef3d934e842",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": ""
+              },
+              "response": []
             }
           ],
           "_postman_id": "23756299-0092-4f5e-aac4-b873e07acf55",
@@ -12696,13 +12708,13 @@
   ],
   "variable": [
     {
-      "id": "98ba369f-69ee-4a66-8178-ba64f146c22a",
+      "id": "6d2a20cf-f7b7-42fb-b47a-9546dc1e7aca",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "cddd10e0-8a1c-4cd6-aa1b-f69d3279b820",
+      "id": "5036ad21-91dd-4273-bb63-7aeae5a0567d",
       "key": "{{key}}",
       "value": "",
       "type": "string"
