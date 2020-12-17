@@ -8745,6 +8745,12 @@
             }
           ],
           "_postman_isSubFolder": true
+        },
+        {
+          "name": "Retrieve Logs",
+          "item": [],
+          "_postman_id": "c0aa4826-6814-462b-9b59-f424033a9a16",
+          "_postman_isSubFolder": true
         }
       ],
       "_postman_id": "3178f469-44ee-4373-82b4-9d5bdd5d59b8"
@@ -11988,13 +11994,13 @@
   ],
   "variable": [
     {
-      "id": "3f25f4f4-63ff-41a5-961a-ad566abbe13a",
+      "id": "9b6e9132-a6c1-4352-b917-a9e68bc8b6ba",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "902d6546-425c-445b-91e7-78ba055ee508",
+      "id": "77c54c71-c49b-4537-997b-8735865b2ce8",
       "key": "{{key}}",
       "value": "",
       "type": "string"
