@@ -8684,6 +8684,39 @@
           "name": "Import Files",
           "item": [
             {
+              "name": "Import file",
+              "_postman_id": "4cde82fa-1ecb-4c6f-8cb0-13c75ac5405b",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "POST",
+                "header": [],
+                "url": {
+                  "raw": "https://{{host}}/api/?type=import&category=",
+                  "protocol": "https",
+                  "host": [
+                    "{{host}}"
+                  ],
+                  "path": [
+                    "api",
+                    ""
+                  ],
+                  "query": [
+                    {
+                      "key": "type",
+                      "value": "import"
+                    },
+                    {
+                      "key": "category",
+                      "value": ""
+                    }
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
               "name": "Import certificate",
               "_postman_id": "2140d4f3-cc79-4093-8fbf-04fe470ebdff",
               "protocolProfileBehavior": {
@@ -9195,19 +9228,6 @@
                   "body": "<response status=\"success\">\n    <msg>\n        <line>panup-all-antivirus-3566-4077 saved</line>\n    </msg>\n</response>"
                 }
               ]
-            },
-            {
-              "name": "Import file",
-              "_postman_id": "4cde82fa-1ecb-4c6f-8cb0-13c75ac5405b",
-              "protocolProfileBehavior": {
-                "disableBodyPruning": true
-              },
-              "request": {
-                "method": "GET",
-                "header": [],
-                "url": ""
-              },
-              "response": []
             }
           ],
           "_postman_id": "b46a37c6-2ff6-4d05-b8e4-36bf282f7487",
@@ -12867,13 +12887,13 @@
   ],
   "variable": [
     {
-      "id": "b5d489dd-9e48-4402-99b8-2f0e37e7256a",
+      "id": "03b3a47b-9353-48f4-a677-abab9b290e18",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "d0c87134-c1ee-4a6b-9c23-63256e56c1b7",
+      "id": "875d1c3c-584f-48c5-a351-44e2c9a60417",
       "key": "{{key}}",
       "value": "",
       "type": "string"
