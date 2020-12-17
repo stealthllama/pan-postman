@@ -7724,6 +7724,27 @@
               "_postman_id": "22f037d0-c330-46c7-a739-6c05cf6b0756",
               "description": "When exporting certificates and keys, use the following parameters:\n\n- `certificate-name`: name of the certificate object on the firewall\n- `passphrase`: required when including the certificate key\n- `format`: certificate format - one of `pkcs12`, `pem`, `pkcs10`\n- `include-key`: whether to include the private key - `yes` or `no`\n- `vsys`: virtual system where the object is located, default is `shared`\n",
               "_postman_isSubFolder": true
+            },
+            {
+              "name": "Export Technical Support Data",
+              "item": [
+                {
+                  "name": "Begin tech support file creation",
+                  "_postman_id": "9602e8a5-6a23-4cb6-b3dc-5cc7bb0b4976",
+                  "protocolProfileBehavior": {
+                    "disableBodyPruning": true
+                  },
+                  "request": {
+                    "method": "GET",
+                    "header": [],
+                    "url": ""
+                  },
+                  "response": []
+                }
+              ],
+              "_postman_id": "ef49dbfe-e23b-4824-b6dc-4cbb11333113",
+              "description": "Debug log data sizes are large, so the API uses an asynchronous job scheduling approach to retrieve technical support data.",
+              "_postman_isSubFolder": true
             }
           ],
           "_postman_id": "23756299-0092-4f5e-aac4-b873e07acf55",
@@ -11191,13 +11212,13 @@
   ],
   "variable": [
     {
-      "id": "cf4b28d8-8b36-4071-901d-544376764356",
+      "id": "eda9b7c0-53cb-4543-a1ec-1c52cfafe1c0",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "dfe8cb17-ccb9-4f06-ae4e-d30357a707c5",
+      "id": "8398af50-7d15-4394-8f40-b86b916fabf4",
       "key": "{{key}}",
       "value": "",
       "type": "string"
