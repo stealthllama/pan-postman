@@ -8593,7 +8593,7 @@
           "name": "Retrieve Logs",
           "item": [],
           "_postman_id": "c0aa4826-6814-462b-9b59-f424033a9a16",
-          "description": "Retrieve logs from a firewall using the API.\n\n# Parameters\n\n| Parameter | Description |\n| --------- | ------------|\n| `log-type`  | The type of logs to retrieve.  Can be one of:<br><br>-`traffic`: Traffic logs<br>-`threat`: Threat logs |",
+          "description": "Retrieve logs from a firewall using the API.\n\n# Parameters\n\n| Parameter | Description |\n| --------- | ------------|\n| `log-type`  | The type of logs to retrieve.  Can be one of `traffic`, `threat`, `config`, `system`, `hipmatch`, `wildfire`, `url`, `data`, `corr`, `corr-detail`, `corr-categ`, `user-id`, `auth`, `gtp`, `external`, `iptag` |",
           "event": [
             {
               "listen": "prerequest",
@@ -12017,13 +12017,13 @@
   ],
   "variable": [
     {
-      "id": "49a341c9-36f4-45cf-90d4-8258fafcf03a",
+      "id": "f1d22392-041a-4eb5-b843-64e7bddc5305",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "92367072-bca9-4b5b-9bf3-33a042572354",
+      "id": "d9f709bb-157e-49f1-a2a7-eea5229028da",
       "key": "{{key}}",
       "value": "",
       "type": "string"
