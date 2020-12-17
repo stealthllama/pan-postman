@@ -8087,6 +8087,177 @@
           "_postman_isSubFolder": true
         },
         {
+          "name": "Import Files",
+          "item": [
+            {
+              "name": "Import certificate",
+              "_postman_id": "2140d4f3-cc79-4093-8fbf-04fe470ebdff",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "formdata",
+                  "formdata": [
+                    {
+                      "key": "file",
+                      "description": "Path to certificate.",
+                      "type": "file",
+                      "value": null
+                    }
+                  ],
+                  "options": {
+                    "formdata": {}
+                  }
+                },
+                "url": {
+                  "raw": "https://{{host}}/api/?type=import&category=certificate&certificate-name=Test-Cert&format=pem",
+                  "protocol": "https",
+                  "host": [
+                    "{{host}}"
+                  ],
+                  "path": [
+                    "api",
+                    ""
+                  ],
+                  "query": [
+                    {
+                      "key": "type",
+                      "value": "import"
+                    },
+                    {
+                      "key": "category",
+                      "value": "certificate"
+                    },
+                    {
+                      "key": "certificate-name",
+                      "value": "Test-Cert"
+                    },
+                    {
+                      "key": "format",
+                      "value": "pem"
+                    }
+                  ]
+                }
+              },
+              "response": [
+                {
+                  "id": "fca133f7-e7c4-45c6-8586-93e07276ae15",
+                  "name": "Import certificate",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [],
+                    "body": {
+                      "mode": "formdata",
+                      "formdata": [
+                        {
+                          "key": "file",
+                          "type": "file",
+                          "src": "/Users/michaelr/Downloads/cert_Test-Cert.crt"
+                        }
+                      ]
+                    },
+                    "url": {
+                      "raw": "https://{{host}}/api/?type=import&category=certificate&certificate-name=Test-Cert&format=pem",
+                      "protocol": "https",
+                      "host": [
+                        "{{host}}"
+                      ],
+                      "path": [
+                        "api",
+                        ""
+                      ],
+                      "query": [
+                        {
+                          "key": "type",
+                          "value": "import"
+                        },
+                        {
+                          "key": "category",
+                          "value": "certificate"
+                        },
+                        {
+                          "key": "certificate-name",
+                          "value": "Test-Cert"
+                        },
+                        {
+                          "key": "format",
+                          "value": "pem"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "xml",
+                  "header": [
+                    {
+                      "key": "Date",
+                      "value": "Thu, 17 Dec 2020 17:38:08 GMT"
+                    },
+                    {
+                      "key": "Content-Type",
+                      "value": "application/xml; charset=UTF-8"
+                    },
+                    {
+                      "key": "Content-Length",
+                      "value": "115"
+                    },
+                    {
+                      "key": "Connection",
+                      "value": "keep-alive"
+                    },
+                    {
+                      "key": "X-FRAME-OPTIONS",
+                      "value": "SAMEORIGIN"
+                    },
+                    {
+                      "key": "X-XSS-Protection",
+                      "value": "1; mode=block"
+                    },
+                    {
+                      "key": "X-Content-Type-Options",
+                      "value": "nosniff"
+                    },
+                    {
+                      "key": "Content-Security-Policy",
+                      "value": "default-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:;"
+                    },
+                    {
+                      "key": "Strict-Transport-Security",
+                      "value": "max-age=31536000"
+                    },
+                    {
+                      "key": "Cache-Control",
+                      "value": "no-store, no-cache, must-revalidate, post-check=0, pre-check=0"
+                    },
+                    {
+                      "key": "Expires",
+                      "value": "Thu, 19 Nov 1981 08:52:00 GMT"
+                    },
+                    {
+                      "key": "Pragma",
+                      "value": "no-cache"
+                    },
+                    {
+                      "key": "Allow",
+                      "value": "GET, HEAD, POST, PUT, DELETE, OPTIONS"
+                    }
+                  ],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "<response status=\"success\">\n    <result>Successfully imported Test-Cert into candidate configuration</result>\n</response>"
+                }
+              ]
+            }
+          ],
+          "_postman_id": "b46a37c6-2ff6-4d05-b8e4-36bf282f7487",
+          "description": "You can import certain types of files, including software, content, licenses, and configuration into the firewall using the `type=import` parameter in the API request.\n\nUse the following values for the `category` parameter to import different types of files:\n\n- Software: `software`\n- Content: `anti-virus`, `content`, `url-database`, `signed-url-database`\n- Licenses: `license`\n- Configuration: `configuration`\n- Certificates and keys: `certificate`, `high-availability-key`, `key-pair`\n- Response pages: `application-block-page`, `captive-portal-text`, `file-block-continue-page`, `file-block-page`, `global-protect-portal-custom-help-page`, `global-protect-portal-custom-login-page` `global-protect-portal-custom-welcome-page`, `ssl-cert-status-page`, `ssl-optout-text`, `url-block-page`, `url-coach-text`, `virus-block-page`\n- Clients: `global-protect-client`\n- Custom Logo: `custom-logo`",
+          "_postman_isSubFolder": true
+        },
+        {
           "name": "Get Version Info",
           "item": [
             {
@@ -8241,13 +8412,6 @@
               }
             }
           ],
-          "_postman_isSubFolder": true
-        },
-        {
-          "name": "Import Files",
-          "item": [],
-          "_postman_id": "b46a37c6-2ff6-4d05-b8e4-36bf282f7487",
-          "description": "You can import certain types of files, including software, content, licenses, and configuration into the firewall using the `type=import` parameter in the API request.\n\nUse the following values for the `category` parameter to import different types of files:\n\n- Software: `software`\n- Content: `anti-virus`, `content`, `url-database`, `signed-url-database`\n- Licenses: `license`\n- Configuration: `configuration`\n- Certificates and keys: `certificate`, `high-availability-key`, `key-pair`\n- Response pages: `application-block-page`, `captive-portal-text`, `file-block-continue-page`, `file-block-page`, `global-protect-portal-custom-help-page`, `global-protect-portal-custom-login-page` `global-protect-portal-custom-welcome-page`, `ssl-cert-status-page`, `ssl-optout-text`, `url-block-page`, `url-coach-text`, `virus-block-page`\n- Clients: `global-protect-client`\n- Custom Logo: `custom-logo`",
           "_postman_isSubFolder": true
         }
       ],
@@ -11532,13 +11696,13 @@
   ],
   "variable": [
     {
-      "id": "0394b88d-9ee1-4a16-9943-5d3bf20b6998",
+      "id": "1c83139c-c443-48ab-b6ea-dbb8bcf78f9e",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "f5ddcd8b-1193-4400-a63c-673c35410e3e",
+      "id": "d8d319d3-5955-4741-94f2-1415a1ec5bc9",
       "key": "{{key}}",
       "value": "",
       "type": "string"
