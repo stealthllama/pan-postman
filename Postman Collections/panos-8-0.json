@@ -7742,6 +7742,12 @@
             }
           ],
           "_postman_isSubFolder": true
+        },
+        {
+          "name": "Import Files",
+          "item": [],
+          "_postman_id": "9fe42250-f710-4b88-81eb-0e9504fae4e6",
+          "_postman_isSubFolder": true
         }
       ],
       "_postman_id": "3178f469-44ee-4373-82b4-9d5bdd5d59b8"
@@ -10785,7 +10791,7 @@
           "name": "Configure SAML 2.0 Authentication",
           "item": [
             {
-              "name": "Create SAML Identify Provider server profile",
+              "name": "Import IdP metadata",
               "_postman_id": "1c361dbd-7e59-411e-b443-8637d8001993",
               "protocolProfileBehavior": {
                 "disableBodyPruning": true
@@ -11025,13 +11031,13 @@
   ],
   "variable": [
     {
-      "id": "b40d538b-1531-4008-8f1a-eb81bcfe9afd",
+      "id": "711827cb-a315-4306-9ada-a46b4e6f5143",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "8f88d561-169b-48cf-a0f4-fb39fdbdb54a",
+      "id": "0868fda7-9d26-4700-8055-1fcd5e151ab8",
       "key": "{{key}}",
       "value": "",
       "type": "string"
