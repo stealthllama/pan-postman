@@ -10783,7 +10783,166 @@
         },
         {
           "name": "Configure SAML 2.0 Authentication",
-          "item": [],
+          "item": [
+            {
+              "name": "Create SAML Identify Provider server profile",
+              "_postman_id": "1c361dbd-7e59-411e-b443-8637d8001993",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "file",
+                  "file": {
+                    "src": "/Users/michaelr/Downloads/idptest.xml"
+                  },
+                  "options": {
+                    "file": {}
+                  }
+                },
+                "url": {
+                  "raw": "https://{{host}}/api/?type=import&category=idp-metadata&profile-name=kr-okta-test2&xpath=/config/devices/entry[@name='localhost.localdomain']/template/entry[@name='Test-Template']/config/devices/entry[@name='localhost.localdomain']/vsys/entry[@name='vsys1']/server-profile/saml-idp",
+                  "protocol": "https",
+                  "host": [
+                    "{{host}}"
+                  ],
+                  "path": [
+                    "api",
+                    ""
+                  ],
+                  "query": [
+                    {
+                      "key": "type",
+                      "value": "import"
+                    },
+                    {
+                      "key": "category",
+                      "value": "idp-metadata"
+                    },
+                    {
+                      "key": "profile-name",
+                      "value": "kr-okta-test2"
+                    },
+                    {
+                      "key": "xpath",
+                      "value": "/config/devices/entry[@name='localhost.localdomain']/template/entry[@name='Test-Template']/config/devices/entry[@name='localhost.localdomain']/vsys/entry[@name='vsys1']/server-profile/saml-idp"
+                    }
+                  ]
+                }
+              },
+              "response": [
+                {
+                  "id": "549b4c3f-169c-4e4e-82d5-50a08e4c8cdb",
+                  "name": "Create SAML Identify Provider server profile",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [],
+                    "body": {
+                      "mode": "formdata",
+                      "formdata": [
+                        {
+                          "key": "file",
+                          "type": "file",
+                          "src": "/Users/michaelr/Downloads/idptest.xml"
+                        }
+                      ]
+                    },
+                    "url": {
+                      "raw": "https://{{host}}/api/?type=import&category=idp-metadata&profile-name=kr-okta-test2&target-tpl=Test-Template",
+                      "protocol": "https",
+                      "host": [
+                        "{{host}}"
+                      ],
+                      "path": [
+                        "api",
+                        ""
+                      ],
+                      "query": [
+                        {
+                          "key": "type",
+                          "value": "import"
+                        },
+                        {
+                          "key": "category",
+                          "value": "idp-metadata"
+                        },
+                        {
+                          "key": "profile-name",
+                          "value": "kr-okta-test2"
+                        },
+                        {
+                          "key": "target-tpl",
+                          "value": "Test-Template"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "xml",
+                  "header": [
+                    {
+                      "key": "Date",
+                      "value": "Thu, 17 Dec 2020 15:54:08 GMT"
+                    },
+                    {
+                      "key": "Content-Type",
+                      "value": "application/xml; charset=UTF-8"
+                    },
+                    {
+                      "key": "Content-Length",
+                      "value": "119"
+                    },
+                    {
+                      "key": "Connection",
+                      "value": "keep-alive"
+                    },
+                    {
+                      "key": "X-FRAME-OPTIONS",
+                      "value": "SAMEORIGIN"
+                    },
+                    {
+                      "key": "X-XSS-Protection",
+                      "value": "1; mode=block"
+                    },
+                    {
+                      "key": "X-Content-Type-Options",
+                      "value": "nosniff"
+                    },
+                    {
+                      "key": "Content-Security-Policy",
+                      "value": "default-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:;"
+                    },
+                    {
+                      "key": "Strict-Transport-Security",
+                      "value": "max-age=31536000"
+                    },
+                    {
+                      "key": "Cache-Control",
+                      "value": "no-store, no-cache, must-revalidate, post-check=0, pre-check=0"
+                    },
+                    {
+                      "key": "Expires",
+                      "value": "Thu, 19 Nov 1981 08:52:00 GMT"
+                    },
+                    {
+                      "key": "Pragma",
+                      "value": "no-cache"
+                    },
+                    {
+                      "key": "Allow",
+                      "value": "GET, HEAD, POST, PUT, DELETE, OPTIONS"
+                    }
+                  ],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "<response status=\"success\">\n    <result>Successfully imported kr-okta-test2 into candidate configuration</result>\n</response>"
+                }
+              ]
+            }
+          ],
           "_postman_id": "38298c7f-2984-4b1f-bf85-79d3bf9f0f13",
           "_postman_isSubFolder": true
         }
@@ -10862,13 +11021,13 @@
   ],
   "variable": [
     {
-      "id": "e5e0dbfe-2814-411d-b395-51ee411139b1",
+      "id": "2b153900-1803-4a0c-bb60-1b3c2913ae9b",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "b829751c-abb5-47c7-bf29-405ca84f5778",
+      "id": "38bdccfe-7aed-48c7-b07b-300c82a94895",
       "key": "{{key}}",
       "value": "",
       "type": "string"
