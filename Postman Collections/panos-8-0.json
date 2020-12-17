@@ -7850,6 +7850,19 @@
                       "body": "<response status=\"success\" code=\"19\">\n    <result>\n        <msg>\n            <line>Exec job enqueued with jobid 3</line>\n        </msg>\n        <job>3</job>\n    </result>\n</response>"
                     }
                   ]
+                },
+                {
+                  "name": "Check tech support file status",
+                  "_postman_id": "80f954d0-8f73-43ac-857e-e2470061665a",
+                  "protocolProfileBehavior": {
+                    "disableBodyPruning": true
+                  },
+                  "request": {
+                    "method": "GET",
+                    "header": [],
+                    "url": ""
+                  },
+                  "response": []
                 }
               ],
               "_postman_id": "ef49dbfe-e23b-4824-b6dc-4cbb11333113",
@@ -11322,13 +11335,13 @@
   ],
   "variable": [
     {
-      "id": "acde225b-425b-4e48-98b9-169c1f3f7f21",
+      "id": "46d07f95-1d9e-4354-b71d-acecedcd3087",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "d0a7d770-2767-41c4-a2b5-72dbab921ebf",
+      "id": "d8d00974-57b4-437e-8e5c-b140b1fd764b",
       "key": "{{key}}",
       "value": "",
       "type": "string"
