@@ -8881,135 +8881,7 @@
         },
         {
           "name": "Get Version Info",
-          "item": [
-            {
-              "name": "Get Version Info",
-              "_postman_id": "d9781725-4177-48f7-97ca-addc620c6fda",
-              "protocolProfileBehavior": {
-                "disableBodyPruning": true
-              },
-              "request": {
-                "method": "GET",
-                "header": [],
-                "url": {
-                  "raw": "https://{{host}}/api?type=version",
-                  "protocol": "https",
-                  "host": [
-                    "{{host}}"
-                  ],
-                  "path": [
-                    "api"
-                  ],
-                  "query": [
-                    {
-                      "key": "key",
-                      "value": "{{key}}",
-                      "disabled": true
-                    },
-                    {
-                      "key": "type",
-                      "value": "version"
-                    }
-                  ]
-                }
-              },
-              "response": [
-                {
-                  "id": "7aaea53e-06d2-4802-af12-9a001806f4d0",
-                  "name": "Get Version Info",
-                  "originalRequest": {
-                    "method": "GET",
-                    "header": [],
-                    "url": {
-                      "raw": "https://{{host}}/api?type=version",
-                      "protocol": "https",
-                      "host": [
-                        "{{host}}"
-                      ],
-                      "path": [
-                        "api"
-                      ],
-                      "query": [
-                        {
-                          "key": "key",
-                          "value": "{{key}}",
-                          "disabled": true
-                        },
-                        {
-                          "key": "type",
-                          "value": "version"
-                        }
-                      ]
-                    }
-                  },
-                  "status": "OK",
-                  "code": 200,
-                  "_postman_previewlanguage": "xml",
-                  "header": [
-                    {
-                      "key": "Date",
-                      "value": "Mon, 23 Nov 2020 17:35:30 GMT"
-                    },
-                    {
-                      "key": "Content-Type",
-                      "value": "application/xml; charset=UTF-8"
-                    },
-                    {
-                      "key": "Content-Length",
-                      "value": "168"
-                    },
-                    {
-                      "key": "Connection",
-                      "value": "keep-alive"
-                    },
-                    {
-                      "key": "X-FRAME-OPTIONS",
-                      "value": "SAMEORIGIN"
-                    },
-                    {
-                      "key": "X-XSS-Protection",
-                      "value": "1; mode=block"
-                    },
-                    {
-                      "key": "X-Content-Type-Options",
-                      "value": "nosniff"
-                    },
-                    {
-                      "key": "Content-Security-Policy",
-                      "value": "default-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:;"
-                    },
-                    {
-                      "key": "Strict-Transport-Security",
-                      "value": "max-age=31536000"
-                    },
-                    {
-                      "key": "Cache-Control",
-                      "value": "no-store, no-cache, must-revalidate, post-check=0, pre-check=0"
-                    },
-                    {
-                      "key": "Expires",
-                      "value": "Thu, 19 Nov 1981 08:52:00 GMT"
-                    },
-                    {
-                      "key": "Pragma",
-                      "value": "no-cache"
-                    },
-                    {
-                      "key": "Set-Cookie",
-                      "value": "PHPSESSID=1a12ce45a5935c8cc2354f99220e56f2; path=/; secure; HttpOnly"
-                    },
-                    {
-                      "key": "Allow",
-                      "value": "GET, HEAD, POST, PUT, DELETE, OPTIONS"
-                    }
-                  ],
-                  "cookie": [],
-                  "responseTime": null,
-                  "body": "<response status = \"success\">\n    <result>\n        <sw-version>10.0.2</sw-version>\n        <multi-vsys>off</multi-vsys>\n        <model>PA-VM</model>\n        <serial>007000001222</serial>\n    </result>\n</response>"
-                }
-              ]
-            }
-          ],
+          "item": [],
           "_postman_id": "2b35b2a1-42c2-4d84-833d-e9fc5e0efa98",
           "event": [
             {
@@ -9034,6 +8906,134 @@
             }
           ],
           "_postman_isSubFolder": true
+        },
+        {
+          "name": "Get Version Info",
+          "_postman_id": "d9781725-4177-48f7-97ca-addc620c6fda",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "https://{{host}}/api?type=version",
+              "protocol": "https",
+              "host": [
+                "{{host}}"
+              ],
+              "path": [
+                "api"
+              ],
+              "query": [
+                {
+                  "key": "key",
+                  "value": "{{key}}",
+                  "disabled": true
+                },
+                {
+                  "key": "type",
+                  "value": "version"
+                }
+              ]
+            },
+            "description": "Use this request to show:\n\n- PAN-OS version\n- Serial number\n- Model number\n- Multi-vsys capability"
+          },
+          "response": [
+            {
+              "id": "7aaea53e-06d2-4802-af12-9a001806f4d0",
+              "name": "Get Version Info",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "https://{{host}}/api?type=version",
+                  "protocol": "https",
+                  "host": [
+                    "{{host}}"
+                  ],
+                  "path": [
+                    "api"
+                  ],
+                  "query": [
+                    {
+                      "key": "key",
+                      "value": "{{key}}",
+                      "disabled": true
+                    },
+                    {
+                      "key": "type",
+                      "value": "version"
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "xml",
+              "header": [
+                {
+                  "key": "Date",
+                  "value": "Mon, 23 Nov 2020 17:35:30 GMT"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/xml; charset=UTF-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "168"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "X-FRAME-OPTIONS",
+                  "value": "SAMEORIGIN"
+                },
+                {
+                  "key": "X-XSS-Protection",
+                  "value": "1; mode=block"
+                },
+                {
+                  "key": "X-Content-Type-Options",
+                  "value": "nosniff"
+                },
+                {
+                  "key": "Content-Security-Policy",
+                  "value": "default-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:;"
+                },
+                {
+                  "key": "Strict-Transport-Security",
+                  "value": "max-age=31536000"
+                },
+                {
+                  "key": "Cache-Control",
+                  "value": "no-store, no-cache, must-revalidate, post-check=0, pre-check=0"
+                },
+                {
+                  "key": "Expires",
+                  "value": "Thu, 19 Nov 1981 08:52:00 GMT"
+                },
+                {
+                  "key": "Pragma",
+                  "value": "no-cache"
+                },
+                {
+                  "key": "Set-Cookie",
+                  "value": "PHPSESSID=1a12ce45a5935c8cc2354f99220e56f2; path=/; secure; HttpOnly"
+                },
+                {
+                  "key": "Allow",
+                  "value": "GET, HEAD, POST, PUT, DELETE, OPTIONS"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "<response status = \"success\">\n    <result>\n        <sw-version>10.0.2</sw-version>\n        <multi-vsys>off</multi-vsys>\n        <model>PA-VM</model>\n        <serial>007000001222</serial>\n    </result>\n</response>"
+            }
+          ]
         }
       ],
       "_postman_id": "3178f469-44ee-4373-82b4-9d5bdd5d59b8"
@@ -12277,13 +12277,13 @@
   ],
   "variable": [
     {
-      "id": "7bc87a88-7d6a-4e27-a7a8-8ba6b436b65d",
+      "id": "8d41804e-0cd5-48ab-9feb-ddd1105e466f",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "67030dee-7e20-4acb-b7ca-70f84723f337",
+      "id": "74e9b8ff-1aa5-4fe2-a314-b91c9040162d",
       "key": "{{key}}",
       "value": "",
       "type": "string"
