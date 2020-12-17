@@ -8629,7 +8629,7 @@
                     {
                       "key": "nlogs",
                       "value": "",
-                      "description": "*Optional.* Specify the number of logs to retrieve.  The default is 20 when the parameter is not specified.  Maximum is 5000."
+                      "description": "*Optional.* Specify the number of logs to retrieve.  Default is 20, maximum is 5000."
                     },
                     {
                       "key": "skip",
@@ -8649,8 +8649,7 @@
                     {
                       "key": "job-id",
                       "value": null,
-                      "description": "*Optional*  Return the results of this retrieval job.",
-                      "type": "text"
+                      "description": "*Optional*.  Return the results of this retrieval job."
                     }
                   ]
                 }
@@ -12279,13 +12278,13 @@
   ],
   "variable": [
     {
-      "id": "a212aa0f-2ed3-4b5f-a631-8dc950af9ef8",
+      "id": "210df069-760c-4b79-a6ce-ed6d7397de05",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "abc5dd9f-96a0-450e-873d-d0e7dffa8822",
+      "id": "3f069b1d-8d9b-49b0-bbf5-e659f2854391",
       "key": "{{key}}",
       "value": "",
       "type": "string"
