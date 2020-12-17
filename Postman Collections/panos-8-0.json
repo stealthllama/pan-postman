@@ -7722,145 +7722,6 @@
                   "response": []
                 },
                 {
-                  "name": "Check tech support file status",
-                  "_postman_id": "80f954d0-8f73-43ac-857e-e2470061665a",
-                  "protocolProfileBehavior": {
-                    "disableBodyPruning": true
-                  },
-                  "request": {
-                    "method": "GET",
-                    "header": [],
-                    "url": {
-                      "raw": "https://{{host}}/api/?type=export&category=tech-support&action=status&job-id=3",
-                      "protocol": "https",
-                      "host": [
-                        "{{host}}"
-                      ],
-                      "path": [
-                        "api",
-                        ""
-                      ],
-                      "query": [
-                        {
-                          "key": "type",
-                          "value": "export"
-                        },
-                        {
-                          "key": "category",
-                          "value": "tech-support"
-                        },
-                        {
-                          "key": "action",
-                          "value": "status"
-                        },
-                        {
-                          "key": "job-id",
-                          "value": "3"
-                        }
-                      ]
-                    }
-                  },
-                  "response": [
-                    {
-                      "id": "4c0be32f-7ccf-4628-aa4a-5c7a26ade97a",
-                      "name": "Check tech support file status",
-                      "originalRequest": {
-                        "method": "GET",
-                        "header": [],
-                        "url": {
-                          "raw": "https://{{host}}/api/?type=export&category=tech-support&action=status&job-id=3",
-                          "protocol": "https",
-                          "host": [
-                            "{{host}}"
-                          ],
-                          "path": [
-                            "api",
-                            ""
-                          ],
-                          "query": [
-                            {
-                              "key": "type",
-                              "value": "export"
-                            },
-                            {
-                              "key": "category",
-                              "value": "tech-support"
-                            },
-                            {
-                              "key": "action",
-                              "value": "status"
-                            },
-                            {
-                              "key": "job-id",
-                              "value": "3"
-                            }
-                          ]
-                        }
-                      },
-                      "status": "OK",
-                      "code": 200,
-                      "_postman_previewlanguage": "xml",
-                      "header": [
-                        {
-                          "key": "Date",
-                          "value": "Thu, 17 Dec 2020 16:45:33 GMT"
-                        },
-                        {
-                          "key": "Content-Type",
-                          "value": "application/xml; charset=UTF-8"
-                        },
-                        {
-                          "key": "Content-Length",
-                          "value": "433"
-                        },
-                        {
-                          "key": "Connection",
-                          "value": "keep-alive"
-                        },
-                        {
-                          "key": "X-FRAME-OPTIONS",
-                          "value": "SAMEORIGIN"
-                        },
-                        {
-                          "key": "X-XSS-Protection",
-                          "value": "1; mode=block"
-                        },
-                        {
-                          "key": "X-Content-Type-Options",
-                          "value": "nosniff"
-                        },
-                        {
-                          "key": "Content-Security-Policy",
-                          "value": "default-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:;"
-                        },
-                        {
-                          "key": "Strict-Transport-Security",
-                          "value": "max-age=31536000"
-                        },
-                        {
-                          "key": "Cache-Control",
-                          "value": "no-store, no-cache, must-revalidate, post-check=0, pre-check=0"
-                        },
-                        {
-                          "key": "Expires",
-                          "value": "Thu, 19 Nov 1981 08:52:00 GMT"
-                        },
-                        {
-                          "key": "Pragma",
-                          "value": "no-cache"
-                        },
-                        {
-                          "key": "Allow",
-                          "value": "GET, HEAD, POST, PUT, DELETE, OPTIONS"
-                        }
-                      ],
-                      "cookie": [],
-                      "responseTime": null,
-                      "body": "<response status=\"success\">\n    <result>\n        <job>\n            <tenq>2020/12/17 08:44:36</tenq>\n            <tdeq>08:44:36</tdeq>\n            <id>3</id>\n            <user></user>\n            <type>Exec</type>\n            <status>FIN</status>\n            <queued>NO</queued>\n            <stoppable>no</stoppable>\n            <result>OK</result>\n            <tfin>08:45:11</tfin>\n            <description></description>\n            <positionInQ>0</positionInQ>\n            <progress>08:45:11</progress>\n            <details></details>\n            <warnings></warnings>\n            <resultfile>//tmp/techsupport.tgz</resultfile>\n        </job>\n    </result>\n</response>"
-                    }
-                  ]
-                },
-                {
                   "name": "Export tech support data",
                   "_postman_id": "6e3fa428-5215-4bb6-a874-fef52d4665e3",
                   "protocolProfileBehavior": {
@@ -7870,7 +7731,7 @@
                     "method": "GET",
                     "header": [],
                     "url": {
-                      "raw": "https://{{host}}/api/?type=export&category=tech-support&action=status&job-id=5",
+                      "raw": "https://{{host}}/api/?type=export&category=tech-support&action=get&job-id=5",
                       "protocol": "https",
                       "host": [
                         "{{host}}"
@@ -7890,7 +7751,7 @@
                         },
                         {
                           "key": "action",
-                          "value": "status",
+                          "value": "get",
                           "description": "*Optional*.  Action to perform.  Can be one of `get`, `status`, `finish`.  If not specified, a new retrieval job is started."
                         },
                         {
@@ -7905,7 +7766,7 @@
                   "response": [
                     {
                       "id": "bc5a1924-5b6e-4f9c-8388-74fd535d5441",
-                      "name": "Export tech support data",
+                      "name": "Begin tech support data export",
                       "originalRequest": {
                         "method": "GET",
                         "header": [],
@@ -8003,6 +7864,220 @@
                       "cookie": [],
                       "responseTime": null,
                       "body": "<response status=\"success\" code=\"19\">\n    <result>\n        <msg>\n            <line>Exec job enqueued with jobid 5</line>\n        </msg>\n        <job>5</job>\n    </result>\n</response>"
+                    },
+                    {
+                      "id": "82cab3f6-0d51-44f4-bed0-2f14df142792",
+                      "name": "Check status of tech support export",
+                      "originalRequest": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                          "raw": "https://{{host}}/api/?type=export&category=tech-support&action=status&job-id=5",
+                          "protocol": "https",
+                          "host": [
+                            "{{host}}"
+                          ],
+                          "path": [
+                            "api",
+                            ""
+                          ],
+                          "query": [
+                            {
+                              "key": "type",
+                              "value": "export"
+                            },
+                            {
+                              "key": "category",
+                              "value": "tech-support"
+                            },
+                            {
+                              "key": "action",
+                              "value": "status",
+                              "description": "*Optional*.  Action to perform.  Can be one of `get`, `status`, `finish`.  If not specified, a new retrieval job is started."
+                            },
+                            {
+                              "key": "job-id",
+                              "value": "5",
+                              "description": "*Optional*.  Return the results of this retrieval job."
+                            }
+                          ]
+                        }
+                      },
+                      "status": "OK",
+                      "code": 200,
+                      "_postman_previewlanguage": "xml",
+                      "header": [
+                        {
+                          "key": "Date",
+                          "value": "Thu, 17 Dec 2020 19:41:49 GMT"
+                        },
+                        {
+                          "key": "Content-Type",
+                          "value": "application/xml; charset=UTF-8"
+                        },
+                        {
+                          "key": "Content-Length",
+                          "value": "389"
+                        },
+                        {
+                          "key": "Connection",
+                          "value": "keep-alive"
+                        },
+                        {
+                          "key": "X-FRAME-OPTIONS",
+                          "value": "SAMEORIGIN"
+                        },
+                        {
+                          "key": "X-XSS-Protection",
+                          "value": "1; mode=block"
+                        },
+                        {
+                          "key": "X-Content-Type-Options",
+                          "value": "nosniff"
+                        },
+                        {
+                          "key": "Content-Security-Policy",
+                          "value": "default-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:;"
+                        },
+                        {
+                          "key": "Strict-Transport-Security",
+                          "value": "max-age=31536000"
+                        },
+                        {
+                          "key": "Cache-Control",
+                          "value": "no-store, no-cache, must-revalidate, post-check=0, pre-check=0"
+                        },
+                        {
+                          "key": "Expires",
+                          "value": "Thu, 19 Nov 1981 08:52:00 GMT"
+                        },
+                        {
+                          "key": "Pragma",
+                          "value": "no-cache"
+                        },
+                        {
+                          "key": "Allow",
+                          "value": "GET, HEAD, POST, PUT, DELETE, OPTIONS"
+                        }
+                      ],
+                      "cookie": [],
+                      "responseTime": null,
+                      "body": "<response status=\"success\">\n    <result>\n        <job>\n            <tenq>2020/12/17 11:41:28</tenq>\n            <tdeq>11:41:28</tdeq>\n            <id>5</id>\n            <user></user>\n            <type>Exec</type>\n            <status>ACT</status>\n            <queued>NO</queued>\n            <stoppable>yes</stoppable>\n            <result>PEND</result>\n            <tfin>Still Active</tfin>\n            <description></description>\n            <positionInQ>0</positionInQ>\n            <progress>40\n</progress>\n            <details></details>\n            <warnings></warnings>\n        </job>\n    </result>\n</response>"
+                    },
+                    {
+                      "id": "f283bb44-bd7a-4109-98e3-3fb48cb100e2",
+                      "name": "Download exported tech support data",
+                      "originalRequest": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                          "raw": "https://{{host}}/api/?type=export&category=tech-support&action=get&job-id=5",
+                          "protocol": "https",
+                          "host": [
+                            "{{host}}"
+                          ],
+                          "path": [
+                            "api",
+                            ""
+                          ],
+                          "query": [
+                            {
+                              "key": "type",
+                              "value": "export"
+                            },
+                            {
+                              "key": "category",
+                              "value": "tech-support"
+                            },
+                            {
+                              "key": "action",
+                              "value": "get",
+                              "description": "*Optional*.  Action to perform.  Can be one of `get`, `status`, `finish`.  If not specified, a new retrieval job is started."
+                            },
+                            {
+                              "key": "job-id",
+                              "value": "5",
+                              "description": "*Optional*.  Return the results of this retrieval job."
+                            }
+                          ]
+                        }
+                      },
+                      "status": "OK",
+                      "code": 200,
+                      "_postman_previewlanguage": null,
+                      "header": [
+                        {
+                          "key": "Date",
+                          "value": "Thu, 17 Dec 2020 19:43:01 GMT"
+                        },
+                        {
+                          "key": "Content-Type",
+                          "value": "application/octet-stream"
+                        },
+                        {
+                          "key": "Content-Length",
+                          "value": "20235465"
+                        },
+                        {
+                          "key": "Connection",
+                          "value": "keep-alive"
+                        },
+                        {
+                          "key": "X-FRAME-OPTIONS",
+                          "value": "SAMEORIGIN"
+                        },
+                        {
+                          "key": "X-XSS-Protection",
+                          "value": "1; mode=block"
+                        },
+                        {
+                          "key": "X-Content-Type-Options",
+                          "value": "nosniff"
+                        },
+                        {
+                          "key": "Content-Security-Policy",
+                          "value": "default-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:;"
+                        },
+                        {
+                          "key": "Strict-Transport-Security",
+                          "value": "max-age=31536000"
+                        },
+                        {
+                          "key": "Cache-Control",
+                          "value": "must-revalidate, post-check=0, pre-check=0"
+                        },
+                        {
+                          "key": "Expires",
+                          "value": "0"
+                        },
+                        {
+                          "key": "Pragma",
+                          "value": "public"
+                        },
+                        {
+                          "key": "Content-Description",
+                          "value": "File Transfer"
+                        },
+                        {
+                          "key": "Content-Disposition",
+                          "value": "attachment; filename=techsupport-9351.tgz"
+                        },
+                        {
+                          "key": "Access-Control-Allow-Origin",
+                          "value": ""
+                        },
+                        {
+                          "key": "Content-Transfer-Encoding",
+                          "value": "binary"
+                        },
+                        {
+                          "key": "Allow",
+                          "value": "GET, HEAD, POST, PUT, DELETE, OPTIONS"
+                        }
+                      ],
+                      "cookie": [],
+                      "responseTime": null,
+                      "body": null
                     }
                   ]
                 }
@@ -12234,13 +12309,13 @@
   ],
   "variable": [
     {
-      "id": "17c9c5e1-bab7-4b53-82e7-f23dc106296d",
+      "id": "2e03fe21-fc72-42db-8746-ddf9c36c6322",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "d3343e81-5f7e-4663-863f-3fa76724a6c0",
+      "id": "f7f5dc73-8cf1-4fb2-9234-b5bd804338bd",
       "key": "{{key}}",
       "value": "",
       "type": "string"
