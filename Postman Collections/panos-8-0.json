@@ -8264,7 +8264,7 @@
             }
           ],
           "_postman_id": "23756299-0092-4f5e-aac4-b873e07acf55",
-          "description": "You can export certain types of files from the firewall using the `type=export` parameter in the API request.\n\nThe `category` parameter is used to specify the type of file that you want to export:\n\n- Configuration: `configuration`\n- Certificates: `certificate`\n- Response pages: \n    - `application-block-page` \n    - `captive-portal-text`\n    - `file-block-continue-page`\n    - `file-block-page` \n    - `global-protect-portal-custom-help-page`\n    - `global-protect-portal-custom-login-page` \n    - `global-protect-portal-custom-welcome-page`\n    - `ssl-cert-status-page`\n    - `ssl-optout-text`\n    - `url-block-page` \n    - `url-coach-text`\n    - `virus-block-page`\n- Tech Support file: `tech-support`\n- Device state: `device-state`",
+          "description": "You can export files from the firewall using the `type=export` parameter in the API request.\n\nThe following types of resources can be exported:\n\n- Configuration\n- Certificates\n- Device State\n- Packet Captures\n- Response Pages\n- Tech Support Files",
           "event": [
             {
               "listen": "prerequest",
@@ -12463,13 +12463,13 @@
   ],
   "variable": [
     {
-      "id": "e3756dfa-d7f8-4f58-b02d-85b6c40b5ee6",
+      "id": "6417651c-5ae5-4074-a0b1-badb6b9c2bb5",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "8f176eff-5d0c-4346-ba38-bd037e42abaf",
+      "id": "8e8bd41e-e83d-4794-a639-8371e760296c",
       "key": "{{key}}",
       "value": "",
       "type": "string"
