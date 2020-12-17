@@ -10780,6 +10780,12 @@
           ],
           "_postman_id": "05e52a2b-4bc5-469b-9862-d94b69f79739",
           "_postman_isSubFolder": true
+        },
+        {
+          "name": "Configure SAML 2.0 Authentication",
+          "item": [],
+          "_postman_id": "38298c7f-2984-4b1f-bf85-79d3bf9f0f13",
+          "_postman_isSubFolder": true
         }
       ],
       "_postman_id": "48a4821f-5bbb-4b0c-ad3a-eb55970c295e"
@@ -10794,7 +10800,7 @@
         "method": "GET",
         "header": [],
         "url": {
-          "raw": "https://{{host}}/api?type=config&action=set&xpath=/config/devices/entry[@name='localhost.localdomain']/template/entry[@name='Test-Template']/config/devices/entry[@name='localhost.localdomain']/deviceconfig/system/motd-and-banner&element=<motd-and-banner><motd-enable>yes</motd-enable><message>Help I'm trapped in a firewall factory!</message></motd-and-banner>",
+          "raw": "https://{{host}}/api?type=config&action=set&xpath=/config/devices/entry[@name='localhost.localdomain']/template/entry[@name='Test-Template']/config/devices/entry[@name='localhost.localdomain']/deviceconfig/system&element=<motd-and-banner><motd-enable>yes</motd-enable><message>Help I'm trapped in a firewall factory!</message></motd-and-banner>",
           "protocol": "https",
           "host": [
             "{{host}}"
@@ -10813,7 +10819,7 @@
             },
             {
               "key": "xpath",
-              "value": "/config/devices/entry[@name='localhost.localdomain']/template/entry[@name='Test-Template']/config/devices/entry[@name='localhost.localdomain']/deviceconfig/system/motd-and-banner"
+              "value": "/config/devices/entry[@name='localhost.localdomain']/template/entry[@name='Test-Template']/config/devices/entry[@name='localhost.localdomain']/deviceconfig/system"
             },
             {
               "key": "element",
@@ -10856,13 +10862,13 @@
   ],
   "variable": [
     {
-      "id": "d9fa9347-c878-442b-88ca-7e06d8e48822",
+      "id": "e5e0dbfe-2814-411d-b395-51ee411139b1",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "efad9488-a4cc-4ebe-9f0b-3144e5c14b20",
+      "id": "b829751c-abb5-47c7-bf29-405ca84f5778",
       "key": "{{key}}",
       "value": "",
       "type": "string"
