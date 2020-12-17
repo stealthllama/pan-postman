@@ -7561,7 +7561,21 @@
             },
             {
               "name": "Export Certificates and Keys",
-              "item": [],
+              "item": [
+                {
+                  "name": "Export Certificate",
+                  "_postman_id": "826c67d4-bf88-4c1a-b6cb-11a526a21026",
+                  "protocolProfileBehavior": {
+                    "disableBodyPruning": true
+                  },
+                  "request": {
+                    "method": "GET",
+                    "header": [],
+                    "url": ""
+                  },
+                  "response": []
+                }
+              ],
               "_postman_id": "22f037d0-c330-46c7-a739-6c05cf6b0756",
               "description": "When exporting certificates and keys, use the following parameters:\n\n- `certificate-name`: name of the certificate object on the firewall\n- `passphrase`: required when including the certificate key\n- `format`: certificate format - one of `pkcs12`, `pem`, `pkcs10`\n- `include-key`: whether to include the private key - `yes` or `no`\n- `vsys`: virtual system where the object is located, default is `shared`\n",
               "_postman_isSubFolder": true
@@ -11032,13 +11046,13 @@
   ],
   "variable": [
     {
-      "id": "d27d38bc-beb6-4fb7-9fb9-8ebebde4b13f",
+      "id": "c549bb7e-1506-4412-b151-4f8c81a17c22",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "04185ae8-db47-463d-abca-d195513a5459",
+      "id": "9c67eeea-53bc-4e3e-a0b0-ffa74c146f24",
       "key": "{{key}}",
       "value": "",
       "type": "string"
