@@ -8602,7 +8602,7 @@
                 "method": "GET",
                 "header": [],
                 "url": {
-                  "raw": "https://{{host}}/api/?type=log&log-type=&query=&action=get&job-id=13",
+                  "raw": "https://{{host}}/api/?type=log&log-type=&query=&nlogs=&skip=&dir",
                   "protocol": "https",
                   "host": [
                     "{{host}}"
@@ -8627,12 +8627,20 @@
                       "description": "*Optional*. Specify the match criteria for the logs.  This is similar to the query used in the web interface Monitor tab, but must be URL encoded."
                     },
                     {
-                      "key": "action",
-                      "value": "get"
+                      "key": "nlogs",
+                      "value": "",
+                      "description": "*Optional.* Specify the number of logs to retrieve.  The default is 20 when the parameter is not specified.  Maximum is 5000."
                     },
                     {
-                      "key": "job-id",
-                      "value": "13"
+                      "key": "skip",
+                      "value": "",
+                      "description": "*Optional*.  Specify the number of logs to skip when doing a log retrieval (default is 0).  Useful for retrieving logs in batches."
+                    },
+                    {
+                      "key": "dir",
+                      "value": null,
+                      "description": "*Optional*. Show logs either oldest first (`forward`) or newest first (`backward`). Default is `backward`.",
+                      "type": "text"
                     }
                   ]
                 }
@@ -12261,13 +12269,13 @@
   ],
   "variable": [
     {
-      "id": "90136197-c971-4376-98c9-8bada98799ef",
+      "id": "7af2758c-4480-4c71-9936-679547943f0f",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "721a1cba-6f3a-47ce-b76a-f3210f3bae7b",
+      "id": "f70a894c-6a75-4e51-b489-0e8f10acdcb8",
       "key": "{{key}}",
       "value": "",
       "type": "string"
