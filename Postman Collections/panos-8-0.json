@@ -8305,11 +8305,13 @@
                     },
                     {
                       "key": "target-tpl",
-                      "value": "Test-Template"
+                      "value": "Test-Template",
+                      "description": "Target template to import into."
                     },
                     {
                       "key": "target-tpl-vsys",
-                      "value": "vsys1"
+                      "value": "vsys1",
+                      "description": "Virtual system within target template."
                     }
                   ]
                 }
@@ -11877,13 +11879,13 @@
   ],
   "variable": [
     {
-      "id": "1d657390-8e70-4dbd-8099-c6be3584e676",
+      "id": "5f9f1134-6567-40aa-91a6-fea36f3a04b1",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "fb278f46-29db-4f68-a8f3-a43a758eda27",
+      "id": "2b0e6293-22dc-483e-98d0-836a0b4b0a1c",
       "key": "{{key}}",
       "value": "",
       "type": "string"
