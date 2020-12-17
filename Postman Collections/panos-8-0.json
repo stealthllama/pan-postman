@@ -7870,7 +7870,7 @@
                     "method": "GET",
                     "header": [],
                     "url": {
-                      "raw": "https://{{host}}/api/?type=export&category=tech-support",
+                      "raw": "https://{{host}}/api/?type=export&category=tech-support&action=status&job-id=5",
                       "protocol": "https",
                       "host": [
                         "{{host}}"
@@ -7890,15 +7890,13 @@
                         },
                         {
                           "key": "action",
-                          "value": "",
-                          "description": "*Optional*.  Action to perform.  Can be one of `get`, `status`, `finish`.  If not specified, a new retrieval job is started.",
-                          "disabled": true
+                          "value": "status",
+                          "description": "*Optional*.  Action to perform.  Can be one of `get`, `status`, `finish`.  If not specified, a new retrieval job is started."
                         },
                         {
                           "key": "job-id",
-                          "value": "",
-                          "description": "*Optional*.  Return the results of this retrieval job.",
-                          "disabled": true
+                          "value": "5",
+                          "description": "*Optional*.  Return the results of this retrieval job."
                         }
                       ]
                     },
@@ -12236,13 +12234,13 @@
   ],
   "variable": [
     {
-      "id": "472792aa-9af7-427c-9e62-3e56cd5ccd06",
+      "id": "17c9c5e1-bab7-4b53-82e7-f23dc106296d",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "6d4a09ca-3ae5-48fc-a7cb-acafee9bbba8",
+      "id": "d3343e81-5f7e-4663-863f-3fa76724a6c0",
       "key": "{{key}}",
       "value": "",
       "type": "string"
