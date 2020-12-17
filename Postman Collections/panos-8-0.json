@@ -7597,7 +7597,8 @@
                         },
                         {
                           "key": "format",
-                          "value": "pem"
+                          "value": "pem",
+                          "description": "Export format.  One of `pem`, `pkcs10`, `pkcs12`."
                         },
                         {
                           "key": "include-key",
@@ -11189,13 +11190,13 @@
   ],
   "variable": [
     {
-      "id": "4cb47192-bc02-4d2e-9f9a-ec38b916c363",
+      "id": "89563225-7c23-4ea4-93eb-195cce9f6976",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "d5d1c28e-0622-4db0-abbb-e92689ae735f",
+      "id": "3bc707bf-7423-4f05-a975-9e7a539db73e",
       "key": "{{key}}",
       "value": "",
       "type": "string"
