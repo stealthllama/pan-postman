@@ -7526,7 +7526,7 @@
                     "method": "GET",
                     "header": [],
                     "url": {
-                      "raw": "https://{{host}}/api/?type=export&category=certificate&certificate-name=Test-Cert&format=pem&include-key=no",
+                      "raw": "https://{{host}}/api/?type=export&category=certificate&certificate-name=&format=&include-key=&vsys",
                       "protocol": "https",
                       "host": [
                         "{{host}}"
@@ -7546,18 +7546,24 @@
                         },
                         {
                           "key": "certificate-name",
-                          "value": "Test-Cert",
-                          "description": "Name of certificate object."
+                          "value": "",
+                          "description": "**Required**. Name of certificate."
                         },
                         {
                           "key": "format",
-                          "value": "pem",
-                          "description": "Export format.  One of `pem`, `pkcs10`, `pkcs12`."
+                          "value": "",
+                          "description": "**Required**.  Format for certificate.  One of `pem`, `pkcs10`, `pkcs12`."
                         },
                         {
                           "key": "include-key",
-                          "value": "no",
-                          "description": "Include private key with certificate.  One of `yes`, `no`."
+                          "value": "",
+                          "description": "**Required**. Include private key with certificate.  One of `yes`, `no`."
+                        },
+                        {
+                          "key": "vsys",
+                          "value": null,
+                          "description": "*Optional*.  Virtual system where object is located.  Default is `shared`.",
+                          "type": "text"
                         }
                       ]
                     }
@@ -8971,19 +8977,6 @@
               "body": "<response status = \"success\">\n    <result>\n        <sw-version>10.0.2</sw-version>\n        <multi-vsys>off</multi-vsys>\n        <model>PA-VM</model>\n        <serial>007000001222</serial>\n    </result>\n</response>"
             }
           ]
-        },
-        {
-          "name": "Import Files",
-          "_postman_id": "02c6412f-14a1-4fa8-b8c6-87621efa28bd",
-          "protocolProfileBehavior": {
-            "disableBodyPruning": true
-          },
-          "request": {
-            "method": "GET",
-            "header": [],
-            "url": ""
-          },
-          "response": []
         }
       ],
       "_postman_id": "3178f469-44ee-4373-82b4-9d5bdd5d59b8"
@@ -12227,13 +12220,13 @@
   ],
   "variable": [
     {
-      "id": "61cd7b0e-a2cf-4202-a16c-38daac6252eb",
+      "id": "9a345840-70d5-4ecc-931c-e9f5ad0511ea",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "1ccd5a5b-4d0c-4dc2-9b3d-6d9cd1605c93",
+      "id": "ec822996-52b3-4e2b-9b02-d2d51673217f",
       "key": "{{key}}",
       "value": "",
       "type": "string"
