@@ -8739,7 +8739,121 @@
                   ]
                 }
               },
-              "response": []
+              "response": [
+                {
+                  "id": "299c22dd-c219-48b4-885e-417b1e39ade8",
+                  "name": "Import anti-virus update",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [],
+                    "body": {
+                      "mode": "formdata",
+                      "formdata": [
+                        {
+                          "key": "file",
+                          "description": "File to import.",
+                          "type": "file",
+                          "value": null
+                        }
+                      ]
+                    },
+                    "url": {
+                      "raw": "https://{{host}}/api/?type=import&category=anti-virus",
+                      "protocol": "https",
+                      "host": [
+                        "{{host}}"
+                      ],
+                      "path": [
+                        "api",
+                        ""
+                      ],
+                      "query": [
+                        {
+                          "key": "type",
+                          "value": "import"
+                        },
+                        {
+                          "key": "category",
+                          "value": "anti-virus",
+                          "description": "**Required**.  Can be one of: `anti-virus`, `application-block-page`, `captive-portal-text`, `certificate`, `configuration`, `content`, `credential-block-page`, `credential-coach-text`, `custom-logo`, `data-filter-block-page`, `device-state`, `file-block-continue-page`, `file-block-page`, `global-protect-client`, `global-protect-clientless-vpn`, `global-protect-portal-custom-help-page`, `global-protect-portal-custom-home-page`, `global-protect-portal-custom-login-page`, `global-protect-portal-custom-welcome-page`, `high-availability-key`, `hsm-server-cert`, `idp-metadata`, `keypair`, `license`, `logdb`, `mfa-login-page`, `pandb-url-database`, `plugin`, `private-key`, `safe-search-block-page`, `saml-auth-internal-error-page`, `signed-url-database`, `software`, `ssl-cert-status-page`, `ssl-optout-text`, `ui-translation-mapping`, `url-block-page`, `url-coach-text`, `url-database`, `virus-block-page`, `wildfire`."
+                        },
+                        {
+                          "key": "target-tpl",
+                          "value": null,
+                          "description": "*Optional*. When used with Panorama, import this object into this template.",
+                          "disabled": true
+                        },
+                        {
+                          "key": "target-tpl-vsys",
+                          "value": null,
+                          "description": "*Optional*. When used with Panorama, import this object into this virtual system within target template.  Defaults to `shared`.",
+                          "disabled": true
+                        }
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "xml",
+                  "header": [
+                    {
+                      "key": "Date",
+                      "value": "Thu, 17 Dec 2020 21:42:33 GMT"
+                    },
+                    {
+                      "key": "Content-Type",
+                      "value": "application/xml; charset=UTF-8"
+                    },
+                    {
+                      "key": "Content-Length",
+                      "value": "97"
+                    },
+                    {
+                      "key": "Connection",
+                      "value": "keep-alive"
+                    },
+                    {
+                      "key": "X-FRAME-OPTIONS",
+                      "value": "SAMEORIGIN"
+                    },
+                    {
+                      "key": "X-XSS-Protection",
+                      "value": "1; mode=block"
+                    },
+                    {
+                      "key": "X-Content-Type-Options",
+                      "value": "nosniff"
+                    },
+                    {
+                      "key": "Content-Security-Policy",
+                      "value": "default-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:;"
+                    },
+                    {
+                      "key": "Strict-Transport-Security",
+                      "value": "max-age=31536000"
+                    },
+                    {
+                      "key": "Cache-Control",
+                      "value": "no-store, no-cache, must-revalidate, post-check=0, pre-check=0"
+                    },
+                    {
+                      "key": "Expires",
+                      "value": "Thu, 19 Nov 1981 08:52:00 GMT"
+                    },
+                    {
+                      "key": "Pragma",
+                      "value": "no-cache"
+                    },
+                    {
+                      "key": "Allow",
+                      "value": "GET, HEAD, POST, PUT, DELETE, OPTIONS"
+                    }
+                  ],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "<response status=\"success\">\n    <msg>\n        <line>panup-all-antivirus-3566-4077 saved</line>\n    </msg>\n</response>"
+                }
+              ]
             },
             {
               "name": "Import certificate",
@@ -9103,154 +9217,6 @@
                   "cookie": [],
                   "responseTime": null,
                   "body": "<response status=\"success\">\n    <result>Successfully imported Test-Cert into candidate configuration</result>\n</response>"
-                }
-              ]
-            },
-            {
-              "name": "Import anti-virus signatures",
-              "_postman_id": "5b8aa10c-573f-4f28-a993-f3addd7fd6f8",
-              "protocolProfileBehavior": {
-                "disableBodyPruning": true
-              },
-              "request": {
-                "method": "POST",
-                "header": [],
-                "body": {
-                  "mode": "formdata",
-                  "formdata": [
-                    {
-                      "key": "file",
-                      "description": "File to upload.",
-                      "type": "file",
-                      "value": null
-                    }
-                  ],
-                  "options": {
-                    "formdata": {}
-                  }
-                },
-                "url": {
-                  "raw": "https://{{host}}/api/?type=import&category=anti-virus",
-                  "protocol": "https",
-                  "host": [
-                    "{{host}}"
-                  ],
-                  "path": [
-                    "api",
-                    ""
-                  ],
-                  "query": [
-                    {
-                      "key": "type",
-                      "value": "import"
-                    },
-                    {
-                      "key": "category",
-                      "value": "anti-virus"
-                    }
-                  ]
-                }
-              },
-              "response": [
-                {
-                  "id": "618068ee-edac-4d2e-97ed-e0aecd34b310",
-                  "name": "Import anti-virus signatures",
-                  "originalRequest": {
-                    "method": "POST",
-                    "header": [],
-                    "body": {
-                      "mode": "formdata",
-                      "formdata": [
-                        {
-                          "key": "file",
-                          "description": "File to upload.",
-                          "type": "file",
-                          "value": null
-                        }
-                      ]
-                    },
-                    "url": {
-                      "raw": "https://{{host}}/api/?type=import&category=anti-virus",
-                      "protocol": "https",
-                      "host": [
-                        "{{host}}"
-                      ],
-                      "path": [
-                        "api",
-                        ""
-                      ],
-                      "query": [
-                        {
-                          "key": "type",
-                          "value": "import"
-                        },
-                        {
-                          "key": "category",
-                          "value": "anti-virus"
-                        }
-                      ]
-                    }
-                  },
-                  "status": "OK",
-                  "code": 200,
-                  "_postman_previewlanguage": "xml",
-                  "header": [
-                    {
-                      "key": "Date",
-                      "value": "Thu, 17 Dec 2020 18:17:07 GMT"
-                    },
-                    {
-                      "key": "Content-Type",
-                      "value": "application/xml; charset=UTF-8"
-                    },
-                    {
-                      "key": "Content-Length",
-                      "value": "97"
-                    },
-                    {
-                      "key": "Connection",
-                      "value": "keep-alive"
-                    },
-                    {
-                      "key": "X-FRAME-OPTIONS",
-                      "value": "SAMEORIGIN"
-                    },
-                    {
-                      "key": "X-XSS-Protection",
-                      "value": "1; mode=block"
-                    },
-                    {
-                      "key": "X-Content-Type-Options",
-                      "value": "nosniff"
-                    },
-                    {
-                      "key": "Content-Security-Policy",
-                      "value": "default-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:;"
-                    },
-                    {
-                      "key": "Strict-Transport-Security",
-                      "value": "max-age=31536000"
-                    },
-                    {
-                      "key": "Cache-Control",
-                      "value": "no-store, no-cache, must-revalidate, post-check=0, pre-check=0"
-                    },
-                    {
-                      "key": "Expires",
-                      "value": "Thu, 19 Nov 1981 08:52:00 GMT"
-                    },
-                    {
-                      "key": "Pragma",
-                      "value": "no-cache"
-                    },
-                    {
-                      "key": "Allow",
-                      "value": "GET, HEAD, POST, PUT, DELETE, OPTIONS"
-                    }
-                  ],
-                  "cookie": [],
-                  "responseTime": null,
-                  "body": "<response status=\"success\">\n    <msg>\n        <line>panup-all-antivirus-3566-4077 saved</line>\n    </msg>\n</response>"
                 }
               ]
             }
@@ -12912,13 +12878,13 @@
   ],
   "variable": [
     {
-      "id": "afd2ba9d-125a-4f37-ad4f-348f29b0c4c9",
+      "id": "a6dee233-951a-4df7-849b-740289c06cbc",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "0607e4bc-3376-438d-bbbd-1aaf5a6ff963",
+      "id": "41517d99-726f-40f2-b437-02d6a1f99c2e",
       "key": "{{key}}",
       "value": "",
       "type": "string"
