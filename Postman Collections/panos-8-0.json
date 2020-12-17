@@ -7515,203 +7515,9 @@
             },
             {
               "name": "Export Certificates and Keys",
-              "item": [
-                {
-                  "name": "Export Certificate",
-                  "_postman_id": "826c67d4-bf88-4c1a-b6cb-11a526a21026",
-                  "protocolProfileBehavior": {
-                    "disableBodyPruning": true
-                  },
-                  "request": {
-                    "method": "GET",
-                    "header": [],
-                    "url": {
-                      "raw": "https://{{host}}/api/?type=export&category=certificate&certificate-name=&format=&include-key=&vsys",
-                      "protocol": "https",
-                      "host": [
-                        "{{host}}"
-                      ],
-                      "path": [
-                        "api",
-                        ""
-                      ],
-                      "query": [
-                        {
-                          "key": "type",
-                          "value": "export"
-                        },
-                        {
-                          "key": "category",
-                          "value": "certificate"
-                        },
-                        {
-                          "key": "certificate-name",
-                          "value": "",
-                          "description": "**Required**. Name of certificate."
-                        },
-                        {
-                          "key": "format",
-                          "value": "",
-                          "description": "**Required**.  Format for certificate.  One of `pem`, `pkcs10`, `pkcs12`."
-                        },
-                        {
-                          "key": "include-key",
-                          "value": "",
-                          "description": "**Required**. Include private key with certificate.  One of `yes`, `no`."
-                        },
-                        {
-                          "key": "vsys",
-                          "value": null,
-                          "description": "*Optional*.  Virtual system where object is located.  Default is `shared`.",
-                          "type": "text"
-                        }
-                      ]
-                    }
-                  },
-                  "response": [
-                    {
-                      "id": "2587f82b-1cfd-419f-9c26-438760461c95",
-                      "name": "Export Certificate",
-                      "originalRequest": {
-                        "method": "GET",
-                        "header": [],
-                        "url": {
-                          "raw": "https://{{host}}/api/?type=export&category=certificate&certificate-name=Test-Cert&format=pem&include-key=no",
-                          "protocol": "https",
-                          "host": [
-                            "{{host}}"
-                          ],
-                          "path": [
-                            "api",
-                            ""
-                          ],
-                          "query": [
-                            {
-                              "key": "type",
-                              "value": "export"
-                            },
-                            {
-                              "key": "category",
-                              "value": "certificate"
-                            },
-                            {
-                              "key": "certificate-name",
-                              "value": "Test-Cert"
-                            },
-                            {
-                              "key": "format",
-                              "value": "pem"
-                            },
-                            {
-                              "key": "include-key",
-                              "value": "no"
-                            }
-                          ]
-                        }
-                      },
-                      "status": "OK",
-                      "code": 200,
-                      "_postman_previewlanguage": "plain",
-                      "header": [
-                        {
-                          "key": "Date",
-                          "value": "Thu, 17 Dec 2020 16:37:04 GMT"
-                        },
-                        {
-                          "key": "Content-Type",
-                          "value": "text/plain; charset=UTF-8"
-                        },
-                        {
-                          "key": "Content-Length",
-                          "value": "1021"
-                        },
-                        {
-                          "key": "Connection",
-                          "value": "keep-alive"
-                        },
-                        {
-                          "key": "X-FRAME-OPTIONS",
-                          "value": "SAMEORIGIN"
-                        },
-                        {
-                          "key": "X-XSS-Protection",
-                          "value": "1; mode=block"
-                        },
-                        {
-                          "key": "X-Content-Type-Options",
-                          "value": "nosniff"
-                        },
-                        {
-                          "key": "Content-Security-Policy",
-                          "value": "default-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:;"
-                        },
-                        {
-                          "key": "Strict-Transport-Security",
-                          "value": "max-age=31536000"
-                        },
-                        {
-                          "key": "Cache-Control",
-                          "value": "no-store, no-cache, must-revalidate, post-check=0, pre-check=0"
-                        },
-                        {
-                          "key": "Expires",
-                          "value": "Thu, 19 Nov 1981 08:52:00 GMT"
-                        },
-                        {
-                          "key": "Pragma",
-                          "value": "no-cache"
-                        },
-                        {
-                          "key": "Set-Cookie",
-                          "value": "PHPSESSID=9c74bf580b0ca91ad9779ecfc0ae992e; path=/; secure; HttpOnly"
-                        },
-                        {
-                          "key": "Content-Disposition",
-                          "value": "attachment; filename=Test-Cert.pem"
-                        },
-                        {
-                          "key": "Allow",
-                          "value": "GET, HEAD, POST, PUT, DELETE, OPTIONS"
-                        }
-                      ],
-                      "cookie": [],
-                      "responseTime": null,
-                      "body": "-----BEGIN CERTIFICATE-----\nMIICxjCCAa6gAwIBAgIJAOUkoMMcFnUEMA0GCSqGSIb3DQEBCwUAMBMxETAPBgNV\nBAMTCDEwLjEuMS4xMB4XDTIwMTIxNzE2MzUzOVoXDTIxMTIxNzE2MzUzOVowEzER\nMA8GA1UEAxMIMTAuMS4xLjEwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIB\nAQDXnd9HubRqrI79ILKDnKaJMbihPVJpxC4yS7tkEV6KsK0ULVQCpG42/B60sopS\n+avZxs+U9RWswlZAf8y+omSmMRaz2l/QtiyYmBrieFA5T/fozLTkLN6E2zRP1m/V\ncAyv4enwcjSkDFuAzmFIs9quDlH2Fx9VBoaF6P1BKjoekMbDiIRFeehC70DnN19p\nOx8fhucfmkG7j21CPNMWn+tdpShYPj1lnLsnkTiKiZeNtDk6ReiX2UJN7oOtMa3j\nMmHf9234ilAtG4LZWsXU7wEPcfeU9SGVgakk0PzWETKGlmi9cKmB1rskwhbOimtd\n0wxwHbRzgK7fYem0VEPVpclpAgMBAAGjHTAbMAwGA1UdEwQFMAMBAf8wCwYDVR0P\nBAQDAgIEMA0GCSqGSIb3DQEBCwUAA4IBAQANQDOKqlrtmiYPiSluQ9m9H1Js85mU\nUq6bccD2Y6R+vUjTKKlKsWEY5xW8V4lBXSEyyLdqhC4g4i+AW0knV+AVQ0Hz0D0s\nk1BDa5fWoj67g72RZf0iYNMui06B7o4urHW2dRvGK80lQ6+mkGkHJficS1U1/Uca\nMQjeMM5nzKZNQgiX/xTonQxNaZstdLY631ruOs2rcuKiYf+rgSVmwkuTkCS7g18Y\ncVzA8GUN/jzD+nD/y04SqganpK8r7SNdkp/tTXUu9EaHjvIWfQQnjc62K55MqL1j\nhrjnDSIvAU/kUQVkqM9aVgFVt2pAI/TIbHmuIZCHkSK6LdFNkJhaAd4y\n-----END CERTIFICATE-----\n"
-                    }
-                  ]
-                }
-              ],
+              "item": [],
               "_postman_id": "22f037d0-c330-46c7-a739-6c05cf6b0756",
               "description": "When exporting certificates and keys, use the following parameters:\n\n- `certificate-name`: name of the certificate object on the firewall\n- `passphrase`: required when including the certificate key\n- `format`: certificate format - one of `pkcs12`, `pem`, `pkcs10`\n- `include-key`: whether to include the private key - `yes` or `no`\n- `vsys`: virtual system where the object is located, default is `shared`\n",
-              "_postman_isSubFolder": true
-            },
-            {
-              "name": "Export Technical Support Data",
-              "item": [],
-              "_postman_id": "ef49dbfe-e23b-4824-b6dc-4cbb11333113",
-              "description": "View the [official documentation](https://docs.paloaltonetworks.com/pan-os/10-0/pan-os-panorama-api/pan-os-xml-api-request-types/export-files-api/export-technical-support-data.html).\n\nDebug log data sizes are large, so the API uses an asynchronous job scheduling approach to retrieve technical support data.\n\nWhen exporting technical support data, the `action` parameter is used:\n\n- `action` not specified: The system will create a new job to retrieve tech support data. A job ID will be created for further use.\n\n- `action=status`: Check the status of the export job.  This will return an XML response with a status element - when the status text data is `FIN`, the job is completed and the tech support file can be retrieved.\n\n- `action=get`: Retrieve the tech support file as an attachment.  The response contains a `application/octet-stream` content type and a content disposition header with a suggested filename.\n\n- `action=finish`: Stop an active job.",
-              "event": [
-                {
-                  "listen": "prerequest",
-                  "script": {
-                    "id": "91fcbcbc-0a6d-41f0-bc33-fda043f2c9e5",
-                    "type": "text/javascript",
-                    "exec": [
-                      ""
-                    ]
-                  }
-                },
-                {
-                  "listen": "test",
-                  "script": {
-                    "id": "2b2468b9-31d8-49a1-a8cc-9ee0304abbd8",
-                    "type": "text/javascript",
-                    "exec": [
-                      ""
-                    ]
-                  }
-                }
-              ],
               "_postman_isSubFolder": true
             },
             {
@@ -7724,7 +7530,7 @@
                 "method": "GET",
                 "header": [],
                 "url": {
-                  "raw": "https://{{host}}/api/?type=export&category=tech-support&action=get&job-id=5",
+                  "raw": "https://{{host}}/api/?type=export&category=tech-support&action=&job-id=",
                   "protocol": "https",
                   "host": [
                     "{{host}}"
@@ -7744,12 +7550,12 @@
                     },
                     {
                       "key": "action",
-                      "value": "get",
+                      "value": "",
                       "description": "*Optional*.  Action to perform.  Can be one of `get`, `status`, `finish`.  If not specified, a new retrieval job is started."
                     },
                     {
                       "key": "job-id",
-                      "value": "5",
+                      "value": "",
                       "description": "*Optional*.  Return the results of this retrieval job."
                     }
                   ]
@@ -8070,7 +7876,171 @@
                   ],
                   "cookie": [],
                   "responseTime": null,
-                  "body": null
+                  "body": "... binary data omitted ..."
+                }
+              ]
+            },
+            {
+              "name": "Export Certificate",
+              "_postman_id": "826c67d4-bf88-4c1a-b6cb-11a526a21026",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "https://{{host}}/api/?type=export&category=certificate&certificate-name=&format=&include-key=&vsys",
+                  "protocol": "https",
+                  "host": [
+                    "{{host}}"
+                  ],
+                  "path": [
+                    "api",
+                    ""
+                  ],
+                  "query": [
+                    {
+                      "key": "type",
+                      "value": "export"
+                    },
+                    {
+                      "key": "category",
+                      "value": "certificate"
+                    },
+                    {
+                      "key": "certificate-name",
+                      "value": "",
+                      "description": "**Required**. Name of certificate."
+                    },
+                    {
+                      "key": "format",
+                      "value": "",
+                      "description": "**Required**.  Format for certificate.  One of `pem`, `pkcs10`, `pkcs12`."
+                    },
+                    {
+                      "key": "include-key",
+                      "value": "",
+                      "description": "**Required**. Include private key with certificate.  One of `yes`, `no`."
+                    },
+                    {
+                      "key": "vsys",
+                      "value": null,
+                      "description": "*Optional*.  Virtual system where object is located.  Default is `shared`.",
+                      "type": "text"
+                    }
+                  ]
+                }
+              },
+              "response": [
+                {
+                  "id": "2587f82b-1cfd-419f-9c26-438760461c95",
+                  "name": "Export Certificate",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [],
+                    "url": {
+                      "raw": "https://{{host}}/api/?type=export&category=certificate&certificate-name=Test-Cert&format=pem&include-key=no",
+                      "protocol": "https",
+                      "host": [
+                        "{{host}}"
+                      ],
+                      "path": [
+                        "api",
+                        ""
+                      ],
+                      "query": [
+                        {
+                          "key": "type",
+                          "value": "export"
+                        },
+                        {
+                          "key": "category",
+                          "value": "certificate"
+                        },
+                        {
+                          "key": "certificate-name",
+                          "value": "Test-Cert"
+                        },
+                        {
+                          "key": "format",
+                          "value": "pem"
+                        },
+                        {
+                          "key": "include-key",
+                          "value": "no"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "plain",
+                  "header": [
+                    {
+                      "key": "Date",
+                      "value": "Thu, 17 Dec 2020 16:37:04 GMT"
+                    },
+                    {
+                      "key": "Content-Type",
+                      "value": "text/plain; charset=UTF-8"
+                    },
+                    {
+                      "key": "Content-Length",
+                      "value": "1021"
+                    },
+                    {
+                      "key": "Connection",
+                      "value": "keep-alive"
+                    },
+                    {
+                      "key": "X-FRAME-OPTIONS",
+                      "value": "SAMEORIGIN"
+                    },
+                    {
+                      "key": "X-XSS-Protection",
+                      "value": "1; mode=block"
+                    },
+                    {
+                      "key": "X-Content-Type-Options",
+                      "value": "nosniff"
+                    },
+                    {
+                      "key": "Content-Security-Policy",
+                      "value": "default-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:;"
+                    },
+                    {
+                      "key": "Strict-Transport-Security",
+                      "value": "max-age=31536000"
+                    },
+                    {
+                      "key": "Cache-Control",
+                      "value": "no-store, no-cache, must-revalidate, post-check=0, pre-check=0"
+                    },
+                    {
+                      "key": "Expires",
+                      "value": "Thu, 19 Nov 1981 08:52:00 GMT"
+                    },
+                    {
+                      "key": "Pragma",
+                      "value": "no-cache"
+                    },
+                    {
+                      "key": "Set-Cookie",
+                      "value": "PHPSESSID=9c74bf580b0ca91ad9779ecfc0ae992e; path=/; secure; HttpOnly"
+                    },
+                    {
+                      "key": "Content-Disposition",
+                      "value": "attachment; filename=Test-Cert.pem"
+                    },
+                    {
+                      "key": "Allow",
+                      "value": "GET, HEAD, POST, PUT, DELETE, OPTIONS"
+                    }
+                  ],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "-----BEGIN CERTIFICATE-----\nMIICxjCCAa6gAwIBAgIJAOUkoMMcFnUEMA0GCSqGSIb3DQEBCwUAMBMxETAPBgNV\nBAMTCDEwLjEuMS4xMB4XDTIwMTIxNzE2MzUzOVoXDTIxMTIxNzE2MzUzOVowEzER\nMA8GA1UEAxMIMTAuMS4xLjEwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIB\nAQDXnd9HubRqrI79ILKDnKaJMbihPVJpxC4yS7tkEV6KsK0ULVQCpG42/B60sopS\n+avZxs+U9RWswlZAf8y+omSmMRaz2l/QtiyYmBrieFA5T/fozLTkLN6E2zRP1m/V\ncAyv4enwcjSkDFuAzmFIs9quDlH2Fx9VBoaF6P1BKjoekMbDiIRFeehC70DnN19p\nOx8fhucfmkG7j21CPNMWn+tdpShYPj1lnLsnkTiKiZeNtDk6ReiX2UJN7oOtMa3j\nMmHf9234ilAtG4LZWsXU7wEPcfeU9SGVgakk0PzWETKGlmi9cKmB1rskwhbOimtd\n0wxwHbRzgK7fYem0VEPVpclpAgMBAAGjHTAbMAwGA1UdEwQFMAMBAf8wCwYDVR0P\nBAQDAgIEMA0GCSqGSIb3DQEBCwUAA4IBAQANQDOKqlrtmiYPiSluQ9m9H1Js85mU\nUq6bccD2Y6R+vUjTKKlKsWEY5xW8V4lBXSEyyLdqhC4g4i+AW0knV+AVQ0Hz0D0s\nk1BDa5fWoj67g72RZf0iYNMui06B7o4urHW2dRvGK80lQ6+mkGkHJficS1U1/Uca\nMQjeMM5nzKZNQgiX/xTonQxNaZstdLY631ruOs2rcuKiYf+rgSVmwkuTkCS7g18Y\ncVzA8GUN/jzD+nD/y04SqganpK8r7SNdkp/tTXUu9EaHjvIWfQQnjc62K55MqL1j\nhrjnDSIvAU/kUQVkqM9aVgFVt2pAI/TIbHmuIZCHkSK6LdFNkJhaAd4y\n-----END CERTIFICATE-----\n"
                 }
               ]
             }
@@ -12275,13 +12245,13 @@
   ],
   "variable": [
     {
-      "id": "20e1d8d8-1b86-4820-969e-4d23bb64b91d",
+      "id": "6be6f8c4-789f-424a-b952-3e8388582b2e",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "b440d187-f524-4588-9ee1-948fffc9633a",
+      "id": "18ad80a0-15b1-4bab-9774-cae4b7ac69e9",
       "key": "{{key}}",
       "value": "",
       "type": "string"
