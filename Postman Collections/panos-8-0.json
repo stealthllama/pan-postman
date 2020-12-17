@@ -7602,7 +7602,8 @@
                         },
                         {
                           "key": "include-key",
-                          "value": "no"
+                          "value": "no",
+                          "description": "Include private key with certificate.  One of `yes`, `no`."
                         }
                       ]
                     }
@@ -11190,13 +11191,13 @@
   ],
   "variable": [
     {
-      "id": "89563225-7c23-4ea4-93eb-195cce9f6976",
+      "id": "aa98f406-eba7-4e60-b7f4-52c37c756485",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "3bc707bf-7423-4f05-a975-9e7a539db73e",
+      "id": "cc21ba72-0197-4919-ae50-2ee3aed54d7b",
       "key": "{{key}}",
       "value": "",
       "type": "string"
