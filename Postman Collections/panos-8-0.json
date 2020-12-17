@@ -8709,7 +8709,8 @@
                     },
                     {
                       "key": "category",
-                      "value": ""
+                      "value": "",
+                      "description": "**Required**.  Can be one of: `anti-virus`, `application-block-page`, `captive-portal-text`, `certificate`, `configuration`, `content`, `credential-block-page`, `credential-coach-text`, `custom-logo`, `data-filter-block-page`, `device-state`, `file-block-continue-page`, `file-block-page`, `global-protect-client`, `global-protect-clientless-vpn`, `global-protect-portal-custom-help-page`, `global-protect-portal-custom-home-page`, `global-protect-portal-custom-login-page`, `global-protect-portal-custom-welcome-page`, `high-availability-key`, `hsm-server-cert`, `idp-metadata`, `keypair`, `license`, `logdb`, `mfa-login-page`, `pandb-url-database`, `plugin`, `private-key`, `safe-search-block-page`, `saml-auth-internal-error-page`, `signed-url-database`, `software`, `ssl-cert-status-page`, `ssl-optout-text`, `ui-translation-mapping`, `url-block-page`, `url-coach-text`, `url-database`, `virus-block-page`, `wildfire`."
                     }
                   ]
                 }
@@ -12887,13 +12888,13 @@
   ],
   "variable": [
     {
-      "id": "03b3a47b-9353-48f4-a677-abab9b290e18",
+      "id": "b6e98bf2-0468-4fc9-97f2-b1faab0a52f0",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "875d1c3c-584f-48c5-a351-44e2c9a60417",
+      "id": "697d7c01-8c0d-4ca7-9e45-e939c9c4ff94",
       "key": "{{key}}",
       "value": "",
       "type": "string"
