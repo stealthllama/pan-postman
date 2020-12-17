@@ -8593,7 +8593,7 @@
           "name": "Retrieve Logs",
           "item": [
             {
-              "name": "Retrieve traffic logs",
+              "name": "Retrieve logs",
               "_postman_id": "e0d93f08-4f5c-4e74-be36-e85c51a67f19",
               "protocolProfileBehavior": {
                 "disableBodyPruning": true
@@ -12261,13 +12261,13 @@
   ],
   "variable": [
     {
-      "id": "11cc677c-811c-4296-bfa9-49adcfe6358e",
+      "id": "15209800-b616-469e-ba7c-273753ee8db5",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "1542c405-e7ba-4b34-8100-a144cf4cf703",
+      "id": "6b56d67f-bc13-46b9-8855-62fe1b7f9f68",
       "key": "{{key}}",
       "value": "",
       "type": "string"
