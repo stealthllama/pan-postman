@@ -7870,7 +7870,7 @@
                     "method": "GET",
                     "header": [],
                     "url": {
-                      "raw": "https://{{host}}/api/?type=export&category=tech-support&action=&job-id=",
+                      "raw": "https://{{host}}/api/?type=export&category=tech-support",
                       "protocol": "https",
                       "host": [
                         "{{host}}"
@@ -7891,18 +7891,122 @@
                         {
                           "key": "action",
                           "value": "",
-                          "description": "*Optional*.  Action to perform.  Can be one of `get`, `status`, `finish`.  If not specified, a new retrieval job is started."
+                          "description": "*Optional*.  Action to perform.  Can be one of `get`, `status`, `finish`.  If not specified, a new retrieval job is started.",
+                          "disabled": true
                         },
                         {
                           "key": "job-id",
                           "value": "",
-                          "description": "*Optional*.  Return the results of this retrieval job."
+                          "description": "*Optional*.  Return the results of this retrieval job.",
+                          "disabled": true
                         }
                       ]
                     },
                     "description": "After a successful retrieval of the job data, the job is automatically deleted by the system."
                   },
-                  "response": []
+                  "response": [
+                    {
+                      "id": "bc5a1924-5b6e-4f9c-8388-74fd535d5441",
+                      "name": "Export tech support data",
+                      "originalRequest": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                          "raw": "https://{{host}}/api/?type=export&category=tech-support",
+                          "protocol": "https",
+                          "host": [
+                            "{{host}}"
+                          ],
+                          "path": [
+                            "api",
+                            ""
+                          ],
+                          "query": [
+                            {
+                              "key": "type",
+                              "value": "export"
+                            },
+                            {
+                              "key": "category",
+                              "value": "tech-support"
+                            },
+                            {
+                              "key": "action",
+                              "value": "",
+                              "description": "*Optional*.  Action to perform.  Can be one of `get`, `status`, `finish`.  If not specified, a new retrieval job is started.",
+                              "disabled": true
+                            },
+                            {
+                              "key": "job-id",
+                              "value": "",
+                              "description": "*Optional*.  Return the results of this retrieval job.",
+                              "disabled": true
+                            }
+                          ]
+                        }
+                      },
+                      "status": "OK",
+                      "code": 200,
+                      "_postman_previewlanguage": "xml",
+                      "header": [
+                        {
+                          "key": "Date",
+                          "value": "Thu, 17 Dec 2020 19:41:28 GMT"
+                        },
+                        {
+                          "key": "Content-Type",
+                          "value": "application/xml; charset=UTF-8"
+                        },
+                        {
+                          "key": "Content-Length",
+                          "value": "131"
+                        },
+                        {
+                          "key": "Connection",
+                          "value": "keep-alive"
+                        },
+                        {
+                          "key": "X-FRAME-OPTIONS",
+                          "value": "SAMEORIGIN"
+                        },
+                        {
+                          "key": "X-XSS-Protection",
+                          "value": "1; mode=block"
+                        },
+                        {
+                          "key": "X-Content-Type-Options",
+                          "value": "nosniff"
+                        },
+                        {
+                          "key": "Content-Security-Policy",
+                          "value": "default-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:;"
+                        },
+                        {
+                          "key": "Strict-Transport-Security",
+                          "value": "max-age=31536000"
+                        },
+                        {
+                          "key": "Cache-Control",
+                          "value": "no-store, no-cache, must-revalidate, post-check=0, pre-check=0"
+                        },
+                        {
+                          "key": "Expires",
+                          "value": "Thu, 19 Nov 1981 08:52:00 GMT"
+                        },
+                        {
+                          "key": "Pragma",
+                          "value": "no-cache"
+                        },
+                        {
+                          "key": "Allow",
+                          "value": "GET, HEAD, POST, PUT, DELETE, OPTIONS"
+                        }
+                      ],
+                      "cookie": [],
+                      "responseTime": null,
+                      "body": "<response status=\"success\" code=\"19\">\n    <result>\n        <msg>\n            <line>Exec job enqueued with jobid 5</line>\n        </msg>\n        <job>5</job>\n    </result>\n</response>"
+                    }
+                  ]
                 }
               ],
               "_postman_id": "ef49dbfe-e23b-4824-b6dc-4cbb11333113",
@@ -12132,13 +12236,13 @@
   ],
   "variable": [
     {
-      "id": "e39cc1e2-555d-4165-813c-83983bf89f13",
+      "id": "472792aa-9af7-427c-9e62-3e56cd5ccd06",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "004921b3-8f23-4498-b24c-cc9a60ce5456",
+      "id": "6d4a09ca-3ae5-48fc-a7cb-acafee9bbba8",
       "key": "{{key}}",
       "value": "",
       "type": "string"
