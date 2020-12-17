@@ -8725,8 +8725,7 @@
                     {
                       "key": "vsys",
                       "value": null,
-                      "description": "*Optional*.  When used with a firewall, import this object into this virtual system.  Defaults to `shared`.",
-                      "type": "text"
+                      "description": "*Optional*.  When used with a firewall, import this object into this virtual system.  Defaults to `shared`."
                     }
                   ]
                 }
@@ -9214,7 +9213,7 @@
             }
           ],
           "_postman_id": "b46a37c6-2ff6-4d05-b8e4-36bf282f7487",
-          "description": "You can import certain types of files, including software, content, licenses, and configuration into the firewall using the `type=import` parameter in the API request.\n\nUse the following values for the `category` parameter to import different types of files:\n\n- Software: `software`\n- Content: `anti-virus`, `content`, `url-database`, `signed-url-database`\n- Licenses: `license`\n- Configuration: `configuration`\n- Certificates and keys: `certificate`, `high-availability-key`, `key-pair`\n- Response pages: `application-block-page`, `captive-portal-text`, `file-block-continue-page`, `file-block-page`, `global-protect-portal-custom-help-page`, `global-protect-portal-custom-login-page` `global-protect-portal-custom-welcome-page`, `ssl-cert-status-page`, `ssl-optout-text`, `url-block-page`, `url-coach-text`, `virus-block-page`\n- Clients: `global-protect-client`\n- Custom Logo: `custom-logo`\n\nWhen importing files into a firewall, the following parameters are also allowed:\n\n- `vsys`: Target virtual system for import.  Defaults to `shared`.\n\nWhen importing files into Panorama, the following parameters are also allowed:\n\n- `target-tpl`: Target template to import into.  If not specified, import files directly into Panorama.\n- `target-tpl-vsys`: Virtual system with target template.  Defaults to `shared`.",
+          "description": "You can import files to the firewall using the `type=import` parameter in the API request.\n\nThe following types of resources can be imported:\n\n- Configuration\n- Certificates and Keys\n- Dynamic Updates\n- Response Pages & Logos\n- Software\n- Global Protect Client\n",
           "event": [
             {
               "listen": "prerequest",
@@ -12870,13 +12869,13 @@
   ],
   "variable": [
     {
-      "id": "d63a75d7-d1f8-4aa0-8a5d-9ffa721bb764",
+      "id": "18ad993d-2b50-4c1e-8545-ff585a078677",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "9c53a961-b9b3-45e4-97b9-2bfa14070737",
+      "id": "418913b4-8746-4a0b-93b8-3891035f145c",
       "key": "{{key}}",
       "value": "",
       "type": "string"
