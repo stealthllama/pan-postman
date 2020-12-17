@@ -8044,6 +8044,12 @@
           "name": "Import Files",
           "item": [
             {
+              "name": "Retrieve Logs",
+              "item": [],
+              "_postman_id": "c65a27f9-b516-4e4b-b28b-f411f435f9bd",
+              "_postman_isSubFolder": true
+            },
+            {
               "name": "Import certificate",
               "_postman_id": "2140d4f3-cc79-4093-8fbf-04fe470ebdff",
               "protocolProfileBehavior": {
@@ -11949,46 +11955,6 @@
         }
       ],
       "_postman_id": "48a4821f-5bbb-4b0c-ad3a-eb55970c295e"
-    },
-    {
-      "name": "Change Template",
-      "_postman_id": "e96ab8b1-85d3-4eb0-a72b-7cad37aea42a",
-      "protocolProfileBehavior": {
-        "disableBodyPruning": true
-      },
-      "request": {
-        "method": "GET",
-        "header": [],
-        "url": {
-          "raw": "https://{{host}}/api?type=config&action=set&xpath=/config/devices/entry[@name='localhost.localdomain']/template/entry[@name='Test-Template']/config/devices/entry[@name='localhost.localdomain']/deviceconfig/system&element=<motd-and-banner><motd-enable>yes</motd-enable><message>Help I'm trapped in a firewall factory!</message></motd-and-banner>",
-          "protocol": "https",
-          "host": [
-            "{{host}}"
-          ],
-          "path": [
-            "api"
-          ],
-          "query": [
-            {
-              "key": "type",
-              "value": "config"
-            },
-            {
-              "key": "action",
-              "value": "set"
-            },
-            {
-              "key": "xpath",
-              "value": "/config/devices/entry[@name='localhost.localdomain']/template/entry[@name='Test-Template']/config/devices/entry[@name='localhost.localdomain']/deviceconfig/system"
-            },
-            {
-              "key": "element",
-              "value": "<motd-and-banner><motd-enable>yes</motd-enable><message>Help I'm trapped in a firewall factory!</message></motd-and-banner>"
-            }
-          ]
-        }
-      },
-      "response": []
     }
   ],
   "auth": {
@@ -12022,13 +11988,13 @@
   ],
   "variable": [
     {
-      "id": "c7613845-5b14-4260-83c2-30e7995cc38f",
+      "id": "b2a0226c-639c-4476-a426-11dc41016252",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "c88197c8-df66-4e35-944e-64b501915da1",
+      "id": "86251096-a640-4da9-b4f5-e3eeae80c086",
       "key": "{{key}}",
       "value": "",
       "type": "string"
