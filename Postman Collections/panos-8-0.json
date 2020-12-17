@@ -8503,9 +8503,155 @@
               "request": {
                 "method": "GET",
                 "header": [],
-                "url": ""
+                "url": {
+                  "raw": "https://{{host}}/api/?type=export&category=threat-pcap&pcap-id=&search-time=&sessionid",
+                  "protocol": "https",
+                  "host": [
+                    "{{host}}"
+                  ],
+                  "path": [
+                    "api",
+                    ""
+                  ],
+                  "query": [
+                    {
+                      "key": "type",
+                      "value": "export"
+                    },
+                    {
+                      "key": "category",
+                      "value": "threat-pcap"
+                    },
+                    {
+                      "key": "pcap-id",
+                      "value": "",
+                      "description": "**Required**.  Packet capture ID from the Threat log."
+                    },
+                    {
+                      "key": "search-time",
+                      "value": "",
+                      "description": "**Required**.  Time the capture was generated on the firewall.",
+                      "type": "text"
+                    },
+                    {
+                      "key": "sessionid",
+                      "value": null,
+                      "description": "*Optional*.",
+                      "type": "text"
+                    }
+                  ]
+                }
               },
-              "response": []
+              "response": [
+                {
+                  "id": "ef4b7e1e-786f-4bc3-8e87-18a6878de5c0",
+                  "name": "Export threat packet capture",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [],
+                    "url": {
+                      "raw": "https://{{host}}/api/?type=export&category=threat-pcap&pcap-id=1206885052550479872&search-time=2020/12/17 13:04:12&sessionid",
+                      "protocol": "https",
+                      "host": [
+                        "{{host}}"
+                      ],
+                      "path": [
+                        "api",
+                        ""
+                      ],
+                      "query": [
+                        {
+                          "key": "type",
+                          "value": "export"
+                        },
+                        {
+                          "key": "category",
+                          "value": "threat-pcap"
+                        },
+                        {
+                          "key": "pcap-id",
+                          "value": "1206885052550479872",
+                          "description": "**Required**.  Packet capture ID from the Threat log."
+                        },
+                        {
+                          "key": "search-time",
+                          "value": "2020/12/17 13:04:12",
+                          "description": "**Required**.  Time the capture was generated on the firewall."
+                        },
+                        {
+                          "key": "sessionid",
+                          "value": null,
+                          "description": "*Optional*."
+                        }
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "raw",
+                  "header": [
+                    {
+                      "key": "Date",
+                      "value": "Thu, 17 Dec 2020 21:06:42 GMT"
+                    },
+                    {
+                      "key": "Content-Type",
+                      "value": "application/octet-stream"
+                    },
+                    {
+                      "key": "Content-Length",
+                      "value": "551"
+                    },
+                    {
+                      "key": "Connection",
+                      "value": "keep-alive"
+                    },
+                    {
+                      "key": "X-FRAME-OPTIONS",
+                      "value": "SAMEORIGIN"
+                    },
+                    {
+                      "key": "X-XSS-Protection",
+                      "value": "1; mode=block"
+                    },
+                    {
+                      "key": "X-Content-Type-Options",
+                      "value": "nosniff"
+                    },
+                    {
+                      "key": "Content-Security-Policy",
+                      "value": "default-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:;"
+                    },
+                    {
+                      "key": "Strict-Transport-Security",
+                      "value": "max-age=31536000"
+                    },
+                    {
+                      "key": "Cache-Control",
+                      "value": "no-store, no-cache, must-revalidate, post-check=0, pre-check=0"
+                    },
+                    {
+                      "key": "Expires",
+                      "value": "Thu, 19 Nov 1981 08:52:00 GMT"
+                    },
+                    {
+                      "key": "Pragma",
+                      "value": "no-cache"
+                    },
+                    {
+                      "key": "Content-Disposition",
+                      "value": "attachment; filename=1206885052550479872.pcap"
+                    },
+                    {
+                      "key": "Allow",
+                      "value": "GET, HEAD, POST, PUT, DELETE, OPTIONS"
+                    }
+                  ],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "\ufffd\u00f2\ufffd\u0002\u0000\u0004\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\ufffd\ufffd\u0000\u0000\u0001\u0000\u0000\u0000\ufffd\ufffd\ufffd_\u0000\u0000\u0000\u0000Y\u0000\u0000\u0000Y\u0000\u0000\u0000\u0000PV\ufffd\r\ufffd\u0000\f)Z\u0001\ufffd\b\u0000E\u0000\u0000K\ufffd\ufffd\u0000\u0000\ufffd\u0006\u0000\u0000\ufffd\ufffd-b\u0346\ufffd\ufffd\ufffd\ufffd\u0000P\ufffd[0\ufffdE\ufffdApP\u0018\ufffd\ufffd\u0000\u0000\u0000\u0000g\r\nupgrade-insecure-requests: 1\r\n\r\n\ufffd\ufffd\ufffd_\u0000\u0000\u0000\u0000\ufffd\u0001\u0000\u0000\ufffd\u0001\u0000\u0000\u0000\f)Z\u0001\ufffd\u0000PV\ufffd\r\ufffd\b\u0000E\u0000\u0001\ufffd\ufffd\ufffd\u0000\u0000\ufffd\u0006\u0319\u0346\ufffd\ufffd\ufffd\ufffd-b\u0000P\ufffd\ufffdE\ufffdAp\ufffd[0\ufffdP\u0018\ufffd\ufffd[\u0000\u0000HTTP/1.1 200 OK\r\nDate: Thu, 17 Dec 2020 21:05:09 GMT\r\nServer: Apache\r\nUpgrade: h2,h2c\r\nConnection: Upgrade, Keep-Alive\r\nLast-Modified: Wed, 19 Jun 2002 00:00:00 GMT\r\nAccept-Ranges: bytes\r\nContent-Length: 70\r\nKeep-Alive: timeout=3, max=100\r\nContent-Type: application/octet-stream\r\n\r\nX5O!P%@AP[4\\PZX54(P^)7CC)7}$EICAR-STANDARD-ANTIVIRUS-TEST-FILE!$H+H*\r\n"
+                }
+              ]
             }
           ],
           "_postman_id": "23756299-0092-4f5e-aac4-b873e07acf55",
@@ -12708,13 +12854,13 @@
   ],
   "variable": [
     {
-      "id": "0ac07443-b38f-48d8-a428-e1cebfce074a",
+      "id": "2cedc90a-10b6-4ae1-95b3-be98c3d6a640",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "57618296-7b26-450a-af0d-3d28c912d880",
+      "id": "78af28f0-316b-4d98-ac42-7854b59a45d0",
       "key": "{{key}}",
       "value": "",
       "type": "string"
