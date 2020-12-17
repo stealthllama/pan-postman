@@ -8330,7 +8330,7 @@
                     {
                       "key": "target-tpl-vsys",
                       "value": "",
-                      "description": "*Optional*. Virtual system within target template."
+                      "description": "*Optional*. Virtual system within target template.  Defaults to `shared`."
                     }
                   ]
                 }
@@ -11920,13 +11920,13 @@
   ],
   "variable": [
     {
-      "id": "b02a7c02-49d5-4c73-a480-5b71c49da341",
+      "id": "260c8a35-4dd6-4c2c-9a09-9a51250a3935",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "ab78c7cd-cb82-4339-8b9f-48d03d58bb85",
+      "id": "fa0fb95d-2022-48ea-9b1e-255bd21dc7af",
       "key": "{{key}}",
       "value": "",
       "type": "string"
