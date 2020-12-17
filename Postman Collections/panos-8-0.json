@@ -8456,7 +8456,7 @@
             }
           ],
           "_postman_id": "b46a37c6-2ff6-4d05-b8e4-36bf282f7487",
-          "description": "You can import certain types of files, including software, content, licenses, and configuration into the firewall using the `type=import` parameter in the API request.\n\nUse the following values for the `category` parameter to import different types of files:\n\n- Software: `software`\n- Content: `anti-virus`, `content`, `url-database`, `signed-url-database`\n- Licenses: `license`\n- Configuration: `configuration`\n- Certificates and keys: `certificate`, `high-availability-key`, `key-pair`\n- Response pages: `application-block-page`, `captive-portal-text`, `file-block-continue-page`, `file-block-page`, `global-protect-portal-custom-help-page`, `global-protect-portal-custom-login-page` `global-protect-portal-custom-welcome-page`, `ssl-cert-status-page`, `ssl-optout-text`, `url-block-page`, `url-coach-text`, `virus-block-page`\n- Clients: `global-protect-client`\n- Custom Logo: `custom-logo`\n\nWhen importing files into a firewall, the following parameters are also allowed:\n\n- `vsys`: ",
+          "description": "You can import certain types of files, including software, content, licenses, and configuration into the firewall using the `type=import` parameter in the API request.\n\nUse the following values for the `category` parameter to import different types of files:\n\n- Software: `software`\n- Content: `anti-virus`, `content`, `url-database`, `signed-url-database`\n- Licenses: `license`\n- Configuration: `configuration`\n- Certificates and keys: `certificate`, `high-availability-key`, `key-pair`\n- Response pages: `application-block-page`, `captive-portal-text`, `file-block-continue-page`, `file-block-page`, `global-protect-portal-custom-help-page`, `global-protect-portal-custom-login-page` `global-protect-portal-custom-welcome-page`, `ssl-cert-status-page`, `ssl-optout-text`, `url-block-page`, `url-coach-text`, `virus-block-page`\n- Clients: `global-protect-client`\n- Custom Logo: `custom-logo`\n\nWhen importing files into a firewall, the following parameters are also allowed:\n\n- `vsys`: Target virtual system for import.  Defaults to `shared`.\n\nWhen importing files into Panorama, the following parameters are also allowed:\n\n- `target-tpl`\n- `target-tpl-vsys`",
           "event": [
             {
               "listen": "prerequest",
@@ -11920,13 +11920,13 @@
   ],
   "variable": [
     {
-      "id": "2e88477e-583a-48c0-b1fc-508bb576344e",
+      "id": "b02a7c02-49d5-4c73-a480-5b71c49da341",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "c1f1b208-1df2-4d1e-96e1-b8c94b668855",
+      "id": "ab78c7cd-cb82-4339-8b9f-48d03d58bb85",
       "key": "{{key}}",
       "value": "",
       "type": "string"
