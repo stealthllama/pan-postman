@@ -8036,6 +8036,19 @@
                   "body": "... binary data omitted ..."
                 }
               ]
+            },
+            {
+              "name": "Export application packet captures",
+              "_postman_id": "c82305d9-faa8-43da-a296-0bcc3ce1ade7",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": ""
+              },
+              "response": []
             }
           ],
           "_postman_id": "23756299-0092-4f5e-aac4-b873e07acf55",
@@ -12238,13 +12251,13 @@
   ],
   "variable": [
     {
-      "id": "e102bd9d-21df-44c9-ae9e-e128e2144945",
+      "id": "70bd637c-026e-48ed-963d-3e4f2ebb7e63",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "42b28d62-191a-49cf-91f9-96804c38fcbe",
+      "id": "167e0157-e099-4902-9237-8a2afc297a4b",
       "key": "{{key}}",
       "value": "",
       "type": "string"
