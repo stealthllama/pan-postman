@@ -7885,7 +7885,8 @@
                         },
                         {
                           "key": "job-id",
-                          "value": "3"
+                          "value": "3",
+                          "description": "Job ID returned from 'Begin tech support file creation'"
                         }
                       ]
                     }
@@ -8034,7 +8035,29 @@
                 }
               ],
               "_postman_id": "ef49dbfe-e23b-4824-b6dc-4cbb11333113",
-              "description": "Debug log data sizes are large, so the API uses an asynchronous job scheduling approach to retrieve technical support data.",
+              "description": "View the [official documentation](https://docs.paloaltonetworks.com/pan-os/10-0/pan-os-panorama-api/pan-os-xml-api-request-types/export-files-api/export-technical-support-data.html).\n\nDebug log data sizes are large, so the API uses an asynchronous job scheduling approach to retrieve technical support data.\n\nWhen exporting technical support data, the `action` parameter is used:\n\n- `action` not specified: The system will create a new job to retrieve tech support data. A job ID will be created for further use.\n\n- `action=status`: Check the status of the export job.  This will return an XML response with a status element - when the status text data is `FIN`, the job is completed and the tech support file can be retrieved.\n\n- `action=get`: Retrieve the tech support file as an attachment.  The response contains a `application/octet-stream` content type and a content disposition header with a suggested filename.\n\n- `action=finish`: Stop an active job.",
+              "event": [
+                {
+                  "listen": "prerequest",
+                  "script": {
+                    "id": "91fcbcbc-0a6d-41f0-bc33-fda043f2c9e5",
+                    "type": "text/javascript",
+                    "exec": [
+                      ""
+                    ]
+                  }
+                },
+                {
+                  "listen": "test",
+                  "script": {
+                    "id": "2b2468b9-31d8-49a1-a8cc-9ee0304abbd8",
+                    "type": "text/javascript",
+                    "exec": [
+                      ""
+                    ]
+                  }
+                }
+              ],
               "_postman_isSubFolder": true
             }
           ],
@@ -11503,13 +11526,13 @@
   ],
   "variable": [
     {
-      "id": "8e41b4d7-1432-4c1c-985d-523f8f2a3138",
+      "id": "30ce9376-5113-47c0-9d3e-3661340de248",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "e16d636e-eb17-40d9-976a-ec444227cd47",
+      "id": "e056e0e7-8c23-4015-841b-e35bb7213ef6",
       "key": "{{key}}",
       "value": "",
       "type": "string"
