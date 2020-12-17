@@ -9195,6 +9195,19 @@
                   "body": "<response status=\"success\">\n    <msg>\n        <line>panup-all-antivirus-3566-4077 saved</line>\n    </msg>\n</response>"
                 }
               ]
+            },
+            {
+              "name": "Import file",
+              "_postman_id": "4cde82fa-1ecb-4c6f-8cb0-13c75ac5405b",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": ""
+              },
+              "response": []
             }
           ],
           "_postman_id": "b46a37c6-2ff6-4d05-b8e4-36bf282f7487",
@@ -12854,13 +12867,13 @@
   ],
   "variable": [
     {
-      "id": "2cedc90a-10b6-4ae1-95b3-be98c3d6a640",
+      "id": "20bab79f-5494-466a-9f14-ffdbe2d3eec1",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "78af28f0-316b-4d98-ac42-7854b59a45d0",
+      "id": "08c2085d-f18a-400e-88ba-3a95adc83fe5",
       "key": "{{key}}",
       "value": "",
       "type": "string"
