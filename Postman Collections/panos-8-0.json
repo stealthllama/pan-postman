@@ -8087,6 +8087,13 @@
           "_postman_isSubFolder": true
         },
         {
+          "name": "Import Files",
+          "item": [],
+          "_postman_id": "b46a37c6-2ff6-4d05-b8e4-36bf282f7487",
+          "description": "You can import certain types of files, including software, content, licenses, and configuration into the firewall using the `type=import` parameter in the API request.\n\nUse the following values for the `category` parameter to import different types of files:\n\n- Software: `software`\n- Content: `anti-virus`, `content`, `url-database`, `signed-url-database`\n- Licenses: `license`\n- Configuration: `configuration`\n- Certificates and keys: `certificate`, `high-availability-key`, `key-pair`\n- Response pages: `application-block-page`, `captive-portal-text`, `file-block-continue-page`, `file-block-page`, `global-protect-portal-custom-help-page`, `global-protect-portal-custom-login-page` `global-protect-portal-custom-welcome-page`, `ssl-cert-status-page`, `ssl-optout-text`, `url-block-page`, `url-coach-text`, `virus-block-page`\n- Clients: `global-protect-client`\n- Custom Logo: `custom-logo`",
+          "_postman_isSubFolder": true
+        },
+        {
           "name": "Get Version Info",
           "item": [
             {
@@ -11525,13 +11532,13 @@
   ],
   "variable": [
     {
-      "id": "7654446e-1978-4201-946a-8500e0d1d548",
+      "id": "f97728fe-03b6-4af3-9d23-a1a1e0489000",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "21e2e2e1-bfde-4061-ba03-70398623b2f8",
+      "id": "7d2ee061-4528-4234-b043-87809cf515ba",
       "key": "{{key}}",
       "value": "",
       "type": "string"
