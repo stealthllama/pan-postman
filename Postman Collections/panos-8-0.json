@@ -8052,7 +8052,7 @@
             }
           ],
           "_postman_id": "23756299-0092-4f5e-aac4-b873e07acf55",
-          "description": "You can export certain types of files from the firewall using the `type=export` parameter in the API request.\n\nUse the `category` parameter to specify the type of file that you want to export:\n\n# Configuration \n\n`category=configuration`\n\n- Certificates/Keys - `category=certificate`\n- Response pages  - `category= application-block-page | captive-portal-text | file-block-continue-page | file-block-page | global-protect-portal-custom-help-page | global-protect-portal-custom-login-page | global-protect-portal-custom-welcome-page | ssl-cert-status-page | ssl-optout-text | url-block-page | url-coach-text | virus-block-page`\n- Technical support data - `category=tech-support`\n- Device state - `category=device-state`",
+          "description": "You can export certain types of files from the firewall using the `type=export` parameter in the API request.\n\nThe `category` parameter is used to specify the type of file that you want to export:\n\n# Configuration \n\n`category=configuration`\n\n# Certificates/Keys\n\n`category=certificate`\n\n- Response pages  - `category= application-block-page | captive-portal-text | file-block-continue-page | file-block-page | global-protect-portal-custom-help-page | global-protect-portal-custom-login-page | global-protect-portal-custom-welcome-page | ssl-cert-status-page | ssl-optout-text | url-block-page | url-coach-text | virus-block-page`\n- Technical support data - `category=tech-support`\n- Device state - `category=device-state`",
           "event": [
             {
               "listen": "prerequest",
@@ -12251,13 +12251,13 @@
   ],
   "variable": [
     {
-      "id": "2dbde5ac-439c-48ea-81bd-2f391f16b83c",
+      "id": "383821b6-f86b-4de3-bfc4-c723a17584a9",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "c93b1a4d-1264-4aaf-b947-b45ce841ebf9",
+      "id": "12659da3-8c21-46c8-95e5-701e604239d7",
       "key": "{{key}}",
       "value": "",
       "type": "string"
