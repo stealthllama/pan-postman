@@ -8591,9 +8591,23 @@
         },
         {
           "name": "Retrieve Logs",
-          "item": [],
+          "item": [
+            {
+              "name": "Retrieve traffic logs",
+              "_postman_id": "e0d93f08-4f5c-4e74-be36-e85c51a67f19",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": ""
+              },
+              "response": []
+            }
+          ],
           "_postman_id": "c0aa4826-6814-462b-9b59-f424033a9a16",
-          "description": "Retrieve logs from a firewall using the API.\n\n# Parameters\n\n| Parameter | Description |\n| --------- | ------------|\n| `log-type`  | The type of logs to retrieve.  Can be one of `traffic`, `threat`, `config`, `system`, `hipmatch`, `wildfire`, `url`, `data`, `corr`, `corr-detail`, `corr-categ`, `user-id`, `auth`, `gtp`, `external`, `iptag` |",
+          "description": "Retrieve logs from a firewall using the API.\n\n# Parameters\n\n| Parameter | Description |\n| --------- | ------------|\n| `log-type`  | The type of logs to retrieve.  Can be one of `traffic`, `threat`, `config`, `system`, `hipmatch`, `wildfire`, `url`, `data`, `corr`, `corr-detail`, `corr-categ`, `user-id`, `auth`, `gtp`, `external`, `iptag` |\n| `query`   | *Optional*. Specify the match criteria for the logs.  This is similar to the query provided in the web interface under the Monitor tab when viewing the logs.  The query must be URL encoded. |\n| `nlogs` | *Optional*.  Specify the number of logs to retrieve.  The default is 20 when the parameter is not specified.  The maximum is 5000. |",
           "event": [
             {
               "listen": "prerequest",
@@ -12017,13 +12031,13 @@
   ],
   "variable": [
     {
-      "id": "f1d22392-041a-4eb5-b843-64e7bddc5305",
+      "id": "8c7b0db8-6b32-4ef6-8601-c8e9bb9474ec",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "d9f709bb-157e-49f1-a2a7-eea5229028da",
+      "id": "ef3c7698-592f-4849-bc8e-7d72c663f2d5",
       "key": "{{key}}",
       "value": "",
       "type": "string"
