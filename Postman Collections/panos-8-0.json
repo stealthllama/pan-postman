@@ -12061,13 +12061,13 @@
   ],
   "variable": [
     {
-      "id": "a42e4ff0-05de-49ff-b048-3b6b6e41c380",
+      "id": "1b839413-8b64-4e60-a0ae-f7b40ed78a4c",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "e4e72d31-70dc-431e-9bbe-9b6ea268706b",
+      "id": "b1adb4ca-898a-4677-b343-0d535b7ac233",
       "key": "{{key}}",
       "value": "",
       "type": "string"
