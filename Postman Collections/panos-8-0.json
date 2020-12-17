@@ -8584,6 +8584,19 @@
           "_postman_isSubFolder": true
         },
         {
+          "name": "Import Files",
+          "_postman_id": "02c6412f-14a1-4fa8-b8c6-87621efa28bd",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": ""
+          },
+          "response": []
+        },
+        {
           "name": "Retrieve Logs",
           "_postman_id": "e0d93f08-4f5c-4e74-be36-e85c51a67f19",
           "protocolProfileBehavior": {
@@ -8971,19 +8984,6 @@
               "body": "<response status = \"success\">\n    <result>\n        <sw-version>10.0.2</sw-version>\n        <multi-vsys>off</multi-vsys>\n        <model>PA-VM</model>\n        <serial>007000001222</serial>\n    </result>\n</response>"
             }
           ]
-        },
-        {
-          "name": "Import Files",
-          "_postman_id": "02c6412f-14a1-4fa8-b8c6-87621efa28bd",
-          "protocolProfileBehavior": {
-            "disableBodyPruning": true
-          },
-          "request": {
-            "method": "GET",
-            "header": [],
-            "url": ""
-          },
-          "response": []
         }
       ],
       "_postman_id": "3178f469-44ee-4373-82b4-9d5bdd5d59b8"
@@ -12227,13 +12227,13 @@
   ],
   "variable": [
     {
-      "id": "0a8548bf-a633-4d0d-a594-9023405571e5",
+      "id": "b8aa0065-659d-491d-84ef-3f43989a3c0d",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "3109498c-d213-4203-9479-8c900ad3f32e",
+      "id": "49f3d0eb-e60d-47a7-98c3-b9a7945d9c2a",
       "key": "{{key}}",
       "value": "",
       "type": "string"
