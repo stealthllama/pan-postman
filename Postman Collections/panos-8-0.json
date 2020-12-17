@@ -10794,16 +10794,20 @@
                 "method": "POST",
                 "header": [],
                 "body": {
-                  "mode": "file",
-                  "file": {
-                    "src": "/Users/michaelr/Downloads/idptest.xml"
-                  },
+                  "mode": "formdata",
+                  "formdata": [
+                    {
+                      "key": "file",
+                      "type": "file",
+                      "src": "/Users/michaelr/Downloads/idptest.xml"
+                    }
+                  ],
                   "options": {
-                    "file": {}
+                    "formdata": {}
                   }
                 },
                 "url": {
-                  "raw": "https://{{host}}/api/?type=import&category=idp-metadata&profile-name=kr-okta-test2&xpath=/config/devices/entry[@name='localhost.localdomain']/template/entry[@name='Test-Template']/config/devices/entry[@name='localhost.localdomain']/vsys/entry[@name='vsys1']/server-profile/saml-idp",
+                  "raw": "https://{{host}}/api/?type=import&category=idp-metadata&profile-name=kr-okta-test2&target-tpl=Test-Template",
                   "protocol": "https",
                   "host": [
                     "{{host}}"
@@ -10826,8 +10830,8 @@
                       "value": "kr-okta-test2"
                     },
                     {
-                      "key": "xpath",
-                      "value": "/config/devices/entry[@name='localhost.localdomain']/template/entry[@name='Test-Template']/config/devices/entry[@name='localhost.localdomain']/vsys/entry[@name='vsys1']/server-profile/saml-idp"
+                      "key": "target-tpl",
+                      "value": "Test-Template"
                     }
                   ]
                 }
@@ -11021,13 +11025,13 @@
   ],
   "variable": [
     {
-      "id": "2b153900-1803-4a0c-bb60-1b3c2913ae9b",
+      "id": "b40d538b-1531-4008-8f1a-eb81bcfe9afd",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "38bdccfe-7aed-48c7-b07b-300c82a94895",
+      "id": "8f88d561-169b-48cf-a0f4-fb39fdbdb54a",
       "key": "{{key}}",
       "value": "",
       "type": "string"
