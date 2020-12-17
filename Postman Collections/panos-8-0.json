@@ -8729,14 +8729,12 @@
                     {
                       "key": "target-tpl",
                       "value": null,
-                      "description": "*Optional*. Target template to import into.",
-                      "type": "text"
+                      "description": "*Optional*. When used with Panorama, import this object into this template."
                     },
                     {
                       "key": "target-tpl-vsys",
                       "value": null,
-                      "description": "*Optional*. Virtual system within target template.  Defaults to `shared`.",
-                      "type": "text"
+                      "description": "*Optional*. When used with Panorama, import this object into this virtual system within target template.  Defaults to `shared`."
                     }
                   ]
                 }
@@ -12914,13 +12912,13 @@
   ],
   "variable": [
     {
-      "id": "38a545dd-0b03-4216-9ee4-423f0e1ccc1c",
+      "id": "afd2ba9d-125a-4f37-ad4f-348f29b0c4c9",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "77a2c604-5698-4971-b2eb-b009173a62bf",
+      "id": "0607e4bc-3376-438d-bbbd-1aaf5a6ff963",
       "key": "{{key}}",
       "value": "",
       "type": "string"
