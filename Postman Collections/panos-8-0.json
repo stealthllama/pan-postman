@@ -7210,7 +7210,7 @@
           "name": "Export Files",
           "item": [
             {
-              "name": "Export application block page",
+              "name": "Export file",
               "_postman_id": "dbc48b76-eb6a-4c9c-89f6-4aa6b121fef4",
               "protocolProfileBehavior": {
                 "disableBodyPruning": true
@@ -7218,9 +7218,119 @@
               "request": {
                 "method": "GET",
                 "header": [],
-                "url": ""
+                "url": {
+                  "raw": "https://{{host}}/api/?type=export&category=application-block-page",
+                  "protocol": "https",
+                  "host": [
+                    "{{host}}"
+                  ],
+                  "path": [
+                    "api",
+                    ""
+                  ],
+                  "query": [
+                    {
+                      "key": "type",
+                      "value": "export"
+                    },
+                    {
+                      "key": "category",
+                      "value": "application-block-page"
+                    }
+                  ]
+                }
               },
-              "response": []
+              "response": [
+                {
+                  "id": "fc73f19a-e51f-4ebc-a010-e81b70beb065",
+                  "name": "Export file",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [],
+                    "url": {
+                      "raw": "https://{{host}}/api/?type=export&category=application-block-page",
+                      "protocol": "https",
+                      "host": [
+                        "{{host}}"
+                      ],
+                      "path": [
+                        "api",
+                        ""
+                      ],
+                      "query": [
+                        {
+                          "key": "type",
+                          "value": "export"
+                        },
+                        {
+                          "key": "category",
+                          "value": "application-block-page"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "plain",
+                  "header": [
+                    {
+                      "key": "Date",
+                      "value": "Thu, 17 Dec 2020 20:30:22 GMT"
+                    },
+                    {
+                      "key": "Content-Type",
+                      "value": "text/plain; charset=UTF-8"
+                    },
+                    {
+                      "key": "Content-Length",
+                      "value": "6829"
+                    },
+                    {
+                      "key": "Connection",
+                      "value": "keep-alive"
+                    },
+                    {
+                      "key": "X-FRAME-OPTIONS",
+                      "value": "SAMEORIGIN"
+                    },
+                    {
+                      "key": "X-XSS-Protection",
+                      "value": "1; mode=block"
+                    },
+                    {
+                      "key": "X-Content-Type-Options",
+                      "value": "nosniff"
+                    },
+                    {
+                      "key": "Content-Security-Policy",
+                      "value": "default-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:;"
+                    },
+                    {
+                      "key": "Strict-Transport-Security",
+                      "value": "max-age=31536000"
+                    },
+                    {
+                      "key": "Cache-Control",
+                      "value": "no-store, no-cache, must-revalidate, post-check=0, pre-check=0"
+                    },
+                    {
+                      "key": "Expires",
+                      "value": "Thu, 19 Nov 1981 08:52:00 GMT"
+                    },
+                    {
+                      "key": "Pragma",
+                      "value": "no-cache"
+                    },
+                    {
+                      "key": "Allow",
+                      "value": "GET, HEAD, POST, PUT, DELETE, OPTIONS"
+                    }
+                  ],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "<!DOCTYPE html>\r\n\r\n<html lang=\"en\">\r\n<head>\r\n    <base href=\"/login/\">\r\n    <meta charset=\"utf-8\">\r\n    <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">\r\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=.85\">\r\n    <meta http-equiv=\"pragma\" content=\"no-cache\">\r\n    <title>Application Blocked</title>\r\n    <link rel=\"stylesheet\" href=\"css/latofonts.css\">\r\n    <style>\r\n        body {\r\n            background-color: #e8ebeb;\r\n            font-family: Lato, 'Helvetica Neue', Helvetica, Arial, sans-serif;\r\n            font-size: 16px;\r\n            margin: 0;\r\n            color: #070808;\r\n        }\r\n\r\n        a:link {\r\n            color: #0993d1;\r\n        }\r\n\r\n        b,\r\n        strong {\r\n            font-weight: 500;\r\n        }\r\n\r\n        p {\r\n            line-height: 1.2em;\r\n        }\r\n\r\n        button {\r\n            overflow: visible;\r\n        }\r\n\r\n        button, input, optgroup, select, textarea {\r\n            color: inherit;\r\n            font: inherit;\r\n            margin: 0;\r\n        }\r\n\r\n        .center {\r\n            text-align: center;\r\n            margin-left: auto;\r\n            margin-right: auto;\r\n        }\r\n\r\n        #dError,\r\n        .msg {\r\n            color: #d94949;\r\n            margin: 20px 0;\r\n        }\r\n\r\n        fieldset .msg {\r\n            margin: 0;\r\n        }\r\n\r\n        #content {\r\n            padding-top: 100px;\r\n        }\r\n\r\n        #content img {\r\n            display: block;\r\n            margin: auto;\r\n        }\r\n\r\n        #content h1 {\r\n            font-style: normal;\r\n            font-weight: normal;\r\n            font-size: 36px;\r\n            line-height: 43px;\r\n            text-align: center;\r\n            letter-spacing: 0.1px;\r\n            color: #070808;\r\n            margin: 10px auto 8px;\r\n        }\r\n\r\n        #content > p {\r\n            text-align: center;\r\n            margin-left: auto;\r\n            margin-right: auto;\r\n            width: 640px;\r\n            font-size: 14px;\r\n            line-height: 20px;\r\n        }\r\n\r\n        .response {\r\n            background-color: #fff;\r\n            color: #5a636b;\r\n            margin: 24px auto 0;\r\n            padding: 20px;\r\n            font-size: 16px;\r\n            width: 800px;\r\n            border: 1px solid #c8cbce;\r\n            box-sizing: border-box;\r\n            border-radius: 8px;\r\n        }\r\n\r\n        .response p {\r\n            margin: 0 0 1em;\r\n        }\r\n\r\n        .response p:last-child {\r\n            margin: 0;\r\n        }\r\n\r\n        .response b {\r\n            color: #070808;\r\n        }\r\n\r\n        .response .msg b {\r\n            color: #d94949;\r\n        }\r\n\r\n        .response form td,\r\n        .response form input {\r\n            font-size: 1.1em;\r\n            font-weight: bold;\r\n        }\r\n\r\n        .loading {\r\n            margin: 2em auto 1em;\r\n        }\r\n    </style>\r\n</head>\r\n\r\n<body>\r\n<div id=\"content\" class=\"container\">\r\n    <img src=\"data:image/png;base64,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\" alt=\"Error\">\r\n    <h1>Application Blocked</h1>\r\n    <div class=\"response\">\r\n        <p>The application you are trying to use has been blocked in accordance with company policy. Please contact your system administrator if you believe this is an error.</p>\r\n        <p><b>User:</b> <user/></p>\r\n        <p><b>Application:</b> <appname/></p>\r\n    </div>\r\n</div>\r\n</body>\r\n</html>\r\n"
+                }
+              ]
             },
             {
               "name": "Export application packet capture",
@@ -12263,13 +12373,13 @@
   ],
   "variable": [
     {
-      "id": "db1f3fac-d9c7-48f2-b84a-b48b01093873",
+      "id": "fc443322-bbed-46e6-8313-bfd85430a3fc",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "033c483e-7476-4266-8657-897cba7ecf4c",
+      "id": "058011c9-1abe-487a-87fb-cad4a68a68f5",
       "key": "{{key}}",
       "value": "",
       "type": "string"
