@@ -8277,7 +8277,7 @@
                   }
                 },
                 "url": {
-                  "raw": "https://{{host}}/api/?type=import&category=certificate&certificate-name=Test-Cert&format=pem&target-tpl=Test-Template&target-tpl-vsys=vsys1",
+                  "raw": "https://{{host}}/api/?type=import&category=certificate&certificate-name=Test-Cert&format=&target-tpl=&target-tpl-vsys=",
                   "protocol": "https",
                   "host": [
                     "{{host}}"
@@ -8301,16 +8301,17 @@
                     },
                     {
                       "key": "format",
-                      "value": "pem"
+                      "value": "",
+                      "description": "Format of certificate.  One of `pem`, `pkcs10`, `pkcs12'."
                     },
                     {
                       "key": "target-tpl",
-                      "value": "Test-Template",
+                      "value": "",
                       "description": "Target template to import into."
                     },
                     {
                       "key": "target-tpl-vsys",
-                      "value": "vsys1",
+                      "value": "",
                       "description": "Virtual system within target template."
                     }
                   ]
@@ -11879,13 +11880,13 @@
   ],
   "variable": [
     {
-      "id": "5f9f1134-6567-40aa-91a6-fea36f3a04b1",
+      "id": "2cff6bb4-3da6-462f-bf35-6e4f9cdc0c40",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "2b0e6293-22dc-483e-98d0-836a0b4b0a1c",
+      "id": "2048a2f4-c77a-4952-874c-db6a5c428fe8",
       "key": "{{key}}",
       "value": "",
       "type": "string"
