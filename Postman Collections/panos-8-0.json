@@ -7526,7 +7526,7 @@
                     "method": "GET",
                     "header": [],
                     "url": {
-                      "raw": "https://{{host}}/api/?type=export&category=certificate&certificate-name=Test-Cert&format=pem&include-key=no",
+                      "raw": "https://{{host}}/api/?type=export&category=certificate&certificate-name=&format=&include-key=&vsys",
                       "protocol": "https",
                       "host": [
                         "{{host}}"
@@ -7546,18 +7546,24 @@
                         },
                         {
                           "key": "certificate-name",
-                          "value": "Test-Cert",
-                          "description": "Name of certificate object."
+                          "value": "",
+                          "description": "**Required**. Name of certificate."
                         },
                         {
                           "key": "format",
-                          "value": "pem",
-                          "description": "Export format.  One of `pem`, `pkcs10`, `pkcs12`."
+                          "value": "",
+                          "description": "**Required**.  Format for certificate.  One of `pem`, `pkcs10`, `pkcs12`."
                         },
                         {
                           "key": "include-key",
-                          "value": "no",
-                          "description": "Include private key with certificate.  One of `yes`, `no`."
+                          "value": "",
+                          "description": "**Required**. Include private key with certificate.  One of `yes`, `no`."
+                        },
+                        {
+                          "key": "vsys",
+                          "value": null,
+                          "description": "*Optional*.  Virtual system where object is located.  Default is `shared`.",
+                          "type": "text"
                         }
                       ]
                     }
@@ -7713,97 +7719,7 @@
                       ]
                     }
                   },
-                  "response": [
-                    {
-                      "id": "1cac2007-b89c-47ea-a2df-664e8bf68ab8",
-                      "name": "Begin tech support file creation",
-                      "originalRequest": {
-                        "method": "GET",
-                        "header": [],
-                        "url": {
-                          "raw": "https://{{host}}/api/?type=export&category=tech-support",
-                          "protocol": "https",
-                          "host": [
-                            "{{host}}"
-                          ],
-                          "path": [
-                            "api",
-                            ""
-                          ],
-                          "query": [
-                            {
-                              "key": "type",
-                              "value": "export"
-                            },
-                            {
-                              "key": "category",
-                              "value": "tech-support"
-                            }
-                          ]
-                        }
-                      },
-                      "status": "OK",
-                      "code": 200,
-                      "_postman_previewlanguage": "xml",
-                      "header": [
-                        {
-                          "key": "Date",
-                          "value": "Thu, 17 Dec 2020 16:44:36 GMT"
-                        },
-                        {
-                          "key": "Content-Type",
-                          "value": "application/xml; charset=UTF-8"
-                        },
-                        {
-                          "key": "Content-Length",
-                          "value": "131"
-                        },
-                        {
-                          "key": "Connection",
-                          "value": "keep-alive"
-                        },
-                        {
-                          "key": "X-FRAME-OPTIONS",
-                          "value": "SAMEORIGIN"
-                        },
-                        {
-                          "key": "X-XSS-Protection",
-                          "value": "1; mode=block"
-                        },
-                        {
-                          "key": "X-Content-Type-Options",
-                          "value": "nosniff"
-                        },
-                        {
-                          "key": "Content-Security-Policy",
-                          "value": "default-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:;"
-                        },
-                        {
-                          "key": "Strict-Transport-Security",
-                          "value": "max-age=31536000"
-                        },
-                        {
-                          "key": "Cache-Control",
-                          "value": "no-store, no-cache, must-revalidate, post-check=0, pre-check=0"
-                        },
-                        {
-                          "key": "Expires",
-                          "value": "Thu, 19 Nov 1981 08:52:00 GMT"
-                        },
-                        {
-                          "key": "Pragma",
-                          "value": "no-cache"
-                        },
-                        {
-                          "key": "Allow",
-                          "value": "GET, HEAD, POST, PUT, DELETE, OPTIONS"
-                        }
-                      ],
-                      "cookie": [],
-                      "responseTime": null,
-                      "body": "<response status=\"success\" code=\"19\">\n    <result>\n        <msg>\n            <line>Exec job enqueued with jobid 3</line>\n        </msg>\n        <job>3</job>\n    </result>\n</response>"
-                    }
-                  ]
+                  "response": []
                 },
                 {
                   "name": "Check tech support file status",
@@ -7945,7 +7861,7 @@
                   ]
                 },
                 {
-                  "name": "Retrieve tech support file",
+                  "name": "Export tech support data",
                   "_postman_id": "6e3fa428-5215-4bb6-a874-fef52d4665e3",
                   "protocolProfileBehavior": {
                     "disableBodyPruning": true
@@ -7954,7 +7870,7 @@
                     "method": "GET",
                     "header": [],
                     "url": {
-                      "raw": "https://{{host}}/api/?type=export&category=tech-support&action=get&job-id=3",
+                      "raw": "https://{{host}}/api/?type=export&category=tech-support&action=&job-id=",
                       "protocol": "https",
                       "host": [
                         "{{host}}"
@@ -7974,11 +7890,13 @@
                         },
                         {
                           "key": "action",
-                          "value": "get"
+                          "value": "",
+                          "description": "*Optional*.  Action to perform.  Can be one of `get`, `status`, `finish`.  If not specified, a new retrieval job is started."
                         },
                         {
                           "key": "job-id",
-                          "value": "3"
+                          "value": "",
+                          "description": "*Optional*.  Return the results of this retrieval job."
                         }
                       ]
                     },
@@ -8555,19 +8473,6 @@
                   "body": "<response status=\"success\">\n    <msg>\n        <line>panup-all-antivirus-3566-4077 saved</line>\n    </msg>\n</response>"
                 }
               ]
-            },
-            {
-              "name": "Import Files",
-              "_postman_id": "02c6412f-14a1-4fa8-b8c6-87621efa28bd",
-              "protocolProfileBehavior": {
-                "disableBodyPruning": true
-              },
-              "request": {
-                "method": "GET",
-                "header": [],
-                "url": ""
-              },
-              "response": []
             }
           ],
           "_postman_id": "b46a37c6-2ff6-4d05-b8e4-36bf282f7487",
@@ -12227,13 +12132,13 @@
   ],
   "variable": [
     {
-      "id": "a7d851a1-0837-465a-8381-91a6dd7a832f",
+      "id": "e39cc1e2-555d-4165-813c-83983bf89f13",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "007a7f7b-922b-4131-87f6-b8829344feea",
+      "id": "004921b3-8f23-4498-b24c-cc9a60ce5456",
       "key": "{{key}}",
       "value": "",
       "type": "string"
