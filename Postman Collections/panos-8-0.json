@@ -8297,7 +8297,8 @@
                     },
                     {
                       "key": "certificate-name",
-                      "value": "Test-Cert"
+                      "value": "Test-Cert",
+                      "description": "**Required**.  Name for imported certificate."
                     },
                     {
                       "key": "format",
@@ -8307,12 +8308,12 @@
                     {
                       "key": "target-tpl",
                       "value": "",
-                      "description": "Target template to import into."
+                      "description": "*Optional*. Target template to import into."
                     },
                     {
                       "key": "target-tpl-vsys",
                       "value": "",
-                      "description": "Virtual system within target template."
+                      "description": "*Optional*. Virtual system within target template."
                     }
                   ]
                 }
@@ -11880,13 +11881,13 @@
   ],
   "variable": [
     {
-      "id": "dd14fcd1-5364-472c-acb1-6629258597b0",
+      "id": "6b134328-43e0-41fc-b9e9-be4739a9ec52",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "e773991f-32af-4192-945c-929313a236c6",
+      "id": "120afc04-9320-4639-bfc8-8f2b44392056",
       "key": "{{key}}",
       "value": "",
       "type": "string"
