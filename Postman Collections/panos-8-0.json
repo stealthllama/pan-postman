@@ -7240,8 +7240,7 @@
                     {
                       "key": "from",
                       "value": null,
-                      "description": "*Optional*.  Can be either a directory name, or a capture filename to retrieve.",
-                      "type": "text"
+                      "description": "*Optional*.  Can be either a directory name, or a capture filename to retrieve."
                     }
                   ]
                 }
@@ -8052,7 +8051,7 @@
             }
           ],
           "_postman_id": "23756299-0092-4f5e-aac4-b873e07acf55",
-          "description": "You can export certain types of files from the firewall using the `type=export` parameter in the API request.\n\nThe `category` parameter is used to specify the type of file that you want to export:\n\n# Configuration \n\n`category=configuration`\n\n# Certificates/Keys\n\n`category=certificate`\n\n- Response pages  - `category= application-block-page | captive-portal-text | file-block-continue-page | file-block-page | global-protect-portal-custom-help-page | global-protect-portal-custom-login-page | global-protect-portal-custom-welcome-page | ssl-cert-status-page | ssl-optout-text | url-block-page | url-coach-text | virus-block-page`\n- Technical support data - `category=tech-support`\n- Device state - `category=device-state`",
+          "description": "You can export certain types of files from the firewall using the `type=export` parameter in the API request.\n\nThe `category` parameter is used to specify the type of file that you want to export:\n\n- Configuration: `configuration`\n- Certificates: `certificate`\n- Response pages: \n    - `application-block-page` \n    - `captive-portal-text`\n    - `file-block-continue-page`\n    - `file-block-page` \n    - `global-protect-portal-custom-help-page`\n    - `global-protect-portal-custom-login-page` \n    - `global-protect-portal-custom-welcome-page`\n    - `ssl-cert-status-page`\n    - `ssl-optout-text`\n    - `url-block-page` \n    - `url-coach-text`\n    - `virus-block-page`\n- Tech Support file: `tech-support`\n- Device state: `device-state`",
           "event": [
             {
               "listen": "prerequest",
@@ -12251,13 +12250,13 @@
   ],
   "variable": [
     {
-      "id": "383821b6-f86b-4de3-bfc4-c723a17584a9",
+      "id": "faae085f-1eca-4f93-9833-21ac3d4feed9",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "12659da3-8c21-46c8-95e5-701e604239d7",
+      "id": "981e2b60-56dc-4041-9973-e38b86341356",
       "key": "{{key}}",
       "value": "",
       "type": "string"
