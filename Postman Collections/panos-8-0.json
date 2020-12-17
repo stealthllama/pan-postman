@@ -7526,7 +7526,7 @@
                     "method": "GET",
                     "header": [],
                     "url": {
-                      "raw": "https://{{host}}/api/?type=export&category=certificate&certificate-name=&format=&include-key=&vsys",
+                      "raw": "https://{{host}}/api/?type=export&category=certificate&certificate-name=Test-Cert&format=pem&include-key=no",
                       "protocol": "https",
                       "host": [
                         "{{host}}"
@@ -7546,24 +7546,18 @@
                         },
                         {
                           "key": "certificate-name",
-                          "value": "",
-                          "description": "**Required**. Name of certificate."
+                          "value": "Test-Cert",
+                          "description": "Name of certificate object."
                         },
                         {
                           "key": "format",
-                          "value": "",
-                          "description": "**Required**.  Format for certificate.  One of `pem`, `pkcs10`, `pkcs12`."
+                          "value": "pem",
+                          "description": "Export format.  One of `pem`, `pkcs10`, `pkcs12`."
                         },
                         {
                           "key": "include-key",
-                          "value": "",
-                          "description": "**Required**. Include private key with certificate.  One of `yes`, `no`."
-                        },
-                        {
-                          "key": "vsys",
-                          "value": null,
-                          "description": "*Optional*.  Virtual system where object is located.  Default is `shared`.",
-                          "type": "text"
+                          "value": "no",
+                          "description": "Include private key with certificate.  One of `yes`, `no`."
                         }
                       ]
                     }
@@ -8561,6 +8555,19 @@
                   "body": "<response status=\"success\">\n    <msg>\n        <line>panup-all-antivirus-3566-4077 saved</line>\n    </msg>\n</response>"
                 }
               ]
+            },
+            {
+              "name": "Import Files",
+              "_postman_id": "02c6412f-14a1-4fa8-b8c6-87621efa28bd",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": ""
+              },
+              "response": []
             }
           ],
           "_postman_id": "b46a37c6-2ff6-4d05-b8e4-36bf282f7487",
@@ -12220,13 +12227,13 @@
   ],
   "variable": [
     {
-      "id": "9a345840-70d5-4ecc-931c-e9f5ad0511ea",
+      "id": "a7d851a1-0837-465a-8381-91a6dd7a832f",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "ec822996-52b3-4e2b-9b02-d2d51673217f",
+      "id": "007a7f7b-922b-4131-87f6-b8829344feea",
       "key": "{{key}}",
       "value": "",
       "type": "string"
