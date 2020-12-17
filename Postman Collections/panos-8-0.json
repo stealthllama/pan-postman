@@ -8602,7 +8602,7 @@
                 "method": "GET",
                 "header": [],
                 "url": {
-                  "raw": "https://{{host}}/api/?type=log&log-type=traffic&action=get&job-id=13",
+                  "raw": "https://{{host}}/api/?type=log&log-type=&query=&action=get&job-id=13",
                   "protocol": "https",
                   "host": [
                     "{{host}}"
@@ -8618,13 +8618,13 @@
                     },
                     {
                       "key": "log-type",
-                      "value": "traffic",
-                      "description": "The type of logs to retrieve.  Can be one of `traffic`, `threat`, `config`, `system`, `hipmatch`, `wildfire`, `url`, `data`, `corr`, `corr-detail`, `corr-categ`, `user-id`, `auth`, `gtp`, `external`, `iptag`."
+                      "value": "",
+                      "description": "**Required**. The type of logs to retrieve.  Can be one of `traffic`, `threat`, `config`, `system`, `hipmatch`, `wildfire`, `url`, `data`, `corr`, `corr-detail`, `corr-categ`, `user-id`, `auth`, `gtp`, `external`, `iptag`."
                     },
                     {
                       "key": "query",
-                      "value": "( receive_time geq '2020/12/15 06:00:00' )",
-                      "disabled": true
+                      "value": "",
+                      "description": "*Optional*. Specify the match criteria for the logs.  This is similar to the query used in the web interface Monitor tab, but must be URL encoded."
                     },
                     {
                       "key": "action",
@@ -12261,13 +12261,13 @@
   ],
   "variable": [
     {
-      "id": "15209800-b616-469e-ba7c-273753ee8db5",
+      "id": "90136197-c971-4376-98c9-8bada98799ef",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "6b56d67f-bc13-46b9-8855-62fe1b7f9f68",
+      "id": "721a1cba-6f3a-47ce-b76a-f3210f3bae7b",
       "key": "{{key}}",
       "value": "",
       "type": "string"
