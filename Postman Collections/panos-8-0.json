@@ -10783,6 +10783,46 @@
         }
       ],
       "_postman_id": "48a4821f-5bbb-4b0c-ad3a-eb55970c295e"
+    },
+    {
+      "name": "Change Template",
+      "_postman_id": "e96ab8b1-85d3-4eb0-a72b-7cad37aea42a",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://{{host}}/api?type=config&action=set&xpath=/config/devices/entry[@name='localhost.localdomain']/template/entry[@name='Test-Template']/config/devices/entry[@name='localhost.localdomain']/deviceconfig/system/motd-and-banner&element=<motd-and-banner><motd-enable>yes</motd-enable><message>Help I'm trapped in a firewall factory!</message></motd-and-banner>",
+          "protocol": "https",
+          "host": [
+            "{{host}}"
+          ],
+          "path": [
+            "api"
+          ],
+          "query": [
+            {
+              "key": "type",
+              "value": "config"
+            },
+            {
+              "key": "action",
+              "value": "set"
+            },
+            {
+              "key": "xpath",
+              "value": "/config/devices/entry[@name='localhost.localdomain']/template/entry[@name='Test-Template']/config/devices/entry[@name='localhost.localdomain']/deviceconfig/system/motd-and-banner"
+            },
+            {
+              "key": "element",
+              "value": "<motd-and-banner><motd-enable>yes</motd-enable><message>Help I'm trapped in a firewall factory!</message></motd-and-banner>"
+            }
+          ]
+        }
+      },
+      "response": []
     }
   ],
   "auth": {
@@ -10816,13 +10856,13 @@
   ],
   "variable": [
     {
-      "id": "14f78a69-c774-4a22-9c6a-4a0611d9a9a4",
+      "id": "d9fa9347-c878-442b-88ca-7e06d8e48822",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "94529f23-f567-4d4f-9a36-6a7bf8b41ab0",
+      "id": "efad9488-a4cc-4ebe-9f0b-3144e5c14b20",
       "key": "{{key}}",
       "value": "",
       "type": "string"
