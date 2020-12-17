@@ -8602,7 +8602,7 @@
                 "method": "GET",
                 "header": [],
                 "url": {
-                  "raw": "https://{{host}}/api/?type=log&log-type=&query=&nlogs=&skip=&dir",
+                  "raw": "https://{{host}}/api/?type=log&log-type=&query=&nlogs=&skip=&dir&action",
                   "protocol": "https",
                   "host": [
                     "{{host}}"
@@ -8639,8 +8639,20 @@
                     {
                       "key": "dir",
                       "value": null,
-                      "description": "*Optional*. Show logs either oldest first (`forward`) or newest first (`backward`). Default is `backward`.",
+                      "description": "*Optional*. Show logs either oldest first (`forward`) or newest first (`backward`). Default is `backward`."
+                    },
+                    {
+                      "key": "action",
+                      "value": null,
+                      "description": "*Optional*.  Action to perform.  Can be one of `get` or `finish`.  If not specified, a new retrieval job is started.",
                       "type": "text"
+                    },
+                    {
+                      "key": "job-id",
+                      "value": null,
+                      "description": "*Optional*  Return the results of this retrieval job.",
+                      "type": "text",
+                      "disabled": true
                     }
                   ]
                 }
@@ -12269,13 +12281,13 @@
   ],
   "variable": [
     {
-      "id": "7af2758c-4480-4c71-9936-679547943f0f",
+      "id": "2343320b-798b-44a6-89e3-59f9d44cb2f7",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "f70a894c-6a75-4e51-b489-0e8f10acdcb8",
+      "id": "061cf15c-249b-442f-ad85-db63612931c7",
       "key": "{{key}}",
       "value": "",
       "type": "string"
