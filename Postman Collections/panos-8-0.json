@@ -8692,6 +8692,20 @@
               "request": {
                 "method": "POST",
                 "header": [],
+                "body": {
+                  "mode": "formdata",
+                  "formdata": [
+                    {
+                      "key": "file",
+                      "description": "File to import.",
+                      "type": "file",
+                      "value": null
+                    }
+                  ],
+                  "options": {
+                    "formdata": {}
+                  }
+                },
                 "url": {
                   "raw": "https://{{host}}/api/?type=import&category=",
                   "protocol": "https",
@@ -12888,13 +12902,13 @@
   ],
   "variable": [
     {
-      "id": "b6e98bf2-0468-4fc9-97f2-b1faab0a52f0",
+      "id": "a5496770-6bb8-487e-a52e-29444df10e0e",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "697d7c01-8c0d-4ca7-9e45-e939c9c4ff94",
+      "id": "33deead2-0704-42cd-9cd0-996d6b8148e0",
       "key": "{{key}}",
       "value": "",
       "type": "string"
