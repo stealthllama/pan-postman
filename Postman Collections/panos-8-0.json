@@ -7729,7 +7729,7 @@
                     }
                   ]
                 },
-                "description": "After a successful retrieval of the job data, the job is automatically deleted by the system."
+                "description": "Tech support files can be quite large, so this call is asynchronous.\n\nAfter a successful retrieval of the job data, the job is automatically deleted by the system."
               },
               "response": [
                 {
@@ -12250,13 +12250,13 @@
   ],
   "variable": [
     {
-      "id": "faae085f-1eca-4f93-9833-21ac3d4feed9",
+      "id": "4b27afed-7b2f-4b1b-a413-104980997064",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "981e2b60-56dc-4041-9973-e38b86341356",
+      "id": "a5bda258-77cb-4ca9-aca5-54fb88ab466f",
       "key": "{{key}}",
       "value": "",
       "type": "string"
