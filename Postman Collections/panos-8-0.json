@@ -8684,6 +8684,19 @@
           "name": "Import Files",
           "item": [
             {
+              "name": "Import file",
+              "_postman_id": "4cde82fa-1ecb-4c6f-8cb0-13c75ac5405b",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": ""
+              },
+              "response": []
+            },
+            {
               "name": "Import certificate",
               "_postman_id": "2140d4f3-cc79-4093-8fbf-04fe470ebdff",
               "protocolProfileBehavior": {
@@ -9195,19 +9208,6 @@
                   "body": "<response status=\"success\">\n    <msg>\n        <line>panup-all-antivirus-3566-4077 saved</line>\n    </msg>\n</response>"
                 }
               ]
-            },
-            {
-              "name": "Import file",
-              "_postman_id": "4cde82fa-1ecb-4c6f-8cb0-13c75ac5405b",
-              "protocolProfileBehavior": {
-                "disableBodyPruning": true
-              },
-              "request": {
-                "method": "GET",
-                "header": [],
-                "url": ""
-              },
-              "response": []
             }
           ],
           "_postman_id": "b46a37c6-2ff6-4d05-b8e4-36bf282f7487",
@@ -12867,13 +12867,13 @@
   ],
   "variable": [
     {
-      "id": "20bab79f-5494-466a-9f14-ffdbe2d3eec1",
+      "id": "92e3fde1-07c3-4637-95f4-887b9bde8dec",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "08c2085d-f18a-400e-88ba-3a95adc83fe5",
+      "id": "802011a0-fc02-4e85-ab2a-1124bd023387",
       "key": "{{key}}",
       "value": "",
       "type": "string"
