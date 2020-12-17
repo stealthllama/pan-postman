@@ -8302,7 +8302,7 @@
                     {
                       "key": "format",
                       "value": "",
-                      "description": "Format of certificate.  One of `pem`, `pkcs10`, `pkcs12'."
+                      "description": "**Required**.  Format of certificate.  One of `pem`, `pkcs10`, `pkcs12`."
                     },
                     {
                       "key": "target-tpl",
@@ -11880,13 +11880,13 @@
   ],
   "variable": [
     {
-      "id": "d5970309-00cd-4c27-8fdd-541a7b990a27",
+      "id": "dd14fcd1-5364-472c-acb1-6629258597b0",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "04d72be6-c7c5-487d-b228-bfccbada14f4",
+      "id": "e773991f-32af-4192-945c-929313a236c6",
       "key": "{{key}}",
       "value": "",
       "type": "string"
