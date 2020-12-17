@@ -8602,7 +8602,7 @@
                 "method": "GET",
                 "header": [],
                 "url": {
-                  "raw": "https://{{host}}/api/?type=log&log-type=&query=&nlogs=&skip=&dir&action&job-id",
+                  "raw": "https://{{host}}/api/?type=log&log-type=&query=&nlogs=&skip=&dir=&action=&job-id=",
                   "protocol": "https",
                   "host": [
                     "{{host}}"
@@ -8638,17 +8638,17 @@
                     },
                     {
                       "key": "dir",
-                      "value": null,
+                      "value": "",
                       "description": "*Optional*. Show logs either oldest first (`forward`) or newest first (`backward`). Default is `backward`."
                     },
                     {
                       "key": "action",
-                      "value": null,
+                      "value": "",
                       "description": "*Optional*.  Action to perform.  Can be one of `get` or `finish`.  If not specified, a new retrieval job is started."
                     },
                     {
                       "key": "job-id",
-                      "value": null,
+                      "value": "",
                       "description": "*Optional*.  Return the results of this retrieval job."
                     }
                   ]
@@ -9011,7 +9011,6 @@
             }
           ],
           "_postman_id": "2b35b2a1-42c2-4d84-833d-e9fc5e0efa98",
-          "description": "Use this request to show:\n\n- PAN-OS version\n- Serial number\n- Model number\n- Multi-vsys capability",
           "event": [
             {
               "listen": "prerequest",
@@ -12278,13 +12277,13 @@
   ],
   "variable": [
     {
-      "id": "210df069-760c-4b79-a6ce-ed6d7397de05",
+      "id": "7bc87a88-7d6a-4e27-a7a8-8ba6b436b65d",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "3f069b1d-8d9b-49b0-bbf5-e659f2854391",
+      "id": "67030dee-7e20-4acb-b7ca-70f84723f337",
       "key": "{{key}}",
       "value": "",
       "type": "string"
