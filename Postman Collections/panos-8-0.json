@@ -7508,23 +7508,23 @@
                     }
                   },
                   "response": []
-                },
-                {
-                  "name": "Export application packet captures",
-                  "_postman_id": "c82305d9-faa8-43da-a296-0bcc3ce1ade7",
-                  "protocolProfileBehavior": {
-                    "disableBodyPruning": true
-                  },
-                  "request": {
-                    "method": "GET",
-                    "header": [],
-                    "url": ""
-                  },
-                  "response": []
                 }
               ],
               "_postman_id": "5128f380-056b-49f1-b0db-c6df51b9839d",
               "_postman_isSubFolder": true
+            },
+            {
+              "name": "Export application packet captures",
+              "_postman_id": "c82305d9-faa8-43da-a296-0bcc3ce1ade7",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": ""
+              },
+              "response": []
             },
             {
               "name": "Export certificate",
@@ -12251,13 +12251,13 @@
   ],
   "variable": [
     {
-      "id": "4c9d67ce-2dd5-4d56-873e-2ca64cff6f2a",
+      "id": "2a895794-af68-4f73-8990-2ee1fd9d7a3f",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "8a2cdc79-e688-4dc1-bb37-b1eef1fb04d7",
+      "id": "82bec19e-6f8e-4c14-860c-49ff29843c0f",
       "key": "{{key}}",
       "value": "",
       "type": "string"
