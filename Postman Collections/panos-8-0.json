@@ -2,7 +2,7 @@
   "info": {
     "_postman_id": "241ff148-5458-dde5-cbaa-a80527e7dc55",
     "name": "PAN-OS XML API",
-    "description": "This is a companion Postman collection for the official [PAN-OS XML API documentation](https://docs.paloaltonetworks.com/pan-os/10-0/pan-os-panorama-api.html).  This is meant to provide easy to run examples of the PAN-OS API calls used in the documentation.  It is **not meant** to be a comprehensive database of the possible calls.\n\nFor determining the appropriate API calls for your use case, see the following sections in the documentation:\n\n- [Use the API Browser](https://docs.paloaltonetworks.com/pan-os/10-0/pan-os-panorama-api/get-started-with-the-pan-os-xml-api/explore-the-api/use-the-api-browser.html)\n- [Use the CLI to find XML API Syntax](https://docs.paloaltonetworks.com/pan-os/10-0/pan-os-panorama-api/get-started-with-the-pan-os-xml-api/explore-the-api/use-the-cli-to-find-xml-api-syntax.html)\n- [Use the Web Interface to find XML API Syntax](https://docs.paloaltonetworks.com/pan-os/10-0/pan-os-panorama-api/get-started-with-the-pan-os-xml-api/explore-the-api/use-the-cli-to-find-xml-api-syntax.html)\n\n# Using this collection\n\nTo use the examples in this guide, you must define the following Postman environment [variables](https://learning.postman.com/docs/sending-requests/variables/):\n\n- **host**: IP address or hostname of the PAN-OS device you wish to interact with.  This may be either a firewall or Panorama, depending on the API call.\n- **key**: A PAN-OS API key, which will be used in the `X-PAN-KEY` HTTP header for authentication to the device.  See the [Authentication section](https://documenter.getpostman.com/view/2937330/7LgDQwG#8d657926-6a63-40c0-a285-7cb3a670e5c9) for how to generate it.\n\n# Request Structure\n\nView the [official documentation](https://docs.paloaltonetworks.com/pan-os/10-0/pan-os-panorama-api/about-the-pan-os-xml-api/structure-of-a-pan-os-xml-api-request.html).\n\nA PAN-OS XML API request typically consists of the following parameters:\n\n```\nhttps://<firewall>/api/?type=<type>&action=<action>&xpath=<xpath>&key=<apikey>\n```\n\n- API key (`key=`): The API key allows you to authenticate yourself to the API when making requests.\n- Request type (`type=`): The type of request you want.\n- Action (`action=`): When the request type is `config` or `op`, you must also specify an associated action.\n- XML and XPath elements (`xpath=` or `cmd=`): When using configuration or operation mode commands on the firewall, you include only the XML or the XPath that specifies the XML node.\n\nRequests to the PAN-OS XML API can be performed using the `GET` and `POST` HTTP methods.\n\n\n## GET Requests\n\nUse a GET request when the query size is less than 2K and you want to pass strings in the request URL.  Append the query string to the request URL as a URL-encoded parameter string:\n\n```\nGET /api/?type=keygen&user=<username>&password=<password>\n```\n\n\n## POST Requests\n\nUse a POST request when you are sending large amounts of form data (max request size of 5MB) or when you are passing non-ASCII characters.  Some API requests, such as importing files, require `POST`.  When using this method, pass the parameters in the request body, including the login credentials:\n\n```\nPOST /api/ HTTP/1.1 \nContent-Type: application/x-www-form-urlencoded \npassword=<password>&user=<username>&type=keygen\n```\n\n# Authentication\n\nView the [official documentation](https://docs.paloaltonetworks.com/pan-os/10-0/pan-os-panorama-api/about-the-pan-os-xml-api/structure-of-a-pan-os-xml-api-request/api-authentication-and-security.html).\n\nTo authenticate to the PAN-OS device, provide the API key along with your request in any of the following ways:\n\n- The `X-PAN-KEY: <key>` HTTP header.\n- The `key=` request URL parameter (must be URL-encoded).\n- Use [Basic Authentication](https://en.wikipedia.org/wiki/Basic_access_authentication#Client_side) to pass the admin credentials as `username:password` with Base64 encoding in an Authorization header field.\n\n**Note:** You cannot use basic authentication with an API key.\n\nSee the [Generate API key](https://documenter.getpostman.com/view/2937330/7LgDQwG#5a6eec54-51a0-9716-fa38-5f894bf3c2ff) request for how to generate an API key.\n\n# Error Codes\n\nView the [official documentation](https://docs.paloaltonetworks.com/pan-os/10-0/pan-os-panorama-api/get-started-with-the-pan-os-xml-api/pan-os-xml-api-error-codes.html).\n\nThe API response XML contains a status field and an error field.  These are the available API error codes and names:\n\n## 400\n- **Name:** Bad Request\n- **Description:** A required parameter is missing, or an illegal parameter value was used.\n\n## 403\n- **Name:** Forbidden\n- **Description:** Authentication or authorization errors, including invalid key or insufficient admin access rights.\n\n## 1\n- **Name:** Unknown Command\n- **Description:** The specific config or operational command is not recognized.\n\n## 2-5\n\n- **Name**: Internal errors\n- **Description**: Check with technical support.\n\n## 6\n\n- **Name**: Bad Xpath\n- **Description**: The xpath specified in one or more attributes of the command is invalid.  Check the API browser for proper xpath values.\n\n## 7\n\n- **Name**: Object not present\n- **Description**: Object specified by the xpath is not present.\n\n## 8\n\n- **Name**: Object not unique\n- **Description**: For commands that operate on a single object, the specified object is not unique.\n\n## 10\n\n- **Name**: Reference count not zero\n- **Description**: Object cannot be deleted as there are other objects that refer to it.\n\n## 11\n\n- **Name**: Internal error\n- **Description**: Check with technical support.\n\n## 12\n\n- **Name**: Invalid object\n- **Description**: Xpath or element values provided are not complete.\n\n## 14\n\n- **Name**: Operation not possible\n- **Description**: Operation is allowed, but not possible in this case.  For example, moving a rule up one position when it is already at the top.\n\n## 15\n\n- **Name**: Operation denied\n- **Description**: Operation is not allowed.  For example, admin not allowed to delete own account, or running a command that is not allowed on a passive device.\n\n## 16\n\n- **Name**: Unauthorized\n- **Description**: The API role does not have access rights to run this query.\n\n## 17\n\n- **Name**: Invalid command\n- **Description**: Invalid command or parameters.\n\n## 18\n\n- **Name**: Malformed command\n- **Description**: The XML is malformed.\n\n## 19-20\n\n- **Name**: Success\n- **Description**: Command completed successfully.\n\n## 21\n\n- **Name**: Internal error\n- **Description**: Check with technical support.\n\n## 22\n\n- **Name**: Session timed out\n- **Description**: The session for this query timed out.\n\n",
+    "description": "This is a companion Postman collection for the official [PAN-OS XML API documentation](https://docs.paloaltonetworks.com/pan-os/10-0/pan-os-panorama-api.html).  This is meant to provide easy to run examples of the PAN-OS API calls used in the documentation.  It is **not meant** to be a comprehensive database of the possible calls.\n\nFor determining the appropriate API calls for your use case, see the following sections in the documentation:\n\n- [Use the API Browser](https://docs.paloaltonetworks.com/pan-os/10-0/pan-os-panorama-api/get-started-with-the-pan-os-xml-api/explore-the-api/use-the-api-browser.html)\n- [Use the CLI to find XML API Syntax](https://docs.paloaltonetworks.com/pan-os/10-0/pan-os-panorama-api/get-started-with-the-pan-os-xml-api/explore-the-api/use-the-cli-to-find-xml-api-syntax.html)\n- [Use the Web Interface to find XML API Syntax](https://docs.paloaltonetworks.com/pan-os/10-0/pan-os-panorama-api/get-started-with-the-pan-os-xml-api/explore-the-api/use-the-cli-to-find-xml-api-syntax.html)\n\n# Using this collection\n\nTo use the examples in this guide, you must define the following Postman environment [variables](https://learning.postman.com/docs/sending-requests/variables/):\n\n| Variable | Description |\n| -------- | ------------|\n| **host** | IP address of the PAN-OS device you wish to interact with. |\n| **key**  | A PAN-OS API key, which will be used in the `X-PAN-KEY` HTTP header for authentication to the device. See the [Authentication section](https://documenter.getpostman.com/view/2937330/7LgDQwG#8d657926-6a63-40c0-a285-7cb3a670e5c9) for how to generate it. |\n\n\n# Request Structure\n\nView the [official documentation](https://docs.paloaltonetworks.com/pan-os/10-0/pan-os-panorama-api/about-the-pan-os-xml-api/structure-of-a-pan-os-xml-api-request.html).\n\nA PAN-OS XML API request typically consists of the following parameters:\n\n| Parameter | Description |\n| --------- | ----------- |\n| **type**  | The type of request being made. |\n| **action** | When the request type is `config` or `op`, an associated action must be specified. |\n| **xpath** | When the request type is `config`, operate on the portion of the config located at this XPath. |\n| **cmd** | When request type is `op`, perform this command. |\n\nRequests to the PAN-OS XML API can be performed using the `GET` and `POST` HTTP methods.\n\n\n## GET Requests\n\nUse a GET request when the query size is less than 2K and you want to pass strings in the request URL.  Append the query string to the request URL as a URL-encoded parameter string:\n\n```\nGET /api/?type=keygen&user=username&password=password\n```\n\n\n## POST Requests\n\nUse a POST request when you are sending large amounts of form data (max request size of 5MB) or when you are passing non-ASCII characters.  Some API requests, such as importing files, require `POST`.  When using this method, pass the parameters in the request body, including the login credentials:\n\n```\nPOST /api/ HTTP/1.1 \nContent-Type: application/x-www-form-urlencoded \npassword=password&user=username&type=keygen\n```\n\n# Error Codes\n\nView the [official documentation](https://docs.paloaltonetworks.com/pan-os/10-0/pan-os-panorama-api/get-started-with-the-pan-os-xml-api/pan-os-xml-api-error-codes.html).\n\nThe API response XML contains a status field and an error field.  These are the available API error codes and names:\n\n| Error Code | Name | Description |\n| ---------- | ---- | ----------- |\n| 400 | Bad Request | A required parameter is missing, or an illegal parameter value was used. |\n| 403 | Forbidden | Authentication or authorization errors, including invalid key or insufficient admin access rights. |\n| 1   | Unknown Command | The specific config or operational command is not recognized. |\n| 2-5 | Internal Errors | Check with technical support. |\n| 6   | Bad Xpath | The xpath specified in one or more attributes of the command is invalid.  Check the API browser for proper xpath values. |\n| 7   | Object not present | Object specified by the xpath is not present. |\n| 8   | Object not unique  | For commands that operate on a single object, the specified object is not unique. |\n| 10  | Reference count not zero | Object cannot be deleted as there are other objects that refer to it. |\n| 11  | Internal error | Check with technical support. |\n| 12  | Invalid object | Xpath or element values provided are not complete. |\n| 14  | Operation not possible | Operation is allowed, but not possible in this case.  For example, moving a rule up one position when it is already at the top. |\n| 15  | Operation denied | Operation is not allowed.  For example, admin not allowed to delete own account, or running a command that is not allowed on a passive device. |\n| 16  | Unauthorized | The API role does not have access rights to run this query. |\n| 17  | Invalid command | Invalid command or parameters. |\n| 18  | Malformed command | The XML is malformed. |\n| 19-20 | Success | Command completed successfully. |\n| 21 | Internal error | Check with technical support. |\n| 22 | Session timed out | The session for this query timed out. |\n\n",
     "schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
   },
   "item": [
@@ -96,7 +96,11 @@
           ]
         }
       ],
-      "_postman_id": "8d657926-6a63-40c0-a285-7cb3a670e5c9"
+      "_postman_id": "8d657926-6a63-40c0-a285-7cb3a670e5c9",
+      "description": "View the [official documentation](https://docs.paloaltonetworks.com/pan-os/10-0/pan-os-panorama-api/about-the-pan-os-xml-api/structure-of-a-pan-os-xml-api-request/api-authentication-and-security.html).\n\nTo authenticate to the PAN-OS device, provide the API key along with your request in any of the following ways:\n\n- The `X-PAN-KEY` HTTP header.\n- The `key` request URL parameter (must be URL-encoded).\n- Use [Basic Authentication](https://en.wikipedia.org/wiki/Basic_access_authentication#Client_side) to pass the admin credentials as `username:password` with Base64 encoding in an Authorization header field.\n\n**Note:** You cannot use basic authentication with an API key.\n\nSee the [Generate API key](https://documenter.getpostman.com/view/2937330/7LgDQwG#5a6eec54-51a0-9716-fa38-5f894bf3c2ff) request for how to generate an API key.",
+      "auth": {
+        "type": "noauth"
+      }
     },
     {
       "name": "Request Types",
@@ -8870,7 +8874,7 @@
                   }
                 },
                 "url": {
-                  "raw": "https://{{host}}/api/?type=import&category=certificate&certificate-name=&format=&passphrase=&vsys",
+                  "raw": "https://{{host}}/api/?type=import&category=certificate&certificate-name=&format=&passphrase=&target-tpl=&target-tpl-vsys=&vsys",
                   "protocol": "https",
                   "host": [
                     "{{host}}"
@@ -8902,6 +8906,16 @@
                       "key": "passphrase",
                       "value": "",
                       "description": "**Required when including certificate key**.  Passphrase to decrypt private key."
+                    },
+                    {
+                      "key": "target-tpl",
+                      "value": "",
+                      "description": "*Optional*. When used with Panorama, import this object into this template."
+                    },
+                    {
+                      "key": "target-tpl-vsys",
+                      "value": "",
+                      "description": "*Optional*. When used with Panorama, import this object into this virtual system within target template.  Defaults to `shared`."
                     },
                     {
                       "key": "vsys",
@@ -9019,82 +9033,9 @@
                   "cookie": [],
                   "responseTime": null,
                   "body": "<response status=\"success\">\n    <result>Successfully imported Test-Cert into candidate configuration</result>\n</response>"
-                }
-              ]
-            },
-            {
-              "name": "Import certificate (Panorama)",
-              "_postman_id": "d407c6de-a778-49a2-ae4d-c7f76abea988",
-              "protocolProfileBehavior": {
-                "disableBodyPruning": true
-              },
-              "request": {
-                "method": "POST",
-                "header": [],
-                "body": {
-                  "mode": "formdata",
-                  "formdata": [
-                    {
-                      "description": "Certificate file to import.",
-                      "key": "file",
-                      "type": "file",
-                      "value": null
-                    }
-                  ],
-                  "options": {
-                    "formdata": {}
-                  }
                 },
-                "url": {
-                  "raw": "https://{{host}}/api/?type=import&category=certificate&certificate-name=&format=&passphrase=&target-tpl=&target-tpl-vsys=",
-                  "protocol": "https",
-                  "host": [
-                    "{{host}}"
-                  ],
-                  "path": [
-                    "api",
-                    ""
-                  ],
-                  "query": [
-                    {
-                      "key": "type",
-                      "value": "import"
-                    },
-                    {
-                      "key": "category",
-                      "value": "certificate"
-                    },
-                    {
-                      "key": "certificate-name",
-                      "value": "",
-                      "description": "**Required**.  Name for imported certificate."
-                    },
-                    {
-                      "key": "format",
-                      "value": "",
-                      "description": "**Required**.  Format of certificate.  One of `pem`, `pkcs10`, `pkcs12`."
-                    },
-                    {
-                      "key": "passphrase",
-                      "value": "",
-                      "description": "**Required when including certificate key**.  Passphrase to decrypt private key."
-                    },
-                    {
-                      "key": "target-tpl",
-                      "value": "",
-                      "description": "*Optional*. Target template to import into."
-                    },
-                    {
-                      "key": "target-tpl-vsys",
-                      "value": "",
-                      "description": "*Optional*. Virtual system within target template.  Defaults to `shared`."
-                    }
-                  ]
-                }
-              },
-              "response": [
                 {
-                  "id": "1d8c5920-0a8f-4655-9c82-f92972011c81",
+                  "id": "b50b52c8-fb08-4537-8b89-32e54b7d2b1d",
                   "name": "Import certificate (Panorama)",
                   "originalRequest": {
                     "method": "POST",
@@ -9103,12 +9044,15 @@
                       "mode": "formdata",
                       "formdata": [
                         {
-                          "description": "Path to certificate.",
                           "key": "file",
+                          "description": "Certificate file to import.",
                           "type": "file",
                           "value": null
                         }
-                      ]
+                      ],
+                      "options": {
+                        "formdata": {}
+                      }
                     },
                     "url": {
                       "raw": "https://{{host}}/api/?type=import&category=certificate&certificate-name=Test-Cert&format=pem&target-tpl=Test-Template&target-tpl-vsys=vsys1",
@@ -9131,11 +9075,13 @@
                         },
                         {
                           "key": "certificate-name",
-                          "value": "Test-Cert"
+                          "value": "Test-Cert",
+                          "description": "**Required**.  Name for imported certificate."
                         },
                         {
                           "key": "format",
-                          "value": "pem"
+                          "value": "pem",
+                          "description": "**Required**.  Format of certificate.  One of `pem`, `pkcs10`, `pkcs12`."
                         },
                         {
                           "key": "target-tpl",
@@ -9148,63 +9094,8 @@
                       ]
                     }
                   },
-                  "status": "OK",
-                  "code": 200,
                   "_postman_previewlanguage": "xml",
-                  "header": [
-                    {
-                      "key": "Date",
-                      "value": "Thu, 17 Dec 2020 17:41:56 GMT"
-                    },
-                    {
-                      "key": "Content-Type",
-                      "value": "application/xml; charset=UTF-8"
-                    },
-                    {
-                      "key": "Content-Length",
-                      "value": "115"
-                    },
-                    {
-                      "key": "Connection",
-                      "value": "keep-alive"
-                    },
-                    {
-                      "key": "X-FRAME-OPTIONS",
-                      "value": "SAMEORIGIN"
-                    },
-                    {
-                      "key": "X-XSS-Protection",
-                      "value": "1; mode=block"
-                    },
-                    {
-                      "key": "X-Content-Type-Options",
-                      "value": "nosniff"
-                    },
-                    {
-                      "key": "Content-Security-Policy",
-                      "value": "default-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:;"
-                    },
-                    {
-                      "key": "Strict-Transport-Security",
-                      "value": "max-age=31536000"
-                    },
-                    {
-                      "key": "Cache-Control",
-                      "value": "no-store, no-cache, must-revalidate, post-check=0, pre-check=0"
-                    },
-                    {
-                      "key": "Expires",
-                      "value": "Thu, 19 Nov 1981 08:52:00 GMT"
-                    },
-                    {
-                      "key": "Pragma",
-                      "value": "no-cache"
-                    },
-                    {
-                      "key": "Allow",
-                      "value": "GET, HEAD, POST, PUT, DELETE, OPTIONS"
-                    }
-                  ],
+                  "header": null,
                   "cookie": [],
                   "responseTime": null,
                   "body": "<response status=\"success\">\n    <result>Successfully imported Test-Cert into candidate configuration</result>\n</response>"
@@ -9519,11 +9410,6 @@
               ],
               "query": [
                 {
-                  "key": "key",
-                  "value": "{{key}}",
-                  "disabled": true
-                },
-                {
                   "key": "type",
                   "value": "version"
                 }
@@ -9548,11 +9434,6 @@
                     "api"
                   ],
                   "query": [
-                    {
-                      "key": "key",
-                      "value": "{{key}}",
-                      "disabled": true
-                    },
                     {
                       "key": "type",
                       "value": "version"
@@ -9628,7 +9509,14 @@
           ]
         }
       ],
-      "_postman_id": "3178f469-44ee-4373-82b4-9d5bdd5d59b8"
+      "_postman_id": "3178f469-44ee-4373-82b4-9d5bdd5d59b8",
+      "auth": {
+        "type": "apikey",
+        "apikey": {
+          "value": "{{key}}",
+          "key": "X-PAN-KEY"
+        }
+      }
     },
     {
       "name": "Use Cases",
@@ -12835,16 +12723,16 @@
           "_postman_isSubFolder": true
         }
       ],
-      "_postman_id": "48a4821f-5bbb-4b0c-ad3a-eb55970c295e"
+      "_postman_id": "48a4821f-5bbb-4b0c-ad3a-eb55970c295e",
+      "auth": {
+        "type": "apikey",
+        "apikey": {
+          "value": "{{key}}",
+          "key": "X-PAN-KEY"
+        }
+      }
     }
   ],
-  "auth": {
-    "type": "apikey",
-    "apikey": {
-      "value": "{{key}}",
-      "key": "X-PAN-KEY"
-    }
-  },
   "event": [
     {
       "listen": "prerequest",
@@ -12869,13 +12757,13 @@
   ],
   "variable": [
     {
-      "id": "18ad993d-2b50-4c1e-8545-ff585a078677",
+      "id": "32e17641-02ff-4d28-99fe-47dec984e5ea",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "418913b4-8746-4a0b-93b8-3891035f145c",
+      "id": "7902f248-cbcd-460a-8c2b-0d0c279af705",
       "key": "{{key}}",
       "value": "",
       "type": "string"
