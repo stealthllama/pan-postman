@@ -1583,6 +1583,174 @@
               "_postman_isSubFolder": true
             },
             {
+              "name": "Get running configuration",
+              "_postman_id": "8cbb53c9-7ece-4935-9517-e234c972c1ed",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "https://{{host}}/api/?type=config&action=show&xpath=",
+                  "protocol": "https",
+                  "host": [
+                    "{{host}}"
+                  ],
+                  "path": [
+                    "api",
+                    ""
+                  ],
+                  "query": [
+                    {
+                      "key": "type",
+                      "value": "config"
+                    },
+                    {
+                      "key": "action",
+                      "value": "show"
+                    },
+                    {
+                      "key": "xpath",
+                      "value": "",
+                      "description": "*Optional*.  XPath to desired portion of configuration."
+                    }
+                  ]
+                },
+                "description": "The `show` action retrieves the **running configuration**, which is the configuration currently active on the firewall."
+              },
+              "response": [
+                {
+                  "id": "bcd72b33-ac46-468c-9602-24177e3c869a",
+                  "name": "Get full configuration",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [],
+                    "url": {
+                      "raw": "https://{{host}}/api/?type=config&action=show",
+                      "protocol": "https",
+                      "host": [
+                        "{{host}}"
+                      ],
+                      "path": [
+                        "api",
+                        ""
+                      ],
+                      "query": [
+                        {
+                          "key": "type",
+                          "value": "config"
+                        },
+                        {
+                          "key": "action",
+                          "value": "show"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "xml",
+                  "header": [
+                    {
+                      "key": "Date",
+                      "value": "Mon, 23 Nov 2020 17:43:40 GMT"
+                    },
+                    {
+                      "key": "Content-Type",
+                      "value": "application/xml; charset=UTF-8"
+                    },
+                    {
+                      "key": "Transfer-Encoding",
+                      "value": "chunked"
+                    },
+                    {
+                      "key": "Connection",
+                      "value": "keep-alive"
+                    },
+                    {
+                      "key": "X-FRAME-OPTIONS",
+                      "value": "SAMEORIGIN"
+                    },
+                    {
+                      "key": "X-XSS-Protection",
+                      "value": "1; mode=block"
+                    },
+                    {
+                      "key": "X-Content-Type-Options",
+                      "value": "nosniff"
+                    },
+                    {
+                      "key": "Content-Security-Policy",
+                      "value": "default-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:;"
+                    },
+                    {
+                      "key": "Strict-Transport-Security",
+                      "value": "max-age=31536000"
+                    },
+                    {
+                      "key": "Cache-Control",
+                      "value": "no-store, no-cache, must-revalidate, post-check=0, pre-check=0"
+                    },
+                    {
+                      "key": "Expires",
+                      "value": "Thu, 19 Nov 1981 08:52:00 GMT"
+                    },
+                    {
+                      "key": "Pragma",
+                      "value": "no-cache"
+                    },
+                    {
+                      "key": "Allow",
+                      "value": "GET, HEAD, POST, PUT, DELETE, OPTIONS"
+                    }
+                  ],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "<response status=\"success\">\n    <result>\n        <config version=\"10.0.0\" urldb=\"paloaltonetworks\">\n            ... example output truncated ...\n        </config>\n    </result>\n</response>"
+                },
+                {
+                  "id": "b09b7786-6e61-41af-bb25-a7ac6d63eb86",
+                  "name": "Get specific config portion",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [],
+                    "url": {
+                      "raw": "https://{{host}}/api/?type=config&action=show&xpath=/config/devices/entry/vsys/entry/rulebase/security",
+                      "protocol": "https",
+                      "host": [
+                        "{{host}}"
+                      ],
+                      "path": [
+                        "api",
+                        ""
+                      ],
+                      "query": [
+                        {
+                          "key": "type",
+                          "value": "config"
+                        },
+                        {
+                          "key": "action",
+                          "value": "show"
+                        },
+                        {
+                          "key": "xpath",
+                          "value": "/config/devices/entry/vsys/entry/rulebase/security",
+                          "description": "*Optional*.  XPath to desired portion of configuration."
+                        }
+                      ]
+                    }
+                  },
+                  "_postman_previewlanguage": "xml",
+                  "header": null,
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "<response status=\"success\">\n    <result>\n        <security>\n            <rules>\n                <entry name=\"IT DNS Services\" uuid=\"3e888b2c-7325-4778-ba20-4b0c90f92980\">\n                    <to>\n                        <member>trust</member>\n                    </to>\n                    <from>\n                        <member>untrust</member>\n                    </from>\n                    <source>\n                        <member>any</member>\n                    </source>\n                    <destination>\n                        <member>Data-Center</member>\n                    </destination>\n                    <source-user>\n                        <member>any</member>\n                    </source-user>\n                    <category>\n                        <member>any</member>\n                    </category>\n                    <application>\n                        <member>dns</member>\n                    </application>\n                    <service>\n                        <member>application-default</member>\n                    </service>\n                    <source-hip>\n                        <member>any</member>\n                    </source-hip>\n                    <destination-hip>\n                        <member>any</member>\n                    </destination-hip>\n                    <action>allow</action>\n                    <log-setting>default</log-setting>\n                    <profile-setting>\n                        <group>\n                            <member>Best-Practice</member>\n                        </group>\n                    </profile-setting>\n                    <description>Inbound DNS requests to data center</description>\n                </entry>\n            </rules>\n        </security>\n    </result>\n</response>"
+                }
+              ]
+            },
+            {
               "name": "Get candidate configuration",
               "_postman_id": "6e565f9d-2097-4796-a602-c0bc0debac20",
               "protocolProfileBehavior": {
@@ -2331,174 +2499,6 @@
                   "cookie": [],
                   "responseTime": null,
                   "body": "<response status=\"success\" code=\"20\">\n    <msg>command succeeded</msg>\n</response>"
-                }
-              ]
-            },
-            {
-              "name": "Get running configuration",
-              "_postman_id": "8cbb53c9-7ece-4935-9517-e234c972c1ed",
-              "protocolProfileBehavior": {
-                "disableBodyPruning": true
-              },
-              "request": {
-                "method": "GET",
-                "header": [],
-                "url": {
-                  "raw": "https://{{host}}/api/?type=config&action=show&xpath=",
-                  "protocol": "https",
-                  "host": [
-                    "{{host}}"
-                  ],
-                  "path": [
-                    "api",
-                    ""
-                  ],
-                  "query": [
-                    {
-                      "key": "type",
-                      "value": "config"
-                    },
-                    {
-                      "key": "action",
-                      "value": "show"
-                    },
-                    {
-                      "key": "xpath",
-                      "value": "",
-                      "description": "*Optional*.  XPath to desired portion of configuration."
-                    }
-                  ]
-                },
-                "description": "The `show` action retrieves the **running configuration**, which is the configuration currently active on the firewall."
-              },
-              "response": [
-                {
-                  "id": "bcd72b33-ac46-468c-9602-24177e3c869a",
-                  "name": "Get full configuration",
-                  "originalRequest": {
-                    "method": "GET",
-                    "header": [],
-                    "url": {
-                      "raw": "https://{{host}}/api/?type=config&action=show",
-                      "protocol": "https",
-                      "host": [
-                        "{{host}}"
-                      ],
-                      "path": [
-                        "api",
-                        ""
-                      ],
-                      "query": [
-                        {
-                          "key": "type",
-                          "value": "config"
-                        },
-                        {
-                          "key": "action",
-                          "value": "show"
-                        }
-                      ]
-                    }
-                  },
-                  "status": "OK",
-                  "code": 200,
-                  "_postman_previewlanguage": "xml",
-                  "header": [
-                    {
-                      "key": "Date",
-                      "value": "Mon, 23 Nov 2020 17:43:40 GMT"
-                    },
-                    {
-                      "key": "Content-Type",
-                      "value": "application/xml; charset=UTF-8"
-                    },
-                    {
-                      "key": "Transfer-Encoding",
-                      "value": "chunked"
-                    },
-                    {
-                      "key": "Connection",
-                      "value": "keep-alive"
-                    },
-                    {
-                      "key": "X-FRAME-OPTIONS",
-                      "value": "SAMEORIGIN"
-                    },
-                    {
-                      "key": "X-XSS-Protection",
-                      "value": "1; mode=block"
-                    },
-                    {
-                      "key": "X-Content-Type-Options",
-                      "value": "nosniff"
-                    },
-                    {
-                      "key": "Content-Security-Policy",
-                      "value": "default-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:;"
-                    },
-                    {
-                      "key": "Strict-Transport-Security",
-                      "value": "max-age=31536000"
-                    },
-                    {
-                      "key": "Cache-Control",
-                      "value": "no-store, no-cache, must-revalidate, post-check=0, pre-check=0"
-                    },
-                    {
-                      "key": "Expires",
-                      "value": "Thu, 19 Nov 1981 08:52:00 GMT"
-                    },
-                    {
-                      "key": "Pragma",
-                      "value": "no-cache"
-                    },
-                    {
-                      "key": "Allow",
-                      "value": "GET, HEAD, POST, PUT, DELETE, OPTIONS"
-                    }
-                  ],
-                  "cookie": [],
-                  "responseTime": null,
-                  "body": "<response status=\"success\">\n    <result>\n        <config version=\"10.0.0\" urldb=\"paloaltonetworks\">\n            ... example output truncated ...\n        </config>\n    </result>\n</response>"
-                },
-                {
-                  "id": "b09b7786-6e61-41af-bb25-a7ac6d63eb86",
-                  "name": "Get specific config portion",
-                  "originalRequest": {
-                    "method": "GET",
-                    "header": [],
-                    "url": {
-                      "raw": "https://{{host}}/api/?type=config&action=show&xpath=/config/devices/entry/vsys/entry/rulebase/security",
-                      "protocol": "https",
-                      "host": [
-                        "{{host}}"
-                      ],
-                      "path": [
-                        "api",
-                        ""
-                      ],
-                      "query": [
-                        {
-                          "key": "type",
-                          "value": "config"
-                        },
-                        {
-                          "key": "action",
-                          "value": "show"
-                        },
-                        {
-                          "key": "xpath",
-                          "value": "/config/devices/entry/vsys/entry/rulebase/security",
-                          "description": "*Optional*.  XPath to desired portion of configuration."
-                        }
-                      ]
-                    }
-                  },
-                  "_postman_previewlanguage": "xml",
-                  "header": null,
-                  "cookie": [],
-                  "responseTime": null,
-                  "body": "<response status=\"success\">\n    <result>\n        <security>\n            <rules>\n                <entry name=\"IT DNS Services\" uuid=\"3e888b2c-7325-4778-ba20-4b0c90f92980\">\n                    <to>\n                        <member>trust</member>\n                    </to>\n                    <from>\n                        <member>untrust</member>\n                    </from>\n                    <source>\n                        <member>any</member>\n                    </source>\n                    <destination>\n                        <member>Data-Center</member>\n                    </destination>\n                    <source-user>\n                        <member>any</member>\n                    </source-user>\n                    <category>\n                        <member>any</member>\n                    </category>\n                    <application>\n                        <member>dns</member>\n                    </application>\n                    <service>\n                        <member>application-default</member>\n                    </service>\n                    <source-hip>\n                        <member>any</member>\n                    </source-hip>\n                    <destination-hip>\n                        <member>any</member>\n                    </destination-hip>\n                    <action>allow</action>\n                    <log-setting>default</log-setting>\n                    <profile-setting>\n                        <group>\n                            <member>Best-Practice</member>\n                        </group>\n                    </profile-setting>\n                    <description>Inbound DNS requests to data center</description>\n                </entry>\n            </rules>\n        </security>\n    </result>\n</response>"
                 }
               ]
             }
@@ -12194,13 +12194,13 @@
   ],
   "variable": [
     {
-      "id": "5dc5a6cb-cd2a-4bb3-8e0a-8793d0af1aa3",
+      "id": "01000c94-6ec2-490c-b4bd-bd0aee6dd930",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "35f8f349-05ee-48f1-a5ce-a5b13ebfb382",
+      "id": "0d69670b-504c-4669-9ce2-864e20e8b89e",
       "key": "{{key}}",
       "value": "",
       "type": "string"
