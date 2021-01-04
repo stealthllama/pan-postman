@@ -2590,130 +2590,6 @@
           "name": "Operational Commands",
           "item": [
             {
-              "name": "Save config",
-              "_postman_id": "b0c1fd3b-f789-4e75-b640-17fe270ae97a",
-              "protocolProfileBehavior": {
-                "disableBodyPruning": true
-              },
-              "request": {
-                "method": "GET",
-                "header": [],
-                "url": {
-                  "raw": "https://{{host}}/api/?type=op&cmd=<save><config><to>config.xml</to></config></save>",
-                  "protocol": "https",
-                  "host": [
-                    "{{host}}"
-                  ],
-                  "path": [
-                    "api",
-                    ""
-                  ],
-                  "query": [
-                    {
-                      "key": "type",
-                      "value": "op"
-                    },
-                    {
-                      "key": "cmd",
-                      "value": "<save><config><to>config.xml</to></config></save>"
-                    }
-                  ]
-                },
-                "description": "Save the current config to a local file."
-              },
-              "response": [
-                {
-                  "id": "adeff4f6-5621-482d-a722-10c22c716080",
-                  "name": "Configuration saving",
-                  "originalRequest": {
-                    "method": "GET",
-                    "header": [],
-                    "url": {
-                      "raw": "https://{{host}}/api/?type=op&cmd=<save><config><to>config.xml</to></config></save>",
-                      "protocol": "https",
-                      "host": [
-                        "{{host}}"
-                      ],
-                      "path": [
-                        "api",
-                        ""
-                      ],
-                      "query": [
-                        {
-                          "key": "type",
-                          "value": "op"
-                        },
-                        {
-                          "key": "cmd",
-                          "value": "<save><config><to>config.xml</to></config></save>"
-                        }
-                      ]
-                    }
-                  },
-                  "status": "OK",
-                  "code": 200,
-                  "_postman_previewlanguage": "xml",
-                  "header": [
-                    {
-                      "key": "Date",
-                      "value": "Tue, 24 Nov 2020 20:18:57 GMT"
-                    },
-                    {
-                      "key": "Content-Type",
-                      "value": "application/xml; charset=UTF-8"
-                    },
-                    {
-                      "key": "Content-Length",
-                      "value": "81"
-                    },
-                    {
-                      "key": "Connection",
-                      "value": "keep-alive"
-                    },
-                    {
-                      "key": "X-FRAME-OPTIONS",
-                      "value": "SAMEORIGIN"
-                    },
-                    {
-                      "key": "X-XSS-Protection",
-                      "value": "1; mode=block"
-                    },
-                    {
-                      "key": "X-Content-Type-Options",
-                      "value": "nosniff"
-                    },
-                    {
-                      "key": "Content-Security-Policy",
-                      "value": "default-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:;"
-                    },
-                    {
-                      "key": "Strict-Transport-Security",
-                      "value": "max-age=31536000"
-                    },
-                    {
-                      "key": "Cache-Control",
-                      "value": "no-store, no-cache, must-revalidate, post-check=0, pre-check=0"
-                    },
-                    {
-                      "key": "Expires",
-                      "value": "Thu, 19 Nov 1981 08:52:00 GMT"
-                    },
-                    {
-                      "key": "Pragma",
-                      "value": "no-cache"
-                    },
-                    {
-                      "key": "Allow",
-                      "value": "GET, HEAD, POST, PUT, DELETE, OPTIONS"
-                    }
-                  ],
-                  "cookie": [],
-                  "responseTime": null,
-                  "body": "<response status=\"success\">\n    <result>Config saved to config.xml</result>\n</response>"
-                }
-              ]
-            },
-            {
               "name": "Load config",
               "_postman_id": "97d2e1e8-0cf6-4519-ae0b-73c9c4c6a022",
               "protocolProfileBehavior": {
@@ -6893,6 +6769,41 @@
               "cookie": [],
               "responseTime": null,
               "body": "<response status=\"success\" code=\"19\">\n    <result>\n        <msg>\n            <line>Validate job enqueued with jobid 3</line>\n        </msg>\n        <job>3</job>\n    </result>\n</response>"
+            },
+            {
+              "id": "5c754870-cf80-4b4c-bd94-35d553a473dd",
+              "name": "Save configuration to file",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "https://{{host}}/api/?type=op&cmd=<save><config><to>config.xml</to></config></save>",
+                  "protocol": "https",
+                  "host": [
+                    "{{host}}"
+                  ],
+                  "path": [
+                    "api",
+                    ""
+                  ],
+                  "query": [
+                    {
+                      "key": "type",
+                      "value": "op"
+                    },
+                    {
+                      "key": "cmd",
+                      "value": "<save><config><to>config.xml</to></config></save>",
+                      "description": "Command to run."
+                    }
+                  ]
+                }
+              },
+              "_postman_previewlanguage": "xml",
+              "header": null,
+              "cookie": [],
+              "responseTime": null,
+              "body": "<response status=\"success\">\n    <result>Config saved to config.xml</result>\n</response>"
             }
           ]
         },
@@ -10524,13 +10435,13 @@
   ],
   "variable": [
     {
-      "id": "8fab57eb-d5da-4dc4-ae5b-8b0807526a14",
+      "id": "508112ef-e4a7-4a8e-afea-7196be82e9c3",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "01657c3f-8673-46db-9c34-4d71ad9dd1db",
+      "id": "c5283cd0-3367-4761-8111-931527878110",
       "key": "{{key}}",
       "value": "",
       "type": "string"
