@@ -2590,130 +2590,6 @@
           "name": "Operational Commands",
           "item": [
             {
-              "name": "Threat signature details",
-              "_postman_id": "839add73-3545-4581-83ca-7fdb734a0707",
-              "protocolProfileBehavior": {
-                "disableBodyPruning": true
-              },
-              "request": {
-                "method": "GET",
-                "header": [],
-                "url": {
-                  "raw": "https://{{host}}/api/?type=op&cmd=<show><predefined><xpath>/predefined/threats/vulnerability/entry[@name='30003']</xpath></predefined></show>",
-                  "protocol": "https",
-                  "host": [
-                    "{{host}}"
-                  ],
-                  "path": [
-                    "api",
-                    ""
-                  ],
-                  "query": [
-                    {
-                      "key": "type",
-                      "value": "op"
-                    },
-                    {
-                      "key": "cmd",
-                      "value": "<show><predefined><xpath>/predefined/threats/vulnerability/entry[@name='30003']</xpath></predefined></show>"
-                    }
-                  ]
-                },
-                "description": "Get details for threat signature '30003'."
-              },
-              "response": [
-                {
-                  "id": "2a3277cc-bd1b-4b41-95d3-2258abdc245e",
-                  "name": "Threat details",
-                  "originalRequest": {
-                    "method": "GET",
-                    "header": [],
-                    "url": {
-                      "raw": "https://{{host}}/api/?type=op&cmd=<show><predefined><xpath>/predefined/threats/vulnerability/entry[@name='30003']</xpath></predefined></show>",
-                      "protocol": "https",
-                      "host": [
-                        "{{host}}"
-                      ],
-                      "path": [
-                        "api",
-                        ""
-                      ],
-                      "query": [
-                        {
-                          "key": "type",
-                          "value": "op"
-                        },
-                        {
-                          "key": "cmd",
-                          "value": "<show><predefined><xpath>/predefined/threats/vulnerability/entry[@name='30003']</xpath></predefined></show>"
-                        }
-                      ]
-                    }
-                  },
-                  "status": "OK",
-                  "code": 200,
-                  "_postman_previewlanguage": "xml",
-                  "header": [
-                    {
-                      "key": "Date",
-                      "value": "Tue, 24 Nov 2020 20:06:25 GMT"
-                    },
-                    {
-                      "key": "Content-Type",
-                      "value": "application/xml; charset=UTF-8"
-                    },
-                    {
-                      "key": "Content-Length",
-                      "value": "608"
-                    },
-                    {
-                      "key": "Connection",
-                      "value": "keep-alive"
-                    },
-                    {
-                      "key": "X-FRAME-OPTIONS",
-                      "value": "SAMEORIGIN"
-                    },
-                    {
-                      "key": "X-XSS-Protection",
-                      "value": "1; mode=block"
-                    },
-                    {
-                      "key": "X-Content-Type-Options",
-                      "value": "nosniff"
-                    },
-                    {
-                      "key": "Content-Security-Policy",
-                      "value": "default-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:;"
-                    },
-                    {
-                      "key": "Strict-Transport-Security",
-                      "value": "max-age=31536000"
-                    },
-                    {
-                      "key": "Cache-Control",
-                      "value": "no-store, no-cache, must-revalidate, post-check=0, pre-check=0"
-                    },
-                    {
-                      "key": "Expires",
-                      "value": "Thu, 19 Nov 1981 08:52:00 GMT"
-                    },
-                    {
-                      "key": "Pragma",
-                      "value": "no-cache"
-                    },
-                    {
-                      "key": "Allow",
-                      "value": "GET, HEAD, POST, PUT, DELETE, OPTIONS"
-                    }
-                  ],
-                  "cookie": [],
-                  "responseTime": null,
-                  "body": "<response status=\"success\">\n    <result>\n        <entry name=\"30003\" p=\"yes\">\n            <threatname>Microsoft Windows DCOM RPC Interface Buffer Overrun Vulnerability</threatname>\n            <cve xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\n                <member>CVE-2003-0352</member>\n            </cve>\n            <vendor xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\n                <member>MS03-026</member>\n            </vendor>\n            <category>code-execution</category>\n            <severity>critical</severity>\n            <engine-version min=\"1.0\"/>\n            <affected-host>\n                <server>yes</server>\n            </affected-host>\n            <default-action>reset-server</default-action>\n        </entry>\n    </result>\n</response>"
-                }
-              ]
-            },
-            {
               "name": "Validate full config",
               "_postman_id": "f91153bb-5b8c-46ef-941e-1e164b24ec17",
               "protocolProfileBehavior": {
@@ -7160,6 +7036,41 @@
               "cookie": [],
               "responseTime": null,
               "body": "<response status=\"success\" code=\"19\">\n    <result>\n        <msg>\n            <line>Exec job enqueued with jobid 4</line>\n        </msg>\n        <job>4</job>\n    </result>\n</response>"
+            },
+            {
+              "id": "5e7c1a08-7c3f-46f3-8107-7f130c5d59f8",
+              "name": "Get threat signature details",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "https://{{host}}/api/?type=op&cmd=<show><predefined><xpath>/predefined/threats/vulnerability/entry[@name='30003']</xpath></predefined></show>",
+                  "protocol": "https",
+                  "host": [
+                    "{{host}}"
+                  ],
+                  "path": [
+                    "api",
+                    ""
+                  ],
+                  "query": [
+                    {
+                      "key": "type",
+                      "value": "op"
+                    },
+                    {
+                      "key": "cmd",
+                      "value": "<show><predefined><xpath>/predefined/threats/vulnerability/entry[@name='30003']</xpath></predefined></show>",
+                      "description": "Command to run."
+                    }
+                  ]
+                }
+              },
+              "_postman_previewlanguage": "xml",
+              "header": null,
+              "cookie": [],
+              "responseTime": null,
+              "body": "<response status=\"success\">\n    <result>\n        <entry name=\"30003\" p=\"yes\">\n            <threatname>Microsoft Windows DCOM RPC Interface Buffer Overrun Vulnerability</threatname>\n            <cve xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\n                <member>CVE-2003-0352</member>\n            </cve>\n            <vendor xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\n                <member>MS03-026</member>\n            </vendor>\n            <category>code-execution</category>\n            <severity>critical</severity>\n            <engine-version min=\"1.0\"/>\n            <affected-host>\n                <server>yes</server>\n            </affected-host>\n            <default-action>reset-server</default-action>\n        </entry>\n    </result>\n</response>"
             }
           ]
         },
@@ -10791,13 +10702,13 @@
   ],
   "variable": [
     {
-      "id": "72764a4a-af74-4f16-83b4-051df12cdac2",
+      "id": "4a51fc55-f9e4-4ecb-8108-d016dedd6f5b",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "7e56ccd4-124c-44f5-b047-8d9b58b7213d",
+      "id": "254c2119-791d-4b13-b2ed-4c7e4fcae619",
       "key": "{{key}}",
       "value": "",
       "type": "string"
