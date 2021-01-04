@@ -7688,6 +7688,19 @@
           ]
         },
         {
+          "name": "Operation command",
+          "_postman_id": "69bed58c-d6fc-4116-beb8-fd344b6bc61b",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": ""
+          },
+          "response": []
+        },
+        {
           "name": "Get Version Info",
           "_postman_id": "d9781725-4177-48f7-97ca-addc620c6fda",
           "protocolProfileBehavior": {
@@ -7804,19 +7817,6 @@
               "body": "<response status = \"success\">\n    <result>\n        <sw-version>10.0.2</sw-version>\n        <multi-vsys>off</multi-vsys>\n        <model>PA-VM</model>\n        <serial>007000001222</serial>\n    </result>\n</response>"
             }
           ]
-        },
-        {
-          "name": "Operation command",
-          "_postman_id": "69bed58c-d6fc-4116-beb8-fd344b6bc61b",
-          "protocolProfileBehavior": {
-            "disableBodyPruning": true
-          },
-          "request": {
-            "method": "GET",
-            "header": [],
-            "url": ""
-          },
-          "response": []
         }
       ],
       "_postman_id": "3178f469-44ee-4373-82b4-9d5bdd5d59b8",
@@ -11067,13 +11067,13 @@
   ],
   "variable": [
     {
-      "id": "6e5a3b61-2fb7-45d8-b892-603e4483023e",
+      "id": "ce15709c-3552-4785-bbe4-dd09840b12dc",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "6997143c-ebd6-4ffd-b89d-d5490e54de52",
+      "id": "f9f5ddff-01df-4890-be9d-d0139a8f8194",
       "key": "{{key}}",
       "value": "",
       "type": "string"
