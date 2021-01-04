@@ -109,161 +109,51 @@
           "name": "Configuration",
           "item": [
             {
-              "name": "Edit Configuration",
-              "item": [
-                {
-                  "name": "Replace applications in security rule",
-                  "_postman_id": "4b620169-e4f0-4ada-8557-c3497b3d18d0",
-                  "protocolProfileBehavior": {
-                    "disableBodyPruning": true
-                  },
-                  "request": {
-                    "method": "GET",
-                    "header": [],
-                    "url": {
-                      "raw": "https://{{host}}/api/?type=config&action=edit&xpath=/config/devices/entry[@name='localhost.localdomain']/vsys/entry[@name='vsys1']/rulebase/security/rules/entry[@name='IT DNS Services']/application&element=<application><member>dns</member></application>",
-                      "protocol": "https",
-                      "host": [
-                        "{{host}}"
-                      ],
-                      "path": [
-                        "api",
-                        ""
-                      ],
-                      "query": [
-                        {
-                          "key": "type",
-                          "value": "config"
-                        },
-                        {
-                          "key": "action",
-                          "value": "edit"
-                        },
-                        {
-                          "key": "xpath",
-                          "value": "/config/devices/entry[@name='localhost.localdomain']/vsys/entry[@name='vsys1']/rulebase/security/rules/entry[@name='IT DNS Services']/application",
-                          "type": "text"
-                        },
-                        {
-                          "key": "element",
-                          "value": "<application><member>dns</member></application>",
-                          "type": "text"
-                        }
-                      ]
-                    },
-                    "description": "Replaces the applications in the `IT DNS Services` rule with `dns`.\n\nA portion of an object can be replaced by specifying the object's name within the `xpath`."
-                  },
-                  "response": [
+              "name": "Get running configuration",
+              "_postman_id": "8cbb53c9-7ece-4935-9517-e234c972c1ed",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "https://{{host}}/api/?type=config&action=show&xpath=",
+                  "protocol": "https",
+                  "host": [
+                    "{{host}}"
+                  ],
+                  "path": [
+                    "api",
+                    ""
+                  ],
+                  "query": [
                     {
-                      "id": "03d2912b-84b0-4b21-a080-5ab91a4dba30",
-                      "name": "Replace applications in security rule",
-                      "originalRequest": {
-                        "method": "GET",
-                        "header": [],
-                        "url": {
-                          "raw": "https://{{host}}/api/?type=config&action=edit&xpath=/config/devices/entry[@name='localhost.localdomain']/vsys/entry[@name='vsys1']/rulebase/security/rules/entry[@name='IT DNS Services']/application&element=<application><member>dns</member></application>",
-                          "protocol": "https",
-                          "host": [
-                            "{{host}}"
-                          ],
-                          "path": [
-                            "api",
-                            ""
-                          ],
-                          "query": [
-                            {
-                              "key": "type",
-                              "value": "config"
-                            },
-                            {
-                              "key": "action",
-                              "value": "edit"
-                            },
-                            {
-                              "key": "xpath",
-                              "value": "/config/devices/entry[@name='localhost.localdomain']/vsys/entry[@name='vsys1']/rulebase/security/rules/entry[@name='IT DNS Services']/application"
-                            },
-                            {
-                              "key": "element",
-                              "value": "<application><member>dns</member></application>"
-                            }
-                          ]
-                        }
-                      },
-                      "status": "OK",
-                      "code": 200,
-                      "_postman_previewlanguage": "xml",
-                      "header": [
-                        {
-                          "key": "Date",
-                          "value": "Mon, 23 Nov 2020 20:27:14 GMT"
-                        },
-                        {
-                          "key": "Content-Type",
-                          "value": "application/xml; charset=UTF-8"
-                        },
-                        {
-                          "key": "Content-Length",
-                          "value": "76"
-                        },
-                        {
-                          "key": "Connection",
-                          "value": "keep-alive"
-                        },
-                        {
-                          "key": "X-FRAME-OPTIONS",
-                          "value": "SAMEORIGIN"
-                        },
-                        {
-                          "key": "X-XSS-Protection",
-                          "value": "1; mode=block"
-                        },
-                        {
-                          "key": "X-Content-Type-Options",
-                          "value": "nosniff"
-                        },
-                        {
-                          "key": "Content-Security-Policy",
-                          "value": "default-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:;"
-                        },
-                        {
-                          "key": "Strict-Transport-Security",
-                          "value": "max-age=31536000"
-                        },
-                        {
-                          "key": "Cache-Control",
-                          "value": "no-store, no-cache, must-revalidate, post-check=0, pre-check=0"
-                        },
-                        {
-                          "key": "Expires",
-                          "value": "Thu, 19 Nov 1981 08:52:00 GMT"
-                        },
-                        {
-                          "key": "Pragma",
-                          "value": "no-cache"
-                        },
-                        {
-                          "key": "Allow",
-                          "value": "GET, HEAD, POST, PUT, DELETE, OPTIONS"
-                        }
-                      ],
-                      "cookie": [],
-                      "responseTime": null,
-                      "body": "<response status=\"success\" code=\"20\">\n    <msg>command succeeded</msg>\n</response>"
+                      "key": "type",
+                      "value": "config"
+                    },
+                    {
+                      "key": "action",
+                      "value": "show"
+                    },
+                    {
+                      "key": "xpath",
+                      "value": "",
+                      "description": "*Optional*.  XPath to desired portion of configuration."
                     }
                   ]
                 },
+                "description": "The `show` action retrieves the **running configuration**, which is the configuration currently active on the firewall."
+              },
+              "response": [
                 {
-                  "name": "Replace address objects in address group",
-                  "_postman_id": "4873b8ae-3738-45bd-8eb0-4744693e33d8",
-                  "protocolProfileBehavior": {
-                    "disableBodyPruning": true
-                  },
-                  "request": {
+                  "id": "bcd72b33-ac46-468c-9602-24177e3c869a",
+                  "name": "Get full configuration",
+                  "originalRequest": {
                     "method": "GET",
                     "header": [],
                     "url": {
-                      "raw": "https://{{host}}/api/?type=config&action=edit&xpath=/config/devices/entry[@name='localhost.localdomain']/vsys/entry[@name='vsys1']/address-group/entry[@name='Data-Center']&element=<entry name=\"Data-Center\"><static><member>Data-Center-192.168.1.0-24</member><member>Data-Center-192.168.2.0-24</member></static></entry>",
+                      "raw": "https://{{host}}/api/?type=config&action=show",
                       "protocol": "https",
                       "host": [
                         "{{host}}"
@@ -279,161 +169,80 @@
                         },
                         {
                           "key": "action",
-                          "value": "edit"
-                        },
-                        {
-                          "key": "xpath",
-                          "value": "/config/devices/entry[@name='localhost.localdomain']/vsys/entry[@name='vsys1']/address-group/entry[@name='Data-Center']"
-                        },
-                        {
-                          "key": "element",
-                          "value": "<entry name=\"Data-Center\"><static><member>Data-Center-192.168.1.0-24</member><member>Data-Center-192.168.2.0-24</member></static></entry>"
+                          "value": "show"
                         }
                       ]
-                    },
-                    "description": "Replaces the address objects in the `Data-Center` address group with `Data-Center-192.168.1.0-24` and `Data-Center-192.168.2.0-24`.\n\nThe entire contents of an object can be replaced as well, but the name must be specified in both the `xpath` and the `element`."
-                  },
-                  "response": [
-                    {
-                      "id": "551f6adf-479a-4a2e-8b7c-1ccb6a1e5fa2",
-                      "name": "Replace address objects in address group",
-                      "originalRequest": {
-                        "method": "GET",
-                        "header": [],
-                        "url": {
-                          "raw": "https://{{host}}/api/?type=config&action=edit&xpath=/config/devices/entry[@name='localhost.localdomain']/vsys/entry[@name='vsys1']/address-group/entry[@name='Data-Center']&element=<entry name=\"Data-Center\"><static><member>Data-Center-192.168.1.0-24</member><member>Data-Center-192.168.2.0-24</member></static></entry>",
-                          "protocol": "https",
-                          "host": [
-                            "{{host}}"
-                          ],
-                          "path": [
-                            "api",
-                            ""
-                          ],
-                          "query": [
-                            {
-                              "key": "type",
-                              "value": "config"
-                            },
-                            {
-                              "key": "action",
-                              "value": "edit"
-                            },
-                            {
-                              "key": "xpath",
-                              "value": "/config/devices/entry[@name='localhost.localdomain']/vsys/entry[@name='vsys1']/address-group/entry[@name='Data-Center']"
-                            },
-                            {
-                              "key": "element",
-                              "value": "<entry name=\"Data-Center\"><static><member>Data-Center-192.168.1.0-24</member><member>Data-Center-192.168.2.0-24</member></static></entry>"
-                            }
-                          ]
-                        }
-                      },
-                      "status": "OK",
-                      "code": 200,
-                      "_postman_previewlanguage": "xml",
-                      "header": [
-                        {
-                          "key": "Date",
-                          "value": "Mon, 23 Nov 2020 20:33:31 GMT"
-                        },
-                        {
-                          "key": "Content-Type",
-                          "value": "application/xml; charset=UTF-8"
-                        },
-                        {
-                          "key": "Content-Length",
-                          "value": "76"
-                        },
-                        {
-                          "key": "Connection",
-                          "value": "keep-alive"
-                        },
-                        {
-                          "key": "X-FRAME-OPTIONS",
-                          "value": "SAMEORIGIN"
-                        },
-                        {
-                          "key": "X-XSS-Protection",
-                          "value": "1; mode=block"
-                        },
-                        {
-                          "key": "X-Content-Type-Options",
-                          "value": "nosniff"
-                        },
-                        {
-                          "key": "Content-Security-Policy",
-                          "value": "default-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:;"
-                        },
-                        {
-                          "key": "Strict-Transport-Security",
-                          "value": "max-age=31536000"
-                        },
-                        {
-                          "key": "Cache-Control",
-                          "value": "no-store, no-cache, must-revalidate, post-check=0, pre-check=0"
-                        },
-                        {
-                          "key": "Expires",
-                          "value": "Thu, 19 Nov 1981 08:52:00 GMT"
-                        },
-                        {
-                          "key": "Pragma",
-                          "value": "no-cache"
-                        },
-                        {
-                          "key": "Allow",
-                          "value": "GET, HEAD, POST, PUT, DELETE, OPTIONS"
-                        }
-                      ],
-                      "cookie": [],
-                      "responseTime": null,
-                      "body": "<response status=\"success\" code=\"20\">\n    <msg>command succeeded</msg>\n</response>"
                     }
-                  ]
-                }
-              ],
-              "_postman_id": "682ec138-dc50-4e02-a6bf-34350ca45dae",
-              "description": "Use `action=edit` to replace an existing object hierarchy at a specified location in the configuration with a new value.\n\nUse the `xpath` parameter to specify the location of the object, including the node to be replaced.  Use the `element` parameter to specify a new value for the object using its XML object hierarchy.\n\nThese requests are commonly performed after retrieving the existing object using `action=show`.",
-              "event": [
-                {
-                  "listen": "prerequest",
-                  "script": {
-                    "id": "d42c1a9b-4a81-4200-bcbf-8a9c09d7c98a",
-                    "type": "text/javascript",
-                    "exec": [
-                      ""
-                    ]
-                  }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "xml",
+                  "header": [
+                    {
+                      "key": "Date",
+                      "value": "Mon, 23 Nov 2020 17:43:40 GMT"
+                    },
+                    {
+                      "key": "Content-Type",
+                      "value": "application/xml; charset=UTF-8"
+                    },
+                    {
+                      "key": "Transfer-Encoding",
+                      "value": "chunked"
+                    },
+                    {
+                      "key": "Connection",
+                      "value": "keep-alive"
+                    },
+                    {
+                      "key": "X-FRAME-OPTIONS",
+                      "value": "SAMEORIGIN"
+                    },
+                    {
+                      "key": "X-XSS-Protection",
+                      "value": "1; mode=block"
+                    },
+                    {
+                      "key": "X-Content-Type-Options",
+                      "value": "nosniff"
+                    },
+                    {
+                      "key": "Content-Security-Policy",
+                      "value": "default-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:;"
+                    },
+                    {
+                      "key": "Strict-Transport-Security",
+                      "value": "max-age=31536000"
+                    },
+                    {
+                      "key": "Cache-Control",
+                      "value": "no-store, no-cache, must-revalidate, post-check=0, pre-check=0"
+                    },
+                    {
+                      "key": "Expires",
+                      "value": "Thu, 19 Nov 1981 08:52:00 GMT"
+                    },
+                    {
+                      "key": "Pragma",
+                      "value": "no-cache"
+                    },
+                    {
+                      "key": "Allow",
+                      "value": "GET, HEAD, POST, PUT, DELETE, OPTIONS"
+                    }
+                  ],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "<response status=\"success\">\n    <result>\n        <config version=\"10.0.0\" urldb=\"paloaltonetworks\">\n            ... example output truncated ...\n        </config>\n    </result>\n</response>"
                 },
                 {
-                  "listen": "test",
-                  "script": {
-                    "id": "e0f7c538-f7eb-468a-95f1-05f42183073e",
-                    "type": "text/javascript",
-                    "exec": [
-                      ""
-                    ]
-                  }
-                }
-              ],
-              "_postman_isSubFolder": true
-            },
-            {
-              "name": "Delete Configuration",
-              "item": [
-                {
-                  "name": "Delete a security rule",
-                  "_postman_id": "0faacfba-2285-41fb-97ff-28ecf44114cd",
-                  "protocolProfileBehavior": {
-                    "disableBodyPruning": true
-                  },
-                  "request": {
+                  "id": "b09b7786-6e61-41af-bb25-a7ac6d63eb86",
+                  "name": "Get specific config portion",
+                  "originalRequest": {
                     "method": "GET",
                     "header": [],
                     "url": {
-                      "raw": "https://{{host}}/api/?type=config&action=delete&xpath=/config/devices/entry[@name='localhost.localdomain']/vsys/entry[@name='vsys1']/rulebase/security/rules/entry[@name='IT DNS Services']",
+                      "raw": "https://{{host}}/api/?type=config&action=show&xpath=/config/devices/entry/vsys/entry/rulebase/security",
                       "protocol": "https",
                       "host": [
                         "{{host}}"
@@ -449,1138 +258,23 @@
                         },
                         {
                           "key": "action",
-                          "value": "delete"
+                          "value": "show"
                         },
                         {
                           "key": "xpath",
-                          "value": "/config/devices/entry[@name='localhost.localdomain']/vsys/entry[@name='vsys1']/rulebase/security/rules/entry[@name='IT DNS Services']"
+                          "value": "/config/devices/entry/vsys/entry/rulebase/security",
+                          "description": "*Optional*.  XPath to desired portion of configuration."
                         }
                       ]
-                    },
-                    "description": "Deletes the security rule `IT DNS Services`."
-                  },
-                  "response": [
-                    {
-                      "id": "279ed9ac-b0f3-4a3c-b639-897252682fbc",
-                      "name": "Delete a security rule",
-                      "originalRequest": {
-                        "method": "GET",
-                        "header": [],
-                        "url": {
-                          "raw": "https://{{host}}/api/?type=config&action=delete&xpath=/config/devices/entry[@name='localhost.localdomain']/vsys/entry[@name='vsys1']/rulebase/security/rules/entry[@name='IT DNS Services']",
-                          "protocol": "https",
-                          "host": [
-                            "{{host}}"
-                          ],
-                          "path": [
-                            "api",
-                            ""
-                          ],
-                          "query": [
-                            {
-                              "key": "type",
-                              "value": "config"
-                            },
-                            {
-                              "key": "action",
-                              "value": "delete"
-                            },
-                            {
-                              "key": "xpath",
-                              "value": "/config/devices/entry[@name='localhost.localdomain']/vsys/entry[@name='vsys1']/rulebase/security/rules/entry[@name='IT DNS Services']"
-                            }
-                          ]
-                        }
-                      },
-                      "status": "OK",
-                      "code": 200,
-                      "_postman_previewlanguage": "xml",
-                      "header": [
-                        {
-                          "key": "Date",
-                          "value": "Mon, 23 Nov 2020 20:40:28 GMT"
-                        },
-                        {
-                          "key": "Content-Type",
-                          "value": "application/xml; charset=UTF-8"
-                        },
-                        {
-                          "key": "Content-Length",
-                          "value": "76"
-                        },
-                        {
-                          "key": "Connection",
-                          "value": "keep-alive"
-                        },
-                        {
-                          "key": "X-FRAME-OPTIONS",
-                          "value": "SAMEORIGIN"
-                        },
-                        {
-                          "key": "X-XSS-Protection",
-                          "value": "1; mode=block"
-                        },
-                        {
-                          "key": "X-Content-Type-Options",
-                          "value": "nosniff"
-                        },
-                        {
-                          "key": "Content-Security-Policy",
-                          "value": "default-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:;"
-                        },
-                        {
-                          "key": "Strict-Transport-Security",
-                          "value": "max-age=31536000"
-                        },
-                        {
-                          "key": "Cache-Control",
-                          "value": "no-store, no-cache, must-revalidate, post-check=0, pre-check=0"
-                        },
-                        {
-                          "key": "Expires",
-                          "value": "Thu, 19 Nov 1981 08:52:00 GMT"
-                        },
-                        {
-                          "key": "Pragma",
-                          "value": "no-cache"
-                        },
-                        {
-                          "key": "Allow",
-                          "value": "GET, HEAD, POST, PUT, DELETE, OPTIONS"
-                        }
-                      ],
-                      "cookie": [],
-                      "responseTime": null,
-                      "body": "<response status=\"success\" code=\"20\">\n    <msg>command succeeded</msg>\n</response>"
                     }
-                  ]
-                },
-                {
-                  "name": "Delete a member from an address group",
-                  "_postman_id": "a19946b0-b1d5-40cf-a9c6-f4cab058f2ef",
-                  "protocolProfileBehavior": {
-                    "disableBodyPruning": true
                   },
-                  "request": {
-                    "method": "GET",
-                    "header": [],
-                    "url": {
-                      "raw": "https://{{host}}/api?type=config&action=delete&xpath=/config/devices/entry[@name='localhost.localdomain']/vsys/entry[@name='vsys1']/address-group/entry[@name='Data-Center']/static/member[text()='Data-Center-192.168.2.0-24']",
-                      "protocol": "https",
-                      "host": [
-                        "{{host}}"
-                      ],
-                      "path": [
-                        "api"
-                      ],
-                      "query": [
-                        {
-                          "key": "type",
-                          "value": "config"
-                        },
-                        {
-                          "key": "action",
-                          "value": "delete"
-                        },
-                        {
-                          "key": "xpath",
-                          "value": "/config/devices/entry[@name='localhost.localdomain']/vsys/entry[@name='vsys1']/address-group/entry[@name='Data-Center']/static/member[text()='Data-Center-192.168.2.0-24']"
-                        }
-                      ]
-                    },
-                    "description": "Deletes the `Data-Center-192.168.2.0-24` object from the `Data-Center` address group.\n\nTo delete a single member object in a group, use a text match for the object's name in the `member` entries like this: `member[text()='Object-To-Delete']`."
-                  },
-                  "response": []
+                  "_postman_previewlanguage": "xml",
+                  "header": null,
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "<response status=\"success\">\n    <result>\n        <security>\n            <rules>\n                <entry name=\"IT DNS Services\" uuid=\"3e888b2c-7325-4778-ba20-4b0c90f92980\">\n                    <to>\n                        <member>trust</member>\n                    </to>\n                    <from>\n                        <member>untrust</member>\n                    </from>\n                    <source>\n                        <member>any</member>\n                    </source>\n                    <destination>\n                        <member>Data-Center</member>\n                    </destination>\n                    <source-user>\n                        <member>any</member>\n                    </source-user>\n                    <category>\n                        <member>any</member>\n                    </category>\n                    <application>\n                        <member>dns</member>\n                    </application>\n                    <service>\n                        <member>application-default</member>\n                    </service>\n                    <source-hip>\n                        <member>any</member>\n                    </source-hip>\n                    <destination-hip>\n                        <member>any</member>\n                    </destination-hip>\n                    <action>allow</action>\n                    <log-setting>default</log-setting>\n                    <profile-setting>\n                        <group>\n                            <member>Best-Practice</member>\n                        </group>\n                    </profile-setting>\n                    <description>Inbound DNS requests to data center</description>\n                </entry>\n            </rules>\n        </security>\n    </result>\n</response>"
                 }
-              ],
-              "_postman_id": "5fe6ff03-ba59-4d3d-abca-6dc3508e5faf",
-              "description": "Use `action=delete` to delete an object at a specified location in the configuration.\n\nUse the `xpath` parameter to specify the location of the object to be deleted.",
-              "_postman_isSubFolder": true
-            },
-            {
-              "name": "Rename Configuration",
-              "item": [
-                {
-                  "name": "Rename an address object",
-                  "_postman_id": "ca21af18-3533-4b27-8b7e-6f46b178c1bf",
-                  "protocolProfileBehavior": {
-                    "disableBodyPruning": true
-                  },
-                  "request": {
-                    "method": "GET",
-                    "header": [],
-                    "url": {
-                      "raw": "https://{{host}}/api/?type=config&action=rename&xpath=/config/devices/entry[@name='localhost.localdomain']/vsys/entry[@name='vsys1']/address/entry[@name='Old-Address']&newname=New-Address",
-                      "protocol": "https",
-                      "host": [
-                        "{{host}}"
-                      ],
-                      "path": [
-                        "api",
-                        ""
-                      ],
-                      "query": [
-                        {
-                          "key": "type",
-                          "value": "config"
-                        },
-                        {
-                          "key": "action",
-                          "value": "rename"
-                        },
-                        {
-                          "key": "xpath",
-                          "value": "/config/devices/entry[@name='localhost.localdomain']/vsys/entry[@name='vsys1']/address/entry[@name='Old-Address']"
-                        },
-                        {
-                          "key": "newname",
-                          "value": "New-Address",
-                          "type": "text"
-                        }
-                      ]
-                    },
-                    "description": "Renames the address object `Old-Address` to `New-Address`."
-                  },
-                  "response": [
-                    {
-                      "id": "8f628d96-389e-4bac-b3e3-cfc6067c9103",
-                      "name": "Rename an address object",
-                      "originalRequest": {
-                        "method": "GET",
-                        "header": [],
-                        "url": {
-                          "raw": "https://{{host}}/api/?type=config&action=rename&xpath=/config/devices/entry[@name='localhost.localdomain']/vsys/entry[@name='vsys1']/address/entry[@name='Old-Address']&newname=New-Address",
-                          "protocol": "https",
-                          "host": [
-                            "{{host}}"
-                          ],
-                          "path": [
-                            "api",
-                            ""
-                          ],
-                          "query": [
-                            {
-                              "key": "type",
-                              "value": "config"
-                            },
-                            {
-                              "key": "action",
-                              "value": "rename"
-                            },
-                            {
-                              "key": "xpath",
-                              "value": "/config/devices/entry[@name='localhost.localdomain']/vsys/entry[@name='vsys1']/address/entry[@name='Old-Address']"
-                            },
-                            {
-                              "key": "newname",
-                              "value": "New-Address"
-                            }
-                          ]
-                        }
-                      },
-                      "status": "OK",
-                      "code": 200,
-                      "_postman_previewlanguage": "xml",
-                      "header": [
-                        {
-                          "key": "Date",
-                          "value": "Mon, 23 Nov 2020 20:51:38 GMT"
-                        },
-                        {
-                          "key": "Content-Type",
-                          "value": "application/xml; charset=UTF-8"
-                        },
-                        {
-                          "key": "Content-Length",
-                          "value": "76"
-                        },
-                        {
-                          "key": "Connection",
-                          "value": "keep-alive"
-                        },
-                        {
-                          "key": "X-FRAME-OPTIONS",
-                          "value": "SAMEORIGIN"
-                        },
-                        {
-                          "key": "X-XSS-Protection",
-                          "value": "1; mode=block"
-                        },
-                        {
-                          "key": "X-Content-Type-Options",
-                          "value": "nosniff"
-                        },
-                        {
-                          "key": "Content-Security-Policy",
-                          "value": "default-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:;"
-                        },
-                        {
-                          "key": "Strict-Transport-Security",
-                          "value": "max-age=31536000"
-                        },
-                        {
-                          "key": "Cache-Control",
-                          "value": "no-store, no-cache, must-revalidate, post-check=0, pre-check=0"
-                        },
-                        {
-                          "key": "Expires",
-                          "value": "Thu, 19 Nov 1981 08:52:00 GMT"
-                        },
-                        {
-                          "key": "Pragma",
-                          "value": "no-cache"
-                        },
-                        {
-                          "key": "Allow",
-                          "value": "GET, HEAD, POST, PUT, DELETE, OPTIONS"
-                        }
-                      ],
-                      "cookie": [],
-                      "responseTime": null,
-                      "body": "<response status=\"success\" code=\"20\">\n    <msg>command succeeded</msg>\n</response>"
-                    }
-                  ]
-                }
-              ],
-              "_postman_id": "68ca3234-062c-4fe3-b54a-b1cec4573c4c",
-              "description": "Use `action=rename` to rename an object at a specified location in the configuration.\n\nUse the `xpath` parameter to specify the location of the object to be renamed.\nUse the `newname` parameter to provide a new name for the object.",
-              "_postman_isSubFolder": true
-            },
-            {
-              "name": "Clone Configuration",
-              "item": [
-                {
-                  "name": "Clone an address object",
-                  "_postman_id": "3b86fc7f-f54e-4640-81a8-6cbb978cf988",
-                  "protocolProfileBehavior": {
-                    "disableBodyPruning": true
-                  },
-                  "request": {
-                    "method": "GET",
-                    "header": [],
-                    "url": {
-                      "raw": "https://{{host}}/api/?type=config&action=clone&xpath=/config/devices/entry[@name='localhost.localdomain']/vsys/entry[@name='vsys1']/address&from=/config/devices/entry[@name='localhost.localdomain']/vsys/entry[@name='vsys1']/address/entry[@name='Old-Address']&newname=New-Address",
-                      "protocol": "https",
-                      "host": [
-                        "{{host}}"
-                      ],
-                      "path": [
-                        "api",
-                        ""
-                      ],
-                      "query": [
-                        {
-                          "key": "type",
-                          "value": "config"
-                        },
-                        {
-                          "key": "action",
-                          "value": "clone"
-                        },
-                        {
-                          "key": "xpath",
-                          "value": "/config/devices/entry[@name='localhost.localdomain']/vsys/entry[@name='vsys1']/address"
-                        },
-                        {
-                          "key": "from",
-                          "value": "/config/devices/entry[@name='localhost.localdomain']/vsys/entry[@name='vsys1']/address/entry[@name='Old-Address']"
-                        },
-                        {
-                          "key": "newname",
-                          "value": "New-Address"
-                        }
-                      ]
-                    },
-                    "description": "Clones the address object `Old-Address` to `New-Address`."
-                  },
-                  "response": [
-                    {
-                      "id": "ad589148-34bb-4632-8d65-fe68119c3d30",
-                      "name": "Clone an address object",
-                      "originalRequest": {
-                        "method": "GET",
-                        "header": [],
-                        "url": {
-                          "raw": "https://{{host}}/api/?type=config&action=clone&xpath=/config/devices/entry[@name='localhost.localdomain']/vsys/entry[@name='vsys1']/address&from=/config/devices/entry[@name='localhost.localdomain']/vsys/entry[@name='vsys1']/address/entry[@name='Old-Address']&newname=New-Address",
-                          "protocol": "https",
-                          "host": [
-                            "{{host}}"
-                          ],
-                          "path": [
-                            "api",
-                            ""
-                          ],
-                          "query": [
-                            {
-                              "key": "type",
-                              "value": "config"
-                            },
-                            {
-                              "key": "action",
-                              "value": "clone"
-                            },
-                            {
-                              "key": "xpath",
-                              "value": "/config/devices/entry[@name='localhost.localdomain']/vsys/entry[@name='vsys1']/address"
-                            },
-                            {
-                              "key": "from",
-                              "value": "/config/devices/entry[@name='localhost.localdomain']/vsys/entry[@name='vsys1']/address/entry[@name='Old-Address']"
-                            },
-                            {
-                              "key": "newname",
-                              "value": "New-Address"
-                            }
-                          ]
-                        }
-                      },
-                      "status": "OK",
-                      "code": 200,
-                      "_postman_previewlanguage": "xml",
-                      "header": [
-                        {
-                          "key": "Date",
-                          "value": "Mon, 23 Nov 2020 20:57:25 GMT"
-                        },
-                        {
-                          "key": "Content-Type",
-                          "value": "application/xml; charset=UTF-8"
-                        },
-                        {
-                          "key": "Content-Length",
-                          "value": "57"
-                        },
-                        {
-                          "key": "Connection",
-                          "value": "keep-alive"
-                        },
-                        {
-                          "key": "X-FRAME-OPTIONS",
-                          "value": "SAMEORIGIN"
-                        },
-                        {
-                          "key": "X-XSS-Protection",
-                          "value": "1; mode=block"
-                        },
-                        {
-                          "key": "X-Content-Type-Options",
-                          "value": "nosniff"
-                        },
-                        {
-                          "key": "Content-Security-Policy",
-                          "value": "default-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:;"
-                        },
-                        {
-                          "key": "Strict-Transport-Security",
-                          "value": "max-age=31536000"
-                        },
-                        {
-                          "key": "Cache-Control",
-                          "value": "no-store, no-cache, must-revalidate, post-check=0, pre-check=0"
-                        },
-                        {
-                          "key": "Expires",
-                          "value": "Thu, 19 Nov 1981 08:52:00 GMT"
-                        },
-                        {
-                          "key": "Pragma",
-                          "value": "no-cache"
-                        },
-                        {
-                          "key": "Allow",
-                          "value": "GET, HEAD, POST, PUT, DELETE, OPTIONS"
-                        }
-                      ],
-                      "cookie": [],
-                      "responseTime": null,
-                      "body": "<response status=\"success\" name=\"New-Address\"></response>"
-                    }
-                  ]
-                }
-              ],
-              "_postman_id": "2b0dbcc4-4eaa-4b9d-9cc8-2d46cc7c75e9",
-              "description": "Use `action=clone` to clone an existing configuration object.\n\nUse the `xpath` parameter to specify the location of the object to be cloned.\nUse the `from` parameter to specify the source object.\nUse the `newname` parameter to provide a name for the cloned object.",
-              "_postman_isSubFolder": true
-            },
-            {
-              "name": "Move Configuration",
-              "item": [
-                {
-                  "name": "Move a security rule",
-                  "_postman_id": "9fcd34f6-8b3e-4cf9-80a8-c62fa15a9cc1",
-                  "protocolProfileBehavior": {
-                    "disableBodyPruning": true
-                  },
-                  "request": {
-                    "method": "GET",
-                    "header": [],
-                    "url": {
-                      "raw": "https://{{host}}/api/?type=config&action=move&xpath=/config/devices/entry[@name='localhost.localdomain']/vsys/entry[@name='vsys1']/rulebase/security/rules/entry[@name='Outbound Access']&where=after&dst=IT DNS Services",
-                      "protocol": "https",
-                      "host": [
-                        "{{host}}"
-                      ],
-                      "path": [
-                        "api",
-                        ""
-                      ],
-                      "query": [
-                        {
-                          "key": "type",
-                          "value": "config"
-                        },
-                        {
-                          "key": "action",
-                          "value": "move"
-                        },
-                        {
-                          "key": "xpath",
-                          "value": "/config/devices/entry[@name='localhost.localdomain']/vsys/entry[@name='vsys1']/rulebase/security/rules/entry[@name='Outbound Access']"
-                        },
-                        {
-                          "key": "where",
-                          "value": "after",
-                          "type": "text"
-                        },
-                        {
-                          "key": "dst",
-                          "value": "IT DNS Services",
-                          "type": "text"
-                        }
-                      ]
-                    },
-                    "description": "Moves the rule `Outbound Access` after the rule `IT DNS Services`."
-                  },
-                  "response": []
-                }
-              ],
-              "_postman_id": "83d59932-aa2b-4522-918a-92148b7a8a73",
-              "description": "Use `action=move` to move the location of an existing configuration object.\n\nUse the `xpath` parameter to specify the location of the object to be moved.\nUse the `where` parameter to specify the type of move (can be *before*, *after*, *top*, or *bottom*).\nUse the `dst` parameter to specify an object when `where` is *before* or *after*.",
-              "_postman_isSubFolder": true
-            },
-            {
-              "name": "Override Configuration",
-              "item": [
-                {
-                  "name": "Override SNMP trap profile",
-                  "_postman_id": "03d72bb8-f062-42b7-9f44-95efaf361852",
-                  "protocolProfileBehavior": {
-                    "disableBodyPruning": true
-                  },
-                  "request": {
-                    "method": "GET",
-                    "header": [],
-                    "url": {
-                      "raw": "https://{{host}}/api/?type=config&action=override&xpath=/config/shared/log-settings/snmptrap&element=<entry name=\"snmp\" src=\"tpl\"><version src=\"tpl\"><v2c src=\"tpl\"><server src=\"tpl\"><entry name=\"test\" src=\"tpl\"><manager src=\"tpl\">2.2.2.2</manager><community src=\"tpl\">test</community></entry></server></v2c></version></entry>",
-                      "protocol": "https",
-                      "host": [
-                        "{{host}}"
-                      ],
-                      "path": [
-                        "api",
-                        ""
-                      ],
-                      "query": [
-                        {
-                          "key": "type",
-                          "value": "config"
-                        },
-                        {
-                          "key": "action",
-                          "value": "override"
-                        },
-                        {
-                          "key": "xpath",
-                          "value": "/config/shared/log-settings/snmptrap"
-                        },
-                        {
-                          "key": "element",
-                          "value": "<entry name=\"snmp\" src=\"tpl\"><version src=\"tpl\"><v2c src=\"tpl\"><server src=\"tpl\"><entry name=\"test\" src=\"tpl\"><manager src=\"tpl\">2.2.2.2</manager><community src=\"tpl\">test</community></entry></server></v2c></version></entry>"
-                        }
-                      ]
-                    },
-                    "description": "Overrides the SNMP trap profile configuration that was pushed to the firewall using a template."
-                  },
-                  "response": [
-                    {
-                      "id": "d38b0b12-bf9c-4cce-a922-bc4c59ecb58f",
-                      "name": "Override SNMP trap profile",
-                      "originalRequest": {
-                        "method": "GET",
-                        "header": [],
-                        "url": {
-                          "raw": "https://{{host}}/api/?type=config&action=override&xpath=/config/shared/log-settings/snmptrap&element=<entry name=\"snmp\" src=\"tpl\"><version src=\"tpl\"><v2c src=\"tpl\"><server src=\"tpl\"><entry name=\"test\" src=\"tpl\"><manager src=\"tpl\">2.2.2.2</manager><community src=\"tpl\">test</community></entry></server></v2c></version></entry>",
-                          "protocol": "https",
-                          "host": [
-                            "{{host}}"
-                          ],
-                          "path": [
-                            "api",
-                            ""
-                          ],
-                          "query": [
-                            {
-                              "key": "type",
-                              "value": "config"
-                            },
-                            {
-                              "key": "action",
-                              "value": "override"
-                            },
-                            {
-                              "key": "xpath",
-                              "value": "/config/shared/log-settings/snmptrap"
-                            },
-                            {
-                              "key": "element",
-                              "value": "<entry name=\"snmp\" src=\"tpl\"><version src=\"tpl\"><v2c src=\"tpl\"><server src=\"tpl\"><entry name=\"test\" src=\"tpl\"><manager src=\"tpl\">2.2.2.2</manager><community src=\"tpl\">test</community></entry></server></v2c></version></entry>"
-                            }
-                          ]
-                        }
-                      },
-                      "status": "OK",
-                      "code": 200,
-                      "_postman_previewlanguage": "xml",
-                      "header": [
-                        {
-                          "key": "Date",
-                          "value": "Tue, 24 Nov 2020 14:17:16 GMT"
-                        },
-                        {
-                          "key": "Content-Type",
-                          "value": "application/xml; charset=UTF-8"
-                        },
-                        {
-                          "key": "Content-Length",
-                          "value": "76"
-                        },
-                        {
-                          "key": "Connection",
-                          "value": "keep-alive"
-                        },
-                        {
-                          "key": "X-FRAME-OPTIONS",
-                          "value": "SAMEORIGIN"
-                        },
-                        {
-                          "key": "X-XSS-Protection",
-                          "value": "1; mode=block"
-                        },
-                        {
-                          "key": "X-Content-Type-Options",
-                          "value": "nosniff"
-                        },
-                        {
-                          "key": "Content-Security-Policy",
-                          "value": "default-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:;"
-                        },
-                        {
-                          "key": "Strict-Transport-Security",
-                          "value": "max-age=31536000"
-                        },
-                        {
-                          "key": "Cache-Control",
-                          "value": "no-store, no-cache, must-revalidate, post-check=0, pre-check=0"
-                        },
-                        {
-                          "key": "Expires",
-                          "value": "Thu, 19 Nov 1981 08:52:00 GMT"
-                        },
-                        {
-                          "key": "Pragma",
-                          "value": "no-cache"
-                        },
-                        {
-                          "key": "Set-Cookie",
-                          "value": "PHPSESSID=277a6802271669133052fc761e2d244b; path=/; secure; HttpOnly"
-                        },
-                        {
-                          "key": "Allow",
-                          "value": "GET, HEAD, POST, PUT, DELETE, OPTIONS"
-                        }
-                      ],
-                      "cookie": [],
-                      "responseTime": null,
-                      "body": "<response status=\"success\" code=\"20\">\n    <msg>command succeeded</msg>\n</response>"
-                    }
-                  ]
-                }
-              ],
-              "_postman_id": "e56f3e70-96b5-4372-822c-07e4d55e7666",
-              "description": "Use `action=override` to override a setting that was pushed to a firewall from a template.\n\nUse the `xpath` parameter to specify the location of the object to override.",
-              "event": [
-                {
-                  "listen": "prerequest",
-                  "script": {
-                    "id": "7f0f5f34-7e44-4454-a473-fd6157733b17",
-                    "type": "text/javascript",
-                    "exec": [
-                      ""
-                    ]
-                  }
-                },
-                {
-                  "listen": "test",
-                  "script": {
-                    "id": "aa51a03a-c35b-4ac4-9e0b-611af67f17bf",
-                    "type": "text/javascript",
-                    "exec": [
-                      ""
-                    ]
-                  }
-                }
-              ],
-              "_postman_isSubFolder": true
-            },
-            {
-              "name": "Multi-Move or Multi-Clone Configuration",
-              "item": [
-                {
-                  "name": "Move addresses between device groups",
-                  "_postman_id": "de1f0332-96c2-411a-8065-23097c15966f",
-                  "protocolProfileBehavior": {
-                    "disableBodyPruning": true
-                  },
-                  "request": {
-                    "method": "GET",
-                    "header": [],
-                    "url": {
-                      "raw": "https://{{host}}/api/?type=config&action=multi-move&xpath=/config/devices/entry[@name='localhost.localdomain']/device-group/entry[@name='norcal']/address&element=<selected-list><source xpath=\"/config/devices/entry[@name='localhost.localdomain']/device-group/entry[@name='socal']/address\"><member>addr1</member><member>addr2</member></source></selected-list><all-errors>no</all-errors>",
-                      "protocol": "https",
-                      "host": [
-                        "{{host}}"
-                      ],
-                      "path": [
-                        "api",
-                        ""
-                      ],
-                      "query": [
-                        {
-                          "key": "type",
-                          "value": "config"
-                        },
-                        {
-                          "key": "action",
-                          "value": "multi-move"
-                        },
-                        {
-                          "key": "xpath",
-                          "value": "/config/devices/entry[@name='localhost.localdomain']/device-group/entry[@name='norcal']/address"
-                        },
-                        {
-                          "key": "element",
-                          "value": "<selected-list><source xpath=\"/config/devices/entry[@name='localhost.localdomain']/device-group/entry[@name='socal']/address\"><member>addr1</member><member>addr2</member></source></selected-list><all-errors>no</all-errors>"
-                        }
-                      ]
-                    },
-                    "description": "Move the address objects `addr1` and `addr2` from the `socal` device group to the `norcal` device group."
-                  },
-                  "response": [
-                    {
-                      "id": "c798cb88-db29-48af-86d0-69e3db9d4343",
-                      "name": "Move addresses between device groups",
-                      "originalRequest": {
-                        "method": "GET",
-                        "header": [],
-                        "url": {
-                          "raw": "https://{{host}}/api/?type=config&action=multi-move&xpath=/config/devices/entry[@name='localhost.localdomain']/device-group/entry[@name='norcal']/address&element=<selected-list><source xpath=\"/config/devices/entry[@name='localhost.localdomain']/device-group/entry[@name='socal']/address\"><member>addr1</member><member>addr2</member></source></selected-list><all-errors>no</all-errors>",
-                          "protocol": "https",
-                          "host": [
-                            "{{host}}"
-                          ],
-                          "path": [
-                            "api",
-                            ""
-                          ],
-                          "query": [
-                            {
-                              "key": "type",
-                              "value": "config"
-                            },
-                            {
-                              "key": "action",
-                              "value": "multi-move"
-                            },
-                            {
-                              "key": "xpath",
-                              "value": "/config/devices/entry[@name='localhost.localdomain']/device-group/entry[@name='norcal']/address"
-                            },
-                            {
-                              "key": "element",
-                              "value": "<selected-list><source xpath=\"/config/devices/entry[@name='localhost.localdomain']/device-group/entry[@name='socal']/address\"><member>addr1</member><member>addr2</member></source></selected-list><all-errors>no</all-errors>"
-                            }
-                          ]
-                        }
-                      },
-                      "status": "OK",
-                      "code": 200,
-                      "_postman_previewlanguage": "xml",
-                      "header": [
-                        {
-                          "key": "Date",
-                          "value": "Tue, 24 Nov 2020 15:30:02 GMT"
-                        },
-                        {
-                          "key": "Content-Type",
-                          "value": "application/xml; charset=UTF-8"
-                        },
-                        {
-                          "key": "Content-Length",
-                          "value": "285"
-                        },
-                        {
-                          "key": "Connection",
-                          "value": "keep-alive"
-                        },
-                        {
-                          "key": "X-FRAME-OPTIONS",
-                          "value": "SAMEORIGIN"
-                        },
-                        {
-                          "key": "X-XSS-Protection",
-                          "value": "1; mode=block"
-                        },
-                        {
-                          "key": "X-Content-Type-Options",
-                          "value": "nosniff"
-                        },
-                        {
-                          "key": "Content-Security-Policy",
-                          "value": "default-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:;"
-                        },
-                        {
-                          "key": "Strict-Transport-Security",
-                          "value": "max-age=31536000"
-                        },
-                        {
-                          "key": "Cache-Control",
-                          "value": "no-store, no-cache, must-revalidate, post-check=0, pre-check=0"
-                        },
-                        {
-                          "key": "Expires",
-                          "value": "Thu, 19 Nov 1981 08:52:00 GMT"
-                        },
-                        {
-                          "key": "Pragma",
-                          "value": "no-cache"
-                        },
-                        {
-                          "key": "Allow",
-                          "value": "GET, HEAD, POST, PUT, DELETE, OPTIONS"
-                        }
-                      ],
-                      "cookie": [],
-                      "responseTime": null,
-                      "body": "<response status=\"success\" from=\"/config/devices/entry[@name='localhost.localdomain']/device-group/entry[@name='socal']/address\" to=\"/config/devices/entry[@name='localhost.localdomain']/device-group/entry[@name='norcal']/address\">\n    <member>addr1</member>\n    <member>addr2</member>\n</response>"
-                    }
-                  ]
-                },
-                {
-                  "name": "Clone addresses between device groups",
-                  "_postman_id": "699a8ba4-8ae9-438f-bce2-cb3a539abd96",
-                  "protocolProfileBehavior": {
-                    "disableBodyPruning": true
-                  },
-                  "request": {
-                    "method": "GET",
-                    "header": [],
-                    "url": {
-                      "raw": "https://{{host}}/api/?type=config&action=multi-clone&xpath=/config/devices/entry[@name='localhost.localdomain']/device-group/entry[@name='norcal']/address&element=<selected-list><source xpath=\"/config/devices/entry[@name='localhost.localdomain']/device-group/entry[@name='socal']/address\"><member>addr1</member><member>addr2</member></source></selected-list><all-errors>no</all-errors>",
-                      "protocol": "https",
-                      "host": [
-                        "{{host}}"
-                      ],
-                      "path": [
-                        "api",
-                        ""
-                      ],
-                      "query": [
-                        {
-                          "key": "type",
-                          "value": "config"
-                        },
-                        {
-                          "key": "action",
-                          "value": "multi-clone"
-                        },
-                        {
-                          "key": "xpath",
-                          "value": "/config/devices/entry[@name='localhost.localdomain']/device-group/entry[@name='norcal']/address"
-                        },
-                        {
-                          "key": "element",
-                          "value": "<selected-list><source xpath=\"/config/devices/entry[@name='localhost.localdomain']/device-group/entry[@name='socal']/address\"><member>addr1</member><member>addr2</member></source></selected-list><all-errors>no</all-errors>"
-                        }
-                      ]
-                    },
-                    "description": "Clone the address objects `addr1` and `addr2` from the `socal` device group to the `norcal` device group."
-                  },
-                  "response": [
-                    {
-                      "id": "4382b9d8-6485-4280-b68c-e4c55c55323b",
-                      "name": "Clone addresses between device groups",
-                      "originalRequest": {
-                        "method": "GET",
-                        "header": [],
-                        "url": {
-                          "raw": "https://{{host}}/api/?type=config&action=multi-clone&xpath=/config/devices/entry[@name='localhost.localdomain']/device-group/entry[@name='norcal']/address&element=<selected-list><source xpath=\"/config/devices/entry[@name='localhost.localdomain']/device-group/entry[@name='socal']/address\"><member>addr1</member><member>addr2</member></source></selected-list><all-errors>no</all-errors>",
-                          "protocol": "https",
-                          "host": [
-                            "{{host}}"
-                          ],
-                          "path": [
-                            "api",
-                            ""
-                          ],
-                          "query": [
-                            {
-                              "key": "type",
-                              "value": "config"
-                            },
-                            {
-                              "key": "action",
-                              "value": "multi-clone"
-                            },
-                            {
-                              "key": "xpath",
-                              "value": "/config/devices/entry[@name='localhost.localdomain']/device-group/entry[@name='norcal']/address"
-                            },
-                            {
-                              "key": "element",
-                              "value": "<selected-list><source xpath=\"/config/devices/entry[@name='localhost.localdomain']/device-group/entry[@name='socal']/address\"><member>addr1</member><member>addr2</member></source></selected-list><all-errors>no</all-errors>"
-                            }
-                          ]
-                        }
-                      },
-                      "status": "OK",
-                      "code": 200,
-                      "_postman_previewlanguage": "xml",
-                      "header": [
-                        {
-                          "key": "Date",
-                          "value": "Tue, 24 Nov 2020 15:33:29 GMT"
-                        },
-                        {
-                          "key": "Content-Type",
-                          "value": "application/xml; charset=UTF-8"
-                        },
-                        {
-                          "key": "Content-Length",
-                          "value": "187"
-                        },
-                        {
-                          "key": "Connection",
-                          "value": "keep-alive"
-                        },
-                        {
-                          "key": "X-FRAME-OPTIONS",
-                          "value": "SAMEORIGIN"
-                        },
-                        {
-                          "key": "X-XSS-Protection",
-                          "value": "1; mode=block"
-                        },
-                        {
-                          "key": "X-Content-Type-Options",
-                          "value": "nosniff"
-                        },
-                        {
-                          "key": "Content-Security-Policy",
-                          "value": "default-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:;"
-                        },
-                        {
-                          "key": "Strict-Transport-Security",
-                          "value": "max-age=31536000"
-                        },
-                        {
-                          "key": "Cache-Control",
-                          "value": "no-store, no-cache, must-revalidate, post-check=0, pre-check=0"
-                        },
-                        {
-                          "key": "Expires",
-                          "value": "Thu, 19 Nov 1981 08:52:00 GMT"
-                        },
-                        {
-                          "key": "Pragma",
-                          "value": "no-cache"
-                        },
-                        {
-                          "key": "Allow",
-                          "value": "GET, HEAD, POST, PUT, DELETE, OPTIONS"
-                        }
-                      ],
-                      "cookie": [],
-                      "responseTime": null,
-                      "body": "<response status=\"success\" to=\"/config/devices/entry[@name='localhost.localdomain']/device-group/entry[@name='norcal']/address\">\n    <member>addr1-1</member>\n    <member>addr2-1</member>\n</response>"
-                    }
-                  ]
-                }
-              ],
-              "_postman_id": "a97f6a0b-e916-48ab-af31-69126c029301",
-              "description": "Use the `action=multi-move` and `action=multi-clone` actions to move and clone addresses across device groups and virtual systems.  Templates do not support the multi-move and multi-clone capability.",
-              "_postman_isSubFolder": true
-            },
-            {
-              "name": "View Configuration Node Values for XPath",
-              "item": [
-                {
-                  "name": "Get completions for virtual systems",
-                  "_postman_id": "feabb078-1c3e-45c3-bc4b-fe6b073ada3e",
-                  "protocolProfileBehavior": {
-                    "disableBodyPruning": true
-                  },
-                  "request": {
-                    "method": "GET",
-                    "header": [],
-                    "url": {
-                      "raw": "https://{{host}}/api/?type=config&action=complete&xpath=/config/devices/entry[@name='localhost.localdomain']/vsys",
-                      "protocol": "https",
-                      "host": [
-                        "{{host}}"
-                      ],
-                      "path": [
-                        "api",
-                        ""
-                      ],
-                      "query": [
-                        {
-                          "key": "type",
-                          "value": "config"
-                        },
-                        {
-                          "key": "action",
-                          "value": "complete"
-                        },
-                        {
-                          "key": "xpath",
-                          "value": "/config/devices/entry[@name='localhost.localdomain']/vsys"
-                        }
-                      ]
-                    },
-                    "description": "Get all the possible values for `vsys` at this XPath."
-                  },
-                  "response": [
-                    {
-                      "id": "fcf9d95d-8338-423c-b4c9-ac9eaf83c3ba",
-                      "name": "Get completions for virtual systems",
-                      "originalRequest": {
-                        "method": "GET",
-                        "header": [],
-                        "url": {
-                          "raw": "https://{{host}}/api/?type=config&action=complete&xpath=/config/devices/entry[@name='localhost.localdomain']/vsys",
-                          "protocol": "https",
-                          "host": [
-                            "{{host}}"
-                          ],
-                          "path": [
-                            "api",
-                            ""
-                          ],
-                          "query": [
-                            {
-                              "key": "type",
-                              "value": "config"
-                            },
-                            {
-                              "key": "action",
-                              "value": "complete"
-                            },
-                            {
-                              "key": "xpath",
-                              "value": "/config/devices/entry[@name='localhost.localdomain']/vsys"
-                            }
-                          ]
-                        }
-                      },
-                      "status": "OK",
-                      "code": 200,
-                      "_postman_previewlanguage": "xml",
-                      "header": [
-                        {
-                          "key": "Date",
-                          "value": "Tue, 24 Nov 2020 15:28:16 GMT"
-                        },
-                        {
-                          "key": "Content-Type",
-                          "value": "application/xml; charset=UTF-8"
-                        },
-                        {
-                          "key": "Content-Length",
-                          "value": "212"
-                        },
-                        {
-                          "key": "Connection",
-                          "value": "keep-alive"
-                        },
-                        {
-                          "key": "X-FRAME-OPTIONS",
-                          "value": "SAMEORIGIN"
-                        },
-                        {
-                          "key": "X-XSS-Protection",
-                          "value": "1; mode=block"
-                        },
-                        {
-                          "key": "X-Content-Type-Options",
-                          "value": "nosniff"
-                        },
-                        {
-                          "key": "Content-Security-Policy",
-                          "value": "default-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:;"
-                        },
-                        {
-                          "key": "Strict-Transport-Security",
-                          "value": "max-age=31536000"
-                        },
-                        {
-                          "key": "Cache-Control",
-                          "value": "no-store, no-cache, must-revalidate, post-check=0, pre-check=0"
-                        },
-                        {
-                          "key": "Expires",
-                          "value": "Thu, 19 Nov 1981 08:52:00 GMT"
-                        },
-                        {
-                          "key": "Pragma",
-                          "value": "no-cache"
-                        },
-                        {
-                          "key": "Allow",
-                          "value": "GET, HEAD, POST, PUT, DELETE, OPTIONS"
-                        }
-                      ],
-                      "cookie": [],
-                      "responseTime": null,
-                      "body": "<response status=\"success\" code=\"19\">\n    <completions>\n        <completion value=\"vsys1\" vxpath=\"/config/devices/entry[@name='localhost.localdomain']/vsys/entry[@name='vsys1']\" current=\"yes\"/>\n    </completions>\n</response>"
-                    }
-                  ]
-                }
-              ],
-              "_postman_id": "2692481d-2410-49da-89e6-dc5d8f617352",
-              "description": "Use `action=complete` along with an XPath to see possible values that are available with the XPath node.",
-              "event": [
-                {
-                  "listen": "prerequest",
-                  "script": {
-                    "id": "1f55a5a6-32c9-4ef9-be8b-ec17303d6264",
-                    "type": "text/javascript",
-                    "exec": [
-                      ""
-                    ]
-                  }
-                },
-                {
-                  "listen": "test",
-                  "script": {
-                    "id": "107c5a3e-f881-44a5-9663-f06688624246",
-                    "type": "text/javascript",
-                    "exec": [
-                      ""
-                    ]
-                  }
-                }
-              ],
-              "_postman_isSubFolder": true
+              ]
             },
             {
               "name": "Get candidate configuration",
@@ -1894,174 +588,6 @@
               ]
             },
             {
-              "name": "Get running configuration",
-              "_postman_id": "8cbb53c9-7ece-4935-9517-e234c972c1ed",
-              "protocolProfileBehavior": {
-                "disableBodyPruning": true
-              },
-              "request": {
-                "method": "GET",
-                "header": [],
-                "url": {
-                  "raw": "https://{{host}}/api/?type=config&action=show&xpath=",
-                  "protocol": "https",
-                  "host": [
-                    "{{host}}"
-                  ],
-                  "path": [
-                    "api",
-                    ""
-                  ],
-                  "query": [
-                    {
-                      "key": "type",
-                      "value": "config"
-                    },
-                    {
-                      "key": "action",
-                      "value": "show"
-                    },
-                    {
-                      "key": "xpath",
-                      "value": "",
-                      "description": "*Optional*.  XPath to desired portion of configuration."
-                    }
-                  ]
-                },
-                "description": "The `show` action retrieves the **running configuration**, which is the configuration currently active on the firewall."
-              },
-              "response": [
-                {
-                  "id": "bcd72b33-ac46-468c-9602-24177e3c869a",
-                  "name": "Get full configuration",
-                  "originalRequest": {
-                    "method": "GET",
-                    "header": [],
-                    "url": {
-                      "raw": "https://{{host}}/api/?type=config&action=show",
-                      "protocol": "https",
-                      "host": [
-                        "{{host}}"
-                      ],
-                      "path": [
-                        "api",
-                        ""
-                      ],
-                      "query": [
-                        {
-                          "key": "type",
-                          "value": "config"
-                        },
-                        {
-                          "key": "action",
-                          "value": "show"
-                        }
-                      ]
-                    }
-                  },
-                  "status": "OK",
-                  "code": 200,
-                  "_postman_previewlanguage": "xml",
-                  "header": [
-                    {
-                      "key": "Date",
-                      "value": "Mon, 23 Nov 2020 17:43:40 GMT"
-                    },
-                    {
-                      "key": "Content-Type",
-                      "value": "application/xml; charset=UTF-8"
-                    },
-                    {
-                      "key": "Transfer-Encoding",
-                      "value": "chunked"
-                    },
-                    {
-                      "key": "Connection",
-                      "value": "keep-alive"
-                    },
-                    {
-                      "key": "X-FRAME-OPTIONS",
-                      "value": "SAMEORIGIN"
-                    },
-                    {
-                      "key": "X-XSS-Protection",
-                      "value": "1; mode=block"
-                    },
-                    {
-                      "key": "X-Content-Type-Options",
-                      "value": "nosniff"
-                    },
-                    {
-                      "key": "Content-Security-Policy",
-                      "value": "default-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:;"
-                    },
-                    {
-                      "key": "Strict-Transport-Security",
-                      "value": "max-age=31536000"
-                    },
-                    {
-                      "key": "Cache-Control",
-                      "value": "no-store, no-cache, must-revalidate, post-check=0, pre-check=0"
-                    },
-                    {
-                      "key": "Expires",
-                      "value": "Thu, 19 Nov 1981 08:52:00 GMT"
-                    },
-                    {
-                      "key": "Pragma",
-                      "value": "no-cache"
-                    },
-                    {
-                      "key": "Allow",
-                      "value": "GET, HEAD, POST, PUT, DELETE, OPTIONS"
-                    }
-                  ],
-                  "cookie": [],
-                  "responseTime": null,
-                  "body": "<response status=\"success\">\n    <result>\n        <config version=\"10.0.0\" urldb=\"paloaltonetworks\">\n            ... example output truncated ...\n        </config>\n    </result>\n</response>"
-                },
-                {
-                  "id": "b09b7786-6e61-41af-bb25-a7ac6d63eb86",
-                  "name": "Get specific config portion",
-                  "originalRequest": {
-                    "method": "GET",
-                    "header": [],
-                    "url": {
-                      "raw": "https://{{host}}/api/?type=config&action=show&xpath=/config/devices/entry/vsys/entry/rulebase/security",
-                      "protocol": "https",
-                      "host": [
-                        "{{host}}"
-                      ],
-                      "path": [
-                        "api",
-                        ""
-                      ],
-                      "query": [
-                        {
-                          "key": "type",
-                          "value": "config"
-                        },
-                        {
-                          "key": "action",
-                          "value": "show"
-                        },
-                        {
-                          "key": "xpath",
-                          "value": "/config/devices/entry/vsys/entry/rulebase/security",
-                          "description": "*Optional*.  XPath to desired portion of configuration."
-                        }
-                      ]
-                    }
-                  },
-                  "_postman_previewlanguage": "xml",
-                  "header": null,
-                  "cookie": [],
-                  "responseTime": null,
-                  "body": "<response status=\"success\">\n    <result>\n        <security>\n            <rules>\n                <entry name=\"IT DNS Services\" uuid=\"3e888b2c-7325-4778-ba20-4b0c90f92980\">\n                    <to>\n                        <member>trust</member>\n                    </to>\n                    <from>\n                        <member>untrust</member>\n                    </from>\n                    <source>\n                        <member>any</member>\n                    </source>\n                    <destination>\n                        <member>Data-Center</member>\n                    </destination>\n                    <source-user>\n                        <member>any</member>\n                    </source-user>\n                    <category>\n                        <member>any</member>\n                    </category>\n                    <application>\n                        <member>dns</member>\n                    </application>\n                    <service>\n                        <member>application-default</member>\n                    </service>\n                    <source-hip>\n                        <member>any</member>\n                    </source-hip>\n                    <destination-hip>\n                        <member>any</member>\n                    </destination-hip>\n                    <action>allow</action>\n                    <log-setting>default</log-setting>\n                    <profile-setting>\n                        <group>\n                            <member>Best-Practice</member>\n                        </group>\n                    </profile-setting>\n                    <description>Inbound DNS requests to data center</description>\n                </entry>\n            </rules>\n        </security>\n    </result>\n</response>"
-                }
-              ]
-            },
-            {
               "name": "Set configuration",
               "_postman_id": "dd25018a-6ee5-402f-af08-270db953970a",
               "protocolProfileBehavior": {
@@ -2101,7 +627,7 @@
                     }
                   ]
                 },
-                "description": "The `set` action creates a new object, or adds to an existing object at a specified location in the PAN-OS configuration.\n\n| Attribute | Description |\n| --------- | ----------- |\n| **xpath** | The location of the object in the configuration. |\n\nUse the `xpath` parameter to specify the location of the object in the configuration.\nUse the `element` parameter to specify a value for the object you are adding using XML."
+                "description": "The `set` action creates a new object at a specified location in the PAN-OS configuration, if it does not already exist.\n\nIf an object exists at this location, the contents of **element** will be *merged* with the contents of the existing configuration. "
               },
               "response": [
                 {
@@ -2501,24 +1027,1175 @@
                   "body": "<response status=\"success\" code=\"20\">\n    <msg>command succeeded</msg>\n</response>"
                 }
               ]
+            },
+            {
+              "name": "Edit configuration",
+              "_postman_id": "e928cd4f-a120-4cef-ba8b-b24a93e62a7e",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "https://{{host}}/api/?type=config&action=edit&xpath=&element=",
+                  "protocol": "https",
+                  "host": [
+                    "{{host}}"
+                  ],
+                  "path": [
+                    "api",
+                    ""
+                  ],
+                  "query": [
+                    {
+                      "key": "type",
+                      "value": "config"
+                    },
+                    {
+                      "key": "action",
+                      "value": "edit"
+                    },
+                    {
+                      "key": "xpath",
+                      "value": "",
+                      "description": "XPath to desired location in configuration."
+                    },
+                    {
+                      "key": "element",
+                      "value": "",
+                      "description": "Contents of element to write."
+                    }
+                  ]
+                },
+                "description": "The `edit` action replaces an existing object hierarchy with a new value."
+              },
+              "response": [
+                {
+                  "id": "153faf91-8183-4bef-b698-464e4dfb0232",
+                  "name": "Replace contents of address group",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [],
+                    "url": {
+                      "raw": "https://{{host}}/api/?type=config&action=edit&xpath=/config/devices/entry[@name='localhost.localdomain']/vsys/entry[@name='vsys1']/address-group/entry[@name='Data-Center']&element=<entry name=\"Data-Center\"><static><member>Data-Center-192.168.1.0-24</member><member>Data-Center-192.168.2.0-24</member></static></entry>",
+                      "protocol": "https",
+                      "host": [
+                        "{{host}}"
+                      ],
+                      "path": [
+                        "api",
+                        ""
+                      ],
+                      "query": [
+                        {
+                          "key": "type",
+                          "value": "config"
+                        },
+                        {
+                          "key": "action",
+                          "value": "edit"
+                        },
+                        {
+                          "key": "xpath",
+                          "value": "/config/devices/entry[@name='localhost.localdomain']/vsys/entry[@name='vsys1']/address-group/entry[@name='Data-Center']",
+                          "description": "XPath to desired location in configuration."
+                        },
+                        {
+                          "key": "element",
+                          "value": "<entry name=\"Data-Center\"><static><member>Data-Center-192.168.1.0-24</member><member>Data-Center-192.168.2.0-24</member></static></entry>",
+                          "description": "Contents of element to write."
+                        }
+                      ]
+                    }
+                  },
+                  "_postman_previewlanguage": "xml",
+                  "header": null,
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "<response status=\"success\" code=\"20\">\n    <msg>command succeeded</msg>\n</response>"
+                },
+                {
+                  "id": "89210fb7-ff86-4070-902c-b5d96af06f6d",
+                  "name": "Replace applications in security rule",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [],
+                    "url": {
+                      "raw": "https://{{host}}/api/?type=config&action=edit&xpath=/config/devices/entry[@name='localhost.localdomain']/vsys/entry[@name='vsys1']/rulebase/security/rules/entry[@name='IT DNS Services']/application&element=<application><member>dns</member></application>",
+                      "protocol": "https",
+                      "host": [
+                        "{{host}}"
+                      ],
+                      "path": [
+                        "api",
+                        ""
+                      ],
+                      "query": [
+                        {
+                          "key": "type",
+                          "value": "config"
+                        },
+                        {
+                          "key": "action",
+                          "value": "edit"
+                        },
+                        {
+                          "key": "xpath",
+                          "value": "/config/devices/entry[@name='localhost.localdomain']/vsys/entry[@name='vsys1']/rulebase/security/rules/entry[@name='IT DNS Services']/application",
+                          "description": "XPath to desired location in configuration."
+                        },
+                        {
+                          "key": "element",
+                          "value": "<application><member>dns</member></application>",
+                          "description": "Contents of element to write."
+                        }
+                      ]
+                    }
+                  },
+                  "_postman_previewlanguage": "xml",
+                  "header": null,
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "<response status=\"success\" code=\"20\">\n    <msg>command succeeded</msg>\n</response>"
+                }
+              ]
+            },
+            {
+              "name": "Delete configuration",
+              "_postman_id": "f1cff465-94b4-4718-90d9-09af34764514",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "https://{{host}}/api/?type=config&action=delete&xpath=/config/devices/entry[@name='localhost.localdomain']/vsys/entry[@name='vsys1']/address-group/entry[@name='Data-Center']/static/member[text()='Data-Center-192.168.2.0-24']",
+                  "protocol": "https",
+                  "host": [
+                    "{{host}}"
+                  ],
+                  "path": [
+                    "api",
+                    ""
+                  ],
+                  "query": [
+                    {
+                      "key": "type",
+                      "value": "config"
+                    },
+                    {
+                      "key": "action",
+                      "value": "delete"
+                    },
+                    {
+                      "key": "xpath",
+                      "value": "/config/devices/entry[@name='localhost.localdomain']/vsys/entry[@name='vsys1']/address-group/entry[@name='Data-Center']/static/member[text()='Data-Center-192.168.2.0-24']",
+                      "description": "XPath to desired location in configuration."
+                    }
+                  ]
+                },
+                "description": "Use the `delete` action to delete an object at a specified location in the configuration."
+              },
+              "response": [
+                {
+                  "id": "1f41eb0e-3692-45f1-8f11-abfa5d220b75",
+                  "name": "Delete an address object from an address group",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [],
+                    "url": {
+                      "raw": "https://{{host}}/api/?type=config&action=delete&xpath=/config/devices/entry[@name='localhost.localdomain']/vsys/entry[@name='vsys1']/address-group/entry[@name='Data-Center']/static/member[text()='Data-Center-192.168.2.0-24']",
+                      "protocol": "https",
+                      "host": [
+                        "{{host}}"
+                      ],
+                      "path": [
+                        "api",
+                        ""
+                      ],
+                      "query": [
+                        {
+                          "key": "type",
+                          "value": "config"
+                        },
+                        {
+                          "key": "action",
+                          "value": "delete"
+                        },
+                        {
+                          "key": "xpath",
+                          "value": "/config/devices/entry[@name='localhost.localdomain']/vsys/entry[@name='vsys1']/address-group/entry[@name='Data-Center']/static/member[text()='Data-Center-192.168.2.0-24']",
+                          "description": "XPath to desired location in configuration."
+                        }
+                      ]
+                    }
+                  },
+                  "_postman_previewlanguage": "xml",
+                  "header": null,
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "<response status=\"success\" code=\"20\">\n    <msg>command succeeded</msg>\n</response>"
+                },
+                {
+                  "id": "85b76208-1692-449c-91da-a3302f8c51a7",
+                  "name": "Delete a security rule",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [],
+                    "url": {
+                      "raw": "https://{{host}}/api/?type=config&action=delete&xpath=/config/devices/entry[@name='localhost.localdomain']/vsys/entry[@name='vsys1']/rulebase/security/rules/entry[@name='IT DNS Services']",
+                      "protocol": "https",
+                      "host": [
+                        "{{host}}"
+                      ],
+                      "path": [
+                        "api",
+                        ""
+                      ],
+                      "query": [
+                        {
+                          "key": "type",
+                          "value": "config"
+                        },
+                        {
+                          "key": "action",
+                          "value": "delete"
+                        },
+                        {
+                          "key": "xpath",
+                          "value": "/config/devices/entry[@name='localhost.localdomain']/vsys/entry[@name='vsys1']/rulebase/security/rules/entry[@name='IT DNS Services']",
+                          "description": "XPath to desired location in configuration."
+                        }
+                      ]
+                    }
+                  },
+                  "_postman_previewlanguage": "xml",
+                  "header": null,
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "<response status=\"success\" code=\"20\">\n    <msg>command succeeded</msg>\n</response>"
+                }
+              ]
+            },
+            {
+              "name": "Rename configuration",
+              "_postman_id": "37c3ab0b-e65e-4491-a460-d7fbf5d0adbc",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "https://{{host}}/api/?type=config&action=rename&xpath=&newname=",
+                  "protocol": "https",
+                  "host": [
+                    "{{host}}"
+                  ],
+                  "path": [
+                    "api",
+                    ""
+                  ],
+                  "query": [
+                    {
+                      "key": "type",
+                      "value": "config"
+                    },
+                    {
+                      "key": "action",
+                      "value": "rename"
+                    },
+                    {
+                      "key": "xpath",
+                      "value": "",
+                      "description": "XPath to desired object in configuration."
+                    },
+                    {
+                      "key": "newname",
+                      "value": "",
+                      "description": "New name for object."
+                    }
+                  ]
+                },
+                "description": "Use `rename` to rename an object at a specified location in the configuration.\n"
+              },
+              "response": [
+                {
+                  "id": "2b3bc251-2177-4623-a167-ddb6fc819186",
+                  "name": "Rename configuration",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [],
+                    "url": {
+                      "raw": "https://{{host}}/api/?type=config&action=rename&xpath=/config/devices/entry[@name='localhost.localdomain']/vsys/entry[@name='vsys1']/address/entry[@name='Old-Address']&newname=New-Address",
+                      "protocol": "https",
+                      "host": [
+                        "{{host}}"
+                      ],
+                      "path": [
+                        "api",
+                        ""
+                      ],
+                      "query": [
+                        {
+                          "key": "type",
+                          "value": "config"
+                        },
+                        {
+                          "key": "action",
+                          "value": "rename"
+                        },
+                        {
+                          "key": "xpath",
+                          "value": "/config/devices/entry[@name='localhost.localdomain']/vsys/entry[@name='vsys1']/address/entry[@name='Old-Address']",
+                          "description": "XPath to desired object in configuration."
+                        },
+                        {
+                          "key": "newname",
+                          "value": "New-Address",
+                          "description": "New name for object."
+                        }
+                      ]
+                    }
+                  },
+                  "_postman_previewlanguage": "xml",
+                  "header": null,
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "<response status=\"success\" code=\"20\">\n    <msg>command succeeded</msg>\n</response>"
+                }
+              ]
+            },
+            {
+              "name": "Clone configuration",
+              "_postman_id": "59ed934d-a3d1-454e-83ac-30b4b2899049",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "https://{{host}}/api/?type=config&action=clone&xpath=&from=&newname=",
+                  "protocol": "https",
+                  "host": [
+                    "{{host}}"
+                  ],
+                  "path": [
+                    "api",
+                    ""
+                  ],
+                  "query": [
+                    {
+                      "key": "type",
+                      "value": "config"
+                    },
+                    {
+                      "key": "action",
+                      "value": "clone"
+                    },
+                    {
+                      "key": "xpath",
+                      "value": "",
+                      "description": "Destination of the cloned object."
+                    },
+                    {
+                      "key": "from",
+                      "value": "",
+                      "description": "Source object."
+                    },
+                    {
+                      "key": "newname",
+                      "value": "",
+                      "description": "New name for cloned object."
+                    }
+                  ]
+                },
+                "description": "Use `clone` to clone an existing configuration object."
+              },
+              "response": [
+                {
+                  "id": "111f0d6f-27e9-47f3-808a-2fe00fa70424",
+                  "name": "Clone an address object",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [],
+                    "url": {
+                      "raw": "https://{{host}}/api/?type=config&action=clone&xpath=/config/devices/entry[@name='localhost.localdomain']/vsys/entry[@name='vsys1']/address&from=/config/devices/entry[@name='localhost.localdomain']/vsys/entry[@name='vsys1']/address/entry[@name='Old-Address']&newname=New-Address",
+                      "protocol": "https",
+                      "host": [
+                        "{{host}}"
+                      ],
+                      "path": [
+                        "api",
+                        ""
+                      ],
+                      "query": [
+                        {
+                          "key": "type",
+                          "value": "config"
+                        },
+                        {
+                          "key": "action",
+                          "value": "clone"
+                        },
+                        {
+                          "key": "xpath",
+                          "value": "/config/devices/entry[@name='localhost.localdomain']/vsys/entry[@name='vsys1']/address",
+                          "description": "Destination of the cloned object."
+                        },
+                        {
+                          "key": "from",
+                          "value": "/config/devices/entry[@name='localhost.localdomain']/vsys/entry[@name='vsys1']/address/entry[@name='Old-Address']",
+                          "description": "Source object."
+                        },
+                        {
+                          "key": "newname",
+                          "value": "New-Address",
+                          "description": "New name for cloned object."
+                        }
+                      ]
+                    }
+                  },
+                  "_postman_previewlanguage": "xml",
+                  "header": null,
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "<response status=\"success\" name=\"New-Address\"></response>"
+                }
+              ]
+            },
+            {
+              "name": "Move configuration",
+              "_postman_id": "fe4989eb-2127-46f5-8100-04d39c245117",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "https://{{host}}/api/?type=config&action=move&xpath=&where=&dst=",
+                  "protocol": "https",
+                  "host": [
+                    "{{host}}"
+                  ],
+                  "path": [
+                    "api",
+                    ""
+                  ],
+                  "query": [
+                    {
+                      "key": "type",
+                      "value": "config"
+                    },
+                    {
+                      "key": "action",
+                      "value": "move"
+                    },
+                    {
+                      "key": "xpath",
+                      "value": "",
+                      "description": "Location of the object to move."
+                    },
+                    {
+                      "key": "where",
+                      "value": "",
+                      "description": "Type of move.  Can be `before`, `after`, `top`, or `bottom`."
+                    },
+                    {
+                      "key": "dst",
+                      "value": "",
+                      "description": "Destination object for relative moves.  *Required* when `where` is `before` or `after`."
+                    }
+                  ]
+                },
+                "description": "Use `move` to move the location of an existing configuration object."
+              },
+              "response": [
+                {
+                  "id": "9031842b-68e9-4ed5-b7b9-28230e95e930",
+                  "name": "Move a security rule",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [],
+                    "url": {
+                      "raw": "https://{{host}}/api/?type=config&action=move&xpath=/config/devices/entry[@name='localhost.localdomain']/vsys/entry[@name='vsys1']/rulebase/security/rules/entry[@name='Outbound Access']&where=after&dst=IT DNS Services",
+                      "protocol": "https",
+                      "host": [
+                        "{{host}}"
+                      ],
+                      "path": [
+                        "api",
+                        ""
+                      ],
+                      "query": [
+                        {
+                          "key": "type",
+                          "value": "config"
+                        },
+                        {
+                          "key": "action",
+                          "value": "move"
+                        },
+                        {
+                          "key": "xpath",
+                          "value": "/config/devices/entry[@name='localhost.localdomain']/vsys/entry[@name='vsys1']/rulebase/security/rules/entry[@name='Outbound Access']",
+                          "description": "Location of the object to move."
+                        },
+                        {
+                          "key": "where",
+                          "value": "after",
+                          "description": "Type of move.  Can be `before`, `after`, `top`, or `bottom`."
+                        },
+                        {
+                          "key": "dst",
+                          "value": "IT DNS Services",
+                          "description": "Destination object for relative moves.  *Required* when `where` is `before` or `after`."
+                        }
+                      ]
+                    }
+                  },
+                  "_postman_previewlanguage": "xml",
+                  "header": null,
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "<response status=\"success\" code=\"20\">\n    <msg>command succeeded</msg>\n</response>"
+                }
+              ]
+            },
+            {
+              "name": "Override configuration",
+              "_postman_id": "259fe371-b2c8-4f49-b89a-c75d6cfc4507",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "https://{{host}}/api/?type=config&action=override&xpath=&element=",
+                  "protocol": "https",
+                  "host": [
+                    "{{host}}"
+                  ],
+                  "path": [
+                    "api",
+                    ""
+                  ],
+                  "query": [
+                    {
+                      "key": "type",
+                      "value": "config"
+                    },
+                    {
+                      "key": "action",
+                      "value": "override"
+                    },
+                    {
+                      "key": "xpath",
+                      "value": "",
+                      "description": "Location of object to override."
+                    },
+                    {
+                      "key": "element",
+                      "value": "",
+                      "description": "Contents of element to write."
+                    }
+                  ]
+                },
+                "description": "Use `override` to override a setting that was pushed to a firewall from a Panorama template."
+              },
+              "response": [
+                {
+                  "id": "7e5bb4d8-7e0a-4841-a9dd-42aa737d4bbf",
+                  "name": "Override SNMP trap profile",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [],
+                    "url": {
+                      "raw": "https://{{host}}/api/?type=config&action=override&xpath=/config/shared/log-settings/snmptrap&element=<entry name=\"snmp\" src=\"tpl\"><version src=\"tpl\"><v2c src=\"tpl\"><server src=\"tpl\"><entry name=\"test\" src=\"tpl\"><manager src=\"tpl\">2.2.2.2</manager><community src=\"tpl\">test</community></entry></server></v2c></version></entry>",
+                      "protocol": "https",
+                      "host": [
+                        "{{host}}"
+                      ],
+                      "path": [
+                        "api",
+                        ""
+                      ],
+                      "query": [
+                        {
+                          "key": "type",
+                          "value": "config"
+                        },
+                        {
+                          "key": "action",
+                          "value": "override"
+                        },
+                        {
+                          "key": "xpath",
+                          "value": "/config/shared/log-settings/snmptrap",
+                          "description": "Location of object to override."
+                        },
+                        {
+                          "key": "element",
+                          "value": "<entry name=\"snmp\" src=\"tpl\"><version src=\"tpl\"><v2c src=\"tpl\"><server src=\"tpl\"><entry name=\"test\" src=\"tpl\"><manager src=\"tpl\">2.2.2.2</manager><community src=\"tpl\">test</community></entry></server></v2c></version></entry>",
+                          "description": "Contents of element to write."
+                        }
+                      ]
+                    }
+                  },
+                  "_postman_previewlanguage": "xml",
+                  "header": null,
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "<response status=\"success\" code=\"20\">\n    <msg>command succeeded</msg>\n</response>"
+                }
+              ]
+            },
+            {
+              "name": "Multi-move configuration",
+              "_postman_id": "7937733a-24ca-401e-abca-b3fef8011046",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "https://{{host}}/api/?type=config&action=multi-move&xpath=&element=",
+                  "protocol": "https",
+                  "host": [
+                    "{{host}}"
+                  ],
+                  "path": [
+                    "api",
+                    ""
+                  ],
+                  "query": [
+                    {
+                      "key": "type",
+                      "value": "config"
+                    },
+                    {
+                      "key": "action",
+                      "value": "multi-move"
+                    },
+                    {
+                      "key": "xpath",
+                      "value": "",
+                      "description": "Location of the objects to move."
+                    },
+                    {
+                      "key": "element",
+                      "value": "",
+                      "description": "Element containing source and objects to move."
+                    }
+                  ]
+                },
+                "description": "Use the `multi-move` action to move addresses across device groups and virtual systems.  Templates do not support the multi-move capability."
+              },
+              "response": [
+                {
+                  "id": "11da7547-7ce3-4311-9980-88711ccd0024",
+                  "name": "Move addresses between device groups",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [],
+                    "url": {
+                      "raw": "https://{{host}}/api/?type=config&action=multi-move&xpath=/config/devices/entry[@name='localhost.localdomain']/device-group/entry[@name='norcal']/address&element=<selected-list><source xpath=\"/config/devices/entry[@name='localhost.localdomain']/device-group/entry[@name='socal']/address\"><member>addr1</member><member>addr2</member></source></selected-list><all-errors>no</all-errors>",
+                      "protocol": "https",
+                      "host": [
+                        "{{host}}"
+                      ],
+                      "path": [
+                        "api",
+                        ""
+                      ],
+                      "query": [
+                        {
+                          "key": "type",
+                          "value": "config"
+                        },
+                        {
+                          "key": "action",
+                          "value": "multi-move"
+                        },
+                        {
+                          "key": "xpath",
+                          "value": "/config/devices/entry[@name='localhost.localdomain']/device-group/entry[@name='norcal']/address",
+                          "description": "Location of the objects to move."
+                        },
+                        {
+                          "key": "element",
+                          "value": "<selected-list><source xpath=\"/config/devices/entry[@name='localhost.localdomain']/device-group/entry[@name='socal']/address\"><member>addr1</member><member>addr2</member></source></selected-list><all-errors>no</all-errors>",
+                          "description": "Element containing source and objects to move."
+                        }
+                      ]
+                    }
+                  },
+                  "_postman_previewlanguage": "xml",
+                  "header": null,
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "<response status=\"success\" from=\"/config/devices/entry[@name='localhost.localdomain']/device-group/entry[@name='socal']/address\" to=\"/config/devices/entry[@name='localhost.localdomain']/device-group/entry[@name='norcal']/address\">\n    <member>addr1</member>\n    <member>addr2</member>\n</response>"
+                }
+              ]
+            },
+            {
+              "name": "Multi-clone configuration",
+              "_postman_id": "9ae16173-9d99-4f6e-b080-13f1ba9ef7eb",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "https://{{host}}/api/?type=config&action=multi-clone&xpath=&element=",
+                  "protocol": "https",
+                  "host": [
+                    "{{host}}"
+                  ],
+                  "path": [
+                    "api",
+                    ""
+                  ],
+                  "query": [
+                    {
+                      "key": "type",
+                      "value": "config"
+                    },
+                    {
+                      "key": "action",
+                      "value": "multi-clone"
+                    },
+                    {
+                      "key": "xpath",
+                      "value": "",
+                      "description": "Location of the objects to clone."
+                    },
+                    {
+                      "key": "element",
+                      "value": "",
+                      "description": "Element containing source and objects to clone."
+                    }
+                  ]
+                },
+                "description": "Use the `multi-clone` action to clone addresses across device groups and virtual systems.  Templates do not support the multi-clone capability."
+              },
+              "response": [
+                {
+                  "id": "7aac84f0-b1ef-4e05-b2bb-c0ee3c2b2ba7",
+                  "name": "Clone addresses between device groups",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [],
+                    "url": {
+                      "raw": "https://{{host}}/api/?type=config&action=multi-clone&xpath=/config/devices/entry[@name='localhost.localdomain']/device-group/entry[@name='norcal']/address&element=<selected-list><source xpath=\"/config/devices/entry[@name='localhost.localdomain']/device-group/entry[@name='socal']/address\"><member>addr1</member><member>addr2</member></source></selected-list><all-errors>no</all-errors>",
+                      "protocol": "https",
+                      "host": [
+                        "{{host}}"
+                      ],
+                      "path": [
+                        "api",
+                        ""
+                      ],
+                      "query": [
+                        {
+                          "key": "type",
+                          "value": "config"
+                        },
+                        {
+                          "key": "action",
+                          "value": "multi-clone"
+                        },
+                        {
+                          "key": "xpath",
+                          "value": "/config/devices/entry[@name='localhost.localdomain']/device-group/entry[@name='norcal']/address",
+                          "description": "Location of the objects to clone."
+                        },
+                        {
+                          "key": "element",
+                          "value": "<selected-list><source xpath=\"/config/devices/entry[@name='localhost.localdomain']/device-group/entry[@name='socal']/address\"><member>addr1</member><member>addr2</member></source></selected-list><all-errors>no</all-errors>",
+                          "description": "Element containing source and objects to clone."
+                        }
+                      ]
+                    }
+                  },
+                  "_postman_previewlanguage": "xml",
+                  "header": null,
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "<response status=\"success\" to=\"/config/devices/entry[@name='localhost.localdomain']/device-group/entry[@name='norcal']/address\">\n    <member>addr1-1</member>\n    <member>addr2-1</member>\n</response>"
+                }
+              ]
+            },
+            {
+              "name": "Find possible values for XPath",
+              "_postman_id": "69f05193-bac5-4d86-8328-fec34b4f64be",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "https://{{host}}/api?type=config&action=complete&xpath=",
+                  "protocol": "https",
+                  "host": [
+                    "{{host}}"
+                  ],
+                  "path": [
+                    "api"
+                  ],
+                  "query": [
+                    {
+                      "key": "type",
+                      "value": "config"
+                    },
+                    {
+                      "key": "action",
+                      "value": "complete"
+                    },
+                    {
+                      "key": "xpath",
+                      "value": "",
+                      "description": "XPath to retrieve values for."
+                    }
+                  ]
+                },
+                "description": "Use `complete` action can be used to see possible values that are available at an XPath node."
+              },
+              "response": [
+                {
+                  "id": "4f412701-03a0-4da0-839a-5be6071ff380",
+                  "name": "Get possible values for virtual systems",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [],
+                    "url": {
+                      "raw": "https://{{host}}/api/?type=config&action=complete&xpath=/config/devices/entry[@name='localhost.localdomain']/vsys",
+                      "protocol": "https",
+                      "host": [
+                        "{{host}}"
+                      ],
+                      "path": [
+                        "api",
+                        ""
+                      ],
+                      "query": [
+                        {
+                          "key": "type",
+                          "value": "config"
+                        },
+                        {
+                          "key": "action",
+                          "value": "complete"
+                        },
+                        {
+                          "key": "xpath",
+                          "value": "/config/devices/entry[@name='localhost.localdomain']/vsys",
+                          "description": "XPath to retrieve values for."
+                        }
+                      ]
+                    }
+                  },
+                  "_postman_previewlanguage": "xml",
+                  "header": null,
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "<response status=\"success\" code=\"19\">\n    <completions>\n        <completion value=\"vsys1\" vxpath=\"/config/devices/entry[@name='localhost.localdomain']/vsys/entry[@name='vsys1']\" current=\"yes\"/>\n    </completions>\n</response>"
+                }
+              ]
             }
           ],
           "_postman_id": "a69adbc2-0b8b-47f1-ab6f-118ce8aa1a63",
           "_postman_isSubFolder": true
         },
         {
-          "name": "Commit Configuration",
+          "name": "Commits",
           "item": [
             {
-              "name": "Commit",
-              "item": [
+              "name": "Commit All",
+              "_postman_id": "b7d47429-8c75-4bb7-a473-01d4582fc8bb",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "https://{{host}}/api/?type=commit&action=all&cmd=<commit-all></commit-all>",
+                  "protocol": "https",
+                  "host": [
+                    "{{host}}"
+                  ],
+                  "path": [
+                    "api",
+                    ""
+                  ],
+                  "query": [
+                    {
+                      "key": "type",
+                      "value": "commit"
+                    },
+                    {
+                      "key": "action",
+                      "value": "all"
+                    },
+                    {
+                      "key": "cmd",
+                      "value": "<commit-all></commit-all>",
+                      "description": "Commit All command."
+                    }
+                  ]
+                },
+                "description": "The `commit-all` to push and validate policy from Panorama to managed firewalls.\n\nUse the [API browser](https://docs.paloaltonetworks.com/pan-os/10-0/pan-os-panorama-api/get-started-with-the-pan-os-xml-api/explore-the-api/use-the-api-browser.html) to find the different parameters that can be passed in `cmd`.\n\nThe results of a commit can be found using the `show job id X` operational command."
+              },
+              "response": [
                 {
-                  "name": "Commit",
-                  "_postman_id": "c77c788b-b3d5-4a30-9b39-fcaddfe8006a",
-                  "protocolProfileBehavior": {
-                    "disableBodyPruning": true
+                  "id": "7bb57066-8dba-42a2-a56c-2f761f0b8bc5",
+                  "name": "Virtual system (vsys) commit",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [],
+                    "url": {
+                      "raw": "https://{{host}}/api/?type=commit&action=all&cmd=<commit-all><shared-policy><device-group><entry name='norcal'><devices><entry name='015351000039218'><vsys><member>vsys1</member></vsys></entry></devices></entry></device-group></shared-policy></commit-all>",
+                      "protocol": "https",
+                      "host": [
+                        "{{host}}"
+                      ],
+                      "path": [
+                        "api",
+                        ""
+                      ],
+                      "query": [
+                        {
+                          "key": "type",
+                          "value": "commit"
+                        },
+                        {
+                          "key": "action",
+                          "value": "all"
+                        },
+                        {
+                          "key": "cmd",
+                          "value": "<commit-all><shared-policy><device-group><entry name='norcal'><devices><entry name='015351000039218'><vsys><member>vsys1</member></vsys></entry></devices></entry></device-group></shared-policy></commit-all>",
+                          "description": "Commit All command."
+                        }
+                      ]
+                    }
                   },
-                  "request": {
+                  "_postman_previewlanguage": "xml",
+                  "header": null,
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "<response status=\"success\" code=\"19\">\n    <result>\n        <msg>\n            <line>Job enqueued with jobid 297</line>\n        </msg>\n        <job>297</job>\n    </result>\n</response>"
+                },
+                {
+                  "id": "9ad0bb83-f59f-4a0d-a1f1-f20669bb29a5",
+                  "name": "Specific device group commit without including template changes",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [],
+                    "url": {
+                      "raw": "https://{{host}}/api/?type=commit&action=all&cmd=<commit-all><shared-policy><include-template>no</include-template><device-group><entry name=\"norcal\"/></device-group></shared-policy></commit-all>",
+                      "protocol": "https",
+                      "host": [
+                        "{{host}}"
+                      ],
+                      "path": [
+                        "api",
+                        ""
+                      ],
+                      "query": [
+                        {
+                          "key": "type",
+                          "value": "commit"
+                        },
+                        {
+                          "key": "action",
+                          "value": "all"
+                        },
+                        {
+                          "key": "cmd",
+                          "value": "<commit-all><shared-policy><include-template>no</include-template><device-group><entry name=\"norcal\"/></device-group></shared-policy></commit-all>",
+                          "description": "Commit All command."
+                        }
+                      ]
+                    }
+                  },
+                  "_postman_previewlanguage": "xml",
+                  "header": null,
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "<response status=\"success\" code=\"19\">\n    <result>\n        <msg>\n            <line>Job enqueued with jobid 292</line>\n        </msg>\n        <job>292</job>\n    </result>\n</response>"
+                },
+                {
+                  "id": "a00b792e-9cb6-4054-9a1c-ed4f80c752be",
+                  "name": "Specific firewall commit",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [],
+                    "url": {
+                      "raw": "https://{{host}}/api/?type=commit&action=all&cmd=<commit-all><shared-policy><device-group><entry name='norcal'><devices><entry name='015351000039218'><vsys><member>vsys1</member></vsys></entry></devices></entry></device-group></shared-policy></commit-all>",
+                      "protocol": "https",
+                      "host": [
+                        "{{host}}"
+                      ],
+                      "path": [
+                        "api",
+                        ""
+                      ],
+                      "query": [
+                        {
+                          "key": "type",
+                          "value": "commit"
+                        },
+                        {
+                          "key": "action",
+                          "value": "all"
+                        },
+                        {
+                          "key": "cmd",
+                          "value": "<commit-all><shared-policy><device-group><entry name='norcal'><devices><entry name='015351000039218'><vsys><member>vsys1</member></vsys></entry></devices></entry></device-group></shared-policy></commit-all>",
+                          "description": "Commit All command."
+                        }
+                      ]
+                    }
+                  },
+                  "_postman_previewlanguage": "xml",
+                  "header": null,
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "<response status=\"success\" code=\"19\">\n    <result>\n        <msg>\n            <line>Job enqueued with jobid 297</line>\n        </msg>\n        <job>297</job>\n    </result>\n</response>"
+                },
+                {
+                  "id": "ca0da6dc-bebd-4455-a9fe-3126b9edd0c3",
+                  "name": "Pre-commit policy validation",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [],
+                    "url": {
+                      "raw": "https://{{host}}/api/?type=commit&action=all&cmd=<commit-all><shared-policy><validate-only>yes</validate-only><device-group><entry name='norcal'/></device-group></shared-policy></commit-all>",
+                      "protocol": "https",
+                      "host": [
+                        "{{host}}"
+                      ],
+                      "path": [
+                        "api",
+                        ""
+                      ],
+                      "query": [
+                        {
+                          "key": "type",
+                          "value": "commit"
+                        },
+                        {
+                          "key": "action",
+                          "value": "all"
+                        },
+                        {
+                          "key": "cmd",
+                          "value": "<commit-all><shared-policy><validate-only>yes</validate-only><device-group><entry name='norcal'/></device-group></shared-policy></commit-all>",
+                          "description": "Commit All command."
+                        }
+                      ]
+                    }
+                  },
+                  "_postman_previewlanguage": "xml",
+                  "header": null,
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "<response status=\"success\" code=\"19\">\n    <result>\n        <msg>\n            <line>Job enqueued with jobid 290</line>\n        </msg>\n        <job>290</job>\n    </result>\n</response>"
+                },
+                {
+                  "id": "e57b2a22-b894-47b8-8909-38cd5df5128f",
+                  "name": "Specific device group commit",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [],
+                    "url": {
+                      "raw": "https://{{host}}/api/?type=commit&action=all&cmd=<commit-all><shared-policy><device-group><entry name=\"norcal\"/></device-group></shared-policy></commit-all>",
+                      "protocol": "https",
+                      "host": [
+                        "{{host}}"
+                      ],
+                      "path": [
+                        "api",
+                        ""
+                      ],
+                      "query": [
+                        {
+                          "key": "type",
+                          "value": "commit"
+                        },
+                        {
+                          "key": "action",
+                          "value": "all"
+                        },
+                        {
+                          "key": "cmd",
+                          "value": "<commit-all><shared-policy><device-group><entry name=\"norcal\"/></device-group></shared-policy></commit-all>",
+                          "description": "Commit All command."
+                        }
+                      ]
+                    }
+                  },
+                  "_postman_previewlanguage": "xml",
+                  "header": null,
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "<response status=\"success\" code=\"19\">\n    <result>\n        <msg>\n            <line>Job enqueued with jobid 291</line>\n        </msg>\n        <job>291</job>\n    </result>\n</response>"
+                }
+              ]
+            },
+            {
+              "name": "Commit",
+              "_postman_id": "c77c788b-b3d5-4a30-9b39-fcaddfe8006a",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "https://{{host}}/api/?type=commit&action=partial&cmd=<commit></commit>",
+                  "protocol": "https",
+                  "host": [
+                    "{{host}}"
+                  ],
+                  "path": [
+                    "api",
+                    ""
+                  ],
+                  "query": [
+                    {
+                      "key": "type",
+                      "value": "commit"
+                    },
+                    {
+                      "key": "action",
+                      "value": "partial",
+                      "description": "*Optional.*  Only commit a portion of the configuration."
+                    },
+                    {
+                      "key": "cmd",
+                      "value": "<commit></commit>",
+                      "description": "Commit command."
+                    }
+                  ]
+                },
+                "description": "The `commit` type is used to commit a candidate configuration to a firewall.\n\nUse the [API browser](https://docs.paloaltonetworks.com/pan-os/10-0/pan-os-panorama-api/get-started-with-the-pan-os-xml-api/explore-the-api/use-the-api-browser.html) to find the different parameters that can be passed in `cmd`.\n\nThe results of a commit can be found using the `show job id X` operational command."
+              },
+              "response": [
+                {
+                  "id": "aee30fc0-feb0-4e02-88b2-1b4ad54ac058",
+                  "name": "Commit",
+                  "originalRequest": {
                     "method": "GET",
                     "header": [],
                     "url": {
@@ -2541,232 +2218,73 @@
                           "value": "<commit></commit>"
                         }
                       ]
-                    },
-                    "description": "Commit candidate changes to the firewall."
-                  },
-                  "response": [
-                    {
-                      "id": "aee30fc0-feb0-4e02-88b2-1b4ad54ac058",
-                      "name": "Commit",
-                      "originalRequest": {
-                        "method": "GET",
-                        "header": [],
-                        "url": {
-                          "raw": "https://{{host}}/api/?type=commit&cmd=<commit></commit>",
-                          "protocol": "https",
-                          "host": [
-                            "{{host}}"
-                          ],
-                          "path": [
-                            "api",
-                            ""
-                          ],
-                          "query": [
-                            {
-                              "key": "type",
-                              "value": "commit"
-                            },
-                            {
-                              "key": "cmd",
-                              "value": "<commit></commit>"
-                            }
-                          ]
-                        }
-                      },
-                      "status": "OK",
-                      "code": 200,
-                      "_postman_previewlanguage": "xml",
-                      "header": [
-                        {
-                          "key": "Date",
-                          "value": "Tue, 24 Nov 2020 15:46:56 GMT"
-                        },
-                        {
-                          "key": "Content-Type",
-                          "value": "application/xml; charset=UTF-8"
-                        },
-                        {
-                          "key": "Content-Length",
-                          "value": "133"
-                        },
-                        {
-                          "key": "Connection",
-                          "value": "keep-alive"
-                        },
-                        {
-                          "key": "X-FRAME-OPTIONS",
-                          "value": "SAMEORIGIN"
-                        },
-                        {
-                          "key": "X-XSS-Protection",
-                          "value": "1; mode=block"
-                        },
-                        {
-                          "key": "X-Content-Type-Options",
-                          "value": "nosniff"
-                        },
-                        {
-                          "key": "Content-Security-Policy",
-                          "value": "default-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:;"
-                        },
-                        {
-                          "key": "Strict-Transport-Security",
-                          "value": "max-age=31536000"
-                        },
-                        {
-                          "key": "Cache-Control",
-                          "value": "no-store, no-cache, must-revalidate, post-check=0, pre-check=0"
-                        },
-                        {
-                          "key": "Expires",
-                          "value": "Thu, 19 Nov 1981 08:52:00 GMT"
-                        },
-                        {
-                          "key": "Pragma",
-                          "value": "no-cache"
-                        },
-                        {
-                          "key": "Allow",
-                          "value": "GET, HEAD, POST, PUT, DELETE, OPTIONS"
-                        }
-                      ],
-                      "cookie": [],
-                      "responseTime": null,
-                      "body": "<response status=\"success\" code=\"19\">\n    <result>\n        <msg>\n            <line>Commit job enqueued with jobid 4</line>\n        </msg>\n        <job>4</job>\n    </result>\n</response>"
                     }
-                  ]
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "xml",
+                  "header": [
+                    {
+                      "key": "Date",
+                      "value": "Tue, 24 Nov 2020 15:46:56 GMT"
+                    },
+                    {
+                      "key": "Content-Type",
+                      "value": "application/xml; charset=UTF-8"
+                    },
+                    {
+                      "key": "Content-Length",
+                      "value": "133"
+                    },
+                    {
+                      "key": "Connection",
+                      "value": "keep-alive"
+                    },
+                    {
+                      "key": "X-FRAME-OPTIONS",
+                      "value": "SAMEORIGIN"
+                    },
+                    {
+                      "key": "X-XSS-Protection",
+                      "value": "1; mode=block"
+                    },
+                    {
+                      "key": "X-Content-Type-Options",
+                      "value": "nosniff"
+                    },
+                    {
+                      "key": "Content-Security-Policy",
+                      "value": "default-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:;"
+                    },
+                    {
+                      "key": "Strict-Transport-Security",
+                      "value": "max-age=31536000"
+                    },
+                    {
+                      "key": "Cache-Control",
+                      "value": "no-store, no-cache, must-revalidate, post-check=0, pre-check=0"
+                    },
+                    {
+                      "key": "Expires",
+                      "value": "Thu, 19 Nov 1981 08:52:00 GMT"
+                    },
+                    {
+                      "key": "Pragma",
+                      "value": "no-cache"
+                    },
+                    {
+                      "key": "Allow",
+                      "value": "GET, HEAD, POST, PUT, DELETE, OPTIONS"
+                    }
+                  ],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "<response status=\"success\" code=\"19\">\n    <result>\n        <msg>\n            <line>Commit job enqueued with jobid 4</line>\n        </msg>\n        <job>4</job>\n    </result>\n</response>"
                 },
                 {
-                  "name": "Force commit",
-                  "_postman_id": "e98e822d-d24b-4afa-8dca-400d57b734b8",
-                  "protocolProfileBehavior": {
-                    "disableBodyPruning": true
-                  },
-                  "request": {
-                    "method": "GET",
-                    "header": [],
-                    "url": {
-                      "raw": "https://{{host}}/api/?type=commit&cmd=<commit><force></force></commit>",
-                      "protocol": "https",
-                      "host": [
-                        "{{host}}"
-                      ],
-                      "path": [
-                        "api",
-                        ""
-                      ],
-                      "query": [
-                        {
-                          "key": "type",
-                          "value": "commit"
-                        },
-                        {
-                          "key": "cmd",
-                          "value": "<commit><force></force></commit>"
-                        }
-                      ]
-                    },
-                    "description": "Commit candidate changes to the firewall (force)."
-                  },
-                  "response": [
-                    {
-                      "id": "523f841e-5694-4c47-af9f-f51e50ab6f16",
-                      "name": "Force commit",
-                      "originalRequest": {
-                        "method": "GET",
-                        "header": [],
-                        "url": {
-                          "raw": "https://{{host}}/api/?type=commit&cmd=<commit><force></force></commit>",
-                          "protocol": "https",
-                          "host": [
-                            "{{host}}"
-                          ],
-                          "path": [
-                            "api",
-                            ""
-                          ],
-                          "query": [
-                            {
-                              "key": "type",
-                              "value": "commit"
-                            },
-                            {
-                              "key": "cmd",
-                              "value": "<commit><force></force></commit>"
-                            }
-                          ]
-                        }
-                      },
-                      "status": "OK",
-                      "code": 200,
-                      "_postman_previewlanguage": "xml",
-                      "header": [
-                        {
-                          "key": "Date",
-                          "value": "Tue, 24 Nov 2020 15:53:04 GMT"
-                        },
-                        {
-                          "key": "Content-Type",
-                          "value": "application/xml; charset=UTF-8"
-                        },
-                        {
-                          "key": "Content-Length",
-                          "value": "133"
-                        },
-                        {
-                          "key": "Connection",
-                          "value": "keep-alive"
-                        },
-                        {
-                          "key": "X-FRAME-OPTIONS",
-                          "value": "SAMEORIGIN"
-                        },
-                        {
-                          "key": "X-XSS-Protection",
-                          "value": "1; mode=block"
-                        },
-                        {
-                          "key": "X-Content-Type-Options",
-                          "value": "nosniff"
-                        },
-                        {
-                          "key": "Content-Security-Policy",
-                          "value": "default-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:;"
-                        },
-                        {
-                          "key": "Strict-Transport-Security",
-                          "value": "max-age=31536000"
-                        },
-                        {
-                          "key": "Cache-Control",
-                          "value": "no-store, no-cache, must-revalidate, post-check=0, pre-check=0"
-                        },
-                        {
-                          "key": "Expires",
-                          "value": "Thu, 19 Nov 1981 08:52:00 GMT"
-                        },
-                        {
-                          "key": "Pragma",
-                          "value": "no-cache"
-                        },
-                        {
-                          "key": "Allow",
-                          "value": "GET, HEAD, POST, PUT, DELETE, OPTIONS"
-                        }
-                      ],
-                      "cookie": [],
-                      "responseTime": null,
-                      "body": "<response status=\"success\" code=\"19\">\n    <result>\n        <msg>\n            <line>Commit job enqueued with jobid 7</line>\n        </msg>\n        <job>7</job>\n    </result>\n</response>"
-                    }
-                  ]
-                },
-                {
+                  "id": "1f70a6a2-69c4-44c7-a9bc-ec95055f3245",
                   "name": "Partial commit while excluding shared objects and device and network configuration",
-                  "_postman_id": "0c6f2c1c-1118-4ca8-acc8-cf212515babe",
-                  "protocolProfileBehavior": {
-                    "disableBodyPruning": true
-                  },
-                  "request": {
+                  "originalRequest": {
                     "method": "GET",
                     "header": [],
                     "url": {
@@ -2793,112 +2311,52 @@
                           "value": "<commit><partial><device-and-network>excluded</device-and-network><shared-object>excluded</shared-object></partial></commit>"
                         }
                       ]
-                    },
-                    "description": "Only commit changes local to the firewall, not from Panorama."
-                  },
-                  "response": [
-                    {
-                      "id": "bf049293-ee56-4753-a639-328885feb8c9",
-                      "name": "Partial commit while excluding shared objects and device and network configuration",
-                      "originalRequest": {
-                        "method": "GET",
-                        "header": [],
-                        "url": {
-                          "raw": "https://{{host}}/api/?type=commit&action=partial&cmd=<commit><partial><device-and-network>excluded</device-and-network><shared-object>excluded</shared-object></partial></commit>",
-                          "protocol": "https",
-                          "host": [
-                            "{{host}}"
-                          ],
-                          "path": [
-                            "api",
-                            ""
-                          ],
-                          "query": [
-                            {
-                              "key": "type",
-                              "value": "commit"
-                            },
-                            {
-                              "key": "action",
-                              "value": "partial"
-                            },
-                            {
-                              "key": "cmd",
-                              "value": "<commit><partial><device-and-network>excluded</device-and-network><shared-object>excluded</shared-object></partial></commit>"
-                            }
-                          ]
-                        }
-                      },
-                      "status": "OK",
-                      "code": 200,
-                      "_postman_previewlanguage": "xml",
-                      "header": [
-                        {
-                          "key": "Date",
-                          "value": "Tue, 24 Nov 2020 16:05:36 GMT"
-                        },
-                        {
-                          "key": "Content-Type",
-                          "value": "application/xml; charset=UTF-8"
-                        },
-                        {
-                          "key": "Content-Length",
-                          "value": "133"
-                        },
-                        {
-                          "key": "Connection",
-                          "value": "keep-alive"
-                        },
-                        {
-                          "key": "X-FRAME-OPTIONS",
-                          "value": "SAMEORIGIN"
-                        },
-                        {
-                          "key": "X-XSS-Protection",
-                          "value": "1; mode=block"
-                        },
-                        {
-                          "key": "X-Content-Type-Options",
-                          "value": "nosniff"
-                        },
-                        {
-                          "key": "Content-Security-Policy",
-                          "value": "default-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:;"
-                        },
-                        {
-                          "key": "Strict-Transport-Security",
-                          "value": "max-age=31536000"
-                        },
-                        {
-                          "key": "Cache-Control",
-                          "value": "no-store, no-cache, must-revalidate, post-check=0, pre-check=0"
-                        },
-                        {
-                          "key": "Expires",
-                          "value": "Thu, 19 Nov 1981 08:52:00 GMT"
-                        },
-                        {
-                          "key": "Pragma",
-                          "value": "no-cache"
-                        },
-                        {
-                          "key": "Allow",
-                          "value": "GET, HEAD, POST, PUT, DELETE, OPTIONS"
-                        }
-                      ],
-                      "cookie": [],
-                      "responseTime": null,
-                      "body": "<response status=\"success\" code=\"19\">\n    <result>\n        <msg>\n            <line>Commit job enqueued with jobid 9</line>\n        </msg>\n        <job>9</job>\n    </result>\n</response>"
                     }
-                  ]
+                  },
+                  "_postman_previewlanguage": "xml",
+                  "header": null,
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "<response status=\"success\" code=\"19\">\n    <result>\n        <msg>\n            <line>Commit job enqueued with jobid 9</line>\n        </msg>\n        <job>9</job>\n    </result>\n</response>"
                 },
                 {
-                  "name": "Partial commit admin-level changes",
-                  "_postman_id": "7af1971f-52e9-4250-a0ed-db759a78eae4",
-                  "protocolProfileBehavior": {
-                    "disableBodyPruning": true
+                  "id": "5b205091-8837-4c6b-9ffa-c14f5c4389ba",
+                  "name": "Force commit",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [],
+                    "url": {
+                      "raw": "https://{{host}}/api/?type=commit&cmd=<commit><force></force></commit>",
+                      "protocol": "https",
+                      "host": [
+                        "{{host}}"
+                      ],
+                      "path": [
+                        "api",
+                        ""
+                      ],
+                      "query": [
+                        {
+                          "key": "type",
+                          "value": "commit"
+                        },
+                        {
+                          "key": "cmd",
+                          "value": "<commit><force></force></commit>"
+                        }
+                      ]
+                    }
                   },
-                  "request": {
+                  "_postman_previewlanguage": "xml",
+                  "header": null,
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "<response status=\"success\" code=\"19\">\n    <result>\n        <msg>\n            <line>Commit job enqueued with jobid 7</line>\n        </msg>\n        <job>7</job>\n    </result>\n</response>"
+                },
+                {
+                  "id": "63185b66-cf90-4fe8-a073-6936f192d6c2",
+                  "name": "Partial commit of admin level changes",
+                  "originalRequest": {
                     "method": "GET",
                     "header": [],
                     "url": {
@@ -2918,656 +2376,64 @@
                         },
                         {
                           "key": "action",
-                          "value": "partial"
+                          "value": "partial",
+                          "description": "*Optional.*  Only commit a portion of the configuration."
                         },
                         {
                           "key": "cmd",
-                          "value": "<commit><partial><admin><member>admin</member></admin></partial></commit>"
+                          "value": "<commit><partial><admin><member>admin</member></admin></partial></commit>",
+                          "description": "Commit command."
                         }
                       ]
-                    },
-                    "description": "Commit changes made only by the administrator `admin`."
-                  },
-                  "response": [
-                    {
-                      "id": "301533f7-5f08-45b2-9122-f82ceea480cd",
-                      "name": "Partial commit admin-level changes",
-                      "originalRequest": {
-                        "method": "GET",
-                        "header": [],
-                        "url": {
-                          "raw": "https://{{host}}/api/?type=commit&action=partial&cmd=<commit><partial><admin><member>admin</member></admin></partial></commit>",
-                          "protocol": "https",
-                          "host": [
-                            "{{host}}"
-                          ],
-                          "path": [
-                            "api",
-                            ""
-                          ],
-                          "query": [
-                            {
-                              "key": "type",
-                              "value": "commit"
-                            },
-                            {
-                              "key": "action",
-                              "value": "partial"
-                            },
-                            {
-                              "key": "cmd",
-                              "value": "<commit><partial><admin><member>admin</member></admin></partial></commit>"
-                            }
-                          ]
-                        }
-                      },
-                      "status": "OK",
-                      "code": 200,
-                      "_postman_previewlanguage": "xml",
-                      "header": [
-                        {
-                          "key": "Date",
-                          "value": "Tue, 24 Nov 2020 16:08:06 GMT"
-                        },
-                        {
-                          "key": "Content-Type",
-                          "value": "application/xml; charset=UTF-8"
-                        },
-                        {
-                          "key": "Content-Length",
-                          "value": "135"
-                        },
-                        {
-                          "key": "Connection",
-                          "value": "keep-alive"
-                        },
-                        {
-                          "key": "X-FRAME-OPTIONS",
-                          "value": "SAMEORIGIN"
-                        },
-                        {
-                          "key": "X-XSS-Protection",
-                          "value": "1; mode=block"
-                        },
-                        {
-                          "key": "X-Content-Type-Options",
-                          "value": "nosniff"
-                        },
-                        {
-                          "key": "Content-Security-Policy",
-                          "value": "default-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:;"
-                        },
-                        {
-                          "key": "Strict-Transport-Security",
-                          "value": "max-age=31536000"
-                        },
-                        {
-                          "key": "Cache-Control",
-                          "value": "no-store, no-cache, must-revalidate, post-check=0, pre-check=0"
-                        },
-                        {
-                          "key": "Expires",
-                          "value": "Thu, 19 Nov 1981 08:52:00 GMT"
-                        },
-                        {
-                          "key": "Pragma",
-                          "value": "no-cache"
-                        },
-                        {
-                          "key": "Allow",
-                          "value": "GET, HEAD, POST, PUT, DELETE, OPTIONS"
-                        }
-                      ],
-                      "cookie": [],
-                      "responseTime": null,
-                      "body": "<response status=\"success\" code=\"19\">\n    <result>\n        <msg>\n            <line>Commit job enqueued with jobid 10</line>\n        </msg>\n        <job>10</job>\n    </result>\n</response>"
                     }
-                  ]
+                  },
+                  "_postman_previewlanguage": "xml",
+                  "header": null,
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "<response status=\"success\" code=\"19\">\n    <result>\n        <msg>\n            <line>Commit job enqueued with jobid 10</line>\n        </msg>\n        <job>10</job>\n    </result>\n</response>"
+                },
+                {
+                  "id": "e84509e0-8ad1-4c24-8a9b-54dcb72c9e8b",
+                  "name": "Partial commit while excluding shared objects and network configuration",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [],
+                    "url": {
+                      "raw": "https://{{host}}/api/?type=commit&action=partial&cmd=<commit><partial><device-and-network>excluded</device-and-network><shared-object>excluded</shared-object></partial></commit>",
+                      "protocol": "https",
+                      "host": [
+                        "{{host}}"
+                      ],
+                      "path": [
+                        "api",
+                        ""
+                      ],
+                      "query": [
+                        {
+                          "key": "type",
+                          "value": "commit"
+                        },
+                        {
+                          "key": "action",
+                          "value": "partial",
+                          "description": "*Optional.*  Only commit a portion of the configuration."
+                        },
+                        {
+                          "key": "cmd",
+                          "value": "<commit><partial><device-and-network>excluded</device-and-network><shared-object>excluded</shared-object></partial></commit>",
+                          "description": "Commit command."
+                        }
+                      ]
+                    }
+                  },
+                  "_postman_previewlanguage": "xml",
+                  "header": null,
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "<response status=\"success\" code=\"19\">\n    <result>\n        <msg>\n            <line>Commit job enqueued with jobid 9</line>\n        </msg>\n        <job>9</job>\n    </result>\n</response>"
                 }
-              ],
-              "_postman_id": "90d96624-7d94-4518-b6c1-989630447158",
-              "_postman_isSubFolder": true
-            },
-            {
-              "name": "Commit-All",
-              "item": [
-                {
-                  "name": "Pre-commit policy validation",
-                  "_postman_id": "e5472beb-6fe8-4329-83f8-01997cec8a41",
-                  "protocolProfileBehavior": {
-                    "disableBodyPruning": true
-                  },
-                  "request": {
-                    "method": "GET",
-                    "header": [],
-                    "url": {
-                      "raw": "https://{{host}}/api/?type=commit&action=all&cmd=<commit-all><shared-policy><validate-only>yes</validate-only><device-group><entry name='norcal'/></device-group></shared-policy></commit-all>",
-                      "protocol": "https",
-                      "host": [
-                        "{{host}}"
-                      ],
-                      "path": [
-                        "api",
-                        ""
-                      ],
-                      "query": [
-                        {
-                          "key": "type",
-                          "value": "commit"
-                        },
-                        {
-                          "key": "action",
-                          "value": "all"
-                        },
-                        {
-                          "key": "cmd",
-                          "value": "<commit-all><shared-policy><validate-only>yes</validate-only><device-group><entry name='norcal'/></device-group></shared-policy></commit-all>"
-                        }
-                      ]
-                    },
-                    "description": "Validate the shared policy from device group `norcal`."
-                  },
-                  "response": [
-                    {
-                      "id": "ae8557d9-50ab-4348-8507-587ed6dd0f5f",
-                      "name": "Pre-commit policy validation",
-                      "originalRequest": {
-                        "method": "GET",
-                        "header": [],
-                        "url": {
-                          "raw": "https://{{host}}/api/?type=commit&action=all&cmd=<commit-all><shared-policy><validate-only>yes</validate-only><device-group><entry name='norcal'/></device-group></shared-policy></commit-all>",
-                          "protocol": "https",
-                          "host": [
-                            "{{host}}"
-                          ],
-                          "path": [
-                            "api",
-                            ""
-                          ],
-                          "query": [
-                            {
-                              "key": "type",
-                              "value": "commit"
-                            },
-                            {
-                              "key": "action",
-                              "value": "all"
-                            },
-                            {
-                              "key": "cmd",
-                              "value": "<commit-all><shared-policy><validate-only>yes</validate-only><device-group><entry name='norcal'/></device-group></shared-policy></commit-all>"
-                            }
-                          ]
-                        }
-                      },
-                      "status": "OK",
-                      "code": 200,
-                      "_postman_previewlanguage": "xml",
-                      "header": [
-                        {
-                          "key": "Date",
-                          "value": "Tue, 24 Nov 2020 16:14:38 GMT"
-                        },
-                        {
-                          "key": "Content-Type",
-                          "value": "application/xml; charset=UTF-8"
-                        },
-                        {
-                          "key": "Content-Length",
-                          "value": "130"
-                        },
-                        {
-                          "key": "Connection",
-                          "value": "keep-alive"
-                        },
-                        {
-                          "key": "X-FRAME-OPTIONS",
-                          "value": "SAMEORIGIN"
-                        },
-                        {
-                          "key": "X-XSS-Protection",
-                          "value": "1; mode=block"
-                        },
-                        {
-                          "key": "X-Content-Type-Options",
-                          "value": "nosniff"
-                        },
-                        {
-                          "key": "Content-Security-Policy",
-                          "value": "default-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:;"
-                        },
-                        {
-                          "key": "Strict-Transport-Security",
-                          "value": "max-age=31536000"
-                        },
-                        {
-                          "key": "Cache-Control",
-                          "value": "no-store, no-cache, must-revalidate, post-check=0, pre-check=0"
-                        },
-                        {
-                          "key": "Expires",
-                          "value": "Thu, 19 Nov 1981 08:52:00 GMT"
-                        },
-                        {
-                          "key": "Pragma",
-                          "value": "no-cache"
-                        },
-                        {
-                          "key": "Allow",
-                          "value": "GET, HEAD, POST, PUT, DELETE, OPTIONS"
-                        }
-                      ],
-                      "cookie": [],
-                      "responseTime": null,
-                      "body": "<response status=\"success\" code=\"19\">\n    <result>\n        <msg>\n            <line>Job enqueued with jobid 290</line>\n        </msg>\n        <job>290</job>\n    </result>\n</response>"
-                    }
-                  ]
-                },
-                {
-                  "name": "Specifc device group commit",
-                  "_postman_id": "95ce8b77-2dcd-4490-9677-fa31496813c5",
-                  "protocolProfileBehavior": {
-                    "disableBodyPruning": true
-                  },
-                  "request": {
-                    "method": "GET",
-                    "header": [],
-                    "url": {
-                      "raw": "https://{{host}}/api/?type=commit&action=all&cmd=<commit-all><shared-policy><device-group><entry name=\"norcal\"/></device-group></shared-policy></commit-all>",
-                      "protocol": "https",
-                      "host": [
-                        "{{host}}"
-                      ],
-                      "path": [
-                        "api",
-                        ""
-                      ],
-                      "query": [
-                        {
-                          "key": "type",
-                          "value": "commit"
-                        },
-                        {
-                          "key": "action",
-                          "value": "all"
-                        },
-                        {
-                          "key": "cmd",
-                          "value": "<commit-all><shared-policy><device-group><entry name=\"norcal\"/></device-group></shared-policy></commit-all>"
-                        }
-                      ]
-                    },
-                    "description": "Commit the shared policy to firewalls in the device group `norcal`."
-                  },
-                  "response": []
-                },
-                {
-                  "name": "Specifc device group commit without including template changes",
-                  "_postman_id": "592298d7-4621-4781-be9a-f3d57ed18b75",
-                  "protocolProfileBehavior": {
-                    "disableBodyPruning": true
-                  },
-                  "request": {
-                    "method": "GET",
-                    "header": [],
-                    "url": {
-                      "raw": "https://{{host}}/api/?type=commit&action=all&cmd=<commit-all><shared-policy><include-template>no</include-template><device-group><entry name=\"norcal\"/></device-group></shared-policy></commit-all>",
-                      "protocol": "https",
-                      "host": [
-                        "{{host}}"
-                      ],
-                      "path": [
-                        "api",
-                        ""
-                      ],
-                      "query": [
-                        {
-                          "key": "type",
-                          "value": "commit"
-                        },
-                        {
-                          "key": "action",
-                          "value": "all"
-                        },
-                        {
-                          "key": "cmd",
-                          "value": "<commit-all><shared-policy><include-template>no</include-template><device-group><entry name=\"norcal\"/></device-group></shared-policy></commit-all>"
-                        }
-                      ]
-                    },
-                    "description": "Commit the shared policy to firewalls in the device group `norcal`, without including template changes."
-                  },
-                  "response": [
-                    {
-                      "id": "baeb0664-88b6-4b0e-bae0-c971014b7e7b",
-                      "name": "Specifc device group commit without including template changes",
-                      "originalRequest": {
-                        "method": "GET",
-                        "header": [],
-                        "url": {
-                          "raw": "https://{{host}}/api/?type=commit&action=all&cmd=<commit-all><shared-policy><include-template>no</include-template><device-group><entry name=\"norcal\"/></device-group></shared-policy></commit-all>",
-                          "protocol": "https",
-                          "host": [
-                            "{{host}}"
-                          ],
-                          "path": [
-                            "api",
-                            ""
-                          ],
-                          "query": [
-                            {
-                              "key": "type",
-                              "value": "commit"
-                            },
-                            {
-                              "key": "action",
-                              "value": "all"
-                            },
-                            {
-                              "key": "cmd",
-                              "value": "<commit-all><shared-policy><include-template>no</include-template><device-group><entry name=\"norcal\"/></device-group></shared-policy></commit-all>"
-                            }
-                          ]
-                        }
-                      },
-                      "status": "OK",
-                      "code": 200,
-                      "_postman_previewlanguage": "xml",
-                      "header": [
-                        {
-                          "key": "Date",
-                          "value": "Tue, 24 Nov 2020 16:22:58 GMT"
-                        },
-                        {
-                          "key": "Content-Type",
-                          "value": "application/xml; charset=UTF-8"
-                        },
-                        {
-                          "key": "Content-Length",
-                          "value": "130"
-                        },
-                        {
-                          "key": "Connection",
-                          "value": "keep-alive"
-                        },
-                        {
-                          "key": "X-FRAME-OPTIONS",
-                          "value": "SAMEORIGIN"
-                        },
-                        {
-                          "key": "X-XSS-Protection",
-                          "value": "1; mode=block"
-                        },
-                        {
-                          "key": "X-Content-Type-Options",
-                          "value": "nosniff"
-                        },
-                        {
-                          "key": "Content-Security-Policy",
-                          "value": "default-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:;"
-                        },
-                        {
-                          "key": "Strict-Transport-Security",
-                          "value": "max-age=31536000"
-                        },
-                        {
-                          "key": "Cache-Control",
-                          "value": "no-store, no-cache, must-revalidate, post-check=0, pre-check=0"
-                        },
-                        {
-                          "key": "Expires",
-                          "value": "Thu, 19 Nov 1981 08:52:00 GMT"
-                        },
-                        {
-                          "key": "Pragma",
-                          "value": "no-cache"
-                        },
-                        {
-                          "key": "Allow",
-                          "value": "GET, HEAD, POST, PUT, DELETE, OPTIONS"
-                        }
-                      ],
-                      "cookie": [],
-                      "responseTime": null,
-                      "body": "<response status=\"success\" code=\"19\">\n    <result>\n        <msg>\n            <line>Job enqueued with jobid 294</line>\n        </msg>\n        <job>294</job>\n    </result>\n</response>"
-                    }
-                  ]
-                },
-                {
-                  "name": "Virtual system (vsys) commit",
-                  "_postman_id": "dfdca1c4-7ead-4131-ae2f-24ec8e243c2e",
-                  "protocolProfileBehavior": {
-                    "disableBodyPruning": true
-                  },
-                  "request": {
-                    "method": "GET",
-                    "header": [],
-                    "url": {
-                      "raw": "https://{{host}}/api/?type=commit&action=all&cmd=<commit-all><shared-policy><device-group><entry name='norcal'><devices><entry name='015351000039218'><vsys><member>vsys1</member></vsys></entry></devices></entry></device-group></shared-policy></commit-all>",
-                      "protocol": "https",
-                      "host": [
-                        "{{host}}"
-                      ],
-                      "path": [
-                        "api",
-                        ""
-                      ],
-                      "query": [
-                        {
-                          "key": "type",
-                          "value": "commit"
-                        },
-                        {
-                          "key": "action",
-                          "value": "all"
-                        },
-                        {
-                          "key": "cmd",
-                          "value": "<commit-all><shared-policy><device-group><entry name='norcal'><devices><entry name='015351000039218'><vsys><member>vsys1</member></vsys></entry></devices></entry></device-group></shared-policy></commit-all>"
-                        }
-                      ]
-                    },
-                    "description": "Commit shared policy to a specific virtual system."
-                  },
-                  "response": [
-                    {
-                      "id": "cb2b7f40-80ad-4b0c-8f8e-4cee438e84be",
-                      "name": "Virtual system (vsys) commit",
-                      "originalRequest": {
-                        "method": "GET",
-                        "header": [],
-                        "url": {
-                          "raw": "https://{{host}}/api/?type=commit&action=all&cmd=<commit-all><shared-policy><device-group><entry name='norcal'><devices><entry name='015351000039218'><vsys><member>vsys1</member></vsys></entry></devices></entry></device-group></shared-policy></commit-all>",
-                          "protocol": "https",
-                          "host": [
-                            "{{host}}"
-                          ],
-                          "path": [
-                            "api",
-                            ""
-                          ],
-                          "query": [
-                            {
-                              "key": "type",
-                              "value": "commit"
-                            },
-                            {
-                              "key": "action",
-                              "value": "all"
-                            },
-                            {
-                              "key": "cmd",
-                              "value": "<commit-all><shared-policy><device-group><entry name='norcal'><devices><entry name='015351000039218'><vsys><member>vsys1</member></vsys></entry></devices></entry></device-group></shared-policy></commit-all>"
-                            }
-                          ]
-                        }
-                      },
-                      "status": "OK",
-                      "code": 200,
-                      "_postman_previewlanguage": "xml",
-                      "header": [
-                        {
-                          "key": "Date",
-                          "value": "Tue, 24 Nov 2020 16:27:30 GMT"
-                        },
-                        {
-                          "key": "Content-Type",
-                          "value": "application/xml; charset=UTF-8"
-                        },
-                        {
-                          "key": "Content-Length",
-                          "value": "130"
-                        },
-                        {
-                          "key": "Connection",
-                          "value": "keep-alive"
-                        },
-                        {
-                          "key": "X-FRAME-OPTIONS",
-                          "value": "SAMEORIGIN"
-                        },
-                        {
-                          "key": "X-XSS-Protection",
-                          "value": "1; mode=block"
-                        },
-                        {
-                          "key": "X-Content-Type-Options",
-                          "value": "nosniff"
-                        },
-                        {
-                          "key": "Content-Security-Policy",
-                          "value": "default-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:;"
-                        },
-                        {
-                          "key": "Strict-Transport-Security",
-                          "value": "max-age=31536000"
-                        },
-                        {
-                          "key": "Cache-Control",
-                          "value": "no-store, no-cache, must-revalidate, post-check=0, pre-check=0"
-                        },
-                        {
-                          "key": "Expires",
-                          "value": "Thu, 19 Nov 1981 08:52:00 GMT"
-                        },
-                        {
-                          "key": "Pragma",
-                          "value": "no-cache"
-                        },
-                        {
-                          "key": "Allow",
-                          "value": "GET, HEAD, POST, PUT, DELETE, OPTIONS"
-                        }
-                      ],
-                      "cookie": [],
-                      "responseTime": null,
-                      "body": "<response status=\"success\" code=\"19\">\n    <result>\n        <msg>\n            <line>Job enqueued with jobid 297</line>\n        </msg>\n        <job>297</job>\n    </result>\n</response>"
-                    }
-                  ]
-                },
-                {
-                  "name": "Specific firewall commit",
-                  "_postman_id": "19891442-f639-43d8-81b7-fa562c18b0c8",
-                  "protocolProfileBehavior": {
-                    "disableBodyPruning": true
-                  },
-                  "request": {
-                    "method": "GET",
-                    "header": [],
-                    "url": {
-                      "raw": "https://{{host}}/api/?type=commit&action=all&cmd=<commit-all><shared-policy><device-group><entry name='norcal'><devices><entry name='015351000039218'><vsys><member>vsys1</member></vsys></entry></devices></entry></device-group></shared-policy></commit-all>",
-                      "protocol": "https",
-                      "host": [
-                        "{{host}}"
-                      ],
-                      "path": [
-                        "api",
-                        ""
-                      ],
-                      "query": [
-                        {
-                          "key": "type",
-                          "value": "commit"
-                        },
-                        {
-                          "key": "action",
-                          "value": "all"
-                        },
-                        {
-                          "key": "cmd",
-                          "value": "<commit-all><shared-policy><device-group><entry name='norcal'><devices><entry name='015351000039218'><vsys><member>vsys1</member></vsys></entry></devices></entry></device-group></shared-policy></commit-all>"
-                        }
-                      ]
-                    },
-                    "description": "Commit shared policy to a specific virtual system."
-                  },
-                  "response": [
-                    {
-                      "id": "7f2d1dae-1ae2-4c68-ba31-5846a7380930",
-                      "name": "Specific firewall commit",
-                      "originalRequest": {
-                        "method": "GET",
-                        "header": [],
-                        "url": {
-                          "raw": "https://{{host}}/api/?type=commit&action=all&cmd=<commit-all><shared-policy><device-group><entry name='norcal'><devices><entry name='015351000039218'><vsys><member>vsys1</member></vsys></entry></devices></entry></device-group></shared-policy></commit-all>",
-                          "protocol": "https",
-                          "host": [
-                            "{{host}}"
-                          ],
-                          "path": [
-                            "api",
-                            ""
-                          ],
-                          "query": [
-                            {
-                              "key": "type",
-                              "value": "commit"
-                            },
-                            {
-                              "key": "action",
-                              "value": "all"
-                            },
-                            {
-                              "key": "cmd",
-                              "value": "<commit-all><shared-policy><device-group><entry name='norcal'><devices><entry name='015351000039218'><vsys><member>vsys1</member></vsys></entry></devices></entry></device-group></shared-policy></commit-all>"
-                            }
-                          ]
-                        }
-                      },
-                      "_postman_previewlanguage": null,
-                      "header": null,
-                      "cookie": [],
-                      "responseTime": null,
-                      "body": null
-                    }
-                  ]
-                }
-              ],
-              "_postman_id": "4ffe6f09-9cb7-4997-9010-29629ba45b75",
-              "description": "To centrally manage firewalls from Panorama, use the `commit-all` API request type to:\n\n- Validate and push shared policy to firewalls using device groups.\n- Validate and push configuration to firewalls and log collectors using templates and template stacks.",
-              "event": [
-                {
-                  "listen": "prerequest",
-                  "script": {
-                    "id": "b32634a2-e7aa-45c0-948d-31c6edfc0cb5",
-                    "type": "text/javascript",
-                    "exec": [
-                      ""
-                    ]
-                  }
-                },
-                {
-                  "listen": "test",
-                  "script": {
-                    "id": "f9765791-106c-4d13-aee5-ba3c3bbde569",
-                    "type": "text/javascript",
-                    "exec": [
-                      ""
-                    ]
-                  }
-                }
-              ],
-              "_postman_isSubFolder": true
+              ]
             },
             {
               "name": "Show commit job status",
@@ -3579,7 +2445,7 @@
                 "method": "GET",
                 "header": [],
                 "url": {
-                  "raw": "https://{{host}}/api/?type=op&cmd=<show><jobs><id>6</id></jobs></show>",
+                  "raw": "https://{{host}}/api/?type=op&cmd=<show><jobs><id></id></jobs></show>",
                   "protocol": "https",
                   "host": [
                     "{{host}}"
@@ -3595,7 +2461,8 @@
                     },
                     {
                       "key": "cmd",
-                      "value": "<show><jobs><id>6</id></jobs></show>"
+                      "value": "<show><jobs><id></id></jobs></show>",
+                      "description": "Show job status command.  Job ID **must** be included in `id` element."
                     }
                   ]
                 },
@@ -3604,7 +2471,7 @@
               "response": [
                 {
                   "id": "c12910a2-27be-4f46-a083-cf34617df0fd",
-                  "name": "Query commit job status",
+                  "name": "Show commit job status",
                   "originalRequest": {
                     "method": "GET",
                     "header": [],
@@ -3694,13 +2561,12 @@
               ]
             }
           ],
-          "_postman_id": "64d2721e-c645-4648-a4e8-5848d448bac5",
-          "description": "You can use the `commit` API request to commit a candidate configuration to a firewall.\n\nValidating and reverting configurations are documented in the operational commands section.",
+          "_postman_id": "55b9d67c-9da6-4058-8288-2c1b44614c2e",
           "event": [
             {
               "listen": "prerequest",
               "script": {
-                "id": "0f883258-a655-4775-b2b5-9d1ded37d313",
+                "id": "2a060cf8-e753-4082-b19e-4da0714ac828",
                 "type": "text/javascript",
                 "exec": [
                   ""
@@ -3710,7 +2576,7 @@
             {
               "listen": "test",
               "script": {
-                "id": "f6fe06ff-20ef-44cf-8cad-044562078a4d",
+                "id": "ed693c78-079a-4745-bafa-691142eddfe0",
                 "type": "text/javascript",
                 "exec": [
                   ""
@@ -8561,12 +7427,6 @@
           "_postman_isSubFolder": true
         },
         {
-          "name": "New Folder",
-          "item": [],
-          "_postman_id": "6350e57c-9e40-444a-aa44-c084d59a39f3",
-          "_postman_isSubFolder": true
-        },
-        {
           "name": "Retrieve Logs",
           "_postman_id": "e0d93f08-4f5c-4e74-be36-e85c51a67f19",
           "protocolProfileBehavior": {
@@ -12194,13 +11054,13 @@
   ],
   "variable": [
     {
-      "id": "ac5f864f-155b-40ae-add3-d550cc1d21ea",
+      "id": "2813973f-4cb0-43aa-b92f-026b1def9dfa",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "8df86081-8d12-4196-a82e-868418d2dc64",
+      "id": "6538c59e-6f23-4022-8b3e-51bfacd65777",
       "key": "{{key}}",
       "value": "",
       "type": "string"
