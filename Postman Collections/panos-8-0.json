@@ -2590,130 +2590,6 @@
           "name": "Operational Commands",
           "item": [
             {
-              "name": "User Activity Report scheduling",
-              "_postman_id": "c4a02d5f-e0d9-4f0b-b7e3-964da835ac19",
-              "protocolProfileBehavior": {
-                "disableBodyPruning": true
-              },
-              "request": {
-                "method": "GET",
-                "header": [],
-                "url": {
-                  "raw": "https://{{host}}/api/?type=op&cmd=<schedule><uar-report><user>user</user><title>title</title></uar-report></schedule>",
-                  "protocol": "https",
-                  "host": [
-                    "{{host}}"
-                  ],
-                  "path": [
-                    "api",
-                    ""
-                  ],
-                  "query": [
-                    {
-                      "key": "type",
-                      "value": "op"
-                    },
-                    {
-                      "key": "cmd",
-                      "value": "<schedule><uar-report><user>user</user><title>title</title></uar-report></schedule>"
-                    }
-                  ]
-                },
-                "description": "Schedule the User Activity Report for user `user`.\n\nAsynchronous command - check result with \"show op command status\"."
-              },
-              "response": [
-                {
-                  "id": "ebfca3a0-f49e-45c4-9f5e-384886ca68c3",
-                  "name": "User Activity Report scheduling",
-                  "originalRequest": {
-                    "method": "GET",
-                    "header": [],
-                    "url": {
-                      "raw": "https://{{host}}/api/?type=op&cmd=<schedule><uar-report><user>user</user><title>title</title></uar-report></schedule>",
-                      "protocol": "https",
-                      "host": [
-                        "{{host}}"
-                      ],
-                      "path": [
-                        "api",
-                        ""
-                      ],
-                      "query": [
-                        {
-                          "key": "type",
-                          "value": "op"
-                        },
-                        {
-                          "key": "cmd",
-                          "value": "<schedule><uar-report><user>user</user><title>title</title></uar-report></schedule>"
-                        }
-                      ]
-                    }
-                  },
-                  "status": "OK",
-                  "code": 200,
-                  "_postman_previewlanguage": "xml",
-                  "header": [
-                    {
-                      "key": "Date",
-                      "value": "Tue, 24 Nov 2020 20:04:16 GMT"
-                    },
-                    {
-                      "key": "Content-Type",
-                      "value": "application/xml; charset=UTF-8"
-                    },
-                    {
-                      "key": "Content-Length",
-                      "value": "131"
-                    },
-                    {
-                      "key": "Connection",
-                      "value": "keep-alive"
-                    },
-                    {
-                      "key": "X-FRAME-OPTIONS",
-                      "value": "SAMEORIGIN"
-                    },
-                    {
-                      "key": "X-XSS-Protection",
-                      "value": "1; mode=block"
-                    },
-                    {
-                      "key": "X-Content-Type-Options",
-                      "value": "nosniff"
-                    },
-                    {
-                      "key": "Content-Security-Policy",
-                      "value": "default-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:;"
-                    },
-                    {
-                      "key": "Strict-Transport-Security",
-                      "value": "max-age=31536000"
-                    },
-                    {
-                      "key": "Cache-Control",
-                      "value": "no-store, no-cache, must-revalidate, post-check=0, pre-check=0"
-                    },
-                    {
-                      "key": "Expires",
-                      "value": "Thu, 19 Nov 1981 08:52:00 GMT"
-                    },
-                    {
-                      "key": "Pragma",
-                      "value": "no-cache"
-                    },
-                    {
-                      "key": "Allow",
-                      "value": "GET, HEAD, POST, PUT, DELETE, OPTIONS"
-                    }
-                  ],
-                  "cookie": [],
-                  "responseTime": null,
-                  "body": "<response status=\"success\" code=\"19\">\n    <result>\n        <msg>\n            <line>Exec job enqueued with jobid 4</line>\n        </msg>\n        <job>4</job>\n    </result>\n</response>"
-                }
-              ]
-            },
-            {
               "name": "Threat signature details",
               "_postman_id": "839add73-3545-4581-83ca-7fdb734a0707",
               "protocolProfileBehavior": {
@@ -7249,6 +7125,41 @@
               "cookie": [],
               "responseTime": null,
               "body": "<response status=\"success\" code=\"19\">\n    <result>\n        <msg>\n            <line>Software install job enqueued with jobid 5. Run 'show jobs id 5' to monitor its status. Please reboot the device after the installation is done.</line>\n        </msg>\n        <job>5</job>\n    </result>\n</response>"
+            },
+            {
+              "id": "d92c6fe7-e654-4ef1-9f02-21407d7ca69b",
+              "name": "Schedule user activity report",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "https://{{host}}/api/?type=op&cmd=<schedule><uar-report><user>user</user><title>title</title></uar-report></schedule>",
+                  "protocol": "https",
+                  "host": [
+                    "{{host}}"
+                  ],
+                  "path": [
+                    "api",
+                    ""
+                  ],
+                  "query": [
+                    {
+                      "key": "type",
+                      "value": "op"
+                    },
+                    {
+                      "key": "cmd",
+                      "value": "<schedule><uar-report><user>user</user><title>title</title></uar-report></schedule>",
+                      "description": "Command to run."
+                    }
+                  ]
+                }
+              },
+              "_postman_previewlanguage": "xml",
+              "header": null,
+              "cookie": [],
+              "responseTime": null,
+              "body": "<response status=\"success\" code=\"19\">\n    <result>\n        <msg>\n            <line>Exec job enqueued with jobid 4</line>\n        </msg>\n        <job>4</job>\n    </result>\n</response>"
             }
           ]
         },
@@ -10880,13 +10791,13 @@
   ],
   "variable": [
     {
-      "id": "4726748d-70cc-4ab3-8264-35773d54b4d1",
+      "id": "72764a4a-af74-4f16-83b4-051df12cdac2",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "2fe62fd3-1218-4582-8d03-0ef6a5f75c42",
+      "id": "7e56ccd4-124c-44f5-b047-8d9b58b7213d",
       "key": "{{key}}",
       "value": "",
       "type": "string"
