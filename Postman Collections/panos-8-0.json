@@ -5905,7 +5905,7 @@
                 }
               ]
             },
-            "description": "Use any of the operational mode commands available on the command line with the `op` command type.\n\nSome operational commands, including download, upgrade, and installation requests, are asynchronous, meaning they require more than one request to get final results."
+            "description": "Use any of the operational mode commands available on the command line with the `op` command type.\n\nUse the [API browser](https://docs.paloaltonetworks.com/pan-os/10-0/pan-os-panorama-api/get-started-with-the-pan-os-xml-api/explore-the-api/use-the-api-browser.html) to explore the different commands that can be sent in `cmd`.\n\nSome operational commands, including download, upgrade, and installation requests, are asynchronous, meaning they require more than one request to get final results."
           },
           "response": [
             {
@@ -9923,13 +9923,13 @@
   ],
   "variable": [
     {
-      "id": "0e6f12e5-5772-468b-9072-d93e3cae7381",
+      "id": "5b6c16c0-4315-4d5d-8b6f-7fe89d51616a",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "de8072df-5a99-46aa-947e-6f746a12003d",
+      "id": "a058c669-bcb5-4b36-8041-d68e8b95d6b9",
       "key": "{{key}}",
       "value": "",
       "type": "string"
