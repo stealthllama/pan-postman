@@ -2587,284 +2587,6 @@
           "_postman_isSubFolder": true
         },
         {
-          "name": "Operational Commands",
-          "item": [
-            {
-              "name": "Show summary of changes",
-              "_postman_id": "4442e42c-5fea-4395-948b-8741e9fe53bb",
-              "protocolProfileBehavior": {
-                "disableBodyPruning": true
-              },
-              "request": {
-                "method": "GET",
-                "header": [],
-                "url": {
-                  "raw": "https://{{host}}/api/?type=op&cmd=<show><config><list><change-summary/></list></config></show>",
-                  "protocol": "https",
-                  "host": [
-                    "{{host}}"
-                  ],
-                  "path": [
-                    "api",
-                    ""
-                  ],
-                  "query": [
-                    {
-                      "key": "type",
-                      "value": "op"
-                    },
-                    {
-                      "key": "cmd",
-                      "value": "<show><config><list><change-summary/></list></config></show>"
-                    }
-                  ]
-                },
-                "description": "Show a summary of changes between the candidate and active configuration."
-              },
-              "response": [
-                {
-                  "id": "0419eaf2-001f-4912-9e62-9f0d50915870",
-                  "name": "Show summary of changes",
-                  "originalRequest": {
-                    "method": "GET",
-                    "header": [],
-                    "url": {
-                      "raw": "https://{{host}}/api/?type=op&cmd=<show><config><list><change-summary/></list></config></show>",
-                      "protocol": "https",
-                      "host": [
-                        "{{host}}"
-                      ],
-                      "path": [
-                        "api",
-                        ""
-                      ],
-                      "query": [
-                        {
-                          "key": "type",
-                          "value": "op"
-                        },
-                        {
-                          "key": "cmd",
-                          "value": "<show><config><list><change-summary/></list></config></show>"
-                        }
-                      ]
-                    }
-                  },
-                  "status": "OK",
-                  "code": 200,
-                  "_postman_previewlanguage": "xml",
-                  "header": [
-                    {
-                      "key": "Date",
-                      "value": "Tue, 24 Nov 2020 20:32:19 GMT"
-                    },
-                    {
-                      "key": "Content-Type",
-                      "value": "application/xml; charset=UTF-8"
-                    },
-                    {
-                      "key": "Content-Length",
-                      "value": "95"
-                    },
-                    {
-                      "key": "Connection",
-                      "value": "keep-alive"
-                    },
-                    {
-                      "key": "X-FRAME-OPTIONS",
-                      "value": "SAMEORIGIN"
-                    },
-                    {
-                      "key": "X-XSS-Protection",
-                      "value": "1; mode=block"
-                    },
-                    {
-                      "key": "X-Content-Type-Options",
-                      "value": "nosniff"
-                    },
-                    {
-                      "key": "Content-Security-Policy",
-                      "value": "default-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:;"
-                    },
-                    {
-                      "key": "Strict-Transport-Security",
-                      "value": "max-age=31536000"
-                    },
-                    {
-                      "key": "Cache-Control",
-                      "value": "no-store, no-cache, must-revalidate, post-check=0, pre-check=0"
-                    },
-                    {
-                      "key": "Expires",
-                      "value": "Thu, 19 Nov 1981 08:52:00 GMT"
-                    },
-                    {
-                      "key": "Pragma",
-                      "value": "no-cache"
-                    },
-                    {
-                      "key": "Allow",
-                      "value": "GET, HEAD, POST, PUT, DELETE, OPTIONS"
-                    }
-                  ],
-                  "cookie": [],
-                  "responseTime": null,
-                  "body": "<response status=\"success\">\n    <result>\n        <summary>\n            <policy-and-objects/>\n        </summary>\n    </result>\n</response>"
-                }
-              ]
-            },
-            {
-              "name": "Show commit locks",
-              "_postman_id": "d382444a-f10d-4315-81c3-dcc58fbe1d12",
-              "protocolProfileBehavior": {
-                "disableBodyPruning": true
-              },
-              "request": {
-                "method": "GET",
-                "header": [],
-                "url": {
-                  "raw": "https://{{host}}/api/?type=op&cmd=<show><commit-locks><vsys>all</vsys></commit-locks></show>",
-                  "protocol": "https",
-                  "host": [
-                    "{{host}}"
-                  ],
-                  "path": [
-                    "api",
-                    ""
-                  ],
-                  "query": [
-                    {
-                      "key": "type",
-                      "value": "op"
-                    },
-                    {
-                      "key": "cmd",
-                      "value": "<show><commit-locks><vsys>all</vsys></commit-locks></show>"
-                    }
-                  ]
-                },
-                "description": "Show commit locks for the device."
-              },
-              "response": [
-                {
-                  "id": "4aac6beb-7404-49da-9bd3-746b0e8804f8",
-                  "name": "Show commit locks",
-                  "originalRequest": {
-                    "method": "GET",
-                    "header": [],
-                    "url": {
-                      "raw": "https://{{host}}/api/?type=op&cmd=<show><commit-locks><vsys>all</vsys></commit-locks></show>",
-                      "protocol": "https",
-                      "host": [
-                        "{{host}}"
-                      ],
-                      "path": [
-                        "api",
-                        ""
-                      ],
-                      "query": [
-                        {
-                          "key": "type",
-                          "value": "op"
-                        },
-                        {
-                          "key": "cmd",
-                          "value": "<show><commit-locks><vsys>all</vsys></commit-locks></show>"
-                        }
-                      ]
-                    }
-                  },
-                  "status": "OK",
-                  "code": 200,
-                  "_postman_previewlanguage": "xml",
-                  "header": [
-                    {
-                      "key": "Date",
-                      "value": "Tue, 24 Nov 2020 20:35:21 GMT"
-                    },
-                    {
-                      "key": "Content-Type",
-                      "value": "application/xml; charset=UTF-8"
-                    },
-                    {
-                      "key": "Content-Length",
-                      "value": "299"
-                    },
-                    {
-                      "key": "Connection",
-                      "value": "keep-alive"
-                    },
-                    {
-                      "key": "X-FRAME-OPTIONS",
-                      "value": "SAMEORIGIN"
-                    },
-                    {
-                      "key": "X-XSS-Protection",
-                      "value": "1; mode=block"
-                    },
-                    {
-                      "key": "X-Content-Type-Options",
-                      "value": "nosniff"
-                    },
-                    {
-                      "key": "Content-Security-Policy",
-                      "value": "default-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:;"
-                    },
-                    {
-                      "key": "Strict-Transport-Security",
-                      "value": "max-age=31536000"
-                    },
-                    {
-                      "key": "Cache-Control",
-                      "value": "no-store, no-cache, must-revalidate, post-check=0, pre-check=0"
-                    },
-                    {
-                      "key": "Expires",
-                      "value": "Thu, 19 Nov 1981 08:52:00 GMT"
-                    },
-                    {
-                      "key": "Pragma",
-                      "value": "no-cache"
-                    },
-                    {
-                      "key": "Allow",
-                      "value": "GET, HEAD, POST, PUT, DELETE, OPTIONS"
-                    }
-                  ],
-                  "cookie": [],
-                  "responseTime": null,
-                  "body": "<response status=\"success\">\n    <result>\n        <commit-locks>\n            <entry name=\"admin\">\n                <type>shared</type>\n                <name>shared</name>\n                <created>2020/11/24 12:35:14</created>\n                <last-activity>2020/11/24 12:35:14</last-activity>\n                <loggedin>yes</loggedin>\n                <comment>\n                    <![CDATA[(null)]]>\n                </comment>\n            </entry>\n        </commit-locks>\n    </result>\n</response>"
-                }
-              ]
-            }
-          ],
-          "_postman_id": "5f996648-39ef-462b-97fc-9b8c6c5bd21d",
-          "description": "Use any of the operational mode commands available on the command line with the `type=op` command.\n\nSome operational commands, including download, upgrade, and installation requests, are asynchronous, meaning they require more than one request to get final results.",
-          "event": [
-            {
-              "listen": "prerequest",
-              "script": {
-                "id": "be4e79fd-4f84-4416-8448-2f79f875bb35",
-                "type": "text/javascript",
-                "exec": [
-                  ""
-                ]
-              }
-            },
-            {
-              "listen": "test",
-              "script": {
-                "id": "06105f72-76ac-4372-82e0-2785cfdb6ffe",
-                "type": "text/javascript",
-                "exec": [
-                  ""
-                ]
-              }
-            }
-          ],
-          "_postman_isSubFolder": true
-        },
-        {
           "name": "Get Reports",
           "item": [
             {
@@ -6500,6 +6222,76 @@
               "cookie": [],
               "responseTime": null,
               "body": "<response status=\"success\">\n    <result>\n        <msg>\n            <line>Selected changes were reverted from configuration</line>\n        </msg>\n    </result>\n</response>"
+            },
+            {
+              "id": "10d66a24-d2c9-40ed-a036-c727a0f58cd6",
+              "name": "Show summary of changes",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "https://{{host}}/api/?type=op&cmd=<show><config><list><change-summary/></list></config></show>",
+                  "protocol": "https",
+                  "host": [
+                    "{{host}}"
+                  ],
+                  "path": [
+                    "api",
+                    ""
+                  ],
+                  "query": [
+                    {
+                      "key": "type",
+                      "value": "op"
+                    },
+                    {
+                      "key": "cmd",
+                      "value": "<show><config><list><change-summary/></list></config></show>",
+                      "description": "Command to run."
+                    }
+                  ]
+                }
+              },
+              "_postman_previewlanguage": "xml",
+              "header": null,
+              "cookie": [],
+              "responseTime": null,
+              "body": "<response status=\"success\">\n    <result>\n        <summary>\n            <policy-and-objects/>\n        </summary>\n    </result>\n</response>"
+            },
+            {
+              "id": "59c8bf93-e427-4f05-8e9a-5cdb5d3f2ec0",
+              "name": "Show commit locks",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "https://{{host}}/api/?type=op&cmd=<show><commit-locks><vsys>all</vsys></commit-locks></show>",
+                  "protocol": "https",
+                  "host": [
+                    "{{host}}"
+                  ],
+                  "path": [
+                    "api",
+                    ""
+                  ],
+                  "query": [
+                    {
+                      "key": "type",
+                      "value": "op"
+                    },
+                    {
+                      "key": "cmd",
+                      "value": "<show><commit-locks><vsys>all</vsys></commit-locks></show>",
+                      "description": "Command to run."
+                    }
+                  ]
+                }
+              },
+              "_postman_previewlanguage": "xml",
+              "header": null,
+              "cookie": [],
+              "responseTime": null,
+              "body": "<response status=\"success\">\n    <result>\n        <commit-locks>\n            <entry name=\"admin\">\n                <type>shared</type>\n                <name>shared</name>\n                <created>2020/11/24 12:35:14</created>\n                <last-activity>2020/11/24 12:35:14</last-activity>\n                <loggedin>yes</loggedin>\n                <comment>\n                    <![CDATA[(null)]]>\n                </comment>\n            </entry>\n        </commit-locks>\n    </result>\n</response>"
             }
           ]
         },
@@ -10131,13 +9923,13 @@
   ],
   "variable": [
     {
-      "id": "0c5e99bd-e58f-4912-ae6e-1d2e03b9baf5",
+      "id": "6f992e75-1e7e-44ce-8162-c00167ef5543",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "74ab5ebf-a5b7-4144-8355-7194ded3677c",
+      "id": "848fd5cd-92b6-4681-a9aa-bb77f64ebee5",
       "key": "{{key}}",
       "value": "",
       "type": "string"
