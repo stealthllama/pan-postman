@@ -5875,7 +5875,7 @@
           "_postman_isSubFolder": true
         },
         {
-          "name": "Operational command",
+          "name": "Operational commands",
           "_postman_id": "69bed58c-d6fc-4116-beb8-fd344b6bc61b",
           "protocolProfileBehavior": {
             "disableBodyPruning": true
@@ -9923,13 +9923,13 @@
   ],
   "variable": [
     {
-      "id": "6f992e75-1e7e-44ce-8162-c00167ef5543",
+      "id": "6cfeacf0-4270-410d-9dd7-99e0501b984a",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "848fd5cd-92b6-4681-a9aa-bb77f64ebee5",
+      "id": "b9a66a55-4fd7-4772-8a19-3a30fccdb8bd",
       "key": "{{key}}",
       "value": "",
       "type": "string"
