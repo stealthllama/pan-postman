@@ -2590,39 +2590,6 @@
           "name": "Operational Commands",
           "item": [
             {
-              "name": "Show op command status",
-              "_postman_id": "58b71197-dd47-444a-913f-b3a85e82cfc7",
-              "protocolProfileBehavior": {
-                "disableBodyPruning": true
-              },
-              "request": {
-                "method": "GET",
-                "header": [],
-                "url": {
-                  "raw": "https://{{host}}/api/?type=op&cmd=<show><jobs><id></id></jobs></show>",
-                  "protocol": "https",
-                  "host": [
-                    "{{host}}"
-                  ],
-                  "path": [
-                    "api",
-                    ""
-                  ],
-                  "query": [
-                    {
-                      "key": "type",
-                      "value": "op"
-                    },
-                    {
-                      "key": "cmd",
-                      "value": "<show><jobs><id></id></jobs></show>"
-                    }
-                  ]
-                }
-              },
-              "response": []
-            },
-            {
               "name": "System restart",
               "_postman_id": "2b68b6ce-ec7f-4e22-ac27-4d55ee211bf8",
               "protocolProfileBehavior": {
@@ -7435,7 +7402,8 @@
           "request": {
             "method": "GET",
             "header": [],
-            "url": ""
+            "url": "",
+            "description": "Use any of the operational mode commands available on the command line with the `op` command type.\n\nSome operational commands, including download, upgrade, and installation requests, are asynchronous, meaning they require more than one request to get final results."
           },
           "response": []
         },
@@ -11067,13 +11035,13 @@
   ],
   "variable": [
     {
-      "id": "c2705570-e281-49c8-9eaa-97d6b7c0723d",
+      "id": "d3ac9618-02c4-4dd2-93e8-6074eacb2481",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "fcd166f1-88bd-450d-b405-9776273e6cd4",
+      "id": "c902d1f4-d3e6-4751-946c-1def9b73a54c",
       "key": "{{key}}",
       "value": "",
       "type": "string"
