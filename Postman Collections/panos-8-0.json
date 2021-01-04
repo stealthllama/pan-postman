@@ -2590,130 +2590,6 @@
           "name": "Operational Commands",
           "item": [
             {
-              "name": "Partial revert of changes",
-              "_postman_id": "1b13e832-6d66-4fea-868d-d41c91f97f0b",
-              "protocolProfileBehavior": {
-                "disableBodyPruning": true
-              },
-              "request": {
-                "method": "GET",
-                "header": [],
-                "url": {
-                  "raw": "https://{{host}}/api/?type=op&cmd=<revert><config><partial><admin><member>admin</member></admin></partial></config></revert>",
-                  "protocol": "https",
-                  "host": [
-                    "{{host}}"
-                  ],
-                  "path": [
-                    "api",
-                    ""
-                  ],
-                  "query": [
-                    {
-                      "key": "type",
-                      "value": "op"
-                    },
-                    {
-                      "key": "cmd",
-                      "value": "<revert><config><partial><admin><member>admin</member></admin></partial></config></revert>"
-                    }
-                  ]
-                },
-                "description": "Revert changes made by administrator `admin`."
-              },
-              "response": [
-                {
-                  "id": "5aefb7af-bf89-4fc7-9c2b-2da1ad783e4f",
-                  "name": "Partial revert of admin-level changes",
-                  "originalRequest": {
-                    "method": "GET",
-                    "header": [],
-                    "url": {
-                      "raw": "https://{{host}}/api/?type=op&cmd=<revert><config><partial><admin><member>admin</member></admin></partial></config></revert>",
-                      "protocol": "https",
-                      "host": [
-                        "{{host}}"
-                      ],
-                      "path": [
-                        "api",
-                        ""
-                      ],
-                      "query": [
-                        {
-                          "key": "type",
-                          "value": "op"
-                        },
-                        {
-                          "key": "cmd",
-                          "value": "<revert><config><partial><admin><member>admin</member></admin></partial></config></revert>"
-                        }
-                      ]
-                    }
-                  },
-                  "status": "OK",
-                  "code": 200,
-                  "_postman_previewlanguage": "xml",
-                  "header": [
-                    {
-                      "key": "Date",
-                      "value": "Tue, 24 Nov 2020 20:22:36 GMT"
-                    },
-                    {
-                      "key": "Content-Type",
-                      "value": "application/xml; charset=UTF-8"
-                    },
-                    {
-                      "key": "Content-Length",
-                      "value": "128"
-                    },
-                    {
-                      "key": "Connection",
-                      "value": "keep-alive"
-                    },
-                    {
-                      "key": "X-FRAME-OPTIONS",
-                      "value": "SAMEORIGIN"
-                    },
-                    {
-                      "key": "X-XSS-Protection",
-                      "value": "1; mode=block"
-                    },
-                    {
-                      "key": "X-Content-Type-Options",
-                      "value": "nosniff"
-                    },
-                    {
-                      "key": "Content-Security-Policy",
-                      "value": "default-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:;"
-                    },
-                    {
-                      "key": "Strict-Transport-Security",
-                      "value": "max-age=31536000"
-                    },
-                    {
-                      "key": "Cache-Control",
-                      "value": "no-store, no-cache, must-revalidate, post-check=0, pre-check=0"
-                    },
-                    {
-                      "key": "Expires",
-                      "value": "Thu, 19 Nov 1981 08:52:00 GMT"
-                    },
-                    {
-                      "key": "Pragma",
-                      "value": "no-cache"
-                    },
-                    {
-                      "key": "Allow",
-                      "value": "GET, HEAD, POST, PUT, DELETE, OPTIONS"
-                    }
-                  ],
-                  "cookie": [],
-                  "responseTime": null,
-                  "body": "<response status=\"success\">\n    <result>\n        <msg>\n            <line>Selected changes were reverted from configuration</line>\n        </msg>\n    </result>\n</response>"
-                }
-              ]
-            },
-            {
               "name": "Show summary of changes",
               "_postman_id": "4442e42c-5fea-4395-948b-8741e9fe53bb",
               "protocolProfileBehavior": {
@@ -10255,13 +10131,13 @@
   ],
   "variable": [
     {
-      "id": "c086e028-42c6-49b8-8ead-262bac14c53e",
+      "id": "0c5e99bd-e58f-4912-ae6e-1d2e03b9baf5",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "b68d8d0c-4a85-4601-bf3b-046b99f27b6e",
+      "id": "74ab5ebf-a5b7-4144-8355-7194ded3677c",
       "key": "{{key}}",
       "value": "",
       "type": "string"
