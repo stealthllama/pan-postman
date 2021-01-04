@@ -2590,130 +2590,6 @@
           "name": "Operational Commands",
           "item": [
             {
-              "name": "Validate full config",
-              "_postman_id": "f91153bb-5b8c-46ef-941e-1e164b24ec17",
-              "protocolProfileBehavior": {
-                "disableBodyPruning": true
-              },
-              "request": {
-                "method": "GET",
-                "header": [],
-                "url": {
-                  "raw": "https://{{host}}/api/?type=op&cmd=<validate><full></full></validate>",
-                  "protocol": "https",
-                  "host": [
-                    "{{host}}"
-                  ],
-                  "path": [
-                    "api",
-                    ""
-                  ],
-                  "query": [
-                    {
-                      "key": "type",
-                      "value": "op"
-                    },
-                    {
-                      "key": "cmd",
-                      "value": "<validate><full></full></validate>"
-                    }
-                  ]
-                },
-                "description": "Validate the full config."
-              },
-              "response": [
-                {
-                  "id": "8c40d302-8044-4e84-983b-81666f2457f4",
-                  "name": "Validate full config",
-                  "originalRequest": {
-                    "method": "GET",
-                    "header": [],
-                    "url": {
-                      "raw": "https://{{host}}/api/?type=op&cmd=<validate><full></full></validate>",
-                      "protocol": "https",
-                      "host": [
-                        "{{host}}"
-                      ],
-                      "path": [
-                        "api",
-                        ""
-                      ],
-                      "query": [
-                        {
-                          "key": "type",
-                          "value": "op"
-                        },
-                        {
-                          "key": "cmd",
-                          "value": "<validate><full></full></validate>"
-                        }
-                      ]
-                    }
-                  },
-                  "status": "OK",
-                  "code": 200,
-                  "_postman_previewlanguage": "xml",
-                  "header": [
-                    {
-                      "key": "Date",
-                      "value": "Tue, 24 Nov 2020 20:16:19 GMT"
-                    },
-                    {
-                      "key": "Content-Type",
-                      "value": "application/xml; charset=UTF-8"
-                    },
-                    {
-                      "key": "Content-Length",
-                      "value": "135"
-                    },
-                    {
-                      "key": "Connection",
-                      "value": "keep-alive"
-                    },
-                    {
-                      "key": "X-FRAME-OPTIONS",
-                      "value": "SAMEORIGIN"
-                    },
-                    {
-                      "key": "X-XSS-Protection",
-                      "value": "1; mode=block"
-                    },
-                    {
-                      "key": "X-Content-Type-Options",
-                      "value": "nosniff"
-                    },
-                    {
-                      "key": "Content-Security-Policy",
-                      "value": "default-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:;"
-                    },
-                    {
-                      "key": "Strict-Transport-Security",
-                      "value": "max-age=31536000"
-                    },
-                    {
-                      "key": "Cache-Control",
-                      "value": "no-store, no-cache, must-revalidate, post-check=0, pre-check=0"
-                    },
-                    {
-                      "key": "Expires",
-                      "value": "Thu, 19 Nov 1981 08:52:00 GMT"
-                    },
-                    {
-                      "key": "Pragma",
-                      "value": "no-cache"
-                    },
-                    {
-                      "key": "Allow",
-                      "value": "GET, HEAD, POST, PUT, DELETE, OPTIONS"
-                    }
-                  ],
-                  "cookie": [],
-                  "responseTime": null,
-                  "body": "<response status=\"success\" code=\"19\">\n    <result>\n        <msg>\n            <line>Validate job enqueued with jobid 2</line>\n        </msg>\n        <job>2</job>\n    </result>\n</response>"
-                }
-              ]
-            },
-            {
               "name": "Partial configuration validation",
               "_postman_id": "e254bd41-3675-4037-8a87-ccd68407765b",
               "protocolProfileBehavior": {
@@ -7071,6 +6947,41 @@
               "cookie": [],
               "responseTime": null,
               "body": "<response status=\"success\">\n    <result>\n        <entry name=\"30003\" p=\"yes\">\n            <threatname>Microsoft Windows DCOM RPC Interface Buffer Overrun Vulnerability</threatname>\n            <cve xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\n                <member>CVE-2003-0352</member>\n            </cve>\n            <vendor xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\n                <member>MS03-026</member>\n            </vendor>\n            <category>code-execution</category>\n            <severity>critical</severity>\n            <engine-version min=\"1.0\"/>\n            <affected-host>\n                <server>yes</server>\n            </affected-host>\n            <default-action>reset-server</default-action>\n        </entry>\n    </result>\n</response>"
+            },
+            {
+              "id": "8168e26a-49ff-4feb-aae0-6b5e777641b2",
+              "name": "Validate full config",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "https://{{host}}/api/?type=op&cmd=<validate><full></full></validate>",
+                  "protocol": "https",
+                  "host": [
+                    "{{host}}"
+                  ],
+                  "path": [
+                    "api",
+                    ""
+                  ],
+                  "query": [
+                    {
+                      "key": "type",
+                      "value": "op"
+                    },
+                    {
+                      "key": "cmd",
+                      "value": "<validate><full></full></validate>",
+                      "description": "Command to run."
+                    }
+                  ]
+                }
+              },
+              "_postman_previewlanguage": "xml",
+              "header": null,
+              "cookie": [],
+              "responseTime": null,
+              "body": "<response status=\"success\" code=\"19\">\n    <result>\n        <msg>\n            <line>Validate job enqueued with jobid 2</line>\n        </msg>\n        <job>2</job>\n    </result>\n</response>"
             }
           ]
         },
@@ -10702,13 +10613,13 @@
   ],
   "variable": [
     {
-      "id": "4a51fc55-f9e4-4ecb-8108-d016dedd6f5b",
+      "id": "fd9e4ec1-84e6-4d50-99f6-eb6cf84728cc",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "254c2119-791d-4b13-b2ed-4c7e4fcae619",
+      "id": "a736bbed-44af-4f3e-be21-329bbbbd9da2",
       "key": "{{key}}",
       "value": "",
       "type": "string"
