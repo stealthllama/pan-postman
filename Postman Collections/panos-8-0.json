@@ -2590,130 +2590,6 @@
           "name": "Operational Commands",
           "item": [
             {
-              "name": "Load config",
-              "_postman_id": "97d2e1e8-0cf6-4519-ae0b-73c9c4c6a022",
-              "protocolProfileBehavior": {
-                "disableBodyPruning": true
-              },
-              "request": {
-                "method": "GET",
-                "header": [],
-                "url": {
-                  "raw": "https://{{host}}/api/?type=op&cmd=<load><config><from>config.xml</from></config></load>",
-                  "protocol": "https",
-                  "host": [
-                    "{{host}}"
-                  ],
-                  "path": [
-                    "api",
-                    ""
-                  ],
-                  "query": [
-                    {
-                      "key": "type",
-                      "value": "op"
-                    },
-                    {
-                      "key": "cmd",
-                      "value": "<load><config><from>config.xml</from></config></load>"
-                    }
-                  ]
-                },
-                "description": "Load the config from a local file."
-              },
-              "response": [
-                {
-                  "id": "61bfde14-6aef-4bcd-9491-320209a9ebf9",
-                  "name": "Load config",
-                  "originalRequest": {
-                    "method": "GET",
-                    "header": [],
-                    "url": {
-                      "raw": "https://{{host}}/api/?type=op&cmd=<load><config><from>config.xml</from></config></load>",
-                      "protocol": "https",
-                      "host": [
-                        "{{host}}"
-                      ],
-                      "path": [
-                        "api",
-                        ""
-                      ],
-                      "query": [
-                        {
-                          "key": "type",
-                          "value": "op"
-                        },
-                        {
-                          "key": "cmd",
-                          "value": "<load><config><from>config.xml</from></config></load>"
-                        }
-                      ]
-                    }
-                  },
-                  "status": "OK",
-                  "code": 200,
-                  "_postman_previewlanguage": "xml",
-                  "header": [
-                    {
-                      "key": "Date",
-                      "value": "Tue, 24 Nov 2020 20:20:07 GMT"
-                    },
-                    {
-                      "key": "Content-Type",
-                      "value": "application/xml; charset=UTF-8"
-                    },
-                    {
-                      "key": "Content-Length",
-                      "value": "132"
-                    },
-                    {
-                      "key": "Connection",
-                      "value": "keep-alive"
-                    },
-                    {
-                      "key": "X-FRAME-OPTIONS",
-                      "value": "SAMEORIGIN"
-                    },
-                    {
-                      "key": "X-XSS-Protection",
-                      "value": "1; mode=block"
-                    },
-                    {
-                      "key": "X-Content-Type-Options",
-                      "value": "nosniff"
-                    },
-                    {
-                      "key": "Content-Security-Policy",
-                      "value": "default-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:;"
-                    },
-                    {
-                      "key": "Strict-Transport-Security",
-                      "value": "max-age=31536000"
-                    },
-                    {
-                      "key": "Cache-Control",
-                      "value": "no-store, no-cache, must-revalidate, post-check=0, pre-check=0"
-                    },
-                    {
-                      "key": "Expires",
-                      "value": "Thu, 19 Nov 1981 08:52:00 GMT"
-                    },
-                    {
-                      "key": "Pragma",
-                      "value": "no-cache"
-                    },
-                    {
-                      "key": "Allow",
-                      "value": "GET, HEAD, POST, PUT, DELETE, OPTIONS"
-                    }
-                  ],
-                  "cookie": [],
-                  "responseTime": null,
-                  "body": "<response status=\"success\">\n    <result>\n        <msg>\n            <line>\n                <msg>\n                    <line>Config loaded from config.xml</line>\n                </msg>\n            </line>\n        </msg>\n    </result>\n</response>"
-                }
-              ]
-            },
-            {
               "name": "Partial revert of changes",
               "_postman_id": "1b13e832-6d66-4fea-868d-d41c91f97f0b",
               "protocolProfileBehavior": {
@@ -6804,6 +6680,41 @@
               "cookie": [],
               "responseTime": null,
               "body": "<response status=\"success\">\n    <result>Config saved to config.xml</result>\n</response>"
+            },
+            {
+              "id": "e5268554-5bf9-4d21-beb0-5c9bd003788e",
+              "name": "Load config from file",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "https://{{host}}/api/?type=op&cmd=<load><config><from>config.xml</from></config></load>",
+                  "protocol": "https",
+                  "host": [
+                    "{{host}}"
+                  ],
+                  "path": [
+                    "api",
+                    ""
+                  ],
+                  "query": [
+                    {
+                      "key": "type",
+                      "value": "op"
+                    },
+                    {
+                      "key": "cmd",
+                      "value": "<load><config><from>config.xml</from></config></load>",
+                      "description": "Command to run."
+                    }
+                  ]
+                }
+              },
+              "_postman_previewlanguage": "xml",
+              "header": null,
+              "cookie": [],
+              "responseTime": null,
+              "body": "<response status=\"success\">\n    <result>\n        <msg>\n            <line>\n                <msg>\n                    <line>Config loaded from config.xml</line>\n                </msg>\n            </line>\n        </msg>\n    </result>\n</response>"
             }
           ]
         },
@@ -10435,13 +10346,13 @@
   ],
   "variable": [
     {
-      "id": "2783ff54-27de-495b-8ce7-a5a5e3639457",
+      "id": "2ee36104-3d26-488b-abc0-c073c92d8f6f",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "c1d72ae5-8a11-40de-a966-7a984a5c3a34",
+      "id": "87163b5b-cbf4-4949-b29a-e3ead4c87abb",
       "key": "{{key}}",
       "value": "",
       "type": "string"
