@@ -7402,7 +7402,28 @@
           "request": {
             "method": "GET",
             "header": [],
-            "url": "",
+            "url": {
+              "raw": "https://{{host}}/api/?type=op&cmd=",
+              "protocol": "https",
+              "host": [
+                "{{host}}"
+              ],
+              "path": [
+                "api",
+                ""
+              ],
+              "query": [
+                {
+                  "key": "type",
+                  "value": "op"
+                },
+                {
+                  "key": "cmd",
+                  "value": "",
+                  "description": "Command to run."
+                }
+              ]
+            },
             "description": "Use any of the operational mode commands available on the command line with the `op` command type.\n\nSome operational commands, including download, upgrade, and installation requests, are asynchronous, meaning they require more than one request to get final results."
           },
           "response": []
@@ -11035,13 +11056,13 @@
   ],
   "variable": [
     {
-      "id": "d3ac9618-02c4-4dd2-93e8-6074eacb2481",
+      "id": "b74af7fb-763e-4494-b9c8-51867c09cab5",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "c902d1f4-d3e6-4751-946c-1def9b73a54c",
+      "id": "68ecbabb-1272-4c02-b3db-3608ffbdcd8b",
       "key": "{{key}}",
       "value": "",
       "type": "string"
