@@ -2714,132 +2714,6 @@
               ]
             },
             {
-              "name": "Partial revert of changes to Panorama",
-              "_postman_id": "415ab813-b67a-4f34-bd29-93fa40c6066c",
-              "protocolProfileBehavior": {
-                "disableBodyPruning": true
-              },
-              "request": {
-                "method": "GET",
-                "header": [],
-                "url": {
-                  "raw": "https://{{host}}/api/?type=op&cmd=<revert><config><partial><admin><member>admin</member></admin><device-group><member>norcal</member></device-group><no-template/><no-template-stack/><no-log-collector-group/><no-log-collector/><no-wildfire-appliance-cluster/><no-wildfire-appliance/><device-and-network>excluded</device-and-network><shared-object>excluded</shared-object></partial></config></revert>",
-                  "protocol": "https",
-                  "host": [
-                    "{{host}}"
-                  ],
-                  "path": [
-                    "api",
-                    ""
-                  ],
-                  "query": [
-                    {
-                      "key": "type",
-                      "value": "op",
-                      "type": "text"
-                    },
-                    {
-                      "key": "cmd",
-                      "value": "<revert><config><partial><admin><member>admin</member></admin><device-group><member>norcal</member></device-group><no-template/><no-template-stack/><no-log-collector-group/><no-log-collector/><no-wildfire-appliance-cluster/><no-wildfire-appliance/><device-and-network>excluded</device-and-network><shared-object>excluded</shared-object></partial></config></revert>",
-                      "type": "text"
-                    }
-                  ]
-                },
-                "description": "Revert changes made to Panorama by administrator `admin` in the device-group `norcal`."
-              },
-              "response": [
-                {
-                  "id": "a2052124-be76-4ea9-b60f-23e01aa0cf7a",
-                  "name": "Partial revert of changes to Panorama",
-                  "originalRequest": {
-                    "method": "GET",
-                    "header": [],
-                    "url": {
-                      "raw": "https://{{host}}/api/?type=op&cmd=<revert><config><partial><admin><member>admin</member></admin><device-group><member>norcal</member></device-group><no-template/><no-template-stack/><no-log-collector-group/><no-log-collector/><no-wildfire-appliance-cluster/><no-wildfire-appliance/><device-and-network>excluded</device-and-network><shared-object>excluded</shared-object></partial></config></revert>",
-                      "protocol": "https",
-                      "host": [
-                        "{{host}}"
-                      ],
-                      "path": [
-                        "api",
-                        ""
-                      ],
-                      "query": [
-                        {
-                          "key": "type",
-                          "value": "op"
-                        },
-                        {
-                          "key": "cmd",
-                          "value": "<revert><config><partial><admin><member>admin</member></admin><device-group><member>norcal</member></device-group><no-template/><no-template-stack/><no-log-collector-group/><no-log-collector/><no-wildfire-appliance-cluster/><no-wildfire-appliance/><device-and-network>excluded</device-and-network><shared-object>excluded</shared-object></partial></config></revert>"
-                        }
-                      ]
-                    }
-                  },
-                  "status": "OK",
-                  "code": 200,
-                  "_postman_previewlanguage": "xml",
-                  "header": [
-                    {
-                      "key": "Date",
-                      "value": "Tue, 24 Nov 2020 20:30:05 GMT"
-                    },
-                    {
-                      "key": "Content-Type",
-                      "value": "application/xml; charset=UTF-8"
-                    },
-                    {
-                      "key": "Content-Length",
-                      "value": "128"
-                    },
-                    {
-                      "key": "Connection",
-                      "value": "keep-alive"
-                    },
-                    {
-                      "key": "X-FRAME-OPTIONS",
-                      "value": "SAMEORIGIN"
-                    },
-                    {
-                      "key": "X-XSS-Protection",
-                      "value": "1; mode=block"
-                    },
-                    {
-                      "key": "X-Content-Type-Options",
-                      "value": "nosniff"
-                    },
-                    {
-                      "key": "Content-Security-Policy",
-                      "value": "default-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:;"
-                    },
-                    {
-                      "key": "Strict-Transport-Security",
-                      "value": "max-age=31536000"
-                    },
-                    {
-                      "key": "Cache-Control",
-                      "value": "no-store, no-cache, must-revalidate, post-check=0, pre-check=0"
-                    },
-                    {
-                      "key": "Expires",
-                      "value": "Thu, 19 Nov 1981 08:52:00 GMT"
-                    },
-                    {
-                      "key": "Pragma",
-                      "value": "no-cache"
-                    },
-                    {
-                      "key": "Allow",
-                      "value": "GET, HEAD, POST, PUT, DELETE, OPTIONS"
-                    }
-                  ],
-                  "cookie": [],
-                  "responseTime": null,
-                  "body": "<response status=\"success\">\n    <result>\n        <msg>\n            <line>Selected changes were reverted from configuration</line>\n        </msg>\n    </result>\n</response>"
-                }
-              ]
-            },
-            {
               "name": "Show summary of changes",
               "_postman_id": "4442e42c-5fea-4395-948b-8741e9fe53bb",
               "protocolProfileBehavior": {
@@ -6715,6 +6589,41 @@
               "cookie": [],
               "responseTime": null,
               "body": "<response status=\"success\">\n    <result>\n        <msg>\n            <line>\n                <msg>\n                    <line>Config loaded from config.xml</line>\n                </msg>\n            </line>\n        </msg>\n    </result>\n</response>"
+            },
+            {
+              "id": "b6eeb2bf-2676-449f-995d-a6a0c22bf5be",
+              "name": "Partial revert of changes",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "https://{{host}}/api/?type=op&cmd=<revert><config><partial><admin><member>admin</member></admin></partial></config></revert>",
+                  "protocol": "https",
+                  "host": [
+                    "{{host}}"
+                  ],
+                  "path": [
+                    "api",
+                    ""
+                  ],
+                  "query": [
+                    {
+                      "key": "type",
+                      "value": "op"
+                    },
+                    {
+                      "key": "cmd",
+                      "value": "<revert><config><partial><admin><member>admin</member></admin></partial></config></revert>",
+                      "description": "Command to run."
+                    }
+                  ]
+                }
+              },
+              "_postman_previewlanguage": null,
+              "header": null,
+              "cookie": [],
+              "responseTime": null,
+              "body": "<response status=\"success\">\n    <result>\n        <msg>\n            <line>Selected changes were reverted from configuration</line>\n        </msg>\n    </result>\n</response>"
             }
           ]
         },
@@ -10346,13 +10255,13 @@
   ],
   "variable": [
     {
-      "id": "2ee36104-3d26-488b-abc0-c073c92d8f6f",
+      "id": "c086e028-42c6-49b8-8ead-262bac14c53e",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "87163b5b-cbf4-4949-b29a-e3ead4c87abb",
+      "id": "b68d8d0c-4a85-4601-bf3b-046b99f27b6e",
       "key": "{{key}}",
       "value": "",
       "type": "string"
