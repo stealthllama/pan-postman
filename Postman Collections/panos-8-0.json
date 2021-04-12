@@ -6860,41 +6860,6 @@
               "cookie": [],
               "responseTime": null,
               "body": "<response status=\"success\">\n    <result>\n        <commit-locks>\n            <entry name=\"admin\">\n                <type>shared</type>\n                <name>shared</name>\n                <created>2020/11/24 12:35:14</created>\n                <last-activity>2020/11/24 12:35:14</last-activity>\n                <loggedin>yes</loggedin>\n                <comment>\n                    <![CDATA[(null)]]>\n                </comment>\n            </entry>\n        </commit-locks>\n    </result>\n</response>"
-            },
-            {
-              "id": "c2a4e67d-d32f-4546-a1a6-823e8363b35e",
-              "name": "Show sanctioned apps",
-              "originalRequest": {
-                "method": "GET",
-                "header": [],
-                "url": {
-                  "raw": "https://{{host}}/api/?type=op&cmd=<show><commit-locks><vsys>all</vsys></commit-locks></show>",
-                  "protocol": "https",
-                  "host": [
-                    "{{host}}"
-                  ],
-                  "path": [
-                    "api",
-                    ""
-                  ],
-                  "query": [
-                    {
-                      "key": "type",
-                      "value": "op"
-                    },
-                    {
-                      "key": "cmd",
-                      "value": "<show><commit-locks><vsys>all</vsys></commit-locks></show>",
-                      "description": "Command to run."
-                    }
-                  ]
-                }
-              },
-              "_postman_previewlanguage": "xml",
-              "header": null,
-              "cookie": [],
-              "responseTime": null,
-              "body": "<response status=\"success\">\n    <result>\n        <commit-locks>\n            <entry name=\"admin\">\n                <type>shared</type>\n                <name>shared</name>\n                <created>2020/11/24 12:35:14</created>\n                <last-activity>2020/11/24 12:35:14</last-activity>\n                <loggedin>yes</loggedin>\n                <comment>\n                    <![CDATA[(null)]]>\n                </comment>\n            </entry>\n        </commit-locks>\n    </result>\n</response>"
             }
           ]
         },
@@ -12135,12 +12100,12 @@
   ],
   "variable": [
     {
-      "id": "2ca0274e-bd7b-4a97-a340-802b9fec6d63",
+      "id": "b80df7f3-5e65-481c-9190-0ae6c6a79898",
       "key": "{{host}}",
       "value": ""
     },
     {
-      "id": "2d9dd248-b649-4743-8efb-2e7b3f84be33",
+      "id": "e03cffe3-9d94-404c-bd8b-4ce9bdac5df4",
       "key": "{{key}}",
       "value": ""
     }
