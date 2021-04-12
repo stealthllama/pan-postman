@@ -1910,6 +1910,19 @@
                   "body": "<response status=\"success\" code=\"19\">\n    <completions>\n        <completion value=\"vsys1\" vxpath=\"/config/devices/entry[@name='localhost.localdomain']/vsys/entry[@name='vsys1']\" current=\"yes\"/>\n    </completions>\n</response>"
                 }
               ]
+            },
+            {
+              "name": "New Request",
+              "id": "e9bf7768-befb-4a31-ae44-edff4e7fee7e",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": null
+              },
+              "response": []
             }
           ],
           "id": "a69adbc2-0b8b-47f1-ab6f-118ce8aa1a63"
@@ -12100,12 +12113,12 @@
   ],
   "variable": [
     {
-      "id": "b80df7f3-5e65-481c-9190-0ae6c6a79898",
+      "id": "cc73748c-30f0-4993-815c-b4d9f4890aef",
       "key": "{{host}}",
       "value": ""
     },
     {
-      "id": "e03cffe3-9d94-404c-bd8b-4ce9bdac5df4",
+      "id": "ae0e01b2-c640-48dd-a7e1-64995bc8d126",
       "key": "{{key}}",
       "value": ""
     }
