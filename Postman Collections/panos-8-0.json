@@ -6863,7 +6863,7 @@
             },
             {
               "id": "c2a4e67d-d32f-4546-a1a6-823e8363b35e",
-              "name": "Show commit locks Copy",
+              "name": "Show sanctioned apps",
               "originalRequest": {
                 "method": "GET",
                 "header": [],
@@ -12104,11 +12104,18 @@
       }
     }
   ],
+  "auth": {
+    "type": "basic",
+    "basic": {
+      "password": "PaloAlto123!",
+      "username": "admin"
+    }
+  },
   "event": [
     {
       "listen": "prerequest",
       "script": {
-        "id": "a1a8cced-d13e-4366-a188-ca7eafdd3644",
+        "id": "8a1365f7-5adb-4374-a7ff-f9163b0b459c",
         "type": "text/javascript",
         "exec": [
           ""
@@ -12118,7 +12125,7 @@
     {
       "listen": "test",
       "script": {
-        "id": "76989e2e-4912-4db7-a7f2-696947e74517",
+        "id": "eb3b0ad1-9e50-40f6-8cec-64cf018629ac",
         "type": "text/javascript",
         "exec": [
           ""
@@ -12128,12 +12135,12 @@
   ],
   "variable": [
     {
-      "id": "d0a632ef-d670-4d77-8ab0-b3f6d23a7223",
+      "id": "2ca0274e-bd7b-4a97-a340-802b9fec6d63",
       "key": "{{host}}",
       "value": ""
     },
     {
-      "id": "3efdaace-4a23-4d73-8e2b-7bac382d59c7",
+      "id": "2d9dd248-b649-4743-8efb-2e7b3f84be33",
       "key": "{{key}}",
       "value": ""
     }
