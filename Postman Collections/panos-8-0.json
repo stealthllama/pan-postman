@@ -12080,6 +12080,11 @@
           "key": "X-PAN-KEY"
         }
       }
+    },
+    {
+      "name": "New Folder",
+      "item": [],
+      "id": "5eec85fd-15c9-4d51-8bba-2d08923d6e99"
     }
   ],
   "auth": {
@@ -12113,12 +12118,12 @@
   ],
   "variable": [
     {
-      "id": "1d5d308e-b4c6-412a-a739-f0baae195c87",
+      "id": "211f2ee0-80ba-4059-86b8-9f702f5dc643",
       "key": "{{host}}",
       "value": ""
     },
     {
-      "id": "31ea3512-013b-476c-8a3c-54de81f0d27a",
+      "id": "673180d7-7f2c-4c70-b6a7-d98fed0a4fce",
       "key": "{{key}}",
       "value": ""
     }
