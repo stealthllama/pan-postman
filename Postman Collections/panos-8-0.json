@@ -12142,13 +12142,13 @@
   ],
   "variable": [
     {
-      "id": "7f609a4c-f394-4588-8464-af05f1faa67e",
+      "id": "97418cdd-01f1-4701-99da-2c358da40cc8",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "ce9d0331-eb2a-4bda-9dc6-d441f309ad88",
+      "id": "15c4cf39-0315-4c65-a7fc-64c624b1c134",
       "key": "{{key}}",
       "value": "",
       "type": "string"
