@@ -12109,11 +12109,6 @@
           "key": "X-PAN-KEY"
         }
       }
-    },
-    {
-      "name": "New Folder",
-      "item": [],
-      "_postman_id": "5eec85fd-15c9-4d51-8bba-2d08923d6e99"
     }
   ],
   "auth": {
@@ -12147,13 +12142,13 @@
   ],
   "variable": [
     {
-      "id": "30fbdc69-e9e1-4b8f-b4e1-bc417f07ce6a",
+      "id": "7f609a4c-f394-4588-8464-af05f1faa67e",
       "key": "{{host}}",
       "value": "",
       "type": "string"
     },
     {
-      "id": "fa561661-a41c-42ca-9b75-eb59339e9117",
+      "id": "ce9d0331-eb2a-4bda-9dc6-d441f309ad88",
       "key": "{{key}}",
       "value": "",
       "type": "string"
