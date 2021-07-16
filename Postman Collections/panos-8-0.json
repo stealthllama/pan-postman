@@ -2,7 +2,7 @@
   "info": {
     "_postman_id": "241ff148-5458-dde5-cbaa-a80527e7dc55",
     "name": "PAN-OS XML API",
-    "description": "This is a companion Postman collection for the official [PAN-OS XML API documentation](https://docs.paloaltonetworks.com/pan-os/10-0/pan-os-panorama-api.html).  This is meant to provide easy to run examples of the PAN-OS API calls used in the documentation.  It is **not meant** to be a comprehensive database of the possible calls.\n\nFor determining the appropriate API calls for your use case, see the following sections in the documentation:\n\n- [Use the API Browser](https://docs.paloaltonetworks.com/pan-os/10-0/pan-os-panorama-api/get-started-with-the-pan-os-xml-api/explore-the-api/use-the-api-browser.html)\n- [Use the CLI to find XML API Syntax](https://docs.paloaltonetworks.com/pan-os/10-0/pan-os-panorama-api/get-started-with-the-pan-os-xml-api/explore-the-api/use-the-cli-to-find-xml-api-syntax.html)\n- [Use the Web Interface to find XML API Syntax](https://docs.paloaltonetworks.com/pan-os/10-0/pan-os-panorama-api/get-started-with-the-pan-os-xml-api/explore-the-api/use-the-cli-to-find-xml-api-syntax.html)\n\n# Using this collection\n\nUse the **Run in Postman** button to copy this collection to your Postman workspace.\n\nTo use the examples in this guide, you must define the following Postman environment [variables](https://learning.postman.com/docs/sending-requests/variables/):\n\n| Variable | Description |\n| -------- | ------------|\n| **host** | IP address of the PAN-OS device you wish to interact with. |\n| **key**  | A PAN-OS API key, which will be used in the `X-PAN-KEY` HTTP header for authentication to the device. See the [Authentication section](https://documenter.getpostman.com/view/2937330/7LgDQwG#8d657926-6a63-40c0-a285-7cb3a670e5c9) for how to generate it. |\n\n\n# Request Structure\n\nView the [official documentation](https://docs.paloaltonetworks.com/pan-os/10-0/pan-os-panorama-api/about-the-pan-os-xml-api/structure-of-a-pan-os-xml-api-request.html).\n\nA PAN-OS XML API request typically consists of the following parameters:\n\n| Parameter | Description |\n| --------- | ----------- |\n| **type**  | The type of request being made. |\n| **action** | When the request type is `config` or `op`, an associated action must be specified. |\n| **xpath** | When the request type is `config`, operate on the portion of the config located at this XPath. |\n| **cmd** | When request type is `op`, perform this command. |\n\nRequests to the PAN-OS XML API can be performed using the `GET` and `POST` HTTP methods.\n\n\n## GET Requests\n\nUse a GET request when the query size is less than 2K and you want to pass strings in the request URL.  Append the query string to the request URL as a URL-encoded parameter string:\n\n```\nGET /api/?type=keygen&user=username&password=password\n```\n\n\n## POST Requests\n\nUse a POST request when you are sending large amounts of form data (max request size of 5MB) or when you are passing non-ASCII characters.  Some API requests, such as importing files, require `POST`.  When using this method, pass the parameters in the request body, including the login credentials:\n\n```\nPOST /api/ HTTP/1.1 \nContent-Type: application/x-www-form-urlencoded \npassword=password&user=username&type=keygen\n```\n\n# Error Codes\n\nView the [official documentation](https://docs.paloaltonetworks.com/pan-os/10-0/pan-os-panorama-api/get-started-with-the-pan-os-xml-api/pan-os-xml-api-error-codes.html).\n\nThe API response XML contains a status field and an error field.  These are the available API error codes and names:\n\n| Error Code | Name | Description |\n| ---------- | ---- | ----------- |\n| 400 | Bad Request | A required parameter is missing, or an illegal parameter value was used. |\n| 403 | Forbidden | Authentication or authorization errors, including invalid key or insufficient admin access rights. |\n| 1   | Unknown Command | The specific config or operational command is not recognized. |\n| 2-5 | Internal Errors | Check with technical support. |\n| 6   | Bad Xpath | The xpath specified in one or more attributes of the command is invalid.  Check the API browser for proper xpath values. |\n| 7   | Object not present | Object specified by the xpath is not present. |\n| 8   | Object not unique  | For commands that operate on a single object, the specified object is not unique. |\n| 10  | Reference count not zero | Object cannot be deleted as there are other objects that refer to it. |\n| 11  | Internal error | Check with technical support. |\n| 12  | Invalid object | Xpath or element values provided are not complete. |\n| 14  | Operation not possible | Operation is allowed, but not possible in this case.  For example, moving a rule up one position when it is already at the top. |\n| 15  | Operation denied | Operation is not allowed.  For example, admin not allowed to delete own account, or running a command that is not allowed on a passive device. |\n| 16  | Unauthorized | The API role does not have access rights to run this query. |\n| 17  | Invalid command | Invalid command or parameters. |\n| 18  | Malformed command | The XML is malformed. |\n| 19-20 | Success | Command completed successfully. |\n| 21 | Internal error | Check with technical support. |\n| 22 | Session timed out | The session for this query timed out. |\n\n",
+    "description": "This is a companion Postman collection for the official [PAN-OS XML API documentation](https://docs.paloaltonetworks.com/pan-os/10-1/pan-os-panorama-api.html).  This is meant to provide easy to run examples of the PAN-OS API calls used in the documentation.  It is **not meant** to be a comprehensive database of the possible calls.\n\nFor determining the appropriate API calls for your use case, see the following sections in the documentation:\n\n- [Use the API Browser](https://docs.paloaltonetworks.com/pan-os/10-1/pan-os-panorama-api/get-started-with-the-pan-os-xml-api/explore-the-api/use-the-api-browser.html)\n- [Use the CLI to find XML API Syntax](https://docs.paloaltonetworks.com/pan-os/10-1/pan-os-panorama-api/get-started-with-the-pan-os-xml-api/explore-the-api/use-the-cli-to-find-xml-api-syntax.html)\n- [Use the Web Interface to find XML API Syntax](https://docs.paloaltonetworks.com/pan-os/10-1/pan-os-panorama-api/get-started-with-the-pan-os-xml-api/explore-the-api/use-the-cli-to-find-xml-api-syntax.html)\n\n# Using this collection\n\nUse the **Run in Postman** button to copy this collection to your Postman workspace.\n\nTo use the examples in this guide, you must define the following Postman environment [variables](https://learning.postman.com/docs/sending-requests/variables/):\n\n| Variable | Description |\n| -------- | ------------|\n| **host** | IP address of the PAN-OS device you wish to interact with. |\n| **key**  | A PAN-OS API key, which will be used in the `X-PAN-KEY` HTTP header for authentication to the device. See the [Authentication section](https://documenter.getpostman.com/view/2937330/7LgDQwG#8d657926-6a63-40c0-a285-7cb3a670e5c9) for how to generate it. |\n\n\n# Request Structure\n\nView the [official documentation](https://docs.paloaltonetworks.com/pan-os/10-1/pan-os-panorama-api/about-the-pan-os-xml-api/structure-of-a-pan-os-xml-api-request.html).\n\nA PAN-OS XML API request typically consists of the following parameters:\n\n| Parameter | Description |\n| --------- | ----------- |\n| **type**  | The type of request being made. |\n| **action** | When the request type is `config` or `op`, an associated action must be specified. |\n| **xpath** | When the request type is `config`, operate on the portion of the config located at this XPath. |\n| **cmd** | When request type is `op`, perform this command. |\n\nRequests to the PAN-OS XML API can be performed using the `GET` and `POST` HTTP methods.\n\n\n## GET Requests\n\nUse a GET request when the query size is less than 2K and you want to pass strings in the request URL.  Append the query string to the request URL as a URL-encoded parameter string:\n\n```\nGET /api/?type=keygen&user=username&password=password\n```\n\n\n## POST Requests\n\nUse a POST request when you are sending large amounts of form data (max request size of 5MB) or when you are passing non-ASCII characters.  Some API requests, such as importing files, require `POST`.  When using this method, pass the parameters in the request body, including the login credentials:\n\n```\nPOST /api/ HTTP/1.1 \nContent-Type: application/x-www-form-urlencoded \npassword=password&user=username&type=keygen\n```\n\n# Error Codes\n\nView the [official documentation](https://docs.paloaltonetworks.com/pan-os/10-1/pan-os-panorama-api/get-started-with-the-pan-os-xml-api/pan-os-xml-api-error-codes.html).\n\nThe API response XML contains a status field and an error field.  These are the available API error codes and names:\n\n| Error Code | Name | Description |\n| ---------- | ---- | ----------- |\n| 400 | Bad Request | A required parameter is missing, or an illegal parameter value was used. |\n| 403 | Forbidden | Authentication or authorization errors, including invalid key or insufficient admin access rights. |\n| 1   | Unknown Command | The specific config or operational command is not recognized. |\n| 2-5 | Internal Errors | Check with technical support. |\n| 6   | Bad Xpath | The xpath specified in one or more attributes of the command is invalid.  Check the API browser for proper xpath values. |\n| 7   | Object not present | Object specified by the xpath is not present. |\n| 8   | Object not unique  | For commands that operate on a single object, the specified object is not unique. |\n| 10  | Reference count not zero | Object cannot be deleted as there are other objects that refer to it. |\n| 11  | Internal error | Check with technical support. |\n| 12  | Invalid object | Xpath or element values provided are not complete. |\n| 14  | Operation not possible | Operation is allowed, but not possible in this case.  For example, moving a rule up one position when it is already at the top. |\n| 15  | Operation denied | Operation is not allowed.  For example, admin not allowed to delete own account, or running a command that is not allowed on a passive device. |\n| 16  | Unauthorized | The API role does not have access rights to run this query. |\n| 17  | Invalid command | Invalid command or parameters. |\n| 18  | Malformed command | The XML is malformed. |\n| 19-20 | Success | Command completed successfully. |\n| 21 | Internal error | Check with technical support. |\n| 22 | Session timed out | The session for this query timed out. |",
     "schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
   },
   "item": [
@@ -11,7 +11,7 @@
       "item": [
         {
           "name": "Generate API key",
-          "_postman_id": "5a6eec54-51a0-9716-fa38-5f894bf3c2ff",
+          "id": "5a6eec54-51a0-9716-fa38-5f894bf3c2ff",
           "protocolProfileBehavior": {
             "disableBodyPruning": true
           },
@@ -96,8 +96,8 @@
           ]
         }
       ],
-      "_postman_id": "8d657926-6a63-40c0-a285-7cb3a670e5c9",
-      "description": "View the [official documentation](https://docs.paloaltonetworks.com/pan-os/10-0/pan-os-panorama-api/about-the-pan-os-xml-api/structure-of-a-pan-os-xml-api-request/api-authentication-and-security.html).\n\nTo authenticate to the PAN-OS device, provide the API key along with your request in any of the following ways:\n\n- The `X-PAN-KEY` HTTP header.\n- The `key` request URL parameter (must be URL-encoded).\n- Use [Basic Authentication](https://en.wikipedia.org/wiki/Basic_access_authentication#Client_side) to pass the admin credentials as `username:password` with Base64 encoding in an Authorization header field.\n\n**Note:** You cannot use basic authentication with an API key.\n\nSee the [Generate API key](https://documenter.getpostman.com/view/2937330/7LgDQwG#5a6eec54-51a0-9716-fa38-5f894bf3c2ff) request for how to generate an API key.",
+      "id": "8d657926-6a63-40c0-a285-7cb3a670e5c9",
+      "description": "View the [official documentation](https://docs.paloaltonetworks.com/pan-os/10-1/pan-os-panorama-api/about-the-pan-os-xml-api/structure-of-a-pan-os-xml-api-request/api-authentication-and-security.html).\n\nTo authenticate to the PAN-OS device, provide the API key along with your request in any of the following ways:\n\n- The `X-PAN-KEY` HTTP header.\n- The `key` request URL parameter (must be URL-encoded).\n- Use [Basic Authentication](https://en.wikipedia.org/wiki/Basic_access_authentication#Client_side) to pass the admin credentials as `username:password` with Base64 encoding in an Authorization header field.\n\n**Note:** You cannot use basic authentication with an API key.\n\nSee the [Generate API key](https://documenter.getpostman.com/view/2937330/7LgDQwG#5a6eec54-51a0-9716-fa38-5f894bf3c2ff) request for how to generate an API key.",
       "auth": {
         "type": "noauth"
       }
@@ -110,7 +110,7 @@
           "item": [
             {
               "name": "Get running configuration",
-              "_postman_id": "8cbb53c9-7ece-4935-9517-e234c972c1ed",
+              "id": "8cbb53c9-7ece-4935-9517-e234c972c1ed",
               "protocolProfileBehavior": {
                 "disableBodyPruning": true
               },
@@ -278,7 +278,7 @@
             },
             {
               "name": "Get candidate configuration",
-              "_postman_id": "6e565f9d-2097-4796-a602-c0bc0debac20",
+              "id": "6e565f9d-2097-4796-a602-c0bc0debac20",
               "protocolProfileBehavior": {
                 "disableBodyPruning": true
               },
@@ -319,6 +319,172 @@
                 "description": "The `get` action retrieves the **candidate configuration**, which consists of proposed changes to the running configuration.\n\nChanges that have not been committed will contain extra attributes related to what has changed:\n\n| Attribute | Description |\n| --------- | ------------|\n| **admin** | Admin account that made the change. |\n| **time**  | Time the change was made. |\n| **oldname** | In case of a renamed element, the name it was previously. |"
               },
               "response": [
+                {
+                  "id": "e2c6d035-dc96-4c47-a566-1632c4638a1e",
+                  "name": "Get candidate configuration",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [],
+                    "url": {
+                      "raw": "https://{{host}}/api/?type=config&action=get&xpath=/config/devices/entry/vsys/entry[@name='vsys1']",
+                      "protocol": "https",
+                      "host": [
+                        "{{host}}"
+                      ],
+                      "path": [
+                        "api",
+                        ""
+                      ],
+                      "query": [
+                        {
+                          "key": "type",
+                          "value": "config"
+                        },
+                        {
+                          "key": "action",
+                          "value": "get"
+                        },
+                        {
+                          "key": "xpath",
+                          "value": "/config/devices/entry/vsys/entry[@name='vsys1']",
+                          "description": "*Optional*.  XPath to desired portion of configuration."
+                        }
+                      ]
+                    }
+                  },
+                  "_postman_previewlanguage": "xml",
+                  "header": null,
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "<response status=\"success\" code=\"19\">\n    <result total-count=\"1\" count=\"1\">\n        <entry name=\"vsys1\">\n            ... example output truncated ...\n        </entry>\n    </result>\n</response>"
+                },
+                {
+                  "id": "e374d446-4e9a-4e8b-a1d1-b07395f11905",
+                  "name": "Get candidate configuration of firewall through Panorama",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [],
+                    "url": {
+                      "raw": "https://{{host}}/api/?type=config&action=get&xpath=/config/devices/entry[@name='localhost.localdomain']/vsys/entry[@name='vsys1']&target=007000001222",
+                      "protocol": "https",
+                      "host": [
+                        "{{host}}"
+                      ],
+                      "path": [
+                        "api",
+                        ""
+                      ],
+                      "query": [
+                        {
+                          "key": "type",
+                          "value": "config"
+                        },
+                        {
+                          "key": "action",
+                          "value": "get"
+                        },
+                        {
+                          "key": "xpath",
+                          "value": "/config/devices/entry[@name='localhost.localdomain']/vsys/entry[@name='vsys1']",
+                          "description": "*Optional*.  XPath to desired portion of configuration."
+                        },
+                        {
+                          "key": "target",
+                          "value": "007000001222",
+                          "description": "*Optional*. If host is a Panorama instance, use it to target a specific firewall."
+                        }
+                      ]
+                    }
+                  },
+                  "_postman_previewlanguage": "xml",
+                  "header": null,
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "<response status=\"success\" code=\"19\">\n    <result total-count=\"1\" count=\"1\">\n        <entry name=\"vsys1\">\n            <application/>\n            <application-group/>\n            <zone>\n                <entry name=\"untrust\">\n                    <network>\n                        <layer3/>\n                    </network>\n                </entry>\n                <entry name=\"trust\">\n                    <network>\n                        <layer3/>\n                    </network>\n                </entry>\n            </zone>\n            <service/>\n            <service-group/>\n            <schedule/>\n            <rulebase>\n                <security>\n                    <rules>\n                        <entry name=\"IT DNS Services\" uuid=\"3e08654f-472b-4a0e-aaac-9873ef45b51a\">\n                            <to>\n                                <member>trust</member>\n                            </to>\n                            <from>\n                                <member>untrust</member>\n                            </from>\n                            <source>\n                                <member>any</member>\n                            </source>\n                            <destination>\n                                <member>Data-Center</member>\n                            </destination>\n                            <source-user>\n                                <member>any</member>\n                            </source-user>\n                            <category>\n                                <member>any</member>\n                            </category>\n                            <application>\n                                <member>dns</member>\n                            </application>\n                            <service>\n                                <member>application-default</member>\n                            </service>\n                            <source-hip>\n                                <member>any</member>\n                            </source-hip>\n                            <destination-hip>\n                                <member>any</member>\n                            </destination-hip>\n                            <action>allow</action>\n                            <log-setting>default</log-setting>\n                        </entry>\n                        <entry name=\"Outbound Access\" uuid=\"c9c0bae4-ba99-4271-ab2b-2e87b0436240\">\n                            <to>\n                                <member>untrust</member>\n                            </to>\n                            <from>\n                                <member>trust</member>\n                            </from>\n                            <source>\n                                <member>any</member>\n                            </source>\n                            <destination>\n                                <member>any</member>\n                            </destination>\n                            <source-user>\n                                <member>any</member>\n                            </source-user>\n                            <category>\n                                <member>any</member>\n                            </category>\n                            <application>\n                                <member>any</member>\n                            </application>\n                            <service>\n                                <member>application-default</member>\n                            </service>\n                            <source-hip>\n                                <member>any</member>\n                            </source-hip>\n                            <destination-hip>\n                                <member>any</member>\n                            </destination-hip>\n                            <action>allow</action>\n                            <log-setting>default</log-setting>\n                        </entry>\n                    </rules>\n                </security>\n                <default-security-rules>\n                    <rules>\n                        <entry name=\"interzone-default\" uuid=\"3825e2ed-b9cc-4d92-abae-662faa0ea467\">\n                            <action>deny</action>\n                            <log-start>no</log-start>\n                            <log-end>yes</log-end>\n                        </entry>\n                    </rules>\n                </default-security-rules>\n                <nat>\n                    <rules/>\n                </nat>\n            </rulebase>\n            <import>\n                <network>\n                    <interface>\n                        <member>ethernet1/1</member>\n                        <member>ethernet1/2</member>\n                    </interface>\n                </network>\n            </import>\n            <address>\n                <entry name=\"Data-Center-192.168.1.0-24\">\n                    <ip-netmask>192.168.1.0/24</ip-netmask>\n                </entry>\n                <entry name=\"Data-Center-192.168.2.0-24\">\n                    <ip-netmask>192.168.2.0/24</ip-netmask>\n                </entry>\n                <entry name=\"Old-Address\">\n                    <ip-netmask>1.1.1.1</ip-netmask>\n                </entry>\n                <entry name=\"New-Address\">\n                    <ip-netmask>1.1.1.1</ip-netmask>\n                </entry>\n            </address>\n            <user-id-collector>\n                <setting/>\n            </user-id-collector>\n            <log-settings>\n                <profiles>\n                    <entry name=\"default\">\n                        <match-list/>\n                    </entry>\n                </profiles>\n            </log-settings>\n            <profile-group>\n                <entry name=\"Best-Practice\">\n                    <virus>\n                        <member>default</member>\n                    </virus>\n                    <spyware>\n                        <member>strict</member>\n                    </spyware>\n                    <vulnerability>\n                        <member>strict</member>\n                    </vulnerability>\n                    <wildfire-analysis>\n                        <member>default</member>\n                    </wildfire-analysis>\n                </entry>\n            </profile-group>\n            <address-group>\n                <entry name=\"Data-Center\">\n                    <static>\n                        <member>Data-Center-192.168.1.0-24</member>\n                    </static>\n                </entry>\n            </address-group>\n        </entry>\n    </result>\n</response>"
+                },
+                {
+                  "id": "2d8b4d45-e47c-4409-86f9-7f33019ad869",
+                  "name": "Get list of predefined applications",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [],
+                    "url": {
+                      "raw": "https://{{host}}/api/?type=config&action=get&xpath=/config/predefined/application",
+                      "protocol": "https",
+                      "host": [
+                        "{{host}}"
+                      ],
+                      "path": [
+                        "api",
+                        ""
+                      ],
+                      "query": [
+                        {
+                          "key": "type",
+                          "value": "config"
+                        },
+                        {
+                          "key": "action",
+                          "value": "get"
+                        },
+                        {
+                          "key": "xpath",
+                          "value": "/config/predefined/application",
+                          "description": "*Optional*.  XPath to desired portion of configuration."
+                        },
+                        {
+                          "key": "target",
+                          "value": " ",
+                          "description": "*Optional*. If host is a Panorama instance, use it to target a specific firewall.",
+                          "disabled": true
+                        }
+                      ]
+                    }
+                  },
+                  "_postman_previewlanguage": "xml",
+                  "header": null,
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "<response status=\"success\" code=\"19\">\n    <result total-count=\"1\" count=\"1\">\n        <application>\n            <entry id=\"120\" name=\"100bao\" ori_country=\"USA\" ori_language=\"English\">\n                <category>general-internet</category>\n                <subcategory>file-sharing</subcategory>\n                <technology>peer-to-peer</technology>\n                <evasive-behavior>yes</evasive-behavior>\n                <consume-big-bandwidth>yes</consume-big-bandwidth>\n                <used-by-malware>yes</used-by-malware>\n                <able-to-transfer-file>yes</able-to-transfer-file>\n                <has-known-vulnerability>yes</has-known-vulnerability>\n                <tunnel-other-application>no</tunnel-other-application>\n                <prone-to-misuse>yes</prone-to-misuse>\n                <pervasive-use>yes</pervasive-use>\n                <risk>5</risk>\n                <references>\n                    <entry name=\"www.100bao.com\">\n                        <link>http://www.100bao.com/</link>\n                    </entry>\n                </references>\n                <default>\n                    <port>\n                        <member>tcp/3468,6346,11300</member>\n                    </port>\n                </default>\n            </entry>\n            <entry id=\"1797\" minver=\"3.1.0\" name=\"104apci-supervisory\" ori_country=\"USA\" ori_language=\"English\">\n                <category>business-systems</category>\n                <subcategory>ics-protocols</subcategory>\n                <technology>client-server</technology>\n                <evasive-behavior>no</evasive-behavior>\n                <consume-big-bandwidth>no</consume-big-bandwidth>\n                <used-by-malware>no</used-by-malware>\n                <able-to-transfer-file>no</able-to-transfer-file>\n                <has-known-vulnerability>yes</has-known-vulnerability>\n                <tunnel-other-application>yes</tunnel-other-application>\n                <prone-to-misuse>no</prone-to-misuse>\n                <pervasive-use>yes</pervasive-use>\n                <references>\n                    <entry name=\"Wikipedia\">\n                        <link>http://en.wikipedia.org/wiki/IEC_60870-5</link>\n                    </entry>\n                </references>\n                <default>\n                    <port>\n                        <member>tcp/2404</member>\n                    </port>\n                </default>\n                <use-applications minver=\"3.1.0\">\n                    <member minver=\"3.1.0\">iec-60870-5-104-base</member>\n                </use-applications>\n                <tunnel-applications minver=\"3.1.0\">\n                    <member minver=\"3.1.0\">ctd-dummy</member>\n                </tunnel-applications>\n                <risk>2</risk>\n                <application-container>iec-60870-5-104</application-container>\n            </entry>\n \n            ... example output truncated ...\n        </application>\n    </result>\n</response>"
+                },
+                {
+                  "id": "7997bca2-e209-4a29-ae23-68e4e67fb0d4",
+                  "name": "Get specific application details",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [],
+                    "url": {
+                      "raw": "https://{{host}}/api/?type=config&action=get&xpath=/config/predefined/application/entry[@name='hotmail']",
+                      "protocol": "https",
+                      "host": [
+                        "{{host}}"
+                      ],
+                      "path": [
+                        "api",
+                        ""
+                      ],
+                      "query": [
+                        {
+                          "key": "type",
+                          "value": "config"
+                        },
+                        {
+                          "key": "action",
+                          "value": "get"
+                        },
+                        {
+                          "key": "xpath",
+                          "value": "/config/predefined/application/entry[@name='hotmail']"
+                        }
+                      ]
+                    }
+                  },
+                  "_postman_previewlanguage": "xml",
+                  "header": null,
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "<response status=\"success\" code=\"19\">\n    <result total-count=\"1\" count=\"1\">\n        <entry id=\"74\" name=\"hotmail\" ori_country=\"USA\" ori_language=\"English\">\n            <category>collaboration</category>\n            <subcategory>email</subcategory>\n            <technology>browser-based</technology>\n            <virus-ident>yes</virus-ident>\n            <file-type-ident>yes</file-type-ident>\n            <evasive-behavior>no</evasive-behavior>\n            <consume-big-bandwidth>no</consume-big-bandwidth>\n            <used-by-malware>yes</used-by-malware>\n            <able-to-transfer-file>yes</able-to-transfer-file>\n            <has-known-vulnerability>yes</has-known-vulnerability>\n            <tunnel-other-application>no</tunnel-other-application>\n            <prone-to-misuse>no</prone-to-misuse>\n            <pervasive-use>yes</pervasive-use>\n            <data-ident>yes</data-ident>\n            <file-forward>yes</file-forward>\n            <trusted-credential>yes</trusted-credential>\n            <tag minver=\"9.1.0\">\n                <member>[Web App]</member>\n            </tag>\n            <references>\n                <entry name=\"Wikipedia\">\n                    <link>http://en.wikipedia.org/wiki/Hotmail</link>\n                </entry>\n            </references>\n            <default>\n                <port>\n                    <member>tcp/443,995</member>\n                    <member>tcp/80</member>\n                </port>\n            </default>\n            <use-applications>\n                <member minver=\"5.0.0\">office365-consumer-access</member>\n                <member>silverlight</member>\n                <member>ssl</member>\n                <member>web-browsing</member>\n            </use-applications>\n            <tunnel-applications minver=\"3.1.0\">\n                <member minver=\"3.1.0\">sharepoint-online</member>\n            </tunnel-applications>\n            <risk>4</risk>\n        </entry>\n    </result>\n</response>"
+                },
                 {
                   "id": "0a63c442-d820-4cf7-a6f7-651af569a0c1",
                   "name": "Get address objects",
@@ -418,178 +584,12 @@
                   "cookie": [],
                   "responseTime": null,
                   "body": "<response status=\"success\" code=\"19\">\n    <result total-count=\"1\" count=\"1\">\n        <address>\n            <entry name=\"Test-One\">\n                <ip-netmask>1.1.1.1</ip-netmask>\n            </entry>\n            <entry name=\"Test-Two\">\n                <ip-netmask>2.2.2.2</ip-netmask>\n            </entry>\n            <entry name=\"Test-Three\">\n                <ip-netmask>3.3.3.3</ip-netmask>\n            </entry>\n        </address>\n    </result>\n</response>"
-                },
-                {
-                  "id": "2d8b4d45-e47c-4409-86f9-7f33019ad869",
-                  "name": "Get list of predefined applications",
-                  "originalRequest": {
-                    "method": "GET",
-                    "header": [],
-                    "url": {
-                      "raw": "https://{{host}}/api/?type=config&action=get&xpath=/config/predefined/application",
-                      "protocol": "https",
-                      "host": [
-                        "{{host}}"
-                      ],
-                      "path": [
-                        "api",
-                        ""
-                      ],
-                      "query": [
-                        {
-                          "key": "type",
-                          "value": "config"
-                        },
-                        {
-                          "key": "action",
-                          "value": "get"
-                        },
-                        {
-                          "key": "xpath",
-                          "value": "/config/predefined/application",
-                          "description": "*Optional*.  XPath to desired portion of configuration."
-                        },
-                        {
-                          "key": "target",
-                          "value": " ",
-                          "description": "*Optional*. If host is a Panorama instance, use it to target a specific firewall.",
-                          "disabled": true
-                        }
-                      ]
-                    }
-                  },
-                  "_postman_previewlanguage": "xml",
-                  "header": null,
-                  "cookie": [],
-                  "responseTime": null,
-                  "body": "<response status=\"success\" code=\"19\">\n    <result total-count=\"1\" count=\"1\">\n        <application>\n            <entry id=\"120\" name=\"100bao\" ori_country=\"USA\" ori_language=\"English\">\n                <category>general-internet</category>\n                <subcategory>file-sharing</subcategory>\n                <technology>peer-to-peer</technology>\n                <evasive-behavior>yes</evasive-behavior>\n                <consume-big-bandwidth>yes</consume-big-bandwidth>\n                <used-by-malware>yes</used-by-malware>\n                <able-to-transfer-file>yes</able-to-transfer-file>\n                <has-known-vulnerability>yes</has-known-vulnerability>\n                <tunnel-other-application>no</tunnel-other-application>\n                <prone-to-misuse>yes</prone-to-misuse>\n                <pervasive-use>yes</pervasive-use>\n                <risk>5</risk>\n                <references>\n                    <entry name=\"www.100bao.com\">\n                        <link>http://www.100bao.com/</link>\n                    </entry>\n                </references>\n                <default>\n                    <port>\n                        <member>tcp/3468,6346,11300</member>\n                    </port>\n                </default>\n            </entry>\n            <entry id=\"1797\" minver=\"3.1.0\" name=\"104apci-supervisory\" ori_country=\"USA\" ori_language=\"English\">\n                <category>business-systems</category>\n                <subcategory>ics-protocols</subcategory>\n                <technology>client-server</technology>\n                <evasive-behavior>no</evasive-behavior>\n                <consume-big-bandwidth>no</consume-big-bandwidth>\n                <used-by-malware>no</used-by-malware>\n                <able-to-transfer-file>no</able-to-transfer-file>\n                <has-known-vulnerability>yes</has-known-vulnerability>\n                <tunnel-other-application>yes</tunnel-other-application>\n                <prone-to-misuse>no</prone-to-misuse>\n                <pervasive-use>yes</pervasive-use>\n                <references>\n                    <entry name=\"Wikipedia\">\n                        <link>http://en.wikipedia.org/wiki/IEC_60870-5</link>\n                    </entry>\n                </references>\n                <default>\n                    <port>\n                        <member>tcp/2404</member>\n                    </port>\n                </default>\n                <use-applications minver=\"3.1.0\">\n                    <member minver=\"3.1.0\">iec-60870-5-104-base</member>\n                </use-applications>\n                <tunnel-applications minver=\"3.1.0\">\n                    <member minver=\"3.1.0\">ctd-dummy</member>\n                </tunnel-applications>\n                <risk>2</risk>\n                <application-container>iec-60870-5-104</application-container>\n            </entry>\n \n            ... example output truncated ...\n        </application>\n    </result>\n</response>"
-                },
-                {
-                  "id": "7997bca2-e209-4a29-ae23-68e4e67fb0d4",
-                  "name": "Get specific application details",
-                  "originalRequest": {
-                    "method": "GET",
-                    "header": [],
-                    "url": {
-                      "raw": "https://{{host}}/api/?type=config&action=get&xpath=/config/predefined/application/entry[@name='hotmail']",
-                      "protocol": "https",
-                      "host": [
-                        "{{host}}"
-                      ],
-                      "path": [
-                        "api",
-                        ""
-                      ],
-                      "query": [
-                        {
-                          "key": "type",
-                          "value": "config"
-                        },
-                        {
-                          "key": "action",
-                          "value": "get"
-                        },
-                        {
-                          "key": "xpath",
-                          "value": "/config/predefined/application/entry[@name='hotmail']"
-                        }
-                      ]
-                    }
-                  },
-                  "_postman_previewlanguage": "xml",
-                  "header": null,
-                  "cookie": [],
-                  "responseTime": null,
-                  "body": "<response status=\"success\" code=\"19\">\n    <result total-count=\"1\" count=\"1\">\n        <entry id=\"74\" name=\"hotmail\" ori_country=\"USA\" ori_language=\"English\">\n            <category>collaboration</category>\n            <subcategory>email</subcategory>\n            <technology>browser-based</technology>\n            <virus-ident>yes</virus-ident>\n            <file-type-ident>yes</file-type-ident>\n            <evasive-behavior>no</evasive-behavior>\n            <consume-big-bandwidth>no</consume-big-bandwidth>\n            <used-by-malware>yes</used-by-malware>\n            <able-to-transfer-file>yes</able-to-transfer-file>\n            <has-known-vulnerability>yes</has-known-vulnerability>\n            <tunnel-other-application>no</tunnel-other-application>\n            <prone-to-misuse>no</prone-to-misuse>\n            <pervasive-use>yes</pervasive-use>\n            <data-ident>yes</data-ident>\n            <file-forward>yes</file-forward>\n            <trusted-credential>yes</trusted-credential>\n            <tag minver=\"9.1.0\">\n                <member>[Web App]</member>\n            </tag>\n            <references>\n                <entry name=\"Wikipedia\">\n                    <link>http://en.wikipedia.org/wiki/Hotmail</link>\n                </entry>\n            </references>\n            <default>\n                <port>\n                    <member>tcp/443,995</member>\n                    <member>tcp/80</member>\n                </port>\n            </default>\n            <use-applications>\n                <member minver=\"5.0.0\">office365-consumer-access</member>\n                <member>silverlight</member>\n                <member>ssl</member>\n                <member>web-browsing</member>\n            </use-applications>\n            <tunnel-applications minver=\"3.1.0\">\n                <member minver=\"3.1.0\">sharepoint-online</member>\n            </tunnel-applications>\n            <risk>4</risk>\n        </entry>\n    </result>\n</response>"
-                },
-                {
-                  "id": "e2c6d035-dc96-4c47-a566-1632c4638a1e",
-                  "name": "Get candidate configuration",
-                  "originalRequest": {
-                    "method": "GET",
-                    "header": [],
-                    "url": {
-                      "raw": "https://{{host}}/api/?type=config&action=get&xpath=/config/devices/entry/vsys/entry[@name='vsys1']",
-                      "protocol": "https",
-                      "host": [
-                        "{{host}}"
-                      ],
-                      "path": [
-                        "api",
-                        ""
-                      ],
-                      "query": [
-                        {
-                          "key": "type",
-                          "value": "config"
-                        },
-                        {
-                          "key": "action",
-                          "value": "get"
-                        },
-                        {
-                          "key": "xpath",
-                          "value": "/config/devices/entry/vsys/entry[@name='vsys1']",
-                          "description": "*Optional*.  XPath to desired portion of configuration."
-                        }
-                      ]
-                    }
-                  },
-                  "_postman_previewlanguage": "xml",
-                  "header": null,
-                  "cookie": [],
-                  "responseTime": null,
-                  "body": "<response status=\"success\" code=\"19\">\n    <result total-count=\"1\" count=\"1\">\n        <entry name=\"vsys1\">\n            ... example output truncated ...\n        </entry>\n    </result>\n</response>"
-                },
-                {
-                  "id": "e374d446-4e9a-4e8b-a1d1-b07395f11905",
-                  "name": "Get candidate configuration of firewall through Panorama",
-                  "originalRequest": {
-                    "method": "GET",
-                    "header": [],
-                    "url": {
-                      "raw": "https://{{host}}/api/?type=config&action=get&xpath=/config/devices/entry[@name='localhost.localdomain']/vsys/entry[@name='vsys1']&target=007000001222",
-                      "protocol": "https",
-                      "host": [
-                        "{{host}}"
-                      ],
-                      "path": [
-                        "api",
-                        ""
-                      ],
-                      "query": [
-                        {
-                          "key": "type",
-                          "value": "config"
-                        },
-                        {
-                          "key": "action",
-                          "value": "get"
-                        },
-                        {
-                          "key": "xpath",
-                          "value": "/config/devices/entry[@name='localhost.localdomain']/vsys/entry[@name='vsys1']",
-                          "description": "*Optional*.  XPath to desired portion of configuration."
-                        },
-                        {
-                          "key": "target",
-                          "value": "007000001222",
-                          "description": "*Optional*. If host is a Panorama instance, use it to target a specific firewall."
-                        }
-                      ]
-                    }
-                  },
-                  "_postman_previewlanguage": "xml",
-                  "header": null,
-                  "cookie": [],
-                  "responseTime": null,
-                  "body": "<response status=\"success\" code=\"19\">\n    <result total-count=\"1\" count=\"1\">\n        <entry name=\"vsys1\">\n            <application/>\n            <application-group/>\n            <zone>\n                <entry name=\"untrust\">\n                    <network>\n                        <layer3/>\n                    </network>\n                </entry>\n                <entry name=\"trust\">\n                    <network>\n                        <layer3/>\n                    </network>\n                </entry>\n            </zone>\n            <service/>\n            <service-group/>\n            <schedule/>\n            <rulebase>\n                <security>\n                    <rules>\n                        <entry name=\"IT DNS Services\" uuid=\"3e08654f-472b-4a0e-aaac-9873ef45b51a\">\n                            <to>\n                                <member>trust</member>\n                            </to>\n                            <from>\n                                <member>untrust</member>\n                            </from>\n                            <source>\n                                <member>any</member>\n                            </source>\n                            <destination>\n                                <member>Data-Center</member>\n                            </destination>\n                            <source-user>\n                                <member>any</member>\n                            </source-user>\n                            <category>\n                                <member>any</member>\n                            </category>\n                            <application>\n                                <member>dns</member>\n                            </application>\n                            <service>\n                                <member>application-default</member>\n                            </service>\n                            <source-hip>\n                                <member>any</member>\n                            </source-hip>\n                            <destination-hip>\n                                <member>any</member>\n                            </destination-hip>\n                            <action>allow</action>\n                            <log-setting>default</log-setting>\n                        </entry>\n                        <entry name=\"Outbound Access\" uuid=\"c9c0bae4-ba99-4271-ab2b-2e87b0436240\">\n                            <to>\n                                <member>untrust</member>\n                            </to>\n                            <from>\n                                <member>trust</member>\n                            </from>\n                            <source>\n                                <member>any</member>\n                            </source>\n                            <destination>\n                                <member>any</member>\n                            </destination>\n                            <source-user>\n                                <member>any</member>\n                            </source-user>\n                            <category>\n                                <member>any</member>\n                            </category>\n                            <application>\n                                <member>any</member>\n                            </application>\n                            <service>\n                                <member>application-default</member>\n                            </service>\n                            <source-hip>\n                                <member>any</member>\n                            </source-hip>\n                            <destination-hip>\n                                <member>any</member>\n                            </destination-hip>\n                            <action>allow</action>\n                            <log-setting>default</log-setting>\n                        </entry>\n                    </rules>\n                </security>\n                <default-security-rules>\n                    <rules>\n                        <entry name=\"interzone-default\" uuid=\"3825e2ed-b9cc-4d92-abae-662faa0ea467\">\n                            <action>deny</action>\n                            <log-start>no</log-start>\n                            <log-end>yes</log-end>\n                        </entry>\n                    </rules>\n                </default-security-rules>\n                <nat>\n                    <rules/>\n                </nat>\n            </rulebase>\n            <import>\n                <network>\n                    <interface>\n                        <member>ethernet1/1</member>\n                        <member>ethernet1/2</member>\n                    </interface>\n                </network>\n            </import>\n            <address>\n                <entry name=\"Data-Center-192.168.1.0-24\">\n                    <ip-netmask>192.168.1.0/24</ip-netmask>\n                </entry>\n                <entry name=\"Data-Center-192.168.2.0-24\">\n                    <ip-netmask>192.168.2.0/24</ip-netmask>\n                </entry>\n                <entry name=\"Old-Address\">\n                    <ip-netmask>1.1.1.1</ip-netmask>\n                </entry>\n                <entry name=\"New-Address\">\n                    <ip-netmask>1.1.1.1</ip-netmask>\n                </entry>\n            </address>\n            <user-id-collector>\n                <setting/>\n            </user-id-collector>\n            <log-settings>\n                <profiles>\n                    <entry name=\"default\">\n                        <match-list/>\n                    </entry>\n                </profiles>\n            </log-settings>\n            <profile-group>\n                <entry name=\"Best-Practice\">\n                    <virus>\n                        <member>default</member>\n                    </virus>\n                    <spyware>\n                        <member>strict</member>\n                    </spyware>\n                    <vulnerability>\n                        <member>strict</member>\n                    </vulnerability>\n                    <wildfire-analysis>\n                        <member>default</member>\n                    </wildfire-analysis>\n                </entry>\n            </profile-group>\n            <address-group>\n                <entry name=\"Data-Center\">\n                    <static>\n                        <member>Data-Center-192.168.1.0-24</member>\n                    </static>\n                </entry>\n            </address-group>\n        </entry>\n    </result>\n</response>"
                 }
               ]
             },
             {
               "name": "Set configuration",
-              "_postman_id": "dd25018a-6ee5-402f-af08-270db953970a",
+              "id": "dd25018a-6ee5-402f-af08-270db953970a",
               "protocolProfileBehavior": {
                 "disableBodyPruning": true
               },
@@ -631,13 +631,13 @@
               },
               "response": [
                 {
-                  "id": "326d56c8-06a6-4531-a68d-9a0eb6df0005",
-                  "name": "Create a new IP address on a specific interface",
+                  "id": "341fa94f-dc2a-4ea0-8fe4-af2eb1b01a17",
+                  "name": "Create a security rule",
                   "originalRequest": {
                     "method": "GET",
                     "header": [],
                     "url": {
-                      "raw": "https://{{host}}/api/?type=config&action=set&xpath=/config/devices/entry[@name='localhost.localdomain']/network/interface/ethernet/entry[@name='ethernet1/1']/layer3/ip&element=<entry name='5.5.5.5/24'/>",
+                      "raw": "https://{{host}}/api/?type=config&action=set&xpath=/config/devices/entry[@name='localhost.localdomain']/vsys/entry[@name='vsys1']/rulebase/security/rules/entry[@name='Outbound Access']&element=<to><member>untrust</member></to><from><member>trust</member></from><source><member>any</member></source><destination><member>any</member></destination><source-user><member>any</member></source-user><category><member>any</member></category><application><member>any</member></application><service><member>application-default</member></service><source-hip><member>any</member></source-hip><destination-hip><member>any</member></destination-hip><action>allow</action>",
                       "protocol": "https",
                       "host": [
                         "{{host}}"
@@ -657,12 +657,12 @@
                         },
                         {
                           "key": "xpath",
-                          "value": "/config/devices/entry[@name='localhost.localdomain']/network/interface/ethernet/entry[@name='ethernet1/1']/layer3/ip",
+                          "value": "/config/devices/entry[@name='localhost.localdomain']/vsys/entry[@name='vsys1']/rulebase/security/rules/entry[@name='Outbound Access']",
                           "description": "XPath to desired location in configuration."
                         },
                         {
                           "key": "element",
-                          "value": "<entry name='5.5.5.5/24'/>",
+                          "value": "<to><member>untrust</member></to><from><member>trust</member></from><source><member>any</member></source><destination><member>any</member></destination><source-user><member>any</member></source-user><category><member>any</member></category><application><member>any</member></application><service><member>application-default</member></service><source-hip><member>any</member></source-hip><destination-hip><member>any</member></destination-hip><action>allow</action>",
                           "description": "Contents of element to write."
                         }
                       ]
@@ -829,13 +829,13 @@
                   "body": "<response status=\"success\" code=\"20\">\n    <msg>command succeeded</msg>\n</response>"
                 },
                 {
-                  "id": "341fa94f-dc2a-4ea0-8fe4-af2eb1b01a17",
-                  "name": "Create a security rule",
+                  "id": "326d56c8-06a6-4531-a68d-9a0eb6df0005",
+                  "name": "Create a new IP address on a specific interface",
                   "originalRequest": {
                     "method": "GET",
                     "header": [],
                     "url": {
-                      "raw": "https://{{host}}/api/?type=config&action=set&xpath=/config/devices/entry[@name='localhost.localdomain']/vsys/entry[@name='vsys1']/rulebase/security/rules/entry[@name='Outbound Access']&element=<to><member>untrust</member></to><from><member>trust</member></from><source><member>any</member></source><destination><member>any</member></destination><source-user><member>any</member></source-user><category><member>any</member></category><application><member>any</member></application><service><member>application-default</member></service><source-hip><member>any</member></source-hip><destination-hip><member>any</member></destination-hip><action>allow</action>",
+                      "raw": "https://{{host}}/api/?type=config&action=set&xpath=/config/devices/entry[@name='localhost.localdomain']/network/interface/ethernet/entry[@name='ethernet1/1']/layer3/ip&element=<entry name='5.5.5.5/24'/>",
                       "protocol": "https",
                       "host": [
                         "{{host}}"
@@ -855,12 +855,12 @@
                         },
                         {
                           "key": "xpath",
-                          "value": "/config/devices/entry[@name='localhost.localdomain']/vsys/entry[@name='vsys1']/rulebase/security/rules/entry[@name='Outbound Access']",
+                          "value": "/config/devices/entry[@name='localhost.localdomain']/network/interface/ethernet/entry[@name='ethernet1/1']/layer3/ip",
                           "description": "XPath to desired location in configuration."
                         },
                         {
                           "key": "element",
-                          "value": "<to><member>untrust</member></to><from><member>trust</member></from><source><member>any</member></source><destination><member>any</member></destination><source-user><member>any</member></source-user><category><member>any</member></category><application><member>any</member></application><service><member>application-default</member></service><source-hip><member>any</member></source-hip><destination-hip><member>any</member></destination-hip><action>allow</action>",
+                          "value": "<entry name='5.5.5.5/24'/>",
                           "description": "Contents of element to write."
                         }
                       ]
@@ -1030,7 +1030,7 @@
             },
             {
               "name": "Edit configuration",
-              "_postman_id": "e928cd4f-a120-4cef-ba8b-b24a93e62a7e",
+              "id": "e928cd4f-a120-4cef-ba8b-b24a93e62a7e",
               "protocolProfileBehavior": {
                 "disableBodyPruning": true
               },
@@ -1071,50 +1071,6 @@
                 "description": "The `edit` action replaces an existing object hierarchy with a new value."
               },
               "response": [
-                {
-                  "id": "153faf91-8183-4bef-b698-464e4dfb0232",
-                  "name": "Replace contents of address group",
-                  "originalRequest": {
-                    "method": "GET",
-                    "header": [],
-                    "url": {
-                      "raw": "https://{{host}}/api/?type=config&action=edit&xpath=/config/devices/entry[@name='localhost.localdomain']/vsys/entry[@name='vsys1']/address-group/entry[@name='Data-Center']&element=<entry name=\"Data-Center\"><static><member>Data-Center-192.168.1.0-24</member><member>Data-Center-192.168.2.0-24</member></static></entry>",
-                      "protocol": "https",
-                      "host": [
-                        "{{host}}"
-                      ],
-                      "path": [
-                        "api",
-                        ""
-                      ],
-                      "query": [
-                        {
-                          "key": "type",
-                          "value": "config"
-                        },
-                        {
-                          "key": "action",
-                          "value": "edit"
-                        },
-                        {
-                          "key": "xpath",
-                          "value": "/config/devices/entry[@name='localhost.localdomain']/vsys/entry[@name='vsys1']/address-group/entry[@name='Data-Center']",
-                          "description": "XPath to desired location in configuration."
-                        },
-                        {
-                          "key": "element",
-                          "value": "<entry name=\"Data-Center\"><static><member>Data-Center-192.168.1.0-24</member><member>Data-Center-192.168.2.0-24</member></static></entry>",
-                          "description": "Contents of element to write."
-                        }
-                      ]
-                    }
-                  },
-                  "_postman_previewlanguage": "xml",
-                  "header": null,
-                  "cookie": [],
-                  "responseTime": null,
-                  "body": "<response status=\"success\" code=\"20\">\n    <msg>command succeeded</msg>\n</response>"
-                },
                 {
                   "id": "89210fb7-ff86-4070-902c-b5d96af06f6d",
                   "name": "Replace applications in security rule",
@@ -1158,12 +1114,56 @@
                   "cookie": [],
                   "responseTime": null,
                   "body": "<response status=\"success\" code=\"20\">\n    <msg>command succeeded</msg>\n</response>"
+                },
+                {
+                  "id": "153faf91-8183-4bef-b698-464e4dfb0232",
+                  "name": "Replace contents of address group",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [],
+                    "url": {
+                      "raw": "https://{{host}}/api/?type=config&action=edit&xpath=/config/devices/entry[@name='localhost.localdomain']/vsys/entry[@name='vsys1']/address-group/entry[@name='Data-Center']&element=<entry name=\"Data-Center\"><static><member>Data-Center-192.168.1.0-24</member><member>Data-Center-192.168.2.0-24</member></static></entry>",
+                      "protocol": "https",
+                      "host": [
+                        "{{host}}"
+                      ],
+                      "path": [
+                        "api",
+                        ""
+                      ],
+                      "query": [
+                        {
+                          "key": "type",
+                          "value": "config"
+                        },
+                        {
+                          "key": "action",
+                          "value": "edit"
+                        },
+                        {
+                          "key": "xpath",
+                          "value": "/config/devices/entry[@name='localhost.localdomain']/vsys/entry[@name='vsys1']/address-group/entry[@name='Data-Center']",
+                          "description": "XPath to desired location in configuration."
+                        },
+                        {
+                          "key": "element",
+                          "value": "<entry name=\"Data-Center\"><static><member>Data-Center-192.168.1.0-24</member><member>Data-Center-192.168.2.0-24</member></static></entry>",
+                          "description": "Contents of element to write."
+                        }
+                      ]
+                    }
+                  },
+                  "_postman_previewlanguage": "xml",
+                  "header": null,
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "<response status=\"success\" code=\"20\">\n    <msg>command succeeded</msg>\n</response>"
                 }
               ]
             },
             {
               "name": "Delete configuration",
-              "_postman_id": "f1cff465-94b4-4718-90d9-09af34764514",
+              "id": "f1cff465-94b4-4718-90d9-09af34764514",
               "protocolProfileBehavior": {
                 "disableBodyPruning": true
               },
@@ -1199,45 +1199,6 @@
                 "description": "Use the `delete` action to delete an object at a specified location in the configuration."
               },
               "response": [
-                {
-                  "id": "1f41eb0e-3692-45f1-8f11-abfa5d220b75",
-                  "name": "Delete an address object from an address group",
-                  "originalRequest": {
-                    "method": "GET",
-                    "header": [],
-                    "url": {
-                      "raw": "https://{{host}}/api/?type=config&action=delete&xpath=/config/devices/entry[@name='localhost.localdomain']/vsys/entry[@name='vsys1']/address-group/entry[@name='Data-Center']/static/member[text()='Data-Center-192.168.2.0-24']",
-                      "protocol": "https",
-                      "host": [
-                        "{{host}}"
-                      ],
-                      "path": [
-                        "api",
-                        ""
-                      ],
-                      "query": [
-                        {
-                          "key": "type",
-                          "value": "config"
-                        },
-                        {
-                          "key": "action",
-                          "value": "delete"
-                        },
-                        {
-                          "key": "xpath",
-                          "value": "/config/devices/entry[@name='localhost.localdomain']/vsys/entry[@name='vsys1']/address-group/entry[@name='Data-Center']/static/member[text()='Data-Center-192.168.2.0-24']",
-                          "description": "XPath to desired location in configuration."
-                        }
-                      ]
-                    }
-                  },
-                  "_postman_previewlanguage": "xml",
-                  "header": null,
-                  "cookie": [],
-                  "responseTime": null,
-                  "body": "<response status=\"success\" code=\"20\">\n    <msg>command succeeded</msg>\n</response>"
-                },
                 {
                   "id": "85b76208-1692-449c-91da-a3302f8c51a7",
                   "name": "Delete a security rule",
@@ -1276,12 +1237,51 @@
                   "cookie": [],
                   "responseTime": null,
                   "body": "<response status=\"success\" code=\"20\">\n    <msg>command succeeded</msg>\n</response>"
+                },
+                {
+                  "id": "1f41eb0e-3692-45f1-8f11-abfa5d220b75",
+                  "name": "Delete an address object from an address group",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [],
+                    "url": {
+                      "raw": "https://{{host}}/api/?type=config&action=delete&xpath=/config/devices/entry[@name='localhost.localdomain']/vsys/entry[@name='vsys1']/address-group/entry[@name='Data-Center']/static/member[text()='Data-Center-192.168.2.0-24']",
+                      "protocol": "https",
+                      "host": [
+                        "{{host}}"
+                      ],
+                      "path": [
+                        "api",
+                        ""
+                      ],
+                      "query": [
+                        {
+                          "key": "type",
+                          "value": "config"
+                        },
+                        {
+                          "key": "action",
+                          "value": "delete"
+                        },
+                        {
+                          "key": "xpath",
+                          "value": "/config/devices/entry[@name='localhost.localdomain']/vsys/entry[@name='vsys1']/address-group/entry[@name='Data-Center']/static/member[text()='Data-Center-192.168.2.0-24']",
+                          "description": "XPath to desired location in configuration."
+                        }
+                      ]
+                    }
+                  },
+                  "_postman_previewlanguage": "xml",
+                  "header": null,
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "<response status=\"success\" code=\"20\">\n    <msg>command succeeded</msg>\n</response>"
                 }
               ]
             },
             {
               "name": "Rename configuration",
-              "_postman_id": "37c3ab0b-e65e-4491-a460-d7fbf5d0adbc",
+              "id": "37c3ab0b-e65e-4491-a460-d7fbf5d0adbc",
               "protocolProfileBehavior": {
                 "disableBodyPruning": true
               },
@@ -1370,7 +1370,7 @@
             },
             {
               "name": "Clone configuration",
-              "_postman_id": "59ed934d-a3d1-454e-83ac-30b4b2899049",
+              "id": "59ed934d-a3d1-454e-83ac-30b4b2899049",
               "protocolProfileBehavior": {
                 "disableBodyPruning": true
               },
@@ -1469,7 +1469,7 @@
             },
             {
               "name": "Move configuration",
-              "_postman_id": "fe4989eb-2127-46f5-8100-04d39c245117",
+              "id": "fe4989eb-2127-46f5-8100-04d39c245117",
               "protocolProfileBehavior": {
                 "disableBodyPruning": true
               },
@@ -1568,7 +1568,7 @@
             },
             {
               "name": "Override configuration",
-              "_postman_id": "259fe371-b2c8-4f49-b89a-c75d6cfc4507",
+              "id": "259fe371-b2c8-4f49-b89a-c75d6cfc4507",
               "protocolProfileBehavior": {
                 "disableBodyPruning": true
               },
@@ -1657,7 +1657,7 @@
             },
             {
               "name": "Multi-move configuration",
-              "_postman_id": "7937733a-24ca-401e-abca-b3fef8011046",
+              "id": "7937733a-24ca-401e-abca-b3fef8011046",
               "protocolProfileBehavior": {
                 "disableBodyPruning": true
               },
@@ -1746,7 +1746,7 @@
             },
             {
               "name": "Multi-clone configuration",
-              "_postman_id": "9ae16173-9d99-4f6e-b080-13f1ba9ef7eb",
+              "id": "9ae16173-9d99-4f6e-b080-13f1ba9ef7eb",
               "protocolProfileBehavior": {
                 "disableBodyPruning": true
               },
@@ -1835,7 +1835,7 @@
             },
             {
               "name": "Find possible values for XPath",
-              "_postman_id": "69f05193-bac5-4d86-8328-fec34b4f64be",
+              "id": "69f05193-bac5-4d86-8328-fec34b4f64be",
               "protocolProfileBehavior": {
                 "disableBodyPruning": true
               },
@@ -1913,7 +1913,7 @@
             },
             {
               "name": "New Request",
-              "_postman_id": "e9bf7768-befb-4a31-ae44-edff4e7fee7e",
+              "id": "e9bf7768-befb-4a31-ae44-edff4e7fee7e",
               "protocolProfileBehavior": {
                 "disableBodyPruning": true
               },
@@ -1925,15 +1925,14 @@
               "response": []
             }
           ],
-          "_postman_id": "a69adbc2-0b8b-47f1-ab6f-118ce8aa1a63",
-          "_postman_isSubFolder": true
+          "id": "a69adbc2-0b8b-47f1-ab6f-118ce8aa1a63"
         },
         {
           "name": "Commits",
           "item": [
             {
               "name": "Commit",
-              "_postman_id": "c77c788b-b3d5-4a30-9b39-fcaddfe8006a",
+              "id": "c77c788b-b3d5-4a30-9b39-fcaddfe8006a",
               "protocolProfileBehavior": {
                 "disableBodyPruning": true
               },
@@ -2060,6 +2059,40 @@
                   "body": "<response status=\"success\" code=\"19\">\n    <result>\n        <msg>\n            <line>Commit job enqueued with jobid 4</line>\n        </msg>\n        <job>4</job>\n    </result>\n</response>"
                 },
                 {
+                  "id": "5b205091-8837-4c6b-9ffa-c14f5c4389ba",
+                  "name": "Force commit",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [],
+                    "url": {
+                      "raw": "https://{{host}}/api/?type=commit&cmd=<commit><force></force></commit>",
+                      "protocol": "https",
+                      "host": [
+                        "{{host}}"
+                      ],
+                      "path": [
+                        "api",
+                        ""
+                      ],
+                      "query": [
+                        {
+                          "key": "type",
+                          "value": "commit"
+                        },
+                        {
+                          "key": "cmd",
+                          "value": "<commit><force></force></commit>"
+                        }
+                      ]
+                    }
+                  },
+                  "_postman_previewlanguage": "xml",
+                  "header": null,
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "<response status=\"success\" code=\"19\">\n    <result>\n        <msg>\n            <line>Commit job enqueued with jobid 7</line>\n        </msg>\n        <job>7</job>\n    </result>\n</response>"
+                },
+                {
                   "id": "1f70a6a2-69c4-44c7-a9bc-ec95055f3245",
                   "name": "Partial commit while excluding shared objects and device and network configuration",
                   "originalRequest": {
@@ -2096,80 +2129,6 @@
                   "cookie": [],
                   "responseTime": null,
                   "body": "<response status=\"success\" code=\"19\">\n    <result>\n        <msg>\n            <line>Commit job enqueued with jobid 9</line>\n        </msg>\n        <job>9</job>\n    </result>\n</response>"
-                },
-                {
-                  "id": "5b205091-8837-4c6b-9ffa-c14f5c4389ba",
-                  "name": "Force commit",
-                  "originalRequest": {
-                    "method": "GET",
-                    "header": [],
-                    "url": {
-                      "raw": "https://{{host}}/api/?type=commit&cmd=<commit><force></force></commit>",
-                      "protocol": "https",
-                      "host": [
-                        "{{host}}"
-                      ],
-                      "path": [
-                        "api",
-                        ""
-                      ],
-                      "query": [
-                        {
-                          "key": "type",
-                          "value": "commit"
-                        },
-                        {
-                          "key": "cmd",
-                          "value": "<commit><force></force></commit>"
-                        }
-                      ]
-                    }
-                  },
-                  "_postman_previewlanguage": "xml",
-                  "header": null,
-                  "cookie": [],
-                  "responseTime": null,
-                  "body": "<response status=\"success\" code=\"19\">\n    <result>\n        <msg>\n            <line>Commit job enqueued with jobid 7</line>\n        </msg>\n        <job>7</job>\n    </result>\n</response>"
-                },
-                {
-                  "id": "63185b66-cf90-4fe8-a073-6936f192d6c2",
-                  "name": "Partial commit of admin level changes",
-                  "originalRequest": {
-                    "method": "GET",
-                    "header": [],
-                    "url": {
-                      "raw": "https://{{host}}/api/?type=commit&action=partial&cmd=<commit><partial><admin><member>admin</member></admin></partial></commit>",
-                      "protocol": "https",
-                      "host": [
-                        "{{host}}"
-                      ],
-                      "path": [
-                        "api",
-                        ""
-                      ],
-                      "query": [
-                        {
-                          "key": "type",
-                          "value": "commit"
-                        },
-                        {
-                          "key": "action",
-                          "value": "partial",
-                          "description": "*Optional.*  Only commit a portion of the configuration."
-                        },
-                        {
-                          "key": "cmd",
-                          "value": "<commit><partial><admin><member>admin</member></admin></partial></commit>",
-                          "description": "Commit command."
-                        }
-                      ]
-                    }
-                  },
-                  "_postman_previewlanguage": "xml",
-                  "header": null,
-                  "cookie": [],
-                  "responseTime": null,
-                  "body": "<response status=\"success\" code=\"19\">\n    <result>\n        <msg>\n            <line>Commit job enqueued with jobid 10</line>\n        </msg>\n        <job>10</job>\n    </result>\n</response>"
                 },
                 {
                   "id": "e84509e0-8ad1-4c24-8a9b-54dcb72c9e8b",
@@ -2210,12 +2169,52 @@
                   "cookie": [],
                   "responseTime": null,
                   "body": "<response status=\"success\" code=\"19\">\n    <result>\n        <msg>\n            <line>Commit job enqueued with jobid 9</line>\n        </msg>\n        <job>9</job>\n    </result>\n</response>"
+                },
+                {
+                  "id": "63185b66-cf90-4fe8-a073-6936f192d6c2",
+                  "name": "Partial commit of admin level changes",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [],
+                    "url": {
+                      "raw": "https://{{host}}/api/?type=commit&action=partial&cmd=<commit><partial><admin><member>admin</member></admin></partial></commit>",
+                      "protocol": "https",
+                      "host": [
+                        "{{host}}"
+                      ],
+                      "path": [
+                        "api",
+                        ""
+                      ],
+                      "query": [
+                        {
+                          "key": "type",
+                          "value": "commit"
+                        },
+                        {
+                          "key": "action",
+                          "value": "partial",
+                          "description": "*Optional.*  Only commit a portion of the configuration."
+                        },
+                        {
+                          "key": "cmd",
+                          "value": "<commit><partial><admin><member>admin</member></admin></partial></commit>",
+                          "description": "Commit command."
+                        }
+                      ]
+                    }
+                  },
+                  "_postman_previewlanguage": "xml",
+                  "header": null,
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "<response status=\"success\" code=\"19\">\n    <result>\n        <msg>\n            <line>Commit job enqueued with jobid 10</line>\n        </msg>\n        <job>10</job>\n    </result>\n</response>"
                 }
               ]
             },
             {
               "name": "Commit all",
-              "_postman_id": "b7d47429-8c75-4bb7-a473-01d4582fc8bb",
+              "id": "b7d47429-8c75-4bb7-a473-01d4582fc8bb",
               "protocolProfileBehavior": {
                 "disableBodyPruning": true
               },
@@ -2251,123 +2250,6 @@
                 "description": "The `commit-all` to push and validate policy from Panorama to managed firewalls.\n\nUse the [API browser](https://docs.paloaltonetworks.com/pan-os/10-0/pan-os-panorama-api/get-started-with-the-pan-os-xml-api/explore-the-api/use-the-api-browser.html) to find the different parameters that can be passed in `cmd`.\n\nThe results of a commit can be found using the `show job id X` operational command."
               },
               "response": [
-                {
-                  "id": "7bb57066-8dba-42a2-a56c-2f761f0b8bc5",
-                  "name": "Virtual system (vsys) commit",
-                  "originalRequest": {
-                    "method": "GET",
-                    "header": [],
-                    "url": {
-                      "raw": "https://{{host}}/api/?type=commit&action=all&cmd=<commit-all><shared-policy><device-group><entry name='norcal'><devices><entry name='015351000039218'><vsys><member>vsys1</member></vsys></entry></devices></entry></device-group></shared-policy></commit-all>",
-                      "protocol": "https",
-                      "host": [
-                        "{{host}}"
-                      ],
-                      "path": [
-                        "api",
-                        ""
-                      ],
-                      "query": [
-                        {
-                          "key": "type",
-                          "value": "commit"
-                        },
-                        {
-                          "key": "action",
-                          "value": "all"
-                        },
-                        {
-                          "key": "cmd",
-                          "value": "<commit-all><shared-policy><device-group><entry name='norcal'><devices><entry name='015351000039218'><vsys><member>vsys1</member></vsys></entry></devices></entry></device-group></shared-policy></commit-all>",
-                          "description": "Commit All command."
-                        }
-                      ]
-                    }
-                  },
-                  "_postman_previewlanguage": "xml",
-                  "header": null,
-                  "cookie": [],
-                  "responseTime": null,
-                  "body": "<response status=\"success\" code=\"19\">\n    <result>\n        <msg>\n            <line>Job enqueued with jobid 297</line>\n        </msg>\n        <job>297</job>\n    </result>\n</response>"
-                },
-                {
-                  "id": "9ad0bb83-f59f-4a0d-a1f1-f20669bb29a5",
-                  "name": "Specific device group commit without including template changes",
-                  "originalRequest": {
-                    "method": "GET",
-                    "header": [],
-                    "url": {
-                      "raw": "https://{{host}}/api/?type=commit&action=all&cmd=<commit-all><shared-policy><include-template>no</include-template><device-group><entry name=\"norcal\"/></device-group></shared-policy></commit-all>",
-                      "protocol": "https",
-                      "host": [
-                        "{{host}}"
-                      ],
-                      "path": [
-                        "api",
-                        ""
-                      ],
-                      "query": [
-                        {
-                          "key": "type",
-                          "value": "commit"
-                        },
-                        {
-                          "key": "action",
-                          "value": "all"
-                        },
-                        {
-                          "key": "cmd",
-                          "value": "<commit-all><shared-policy><include-template>no</include-template><device-group><entry name=\"norcal\"/></device-group></shared-policy></commit-all>",
-                          "description": "Commit All command."
-                        }
-                      ]
-                    }
-                  },
-                  "_postman_previewlanguage": "xml",
-                  "header": null,
-                  "cookie": [],
-                  "responseTime": null,
-                  "body": "<response status=\"success\" code=\"19\">\n    <result>\n        <msg>\n            <line>Job enqueued with jobid 292</line>\n        </msg>\n        <job>292</job>\n    </result>\n</response>"
-                },
-                {
-                  "id": "a00b792e-9cb6-4054-9a1c-ed4f80c752be",
-                  "name": "Specific firewall commit",
-                  "originalRequest": {
-                    "method": "GET",
-                    "header": [],
-                    "url": {
-                      "raw": "https://{{host}}/api/?type=commit&action=all&cmd=<commit-all><shared-policy><device-group><entry name='norcal'><devices><entry name='015351000039218'><vsys><member>vsys1</member></vsys></entry></devices></entry></device-group></shared-policy></commit-all>",
-                      "protocol": "https",
-                      "host": [
-                        "{{host}}"
-                      ],
-                      "path": [
-                        "api",
-                        ""
-                      ],
-                      "query": [
-                        {
-                          "key": "type",
-                          "value": "commit"
-                        },
-                        {
-                          "key": "action",
-                          "value": "all"
-                        },
-                        {
-                          "key": "cmd",
-                          "value": "<commit-all><shared-policy><device-group><entry name='norcal'><devices><entry name='015351000039218'><vsys><member>vsys1</member></vsys></entry></devices></entry></device-group></shared-policy></commit-all>",
-                          "description": "Commit All command."
-                        }
-                      ]
-                    }
-                  },
-                  "_postman_previewlanguage": "xml",
-                  "header": null,
-                  "cookie": [],
-                  "responseTime": null,
-                  "body": "<response status=\"success\" code=\"19\">\n    <result>\n        <msg>\n            <line>Job enqueued with jobid 297</line>\n        </msg>\n        <job>297</job>\n    </result>\n</response>"
-                },
                 {
                   "id": "ca0da6dc-bebd-4455-a9fe-3126b9edd0c3",
                   "name": "Pre-commit policy validation",
@@ -2445,12 +2327,129 @@
                   "cookie": [],
                   "responseTime": null,
                   "body": "<response status=\"success\" code=\"19\">\n    <result>\n        <msg>\n            <line>Job enqueued with jobid 291</line>\n        </msg>\n        <job>291</job>\n    </result>\n</response>"
+                },
+                {
+                  "id": "9ad0bb83-f59f-4a0d-a1f1-f20669bb29a5",
+                  "name": "Specific device group commit without including template changes",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [],
+                    "url": {
+                      "raw": "https://{{host}}/api/?type=commit&action=all&cmd=<commit-all><shared-policy><include-template>no</include-template><device-group><entry name=\"norcal\"/></device-group></shared-policy></commit-all>",
+                      "protocol": "https",
+                      "host": [
+                        "{{host}}"
+                      ],
+                      "path": [
+                        "api",
+                        ""
+                      ],
+                      "query": [
+                        {
+                          "key": "type",
+                          "value": "commit"
+                        },
+                        {
+                          "key": "action",
+                          "value": "all"
+                        },
+                        {
+                          "key": "cmd",
+                          "value": "<commit-all><shared-policy><include-template>no</include-template><device-group><entry name=\"norcal\"/></device-group></shared-policy></commit-all>",
+                          "description": "Commit All command."
+                        }
+                      ]
+                    }
+                  },
+                  "_postman_previewlanguage": "xml",
+                  "header": null,
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "<response status=\"success\" code=\"19\">\n    <result>\n        <msg>\n            <line>Job enqueued with jobid 292</line>\n        </msg>\n        <job>292</job>\n    </result>\n</response>"
+                },
+                {
+                  "id": "7bb57066-8dba-42a2-a56c-2f761f0b8bc5",
+                  "name": "Virtual system (vsys) commit",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [],
+                    "url": {
+                      "raw": "https://{{host}}/api/?type=commit&action=all&cmd=<commit-all><shared-policy><device-group><entry name='norcal'><devices><entry name='015351000039218'><vsys><member>vsys1</member></vsys></entry></devices></entry></device-group></shared-policy></commit-all>",
+                      "protocol": "https",
+                      "host": [
+                        "{{host}}"
+                      ],
+                      "path": [
+                        "api",
+                        ""
+                      ],
+                      "query": [
+                        {
+                          "key": "type",
+                          "value": "commit"
+                        },
+                        {
+                          "key": "action",
+                          "value": "all"
+                        },
+                        {
+                          "key": "cmd",
+                          "value": "<commit-all><shared-policy><device-group><entry name='norcal'><devices><entry name='015351000039218'><vsys><member>vsys1</member></vsys></entry></devices></entry></device-group></shared-policy></commit-all>",
+                          "description": "Commit All command."
+                        }
+                      ]
+                    }
+                  },
+                  "_postman_previewlanguage": "xml",
+                  "header": null,
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "<response status=\"success\" code=\"19\">\n    <result>\n        <msg>\n            <line>Job enqueued with jobid 297</line>\n        </msg>\n        <job>297</job>\n    </result>\n</response>"
+                },
+                {
+                  "id": "a00b792e-9cb6-4054-9a1c-ed4f80c752be",
+                  "name": "Specific firewall commit",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [],
+                    "url": {
+                      "raw": "https://{{host}}/api/?type=commit&action=all&cmd=<commit-all><shared-policy><device-group><entry name='norcal'><devices><entry name='015351000039218'><vsys><member>vsys1</member></vsys></entry></devices></entry></device-group></shared-policy></commit-all>",
+                      "protocol": "https",
+                      "host": [
+                        "{{host}}"
+                      ],
+                      "path": [
+                        "api",
+                        ""
+                      ],
+                      "query": [
+                        {
+                          "key": "type",
+                          "value": "commit"
+                        },
+                        {
+                          "key": "action",
+                          "value": "all"
+                        },
+                        {
+                          "key": "cmd",
+                          "value": "<commit-all><shared-policy><device-group><entry name='norcal'><devices><entry name='015351000039218'><vsys><member>vsys1</member></vsys></entry></devices></entry></device-group></shared-policy></commit-all>",
+                          "description": "Commit All command."
+                        }
+                      ]
+                    }
+                  },
+                  "_postman_previewlanguage": "xml",
+                  "header": null,
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "<response status=\"success\" code=\"19\">\n    <result>\n        <msg>\n            <line>Job enqueued with jobid 297</line>\n        </msg>\n        <job>297</job>\n    </result>\n</response>"
                 }
               ]
             },
             {
               "name": "Show commit job status",
-              "_postman_id": "eb801c65-7bf7-45d7-ab98-45ade4ca0746",
+              "id": "eb801c65-7bf7-45d7-ab98-45ade4ca0746",
               "protocolProfileBehavior": {
                 "disableBodyPruning": true
               },
@@ -2574,7 +2573,7 @@
               ]
             }
           ],
-          "_postman_id": "55b9d67c-9da6-4058-8288-2c1b44614c2e",
+          "id": "55b9d67c-9da6-4058-8288-2c1b44614c2e",
           "event": [
             {
               "listen": "prerequest",
@@ -2596,15 +2595,14 @@
                 ]
               }
             }
-          ],
-          "_postman_isSubFolder": true
+          ]
         },
         {
           "name": "Export Files",
           "item": [
             {
               "name": "Export file",
-              "_postman_id": "dbc48b76-eb6a-4c9c-89f6-4aa6b121fef4",
+              "id": "dbc48b76-eb6a-4c9c-89f6-4aa6b121fef4",
               "protocolProfileBehavior": {
                 "disableBodyPruning": true
               },
@@ -2817,7 +2815,7 @@
             },
             {
               "name": "Export application packet capture",
-              "_postman_id": "c82305d9-faa8-43da-a296-0bcc3ce1ade7",
+              "id": "c82305d9-faa8-43da-a296-0bcc3ce1ade7",
               "protocolProfileBehavior": {
                 "disableBodyPruning": true
               },
@@ -2948,7 +2946,7 @@
                     "method": "GET",
                     "header": [],
                     "url": {
-                      "raw": "https://{{host}}/api/?type=export&category=application-pcap&from",
+                      "raw": "https://{{host}}/api/?type=export&category=application-pcap&from=20201130",
                       "protocol": "https",
                       "host": [
                         "{{host}}"
@@ -2968,7 +2966,7 @@
                         },
                         {
                           "key": "from",
-                          "value": null,
+                          "value": "20201130",
                           "description": "*Optional*.  Can be either a directory name, or a capture filename to retrieve."
                         }
                       ]
@@ -3042,7 +3040,7 @@
                     "method": "GET",
                     "header": [],
                     "url": {
-                      "raw": "https://{{host}}/api/?type=export&category=application-pcap&from",
+                      "raw": "https://{{host}}/api/?type=export&category=application-pcap&from=/20201130/192.168.45.98-138-192.168.45.255-138-977.pcap",
                       "protocol": "https",
                       "host": [
                         "{{host}}"
@@ -3062,7 +3060,7 @@
                         },
                         {
                           "key": "from",
-                          "value": null,
+                          "value": "/20201130/192.168.45.98-138-192.168.45.255-138-977.pcap",
                           "description": "*Optional*.  Can be either a directory name, or a capture filename to retrieve."
                         }
                       ]
@@ -3133,7 +3131,7 @@
             },
             {
               "name": "Export certificate",
-              "_postman_id": "826c67d4-bf88-4c1a-b6cb-11a526a21026",
+              "id": "826c67d4-bf88-4c1a-b6cb-11a526a21026",
               "protocolProfileBehavior": {
                 "disableBodyPruning": true
               },
@@ -3297,7 +3295,7 @@
             },
             {
               "name": "Export packet capture",
-              "_postman_id": "6b46cdb4-d79b-4033-82cc-224ad61b665e",
+              "id": "6b46cdb4-d79b-4033-82cc-224ad61b665e",
               "protocolProfileBehavior": {
                 "disableBodyPruning": true
               },
@@ -3529,7 +3527,7 @@
             },
             {
               "name": "Export tech support data",
-              "_postman_id": "6e3fa428-5215-4bb6-a874-fef52d4665e3",
+              "id": "6e3fa428-5215-4bb6-a874-fef52d4665e3",
               "protocolProfileBehavior": {
                 "disableBodyPruning": true
               },
@@ -3889,7 +3887,7 @@
             },
             {
               "name": "Export threat packet capture",
-              "_postman_id": "a26a6ddf-da0d-4263-be19-eef3d934e842",
+              "id": "a26a6ddf-da0d-4263-be19-eef3d934e842",
               "protocolProfileBehavior": {
                 "disableBodyPruning": true
               },
@@ -4047,7 +4045,7 @@
               ]
             }
           ],
-          "_postman_id": "23756299-0092-4f5e-aac4-b873e07acf55",
+          "id": "23756299-0092-4f5e-aac4-b873e07acf55",
           "description": "You can export files from the firewall using the `type=export` parameter in the API request.\n\nThe following types of resources can be exported:\n\n- Configuration\n- Certificates\n- Device State\n- Packet Captures\n- Response Pages\n- Tech Support Files",
           "event": [
             {
@@ -4070,15 +4068,14 @@
                 ]
               }
             }
-          ],
-          "_postman_isSubFolder": true
+          ]
         },
         {
           "name": "Import Files",
           "item": [
             {
               "name": "Import file",
-              "_postman_id": "4cde82fa-1ecb-4c6f-8cb0-13c75ac5405b",
+              "id": "4cde82fa-1ecb-4c6f-8cb0-13c75ac5405b",
               "protocolProfileBehavior": {
                 "disableBodyPruning": true
               },
@@ -4241,7 +4238,7 @@
             },
             {
               "name": "Import certificate",
-              "_postman_id": "2140d4f3-cc79-4093-8fbf-04fe470ebdff",
+              "id": "2140d4f3-cc79-4093-8fbf-04fe470ebdff",
               "protocolProfileBehavior": {
                 "disableBodyPruning": true
               },
@@ -4257,10 +4254,7 @@
                       "type": "file",
                       "value": null
                     }
-                  ],
-                  "options": {
-                    "formdata": {}
-                  }
+                  ]
                 },
                 "url": {
                   "raw": "https://{{host}}/api/?type=import&category=certificate&certificate-name=&format=&passphrase=&target-tpl=&target-tpl-vsys=&vsys",
@@ -4438,10 +4432,7 @@
                           "type": "file",
                           "value": null
                         }
-                      ],
-                      "options": {
-                        "formdata": {}
-                      }
+                      ]
                     },
                     "url": {
                       "raw": "https://{{host}}/api/?type=import&category=certificate&certificate-name=Test-Cert&format=pem&target-tpl=Test-Template&target-tpl-vsys=vsys1",
@@ -4492,7 +4483,7 @@
               ]
             }
           ],
-          "_postman_id": "b46a37c6-2ff6-4d05-b8e4-36bf282f7487",
+          "id": "b46a37c6-2ff6-4d05-b8e4-36bf282f7487",
           "description": "You can import files to the firewall using the `type=import` parameter in the API request.\n\nThe following types of resources can be imported:\n\n- Configuration\n- Certificates and Keys\n- Dynamic Updates\n- Response Pages & Logos\n- Software\n- Global Protect Client\n",
           "event": [
             {
@@ -4515,15 +4506,14 @@
                 ]
               }
             }
-          ],
-          "_postman_isSubFolder": true
+          ]
         },
         {
           "name": "Reports",
           "item": [
             {
               "name": "Dynamic report",
-              "_postman_id": "8e5353e8-1a7c-49d8-af28-04f2da58f162",
+              "id": "8e5353e8-1a7c-49d8-af28-04f2da58f162",
               "protocolProfileBehavior": {
                 "disableBodyPruning": true
               },
@@ -4629,7 +4619,7 @@
             },
             {
               "name": "Predefined report",
-              "_postman_id": "7116a663-4fd4-4115-8a11-576afc100f0c",
+              "id": "7116a663-4fd4-4115-8a11-576afc100f0c",
               "protocolProfileBehavior": {
                 "disableBodyPruning": true
               },
@@ -4773,7 +4763,7 @@
             },
             {
               "name": "Custom dynamic report",
-              "_postman_id": "f62f5261-ec80-4519-8d15-52ab6f85254f",
+              "id": "f62f5261-ec80-4519-8d15-52ab6f85254f",
               "protocolProfileBehavior": {
                 "disableBodyPruning": true
               },
@@ -4914,7 +4904,7 @@
             },
             {
               "name": "Retrieve report results",
-              "_postman_id": "36da1c3e-6d11-4ccd-b3a6-dc297e89aa1c",
+              "id": "36da1c3e-6d11-4ccd-b3a6-dc297e89aa1c",
               "protocolProfileBehavior": {
                 "disableBodyPruning": true
               },
@@ -5045,15 +5035,14 @@
               ]
             }
           ],
-          "_postman_id": "83f893a0-e9e2-4fb3-804d-3deeb935bf09",
-          "_postman_isSubFolder": true
+          "id": "83f893a0-e9e2-4fb3-804d-3deeb935bf09"
         },
         {
           "name": "User-ID and Dynamic Groups",
           "item": [
             {
               "name": "IP to user mapping",
-              "_postman_id": "9643f123-8855-469b-8e52-3851f7a4eeb3",
+              "id": "9643f123-8855-469b-8e52-3851f7a4eeb3",
               "protocolProfileBehavior": {
                 "disableBodyPruning": true
               },
@@ -5082,10 +5071,7 @@
                       "type": "file",
                       "value": null
                     }
-                  ],
-                  "options": {
-                    "formdata": {}
-                  }
+                  ]
                 },
                 "url": {
                   "raw": "https://{{host}}/api/?type=user-id&cmd=&vsys&target",
@@ -5121,6 +5107,113 @@
                 }
               },
               "response": [
+                {
+                  "id": "c4d03d09-fc0e-4387-86fc-a0229764fe04",
+                  "name": "Send User-ID mapping for login, logout, or groups",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [],
+                    "body": {
+                      "mode": "formdata",
+                      "formdata": [
+                        {
+                          "key": "cmd",
+                          "type": "text",
+                          "value": "<uid-message> \n     <version>1.0</version> \n     <type>update</type> \n     <payload> \n          <login> \n               <entry name=\"domain\\uid1\" ip=\"10.1.1.1\" timeout=\"20\"> \n               </entry> \n          </login> \n          <groups> \n               <entry name=\"group1\"> \n                    <members> \n                         <entry name=\"user1\"/> \n                         <entry name=\"user2\"/> \n                    </members> \n               </entry> \n               <entry name=\"group2\"> \n                    <members> \n                         <entry name=\"user3\"/> \n                    </members> \n               </entry> \n          </groups> \n     </payload> \n</uid-message>"
+                        },
+                        {
+                          "key": "file",
+                          "type": "file",
+                          "value": null,
+                          "disabled": true
+                        }
+                      ]
+                    },
+                    "url": {
+                      "raw": "https://{{host}}/api/?type=user-id",
+                      "protocol": "https",
+                      "host": [
+                        "{{host}}"
+                      ],
+                      "path": [
+                        "api",
+                        ""
+                      ],
+                      "query": [
+                        {
+                          "key": "type",
+                          "value": "user-id"
+                        },
+                        {
+                          "key": "cmd",
+                          "value": "<uid-message> \n     <version>1.0</version> \n     <type>update</type> \n     <payload> \n          <login> \n               <entry name=\"domain\\uid1\" ip=\"10.1.1.1\" timeout=\"20\"> \n               </entry> \n          </login> \n          <groups> \n               <entry name=\"group1\"> \n                    <members> \n                         <entry name=\"user1\"/> \n                         <entry name=\"user2\"/> \n                    </members> \n               </entry> \n               <entry name=\"group2\"> \n                    <members> \n                         <entry name=\"user3\"/> \n                    </members> \n               </entry> \n          </groups> \n     </payload> \n</uid-message>",
+                          "type": "text",
+                          "disabled": true
+                        }
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "xml",
+                  "header": [
+                    {
+                      "key": "Date",
+                      "value": "Mon, 04 Jan 2021 20:44:14 GMT"
+                    },
+                    {
+                      "key": "Content-Type",
+                      "value": "application/xml; charset=UTF-8"
+                    },
+                    {
+                      "key": "Content-Length",
+                      "value": "161"
+                    },
+                    {
+                      "key": "Connection",
+                      "value": "keep-alive"
+                    },
+                    {
+                      "key": "X-FRAME-OPTIONS",
+                      "value": "SAMEORIGIN"
+                    },
+                    {
+                      "key": "X-XSS-Protection",
+                      "value": "1; mode=block"
+                    },
+                    {
+                      "key": "X-Content-Type-Options",
+                      "value": "nosniff"
+                    },
+                    {
+                      "key": "Content-Security-Policy",
+                      "value": "default-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:;"
+                    },
+                    {
+                      "key": "Strict-Transport-Security",
+                      "value": "max-age=31536000"
+                    },
+                    {
+                      "key": "Cache-Control",
+                      "value": "no-store, no-cache, must-revalidate, post-check=0, pre-check=0"
+                    },
+                    {
+                      "key": "Expires",
+                      "value": "Thu, 19 Nov 1981 08:52:00 GMT"
+                    },
+                    {
+                      "key": "Pragma",
+                      "value": "no-cache"
+                    },
+                    {
+                      "key": "Allow",
+                      "value": "GET, HEAD, POST, PUT, DELETE, OPTIONS"
+                    }
+                  ],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "<response status=\"success\">\n    <result>\n        <uid-response>\n            <version>2.0</version>\n            <payload>\n                <login>\n    </login>\n            </payload>\n        </uid-response>\n    </result>\n</response>"
+                },
                 {
                   "id": "4a685987-4b60-40d2-9745-3d174478dda7",
                   "name": "Multi-user system entry",
@@ -5361,113 +5454,6 @@
                   "body": "<response status=\"success\">\n    <result>\n        <uid-response>\n            <version>2.0</version>\n            <payload>\n                <login>\n    </login>\n            </payload>\n        </uid-response>\n    </result>\n</response>"
                 },
                 {
-                  "id": "c4d03d09-fc0e-4387-86fc-a0229764fe04",
-                  "name": "Send User-ID mapping for login, logout, or groups",
-                  "originalRequest": {
-                    "method": "POST",
-                    "header": [],
-                    "body": {
-                      "mode": "formdata",
-                      "formdata": [
-                        {
-                          "key": "cmd",
-                          "type": "text",
-                          "value": "<uid-message> \n     <version>1.0</version> \n     <type>update</type> \n     <payload> \n          <login> \n               <entry name=\"domain\\uid1\" ip=\"10.1.1.1\" timeout=\"20\"> \n               </entry> \n          </login> \n          <groups> \n               <entry name=\"group1\"> \n                    <members> \n                         <entry name=\"user1\"/> \n                         <entry name=\"user2\"/> \n                    </members> \n               </entry> \n               <entry name=\"group2\"> \n                    <members> \n                         <entry name=\"user3\"/> \n                    </members> \n               </entry> \n          </groups> \n     </payload> \n</uid-message>"
-                        },
-                        {
-                          "key": "file",
-                          "type": "file",
-                          "value": null,
-                          "disabled": true
-                        }
-                      ]
-                    },
-                    "url": {
-                      "raw": "https://{{host}}/api/?type=user-id",
-                      "protocol": "https",
-                      "host": [
-                        "{{host}}"
-                      ],
-                      "path": [
-                        "api",
-                        ""
-                      ],
-                      "query": [
-                        {
-                          "key": "type",
-                          "value": "user-id"
-                        },
-                        {
-                          "key": "cmd",
-                          "value": "<uid-message> \n     <version>1.0</version> \n     <type>update</type> \n     <payload> \n          <login> \n               <entry name=\"domain\\uid1\" ip=\"10.1.1.1\" timeout=\"20\"> \n               </entry> \n          </login> \n          <groups> \n               <entry name=\"group1\"> \n                    <members> \n                         <entry name=\"user1\"/> \n                         <entry name=\"user2\"/> \n                    </members> \n               </entry> \n               <entry name=\"group2\"> \n                    <members> \n                         <entry name=\"user3\"/> \n                    </members> \n               </entry> \n          </groups> \n     </payload> \n</uid-message>",
-                          "type": "text",
-                          "disabled": true
-                        }
-                      ]
-                    }
-                  },
-                  "status": "OK",
-                  "code": 200,
-                  "_postman_previewlanguage": "xml",
-                  "header": [
-                    {
-                      "key": "Date",
-                      "value": "Mon, 04 Jan 2021 20:44:14 GMT"
-                    },
-                    {
-                      "key": "Content-Type",
-                      "value": "application/xml; charset=UTF-8"
-                    },
-                    {
-                      "key": "Content-Length",
-                      "value": "161"
-                    },
-                    {
-                      "key": "Connection",
-                      "value": "keep-alive"
-                    },
-                    {
-                      "key": "X-FRAME-OPTIONS",
-                      "value": "SAMEORIGIN"
-                    },
-                    {
-                      "key": "X-XSS-Protection",
-                      "value": "1; mode=block"
-                    },
-                    {
-                      "key": "X-Content-Type-Options",
-                      "value": "nosniff"
-                    },
-                    {
-                      "key": "Content-Security-Policy",
-                      "value": "default-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:;"
-                    },
-                    {
-                      "key": "Strict-Transport-Security",
-                      "value": "max-age=31536000"
-                    },
-                    {
-                      "key": "Cache-Control",
-                      "value": "no-store, no-cache, must-revalidate, post-check=0, pre-check=0"
-                    },
-                    {
-                      "key": "Expires",
-                      "value": "Thu, 19 Nov 1981 08:52:00 GMT"
-                    },
-                    {
-                      "key": "Pragma",
-                      "value": "no-cache"
-                    },
-                    {
-                      "key": "Allow",
-                      "value": "GET, HEAD, POST, PUT, DELETE, OPTIONS"
-                    }
-                  ],
-                  "cookie": [],
-                  "responseTime": null,
-                  "body": "<response status=\"success\">\n    <result>\n        <uid-response>\n            <version>2.0</version>\n            <payload>\n                <login>\n    </login>\n            </payload>\n        </uid-response>\n    </result>\n</response>"
-                },
-                {
                   "id": "ec1ceb2c-3b3b-4814-98a1-88fe6895b4f7",
                   "name": "Multi-user system logout event",
                   "originalRequest": {
@@ -5591,7 +5577,7 @@
             },
             {
               "name": "Dynamic address group",
-              "_postman_id": "ede60aef-1d89-4b15-83c9-77bdaf3f2389",
+              "id": "ede60aef-1d89-4b15-83c9-77bdaf3f2389",
               "protocolProfileBehavior": {
                 "disableBodyPruning": true
               },
@@ -5621,10 +5607,7 @@
                       "value": null,
                       "disabled": true
                     }
-                  ],
-                  "options": {
-                    "formdata": {}
-                  }
+                  ]
                 },
                 "url": {
                   "raw": "https://{{host}}/api/?type=user-id",
@@ -5663,127 +5646,6 @@
                 }
               },
               "response": [
-                {
-                  "id": "0bf0fe03-07c5-42d1-a6ad-5148e177cc2b",
-                  "name": "Dynamic address group unregister",
-                  "originalRequest": {
-                    "method": "POST",
-                    "header": [],
-                    "body": {
-                      "mode": "formdata",
-                      "formdata": [
-                        {
-                          "key": "cmd",
-                          "description": "User-ID message if sending via POST request.",
-                          "type": "text",
-                          "value": "<uid-message>\n    <version>1.0</version>\n    <type>update</type>\n    <payload>\n        <unregister>\n            <entry ip=\"10.1.1.3\">\n            <tag>\n                <member>CBB09C3D-3416-4734-BE90-0395B7598DE5</member>\n            </tag>\n            </entry>\n        </unregister>\n    </payload>\n</uid-message> "
-                        },
-                        {
-                          "key": "file",
-                          "description": "File containing User-ID message if sending via POST request.",
-                          "type": "file",
-                          "value": null,
-                          "disabled": true
-                        }
-                      ]
-                    },
-                    "url": {
-                      "raw": "https://{{host}}/api/?type=user-id",
-                      "protocol": "https",
-                      "host": [
-                        "{{host}}"
-                      ],
-                      "path": [
-                        "api",
-                        ""
-                      ],
-                      "query": [
-                        {
-                          "key": "type",
-                          "value": "user-id"
-                        },
-                        {
-                          "key": "cmd",
-                          "value": "",
-                          "description": "**Required** User-ID message, if being sent as a GET request.",
-                          "disabled": true
-                        },
-                        {
-                          "key": "vsys",
-                          "value": null,
-                          "description": "*Optional.* Specify virtual system for User-ID request.",
-                          "disabled": true
-                        },
-                        {
-                          "key": "target",
-                          "value": null,
-                          "description": "*Optional*. If host is a Panorama instance, use it to connect to a specific firewall.",
-                          "disabled": true
-                        }
-                      ]
-                    }
-                  },
-                  "status": "OK",
-                  "code": 200,
-                  "_postman_previewlanguage": "xml",
-                  "header": [
-                    {
-                      "key": "Date",
-                      "value": "Mon, 04 Jan 2021 21:05:05 GMT"
-                    },
-                    {
-                      "key": "Content-Type",
-                      "value": "application/xml; charset=UTF-8"
-                    },
-                    {
-                      "key": "Content-Length",
-                      "value": "171"
-                    },
-                    {
-                      "key": "Connection",
-                      "value": "keep-alive"
-                    },
-                    {
-                      "key": "X-FRAME-OPTIONS",
-                      "value": "SAMEORIGIN"
-                    },
-                    {
-                      "key": "X-XSS-Protection",
-                      "value": "1; mode=block"
-                    },
-                    {
-                      "key": "X-Content-Type-Options",
-                      "value": "nosniff"
-                    },
-                    {
-                      "key": "Content-Security-Policy",
-                      "value": "default-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:;"
-                    },
-                    {
-                      "key": "Strict-Transport-Security",
-                      "value": "max-age=31536000"
-                    },
-                    {
-                      "key": "Cache-Control",
-                      "value": "no-store, no-cache, must-revalidate, post-check=0, pre-check=0"
-                    },
-                    {
-                      "key": "Expires",
-                      "value": "Thu, 19 Nov 1981 08:52:00 GMT"
-                    },
-                    {
-                      "key": "Pragma",
-                      "value": "no-cache"
-                    },
-                    {
-                      "key": "Allow",
-                      "value": "GET, HEAD, POST, PUT, DELETE, OPTIONS"
-                    }
-                  ],
-                  "cookie": [],
-                  "responseTime": null,
-                  "body": "<response status=\"success\">\n    <result>\n        <uid-response>\n            <version>2.0</version>\n            <payload>\n                <unregister>\n    </unregister>\n            </payload>\n        </uid-response>\n    </result>\n</response>"
-                },
                 {
                   "id": "530f0dad-a65d-44bc-8fc2-fb9651824736",
                   "name": "Dynamic address group register",
@@ -5904,12 +5766,133 @@
                   "cookie": [],
                   "responseTime": null,
                   "body": "<response status=\"success\">\n    <result>\n        <uid-response>\n            <version>2.0</version>\n            <payload>\n                <register>\n    </register>\n            </payload>\n        </uid-response>\n    </result>\n</response>"
+                },
+                {
+                  "id": "0bf0fe03-07c5-42d1-a6ad-5148e177cc2b",
+                  "name": "Dynamic address group unregister",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [],
+                    "body": {
+                      "mode": "formdata",
+                      "formdata": [
+                        {
+                          "key": "cmd",
+                          "description": "User-ID message if sending via POST request.",
+                          "type": "text",
+                          "value": "<uid-message>\n    <version>1.0</version>\n    <type>update</type>\n    <payload>\n        <unregister>\n            <entry ip=\"10.1.1.3\">\n            <tag>\n                <member>CBB09C3D-3416-4734-BE90-0395B7598DE5</member>\n            </tag>\n            </entry>\n        </unregister>\n    </payload>\n</uid-message> "
+                        },
+                        {
+                          "key": "file",
+                          "description": "File containing User-ID message if sending via POST request.",
+                          "type": "file",
+                          "value": null,
+                          "disabled": true
+                        }
+                      ]
+                    },
+                    "url": {
+                      "raw": "https://{{host}}/api/?type=user-id",
+                      "protocol": "https",
+                      "host": [
+                        "{{host}}"
+                      ],
+                      "path": [
+                        "api",
+                        ""
+                      ],
+                      "query": [
+                        {
+                          "key": "type",
+                          "value": "user-id"
+                        },
+                        {
+                          "key": "cmd",
+                          "value": "",
+                          "description": "**Required** User-ID message, if being sent as a GET request.",
+                          "disabled": true
+                        },
+                        {
+                          "key": "vsys",
+                          "value": null,
+                          "description": "*Optional.* Specify virtual system for User-ID request.",
+                          "disabled": true
+                        },
+                        {
+                          "key": "target",
+                          "value": null,
+                          "description": "*Optional*. If host is a Panorama instance, use it to connect to a specific firewall.",
+                          "disabled": true
+                        }
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "xml",
+                  "header": [
+                    {
+                      "key": "Date",
+                      "value": "Mon, 04 Jan 2021 21:05:05 GMT"
+                    },
+                    {
+                      "key": "Content-Type",
+                      "value": "application/xml; charset=UTF-8"
+                    },
+                    {
+                      "key": "Content-Length",
+                      "value": "171"
+                    },
+                    {
+                      "key": "Connection",
+                      "value": "keep-alive"
+                    },
+                    {
+                      "key": "X-FRAME-OPTIONS",
+                      "value": "SAMEORIGIN"
+                    },
+                    {
+                      "key": "X-XSS-Protection",
+                      "value": "1; mode=block"
+                    },
+                    {
+                      "key": "X-Content-Type-Options",
+                      "value": "nosniff"
+                    },
+                    {
+                      "key": "Content-Security-Policy",
+                      "value": "default-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:;"
+                    },
+                    {
+                      "key": "Strict-Transport-Security",
+                      "value": "max-age=31536000"
+                    },
+                    {
+                      "key": "Cache-Control",
+                      "value": "no-store, no-cache, must-revalidate, post-check=0, pre-check=0"
+                    },
+                    {
+                      "key": "Expires",
+                      "value": "Thu, 19 Nov 1981 08:52:00 GMT"
+                    },
+                    {
+                      "key": "Pragma",
+                      "value": "no-cache"
+                    },
+                    {
+                      "key": "Allow",
+                      "value": "GET, HEAD, POST, PUT, DELETE, OPTIONS"
+                    }
+                  ],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "<response status=\"success\">\n    <result>\n        <uid-response>\n            <version>2.0</version>\n            <payload>\n                <unregister>\n    </unregister>\n            </payload>\n        </uid-response>\n    </result>\n</response>"
                 }
               ]
             },
             {
               "name": "Dynamic user group",
-              "_postman_id": "f5d22eb1-7421-44df-9402-9061635da0b7",
+              "id": "f5d22eb1-7421-44df-9402-9061635da0b7",
               "protocolProfileBehavior": {
                 "disableBodyPruning": true
               },
@@ -5939,10 +5922,7 @@
                       "value": null,
                       "disabled": true
                     }
-                  ],
-                  "options": {
-                    "formdata": {}
-                  }
+                  ]
                 },
                 "url": {
                   "raw": "https://{{host}}/api/?type=user-id",
@@ -5981,248 +5961,6 @@
                 }
               },
               "response": [
-                {
-                  "id": "0d3dcde5-d26f-4922-aa9d-9d19ec129219",
-                  "name": "Unregister user from all dynamic user groups",
-                  "originalRequest": {
-                    "method": "POST",
-                    "header": [],
-                    "body": {
-                      "mode": "formdata",
-                      "formdata": [
-                        {
-                          "key": "cmd",
-                          "description": "User-ID message if sending via POST request.",
-                          "type": "text",
-                          "value": "<uid-message>\n    <version>1.0</version>\n    <type>update</type>\n    <payload>\n        <unregister-user>\n            <entry user=\"paloaltonetworks\\john\"></entry>\n        </unregister-user>\n    </payload>\n</uid-message>"
-                        },
-                        {
-                          "key": "file",
-                          "description": "File containing User-ID message if sending via POST request.",
-                          "type": "file",
-                          "value": null,
-                          "disabled": true
-                        }
-                      ]
-                    },
-                    "url": {
-                      "raw": "https://{{host}}/api/?type=user-id",
-                      "protocol": "https",
-                      "host": [
-                        "{{host}}"
-                      ],
-                      "path": [
-                        "api",
-                        ""
-                      ],
-                      "query": [
-                        {
-                          "key": "type",
-                          "value": "user-id"
-                        },
-                        {
-                          "key": "cmd",
-                          "value": "",
-                          "description": "**Required** User-ID message, if being sent as a GET request.",
-                          "disabled": true
-                        },
-                        {
-                          "key": "vsys",
-                          "value": null,
-                          "description": "*Optional.* Specify virtual system for User-ID request.",
-                          "disabled": true
-                        },
-                        {
-                          "key": "target",
-                          "value": null,
-                          "description": "*Optional*. If host is a Panorama instance, use it to connect to a specific firewall.",
-                          "disabled": true
-                        }
-                      ]
-                    }
-                  },
-                  "status": "OK",
-                  "code": 200,
-                  "_postman_previewlanguage": "xml",
-                  "header": [
-                    {
-                      "key": "Date",
-                      "value": "Tue, 05 Jan 2021 15:55:35 GMT"
-                    },
-                    {
-                      "key": "Content-Type",
-                      "value": "application/xml; charset=UTF-8"
-                    },
-                    {
-                      "key": "Content-Length",
-                      "value": "181"
-                    },
-                    {
-                      "key": "Connection",
-                      "value": "keep-alive"
-                    },
-                    {
-                      "key": "X-FRAME-OPTIONS",
-                      "value": "SAMEORIGIN"
-                    },
-                    {
-                      "key": "X-XSS-Protection",
-                      "value": "1; mode=block"
-                    },
-                    {
-                      "key": "X-Content-Type-Options",
-                      "value": "nosniff"
-                    },
-                    {
-                      "key": "Content-Security-Policy",
-                      "value": "default-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:;"
-                    },
-                    {
-                      "key": "Strict-Transport-Security",
-                      "value": "max-age=31536000"
-                    },
-                    {
-                      "key": "Cache-Control",
-                      "value": "no-store, no-cache, must-revalidate, post-check=0, pre-check=0"
-                    },
-                    {
-                      "key": "Expires",
-                      "value": "Thu, 19 Nov 1981 08:52:00 GMT"
-                    },
-                    {
-                      "key": "Pragma",
-                      "value": "no-cache"
-                    },
-                    {
-                      "key": "Allow",
-                      "value": "GET, HEAD, POST, PUT, DELETE, OPTIONS"
-                    }
-                  ],
-                  "cookie": [],
-                  "responseTime": null,
-                  "body": "<response status=\"success\">\n    <result>\n        <uid-response>\n            <version>2.0</version>\n            <payload>\n                <unregister-user>\n    </unregister-user>\n            </payload>\n        </uid-response>\n    </result>\n</response>"
-                },
-                {
-                  "id": "6a578e47-2935-4add-a167-af368401dec4",
-                  "name": "Unregister all users from all groups",
-                  "originalRequest": {
-                    "method": "POST",
-                    "header": [],
-                    "body": {
-                      "mode": "formdata",
-                      "formdata": [
-                        {
-                          "key": "cmd",
-                          "description": "User-ID message if sending via POST request.",
-                          "type": "text",
-                          "value": "<uid-message>\n  <version>1.0</version>\n  <type>update</type>\n  <payload>\n    <clear>\n      <registered-user>\n        <all/>\n      </registered-user>\n    </clear>\n  </payload>\n</uid-message>"
-                        },
-                        {
-                          "key": "file",
-                          "description": "File containing User-ID message if sending via POST request.",
-                          "type": "file",
-                          "value": null,
-                          "disabled": true
-                        }
-                      ]
-                    },
-                    "url": {
-                      "raw": "https://{{host}}/api/?type=user-id",
-                      "protocol": "https",
-                      "host": [
-                        "{{host}}"
-                      ],
-                      "path": [
-                        "api",
-                        ""
-                      ],
-                      "query": [
-                        {
-                          "key": "type",
-                          "value": "user-id"
-                        },
-                        {
-                          "key": "cmd",
-                          "value": "",
-                          "description": "**Required** User-ID message, if being sent as a GET request.",
-                          "disabled": true
-                        },
-                        {
-                          "key": "vsys",
-                          "value": null,
-                          "description": "*Optional.* Specify virtual system for User-ID request.",
-                          "disabled": true
-                        },
-                        {
-                          "key": "target",
-                          "value": null,
-                          "description": "*Optional*. If host is a Panorama instance, use it to connect to a specific firewall.",
-                          "disabled": true
-                        }
-                      ]
-                    }
-                  },
-                  "status": "OK",
-                  "code": 200,
-                  "_postman_previewlanguage": "xml",
-                  "header": [
-                    {
-                      "key": "Date",
-                      "value": "Tue, 05 Jan 2021 15:56:11 GMT"
-                    },
-                    {
-                      "key": "Content-Type",
-                      "value": "application/xml; charset=UTF-8"
-                    },
-                    {
-                      "key": "Content-Length",
-                      "value": "142"
-                    },
-                    {
-                      "key": "Connection",
-                      "value": "keep-alive"
-                    },
-                    {
-                      "key": "X-FRAME-OPTIONS",
-                      "value": "SAMEORIGIN"
-                    },
-                    {
-                      "key": "X-XSS-Protection",
-                      "value": "1; mode=block"
-                    },
-                    {
-                      "key": "X-Content-Type-Options",
-                      "value": "nosniff"
-                    },
-                    {
-                      "key": "Content-Security-Policy",
-                      "value": "default-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:;"
-                    },
-                    {
-                      "key": "Strict-Transport-Security",
-                      "value": "max-age=31536000"
-                    },
-                    {
-                      "key": "Cache-Control",
-                      "value": "no-store, no-cache, must-revalidate, post-check=0, pre-check=0"
-                    },
-                    {
-                      "key": "Expires",
-                      "value": "Thu, 19 Nov 1981 08:52:00 GMT"
-                    },
-                    {
-                      "key": "Pragma",
-                      "value": "no-cache"
-                    },
-                    {
-                      "key": "Allow",
-                      "value": "GET, HEAD, POST, PUT, DELETE, OPTIONS"
-                    }
-                  ],
-                  "cookie": [],
-                  "responseTime": null,
-                  "body": "<response status=\"success\">\n    <result>\n        <uid-response>\n            <version>2.0</version>\n            <payload>\ndone!\n  </payload>\n        </uid-response>\n    </result>\n</response>"
-                },
                 {
                   "id": "6be28c53-4194-4910-be13-4fc59af4449e",
                   "name": "Register user to dynamic user group",
@@ -6464,16 +6202,257 @@
                   "cookie": [],
                   "responseTime": null,
                   "body": "<response status=\"success\">\n    <result>\n        <uid-response>\n            <version>2.0</version>\n            <payload>\n                <unregister-user>\n    </unregister-user>\n            </payload>\n        </uid-response>\n    </result>\n</response>"
+                },
+                {
+                  "id": "0d3dcde5-d26f-4922-aa9d-9d19ec129219",
+                  "name": "Unregister user from all dynamic user groups",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [],
+                    "body": {
+                      "mode": "formdata",
+                      "formdata": [
+                        {
+                          "key": "cmd",
+                          "description": "User-ID message if sending via POST request.",
+                          "type": "text",
+                          "value": "<uid-message>\n    <version>1.0</version>\n    <type>update</type>\n    <payload>\n        <unregister-user>\n            <entry user=\"paloaltonetworks\\john\"></entry>\n        </unregister-user>\n    </payload>\n</uid-message>"
+                        },
+                        {
+                          "key": "file",
+                          "description": "File containing User-ID message if sending via POST request.",
+                          "type": "file",
+                          "value": null,
+                          "disabled": true
+                        }
+                      ]
+                    },
+                    "url": {
+                      "raw": "https://{{host}}/api/?type=user-id",
+                      "protocol": "https",
+                      "host": [
+                        "{{host}}"
+                      ],
+                      "path": [
+                        "api",
+                        ""
+                      ],
+                      "query": [
+                        {
+                          "key": "type",
+                          "value": "user-id"
+                        },
+                        {
+                          "key": "cmd",
+                          "value": "",
+                          "description": "**Required** User-ID message, if being sent as a GET request.",
+                          "disabled": true
+                        },
+                        {
+                          "key": "vsys",
+                          "value": null,
+                          "description": "*Optional.* Specify virtual system for User-ID request.",
+                          "disabled": true
+                        },
+                        {
+                          "key": "target",
+                          "value": null,
+                          "description": "*Optional*. If host is a Panorama instance, use it to connect to a specific firewall.",
+                          "disabled": true
+                        }
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "xml",
+                  "header": [
+                    {
+                      "key": "Date",
+                      "value": "Tue, 05 Jan 2021 15:55:35 GMT"
+                    },
+                    {
+                      "key": "Content-Type",
+                      "value": "application/xml; charset=UTF-8"
+                    },
+                    {
+                      "key": "Content-Length",
+                      "value": "181"
+                    },
+                    {
+                      "key": "Connection",
+                      "value": "keep-alive"
+                    },
+                    {
+                      "key": "X-FRAME-OPTIONS",
+                      "value": "SAMEORIGIN"
+                    },
+                    {
+                      "key": "X-XSS-Protection",
+                      "value": "1; mode=block"
+                    },
+                    {
+                      "key": "X-Content-Type-Options",
+                      "value": "nosniff"
+                    },
+                    {
+                      "key": "Content-Security-Policy",
+                      "value": "default-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:;"
+                    },
+                    {
+                      "key": "Strict-Transport-Security",
+                      "value": "max-age=31536000"
+                    },
+                    {
+                      "key": "Cache-Control",
+                      "value": "no-store, no-cache, must-revalidate, post-check=0, pre-check=0"
+                    },
+                    {
+                      "key": "Expires",
+                      "value": "Thu, 19 Nov 1981 08:52:00 GMT"
+                    },
+                    {
+                      "key": "Pragma",
+                      "value": "no-cache"
+                    },
+                    {
+                      "key": "Allow",
+                      "value": "GET, HEAD, POST, PUT, DELETE, OPTIONS"
+                    }
+                  ],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "<response status=\"success\">\n    <result>\n        <uid-response>\n            <version>2.0</version>\n            <payload>\n                <unregister-user>\n    </unregister-user>\n            </payload>\n        </uid-response>\n    </result>\n</response>"
+                },
+                {
+                  "id": "6a578e47-2935-4add-a167-af368401dec4",
+                  "name": "Unregister all users from all groups",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [],
+                    "body": {
+                      "mode": "formdata",
+                      "formdata": [
+                        {
+                          "key": "cmd",
+                          "description": "User-ID message if sending via POST request.",
+                          "type": "text",
+                          "value": "<uid-message>\n  <version>1.0</version>\n  <type>update</type>\n  <payload>\n    <clear>\n      <registered-user>\n        <all/>\n      </registered-user>\n    </clear>\n  </payload>\n</uid-message>"
+                        },
+                        {
+                          "key": "file",
+                          "description": "File containing User-ID message if sending via POST request.",
+                          "type": "file",
+                          "value": null,
+                          "disabled": true
+                        }
+                      ]
+                    },
+                    "url": {
+                      "raw": "https://{{host}}/api/?type=user-id",
+                      "protocol": "https",
+                      "host": [
+                        "{{host}}"
+                      ],
+                      "path": [
+                        "api",
+                        ""
+                      ],
+                      "query": [
+                        {
+                          "key": "type",
+                          "value": "user-id"
+                        },
+                        {
+                          "key": "cmd",
+                          "value": "",
+                          "description": "**Required** User-ID message, if being sent as a GET request.",
+                          "disabled": true
+                        },
+                        {
+                          "key": "vsys",
+                          "value": null,
+                          "description": "*Optional.* Specify virtual system for User-ID request.",
+                          "disabled": true
+                        },
+                        {
+                          "key": "target",
+                          "value": null,
+                          "description": "*Optional*. If host is a Panorama instance, use it to connect to a specific firewall.",
+                          "disabled": true
+                        }
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "xml",
+                  "header": [
+                    {
+                      "key": "Date",
+                      "value": "Tue, 05 Jan 2021 15:56:11 GMT"
+                    },
+                    {
+                      "key": "Content-Type",
+                      "value": "application/xml; charset=UTF-8"
+                    },
+                    {
+                      "key": "Content-Length",
+                      "value": "142"
+                    },
+                    {
+                      "key": "Connection",
+                      "value": "keep-alive"
+                    },
+                    {
+                      "key": "X-FRAME-OPTIONS",
+                      "value": "SAMEORIGIN"
+                    },
+                    {
+                      "key": "X-XSS-Protection",
+                      "value": "1; mode=block"
+                    },
+                    {
+                      "key": "X-Content-Type-Options",
+                      "value": "nosniff"
+                    },
+                    {
+                      "key": "Content-Security-Policy",
+                      "value": "default-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:;"
+                    },
+                    {
+                      "key": "Strict-Transport-Security",
+                      "value": "max-age=31536000"
+                    },
+                    {
+                      "key": "Cache-Control",
+                      "value": "no-store, no-cache, must-revalidate, post-check=0, pre-check=0"
+                    },
+                    {
+                      "key": "Expires",
+                      "value": "Thu, 19 Nov 1981 08:52:00 GMT"
+                    },
+                    {
+                      "key": "Pragma",
+                      "value": "no-cache"
+                    },
+                    {
+                      "key": "Allow",
+                      "value": "GET, HEAD, POST, PUT, DELETE, OPTIONS"
+                    }
+                  ],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "<response status=\"success\">\n    <result>\n        <uid-response>\n            <version>2.0</version>\n            <payload>\ndone!\n  </payload>\n        </uid-response>\n    </result>\n</response>"
                 }
               ]
             }
           ],
-          "_postman_id": "c4924b82-d0e5-4d86-b50f-6b1ce6d3f17e",
-          "_postman_isSubFolder": true
+          "id": "c4924b82-d0e5-4d86-b50f-6b1ce6d3f17e"
         },
         {
           "name": "Operational commands",
-          "_postman_id": "69bed58c-d6fc-4116-beb8-fd344b6bc61b",
+          "id": "69bed58c-d6fc-4116-beb8-fd344b6bc61b",
           "protocolProfileBehavior": {
             "disableBodyPruning": true
           },
@@ -6899,7 +6878,7 @@
         },
         {
           "name": "Retrieve logs",
-          "_postman_id": "e0d93f08-4f5c-4e74-be36-e85c51a67f19",
+          "id": "e0d93f08-4f5c-4e74-be36-e85c51a67f19",
           "protocolProfileBehavior": {
             "disableBodyPruning": true
           },
@@ -7160,7 +7139,7 @@
         },
         {
           "name": "Get version info",
-          "_postman_id": "d9781725-4177-48f7-97ca-addc620c6fda",
+          "id": "d9781725-4177-48f7-97ca-addc620c6fda",
           "protocolProfileBehavior": {
             "disableBodyPruning": true
           },
@@ -7277,7 +7256,7 @@
           ]
         }
       ],
-      "_postman_id": "3178f469-44ee-4373-82b4-9d5bdd5d59b8",
+      "id": "3178f469-44ee-4373-82b4-9d5bdd5d59b8",
       "auth": {
         "type": "apikey",
         "apikey": {
@@ -7294,7 +7273,7 @@
           "item": [
             {
               "name": "Download the latest content update",
-              "_postman_id": "49016bb9-1d89-4f4d-9a62-f1acf2c4f9d1",
+              "id": "49016bb9-1d89-4f4d-9a62-f1acf2c4f9d1",
               "protocolProfileBehavior": {
                 "disableBodyPruning": true
               },
@@ -7417,7 +7396,7 @@
             },
             {
               "name": "Check content download status",
-              "_postman_id": "82d29a5c-be79-48ac-8d64-e4730cdaed06",
+              "id": "82d29a5c-be79-48ac-8d64-e4730cdaed06",
               "protocolProfileBehavior": {
                 "disableBodyPruning": true
               },
@@ -7540,7 +7519,7 @@
             },
             {
               "name": "Install the latest content update",
-              "_postman_id": "6835fa4e-d841-408d-8f64-55cc521c361b",
+              "id": "6835fa4e-d841-408d-8f64-55cc521c361b",
               "protocolProfileBehavior": {
                 "disableBodyPruning": true
               },
@@ -7663,7 +7642,7 @@
             },
             {
               "name": "Check content install status",
-              "_postman_id": "5241d5d8-16ac-40b9-898b-34c905ab9d21",
+              "id": "5241d5d8-16ac-40b9-898b-34c905ab9d21",
               "protocolProfileBehavior": {
                 "disableBodyPruning": true
               },
@@ -7786,7 +7765,7 @@
             },
             {
               "name": "Check for the latest PAN-OS software update",
-              "_postman_id": "606a7fe2-8f2d-4a8c-bde8-07898f6290ca",
+              "id": "606a7fe2-8f2d-4a8c-bde8-07898f6290ca",
               "protocolProfileBehavior": {
                 "disableBodyPruning": true
               },
@@ -7909,7 +7888,7 @@
             },
             {
               "name": "Download the latest PAN-OS software update",
-              "_postman_id": "c51846d9-0a56-4439-b556-d9a71d7fd937",
+              "id": "c51846d9-0a56-4439-b556-d9a71d7fd937",
               "protocolProfileBehavior": {
                 "disableBodyPruning": true
               },
@@ -8032,7 +8011,7 @@
             },
             {
               "name": "Check software download status",
-              "_postman_id": "dffe152e-46c6-46b6-a106-87528244ef97",
+              "id": "dffe152e-46c6-46b6-a106-87528244ef97",
               "protocolProfileBehavior": {
                 "disableBodyPruning": true
               },
@@ -8155,7 +8134,7 @@
             },
             {
               "name": "Install the latest PAN-OS software update",
-              "_postman_id": "0e25d3b8-9eca-4577-9af8-310c1a8f93ea",
+              "id": "0e25d3b8-9eca-4577-9af8-310c1a8f93ea",
               "protocolProfileBehavior": {
                 "disableBodyPruning": true
               },
@@ -8278,7 +8257,7 @@
             },
             {
               "name": "Check software install status",
-              "_postman_id": "a6b07389-cccf-499e-9321-a9eba5f333c1",
+              "id": "a6b07389-cccf-499e-9321-a9eba5f333c1",
               "protocolProfileBehavior": {
                 "disableBodyPruning": true
               },
@@ -8401,7 +8380,7 @@
             },
             {
               "name": "Reboot the firewall",
-              "_postman_id": "4e62921c-0215-4875-9e3b-8d61cd57c6a4",
+              "id": "4e62921c-0215-4875-9e3b-8d61cd57c6a4",
               "protocolProfileBehavior": {
                 "disableBodyPruning": true
               },
@@ -8523,7 +8502,7 @@
               ]
             }
           ],
-          "_postman_id": "39927bcc-4096-4ae1-951d-58c8af1e2324",
+          "id": "39927bcc-4096-4ae1-951d-58c8af1e2324",
           "description": "View the [official documentation](https://docs.paloaltonetworks.com/pan-os/10-0/pan-os-panorama-api/pan-os-xml-api-use-cases/upgrade-a-firewall-to-the-latest-pan-os-version-api.html).\n\nYou can use the PAN-OS XML API to update your firewall with the latest PAN-OS and Content Release versions.\n\nThe example requests in this section are meant to be executed in sequence.  Any of the check status requests (e.x. \"Check software download status\") are meant to be executed until the returned job result is `FIN`.",
           "event": [
             {
@@ -8546,15 +8525,14 @@
                 ]
               }
             }
-          ],
-          "_postman_isSubFolder": true
+          ]
         },
         {
           "name": "Automatically check for and install content updates",
           "item": [
             {
               "name": "View current system information",
-              "_postman_id": "5584edf9-ee4d-44ff-a6ce-bbfea8e46898",
+              "id": "5584edf9-ee4d-44ff-a6ce-bbfea8e46898",
               "protocolProfileBehavior": {
                 "disableBodyPruning": true
               },
@@ -8677,7 +8655,7 @@
             },
             {
               "name": "Check for Application & Threat updates",
-              "_postman_id": "c51cc27c-ea72-4f54-8ef3-167319869f61",
+              "id": "c51cc27c-ea72-4f54-8ef3-167319869f61",
               "protocolProfileBehavior": {
                 "disableBodyPruning": true
               },
@@ -8800,7 +8778,7 @@
             },
             {
               "name": "Check for WildFire updates",
-              "_postman_id": "767e8be1-402f-4893-8849-0709125d2fc2",
+              "id": "767e8be1-402f-4893-8849-0709125d2fc2",
               "protocolProfileBehavior": {
                 "disableBodyPruning": true
               },
@@ -8923,7 +8901,7 @@
             },
             {
               "name": "Check for Antivirus updates",
-              "_postman_id": "da977e6d-555e-434e-b9de-5367b3b17bee",
+              "id": "da977e6d-555e-434e-b9de-5367b3b17bee",
               "protocolProfileBehavior": {
                 "disableBodyPruning": true
               },
@@ -9046,7 +9024,7 @@
             },
             {
               "name": "Check for GlobalProtect client updates",
-              "_postman_id": "d66074ec-1471-4d26-9562-76053526f4b0",
+              "id": "d66074ec-1471-4d26-9562-76053526f4b0",
               "protocolProfileBehavior": {
                 "disableBodyPruning": true
               },
@@ -9169,7 +9147,7 @@
             },
             {
               "name": "Download latest Application & Threat update",
-              "_postman_id": "9dae692a-61b3-4beb-a8c2-65667e1b045c",
+              "id": "9dae692a-61b3-4beb-a8c2-65667e1b045c",
               "protocolProfileBehavior": {
                 "disableBodyPruning": true
               },
@@ -9292,7 +9270,7 @@
             },
             {
               "name": "Download latest WildFire update",
-              "_postman_id": "c5a6a378-dbe6-4455-b1a5-2e4028ddf900",
+              "id": "c5a6a378-dbe6-4455-b1a5-2e4028ddf900",
               "protocolProfileBehavior": {
                 "disableBodyPruning": true
               },
@@ -9415,7 +9393,7 @@
             },
             {
               "name": "Download latest Anti-Virus update",
-              "_postman_id": "a481ac7c-1619-47d4-9569-ab677a50129a",
+              "id": "a481ac7c-1619-47d4-9569-ab677a50129a",
               "protocolProfileBehavior": {
                 "disableBodyPruning": true
               },
@@ -9538,7 +9516,7 @@
             },
             {
               "name": "Download latest GlobalProtect client update",
-              "_postman_id": "b529b88d-b1b0-4ccb-85eb-ebb93432352b",
+              "id": "b529b88d-b1b0-4ccb-85eb-ebb93432352b",
               "protocolProfileBehavior": {
                 "disableBodyPruning": true
               },
@@ -9661,7 +9639,7 @@
             },
             {
               "name": "Install latest Application & Threat update",
-              "_postman_id": "5d919f62-5728-4b12-a558-6fd66c6abab5",
+              "id": "5d919f62-5728-4b12-a558-6fd66c6abab5",
               "protocolProfileBehavior": {
                 "disableBodyPruning": true
               },
@@ -9784,7 +9762,7 @@
             },
             {
               "name": "Install latest WildFire update",
-              "_postman_id": "15258570-b669-4394-abdc-df157de323aa",
+              "id": "15258570-b669-4394-abdc-df157de323aa",
               "protocolProfileBehavior": {
                 "disableBodyPruning": true
               },
@@ -9907,7 +9885,7 @@
             },
             {
               "name": "Install latest Anti-Virus update",
-              "_postman_id": "74146118-7494-47a6-85ec-4e916b2cba8d",
+              "id": "74146118-7494-47a6-85ec-4e916b2cba8d",
               "protocolProfileBehavior": {
                 "disableBodyPruning": true
               },
@@ -10030,7 +10008,7 @@
             },
             {
               "name": "Install latest GlobalProtect client",
-              "_postman_id": "201aadfa-9aab-4b5f-adc2-6a26cb0be4dd",
+              "id": "201aadfa-9aab-4b5f-adc2-6a26cb0be4dd",
               "protocolProfileBehavior": {
                 "disableBodyPruning": true
               },
@@ -10153,7 +10131,7 @@
             },
             {
               "name": "Check job status",
-              "_postman_id": "2d936ec7-ebd8-405f-9ae5-48aeeb159455",
+              "id": "2d936ec7-ebd8-405f-9ae5-48aeeb159455",
               "protocolProfileBehavior": {
                 "disableBodyPruning": true
               },
@@ -10275,7 +10253,7 @@
               ]
             }
           ],
-          "_postman_id": "d614d66c-c68e-4e80-9f1f-2fbf6af9045a",
+          "id": "d614d66c-c68e-4e80-9f1f-2fbf6af9045a",
           "description": "View the [official documentation](https://docs.paloaltonetworks.com/pan-os/10-0/pan-os-panorama-api/pan-os-xml-api-use-cases/automatically-check-for-and-install-content-updates-api.html).\n\nUsing the XML API, you can programmatically check and install new content updates, including antivirus, WildFire, and GlobalProtect updates. Check for new updates available and download updates that have been released for at least one week.\n\nThe example requests in this section are meant to be executed in sequence.  Any of the check status requests (e.x. \"Check software download status\") are meant to be executed until the returned job result is `FIN`.",
           "event": [
             {
@@ -10298,15 +10276,14 @@
                 ]
               }
             }
-          ],
-          "_postman_isSubFolder": true
+          ]
         },
         {
           "name": "Show and manage GlobalProtect users",
           "item": [
             {
               "name": "Show all GlobalProtect users",
-              "_postman_id": "0e03b78f-bc59-44ef-96c5-13b3242b70ee",
+              "id": "0e03b78f-bc59-44ef-96c5-13b3242b70ee",
               "protocolProfileBehavior": {
                 "disableBodyPruning": true
               },
@@ -10434,7 +10411,7 @@
             },
             {
               "name": "Disconnect GlobalProtect user",
-              "_postman_id": "73424624-3d60-4b2b-bd87-6ec70a897162",
+              "id": "73424624-3d60-4b2b-bd87-6ec70a897162",
               "protocolProfileBehavior": {
                 "disableBodyPruning": true
               },
@@ -10556,15 +10533,14 @@
               ]
             }
           ],
-          "_postman_id": "5542f5ba-fa73-4a38-ac14-fbbc865459fe",
-          "_postman_isSubFolder": true
+          "id": "5542f5ba-fa73-4a38-ac14-fbbc865459fe"
         },
         {
           "name": "Query a firewall from Panorama",
           "item": [
             {
               "name": "Get all managed firewalls",
-              "_postman_id": "d0e84137-dd68-4d62-b01d-4c79025f7975",
+              "id": "d0e84137-dd68-4d62-b01d-4c79025f7975",
               "protocolProfileBehavior": {
                 "disableBodyPruning": true
               },
@@ -10691,7 +10667,7 @@
             },
             {
               "name": "Get connected firewalls only",
-              "_postman_id": "26fd0b72-813a-4e63-abb2-aced66fa5b07",
+              "id": "26fd0b72-813a-4e63-abb2-aced66fa5b07",
               "protocolProfileBehavior": {
                 "disableBodyPruning": true
               },
@@ -10814,7 +10790,7 @@
             },
             {
               "name": "Query a firewall from Panorama",
-              "_postman_id": "bdf46cef-d732-4f88-89a5-ea4c352bfeb4",
+              "id": "bdf46cef-d732-4f88-89a5-ea4c352bfeb4",
               "protocolProfileBehavior": {
                 "disableBodyPruning": true
               },
@@ -10945,7 +10921,7 @@
               ]
             }
           ],
-          "_postman_id": "8a359d76-3264-473a-8a27-d2845d19a3bd",
+          "id": "8a359d76-3264-473a-8a27-d2845d19a3bd",
           "description": "The `target` parameter on Panorama allows you to redirect queries to a managed firewall. Redirecting queries to firewalls helps to reduce time and the number of steps required to issue repetitive commands. Use the scripting language of your choice to store firewall serial numbers and use them to issue a query to several firewalls.\n\nCurrently, you can only use `type=op` queries when redirecting queries through Panorama.",
           "event": [
             {
@@ -10968,15 +10944,14 @@
                 ]
               }
             }
-          ],
-          "_postman_isSubFolder": true
+          ]
         },
         {
           "name": "Manage certificates",
           "item": [
             {
               "name": "Generate self signed certificate",
-              "_postman_id": "6fb655c0-0ce0-4f90-afa1-b17a212ab355",
+              "id": "6fb655c0-0ce0-4f90-afa1-b17a212ab355",
               "protocolProfileBehavior": {
                 "disableBodyPruning": true
               },
@@ -11099,7 +11074,7 @@
             },
             {
               "name": "Set certificate as trusted root",
-              "_postman_id": "4ba059e1-ad69-4514-bac5-f1f5985c1eb5",
+              "id": "4ba059e1-ad69-4514-bac5-f1f5985c1eb5",
               "protocolProfileBehavior": {
                 "disableBodyPruning": true
               },
@@ -11238,7 +11213,7 @@
             },
             {
               "name": "Set certificate as forward trust",
-              "_postman_id": "53b3db2d-a74c-43a5-9273-1391a915496d",
+              "id": "53b3db2d-a74c-43a5-9273-1391a915496d",
               "protocolProfileBehavior": {
                 "disableBodyPruning": true
               },
@@ -11377,7 +11352,7 @@
             },
             {
               "name": "Create subordinate certificate",
-              "_postman_id": "0d32b890-cb5c-4e4a-bda2-4453921ad499",
+              "id": "0d32b890-cb5c-4e4a-bda2-4453921ad499",
               "protocolProfileBehavior": {
                 "disableBodyPruning": true
               },
@@ -11500,7 +11475,7 @@
             },
             {
               "name": "Export certificate",
-              "_postman_id": "f869d65e-e91b-4bf7-8d1d-304fc830178d",
+              "id": "f869d65e-e91b-4bf7-8d1d-304fc830178d",
               "protocolProfileBehavior": {
                 "disableBodyPruning": true
               },
@@ -11652,7 +11627,7 @@
             },
             {
               "name": "Import certificate",
-              "_postman_id": "7fe580f3-9166-4c2d-b8a8-2827c8fcf5f2",
+              "id": "7fe580f3-9166-4c2d-b8a8-2827c8fcf5f2",
               "protocolProfileBehavior": {
                 "disableBodyPruning": true
               },
@@ -11667,10 +11642,7 @@
                       "type": "file",
                       "src": "/Users/michaelr/Desktop/Cert-Test.pem"
                     }
-                  ],
-                  "options": {
-                    "formdata": {}
-                  }
+                  ]
                 },
                 "url": {
                   "raw": "https://{{host}}/api/?type=import&category=certificate&certificate-name=Cert-Test&format=pem",
@@ -11854,7 +11826,7 @@
             },
             {
               "name": "Revoke subordinate certificate",
-              "_postman_id": "96bd8c22-0b64-4df3-8dae-7ba744c31a18",
+              "id": "96bd8c22-0b64-4df3-8dae-7ba744c31a18",
               "protocolProfileBehavior": {
                 "disableBodyPruning": true
               },
@@ -11977,7 +11949,7 @@
             },
             {
               "name": "Renew self signed certificate",
-              "_postman_id": "63a97648-6d22-40e0-9d4d-f93230c6f714",
+              "id": "63a97648-6d22-40e0-9d4d-f93230c6f714",
               "protocolProfileBehavior": {
                 "disableBodyPruning": true
               },
@@ -12097,11 +12069,10 @@
               ]
             }
           ],
-          "_postman_id": "05e52a2b-4bc5-469b-9862-d94b69f79739",
-          "_postman_isSubFolder": true
+          "id": "05e52a2b-4bc5-469b-9862-d94b69f79739"
         }
       ],
-      "_postman_id": "48a4821f-5bbb-4b0c-ad3a-eb55970c295e",
+      "id": "48a4821f-5bbb-4b0c-ad3a-eb55970c295e",
       "auth": {
         "type": "apikey",
         "apikey": {
@@ -12142,16 +12113,14 @@
   ],
   "variable": [
     {
-      "id": "97418cdd-01f1-4701-99da-2c358da40cc8",
+      "id": "0463aa52-f3e5-4598-bf9c-9036cc2187f9",
       "key": "{{host}}",
-      "value": "",
-      "type": "string"
+      "value": ""
     },
     {
-      "id": "15c4cf39-0315-4c65-a7fc-64c624b1c134",
+      "id": "0c03c131-afff-48ad-8d4c-bcaf770e7eea",
       "key": "{{key}}",
-      "value": "",
-      "type": "string"
+      "value": ""
     }
   ]
 }
